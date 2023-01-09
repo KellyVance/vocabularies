@@ -70,7 +70,7 @@
     sdo:affiliation [ a sdo:Organization ;
             sdo:name "Engineers Australia" ;
             sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI ] ;
-    sdo:name "Vance Kelly" ;""
+    sdo:name "Vance Kelly" ;
     sdo:identifier <https://orcid.org/0000-0003-2309-7004> .
 
 eats:amc a skos:Concept ;
