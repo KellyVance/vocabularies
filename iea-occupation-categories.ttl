@@ -1,0 +1,59 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ieaoc: <https://linked.data.gov.au/def/iea-occupational-categories/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+<https://orcid.org/0000-0003-2309-7004> a sdo:Person,
+        owl:NamedIndividual ;
+    sdo:affiliation [ a sdo:Organization ;
+            sdo:name "Engineers Australia" ;
+            sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI ] ;
+    sdo:identifier <https://orcid.org/0000-0003-2309-7004> ;
+    sdo:name "Vance Kelly" .
+
+<https://linked.data.gov.au/def/iea-occupational-categories> a owl:Ontology,
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
+    dcterms:created "2022-11-09"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:modified "2022-11-09"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:source "https://www.ieagreements.org/accords/acknowledgements-accords"^^xsd:anyURI ;
+    skos:altLabel "International Engineering Accords Membership"@en ;
+    skos:definition "A category reflecting the level and type of engineering qualification held by a member of the engineering profession, as per the International Engineering Alliance Educational Accords."@en ;
+    skos:prefLabel "International Engineering Alliance Occupational Categories"@en .
+
+ieaoc:assoc-engineer a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://www.ieagreements.org/accords/dulin/> ;
+    skos:definition "A person who holds a 2 Years Australian Advanced Diploma or Associated Degree in Engineering, as per the International Engineering Alliance Dublin Accords."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iea-occupational-categories> ;
+    skos:notation "EA" ;
+    skos:prefLabel "Engineering Associate"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/iea-occupational-categories> .
+
+ieaoc:pro-engineer a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://www.ieagreements.org/accords/washington/> ;
+    skos:definition "A person who holds a 4 Years accredited Bachelor of Engineering (BEng), as per the International Engineering Alliance Washington Accords."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iea-occupational-categories> ;
+    skos:notation "PE" ;
+    skos:prefLabel "Professional Engineer"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/iea-occupational-categories> .
+
+ieaoc:tech-engineer a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://www.ieagreements.org/accords/sydney/> ;
+    skos:definition "A person who holds a 3 Years accredited Bachelor of Engineering Technology (BTech), as per the International Engineering Alliance Sydney Accords."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/iea-occupational-categories> ;
+    skos:notation "ET" ;
+    skos:prefLabel "Engineering Technologist"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/iea-occupational-categories> .
