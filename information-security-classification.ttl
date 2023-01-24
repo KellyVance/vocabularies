@@ -15,7 +15,7 @@
 		skos:ConceptScheme ;
 	dcterms:created "2022-11-14"^^xsd:date ;
 	dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
-	dcterms:modified "2022-11-09"^^xsd:date ;
+	dcterms:modified "2023-01-24"^^xsd:date ;
 	dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
 	dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
 	dcterms:provenance "Created by Engineers Australia";
@@ -57,8 +57,7 @@ isc:public a skos:Concept ;
 	dcterms:source "https://www.unsw.edu.au/content/dam/pdfs/governance/policy/2022-01-policies/datastandard.pdf"^^xsd:anyURI ;
 	skos:altLabel "Official - Public"@en ;
 	skos:definition """Data that if breached through accidental or malicious activity would have an insignificant impact on the activities and objectives of the organisation.
-	
-	The intended audience for data with this classification is the general public."""@en ;
+	The intended audience for data with this classification is any interested stakeholder, including the general public."""@en ;
 	skos:prefLabel "Public"@en ;
 	skos:inScheme <https://linked.data.gov.au/def/information-security-classification> ;
 	skos:topConceptOf <https://linked.data.gov.au/def/information-security-classification> .
@@ -70,13 +69,11 @@ isc:private a skos:Concept ;
 	dcterms:source "https://www.unsw.edu.au/content/dam/pdfs/governance/policy/2022-01-policies/datastandard.pdf"^^xsd:anyURI ;
 	skos:altLabel "Official"@en,
 		"Personal"@en ;
-	skos:definition """Data that if breached through accidental or malicious activity would have a low impact on the activities and objectives of the organisation. Official information is all information created, sent or received as part of the work with the organisation and forms an official record that provides evidence of what an entity has done and why. This includes routine business operations and services. When describing an individual private information may include name, address, date of birth, employee records etc.
-	
+	skos:definition """Data that if breached through accidental or malicious activity would have a low impact on the activities and objectives of the organisation. Official information is all information created, sent or received as part of the work with the organisation and forms an official record that provides evidence of what an entity has done and why. This includes routine business operations and services. When describing an individual, private information may include name, address, date of birth, employee records etc.
 	The intended audience for data with this classification is within an organisation and with direct external contacts and stakeholders with a demonstrated need."""@en ;
 	skos:prefLabel "Private"@en ;
 	skos:inScheme <https://linked.data.gov.au/def/information-security-classification> ;
 	skos:topConceptOf <https://linked.data.gov.au/def/information-security-classification> .
-
 
 isc:sensitive a skos:Concept ;
 	rdfs:isDefinedBy <https://linked.data.gov.au/def/information-security-classification> ;
@@ -84,13 +81,11 @@ isc:sensitive a skos:Concept ;
 	dcterms:references "University of NSW Data Classification Standard (2021), Australian Government Protective Security Policy Framework (2018), Australian Government Privacy Principles Guidelines (2019)"@en ;
 	dcterms:source "https://www.unsw.edu.au/content/dam/pdfs/governance/policy/2022-01-policies/datastandard.pdf"^^xsd:anyURI ;
 	skos:altLabel "Official - Sensitive"@en ;
-	skos:definition """Data that if breached through accidental or malicious activity would have a medium impact on the activities and objectives of the organisation. Sensitive classification indicates information that, due to its sensitive nature, requires limited dissemination and that, if compromised, would result in limited damage to an individual, organisation or government. When describing an individual sensitive information may include racial or ethnic origin, political and religious associations or beliefs, sexual orientation, health information etc .
-	
-	The intended audience for data with this classification is typically within a specific business or functional unit within the organisation and with strict needs-based protocols to  external stakeholders."""@en ;
+	skos:definition """Data that if breached through accidental or malicious activity would have a medium impact on the activities and objectives of the organisation. Sensitive classification indicates information that, due to its sensitive nature, requires limited dissemination and that, if compromised, would result in limited damage to an individual, organisation or government. When describing an individual, sensitive information may include racial or ethnic origin, political and religious associations or beliefs, sexual orientation, health information etc .
+	The intended audience for data with this classification is typically within a specific business or functional unit within the organisation, and on a strict needs-based protocol to external stakeholders."""@en ;
 	skos:prefLabel "Sensitive"@en ;
 	skos:inScheme <https://linked.data.gov.au/def/information-security-classification> ;
 	skos:topConceptOf <https://linked.data.gov.au/def/information-security-classification> .
-
 
 isc:highly-sensitive a skos:Concept ;
 	rdfs:isDefinedBy <https://linked.data.gov.au/def/information-security-classification> ;
@@ -98,39 +93,34 @@ isc:highly-sensitive a skos:Concept ;
 	dcterms:references "University of NSW Data Classification Standard (2021), Australian Government Protective Security Policy Framework (2018)"@en ;
 	dcterms:source "https://www.unsw.edu.au/content/dam/pdfs/governance/policy/2022-01-policies/datastandard.pdf"^^xsd:anyURI ;
 	skos:altLabel "Protected"@en ;
-	skos:definition """Data that if breached through accidental or malicious activity would have a high impact on the activities and objectives of the organisation. Highly Sensitive classification indicates valuable, important and sensitive information that, if compromised, would be expected to cause damage to, the national interest, organisations, or individuals.
-	
-	The intended audience for data with this classification is typically a highly limited group within a specific business or functional unit within the organisation and with strict needs-based protocols to  external stakeholders."""@en ;
+	skos:definition """Data that if breached through accidental or malicious activity would have a high impact on the activities and objectives of the organisation. Highly Sensitive classification indicates valuable, important and sensitive information that, if compromised, would be expected to cause significant damage to the national interest, organisations, or individuals.
+	The intended audience for data with this classification is typically a highly limited group within a specific business or functional unit within the organisation, and on a strict needs-based protocol to  external stakeholders."""@en ;
 	skos:prefLabel "Highly Sensitive"@en ;
 	skos:inScheme <https://linked.data.gov.au/def/information-security-classification> ;
 	skos:topConceptOf <https://linked.data.gov.au/def/information-security-classification> .
-
 
 isc:secret a skos:Concept ;
 	rdfs:isDefinedBy <https://linked.data.gov.au/def/information-security-classification> ;
 	dcterms:references "Australian Government Protective Security Policy Framework (2018)"@en ;
 	dcterms:source "https://www.protectivesecurity.gov.au/system/files/2022-03/pspf-policy-08-sensitive-and-classified-information.pdf"^^xsd:anyURI ;
 	skos:definition """Data that if breached through accidental or malicious activity would have an extreme impact on the activities and objectives of the organisation. Secret classification indicates very valuable, important and sensitive information that, if compromised would be expected to cause serious damage to the national interest, organisations or individuals.
-	
 	The intended audience for data with this classification is highly restricted and is determined on an as-needed basis by the relevant government agency."""@en ;
 	skos:prefLabel "Secret"@en ;
 	skos:inScheme <https://linked.data.gov.au/def/information-security-classification> ;
 	skos:topConceptOf <https://linked.data.gov.au/def/information-security-classification> .
-
 
 isc:top-secret a skos:Concept ;
 	rdfs:isDefinedBy <https://linked.data.gov.au/def/information-security-classification> ;
 	dcterms:references "Australian Government Protective Security Policy Framework (2018)"@en ;
 	dcterms:source "https://www.protectivesecurity.gov.au/system/files/2022-03/pspf-policy-08-sensitive-and-classified-information.pdf"^^xsd:anyURI ;
 	skos:definition """Data that if breached through accidental or malicious activity would have a catastrophic impact on the activities and objectives of the organisation. Top Secret classification indicates the most valuable, important and sensitive information that, if compromised would be expected to cause exceptionally grave damage to the national interest, organisations or individuals.
-	
 	The intended audience for data with this classification is extremely restricted and is determined on an as-needed basis by the relevant government agency."""@en ;
 	skos:prefLabel "Top Secret"@en ;
 	skos:inScheme <https://linked.data.gov.au/def/information-security-classification> ;
 	skos:topConceptOf <https://linked.data.gov.au/def/information-security-classification> .
 
 
-isc:corporate-information-security a skos:orderedCollection ;
+isc:corporate-information-security a skos:Collection ;
 	skos:prefLabel "Corporate Information Security"@en ;
 	rdfs:label "Corporate Information Security"@en ;
 	skos:definition """Data and information security classifications typically applicable to non-government entities such as businesses, corporations, academic institutions, and not-for-profit organisations."""@en ;
