@@ -1,0 +1,407 @@
+@prefix diet: <https://linked.data.gov.au/def/diet-reqs/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://linked.data.gov.au/def/diet-reqs> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2023-01-31"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:modified "2023-01-31"^^xsd:date ;
+    dcterms:provenance "International Air Transport Association meal codes translated by Engineers Australia into vocabulary format and augmented with additional allergen options." ;
+    dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    skos:definition """Dietary requirements describe the restrictions to an individual's allowable food consumption due reasons including allergy or intolerance, other health considerations, personal preference, religious beliefs, or ethical considerations. These restrictions may be distinct, mutually exclusive, related, complementary, or overlapping."""@en ;
+    skos:altLabel "Dietary Restrictions"@en, 
+        "Special Dietary Requirements"@en,
+        "Special Meals"@en ;
+    skos:prefLabel "Dietary Requirements"@en .
+
+diet:avml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal is available for vegetarian passengers. It is usually aromatic and spicy, and incorporates flavours from the Indian sub-continent.
+    It can contain all types of vegetables, fresh fruit, dried fruits, legumes, dairy products, tofu, cereal, grains and vegetarian gelatine.
+    It does NOT contain any type of meat or by-products, fish, shellfish, eggs or animal gelatine."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "AVML" ;
+    skos:altLabel "Indian Vegetarian"@en ;
+    skos:prefLabel "Asian Vegetarian"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:bbml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """Strained meat, vegetables, fruits and desserts and juices are provided for babies. Combination of jars and packaged items, no fresh produce."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "BBML" ;
+    skos:prefLabel "Baby"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:blml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal is low-fat, low-salt and does not contain spices, garlic, onions or strong seasoning. Can contain lean meat, fish, vegetables and fruits and low-fat dairy products"""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "BLML" ;
+    skos:prefLabel "Bland"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:chml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal is suitable for children and features items such as chicken nuggets, spaghetti bolognese etc. Can contain meat, poultry, fish and dairy products."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "CHML" ;
+    skos:prefLabel "Child"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:dbml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal is suitable for guests with diabetes, non-insulin and insulin dependent. Contains minimum salt, products low in fat and calories and high in complex carbohydrates."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "DBML" ;
+    skos:prefLabel "Diabetic"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:fpml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal may be ordered by people who are fasting, or perhaps vegan/gluten-free options are not available and this special meal fits the requirement. Generally, the FPML will contain fresh seasonal fruit only, and it may contain dried fruit without sulphites.
+    
+    This meal only contains seasonal fresh fruit. Does not contain: Vegetables, meat, poultry, fish, seafood, eggs, caffeinated beverages, highly-processed foods, additives & preservatives."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "AVML" ;
+    skos:prefLabel "Fruit Platter"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:gfml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal is suitable for guests who are intolerant to gluten and does not contain any wheat-based products. Can contain meat, poultry, fish, dairy, fruits and vegetables."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "GFML" ;
+    skos:altLabel "Gluten Free/Coeliac"@en, 
+        "Gluten Free"@en, 
+        "Coeliac"@en ;
+    skos:prefLabel "Gluten Intolerant"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:hnml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal is suitable for guests who follow the Hindu custom. Can contain meat (lamb or chicken), fish, eggs and dairy products. Does not contain any beef or beef products. Prepared according to the Indian culinary style."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "HNML" ;
+    skos:altLabel "Non-Vegetarian Hindu"@en ;
+    skos:prefLabel "Hindu"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:ksml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal is prepared according to Jewish dietary laws and requirements. The meals are purchased from reputable manufacturers in each port."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "KSML" ;
+    skos:prefLabel "Kosher"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:lcml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal can contain lean meats and vegetables with less fat and carbohydrates. Does not contain sugar, cream, heavy sauces."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "LCML" ;
+    skos:altLabel "Low-Calorie"@en ;
+    skos:prefLabel "Low Calorie"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:lsml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal can contain food items low in sodium including herbs and spices. Does not contain cheeses, heavy sauces, dressings, cured or processed foods."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "LSML" ;
+    skos:altLabel "Low Salt"@en,
+        "Low-Salt"@en ;
+    skos:prefLabel "Low Sodium"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:moml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal contains food items sourced from approved Halal suppliers. Does not contain pork or alcohol products."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "MOML" ;
+    skos:altLabel "Muslim"@en ;
+    skos:prefLabel "Halal"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:nlml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal is suitable for guests who are intolerant to dairy products. Does not contain milk and milk/dairy products. Can contain fish, meat, carbohydrates."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "NLML" ;
+    skos:altLabel "Dairy Free"@en, 
+        "Lactose Free"@en ;
+    skos:prefLabel "Non-Lactose"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:rvml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal contains a selection of raw fruit, vegetables and salads."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "RVML" ;
+    skos:prefLabel "Raw Vegetarian"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:lfml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal can contain lean meats and vegetables with less fat and carbohydrates. Does not contain sugar, cream, heavy sauces."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "LFML" ;
+    skos:altLabel "Low Fat/Low Cholesterol"@en, 
+        "Low Cholesterol"@en ;
+    skos:prefLabel "Low Fat"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:sfml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal allows guests to put a preference for seafood. Specific seafood items are unable to be requested. Does not contain meat or any meat products"""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "SFML" ;
+    skos:altLabel "Pescatarian"@en
+    skos:prefLabel "Seafood"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:vgml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal is vegetarian and prepared without products from animal sources. Does not contain dairy, eggs, meat, fish or poultry."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "VGML" ;
+    skos:altLabel "Vegetarian Vegan"@en ;
+    skos:prefLabel "Vegan"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:vjml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal is available for members of the Jain community who are pure vegetarians. It is prepared with a selection of Indian condiments.
+    It can contain fresh fruit, vegetables that grow above ground, tofu, pulses, cereals and rice.
+    It does NOT contain animal products and by-products, seafood, eggs, dairy products, and root vegetables such as onions, mushrooms, ginger, garlic, potatoes, carrots, radishes and turmeric."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "VJML" ;
+    skos:altLabel "Pure Vegetarian"@en,
+        "Jain Vegetarian"@en ;
+    skos:prefLabel "Vegetarian Jain"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:vlml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal is a vegetarian meal that can contain dairy. Does not contain meat or meat products, fish or poultry."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "VLML" ;
+    skos:altLabel "Lacto-ovo Vegetarian"@en ;
+    skos:prefLabel "Vegetarian Lacto-ovo"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:voml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal is a vegetarian meal prepared in the Chinese/oriental style. Does not contain meat, fish, eggs or dairy products."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "VOML" ;
+    skos:prefLabel "Vegetarian Oriental"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:alml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """Allergen free meals are generally free of seafood, wheat, buckwheat, dairy, eggs, nuts and other ingredients."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "ALML" ;
+    skos:prefLabel "Allergen"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:nonut a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """Meals free of tree nut allergens."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:altLabel "Nut Allergy"@en ;
+    skos:prefLabel "Tree Nut Allergy"@en ;
+    skos:broader diet:alml .
+
+diet:nosea a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """Meals free of crustacea and other seafood."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:altLabel "Seafood/Shellfish Allergy"@en, 
+        "Shellfish Allergy"@en ;
+    skos:prefLabel "Seafood Allergy"@en ;
+    skos:broader diet:alml .
+
+diet:noegg a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """Meals made without eggs or egg derivatives. """@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:altLabel "Egg Free"@en ;
+    skos:prefLabel "Egg Allergy"@en ;
+    skos:broader diet:alml .
+
+diet:clml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """A meal that includes a cake to observe a special occasion."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "CLML" ;
+    skos:prefLabel "Celebration Cake"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:hfml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """A meal high in dietary fibre."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "HFML" ;
+    skos:prefLabel "High Fibre"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:obml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """A japanese mean served in the obento style (a Japanese-style packed lunch)."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "OBML" ;
+    skos:prefLabel "Japanese Obento"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:jpml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """A meal of japanese cuisine in the japanese style."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "JPML" ;
+    skos:prefLabel "Japanese"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:jnml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """This meal is a larger portion than a child meal, but smaller than an adult meal."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "JNML" ;
+    skos:prefLabel "Junior"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:nbml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """A meal that contains no beef or beef derived products. May include dairy."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "NBML" ;
+    skos:prefLabel "No Beef"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:nfml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """A meal that contains no fish."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "NFML" ;
+    skos:prefLabel "No Fish"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:lpml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """Contains a restricted quantity of protein, specifically geared for those with liver and kidney ailments. These meals may contain fresh fruit and vegetables, vegetable fats and seasoning, and a measured amount of eggs and meat."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "LPML" ;
+    skos:prefLabel "Low Protein"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:prml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """A meal low in purines, intended for people struggling with gout."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "PRML" ;
+    skos:prefLabel "Low Purine"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:orml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """A meal where the main course features an 'Oriental style' accompanied by beef, pork, chicken, duck, or fish."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "ORML" ;
+    skos:prefLabel "Oriental"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:pfml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """No peanuts, peanut butter, or other peanut derivative items"""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "PFML" ;
+    skos:altLabel "Peanut Allergy"@en ;
+    skos:prefLabel "Peanut Free"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:spml a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """No specific restrictions, selected where other options are not applicable and the customer or recipient is required to specify requirements."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:notation "SPML" ;
+    skos:altLabel "Other"@en,
+        "Special"@en ;
+    skos:prefLabel "Special, Specify Food"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+diet:none a skos:Concept ;
+    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:definition """No dietary restrictions. Used when selection of a dietary option is mandatory."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
+    skos:altLabel "No Restrictions"@en ;
+    skos:prefLabel "Not Applicable"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
+
+#Collections
+
+diet:common a skos:Collection ;
+	skos:prefLabel "Common Dietary Options"@en ;
+	skos:definition """Dietary options that are commonly catered for or widely known."""@en ;
+    skos:member
+        diet:none,
+        diet:dbml,
+        diet:noegg,
+        diet:gfml,
+        diet:moml,
+        diet:nlml,
+        diet:vlml,
+        diet:pfml,
+        diet:nosea,
+        diet:nonut,
+        diet:vgml,
+        diet:avml,
+.
