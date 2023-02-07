@@ -239,7 +239,7 @@ diet:alml a skos:Concept ;
     skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
 
 diet:nonut a skos:Concept ;
-    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    dcterms:source "Specification of allergen meal added by Engineers Australia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
     skos:definition """Meals free of tree nut allergens."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
@@ -248,7 +248,7 @@ diet:nonut a skos:Concept ;
     skos:broader diet:alml .
 
 diet:nosea a skos:Concept ;
-    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    dcterms:source "Specification of allergen meal added by Engineers Australia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
     skos:definition """Meals free of crustacea and other seafood."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
@@ -258,7 +258,7 @@ diet:nosea a skos:Concept ;
     skos:broader diet:alml .
 
 diet:noegg a skos:Concept ;
-    dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
+    dcterms:source "Specification of allergen meal added by Engineers Australia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
     skos:definition """Meals made without eggs or egg derivatives. """@en ;
     skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
