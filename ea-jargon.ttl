@@ -378,6 +378,51 @@ eaj:prescriptive-model a skos:Concept ;
     skos:prefLabel "Prescriptive Analytical Model"@en ;
     skos:broader eaj:analytical-model .
 
+eaj:audit a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """A formal process of review to ensure compliance with standards and regulations. A means to provide assurance to the sponsor or board of a project that governance is effective and that the project is being managed as intended.
+    
+    At Engineers Australia this may be applied to Chartered Status, Registration (NPER / NETR), CPD or Complaints scenarios."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Audit"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .    
+
+eaj:board a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """A body that provides sponsorship to a project, program or portfolio. The board will represent financial, provider and user interests.
+    
+    When referred to as The Board, or without specification, it is typically meant as the board for the whole organisation. For example the Board of Engineers Australia."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "The Board"@en ;
+    skos:prefLabel "Board"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> . 
+
+eaj:change-management a skos:Concept ;
+    dcterms:source "https://www.apm.org.uk/resources/what-is-project-management/what-is-change-management/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """The overarching approach taken in an organisation to move from the current to a future desirable state using a coordinated and structured approach in collaboration with stakeholders."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "Organisational Change Management"@en ;
+    skos:notation "CM" ;
+    skos:prefLabel "Change Management"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> . 
+
+eaj:data-model a skos:Concept ;
+    dcterms:source "https://sciencelogic.com/glossary/data-modeling"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """An abstract model that organizes elements of data and standardizes how they relate to one another and to the properties of real-world entities. For example what entitities exist in the real world, what their attributes are, and what relationships they have.
+    
+    Data models can be Conceptual, Logical, or Physical and are commonly represented as an Entity Relationship Diagram (ERD) or a Data Profile.
+    
+    By contrast, systems or solutions architectures describe how information flows between the components of a system.
+    
+    By constrast, Analytical Models are used to interrogate data to result in an assessment of a dataset to make decriptive, diagnostic, predictive or prescriptive conclusions."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Data Model"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 eaj:engineering-accords a skos:Concept ;
     dcterms:source "https://www.ieagreements.org/"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -387,6 +432,19 @@ eaj:engineering-accords a skos:Concept ;
     skos:prefLabel "International Engineering Accords"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
+eaj:system-architecture a skos:Concept ;
+    dcterms:source "https://en.wikipedia.org/wiki/Systems_architecture"^^xsd:anyURI ;
+    dcterms:
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """A description of a solution and a representation of the data flows, relationships, and interactions between the components of a complete system. In a hardware architecture this will include the structures and behaviours that define what data moves and any rules and transformations applied. Commonly illustrated using a Data Flow Diagram (DFD).
+    
+    By contrast, a data model describes how real-world entities are described including entity or object classes, their attributes and relationships."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "Systems Architecture"@en,
+        "Solution Architecture"@en,
+        "System Model"@en ;
+    skos:prefLabel "System Architecture"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
 #Collections
 
@@ -422,8 +480,12 @@ eaj:jargon a skos:Collection ;
 	skos:prefLabel "Jargon"@en ;
 	skos:definition """Concepts that describe terminology specific to a group or area of interest and does not fit within a definition of system data or reference data."""@en ;
     skos:member
+        eaj:audit,
+        eaj:board,
         eaj:analytical-model,
         eaj:descriptive-model,
         eaj:diagnostic-model,
         eaj:predictive-model,
-        eaj:prescriptive-model .
+        eaj:prescriptive-model,
+        eaj:data-model,
+        eaj:system-architecture .

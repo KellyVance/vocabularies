@@ -15,6 +15,7 @@
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     skos:definition "The grade of membership of Engineers Australia. Grade reflects the experience and skill level of a member and corresponds to a specific level of EA Membership."@en ;
+    skos:altLabel "Full Member"@en ;
     skos:prefLabel "Engineers Australia Membership Grade"@en .
 
 <https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
