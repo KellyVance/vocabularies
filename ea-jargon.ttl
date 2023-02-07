@@ -33,276 +33,276 @@ eaj:membership a skos:Concept ;
     skos:prefLabel "Engineers Australia Membership Grade"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
-    eaj:post-nominals a skos:Concept ;
+eaj:post-nominals a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition "Letters and notations placed following a person's last name to indicate education qualifications, title of office, decoration or honour. Postnominals include abbreviations of an award or awarding institution. These are commonly derived and concatenated from multiple sources and as such are typically considered derived data and not primary data."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Post Nominals"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+    eaj:post-nominals-ea a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-        skos:definition "Letters and notations placed following a person's last name to indicate education qualifications, title of office, decoration or honour. Postnominals include abbreviations of an award or awarding institution. These are commonly derived and concatenated from multiple sources and as such are typically considered derived data and not primary data."@en ;
+        skos:definition "An Engineers Australia Post Nominal is a specific type of Post Nominal that EA can offer to its Members. Each member may only have one membership post-nominal at any one time."@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-        skos:prefLabel "Post Nominals"@en ;
-        skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+        skos:prefLabel "Engineers Australia Post Nominals"@en ;
+        skos:broader eaj:post-nominals .
 
-        eaj:post-nominals-ea a skos:Concept ;
+        eaj:AffilIEAust a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
+            skos:definition "A member of Engineers Australia who is not part of the engineering profession and is therefore ineligible to be a Fellow, Member, Graduate or Student, but who has an interest in the engineering profession. Similar to Member grade for a non-engineer."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/affiliate> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "AffilIEAust" ;
+            skos:prefLabel "Affiliate of the Institute of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea,
+                eaj:membership  .
+
+        eaj:AFIEAust a skos:Concept ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-            skos:definition "An Engineers Australia Post Nominal is a specific type of Post Nominal that EA can offer to its Members. Each member may only have one membership post-nominal at any one time."@en ;
+            skos:definition "A member of Engineers Australia and very experienced engineer who has made a significant contribution to the profession, who holds a 2 Years Australian Advanced Diploma or Associated Degree in Engineering."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/fellow> ;
+            skos:related <https://linked.data.gov.au/def/iea-occupational-categories/assoc-engineer> ;
             skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-            skos:prefLabel "Engineers Australia Post Nominals"@en ;
-            skos:broader eaj:post-nominals .
+            skos:notation "AFIEAust" ;
+            skos:prefLabel "Engineering Associate Fellow of the Institute of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea .
 
-                eaj:AffilIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-                    skos:definition "A member of Engineers Australia who is not part of the engineering profession and is therefore ineligible to be a Fellow, Member, Graduate or Student, but who has an interest in the engineering profession. Similar to Member grade for a non-engineer."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/affiliate> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "AffilIEAust" ;
-                    skos:prefLabel "Affiliate of the Institute of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea,
-                        eaj:membership  .
-
-                eaj:AFIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:definition "A member of Engineers Australia and very experienced engineer who has made a significant contribution to the profession, who holds a 2 Years Australian Advanced Diploma or Associated Degree in Engineering."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/fellow> ;
-                    skos:related <https://linked.data.gov.au/def/iea-occupational-categories/assoc-engineer> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "AFIEAust" ;
-                    skos:prefLabel "Engineering Associate Fellow of the Institute of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-                eaj:AMIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:definition "A member of the Institute of Engineers Australia who has surpassed graduate membership but has not reached the level of experience of a Fellow, who holds a 2 Years Australian Advanced Diploma or Associated Degree in Engineering."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/member> ;
-                    skos:related <https://linked.data.gov.au/def/iea-occupational-categories/assoc-engineer> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "AMIEAust" ;
-                    skos:prefLabel "Engineering Associate Member of the Institute of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-                eaj:GradAIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:definition "A member of the Institute of Engineers Australia prior to transitioning full professional membership. An Engineer with less than 3 years of relevant work experience according the the rules of membership who holds a 2 Years Australian Advanced Diploma or Associated Degree in Engineering."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/graduate> ;
-                    skos:related <https://linked.data.gov.au/def/iea-occupational-categories/assoc-engineer> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "GradAIEAust" ;
-                    skos:prefLabel "Engineering Associate Graduate of the Institute of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-                eaj:CEngA a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:definition "A person who holds a 2 Years Australian Advanced Diploma or Associated Degree in Engineering and has received Chartered status through an Engineers Australia assessment."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-engineering-credentials/chartered> ;
-                    skos:related <https://linked.data.gov.au/def/iea-occupational-categories/assoc-engineer> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "CEngA" ;
-                    skos:prefLabel "Chartered Engineering Associate"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-                eaj:CEngARet a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:definition "A person who has retired from the engineering profession having held a 2 Years Australian Advanced Diploma or Associated Degree in Engineering and having received Chartered status through an Engineers Australia assessment."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-engineering-credentials/chartered-ret> ;
-                    skos:related <https://linked.data.gov.au/def/iea-occupational-categories/assoc-engineer> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "CEngA(Ret)" ;
-                    skos:prefLabel "Chartered Engineering Associate - Retired"@en ;
-                    skos:broader eaj:CEngA .
-
-                eaj:CEngT a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:definition "A person who holds a 3 Years accredited Bachelor of Engineering Technology (BTech) and has received Chartered status through an Engineers Australia assessment."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-engineering-credentials/chartered> ;
-                    skos:related <https://linked.data.gov.au/def/iea-occupational-categories/tech-engineer> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "CEngT" ;
-                    skos:prefLabel "Chartered Engineering Technologist"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-                eaj:CEngTRet a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:definition "A person who has retired from the engineering profession having held a 3 Years accredited Bachelor of Engineering Technology (BTech) and having received Chartered status through an Engineers Australia assessment."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-engineering-credentials/chartered-ret> ;
-                    skos:related <https://linked.data.gov.au/def/iea-occupational-categories/tech-engineer> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "CEngT(Ret)" ;
-                    skos:prefLabel "Chartered Engineering Technologist - Retired"@en ;
-                    skos:broader eaj:CEngT .
-
-                eaj:CPEng a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:definition "A person who holds a 4 Years accredited Bachelor of Engineering (BEng) and has received Chartered status through an Engineers Australia assessment."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-engineering-credentials/chartered> ;
-                    skos:related <https://linked.data.gov.au/def/iea-occupational-categories/pro-engineer> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "CPEng" ;
-                    skos:prefLabel "Chartered Professional Engineer"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-                eaj:CPEngRet a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:definition "A person who has retired from the engineering profession having held a 4 Years accredited Bachelor of Engineering (BEng) and having received Chartered status through an Engineers Australia assessment."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-engineering-credentials/chartered-ret> ;
-                    skos:related <https://linked.data.gov.au/def/iea-occupational-categories/pro-engineer> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "CPEng(Ret)" ;
-                    skos:prefLabel "Chartered Professional Engineer - Retired"@en ;
-                    skos:broader eaj:CPEng .
-
-                eaj:CompIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-                    skos:definition "A member of Engineers Australia who is not part of the engineering profession and is therefore ineligible to be a Fellow, Member, Graduate or Student, but who has an interest in the engineering profession and has made a significant contribution. Similar to Fellow grade for a non-engineer."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/companion> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "CompIEAust" ;
-                    skos:prefLabel "Companion of the Institute of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea,
-                        eaj:membership  .
-
-                eaj:FIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:definition "A member of Engineers Australia and very experienced engineer who has made a significant contribution to the profession, and who holds a 4 Years accredited Bachelor of Engineering (BEng)."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/fellow> ;
-                    skos:related <https://linked.data.gov.au/def/iea-occupational-categories/pro-engineer> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "FIEAust" ;
-                    skos:prefLabel "Professional Engineer Fellow of the Institute of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-                eaj:GradIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-                    skos:definition "A member of the Institute of Engineers Australia prior to transitioning full professional membership. An Engineer with less than 3 years of relevant work experience according the the rules of membership but who holds a 4 Years accredited Bachelor of Engineering (BEng)."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/graduate> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "GradIEAust" ;
-                    skos:prefLabel "Professional Engineer Graduate of the Institute of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-                eaj:MIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:definition "A member of the Institute of Engineers Australia who has surpassed graduate membership but has not reached the level of experience of a Fellow, and who holds a 4 Years accredited Bachelor of Engineering (BEng)."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/member> ;
-                    skos:related <https://linked.data.gov.au/def/iea-occupational-categories/pro-engineer> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "MIEAust" ;
-                    skos:prefLabel "Professional Engineer Member of the Institute of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-                eaj:StudIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-                    skos:definition "A member of the Institute of Engineers Australia who is is a student in an engineering curriculum. Students are assumed to follow the professional engineer pathway and categorisation, however will typically not meet the qualification criteria for a true Professional Engineer."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/student> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "StudIEAust" ;
-                    skos:prefLabel "Professional Engineer Student of the Institute of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-                eaj:TFIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:definition "A member of Engineers Australia and very experienced engineer who has made a significant contribution to the profession, and who holds a 3 Years accredited Bachelor of Engineering Technology (BTech)."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/fellow> ;
-                    skos:related <https://linked.data.gov.au/def/iea-occupational-categories/tech-engineer> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "TFIEAust" ;
-                    skos:prefLabel "Engineering Technologist Fellow of the Institute of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-                eaj:TMIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:definition "A member of the Institute of Engineers Australia who has surpassed graduate membership but has not reached the level of experience of a Fellow, and who holds a 3 Years accredited Bachelor of Engineering Technology (BTech)."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/member> ;
-                    skos:related <https://linked.data.gov.au/def/iea-occupational-categories/tech-engineer> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "TMIEAust" ;
-                    skos:prefLabel "Engineering Technologist Member of the Institute of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-                eaj:GradTIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:definition "A member of the Institute of Engineers Australia prior to transitioning full professional membership. An Engineer with less than 3 years of relevant work experience according the the rules of membership, but who holds a 3 Years accredited Bachelor of Engineering Technology (BTech)."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/graduate> ;
-                    skos:related <https://linked.data.gov.au/def/iea-occupational-categories/tech-engineer> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "GradTIEAust" ;
-                    skos:prefLabel "Engineering Technologist Graduate of the Institute of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-                eaj:HonFIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-                    skos:definition "An honorary title for a member of Engineers Australia for outstanding achievement and contribution to the profession."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/hon-fellow> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "HonFIEAust" ;
-                    skos:prefLabel "Honorary Fellow of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea,
-                        eaj:membership  .
-
-                eaj:GradOIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-                    skos:definition "A legacy designation that is no longer in current usage for a member of the Institute of Engineers Australia prior to transitioning full professional membership. Superseded by Graduate membership."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/graduate> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "GradOIEAust" ;
-                    skos:prefLabel "Graduate Officer of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-                eaj:OFIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-                    skos:definition "A legacy designation that is no longer in current usage for a member of Engineers Australia and very experienced engineer who has made a significant contribution to the profession. Superseded by Fellow membership."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/fellow> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "OFIEAust" ;
-                    skos:prefLabel "Officer Fellow of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-                eaj:OMIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-                    skos:definition "A legacy designation that is no longer in current usage for a member of the Institute of Engineers Australia who has surpassed graduate membership but has not reached the level of experience of a Fellow. Superseded by Member membership."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/member> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "OMIEAust" ;
-                    skos:prefLabel "Officer Member of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-                eaj:SMIEAust a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-                    skos:definition "A legacy designation that is no longer in current usage for a member of the Institute of Engineers Australia who has professional experience exceeding that of a standard member. No new applications for this grade of membership have been accepted since August 1999."@en ;
-                    skos:related <https://linked.data.gov.au/def/ea-membership-grade/member> ;
-                    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-                    skos:notation "SMIEAust" ;
-                    skos:prefLabel "Senior Member of Engineers Australia"@en ;
-                    skos:broader eaj:post-nominals-ea .
-
-        eaj:post-nominals-personal a skos:Concept ;
+        eaj:AMIEAust a skos:Concept ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-            skos:definition "A Personal Post Nominal is a general post-nominal that does not derive from membership to an organisation. These may include degrees and awards that the individual has gained and uses as postnominals e.g, B.E., B.Eng, etc.  Personal Postnominals appear last in the list of postnominals appearing after the surname."@en ;
+            skos:definition "A member of the Institute of Engineers Australia who has surpassed graduate membership but has not reached the level of experience of a Fellow, who holds a 2 Years Australian Advanced Diploma or Associated Degree in Engineering."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/member> ;
+            skos:related <https://linked.data.gov.au/def/iea-occupational-categories/assoc-engineer> ;
             skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-            skos:prefLabel "Personal Post Nominals"@en ;
-            skos:broader eaj:post-nominals .
+            skos:notation "AMIEAust" ;
+            skos:prefLabel "Engineering Associate Member of the Institute of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea .
+
+        eaj:GradAIEAust a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:definition "A member of the Institute of Engineers Australia prior to transitioning full professional membership. An Engineer with less than 3 years of relevant work experience according the the rules of membership who holds a 2 Years Australian Advanced Diploma or Associated Degree in Engineering."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/graduate> ;
+            skos:related <https://linked.data.gov.au/def/iea-occupational-categories/assoc-engineer> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "GradAIEAust" ;
+            skos:prefLabel "Engineering Associate Graduate of the Institute of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea .
+
+        eaj:CEngA a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:definition "A person who holds a 2 Years Australian Advanced Diploma or Associated Degree in Engineering and has received Chartered status through an Engineers Australia assessment."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-engineering-credentials/chartered> ;
+            skos:related <https://linked.data.gov.au/def/iea-occupational-categories/assoc-engineer> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "CEngA" ;
+            skos:prefLabel "Chartered Engineering Associate"@en ;
+            skos:broader eaj:post-nominals-ea .
+
+        eaj:CEngARet a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:definition "A person who has retired from the engineering profession having held a 2 Years Australian Advanced Diploma or Associated Degree in Engineering and having received Chartered status through an Engineers Australia assessment."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-engineering-credentials/chartered-ret> ;
+            skos:related <https://linked.data.gov.au/def/iea-occupational-categories/assoc-engineer> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "CEngA(Ret)" ;
+            skos:prefLabel "Chartered Engineering Associate - Retired"@en ;
+            skos:broader eaj:CEngA .
+
+        eaj:CEngT a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:definition "A person who holds a 3 Years accredited Bachelor of Engineering Technology (BTech) and has received Chartered status through an Engineers Australia assessment."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-engineering-credentials/chartered> ;
+            skos:related <https://linked.data.gov.au/def/iea-occupational-categories/tech-engineer> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "CEngT" ;
+            skos:prefLabel "Chartered Engineering Technologist"@en ;
+            skos:broader eaj:post-nominals-ea .
+
+        eaj:CEngTRet a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:definition "A person who has retired from the engineering profession having held a 3 Years accredited Bachelor of Engineering Technology (BTech) and having received Chartered status through an Engineers Australia assessment."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-engineering-credentials/chartered-ret> ;
+            skos:related <https://linked.data.gov.au/def/iea-occupational-categories/tech-engineer> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "CEngT(Ret)" ;
+            skos:prefLabel "Chartered Engineering Technologist - Retired"@en ;
+            skos:broader eaj:CEngT .
+
+        eaj:CPEng a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:definition "A person who holds a 4 Years accredited Bachelor of Engineering (BEng) and has received Chartered status through an Engineers Australia assessment."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-engineering-credentials/chartered> ;
+            skos:related <https://linked.data.gov.au/def/iea-occupational-categories/pro-engineer> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "CPEng" ;
+            skos:prefLabel "Chartered Professional Engineer"@en ;
+            skos:broader eaj:post-nominals-ea .
+
+        eaj:CPEngRet a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:definition "A person who has retired from the engineering profession having held a 4 Years accredited Bachelor of Engineering (BEng) and having received Chartered status through an Engineers Australia assessment."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-engineering-credentials/chartered-ret> ;
+            skos:related <https://linked.data.gov.au/def/iea-occupational-categories/pro-engineer> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "CPEng(Ret)" ;
+            skos:prefLabel "Chartered Professional Engineer - Retired"@en ;
+            skos:broader eaj:CPEng .
+
+        eaj:CompIEAust a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
+            skos:definition "A member of Engineers Australia who is not part of the engineering profession and is therefore ineligible to be a Fellow, Member, Graduate or Student, but who has an interest in the engineering profession and has made a significant contribution. Similar to Fellow grade for a non-engineer."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/companion> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "CompIEAust" ;
+            skos:prefLabel "Companion of the Institute of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea,
+                eaj:membership  .
+
+        eaj:FIEAust a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:definition "A member of Engineers Australia and very experienced engineer who has made a significant contribution to the profession, and who holds a 4 Years accredited Bachelor of Engineering (BEng)."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/fellow> ;
+            skos:related <https://linked.data.gov.au/def/iea-occupational-categories/pro-engineer> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "FIEAust" ;
+            skos:prefLabel "Professional Engineer Fellow of the Institute of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea .
+
+        eaj:GradIEAust a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
+            skos:definition "A member of the Institute of Engineers Australia prior to transitioning full professional membership. An Engineer with less than 3 years of relevant work experience according the the rules of membership but who holds a 4 Years accredited Bachelor of Engineering (BEng)."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/graduate> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "GradIEAust" ;
+            skos:prefLabel "Professional Engineer Graduate of the Institute of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea .
+
+        eaj:MIEAust a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:definition "A member of the Institute of Engineers Australia who has surpassed graduate membership but has not reached the level of experience of a Fellow, and who holds a 4 Years accredited Bachelor of Engineering (BEng)."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/member> ;
+            skos:related <https://linked.data.gov.au/def/iea-occupational-categories/pro-engineer> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "MIEAust" ;
+            skos:prefLabel "Professional Engineer Member of the Institute of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea .
+
+        eaj:StudIEAust a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
+            skos:definition "A member of the Institute of Engineers Australia who is is a student in an engineering curriculum. Students are assumed to follow the professional engineer pathway and categorisation, however will typically not meet the qualification criteria for a true Professional Engineer."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/student> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "StudIEAust" ;
+            skos:prefLabel "Professional Engineer Student of the Institute of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea .
+
+        eaj:TFIEAust a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:definition "A member of Engineers Australia and very experienced engineer who has made a significant contribution to the profession, and who holds a 3 Years accredited Bachelor of Engineering Technology (BTech)."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/fellow> ;
+            skos:related <https://linked.data.gov.au/def/iea-occupational-categories/tech-engineer> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "TFIEAust" ;
+            skos:prefLabel "Engineering Technologist Fellow of the Institute of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea .
+
+        eaj:TMIEAust a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:definition "A member of the Institute of Engineers Australia who has surpassed graduate membership but has not reached the level of experience of a Fellow, and who holds a 3 Years accredited Bachelor of Engineering Technology (BTech)."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/member> ;
+            skos:related <https://linked.data.gov.au/def/iea-occupational-categories/tech-engineer> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "TMIEAust" ;
+            skos:prefLabel "Engineering Technologist Member of the Institute of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea .
+
+        eaj:GradTIEAust a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:definition "A member of the Institute of Engineers Australia prior to transitioning full professional membership. An Engineer with less than 3 years of relevant work experience according the the rules of membership, but who holds a 3 Years accredited Bachelor of Engineering Technology (BTech)."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/graduate> ;
+            skos:related <https://linked.data.gov.au/def/iea-occupational-categories/tech-engineer> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "GradTIEAust" ;
+            skos:prefLabel "Engineering Technologist Graduate of the Institute of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea .
+
+        eaj:HonFIEAust a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
+            skos:definition "An honorary title for a member of Engineers Australia for outstanding achievement and contribution to the profession."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/hon-fellow> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "HonFIEAust" ;
+            skos:prefLabel "Honorary Fellow of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea,
+                eaj:membership  .
+
+        eaj:GradOIEAust a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
+            skos:definition "A legacy designation that is no longer in current usage for a member of the Institute of Engineers Australia prior to transitioning full professional membership. Superseded by Graduate membership."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/graduate> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "GradOIEAust" ;
+            skos:prefLabel "Graduate Officer of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea .
+
+        eaj:OFIEAust a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
+            skos:definition "A legacy designation that is no longer in current usage for a member of Engineers Australia and very experienced engineer who has made a significant contribution to the profession. Superseded by Fellow membership."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/fellow> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "OFIEAust" ;
+            skos:prefLabel "Officer Fellow of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea .
+
+        eaj:OMIEAust a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
+            skos:definition "A legacy designation that is no longer in current usage for a member of the Institute of Engineers Australia who has surpassed graduate membership but has not reached the level of experience of a Fellow. Superseded by Member membership."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/member> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "OMIEAust" ;
+            skos:prefLabel "Officer Member of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea .
+
+        eaj:SMIEAust a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
+            skos:definition "A legacy designation that is no longer in current usage for a member of the Institute of Engineers Australia who has professional experience exceeding that of a standard member. No new applications for this grade of membership have been accepted since August 1999."@en ;
+            skos:related <https://linked.data.gov.au/def/ea-membership-grade/member> ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:notation "SMIEAust" ;
+            skos:prefLabel "Senior Member of Engineers Australia"@en ;
+            skos:broader eaj:post-nominals-ea .
+
+    eaj:post-nominals-personal a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition "A Personal Post Nominal is a general post-nominal that does not derive from membership to an organisation. These may include degrees and awards that the individual has gained and uses as postnominals e.g, B.E., B.Eng, etc.  Personal Postnominals appear last in the list of postnominals appearing after the surname."@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:prefLabel "Personal Post Nominals"@en ;
+        skos:broader eaj:post-nominals .
 
 eaj:academic-transcript a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -396,25 +396,35 @@ eaj:analytical-model a skos:Concept ;
         skos:prefLabel "Prescriptive Analytical Model"@en ;
         skos:broader eaj:analytical-model .
 
-eaj:anzsco-main a skos:Concept ;
+eaj:anzsco a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:definition "The Main Code from the Australian & New Zealand Standard Classification of Occupations, denoted with a six-digit code (notation), used in the ANZSCO Australian Coder."@en ;
-    skos:related <https://linked.data.gov.au/def/anzsco/anzsco-aus-coder> ;
+    skos:definition "The Australian and New Zealand Standard Classification of Occupations (ANZSCO) was jointly developed by the ABS, Stats NZ and the then Australian Government Department of Education, Employment and Workplace Relations. It provides a basis for the standardised collection, analysis and dissemination of occupation data for Australia and New Zealand."@en ;
+    skos:related <https://linked.data.gov.au/def/anzsco> ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:altLabel "Australian and New Zealand Standard Classification of Occupations Main"@en ;
-    skos:prefLabel "ANZSCO Main"@en ;
+    skos:altLabel "ANZSCO"@en ;
+    skos:prefLabel "Australian and New Zealand Standard Classification of Occupations"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
-eaj:anzsco-specialistions a skos:Concept ;
-    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:definition "An ANZSCO Specialisation is a further level of occupational breakdown for a specific ANZSCO Main classification. The Specialisation titles are any commonly used titles which refer to a subset of jobs belonging to the occupation designated in the principal/parent title. These jobs involve the performance of specialised tasks rather than the broader range of tasks usually performed in the occupation."@en ;
-    skos:related <https://linked.data.gov.au/def/anzsco/anzsco-specialisations> ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:altLabel "Australian and New Zealand Standard Classification of Occupations Specialisation"@en ;
-    skos:prefLabel "ANZSCO Specialisation"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+    eaj:anzsco-main a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition "The Main Code from the Australian & New Zealand Standard Classification of Occupations, denoted with a six-digit code (notation), used in the ANZSCO Australian Coder."@en ;
+        skos:related <https://linked.data.gov.au/def/anzsco/anzsco-aus-coder> ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:altLabel "Australian and New Zealand Standard Classification of Occupations Main"@en ;
+        skos:prefLabel "ANZSCO Main"@en ;
+        skos:broader eaj:anzsco .
+
+    eaj:anzsco-specialistions a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition "An ANZSCO Specialisation is a further level of occupational breakdown for a specific ANZSCO Main classification. The Specialisation titles are any commonly used titles which refer to a subset of jobs belonging to the occupation designated in the principal/parent title. These jobs involve the performance of specialised tasks rather than the broader range of tasks usually performed in the occupation."@en ;
+        skos:related <https://linked.data.gov.au/def/anzsco/anzsco-specialisations> ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:altLabel "Australian and New Zealand Standard Classification of Occupations Specialisation"@en ;
+        skos:prefLabel "ANZSCO Specialisation"@en ;
+        skos:topConceptOf skos:broader eaj:anzsco .
 
 eaj:audit a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
