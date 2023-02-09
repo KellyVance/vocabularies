@@ -403,5 +403,4 @@ diet:common a skos:Collection ;
         diet:nosea,
         diet:nonut,
         diet:vgml,
-        diet:avml,
-.
+        diet:avml .
