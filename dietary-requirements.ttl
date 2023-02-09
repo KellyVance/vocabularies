@@ -183,7 +183,7 @@ diet:sfml a skos:Concept ;
     skos:definition """This meal allows guests to put a preference for seafood. Specific seafood items are unable to be requested. Does not contain meat or any meat products"""@en ;
     skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
     skos:notation "SFML" ;
-    skos:altLabel "Pescatarian"@en
+    skos:altLabel "Pescatarian"@en ;
     skos:prefLabel "Seafood"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
 
