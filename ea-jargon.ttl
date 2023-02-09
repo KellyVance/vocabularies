@@ -424,7 +424,7 @@ eaj:anzsco a skos:Concept ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
         skos:altLabel "Australian and New Zealand Standard Classification of Occupations Specialisation"@en ;
         skos:prefLabel "ANZSCO Specialisation"@en ;
-        skos:topConceptOf skos:broader eaj:anzsco .
+        skos:broader eaj:anzsco .
 
 eaj:audit a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
