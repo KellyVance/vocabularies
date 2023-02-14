@@ -1,5 +1,6 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix eaj: <https://linked.data.gov.au/def/ea-membership-grade/> .
+@prefix earl: <https://linked.data.gov.au/def/ea-roles/>
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <http://schema.org/> .
@@ -17,16 +18,24 @@
     skos:definition """The business language and terminology used throughout Engineers Australia in common communication.
     
     This vocabulary contains general language with minimal heirarchy applied and an unconfined concept scheme. It is presented in this format for consitent and consolidated representation with controlled reference data."""@en ;
-    skos:scopeNote "This vocabulary formalises the definitions of shared terminology for the sake of clarity and reference. It may use related and seeAlso declarations to refer users to related vocabularies.However, this vocabulary should not be used as a reference data resource."@en;
+    skos:scopeNote """This vocabulary formalises the definitions of shared terminology for the sake of clarity and reference. It may use related and seeAlso declarations to refer users to related vocabularies.However, this vocabulary should not be used as a reference data resource. As this vocabulary is to present a human-readable format rather than be used as an actual reference data source, some of the usual rdf rules may be broken such as ensuring unique notations."""@en;
     skos:prefLabel "Engineers Australia Business Language"@en .
 
 <https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
     sdo:name "Engineers Australia" ;
     sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
 
+eaj:ea-roles a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-roles> ;
+    skos:definition """The roles an organisation, group, or individual can perform when interacting with Engineers Australia"""@en ;
+    skos:related <https://linked.data.gov.au/def/ea-roles> ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Engineers Australia Roles"@en .
+
 eaj:membership a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
     skos:definition "The grade of membership of Engineers Australia. Grade reflects the experience and skill level of a member and corresponds to a specific level of EA Membership."@en ;
     skos:related <https://linked.data.gov.au/def/ea-membership-grade> ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
@@ -426,6 +435,17 @@ eaj:anzsco a skos:Concept ;
         skos:prefLabel "ANZSCO Specialisation"@en ;
         skos:broader eaj:anzsco .
 
+eaj:area-of-practice a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """Areas of Practice are the subject area of Engineering a person is qualified to work in. At Engineers Australia these Areas of Practice may be associated with the National Engineers Register or associated with the status of a Chartered Engineer."""@en ;
+    skos:related <https://linked.data.gov.au/def/engineering-categories/areas-of-practice-chartered>,
+        <https://linked.data.gov.au/def/engineering-categories/areas-of-practice-ner> ; ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:notation "AOP" ;
+    skos:prefLabel "Area of Practice"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .    
+
 eaj:audit a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -480,6 +500,15 @@ eaj:engineering-accords a skos:Concept ;
     skos:prefLabel "International Engineering Accords"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
+earl:ea-assessor a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-roles> ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    skos:definition """An EA Assessor is an EA Role, for a Person who formally assesses (on behalf of EA) the competency of a Person seeking Stage 1 or Stage 2 Competency through Engineers Australia."""@en ;
+    skos:altLabel "Engineers Australia Assessor"@en ;
+    skos:prefLabel "EA Assessor"@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> ;
+
 eaj:ea-assessment a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -506,6 +535,49 @@ eaj:ea-assessment a skos:Concept ;
         skos:prefLabel "Articulation"@en ;
         skos:broader eaj:ea-assessment .
 
+    eaj:assessment-qualifications a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """A formal Engineers Australia assessment to determine the relevant occupational category for an individual."""@en ;
+        rdfs:seeAlso <https://linked.data.gov.au/def/iea-occupational-categories/> ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:notation "A/Q" ;
+        skos:prefLabel "Assessment of Qualifications"@en ;
+        skos:broader eaj:ea-assessment .
+
+    eaj:migration-skills-assessment a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """The Migration Skills Assessment (MSA) Unit of the Education and Assessment Directorate at National Office, undertakes assessments of the qualifications of overseas engineers.
+        
+        Overseas engineers who intend to apply for permanent residence in Australia under the Skilled Migration Program must have their qualifications and skills assessed by Engineers Australia before they lodge their migration application. Engineers Australia assesses overseas qualifications under a contract to AEI-NOOSR, a branch of the Commonwealth Department of Education, Science and Training. If an applicant appeals against an assessment outcome the case is reviewed by an honorary Committee of Review. The Migration Skills Assessment Unit does not assess persons who are already Australian Permanent Residents or Citizens. These persons must apply for an assessment using the Stage 1 Competency Assessment process."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:notation "MSA" ;
+        skos:altLabel "Overseas Qualifications Assessment"@en,
+            "OSQA"@en,
+            "Foreign Qualifications Assessment"@en,
+            "FQA"@en ;
+        skos:prefLabel "Migration Skills Assessment"@en ;
+        skos:broader eaj:ea-assessment .
+
+    eaj:mutual-recognition-agreement a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """Engineers Australia has established agreements with institutions and organisations around the world, which accord their members an equivalent level of membership when applying to join Engineers Australia. Proof of membership of the mutually recognised organisation is required on application."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:notation "MRA" ;
+        skos:prefLabel "Mutual Recognition Agreement"@en ;
+        skos:broader eaj:ea-assessment .
+
+    eaj:pre-application-skills-assessment a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """The process of assessing a person's qualifications and skills by a designated assessing authority such as Engineers Australia. This process occurs before that person makes an application for permanent residence."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:notation "PASA" ;
+        skos:prefLabel "Pre-Application Skills Assessment"@en ;
+        skos:broader eaj:ea-assessment .
+
     eaj:s1-competency-assessment a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -516,7 +588,7 @@ eaj:ea-assessment a skos:Concept ;
         However, some applicants do not have an acceptable undergraduate qualification but do have one that provides a suitable foundation of study together with one or more post-graduate qualifications. Where the post-graduate course forms a coherent extension of the basic qualification, Engineers Australia may judge that the aggregated academic achievements as an acceptable equivalent. In such cases, the applicant is regarded as having qualified upon completion of the last course taken into account."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
         skos:altLabel "Aggregation"@en ;
-        skos:prefLabel "Stage 1 Competency Assessments"@en ;
+        skos:prefLabel "Stage 1 Competency Assessment"@en ;
         skos:broader eaj:ea-assessment .
 
 eaj:system-architecture a skos:Concept ;
@@ -532,15 +604,50 @@ eaj:system-architecture a skos:Concept ;
     skos:prefLabel "System Architecture"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
+eaj:career-episode-report a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        rdfs:seeAlso eaj:engineering-practice-report ;
+        sdo:isPartOf eaj:engineering-practice-report ;
+        skos:definition """The Career Episode Reports are the individual reports that describe experience gained during professional formation as an engineer. The combined Career Episode Reports describing individual development make up an Engineering Practice Report"""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:notation "CER"@en ;
+        skos:prefLabel "Career Episode Report"@en ;
+        skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+eaj:competency-demo-report a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """The CDR is a submission in support of an applicant claim for recognition as an Engineer, where an accredited Australian or Washington Accord qualification is not held. The CDR is a report on career episodes in which the applicant relates their experiences to the competency units, elements and performance criteria in a manner similar to preparing a job application. 
+        
+        The CDR replaced Test by Examination as a means of determining the standing of an applicant. Normally overseas qualified, applicant's formal academic qualifications have permitted them to practice in the occupational category of professional engineer, engineering technologist or engineering associate in the country where the qualifications were obtained. However, Engineers Australia is unable to verify as equivalent standing in Australia. If the CDR is accepted, the Engineers Australia Qualifications Assessors may issue either a letter of eligibility, which is then accepted as evidence of Stage 1 eligibility for membership purposes, or a letter which may be used by the applicant to support his / her Migration application. The CDR is similar to the Engineering Practice Report required for Stage 2 applications, but is less comprehensive and focuses primarily on enabling competencies."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:notation "CDR"@en ;
+        skos:prefLabel "Competency Demonstration Report"@en ;
+        skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+eaj:engineering-practice-report a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        rdfs:seeAlso eaj:career-episode-report ;
+        sdo:hasPart eaj:career-episode-report ;
+        skos:definition """An Engineering Practice Report (EPR) consists of a series of written Career Episode Reports (CER) each describing experience gained during Professional Formation."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:notation "EPR"@en ;
+        skos:prefLabel "Engineering Practice Report"@en ;
+        skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
 
 #Collections
 
-eaj:assessments a skos:Collection ;
-	skos:prefLabel "Systems and Platforms"@en ;
-	skos:definition """Systems, Software, Tools, Portals, and Products used by Engineers Australia to interact with data. This may refer to legacy, active, or future platforms."""@en ;
+eaj:documents a skos:Collection ;
+    skos:altLabel "Documentation"@en ;
+	skos:prefLabel "Documents"@en ;
+	skos:definition """Documents and other files that record information about a person, organisation, or process. Commonly used as for assessments, or for retention of evidence for processes and decisions. Documents may be physical or digital."""@en ;
     skos:member
-        eaj:active-directory .
+        eaj:career-episode-report,
+        eaj:competency-demo-report,
+        eaj:engineering-practice-report .
 
 eaj:derived-data a skos:Collection ;
 	skos:prefLabel "Derived Data"@en ;
