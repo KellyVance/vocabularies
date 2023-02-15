@@ -1,0 +1,358 @@
+@prefix aqf: <https://linked.data.gov.au/def/australian-qualifications-framework/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://linked.data.gov.au/def/australian-qualifications-framework> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2023-03-01"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:modified "2023-03-01"^^xsd:date ;
+    dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;                                
+    skos:definition "Australian Qualifications Framework Issued by the National Staff Development Committee Standards and Curriculum Council of ANTA, the AQF provides a comprehensive, nationally consistent yet flexible Framework for all qualifications in post-compulsory education in Australia. The Framework was introduced Australia wide on 1 January 1995."@en ;
+    skos:prefLabel "Australian Qualifications Framework"@en .
+    
+<https://linked.data.gov.au/org/engineersaustralia>
+    a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+<https://orcid.org/0000-0003-2309-7004> a owl:NamedIndividual,
+    sdo:Person ;
+    sdo:affiliation [ a sdo:Organization ;
+        sdo:name "Engineers Australia" ;
+        sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI ] ;
+    sdo:name "Vance Kelly" ;
+    sdo:identifier <https://orcid.org/0000-0003-2309-7004> .
+
+aqf:ssce a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """The Senior Secondary Certificate of Education qualifies individuals with knowledge, skills and values for diverse pathways to further learning, work and effective participation in civic life.
+    Graduates of a Senior Secondary Certificate of Education will have foundational knowledge across a range of learning areas and some specialist discipline or technical knowledge.
+    Graduates of a Senior Secondary Certificate of Education will have:
+        - literacy, numeracy and communication skills and use information communication technologies skills to present knowledge and ideas to others
+        - cognitive skills to access, record and act on information from varied sources appropriate to subject disciplines and to move across subject disciplines to develop new expertise
+        - cognitive, technical, communication and creative skills for particular disciplines and to integrate disciplines to solve problems, to underpin flexible and analytical thinking and to work with others.
+    Graduates of a Senior Secondary Certificate of Education will demonstrate the application of knowledge and skills:
+        - with depth in some areas to tasks or functions in known or changing contexts
+        - in particular contexts within civic life, work and lifelong learning as successful learners, confident individuals and team members and active and informed citizens
+        - in contexts that include taking individual responsibility with some direction and some accountability for the quality of outcomes.
+    The volume of learning of a Senior Secondary Certificate of Education is typically 2 years."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:prefLabel "Senior Secondary Certificate of Education"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .
+
+aqf:cert-i a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """The Certificate I qualifies individuals with basic functional knowledge and skills to undertake work, further learning and community involvement.
+    Graduates of a Certificate I will have basic fundamental knowledge and understanding in a narrow area of work and learning.
+    Graduates of a Certificate I will have:
+        - basic skills to participate in everyday life and further learning
+        - cognitive and communication skills to receive, pass on and recall information in a narrow range of areas
+        - technical skills involving the use of tools appropriate to the activity and use of basic communication technologies.
+    Graduates of a Certificate I will demonstrate the application of knowledge and skills:
+        - with some autonomy in defined contexts and within established parameters and
+        - in contexts that may include preparation for further learning, life activities and/or a variety of initial routine and predictable work-related activities including participation in a team or work group.
+    The volume of learning of a Certificate I is typically 0.5-1 year."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:prefLabel "Certificate I"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .
+
+aqf:cert-ii a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """The Certificate II qualifies individuals to undertake mainly routine work and as a pathway to further learning.
+    Graduates of a Certificate II will have basic factual, technical and procedural knowledge in a defined area of work and learning.
+    Graduates of a Certificate II will have:
+        - cognitive skills to access, record and act on a defined range of information from a range of sources
+        - cognitive and communication skills to apply and communicate known solutions to a limited range of predictable problems
+        - technical skills to use a limited range of equipment to complete tasks involving known routines and procedures with a limited range of options.
+    Graduates of a Certificate II will demonstrate the application of knowledge and skills:
+        - with some accountability for the quality of own outcomes some responsibility for own outputs in work and learning
+        - with limited autonomy and judgement in the completion of own defined and routine tasks in known and stable contexts
+        - with limited autonomy and judgement to complete routine but variable tasks in collaboration with others in a team environment.
+    The volume of learning of a Certificate II is typically 0.5-1 year."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:prefLabel "Certificate II"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .
+
+aqf:cert-iii a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """The Certificate III qualifies individuals who apply a broad range of knowledge and skills in varied contexts to undertake skilled work and as a pathway for further learning.
+    Graduates of a Certificate III will have factual, technical, procedural and theoretical knowledge in an area of work and learning.
+    Graduates of a Certificate III will have:
+        - cognitive, technical and communication skills to interpret and act on available information
+        - cognitive and communication skills to apply and communicate known solutions to a variety of predictable problems and to deal with unforseen contingencies using known solutions
+        - technical and communication skills to provide technical information to a variety of specialist and non-specialist audiences
+        - technical skills to undertake routine and some non-routine tasks in a range of skilled operations.
+    Graduates of a Certificate III will demonstrate the application of knowledge and skills:
+        - with discretion and judgement in the selection of equipment, services or contingency measures
+        - to adapt and transfer skills and knowledge within known routines, methods, procedures and time constraints
+        - in contexts that include taking responsibility for own outputs in work and learning including participation in teams and taking limited responsibility for the output of others within established parameters.
+    The volume of learning of a Certificate III is typically 1-2 years. Up to 4 years may be required to achieve the learning outcomes through a program of indentured training/employment."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:prefLabel "Certificate III"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .
+
+aqf:cert-iv a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """The Certificate IV qualifies individuals who apply a broad range of specialised knowledge and skills in varied contexts to undertake skilled work and as a pathway for further learning.
+    Graduates of a Certificate IV will have broad factual, technical and theoretical knowledge in a specialised field of work and learning.
+    Graduates of a Certificate IV will have:
+        - cognitive skills to identify, analyse, compare and act on information from a range of sources
+        - cognitive, technical and communication skills to apply and communicate technical solutions of a non-routine or contingency nature to a defined range of predictable and unpredictable problems
+        - specialist technical skills to complete routine and non- routine tasks and functions
+        - communication skills to guide activities and provide technical advice in the area of work and learning.
+    Graduates of a Certificate IV will demonstrate the application of knowledge and skills:
+        - to specialised tasks or functions in known or changing contexts
+        - with responsibility for own functions and outputs, and may have limited responsibility for organisation of others
+        - with limited responsibility for the quantity and quality of the output of others in a team within limited parameters.
+    The volume of learning of a Certificate IV is typically 0.5-2 years. There may be variations between short duration specialist qualifications that build on knowledge and skills already acquired and longer duration qualifications that are designed as entry level requirements for work."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:prefLabel "Certificate IV"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .
+
+aqf:dip a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """The Diploma qualifies individuals who apply integrated technical and theoretical concepts in a broad range of contexts to undertake advanced skilled or paraprofessional work and as a pathway for further learning.
+    Graduates of a Diploma will have technical and theoretical knowledge and concepts, with depth in some areas within a field of work and learning.
+    Graduates of a Diploma will have:
+        - cognitive and communication skills to identify, analyse, synthesise and act on information from a range of sources
+        - cognitive, technical and communication skills to analyse, plan, design and evaluate approaches to unpredictable problems and/or management requirements 
+        - specialist technical and creative skills to express ideas and perspectives 
+        - communication skills to transfer knowledge and specialised skills to others and demonstrate understanding of knowledge.
+    Graduates of a Diploma will demonstrate the application of knowledge and skills:
+        - with depth in some areas of specialisation, in known or changing contexts
+        - to transfer and apply theoretical concepts and/or technical and/or creative skills in a range of situations
+        - with personal responsibility and autonomy in performing complex technical operations with responsibility for own outputs in relation to broad parameters for quantity and quality
+        - with initiative and judgement to organise the work of self and others and plan, coordinate and evaluate the work of teams within broad but generally well- defined parameters.
+    The volume of learning of a Diploma is typically 1-2 years."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:prefLabel "Diploma"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .
+
+aqf:ad-dip a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """The Advanced Diploma qualifies individuals who apply specialised knowledge in a range of contexts to undertake advanced skilled or paraprofessional work and as a pathway for further learning.
+    Graduates of an Advanced Diploma will have specialised and integrated technical and theoretical knowledge with depth within one or more fields of work and learning.
+    Graduates of an Advanced Diploma will have:
+        - cognitive and communication skills to identify, analyse, synthesise and act on information from a range of sources
+        - cognitive and communication skills to transfer knowledge and skills to others and to demonstrate understanding of specialised knowledge with depth in some areas
+        - cognitive and communication skills to formulate responses to complex problems
+        - wide-ranging specialised technical, creative or conceptual skills to express ideas and perspectives.
+    Graduates of an Advanced Diploma will demonstrate the application of knowledge and skills:
+        - with depth in areas of specialisation, in contexts subject to change
+        - with initiative and judgment in planning, design, technical or management functions with some direction
+        - to adapt a range of fundamental principles and complex techniques to known and unknown situations
+        - across a broad range of technical or management functions with accountability for personal outputs and personal and team outcomes within broad parameters.
+    The volume of learning of an Advanced Diploma is typically 1.5-2 years."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:prefLabel "Advanced Diploma"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .
+
+aqf:associate a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """The Associate Degree qualifies individuals who apply underpinning technical and theoretical knowledge in a range of contexts to undertake paraprofessional work and as a pathway for further learning.
+    Graduates of an Associate Degree will have broad theoretical and technical knowledge with some depth in the underlying principles and concepts in one or more disciplines.
+    Graduates of an Associate Degree will have:
+        - cognitive skills to identify, analyse and evaluate information and concepts from a range of sources
+        - cognitive, technical and creative thinking skills to demonstrate a broad understanding of knowledge and ideas with some depth in a discipline
+        - cognitive, communication and analytical skills to interpret and transmit responses to sometimes complex problems
+        - communication skills to make a clear and coherent presentation of knowledge and ideas with some intellectual independence.
+    Graduates of an Associate Degree will demonstrate the application of knowledge and skills:
+        - with initiative and judgement in planning, problem solving and decision making in paraprofessional practice
+        - to adapt knowledge and skills in a range of contexts and/or for further studies in one or more disciplines
+        - to adapt fundamental principles, concepts and techniques to known and unknown situations
+        - with responsibility and accountability for own learning and work and in collaboration with others within broad parameters.
+    The volume of learning of an Associate Degree is typically 2 years."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:prefLabel "Associate Degree"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .
+
+aqf:bachelor a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """The Bachelor Degree qualifies individuals who apply a broad and coherent body of knowledge in a range of contexts to undertake professional work and as a pathway for further learning.
+    Graduates of a Bachelor Degree will have a broad and coherent body of knowledge, with depth in the underlying principles and concepts in one or more disciplines as a basis for independent lifelong learning.
+    Graduates of a Bachelor Degree will have:
+        - cognitive skills to review critically, analyse, consolidate and synthesise knowledge
+        - cognitive and technical skills to demonstrate a broad understanding of knowledge with depth in some areas
+        - cognitive and creative skills to exercise critical thinking and judgement in identifying and solving problems with intellectual independence
+        - communication skills to present a clear, coherent and independent exposition of knowledge and ideas.
+    Graduates of a Bachelor Degree will demonstrate the application of knowledge and skills:
+        - with initiative and judgement in planning, problem solving and decision making in professional practice and/or scholarship
+        - to adapt knowledge and skills in diverse contexts
+        - with responsibility and accountability for own learning and professional practice and in collaboration with others within broad parameters
+    The volume of learning of a Bachelor Degree is typically 3-4 years."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:prefLabel "Bachelor Degree"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .
+
+aqf:bachelor-honours a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """The Bachelor Honours Degree qualifies individuals who apply a body of knowledge in a specific context to undertake professional work and as a pathway for research and further learning.
+    Graduates of a Bachelor Honours Degree will have coherent and advanced knowledge of the underlying principles and concepts in one or more disciplines and knowledge of research principles and methods.
+    Graduates of a Bachelor Honours Degree will have:
+        - cognitive skills to review, analyse, consolidate and synthesise knowledge to identify and provide solutions to complex problems with intellectual independence
+        - cognitive and technical skills to demonstrate a broad understanding of a body of knowledge and theoretical concepts with advanced understanding in some areas
+        - cognitive skills to exercise critical thinking and judgement in developing new understanding
+        - technical skills to design and use research in a project
+        - communication skills to present a clear and coherent exposition of knowledge and ideas to a variety of audiences.
+    Graduates of a Bachelor Honours Degree will demonstrate the application of knowledge and skills:
+        - with initiative and judgement in professional practice and/or scholarship
+        - to adapt knowledge and skills in diverse contexts
+        - with responsibility and accountability for own learning and practice and in collaboration with others within broad parameters
+        - to plan and execute project work and/or a piece of research and scholarship with some independence 
+    The volume of learning of a  Bachelor Honours Degree is typically 1 year following a Bachelor Degree. A Bachelor Honours Degree may also be embedded in a Bachelor Degree, typically as an additional year."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:prefLabel "Bachelor Honours Degree"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .
+
+aqf:grad-cert a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """The Graduate Certificate qualifies individuals who apply a body of knowledge in a range of contexts to undertake professional/highly skilled work and as a pathway for further learning.
+    Graduates of a Graduate Certificate will have specialised knowledge within a systematic and coherent body of knowledge that may include the acquisition and application of knowledge and skills in a new or existing discipline or professional area.
+    Graduates of a Graduate Certificate will have:
+        - cognitive skills to review, analyse, consolidate and synthesise knowledge and identify and provide solutions to complex problems
+        - cognitive skills to think critically and to generate and evaluate complex ideas
+        - specialised technical and creative skills in a field of highly skilled and/or professional practice
+        - communication skills to demonstrate an understanding of theoretical concepts
+        - communication skills to transfer complex knowledge and ideas to a variety of audiences.
+    Graduates of a Graduate Certificate will demonstrate the application of knowledge and skills:
+        - to make high level, independent judgements in a range of technical or management functions in varied specialised contexts
+        - to initiate, plan, implement and evaluate broad functions within varied specialised technical and/or creative contexts
+        - with responsibility and accountability for personal outputs and all aspects of the work or function of others within broad parameters The volume of learning of a.
+    Graduate Certificate is typically 0.5-1 year."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:prefLabel "Graduate Certificate"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .
+
+aqf:grad-dip a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """The Graduate Diploma qualifies individuals who apply a body of knowledge in a range of contexts to undertake professional/ highly skilled work and as a pathway for further learning.
+    Graduates of a Graduate Diploma will have advanced knowledge within a systematic and coherent body of knowledge that may include the acquisition and application of knowledge and skills in a new or existing discipline or professional area.
+    Graduates of a Graduate Diploma will have:
+        - cognitive skills to review, analyse, consolidate and synthesise knowledge and identify and provide solutions to complex problems
+        - cognitive skills to think critically and to generate and evaluate complex ideas
+        - specialised technical and creative skills in a field of highly skilled and/or professional practice
+        - communication skills to demonstrate an understanding of theoretical concepts 
+        - communication skills to transfer complex knowledge and ideas to a variety of audiences.
+    Graduates of a Graduate Diploma will demonstrate the application of knowledge and skills:
+        - to make high level, independent judgements in a range of technical or management functions in varied specialised contexts
+        - to initiate, plan, implement and evaluate broad functions within varied specialised technical and/or creative contexts
+        - with responsibility and accountability for personal outputs and all aspects of the work or function of others within broad parameters
+    The volume of learning of a Graduate Diploma is typically 1-2 years."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:prefLabel "Graduate Diploma"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .
+
+aqf:master-research a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """The Masters Degree (Research) qualifies individuals who apply an advanced body of knowledge in a range of contexts for research and scholarship and as a pathway for further learning.
+    Graduates of a Masters Degree (Research) will have:
+        - a body of knowledge that includes the understanding of recent developments in one or more disciplines
+        - advanced knowledge of research principles and methods applicable to the field of work or learning.
+    Graduates of a Masters Degree (Research) will have:
+        - cognitive skills to demonstrate mastery of theoretical knowledge and to reflect critically on theory and its application
+        - cognitive, technical and creative skills to investigate, analyse and synthesise complex information, problems, concepts and theories and to apply established theories to different bodies of knowledge or practice
+        - cognitive, technical and creative skills to generate and evaluate complex ideas and concepts at an abstract level
+        - cognitive and technical skills to design, use and evaluate research and research methods
+        - communication and technical skills to present a coherent and sustained argument and to disseminate research results to specialist and non-specialist audiences
+        - technical and communication skills to design, evaluate, implement, analyse, theorise and disseminate research that makes a contribution to knowledge.
+    Graduates of a Masters Degree (Research) will demonstrate the application of knowledge & skills:
+        - with creativity and initiative to new situations and/or for further learning
+        - with high level personal autonomy and accountability
+        - to plan and execute a substantial piece of research
+    The volume of learning of a Masters Degree (Research) is typically 1-2 years; in the same discipline 1.5 years following a level 7 qualification or 1 year following a level 8 qualification; in a different discipline 2 years following a level 7 qualification or 1.5 years following a level 8 qualification."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:prefLabel "Masters Degree (Research)"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .
+
+aqf:master-coursework a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """The Masters Degree (Coursework) qualifies individuals who apply an advanced body of knowledge in a range of contexts for professional practice or scholarship and as a pathway for further learning.
+    Graduates of a Masters Degree (Coursework) will have:
+        - a body of knowledge that includes the understanding of recent developments in a discipline and/or area of professional practice
+        - knowledge of research principles and methods applicable to a field of work and/or learning.
+    Graduates of a Masters Degree (Coursework) will have:
+        - cognitive skills to demonstrate mastery of theoretical knowledge and to reflect critically on theory and professional practice or scholarship
+        - cognitive, technical and creative skills to investigate, analyse and synthesise complex information, problems, concepts and theories and to apply established theories to different bodies of knowledge or practice
+        - cognitive, technical and creative skills to generate and evaluate complex ideas and concepts at an abstract level
+        - communication and technical research skills to justify and interpret theoretical propositions, methodologies, conclusions and professional decisions to specialist and non-specialist audiences
+        - technical and communication skills to design, evaluate, implement, analyse and theorise about developments that contribute to professional practice or scholarship.
+    Graduates of a Masters Degree (Coursework) will demonstrate the application of knowledge & skills:
+        - with creativity and initiative to new situations in professional practice and/or for further learning
+        - with high level personal autonomy and accountability
+        - to plan and execute a substantial research-based project, capstone experience and/or piece of scholarship
+    The volume of learning of a Masters Degree (Coursework) is typically 1-2 years; in the same discipline 1.5 years following a level 7 qualification or 1 year following a level 8 qualification; in a different discipline 2 years following a level 7 qualification or 1.5 years following a level 8 qualification."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:prefLabel "Masters Degree (Coursework)"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .
+
+aqf:master-extended a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """The Masters Degree (Extended) qualifies individuals who apply an advanced body of knowledge in a range of contexts for professional practice and as a pathway for further learning.
+    Graduates of a Masters Degree (Extended) will have:
+        - a body of knowledge that includes the extended understanding of recent developments in a discipline and its professional practice
+        - knowledge of research principles and methods applicable to the discipline and its professional practice.
+    Graduates of a Masters Degree (Extended) will have:
+        - cognitive skills to demonstrate mastery of theoretical knowledge and to reflect critically on theory and professional practice
+        - cognitive, technical and creative skills to investigate, analyse and synthesise complex information, problems, concepts and theories and to apply established theories to different bodies of knowledge or practice
+        - cognitive, technical and creative skills to generate and evaluate complex ideas and concepts at an abstract level
+        - communication and technical research skills to justify and interpret theoretical propositions, methodologies, conclusions and professional decisions to specialist and non-specialist audiences
+        - technical and communication skills to design, evaluate, implement, analyse and theorise about developments that contribute to professional practice.
+    Graduates of a Masters Degree (Extended) will demonstrate the application of knowledge and skills:
+        - with creativity and initiative to new situations in professional practice and/or for further learning
+        - with high level personal autonomy and accountability
+        - to plan and execute a substantial research-based project, capstone experience and/or professionally focused project
+    The volume of learning of a Masters Degree (Extended) is typically 3-4 years following completion of a minimum of a 3 year level 7 qualification."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:prefLabel "Masters Degree (Extended)"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .
+
+aqf:doctoral a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """"The Doctoral Degree qualifies individuals who apply a substantial body of knowledge to research, investigate and develop new knowledge, in one or more fields of investigation, scholarship or professional practice.
+    Graduates of a Doctoral Degree will have:
+        - a substantial body of knowledge at the frontier of a field of work or learning, including knowledge that constitutes an original contribution
+        - substantial knowledge of research principles and methods applicable to the field of work or learning.
+    Graduates of a Doctoral Degree will have:
+        - cognitive skills to demonstrate expert understanding of theoretical knowledge and to reflect critically on that theory and practice
+        - cognitive skills and use of intellectual independence to think critically, evaluate existing knowledge and ideas, undertake systematic investigation and reflect on theory and practice to generate original knowledge
+        - expert technical and creative skills applicable to the field of work or learning
+        - communication skills to explain and critique theoretical propositions, methodologies and conclusions
+        - communication skills to present cogently a complex investigation of originality or original research for external examination against international standards and to communicate results to peers and the community
+        - expert skills to design, implement, analyse, theorise and communicate research that makes a significant and original contribution to knowledge and/or professional practice.
+    Graduates of a Doctoral Degree will demonstrate the application of knowledge and skills:
+        - with intellectual independence
+        - with initiative and creativity in new situations &/or for further learning
+        - with full responsibility and accountability for personal outputs
+        - to plan and execute original research
+        - with the ongoing capacity to generate new knowledge, including in the context of professional practice
+    The volume of learning of a Doctoral Degree is typically 3-4 years."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:prefLabel "Doctoral Degree"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .

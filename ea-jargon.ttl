@@ -440,11 +440,11 @@ eaj:area-of-practice a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
     skos:definition """Areas of Practice are the subject area of Engineering a person is qualified to work in. At Engineers Australia these Areas of Practice may be associated with the National Engineers Register or associated with the status of a Chartered Engineer."""@en ;
     skos:related <https://linked.data.gov.au/def/engineering-categories/areas-of-practice-chartered>,
-        <https://linked.data.gov.au/def/engineering-categories/areas-of-practice-ner> ; ;
+        <https://linked.data.gov.au/def/engineering-categories/areas-of-practice-ner> ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:notation "AOP" ;
     skos:prefLabel "Area of Practice"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .    
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
 eaj:audit a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -455,6 +455,17 @@ eaj:audit a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:prefLabel "Audit"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .    
+
+eaj:aecs a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """Commencing in 1992, Engineers Australia has progressively developed and used the Australian Engineering Competency Standards. These standards are regularly reviewed to ensure that they reflect government, employer and community expectations of members when they engage their services. There were revisions in 1998 and 2003. The Australian Engineering Competency Standards are in three distinct Stages, which correlate with the progression of a person's engineering career."""@en ;
+    skos:related <https://linked.data.gov.au/def/aud-eng-comp-std> ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:notation "AECS" ;
+    skos:altLabel "Engineering Competency"@en ;
+    skos:prefLabel "Australian Engineering Competency Standards"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
 eaj:board a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
