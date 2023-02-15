@@ -1,0 +1,70 @@
+@prefix aecs: <https://linked.data.gov.au/def/aud-eng-comp-std/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://linked.data.gov.au/def/aud-eng-comp-std> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2023-03-01"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:modified "2023-03-01"^^xsd:date ;
+    dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;                                
+    skos:definition "Commencing in 1992, Engineers Australia has progressively developed and used the Australian Engineering Competency Standards. These standards are regularly reviewed to ensure that they reflect government, employer and community expectations of members when they engage their services. There were revisions in 1998 and 2003. The Australian Engineering Competency Standards are in three distinct Stages, which correlate with the progression of a person's engineering career."@en ;
+    skos:prefLabel "Australian Engineering Competency Standards"@en .
+
+<https://linked.data.gov.au/org/engineersaustralia>
+    a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+<https://orcid.org/0000-0003-2309-7004> a owl:NamedIndividual,
+    sdo:Person ;
+    sdo:affiliation [ a sdo:Organization ;
+        sdo:name "Engineers Australia" ;
+        sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI ] ;
+    sdo:name "Vance Kelly" ;
+    sdo:identifier <https://orcid.org/0000-0003-2309-7004> .
+
+aecs:stage-1 a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/aud-eng-comp-std> ;
+    skos:definition """A person assessed as having Stage 1 competency is eligible to become a graduate member of Engineers Australia in the assessed occupational category.
+    
+    Stage 1 Competency Standards guide Engineers Australia's Accreditation Board in accrediting engineering degree programs; enable assessment of qualifications not accredited or recognised by Engineers Australia and enable identification of occupational category (Engineering Associate (Officer), Engineering Technologist, Professional Engineer).A person with a Stage 1 level of competency usually has less than 5 years experience. Stage 1 competency does not neccessitate membership with Engineers Australia."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/aud-eng-comp-std> ;
+    skos:altLabel "Stage 1"@en ;
+    skos:prefLabel "Stage 1 Competency"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/aud-eng-comp-std> .
+
+aecs:stage-2 a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/aud-eng-comp-std> ;
+    skos:definition """A person who demonstrates Stage 2 competency is eligible to receive Chartered status in an occupational category.
+
+    Stage 2 Competency Standards guide the application, assessment and professional interview process of a member seeking Chartered status and provide the framework of Engineers Australia's Professional Development Program."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/aud-eng-comp-std> ;
+    skos:altLabel "Stage 2"@en ,
+        "Chartered"@en ;
+    skos:prefLabel "Stage 2 Competency"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/aud-eng-comp-std> .
+
+aecs:stage-3 a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/aud-eng-comp-std> ;
+    skos:definition """A person who demonstrates Stage 2 competency is eligible to receive Engineering Executive (Eng Exec) as a member of Engineers Australia.
+    
+    Stage 3 Competency Standards guide the application, assessment and professional interview process of a member seeking Engineering Executive status."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/aud-eng-comp-std> ;
+    skos:altLabel "Stage 3"@en ,
+        "Eng Exec"@en ;
+    skos:prefLabel "Stage 3 Competency"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/aud-eng-comp-std> .
