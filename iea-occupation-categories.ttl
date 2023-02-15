@@ -33,7 +33,7 @@
 
 ieaoc:assoc-engineer a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://www.ieagreements.org/accords/dulin/> ;
+    rdfs:isDefinedBy <https://www.ieagreements.org/accords/dublin/> ;
     skos:definition "A person who holds a 2 Years Australian Advanced Diploma or Associated Degree in Engineering, as per the International Engineering Alliance Dublin Accords."@en ;
     skos:inScheme <https://linked.data.gov.au/def/iea-occupational-categories> ;
     skos:notation "EA" ;
