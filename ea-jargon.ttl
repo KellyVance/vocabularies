@@ -36,7 +36,15 @@ eaj:ea-roles a skos:Concept ;
 eaj:membership a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-    skos:definition "The grade of membership of Engineers Australia. Grade reflects the experience and skill level of a member and corresponds to a specific level of EA Membership."@en ;
+    skos:definition "The grade of membership of Engineers Australia. Grade reflects the experience and skill level of a member and corresponds to a specific level of EA Membership.
+    The grades are:
+        - Student
+        - Graduate
+        - Member
+        - Fellow
+        - Affiliate
+        - Companion
+        - Honorary Fellow"@en ;
     skos:related <https://linked.data.gov.au/def/ea-membership-grade> ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:prefLabel "Engineers Australia Membership Grade"@en ;
@@ -518,7 +526,51 @@ eaj:credentials a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:altLabel "Credentials"@en ;
     skos:prefLabel "Engineers Australia Credentials and Registration"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> . 
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+    eaj:ner a skos:Concept ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-engineering-credentials> ;
+        dcterms:source "http://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        skos:definition "A comprehensive directory of Australian engineers who have met the high standards of professionalism expected within the industry. Engineers Australia created the NER to provide engineering professionals and employers with a tool that connects talent to opportunities.
+        
+        The National Engineering Register supersedes the National Professional Engineering Register, National National Engineering Technologists Register, and the National Engineering Associates Register."@en ;
+        skos:prefLabel "National Engineering Register"@en ;
+        skos:notation "NER" ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:broader eaj:credentials .
+
+    eaj:near a skos:Concept ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        dcterms:source "http://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        owl:deprecated = true ;
+        skos:definition "Not Current, the NEAR Register was disbanded in 2015. A Register that until 2015 was maintained by the Engineers Australia for Engineering Associates, who demonstrated the competency to practise independently. It has been superseded by the National Engineering Register (NER)."@en ;
+        skos:related eaj:ner ;
+        skos:notation "NEAR" ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:prefLabel "National Engineering Associates Register"@en ;
+        skos:broader eaj:credentials .
+
+    eaj:netr a skos:Concept ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        dcterms:source "http://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        owl:deprecated = true ;
+        skos:definition "A Register that until 2015 was maintained by the Engineers Australia for Engineering Technologists who demonstrated the competency to practise independently. It has been superseded by the National Engineering Register (NER). Not Current, the NETR Register was disbanded in 2015."@en ;
+        skos:related eaj:ner ;
+        skos:notation "NETR" ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:prefLabel "National Engineering Technologists Register"@en ;
+        skos:broader eaj:credentials .
+
+    eaj:nper a skos:Concept ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        dcterms:source "http://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        owl:deprecated = true ;
+        skos:definition "Not Current, the National Professional Engineering Register (NPER) was disbanded in 2015 and superseded by the National Engineering Register (NER). A Register that until 2015 was maintained by the Engineers Australia for Engineering Professionals, who demonstrated the competency to practise independently. It has been superseded by the National Engineering Register (NER)."@en ;
+        skos:related eaj:ner ;
+        skos:notation "NPER" ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:prefLabel "National Professional Engineering Register"@en ;
+        skos:broader eaj:credentials .
 
 eaj:data-model a skos:Concept ;
     dcterms:source "https://sciencelogic.com/glossary/data-modeling"^^xsd:anyURI ;
@@ -635,6 +687,49 @@ eaj:ea-assessment a skos:Concept ;
         skos:altLabel "Aggregation"@en ;
         skos:prefLabel "Stage 1 Competency Assessment"@en ;
         skos:broader eaj:ea-assessment .
+
+    eaj:s2-competency-assessment a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2018-03/competency_standards_june.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """The Stage 2 Competency Standards are the profession's expression of the knowledge and skill base,engineering application abilities, and professional skills, values and attitudes that must be demonstrated in order to practise independently or unsupervised.
+
+        The Stage 2 competency standards are used as the basis of assessment for Chartered membership of Engineers Australia (CPEng) and registration on the National Engineering Register (NER). Chartered membership is exclusive to Engineers Australia. It is a professional credential recognised by government, business and the general public worldwide. The achievement of CPEng brings with it a career-long obligation to maintain competence in a chosen practice area.
+        
+        The Stage 2 competency standards are generic in the sense that they apply to all disciplines of engineering in four units:
+            - personal commitment
+            - obligation to community
+            - value in the workplace
+            - technical proficiency
+        Each unit contains elements of competence and indicators of attainment. The elements of competence are the capabilities necessary to the unit of competence and the indicators of attainment serve as a guide to the engineering work likely to be considered as demonstrating attainment of that competence."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:altLabel "Chartered Assessment"@en ;
+        skos:prefLabel "Stage 2 Competency Assessment"@en ;
+        skos:broader eaj:ea-assessment .
+
+    eaj:s3-competency-assessment a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/credentials/engexec"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:definition """The Engineering Executive, or EngExec is a credential that recognises pre-eminent individuals in executive positions who have shown exceptional leadership and talent. After an outstanding career which has culminated in a senior leadership position, the receipt of EngExec is the next step.
+
+            The EngExec credential isn't restricted to engineering professionals and can include senior business leaders who work in the engineering sector but aren't engineers.
+            
+            Attaining the level of EngExec also presents an opportunity to play a significant role in shaping the future of the Australian engineering profession.
+            
+            The exclusive nature of the credential means that the opportunity to apply for it is only offered to a select group of individuals on an invitation-only basis.
+            
+            Eligibility criteria requires applicants have 15 or more years of industry experience and be in a senior leadership and management role. Applicants need to be able to demonstrate the required leadership and management competencies for EngExec and complete a self-assessment if invited to apply. A professional interview with an Engineers Australia assessor is the final step to obtaining an EngExec credential.
+            
+            The competenices required include:
+                - Leadership
+                - Strategic direction and entrepreneurship
+                - Planning
+                - Change and improvement
+                - Customer Focus"""@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+            skos:altLabel "Engineering Executive Assessment"@en,
+                "EngExec Assessment"@en ;
+            skos:prefLabel "Stage 3 Competency Assessment"@en ;
+            skos:broader eaj:ea-assessment .
 
 eaj:system-architecture a skos:Concept ;
     dcterms:source "https://en.wikipedia.org/wiki/Systems_architecture"^^xsd:anyURI ;
