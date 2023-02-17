@@ -516,6 +516,35 @@ eaj:country-education-profiles a skos:Concept ;
     skos:prefLabel "Country Education Profiles"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> . 
 
+eaj:continuing-professional-development skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/membership/cpd-requirements"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """Continuing professional development or CPD, is imperative to ensuring the knowledge and technical skills of an engineer are optimised and up-to-date.
+    
+    Maintaining CPD requirements also ensures Engineers Australia Chartered or NER credentials stay valid.
+    
+    CPD is any sort of training or learning that helps to expand knowledge, maintain technical skills and progress the career of an engineer. Good CPD should facilitate:
+    - maintainance of technical competence
+    - retention and enhancement of workplace effectiveness
+    - development of good leadership and mentoring skills
+    - successful navigation of career challenges
+    - better service to the community.
+    
+    For engineers wishing to retain their Chartered or Engineering Executive Status there is an obligation to achieve a minimum of 150 hours of structured CPD over a three-year period. Of the recommended 150 hours in three years: A proportion of CPD should relate to one's area of practice (a minimum of 50 hours in the three-year period is recommended. There are some limits on the number of hours you can claim for certain types of CPD. Please refer to the Engineers Australia Website for more detailed CPD policy information and the latest guidelines."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:notation "CPD" ;
+    skos:prefLabel "Continuing Professional Development"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> . 
+
+    eaj:continuing-education skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """All practising Chartered members are required to continue their professional development throughout their careers. This includes undertaking at least 150 hours of acceptable Continuing Education in the past three years, and recorded in a log or diary. Use of the term Continuing Education (CE) is rare. The term CPD is widely used to refer to both experiential development and Continuing Education."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:notation "CE" ;
+        skos:prefLabel "Continuing Education"@en ;
+        skos:broader eaj:continuing-professional-development . 
+
 eaj:credentials a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-engineering-credentials> ;
