@@ -1,0 +1,111 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix docs: <https://linked.data.gov.au/def/ea-documents/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://linked.data.gov.au/def/ea-documents> a owl:Ontology,
+    skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
+    dcterms:created "2023-01-31"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:modified "2022-01-31"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    skos:definition """Documents and other files that record information about a person, organisation, or process. Commonly used as for assessments, analyses, or for retention of evidence for processes and decisions. Documents may be physical or digital."""@en ;
+    skos:altLabel "Documentation"@en,
+        "Records"@en ;
+	skos:prefLabel "Documents"@en ;
+
+<https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+docs:academic-transcript a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """An Academic Transcript is a document that shows the academic results of an individual from a specified academic institution.
+    
+    The Academic Transcript is a formal listing issued by the course provider showing the subjects studied, the period of the course, any Recognition of Prior Learning (RPL) exemptions, levels of achievement in each subject, and whether the achievements listed complete the course and entitle the student to graduate"""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:altLabel "Academic Record"@en,
+        "Course Record"@en ;
+    skos:prefLabel "Academic Transcript"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:career-episode-report a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    rdfs:seeAlso eaj:engineering-practice-report ;
+    sdo:isPartOf eaj:engineering-practice-report ;
+    skos:definition """The Career Episode Reports are the individual reports that describe experience gained during professional formation as an engineer. The combined Career Episode Reports describing individual development make up an Engineering Practice Report"""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:notation "CER"@en ;
+    skos:prefLabel "Career Episode Report"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:competency-demo-report a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """The CDR is a submission in support of an applicant claim for recognition as an Engineer, where an accredited Australian or Washington Accord qualification is not held. The CDR is a report on career episodes in which the applicant relates their experiences to the competency units, elements and performance criteria in a manner similar to preparing a job application. 
+        
+    The CDR replaced Test by Examination as a means of determining the standing of an applicant. Normally overseas qualified, applicant's formal academic qualifications have permitted them to practice in the occupational category of professional engineer, engineering technologist or engineering associate in the country where the qualifications were obtained. However, Engineers Australia is unable to verify as equivalent standing in Australia. If the CDR is accepted, the Engineers Australia Qualifications Assessors may issue either a letter of eligibility, which is then accepted as evidence of Stage 1 eligibility for membership purposes, or a letter which may be used by the applicant to support his / her Migration application. The CDR is similar to the Engineering Practice Report required for Stage 2 applications, but is less comprehensive and focuses primarily on enabling competencies."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:notation "CDR"@en ;
+    skos:prefLabel "Competency Demonstration Report"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:cv a skos:Concept;
+    dcterms:source "https://en.wikipedia.org/wiki/Curriculum_vitae"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """A Curriculum Vitae is a short written summary of a person's career, qualifications, and education. Curriculum Vitae translates to 'course of life' in Latin."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:notation "CV"@en ;
+    skos:altLabel "Resume"@en,
+            "Résumé"@en ;
+    skos:prefLabel "Curriculum Vitae"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+    docs:vcv a skos:Concept;
+        dcterms:source "https://en.wikipedia.org/wiki/Curriculum_vitae"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """"An applicant for Engineers Australia Membership or Registration to the National Engineering Register (NER) need to have their CV verified by a Member, Senior Member or Fellow of Engineers Australia, or a senior experienced engineer or the equivalent in their Occupational Category. The person providing the verification is required to personally confirm the accuracy of the statements made.
+            
+        Verified Curriculum Vitae must be signed with the name and Engineers Australia membership number of the Verifier. They must also include a statement as follows:
+
+        I verify that this is a true statement of the career history of (candidate's name) during the period (date) to (date). Signed by: Date Membership No."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:notation "vCV"@en ;
+        skos:prefLabel "Verified Curriculum Vitae"@en ;
+        skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:education-certificate a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """An Education Certificate is a document that formally recognises a Person has achieved a formal qualification with a specific Tertiary Institution. When referred to as a graduation certificate this should not be confused with the Graduate Certificate type of Australian Qualification Level."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:notation "Degree Certificate"@en,
+        "Graduation Certificate"@en ;
+    skos:prefLabel "Education Certificate"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:engineering-practice-report a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    rdfs:seeAlso eaj:career-episode-report ;
+    sdo:hasPart eaj:career-episode-report ;
+    skos:definition """An Engineering Practice Report (EPR) consists of a series of written Career Episode Reports (CER) each describing experience gained during Professional Formation."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:notation "EPR" ;
+    skos:prefLabel "Engineering Practice Report"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:english-language-evidence a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """An English Language Evidence is a document that recognises a Person has achieved a spoken & written level of competency with the English Language."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "English Language Evidence"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
