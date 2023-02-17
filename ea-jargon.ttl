@@ -459,12 +459,23 @@ eaj:audit a skos:Concept ;
 eaj:aecs a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:definition """Commencing in 1992, Engineers Australia has progressively developed and used the Australian Engineering Competency Standards. These standards are regularly reviewed to ensure that they reflect government, employer and community expectations of members when they engage their services. There were revisions in 1998 and 2003. The Australian Engineering Competency Standards are in three distinct Stages, which correlate with the progression of a person's engineering career."""@en ;
+    skos:definition """Commencing in 1992, Engineers Australia has progressively developed and used the Australian Engineering Competency Standards. These standards are regularly reviewed to ensure that they reflect government, employer and community expectations of members when they engage their services. There were revisions in 1998 and 2003. The Australian Engineering Competency Standards are in three distinct Stages, which correlate with the progression of a person's engineering career. These progress from Stage 1 members eligible for graduate level, Stage 2 Chartered Engineers, and Stage 3 Engineering Executives (EngExec)."""@en ;
     skos:related <https://linked.data.gov.au/def/aud-eng-comp-std> ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:notation "AECS" ;
     skos:altLabel "Engineering Competency"@en ;
     skos:prefLabel "Australian Engineering Competency Standards"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+eaj:aqf a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """Australian Qualifications Framework Issued by the National Staff Development Committee Standards and Curriculum Council of ANTA, the AQF provides a comprehensive, nationally consistent yet flexible Framework for all qualifications in post-compulsory education in Australia. The Framework was introduced Australia wide on 1 January 1995."""@en ;
+    skos:related <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:notation "AQF" ;
+    skos:hiddenLabel "AQF Level"@en ;
+    skos:prefLabel "Australian Qualifications Framework"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
 eaj:board a skos:Concept ;
@@ -488,6 +499,27 @@ eaj:change-management a skos:Concept ;
     skos:prefLabel "Change Management"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> . 
 
+eaj:country-education-profiles a skos:Concept ;
+    dcterms:source "https://internationaleducation.gov.au/services-and-resources/services-for-organisations/Pages/Services-for-organisations.aspx"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """The Country Education Profiles (CEPs) is an online qualifications recognition tool designed to help organisations understand overseas higher education and postsecondary technical and vocational educational qualifications. It can be used by universities and other education providers, professional bodies, employers, international organisations and governments to help understand the level of an overseas qualification."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:notation "CEP" ;
+    skos:prefLabel "Country Education Profiles"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> . 
+
+eaj:credentials a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-engineering-credentials> ;
+    skos:definition """The formally administered lists and registers of credentials describing the experience of professional Engineers in recognition of certain competencies and professional milestones. Registers also describe the details of General Areas of Practice and Specific Areas of Practice, that are entered onto the EA National Engineering Register (NER) held by an engineer.
+    
+    Some credentials are available to non-members, such as NER, but most are for members of EA."""@en ;
+    skos:related <https://linked.data.gov.au/def/ea-engineering-credentials> ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "Credentials"@en ;
+    skos:prefLabel "Engineers Australia Credentials and Registration"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> . 
+
 eaj:data-model a skos:Concept ;
     dcterms:source "https://sciencelogic.com/glossary/data-modeling"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -505,7 +537,9 @@ eaj:data-model a skos:Concept ;
 eaj:engineering-accords a skos:Concept ;
     dcterms:source "https://www.ieagreements.org/"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:definition """The engineering accords are multi-lateral agreements between bodies responsible for accreditation or recognition of tertiary-level engineering qualifications within their jurisdictions who have chosen to work collectively to assist the mobility of engineers, technologists and associates. These accords define the criteria for the corresponding engineering occupational categories."""@en ;
+    skos:definition """The engineering accords are multi-lateral agreements between bodies responsible for accreditation or recognition of tertiary-level engineering qualifications within their jurisdictions who have chosen to work collectively to assist the mobility of engineers, technologists and associates. These accords define the criteria for the corresponding engineering occupational categories.
+    
+    The accords relate directly to occupational categories: The Dublin Accords (Engineering Associates), Sydney Accords (Engineering Technologists), Washington Accords (Professional Engineers)."""@en ;
     skos:related <https://linked.data.gov.au/def/iea-occupational-categories> ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:prefLabel "International Engineering Accords"@en ;
@@ -523,16 +557,16 @@ earl:ea-assessor a skos:Concept ;
 eaj:ea-assessment a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:definition """An assessment by Engineers Australia to determine the Competence stage of the Engineer or Occupational Category. There are assessment processes at every level of membership or credentials.
-    They can be more or less intensive (and/or expensive) depending on the level, the qualification(s) of the candidate, the pathway etc.
-    The assessments involve human judgement.
+    skos:definition """An assessment by Engineers Australia to determine the Competence stage of the Engineer or Occupational Category. There are assessment processes at every level of membership or credentials. They can be more or less intensive (and/or expensive) depending on the level, the qualification(s) of the candidate, the pathway etc.
+    The assessments involve human judgement and may follow one of two pathways to recognition: Accredited Engineering Qualifcations or a Competency Demonstration.
     Assessments at a high level sometimes grant a combination of credentials.
     
     For Example: 
     - A successful NER applicant who holds an accredited qualification will be granted Stage 1 competency.
     - A successful EngExec applicant who holds an accredited qualification will be granted Stage 1, Membership, and Stage 2 as well as Chartered in Leadership and Management."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:altLabel "Assessment"@en ;
+    skos:altLabel "Assessment"@en,
+        "Pathways to Recognition"@en ;
     skos:prefLabel "Engineers Australia Assessment"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .    
 

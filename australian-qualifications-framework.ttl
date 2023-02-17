@@ -16,7 +16,7 @@
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
     dcterms:modified "2023-03-01"^^xsd:date ;
     dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
-    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
     dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;                                
     skos:definition "Australian Qualifications Framework Issued by the National Staff Development Committee Standards and Curriculum Council of ANTA, the AQF provides a comprehensive, nationally consistent yet flexible Framework for all qualifications in post-compulsory education in Australia. The Framework was introduced Australia wide on 1 January 1995."@en ;
     skos:prefLabel "Australian Qualifications Framework"@en .

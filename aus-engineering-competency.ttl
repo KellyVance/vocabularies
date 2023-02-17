@@ -64,7 +64,9 @@ aecs:stage-3 a skos:Concept ;
 
     Stage 3 Competency Standards guide the application, assessment and professional interview process of a member seeking Engineering Executive status."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/aus-eng-comp-std> ;
+    skos:notation "EngExec" ;
     skos:altLabel "Stage 3"@en ,
-        "Eng Exec"@en ;
+        "Eng Exec"@en,
+        "Engineering Executive"@en ;
     skos:prefLabel "Stage 3 Competency"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/aus-eng-comp-std> .
