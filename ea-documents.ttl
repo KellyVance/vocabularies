@@ -16,7 +16,8 @@
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     skos:definition """Documents and other files that record information about a person, organisation, or process. Commonly used as for assessments, analyses, or for retention of evidence for processes and decisions. Documents may be physical or digital."""@en ;
     skos:altLabel "Documentation"@en,
-        "Records"@en ;
+        "Records"@en,
+        "Document Type"@en ;
 	skos:prefLabel "Documents"@en ;
 
 <https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
@@ -157,6 +158,23 @@ docs:enrolment a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
     skos:altLabel "Enrolment"@en ;
     skos:prefLabel "Enrolment Form"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:evidentiary-record a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A physical or digital document or correspondence from a recognised authoritative agency or organisation that validates or confirms the claims or conclusions of a person or organisation."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Evidentiary Record"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+    docs:mra-org-validation-evidence a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:definition """An MRA Organisation Validation Evidence is a document (commonly an email), from a Mutual Recognition Agreement (MRA) Organisation to the EA MRA Administrator, confirming or denying claims made by a Person enrolled onto the Stage 2 Demonstration Pathway."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:prefLabel "MRA Organisation Validation Evidence"@en ;
+        skos:broader docs:evidentiary-record .
 
 docs:interviewer-attachment a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -177,3 +195,27 @@ docs:journal a skos:Concept ;
         "Log"@en ;
     skos:prefLabel "Journal"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:membership-document a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """An artefact either digital or physical that verifies membership to a club, society, or other type of organisation."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Membership Document"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+    docs:membership-card a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:definition """A small card or digital representation thereof that is issued to and held by a member of a club, society or other organisation, verifying membership for a given period."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:prefLabel "Membership Card"@en ;
+        skos:broader docs:membership-document .
+
+    docs:mra-chartered-evidence a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:definition """An MRA Chartered Evidence is a document that shows a Person's Chartered Status with an MRA Organisation."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:prefLabel "MRA Chartered Evidence"@en ;
+        skos:broader docs:membership-document .

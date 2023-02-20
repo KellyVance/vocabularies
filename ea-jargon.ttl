@@ -510,6 +510,17 @@ eaj:change-management a skos:Concept ;
     skos:prefLabel "Change Management"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> . 
 
+eaj:cms skos:Concept ;
+    dcterms:source "https://www.techtarget.com/searchcontentmanagement/definition/content-management-system-CMS"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """A content management system (CMS) is a software application that enables users to create, edit, collaborate on, publish and store digital content."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "Content Management System (CMS)"en,
+        "CMS"@en ;
+    skos:notation "CMS" ;
+    skos:prefLabel "Content Management System"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 eaj:country-education-profiles a skos:Concept ;
     dcterms:source "https://internationaleducation.gov.au/services-and-resources/services-for-organisations/Pages/Services-for-organisations.aspx"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -603,6 +614,17 @@ eaj:credentials a skos:Concept ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
         skos:prefLabel "National Professional Engineering Register"@en ;
         skos:broader eaj:credentials .
+
+eaj:crm skos:Concept ;
+    dcterms:source "https://www.salesforce.com/au/crm/what-is-crm/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """Customer relationship management (CRM) is a technology for managing all the relationships and interactions with customers and potential customers for a company. The goal is to improve business relationships. A CRM system helps companies stay connected to customers, streamline processes, and improve profitability."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "Customer Relationship Management (CRM)"en,
+        "CRM"@en ;
+    skos:notation "CRM" ;
+    skos:prefLabel "Customer Relationship Management"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
 eaj:data-model a skos:Concept ;
     dcterms:source "https://sciencelogic.com/glossary/data-modeling"^^xsd:anyURI ;
@@ -763,6 +785,16 @@ eaj:ea-assessment a skos:Concept ;
             skos:prefLabel "Stage 3 Competency Assessment"@en ;
             skos:broader eaj:ea-assessment .
 
+eaj:occupational-categories a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/iea-occupational-categories> ;
+    skos:definition """A category reflecting the level and type of engineering qualification held by a member of the engineering profession, as per the International Engineering Alliance Educational Accords. This include Engineering Associate, Engineering Technologist, and Professional Engineer."""@en ;
+    skos:related <https://linked.data.gov.au/def/iea-occupational-categories> ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "International Engineering Accords Membership"@en,
+        "Occupational Categories"@en ;
+    skos:prefLabel "International Engineering Alliance Occupational Categories"@en .
+
 eaj:recognition-of-prior-learning a skos:Concept ;
     dcterms:source "https://www.asqa.gov.au/guidance-resources/resources-providers/faqs/recognition-prior-learning-rpl"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -823,4 +855,6 @@ eaj:platforms a skos:Collection ;
 	skos:prefLabel "Systems and Platforms"@en ;
 	skos:definition """Systems, Software, Tools, Portals, and Products used by Engineers Australia to interact with data. This may refer to legacy, active, or future platforms."""@en ;
     skos:member
-        eaj:active-directory .
+        eaj:active-directory,
+        eaj:cms,
+        eaj:crm .
