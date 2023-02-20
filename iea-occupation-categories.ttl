@@ -27,7 +27,8 @@
     dcterms:modified "2022-11-09"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
     dcterms:source "https://www.ieagreements.org/accords/acknowledgements-accords"^^xsd:anyURI ;
-    skos:altLabel "International Engineering Accords Membership"@en ;
+    skos:altLabel "International Engineering Accords Membership"@en,
+        "Occupational Categories"@en ;
     skos:definition "A category reflecting the level and type of engineering qualification held by a member of the engineering profession, as per the International Engineering Alliance Educational Accords."@en ;
     skos:prefLabel "International Engineering Alliance Occupational Categories"@en .
 
