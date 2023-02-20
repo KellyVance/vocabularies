@@ -25,6 +25,20 @@
     sdo:name "Engineers Australia" ;
     sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
 
+eaj:agent a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+    skos:definition """The types of agents who can interact with Engineers Australia to perform services as customers, staff, advisors, representatives etc. People and Organisations whose actions contribute to the operation of Engineers Australia."""@en ;
+    skos:related <https://linked.data.gov.au/def/ea-agents> ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "Agents"@en,
+        "Parties"@en,
+        "Entities"@en,
+        "Agent Types"@en,
+        "Party Types"@en,
+        "Entity Types"@en ;
+    skos:prefLabel "Engineers Australia Agents"@en .
+
 eaj:ea-roles a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-roles> ;
@@ -462,7 +476,7 @@ eaj:audit a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
     skos:definition """A formal process of review to ensure compliance with standards and regulations. A means to provide assurance to the sponsor or board of a project that governance is effective and that the project is being managed as intended.
     
-    At Engineers Australia this may be applied to Chartered Status, Registration (NPER / NETR), CPD or Complaints scenarios."""@en ;
+    At Engineers Australia this may be applied to Chartered Status, Registration (National Engineering Register), Continuous Professional Development (CPD) or Complaints scenarios."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:prefLabel "Audit"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .    
@@ -547,6 +561,9 @@ eaj:continuing-professional-development skos:Concept ;
     For engineers wishing to retain their Chartered or Engineering Executive Status there is an obligation to achieve a minimum of 150 hours of structured CPD over a three-year period. Of the recommended 150 hours in three years: A proportion of CPD should relate to one's area of practice (a minimum of 50 hours in the three-year period is recommended. There are some limits on the number of hours you can claim for certain types of CPD. Please refer to the Engineers Australia Website for more detailed CPD policy information and the latest guidelines."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:notation "CPD" ;
+    skos:altLabel "Continuing Professional Development (CPD)"@en,
+        "Continuous Professional Development (CPD)"@en,
+        "Continuous Professional Development"@en ;
     skos:prefLabel "Continuing Professional Development"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> . 
 
@@ -676,6 +693,16 @@ eaj:ea-assessment a skos:Concept ;
     skos:prefLabel "Engineers Australia Assessment"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .    
 
+    eaj:continuous-collaborative-assessmenta  skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """This is the process for progressive assessment of an engineer who is undergoing formation in an Engineers Australia approved Professional Development Program. The Program involves the lodging with Engineers Australia of a formal employer agreement, providing for appointment of a mentor, and the submission of regular reports by the Graduate during formation. The final report, leading to the Professional Interview for MIEAust CPEng, is accepted in lieu of the normal Engineering Practice Report (EPR). Formation under this program may be achieved in the minimum 3 years whereas those whose formation is less formal usually need at least 4 years. As these programs are under development, it is possible the final name for them be slightly different."""@en ;
+        rdfs:seeAlso <https://linked.data.gov.au/def/iea-occupational-categories/> ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:notation "CCA" ;
+        skos:prefLabel "Continuous Collaborative Assessment"@en ;
+        skos:broader eaj:ea-assessment .
+
     eaj:articulation a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -761,29 +788,37 @@ eaj:ea-assessment a skos:Concept ;
         skos:broader eaj:ea-assessment .
 
     eaj:s3-competency-assessment a skos:Concept ;
-            dcterms:source "https://www.engineersaustralia.org.au/credentials/engexec"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-            skos:definition """The Engineering Executive, or EngExec is a credential that recognises pre-eminent individuals in executive positions who have shown exceptional leadership and talent. After an outstanding career which has culminated in a senior leadership position, the receipt of EngExec is the next step.
+        dcterms:source "https://www.engineersaustralia.org.au/credentials/engexec"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """The Engineering Executive, or EngExec is a credential that recognises pre-eminent individuals in executive positions who have shown exceptional leadership and talent. After an outstanding career which has culminated in a senior leadership position, the receipt of EngExec is the next step.
 
-            The EngExec credential isn't restricted to engineering professionals and can include senior business leaders who work in the engineering sector but aren't engineers.
+        The EngExec credential isn't restricted to engineering professionals and can include senior business leaders who work in the engineering sector but aren't engineers.
             
-            Attaining the level of EngExec also presents an opportunity to play a significant role in shaping the future of the Australian engineering profession.
+        Attaining the level of EngExec also presents an opportunity to play a significant role in shaping the future of the Australian engineering profession.
             
-            The exclusive nature of the credential means that the opportunity to apply for it is only offered to a select group of individuals on an invitation-only basis.
+        The exclusive nature of the credential means that the opportunity to apply for it is only offered to a select group of individuals on an invitation-only basis.
             
-            Eligibility criteria requires applicants have 15 or more years of industry experience and be in a senior leadership and management role. Applicants need to be able to demonstrate the required leadership and management competencies for EngExec and complete a self-assessment if invited to apply. A professional interview with an Engineers Australia assessor is the final step to obtaining an EngExec credential.
+        Eligibility criteria requires applicants have 15 or more years of industry experience and be in a senior leadership and management role. Applicants need to be able to demonstrate the required leadership and management competencies for EngExec and complete a self-assessment if invited to apply. A professional interview with an Engineers Australia assessor is the final step to obtaining an EngExec credential.
             
-            The competenices required include:
-                - Leadership
-                - Strategic direction and entrepreneurship
-                - Planning
-                - Change and improvement
-                - Customer Focus"""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-            skos:altLabel "Engineering Executive Assessment"@en,
-                "EngExec Assessment"@en ;
-            skos:prefLabel "Stage 3 Competency Assessment"@en ;
-            skos:broader eaj:ea-assessment .
+        The competenices required include:
+            - Leadership
+            - Strategic direction and entrepreneurship
+            - Planning
+            - Change and improvement
+            - Customer Focus"""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:altLabel "Engineering Executive Assessment"@en,
+            "EngExec Assessment"@en ;
+        skos:prefLabel "Stage 3 Competency Assessment"@en ;
+        skos:broader eaj:ea-assessment .
+
+    eaj:professional-interview a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """A Professional Interview is a record of a Person's formal Stage 2 interview with EA Assessor(s) and optional Panel Member(s). The Professional Interview (PI) is the final stage of a candidate's application for Chartered Status and is essentially a peer review of the competencies the candidate has claimed in their Engineering Practice Report (EPR). The PI of a candidate for Chartered Membership (CPEng, CEngT or CEngO is carried out by an Assessment Panel normally consisting of two Interviewers and an Accredited National Assessor. An Interviewer is an experienced practitioner in either the candidate's discipline or industry sector. The Interviewer plays an important role within Engineers Australia of contributing towards a decision as to whether a candidate is assessed as having reached the professional standard they are expected to demonstrate at a PI. The PI is normally held in a Division Office and usually lasts 60 minutes. It includes a 30 minute session during which the two Interviewers ask in-depth questions concerning the candidate's discipline and industry, primarily based on the written and oral presentations."""@en ;
+        skos:notation "PI"@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:prefLabel "Professional Interview"@en .
 
 eaj:occupational-categories a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -793,7 +828,8 @@ eaj:occupational-categories a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:altLabel "International Engineering Accords Membership"@en,
         "Occupational Categories"@en ;
-    skos:prefLabel "International Engineering Alliance Occupational Categories"@en .
+    skos:prefLabel "International Engineering Alliance Occupational Categories"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
 eaj:recognition-of-prior-learning a skos:Concept ;
     dcterms:source "https://www.asqa.gov.au/guidance-resources/resources-providers/faqs/recognition-prior-learning-rpl"^^xsd:anyURI ;

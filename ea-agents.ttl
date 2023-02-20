@@ -1,0 +1,69 @@
+<https://linked.data.gov.au/def/ea-agents> a owl:Ontology,
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
+    dcterms:created "2023-01-31"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:modified "2022-01-31"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    skos:definition """The types of agents who can interact with Engineers Australia to perform services as customers, staff, advisors, representatives etc. People and Organisations whose actions contribute to the operation of Engineers Australia."""@en ;
+    skos:scopeNote """Agents describes the type of agent, whereas roles describes the actions performed by an agent. For example a University or Tertiary institution is a type of organisation but it may play a variety of roles in its interactions wiht Engineers Australia such as a customer, event host, advisor, vendor, etc."""@en;
+    skos:prefLabel "Engineers Australia Agents"@en .
+
+<https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+
+agnt:organisation
+    
+    agnt:internal-group
+
+        agnt:business-unit
+
+            agnt:division a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:definition """A Division is an Engineers Australia Office which serves the EA Members & engineering community in a specific geographical region.
+                
+                There are 9 Divisions, one based in each Australian capital City, plus one in Newcastle, NSW. National Office is a Business Unit of Engineers Australia that is like a Division and hosts all Members whose Bill-To-Address country is not Australia."""@en ;
+                skos:notation "Div" ;
+                skos:altLabel "State Division"@en,
+                    "EA Office"@en,
+                    "Engineers Australia Office"@en ;
+                skos:prefLabel "Division"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-agents> ;
+                skos:skos:broader agnt:business-unit .
+
+            agnt:functional-business-unit
+
+        agnt:ea-college
+
+        agnt:ea-technical-society
+        
+    agnt:commercial-entity
+        agnt:gov-run-enterprise
+        agnt:private-company
+        agnt:public-company
+        agnt:sole-trader
+        agnt:trust
+
+    agnt:government-agency
+        agnt:federal-gov-agency
+        agnt:state-gov-agency
+        agnt:local-gov-agency
+        
+    agnt:tertiary-institution
+        agnt:vet-institute
+        agnt:university
+
+agnt:person
+    
+
+
+
+
+
+
+
+
