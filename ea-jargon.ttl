@@ -831,6 +831,20 @@ eaj:occupational-categories a skos:Concept ;
     skos:prefLabel "International Engineering Alliance Occupational Categories"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
+eaj:professional-development-program a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """"The Professional Development Program (PDP) is a planned period of professional formation based in the workplace and structured around an identified job and career progression. It comprises the incremental acquisition and development of the competencies required to practise at the level of Chartered practitioner. This includes work-based training and assuming responsibility in appropriate roles.
+    
+    Participation in a PDP is open to engineering practitioners employed in all types and sizes of enterprise. Participating organisations include mining companies, utilities, consulting companies, aerospace, information technology, telecommunications, construction companies and public authorities."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:notation "PDP" ;
+    skos:altLabel "PDP"@en,
+        "GDP"@en,
+        "Graduate Development Program"@en ;
+    skos:prefLabel "Professional Development Program"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 eaj:recognition-of-prior-learning a skos:Concept ;
     dcterms:source "https://www.asqa.gov.au/guidance-resources/resources-providers/faqs/recognition-prior-learning-rpl"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
