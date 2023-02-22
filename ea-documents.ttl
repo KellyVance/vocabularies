@@ -219,3 +219,8 @@ docs:membership-document a skos:Concept ;
         skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
         skos:prefLabel "MRA Chartered Evidence"@en ;
         skos:broader docs:membership-document .
+
+docs:personal-identification
+        aus drivers licence, int drivers licence, passport, medicare card, bank statement
+
+        related security-classification/high medium low etc
