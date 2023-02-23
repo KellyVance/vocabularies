@@ -1,6 +1,5 @@
 @prefix agnt: <http://linked.data.gov.au/def/ea-agents/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix docs: <https://linked.data.gov.au/def/ea-documents/> .
 @prefix orgtyp: <http://linked.data.gov.au/def/organisation-type/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -101,6 +100,7 @@ agnt:organisation a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
             dcterms:source "https://www.abs.gov.au/ausstats/abs@.nsf/2f762f95845417aeca25706c00834efa/0c54fc71b70654d2ca257bdd00116288!OpenDocument"^^xsd:anyURI ;
             skos:broader agnt:commercial-entity ;
+            skos:exactMatch orgtyp:government-companies ;
             skos:definition """Government units (as defined in Chapter 2) which are created as bodies corporate through the Corporations Act in Australia or through other legislation (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8)."""@en ;
             skos:altLabel "Government Company"@en ;
             skos:prefLabel "Government-Run Company"@en ;
@@ -109,6 +109,7 @@ agnt:organisation a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:broader agnt:commercial-entity ;
+            skos:exactMatch orgtyp:proprietary-companies ;
             skos:definition """A private company is a commercial entity that is privately owned and not publicly traded."""@en ;
             skos:prefLabel "Private Company"@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
@@ -117,6 +118,7 @@ agnt:organisation a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:broader agnt:commercial-entity ;
+            skos:exactMatch orgtyp:public-companies ;
             skos:definition """A public company is a commercial entity whose shares can be bought and sold by the general public on a stock exchange."""@en ;
             skos:prefLabel "Public Company"@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
@@ -125,6 +127,7 @@ agnt:organisation a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:broader agnt:commercial-entity ;
+            skos:exactMatch orgtyp:sole-proprietorship ;
             skos:definition """A sole trader is an individual who owns and operates a business, and is personally liable for business debts."""@en ;
             skos:prefLabel "Sole Trader"@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
@@ -141,6 +144,7 @@ agnt:organisation a skos:Concept ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         skos:prefLabel "Government Agency"@en ;
+        skos:exactMatch orgtyp:other-government-entities ;
         skos:definition """A government agency is a permanent or semi-permanent organization in the machinery of government that is responsible for the oversight and administration of specific functions, such as an intelligence agency, regulatory agency, or tax collection agency."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-agents> ;
         skos:broader agnt:organisation .
