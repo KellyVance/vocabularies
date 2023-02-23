@@ -144,6 +144,7 @@ agnt:organisation a skos:Concept ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         skos:prefLabel "Government Agency"@en ;
+        skos:notation "Gov" ;
         skos:exactMatch orgtyp:other-government-entities ;
         skos:definition """A government agency is a permanent or semi-permanent organization in the machinery of government that is responsible for the oversight and administration of specific functions, such as an intelligence agency, regulatory agency, or tax collection agency."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-agents> ;
@@ -195,12 +196,7 @@ agnt:organisation a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:prefLabel "University"@en ;
+            skos:notation "Uni" ;
             skos:broader agnt:tertiary-institution ;
             skos:definition """A university is an educational institution that provides undergraduate and postgraduate education and research."""@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
-
-
-
-
-
-
