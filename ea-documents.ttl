@@ -25,18 +25,6 @@
     sdo:name "Engineers Australia" ;
     sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
 
-docs:academic-transcript a skos:Concept ;
-    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
-    skos:definition """An Academic Transcript is a document that shows the academic results of an individual from a specified academic institution.
-    
-    The Academic Transcript is a formal listing issued by the course provider showing the subjects studied, the period of the course, any Recognition of Prior Learning (RPL) exemptions, levels of achievement in each subject, and whether the achievements listed complete the course and entitle the student to graduate."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
-    skos:altLabel "Academic Record"@en,
-        "Course Record"@en ;
-    skos:prefLabel "Academic Transcript"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
-
 docs:career-episode-report a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
@@ -96,16 +84,6 @@ docs:cv a skos:Concept;
         skos:prefLabel "Verified Curriculum Vitae"@en ;
         skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
-docs:education-certificate a skos:Concept ;
-    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
-    skos:definition """An Education Certificate is a document that formally recognises a Person has achieved a formal qualification with a specific Tertiary Institution. When referred to as a graduation certificate this should not be confused with the Graduate Certificate type of Australian Qualification Level."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
-    skos:notation "Degree Certificate"@en,
-        "Graduation Certificate"@en ;
-    skos:prefLabel "Education Certificate"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
-
 docs:engineering-experience-record a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
@@ -164,10 +142,32 @@ docs:enrolment a skos:Concept ;
 docs:evidentiary-record a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
-    skos:definition """A physical or digital document or correspondence from a recognised authoritative agency or organisation that validates or confirms the claims or conclusions of a person or organisation."""@en ;
+    skos:definition """A physical or digital document or correspondence from a recognised authoritative agency or organisation that validates or confirms the experience, history, claims, or conclusions of a person or organisation."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
     skos:prefLabel "Evidentiary Record"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+    docs:academic-transcript a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:definition """An Academic Transcript is a document that shows the academic results of an individual from a specified academic institution.
+        
+        The Academic Transcript is a formal listing issued by the course provider showing the subjects studied, the period of the course, any Recognition of Prior Learning (RPL) exemptions, levels of achievement in each subject, and whether the achievements listed complete the course and entitle the student to graduate."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:altLabel "Academic Record"@en,
+            "Course Record"@en ;
+        skos:prefLabel "Academic Transcript"@en ;
+        skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+    docs:education-certificate a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:definition """An Education Certificate is a document that formally recognises a Person has achieved a formal qualification with a specific Tertiary Institution. When referred to as a graduation certificate this should not be confused with the Graduate Certificate type of Australian Qualification Level."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:notation "Degree Certificate"@en,
+            "Graduation Certificate"@en ;
+        skos:prefLabel "Education Certificate"@en ;
+        skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
     docs:mra-org-validation-evidence a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;

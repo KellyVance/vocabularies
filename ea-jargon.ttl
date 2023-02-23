@@ -668,15 +668,6 @@ eaj:engineering-accords a skos:Concept ;
     skos:prefLabel "International Engineering Accords"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
-earl:ea-assessor a skos:Concept ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-roles> ;
-    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    skos:definition """An EA Assessor is an EA Role, for a Person who formally assesses (on behalf of EA) the competency of a Person seeking Stage 1 or Stage 2 Competency through Engineers Australia."""@en ;
-    skos:altLabel "Engineers Australia Assessor"@en ;
-    skos:prefLabel "EA Assessor"@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
-
 eaj:ea-assessment a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
