@@ -1,2 +1,2 @@
 # vocabularies
-Vocabulary development for global and user specific class attributes 
+Vocabulary development for global and user specific class attributes

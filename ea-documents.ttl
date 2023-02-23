@@ -1,5 +1,6 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix docs: <https://linked.data.gov.au/def/ea-documents/> .
+@prefix id: <http://linked.data.gov.au/def/party-identifier-type/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <http://schema.org/> .
@@ -220,7 +221,75 @@ docs:membership-document a skos:Concept ;
         skos:prefLabel "MRA Chartered Evidence"@en ;
         skos:broader docs:membership-document .
 
-docs:personal-identification
-        aus drivers licence, int drivers licence, passport, medicare card, bank statement
+docs:personal-identification a skos:Concept ;
+    dcterms:source "https://www.mygovid.gov.au/verifying-your-identity"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """Documents and records used when verifying the identity of an individual. Identification details are checked against existing records to prove identity. """@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:altLabel "Personal ID"@en,
+        "Personal ID Documents"@en,
+        "Personal Identification Documents"@en ;
+    skos:prefLabel "Personal Identification"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
-        related security-classification/high medium low etc
+    docs:australian-visa a skos:Concept ;
+        skos:definition "A conditional permit granted to a foreign national by the Australian Government conveying rights of entry, residence, or work within the country."@en ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:exactMatch id:australian-visa ;
+        skos:prefLabel "Australian visa"@en ;
+        skos:broader docs:personal-identification .
+    
+    docs:bank-card a skos:Concept ;
+        skos:altLabel "Bank passbook"@en,
+            "Credit Card"@en,
+            "Credit card, bank card or bank passbook"@en ;
+        skos:definition "A card issued by a financial institution for the purpose of identity and account access."@en ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:exactMatch id:bank-card ;
+        skos:prefLabel "Bank Card"@en ;
+        skos:broader docs:personal-identification .
+
+    docs:bank-statement a skos:Concept ;
+        skos:definition "A statement issued by a financial institution detailing transactions and account information associated with a customer account."@en ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:prefLabel "Bank Statement"@en ;
+        skos:broader docs:personal-identification .
+
+    docs:drivers-licence a skos:Concept ;
+        skos:altLabel "Australian Drivers Licence"@en,
+            "Australian Drivers License"@en,
+            "Drivers License"@en ;
+        skos:definition "The official permit required for a person to legally drive a motor vehicle in Australia. Issued by the States and Territories of Australia."@en ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:exactMatch id:drivers-licence ;
+        skos:prefLabel "Drivers licence"@en ;
+        skos:broader docs:personal-identification .
+
+    docs:medicare-card a skos:Concept ;
+        skos:definition "A card, issued to Australian citizens and permanent residents and their families. The card or the Medicare number enables the cardholder to receive a rebate of medical expenses under Australia's Medicare system, as well as subsidised medications under the Pharmaceutical Benefits Scheme (PBS). Source:Wikipedia"@en ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:exactMatch id:medicare-card ;
+        skos:prefLabel "Medicare card"@en ;
+        skos:broader docs:personal-identification .
+
+    docs:australian-passport a skos:Concept ;
+        skos:definition "An Australian passport is a basic identity document accepted as valid for crossing international borders, issued by the Government of Australia to Australian citizens. Source: The New Oxford Companion to Law"@en ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:exactMatch id:australian-passport ;
+        skos:prefLabel "Australian passport"@en ;
+        skos:broader docs:personal-identification .
+
+    docs:foregin-passport a skos:Concept ;
+        skos:definition "A foreign passport is a basic identity document accepted as valid for crossing international borders, issued by a government, other than Australia's, to its citizens. Source: The New Oxford Companion to Law"@en ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:exactMatch id:foregin-passport ;
+        skos:altLabel "International Passport"@en ;
+        skos:prefLabel "Foreign passport"@en ;
+        skos:broader docs:personal-identification .

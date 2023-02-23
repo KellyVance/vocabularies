@@ -58,5 +58,3 @@ event:MostLikely a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/risk-probability> ;
 	skos:definition """Probability of an output of a process being very high. A 1 in 1 - 10 probability of occurrence. Is expected to occur in most circumstances."""@en;
 	rdfs:comment """Near sure."""@en.
-
-
