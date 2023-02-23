@@ -70,13 +70,13 @@ isc:private a skos:Concept ;
 	dcterms:source "https://www.unsw.edu.au/content/dam/pdfs/governance/policy/2022-01-policies/datastandard.pdf"^^xsd:anyURI ;
 	skos:altLabel "Official"@en,
 		"Personal"@en,
-		"Internal"@en ;
+		"Private"@en ;
 	skos:definition """Data that if breached through accidental or malicious activity would have a low impact on the activities and objectives of the organisation. Official information is all information created, sent or received as part of the work with the organisation and forms an official record that provides evidence of what an entity has done and why. This includes routine business operations and services. 
 	
 	When describing an individual, private information may include name, address, date of birth, employee records etc.
 
 	The intended audience for data with this classification is within an organisation and with direct external contacts and stakeholders with a demonstrated need."""@en ;
-	skos:prefLabel "Private"@en ;
+	skos:prefLabel "Internal"@en ;
 	skos:inScheme <https://linked.data.gov.au/def/information-security-classification> ;
 	skos:topConceptOf <https://linked.data.gov.au/def/information-security-classification> .
 
