@@ -60,6 +60,26 @@ docs:competency-demo-report a skos:Concept ;
     skos:prefLabel "Competency Demonstration Report"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
+docs:cpd-activity a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A Continuing Professional Development (CPD) Activity is a formal record of a single specific engineering activity performed by a Chartered Engineer in order to maintain their standing as a Chartered Engineer."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:altLabel "CDP Activity"@en,
+        "Continuous Professional Development Activity"@en ;
+    skos:prefLabel "Continuing Professional Development Activity"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:cpd-statement a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A Continuing Professional Development (CPD) Statement is a document that details a Career Engineer's on-going series of activities to maintain the currency of their engineering knowledge."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:altLabel "CDP Statement"@en,
+        "Continuous Professional Development Statement"@en ;
+    skos:prefLabel "Continuing Professional Development Statement"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
 docs:cv a skos:Concept;
     dcterms:source "https://en.wikipedia.org/wiki/Curriculum_vitae"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
