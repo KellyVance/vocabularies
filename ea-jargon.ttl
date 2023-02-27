@@ -39,10 +39,18 @@ eaj:agent a skos:Concept ;
         "Entity Types"@en ;
     skos:prefLabel "Engineers Australia Agents"@en .
 
+eaj:ea-awards a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+    skos:definition """An EA Award is an Engineers Australia managed award for service or achievement to the organisation of Engineers Australia or to the engineering profession."""@en ;
+    skos:related <https://linked.data.gov.au/def/ea-awards> ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Engineers Australia Award"@en .
+
 eaj:ea-roles a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-roles> ;
-    skos:definition """The roles an organisation, group, or individual can perform when interacting with Engineers Australia"""@en ;
+    skos:definition """The roles an organisation, group, or individual can perform when interacting with Engineers Australia."""@en ;
     skos:related <https://linked.data.gov.au/def/ea-roles> ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:prefLabel "Engineers Australia Roles"@en .
@@ -58,7 +66,7 @@ eaj:membership a skos:Concept ;
         - Fellow
         - Affiliate
         - Companion
-        - Honorary Fellow"""@en ;
+        - Honorary Fellow."""@en ;
     skos:related <https://linked.data.gov.au/def/ea-membership-grade> ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:prefLabel "Engineers Australia Membership Grade"@en ;
@@ -340,10 +348,12 @@ eaj:documents a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
     skos:related <https://linked.data.gov.au/def/ea-documents> ;
     skos:definition """Documents and other files that record information about a person, organisation, or process. Commonly used as for assessments, analyses, or for retention of evidence for processes and decisions. Documents may be physical or digital.
-    For example Curriculum Vitae, Academic Transcripts, Competency Demonstration Reports, etc"""@en ;
+    For example Curriculum Vitae, Academic Transcripts, Competency Demonstration Reports, etc."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:altLabel "Documentation"@en,
-        "Records"@en ;
+        "Records"@en,
+        "EA Documents"@en,
+        "Engineers Australia Documents"@en ;
 	skos:prefLabel "Documents"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
@@ -373,7 +383,7 @@ eaj:analytical-model a skos:Concept ;
     - Descriptive Analytics: What happened?
     - Diagnostic Analytics: Why did it happen?
     - Predictive Analytics: What will happen?
-    - Prescriptive Analytics: How can we make it happen? How can we influence the outcome?"""@en ;
+    - Prescriptive Analytics: How can we make it happen? How can we influence the outcome?."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:prefLabel "Analytical Model"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
@@ -383,7 +393,7 @@ eaj:analytical-model a skos:Concept ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
         skos:definition """Descriptive Analytics is the examination of data or content, usually manually performed, to answer the question “What happened?” (or What is happening?), characterized by traditional business intelligence (BI) and visualizations such as pie charts, bar charts, line graphs, tables, or generated narratives.
         
-        (gartner.com)"""@en ;
+        (gartner.com)."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
         skos:altLabel "Descriptive Analytics"@en,
             "Descriptive Model"@en ;
@@ -395,7 +405,7 @@ eaj:analytical-model a skos:Concept ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
         skos:definition """Diagnostic analytics is a form of advanced analytics that examines data or content to answer the question, “Why did it happen?” It is characterized by techniques such as drill-down, data discovery, data mining and correlations.
         
-        (gartner.com)"""@en ;
+        (gartner.com)."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
         skos:altLabel "Diagnostic Analytics"@en,
             "Diagnostic Model"@en ;
@@ -411,7 +421,7 @@ eaj:analytical-model a skos:Concept ;
         3. An emphasis on the business relevance of the resulting insights (no ivory tower analyses)
         4. (increasingly) An emphasis on ease of use, thus making the tools accessible to business users.
         
-        (gartner.com)"""@en ;
+        (gartner.com)."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
         skos:altLabel "Predictive Analytics"@en,
             "Predictive Model"@en ;
@@ -423,7 +433,7 @@ eaj:analytical-model a skos:Concept ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
         skos:definition """Prescriptive Analytics is a form of advanced analytics which examines data or content to answer the question “What should be done?” or “What can we do to make X happen?”, and is characterized by techniques such as graph analysis, simulation, complex event processing, neural networks, recommendation engines, heuristics, and machine learning.
         
-        (gartner.com)"""@en ;
+        (gartner.com)."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
         skos:altLabel "Prescriptive Analytics"@en,
             "Prescriptive Model"@en ;
@@ -796,7 +806,7 @@ eaj:ea-assessment a skos:Concept ;
             - Strategic direction and entrepreneurship
             - Planning
             - Change and improvement
-            - Customer Focus"""@en ;
+            - Customer Focus."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
         skos:altLabel "Engineering Executive Assessment"@en,
             "EngExec Assessment"@en ;
