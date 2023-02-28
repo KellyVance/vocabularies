@@ -39,6 +39,69 @@ eaj:agent a skos:Concept ;
         "Entity Types"@en ;
     skos:prefLabel "Engineers Australia Agents"@en .
 
+eaj:areas-of-practice a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/def/engineering-categories"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/engineering-categories> ;
+    skos:definition """Areas of Practice are the types of engineering undertaken by an individual or organisation, e.g. Civil, Chemical, Mechanical, Structural. Depending on the use case these may be referred to as Areas of Business, Areas of Engineering, or Areas of Practice and consist of variable subsets of the greater categorisation of Engineering types."""@en ;
+    skos:related <https://linked.data.gov.au/def/engineering-categories> ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "Areas of Business"@en,
+        "Areas of Engineering"@en ;
+    skos:prefLabel "Areas of Practice"@en .
+
+eaj:aus-privacy-act a skos:Concept ;
+    dcterms:source "https://www.oaic.gov.au/privacy/the-privacy-act"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    rdfs:seeAlso <https://www.oaic.gov.au/privacy/the-privacy-act> ;
+    skos:related eaj:aus-privacy-principles ;
+    skos:definition """The Privacy Act 1988 (Privacy Act) was introduced to promote and protect the privacy of individuals and to regulate how Australian Government agencies and organisations with an annual turnover of more than $3 million, and some other organisations, handle personal information.
+    
+    The Privacy Act includes 13 Australian Privacy Principles (APPs), which apply to some private sector organisations, as well as most Australian Government agencies. These are collectively referred to as 'APP entities'. The Privacy Act also regulates the privacy component of the consumer credit reporting system, tax file numbers, and health and medical research."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:notation "APA" ;
+    skos:altLabel "The Privacy Act"@en,
+        "Privacy Act"@en,
+        "Privacy Act 1988"@en ;
+    skos:prefLabel "Australian Privacy Act"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+eaj:aus-privacy-principles a skos:Concept ;
+    dcterms:source "https://www.oaic.gov.au/privacy/australian-privacy-principles"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    rdfs:seeAlso <https://www.oaic.gov.au/privacy/australian-privacy-principles> ;
+    skos:related eaj:aus-privacy-act ;
+    skos:definition """The Australian Privacy Principles (or APPs) are the cornerstone of the privacy protection framework in the Privacy Act 1988 (Privacy Act). They apply to any organisation or agency the Privacy Act covers.
+
+    There are 13 Australian Privacy Principles and they govern standards, rights and obligations around:
+    - the collection, use and disclosure of personal information
+    - an organisation or agency's governance and accountability
+    - integrity and correction of personal information
+    - the rights of individuals to access their personal information
+    The Australian Privacy Principles are principles-based law. This gives an organisation or agency flexibility to tailor their personal information handling practices to their business models and the diverse needs of individuals. They are also technology neutral, which allows them to adapt to changing technologies.
+    
+    A breach of an Australian Privacy Principle is an 'interference with the privacy of an individual' and can lead to regulatory action and penalties."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:notation "APP" ;
+    skos:altLabel "APPs"@enn ;
+    skos:prefLabel "Australian Privacy Principles"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+eaj:div-rules a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """The local rules and regulations that govern the operation of each Engineers Australia Division."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Division Rules"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+ eaj:disciplinary-and-appeals a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """Disciplinary and associated Appeal procedures govern how complaints against EA members are assessed and resolved. These procedures are managed by the Associate Director Ethics and Discipline at National Office."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Disciplinary and Appeals Procedures"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 eaj:ea-awards a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
@@ -546,6 +609,19 @@ eaj:cms a skos:Concept ;
     skos:prefLabel "Content Management System"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
+eaj:code-of-ethics a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    rdfs:seeAlso <https://www.engineersaustralia.org.au/publications/code-ethics> ;
+    skos:definition """The Code of Ethics and Guidelines on Professional Conduct defines the values and principles that shape the decisions made, and provides a framework for members of Engineers Australia to use when exercising their judgment, in engineering practice and as members of Engineers Australia. The Cardinal Principles of the Code of Ethics are:
+    - to respect the inherent dignity of the individual
+    - to act on the basis of a well informed conscience, and
+    - to act in the interest of the community.
+    These principles are encapsulated within and established by the Tenets of the Code of Ethics."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Code of Ethics"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 eaj:country-education-profiles a skos:Concept ;
     dcterms:source "https://internationaleducation.gov.au/services-and-resources/services-for-organisations/Pages/Services-for-organisations.aspx"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -707,7 +783,7 @@ eaj:ea-assessment a skos:Concept ;
     skos:prefLabel "Engineers Australia Assessment"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .    
 
-    eaj:continuous-collaborative-assessmenta a skos:Concept ;
+    eaj:continuous-collaborative-assessment a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
         skos:definition """This is the process for progressive assessment of an engineer who is undergoing formation in an Engineers Australia approved Professional Development Program. The Program involves the lodging with Engineers Australia of a formal employer agreement, providing for appointment of a mentor, and the submission of regular reports by the Graduate during formation. The final report, leading to the Professional Interview for MIEAust CPEng, is accepted in lieu of the normal Engineering Practice Report (EPR). Formation under this program may be achieved in the minimum 3 years whereas those whose formation is less formal usually need at least 4 years. As these programs are under development, it is possible the final name for them be slightly different."""@en ;
@@ -860,6 +936,15 @@ eaj:ea-assessment a skos:Concept ;
             "EngExec Assessment"@en ;
         skos:prefLabel "Stage 3 Competency Assessment"@en ;
         skos:broader eaj:ea-assessment .
+
+eaj:membership-regulations a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/membership"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    rdfs:seeAlso <https://www.engineersaustralia.org.au/membership> ;
+    skos:definition """The formal regulations approved by the Engineers Australia Council that determine the rules and regulations of membership."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Membership Regulations"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
 eaj:occupational-categories a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -1016,3 +1101,14 @@ eaj:platforms a skos:Collection ;
         eaj:active-directory,
         eaj:cms,
         eaj:crm .
+
+eaj:policy a skos:Collection ;
+	skos:prefLabel "Policy and Procedure"@en ;
+	skos:definition """Documents that outline objectives and ways of working. Distinct from operational documents that record instances of information."""@en ;
+    skos:member
+        eaj:aus-privacy-act,
+        eaj:aus-privacy-principles,
+        eaj:code-of-ethics,
+        eaj:membership-regulations,
+        eaj:div-rules,
+        eaj:disciplinary-and-appeals .

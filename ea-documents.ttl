@@ -15,11 +15,12 @@
     dcterms:modified "2022-01-31"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    skos:definition """Documents and other files that record information about a person, organisation, or process. Commonly used as for assessments, analyses, or for retention of evidence for processes and decisions. Documents may be physical or digital."""@en ;
+    skos:definition """Documents, records, and other files that record information about a person, organisation, or process. Commonly used as for assessments, analyses, or for retention of evidence for processes and decisions. Documents and records may be physical or digital."""@en ;
     skos:altLabel "Documentation"@en,
         "Records"@en,
-        "Document Type"@en ;
-	skos:prefLabel "Documents"@en ;
+        "Document Type"@en,
+        "Documents"@en ;
+	skos:prefLabel "Documents and Records"@en ;
 
 <https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
     sdo:name "Engineers Australia" ;
@@ -108,18 +109,18 @@ docs:engineering-experience-record a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
     rdfs:seeAlso docs:engineering-experience-record-segment ;
-    sdo:hasPart docs:engineering-experience-record-segment;
+    sdo:hasPart docs:engineering-experience-record-segment ;
     skos:definition """An Engineering Experience Record is a Submission Item that details a Person's work responsibilities at a specific employer, in support of his/her Stage 2 Application. Commonly derived from a Curriculum Vitae. Each Engineering Experience Record may be further divided into Segments that detail the specific contribution to the engineering experience of an individual."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
     skos:notation "EER" ;
-    skos:prefLabel "Engineering Experience Record "@en ;
+    skos:prefLabel "Engineering Experience Record"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
 docs:engineering-experience-record-segment a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
     rdfs:seeAlso docs:engineering-experience-record ;
-    sdo:hasPart docs:engineering-experience-record;
+    sdo:isPartOf docs:engineering-experience-record ;
     skos:definition """An Engineering Experience Record Segment details a specific part of a Person's CV or work history that contributes towards their Engineering Experience Record."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
     skos:notation "EERs" ;
@@ -187,17 +188,34 @@ docs:evidentiary-record a skos:Concept ;
         skos:altLabel "Academic Record"@en,
             "Course Record"@en ;
         skos:prefLabel "Academic Transcript"@en ;
-        skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+        skos:broader docs:evidentiary-record .
 
     docs:education-certificate a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
         skos:definition """An Education Certificate is a document that formally recognises a Person has achieved a formal qualification with a specific Tertiary Institution. When referred to as a graduation certificate this should not be confused with the Graduate Certificate type of Australian Qualification Level."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
-        skos:notation "Degree Certificate"@en,
+        skos:altLabel "Degree Certificate"@en,
             "Graduation Certificate"@en ;
         skos:prefLabel "Education Certificate"@en ;
-        skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+         skos:broader docs:evidentiary-record .
+
+    docs:competency-certificate a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:definition """A Competency Certificate is a document that formally recognises a Person has achieved competency in a skillset as determined by an authoritative assessor."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:prefLabel "Competency Certificate"@en ;
+        skos:broader docs:evidentiary-record .
+
+        docs:mra-apec-competency-certificate a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            skos:definition """An MRA APEC Certificate is an Asia Pacific Economic Cooperation Certificate which provides recognition of Engineering Competency for an individual."""@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:altLabel "MRA APEC Competency Certificate"@en ;
+            skos:prefLabel "MRA APEC Certificate"@en ;
+            skos:broader docs:competency-certificate .
 
     docs:mra-org-validation-evidence a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -206,6 +224,28 @@ docs:evidentiary-record a skos:Concept ;
         skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
         skos:prefLabel "MRA Organisation Validation Evidence"@en ;
         skos:broader docs:evidentiary-record .
+
+docs:foa-report a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:seeAlso docs:foa-segment ;
+    sdo:hasPart docs:foa-segment ;
+    skos:definition """A Follow-on Activity Report is a Submission Item that groups the one-or-many Follow-on Activity Segments to demonstrate how the requirements of an applicants Follow-on Activity Requirement has been met. An FoA Report details the accumualted activities described by one-or-many FoA Segments."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:altLabel "FoA Report" ;
+    skos:prefLabel "Follow-on Activity Report"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:foa-segment a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:seeAlso docs:foa-report ;
+    sdo:isPartOf docs:foa-report ;
+    skos:definition """A Follow-on Activity Segment details a specific part of a Follow-on Activity Report. Segments detail individual activities and are compiled into a report that demonstrates how requirements have been met by the accumulated activities."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:altLabel "FoA Segment" ;
+    skos:prefLabel "Follow-on Activity Segment"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
 docs:interviewer-attachment a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -225,6 +265,14 @@ docs:journal a skos:Concept ;
     skos:altLabel "Diary"@en,
         "Log"@en ;
     skos:prefLabel "Journal"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:letter-of-introduction a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A formal letter from a recognised authority introducing an individual to an organisation."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Letter of Introduction"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
 docs:membership-document a skos:Concept ;
@@ -339,10 +387,18 @@ docs:personal-identification a skos:Concept ;
         skos:prefLabel "Foreign passport"@en ;
         skos:broader docs:personal-identification .
 
+docs:registration a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """Registration is a formal record of an individual joining an organisation or activity. For example registration may describe procuring one or more allocated seats or tickets for attendence at an Event."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Registration"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
 docs:testimonial a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
-    skos:definition """A Testimonial is a favourable overview of a Person's qualifications, work experience, personal qualities, and interests supplied by an individual who has insight into the person's experience and behaviour."""@en ;
+    skos:definition """A Testimonial is a favourable overview of an individual's qualifications, work experience, personal qualities, and interests supplied by an individual who has insight into the person's experience and behaviour."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
     skos:altLabel "Written Reference"@en ;
     skos:prefLabel "Testimonial"@en ;
