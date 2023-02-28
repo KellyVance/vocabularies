@@ -159,6 +159,16 @@ docs:enrolment a skos:Concept ;
     skos:prefLabel "Enrolment Form"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
+docs:eoi a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """An Expression of Interest is document or other media that that demonstrates interest in a position, membership, participation in an activity, or permission and access to a resource, area, group, or administrative region (e.g. immigration to a country). It is a method to provide information to demonstrate suitability, interest, and availability in relation to the subject of the Expression of Interest."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:notation "EOI" ;
+    skos:altLabel "E.O.I."@en ;
+    skos:prefLabel "Expression of Interest"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
 docs:evidentiary-record a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
@@ -241,10 +251,18 @@ docs:membership-document a skos:Concept ;
         skos:prefLabel "MRA Chartered Evidence"@en ;
         skos:broader docs:membership-document .
 
+    docs:mra-membership-evidence a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:definition """An MRA Membership Evidence is a document that shows a Person's membership with an MRA Organisation."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:prefLabel "MRA Membership Evidence"@en ;
+        skos:broader docs:membership-document .
+
 docs:personal-identification a skos:Concept ;
     dcterms:source "https://www.mygovid.gov.au/verifying-your-identity"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
-    skos:definition """Documents and records used when verifying the identity of an individual. Identification details are checked against existing records to prove identity. """@en ;
+    skos:definition """Documents and records used when verifying the identity of an individual. Identification details are checked against existing records to prove identity."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
     skos:altLabel "Personal ID"@en,
         "Personal ID Documents"@en,
@@ -253,6 +271,7 @@ docs:personal-identification a skos:Concept ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
     docs:australian-visa a skos:Concept ;
+        dcterms:source "http://linked.data.gov.au/def/party-identifier-type/australian-visa"^^xsd:anyURI ;
         skos:definition "A conditional permit granted to a foreign national by the Australian Government conveying rights of entry, residence, or work within the country."@en ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
         skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
@@ -261,6 +280,7 @@ docs:personal-identification a skos:Concept ;
         skos:broader docs:personal-identification .
     
     docs:bank-card a skos:Concept ;
+        dcterms:source "http://linked.data.gov.au/def/party-identifier-type/bank-card"^^xsd:anyURI ;
         skos:altLabel "Bank passbook"@en,
             "Credit Card"@en,
             "Credit card, bank card or bank passbook"@en ;
@@ -272,6 +292,7 @@ docs:personal-identification a skos:Concept ;
         skos:broader docs:personal-identification .
 
     docs:bank-statement a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         skos:definition "A statement issued by a financial institution detailing transactions and account information associated with a customer account."@en ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
         skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
@@ -279,6 +300,7 @@ docs:personal-identification a skos:Concept ;
         skos:broader docs:personal-identification .
 
     docs:drivers-licence a skos:Concept ;
+        dcterms:source "http://linked.data.gov.au/def/party-identifier-type/drivers-licence"^^xsd:anyURI ;
         skos:altLabel "Australian Drivers Licence"@en,
             "Australian Drivers License"@en,
             "Drivers License"@en ;
@@ -290,6 +312,7 @@ docs:personal-identification a skos:Concept ;
         skos:broader docs:personal-identification .
 
     docs:medicare-card a skos:Concept ;
+        dcterms:source "http://linked.data.gov.au/def/party-identifier-type/medicare-card"^^xsd:anyURI ;
         skos:definition "A card, issued to Australian citizens and permanent residents and their families. The card or the Medicare number enables the cardholder to receive a rebate of medical expenses under Australia's Medicare system, as well as subsidised medications under the Pharmaceutical Benefits Scheme (PBS). Source:Wikipedia"@en ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
         skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
@@ -298,6 +321,7 @@ docs:personal-identification a skos:Concept ;
         skos:broader docs:personal-identification .
 
     docs:australian-passport a skos:Concept ;
+        dcterms:source "http://linked.data.gov.au/def/party-identifier-type/australian-passport"^^xsd:anyURI ;
         skos:definition "An Australian passport is a basic identity document accepted as valid for crossing international borders, issued by the Government of Australia to Australian citizens. Source: The New Oxford Companion to Law"@en ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
         skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
@@ -306,6 +330,7 @@ docs:personal-identification a skos:Concept ;
         skos:broader docs:personal-identification .
 
     docs:foregin-passport a skos:Concept ;
+        dcterms:source "http://linked.data.gov.au/def/party-identifier-type/foreign-passport"^^xsd:anyURI ;
         skos:definition "A foreign passport is a basic identity document accepted as valid for crossing international borders, issued by a government, other than Australia's, to its citizens. Source: The New Oxford Companion to Law"@en ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
         skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
@@ -313,3 +338,12 @@ docs:personal-identification a skos:Concept ;
         skos:altLabel "International Passport"@en ;
         skos:prefLabel "Foreign passport"@en ;
         skos:broader docs:personal-identification .
+
+docs:testimonial a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A Testimonial is a favourable overview of a Person's qualifications, work experience, personal qualities, and interests supplied by an individual who has insight into the person's experience and behaviour."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:altLabel "Written Reference"@en ;
+    skos:prefLabel "Testimonial"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
