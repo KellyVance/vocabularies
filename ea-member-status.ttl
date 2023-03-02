@@ -34,7 +34,7 @@
 eams:non-member a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-status> ;
-    skos:definition "An individual who is a prospective member of Engineers Australia and has not previously held membership with the organisation."@en ;
+    skos:definition """An individual who is or was a prospective member of Engineers Australia and has not previously held membership with the organisation."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
     skos:prefLabel "Non-Member"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-status> .
@@ -42,7 +42,7 @@ eams:non-member a skos:Concept ;
 eams:active a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-status> ;
-    skos:definition "A member of Engineers Australia with access to member benefits and able to participate in Engineers Australia events, forums, and other services."@en ;
+    skos:definition """A member of Engineers Australia with access to member benefits and able to participate in Engineers Australia events, forums, and other services."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
     skos:prefLabel "Active"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-status> .
@@ -50,7 +50,7 @@ eams:active a skos:Concept ;
 eams:lapsed a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-status> ;
-    skos:definition "An active non-student member of Engineers Australia whose paid membership has expired due to non-payment before the due date, but whose membership has not yet been terminated as part of the subsequent erasure process. Lapsed membership is only a valid status between the due date for renewal and the conclusion of the processing and erasure period."@en ;
+    skos:definition """A non-student member of Engineers Australia whose paid membership has expired due to non-payment before the due date, but whose membership has not yet been terminated as part of the subsequent erasure process. Lapsed membership is only a valid status between the due date for renewal (30 June) and the conclusion of the processing and erasure period (typically 31 October)."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
     skos:prefLabel "Lapsed"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-status> .
@@ -58,7 +58,7 @@ eams:lapsed a skos:Concept ;
 eams:inactive a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-status> ;
-    skos:definition "A previous member of Engineers Australia who has lost access to member benefits and the ability to participate in Engineers Australia events, forums, and other services. Typically due to membership cancellation or erasure."@en ;
+    skos:definition """A previous member of Engineers Australia who has lost access to member benefits and the ability to participate in Engineers Australia events, forums, and other services. Typically due to membership cancellation or erasure."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
     skos:prefLabel "Inactive"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-status> .
