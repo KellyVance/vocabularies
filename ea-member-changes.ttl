@@ -247,6 +247,14 @@ eamc:at-risk-member a skos:Concept ;
         skos:prefLabel "Lapse"@en ;
         skos:broader at-risk-member .    
 
+    eamc:part-payment a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:definition """An individual who had an active membership with Engineers Australia during the past financial year, and who has made incomplete payment of  renewal fees by the due date to continue membership. A member at risk of erasure."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:prefLabel "Lapse"@en ;
+        skos:broader at-risk-member .    
+
 eamc:lost-member a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
@@ -288,3 +296,28 @@ eamc:lost-member a skos:Concept ;
         skos:altLabel "Revenue Lost Potential"@en ;
         skos:prefLabel "Student Cancellation"@en ;
         skos:broader eamc:lost-member .
+
+#COLLECTIONS
+
+eamc:single-change-process a skos:Collection ;
+    skos:prefLabel "Selectable Processes"@en ;
+    skos:altLabel "Single-Change Processes"@en ;
+	skos:definition """The current concepts without narrower concepts that are used to describe specific membership state changes."""@en ;
+    skos:member
+        eamc:new-member,
+        eamc:new-student,
+        eamc:new-hon-fellowship,
+        eamc:member-readmission,
+        eamc:ex-student-to-member,
+        eamc:student-readmission,
+        eamc:promotion,
+        eamc:graduation,
+        eamc:renewal,
+        eamc:reactivation,
+        eamc:hon-fellowship,
+        eamc:student-continuation,
+        eamc:lapse,
+        eamc:part-payment,
+        eamc:erasure,
+        eamc:cancellation,
+        eamc:student-cancellation .
