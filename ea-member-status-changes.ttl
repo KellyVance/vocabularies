@@ -18,7 +18,7 @@
     dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
     dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
     dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
-    skos:definition """The changes to member status that a may occur within the framework of Engineers Australia membership"""@en ;
+    skos:definition """The changes to member status and grade that a may occur within the framework of Engineers Australia membership."""@en ;
     skos:prefLabel "Engineers Australia Member Status Changes"@en .
 
 <https://linked.data.gov.au/org/engineersaustralia>
@@ -34,21 +34,35 @@
     sdo:name "Vance Kelly" ;
     sdo:identifier <https://orcid.org/0000-0003-2309-7004> .
 
-eamsc:acquisition - all members acquired through new or returning membership
-	eamsc:admission - all non student member admissions as new members or returning members
-		eamsc:new-member - new non-student membership
-		eamsc:returning-member
-			eamsc:readmission - A previous member whose membership was cancelled or erased , requiring a new application and assessment 
-			eamsc:reactivation - membership lapsed but reactivated prior to the erasure process
-	eamsc:new-student - new student membership
-	eamsc:student-reactivation - The reactivation of a cancelled student membership 
-	eamsc:student-upgrade- student to other membership
-		eamsc:graduation - student to graduate
-		eamsc:student-transition - student (or graduate?) to a non-graduate grade
-eamsc:retention - (aka Renewal) - An existing member who has paid to continue membership into the next membership period. 
+eamsc:acquisition """Transition to Active from any other status. All members acquired through new or returning membership.""" 
+	eamsc:admission """Transition from Non-Member or Inactive to an Active and Paid membership. All new members or returning non-student (paid) members"""
+		eamsc:new-member """Transition from Non-Member to a Paid membership. New non-student membership"""
+		eamsc:returning-member """Transition from an Inactive to a Paid membership."""
+            eamsc:readmission """Transition from an Past Paid to a Paid membership. A previous member whose membership was cancelled or erased, requiring a new application and assessment."""
+            eamsc:ex-student-return """Transition from Past Paid to Paid membership. An individual joining as a paid member who once held a student membership that becamce inactive."""
+        eamsc:student-upgrade- """Transition from Free to Paid membership. Student to a different active membership"""
+            eamsc:graduation - """Transition from Free to Paid membership where the new membership grade is Graduate. Student to graduate"""
+            eamsc:student-transition """Transition from Free to Paid membership where the new membership grade is not Graduate. Student to a non-graduate grade"""
+			
+	eamsc:unpaid-admission """Transition from Non-Member or Inactive to a Free membership. All new and returning student members.""" 
+        eamsc:new-unpaid """Transition from Non-Member to Free. A new student membership"""
+        eamsc:student-readmission - """Transition from Inactive to Free. A new student membership. The reactivation of a cancelled student membership""" 
+	
+
+    
+eamsc:renewal """Confirmation of continuation of Paid membership from an Active non-Free status."""
+    eamsc:retention - """No change to Paid status. Effectively a transition of Paid to Paid. An existing member who has paid to continue membership into the next membership period."""
+    eamsc:reactivation - """Transition from Lapsed to Paid membership. A lapsed membership reactivated prior to the erasure process"""
+
+eamsc:lapse - a membership that has lapsed due to non payment after the due date, but has not yet been erased from active membership
+
 eamsc:member-loss
     eamsc:termination - the loss of active paid membership
         eamsc:cancellation - a member cancelling their membership or informing of the intent to not renew.
         eamsc:erasure - a membership that has lapsed and subsequently been erased from active membership due to not being renewed or reactivated
-	eamsc:lapse - a membership that has lapsed due to non payment after the due date, but has not yet been erased from active membership
+
 	eamsc:student-cancellation - The loss of a student member due to non-renewal or exceeding the maximum allowable duration for a continual student membership. May be manually assessed and overridden to account for part-time study, a break in study, or other mitigating circumstances.
+
+
+		 Collection
+            readmission, reactivation
