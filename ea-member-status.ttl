@@ -47,33 +47,13 @@ eams:active a skos:Concept ;
     skos:prefLabel "Active"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-status> .
 
-    eams:gratis a skos:Concept ;
-        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-status> ;
-        skos:definition "An active member of Engineers Australia exempt from payment. Typically a student membership."@en ;
-        skos:related eagrd:student ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
-            skos:altLabel "Gratis"@en,
-                "Active Student"@en ;
-        skos:prefLabel "Unpaid Active"@en ;
-        skos:broader eams:active .
-
-    eams:paid a skos:Concept ;
-        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-status> ;
-        skos:definition "An active non-student member of Engineers Australia with a paid membership. A membership that is a source of revenue."@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
-        skos:altLabel "Fully Paid"@en;
-        skos:prefLabel "Paid"@en ;
-        skos:broader eams:active .
-
-    eams:lapsed a skos:Concept ;
-        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-status> ;
-        skos:definition "An active non-student member of Engineers Australia whose paid membership has expired due to non-payment before the due date, but whose membership has not been terminated as part of the erasure process."@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
-        skos:prefLabel "Lapsed"@en ;
-        skos:broader eams:active .
+eams:lapsed a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-status> ;
+    skos:definition "An active non-student member of Engineers Australia whose paid membership has expired due to non-payment before the due date, but whose membership has not yet been terminated as part of the subsequent erasure process. Lapsed membership is only a valid status between the due date for renewal and the conclusion of the processing and erasure period."@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
+    skos:prefLabel "Lapsed"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-status> .
 
 eams:inactive a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -82,21 +62,3 @@ eams:inactive a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
     skos:prefLabel "Inactive"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-status> .
-
-    eams:past-paid a skos:Concept ;
-        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-status> ;
-        skos:definition "A previous non-student member of Engineers Australia whose paid membership has expired due to active cancellation of membership or erasure following non-payment before the due date."@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
-        skos:prefLabel "Past Paid"@en ;
-        sskos:broader eams:inactive .
-
-    eams:past-unpaid a skos:Concept ;
-        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-status> ;
-        skos:definition "A previous student member of Engineers Australia whose free membership has expired. Typically due to active cancellation of membership or cancellation due to surpassing the maximum duration for a student membership.
-        
-        The maximum duration of a student membership may be exceeded at the discretion of Engineers Australia to allow for interrupted and part time study."@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
-        skos:prefLabel "Past Unpaid"@en ;
-        skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-status> .

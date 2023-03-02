@@ -178,6 +178,16 @@ docs:evidentiary-record a skos:Concept ;
     skos:prefLabel "Evidentiary Record"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
+    docs:academic-letter-of-completion a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:definition """An Letter of Completion is a document that records the completion of requirements in a course for individual from an academic institution.
+        
+        The Letter of Completion is used for graduates who have not yet received the award and title assoicated with their course."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:prefLabel "Letter of Completion"@en ;
+        skos:broader docs:evidentiary-record .
+
     docs:academic-transcript a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
@@ -196,7 +206,8 @@ docs:evidentiary-record a skos:Concept ;
         skos:definition """An Education Certificate is a document that formally recognises a Person has achieved a formal qualification with a specific Tertiary Institution. When referred to as a graduation certificate this should not be confused with the Graduate Certificate type of Australian Qualification Level."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
         skos:altLabel "Degree Certificate"@en,
-            "Graduation Certificate"@en ;
+            "Graduation Certificate"@en,
+            "Testamur"@en ;
         skos:prefLabel "Education Certificate"@en ;
          skos:broader docs:evidentiary-record .
 
