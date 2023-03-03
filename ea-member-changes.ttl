@@ -195,7 +195,8 @@ eamc:current-member a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
             skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the previous financial year."""@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-            skos:altLabel "Revenue Preservation"@en ;
+            skos:altLabel "Revenue Retention"@en,
+                "Member Retention"@en ;
             skos:prefLabel "Retention"@en ;
             skos:broader eamc:continuation .
 
@@ -268,7 +269,8 @@ eamc:lost-member a skos:Concept ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
         skos:definition """An individual who held a paid membership with Engineers Australia in the past financial year but whose membership is now inactive."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:altLabel "Revenue Loss"@en ;
+        skos:altLabel "Revenue Loss"@en,
+            "Member Loss"@en ;
         skos:prefLabel "Termination"@en ;
         skos:broader eamc:lost-member .
 
