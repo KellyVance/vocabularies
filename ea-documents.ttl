@@ -236,6 +236,19 @@ docs:evidentiary-record a skos:Concept ;
         skos:prefLabel "MRA Organisation Validation Evidence"@en ;
         skos:broader docs:evidentiary-record .
 
+    docs:micro-credential-badge a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:definition """A micro-credential is a small program that allows you to gain relevant skills that are needed in today's workforce. Digital badges are achievements that you can show to the world.
+        
+        A micro-credential badge is a digital badge that represents a specific set of skills, knowledge, or competencies that have been demonstrated by an individual. It is a form of certification that recognizes an individual's achievements in a specific area and is designed to be easily shared and verified online.
+        
+        Micro-credential badges are typically earned through short, focused learning experiences that are often offered online. These experiences can include courses, workshops, or other forms of training, and are designed to help individuals develop new skills or enhance their existing ones. Once an individual completes the learning experience and demonstrates their mastery of the relevant material, they are awarded a digital badge that represents their achievement."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:altLabel "Digital Credential"@en ;
+        skos:prefLabel "Micro-Credential Badge"@en ;
+        skos:broader docs:evidentiary-record .
+
 docs:foa-report a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
@@ -264,7 +277,8 @@ docs:interviewer-attachment a skos:Concept ;
     skos:definition """An Interviewer Attachment is a formal record of interview observations and assessment by a specific interviewer at a professional ionterview."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
     skos:altLabel "Interview Summary"@en,
-        "Interview Observations"@en ;
+        "Interview Observations"@en,
+        "Interview Report"@en ;
     skos:prefLabel "Interviewer Attachment"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
