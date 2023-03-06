@@ -26,8 +26,8 @@
 
 award:aeea a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-    dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
-    skos:definition """The Excellence Awards offer a range of national awards, medals and scholarships that highlight contributions to the various areas of engineering, which we support and promote. The Excellence Awards Program seeks to reward outstanding achievement and eminence in the practice of engineering, and standout service to the profession. It plays an important role in promoting engineering excellence and the significant contribution engineering makes to the community. The Australian Engineering Excellence Awards are comprised of awards for projects and for people."""@en ;
+    dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program"^^xsd:anyURI ;
+    skos:definition """The Engineers Australia excellence awards program promotes the prestige of the practice of engineering while recognising the outstanding achievements of individual engineering professionals."""@en ;
     skos:altLabel "Australian Engineering Excellence Awards"@en ;
     skos:notation "AEEA" ;
     skos:prefLabel "Engineers Australia Excellence Awards"@en ;
@@ -35,96 +35,331 @@ award:aeea a skos:Concept ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-awards> .
 
 
-    award:eoy-people a skos:Concept ;
+    award:ea-people a skos:Concept ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-        dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
-        skos:definition """Recognition for outstanding individual engineering achievements and promotes those engineering professionals who show innovation and resourcefulness in their work. Engineers Australia Awards recognise professional achievement, or engineering excellence in its various forms, and promote the profession of engineering. People awards may be conferred at the division level or at the national level.
-        Awards Categories:
-        - Professional Engineer of the Year
-        - Engineering Technologist of the Year
-        - Engineering Associate of the Year
-        - Young Professional Engineer of the Year
-        - Young Engineering Technologist of the Year
-        - Young Engineering Associate of the Year"""@en ;
-        skos:altLabel "Australian Engineering People Awards"@en,
-            "Engineer of the Year Awards"@en ;
-        skos:prefLabel "Engineer of the Year"@en ;
+        dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program"^^xsd:anyURI ;
+        skos:definition """People awards acknowledge individual engineers for outstanding innovation and resourcefulness in their work. The engineer of the year awards recognise engineering professionals at all stages of their career. Six awards are available based on the three occupational categories.
+        
+        Career achievement awards apply to individual engineering professionals at all career levels and across the occupational categories. There are 11 individual awards in this category mostly aligned to each of the engineering colleges.
+        
+        Also in the people category are the distinguished career awards. This category contains three separate awards which recognise the conspicuous service of individuals who have given longstanding and prominent service to the profession."""@en ;
+        skos:prefLabel "Engineers Australia People Awards"@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
         skos:broader award:aeea .
 
-        award:professional-engineer-of-the-year a skos:Concept ;
+        award:eoy a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-            dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
-            skos:related ieaoc:pro-engineer ;
-            skos:definition """The Professional Engineer of the Year award recognises outstanding individual engineering achievements and innovation and resourcefulness of a Professional Engineer."""@en ;
-            skos:prefLabel "Professional Engineer of the Year"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
-            skos:broader award:eoy-people .
-
-        award:engineering-technologist-of-the-year a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-            dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
-            skos:related ieaoc:tech-engineer ;
-            skos:definition """The Engineering Technologist of the Year award recognises outstanding individual engineering achievements and innovation and resourcefulness of an Engineering Technologist."""@en ;
-            skos:prefLabel "Engineering Technologist of the Year"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
-            skos:broader award:eoy-people .
+            dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/engineer-year-awards"^^xsd:anyURI ;
+            skos:definition """The engineer of the year awards recognise the outstanding work of engineering professionals at all stages of their career.
             
-        award:engineering-associate-of-the-year a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-            dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
-            skos:related ieaoc:assoc-engineer ;
-            skos:definition """The Engineering Associate of the Year award recognises outstanding individual engineering achievements and innovation and resourcefulness of an Engineering Associate"""@en ;
-            skos:prefLabel "Engineering Associate of the Year"@en ;
+            These awards acknowledge and reward the outstanding work of individuals and establish an aspirational benchmark for future engineering professionals.
+            
+            Award recipients will have demonstrated the following in their work:
+            - Contribution to the wellbeing of people and communities.
+            - Formulation of resourceful, innovative and aesthetically appealing engineering solutions or pioneering use of materials or methods.
+            - Contribution to Engineers Australia's purpose and strategic vision.
+            - Contribution to and promote the engineering profession.
+            - Notable achievements during an engineering career."""@en ;
+            skos:altLabel "Engineer of the Year Awards"@en ;
+            skos:prefLabel "Engineer of the Year"@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
-            skos:broader award:eoy-people .
+            skos:broader award:ea-people .
 
-        award:young-professional-engineer-of-the-year a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-            dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
-            skos:related ieaoc:pro-engineer ;
-            skos:definition """The Young Professional Engineer of the Year award recognises outstanding individual engineering achievements and innovation and resourcefulness of a Professional Engineer under the age of 35."""@en ;
-            skos:prefLabel "Young Professional Engineer of the Year"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
-            skos:broader award:eoy-people .
+            award:professional-engineer-of-the-year a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
+                skos:related ieaoc:pro-engineer ;
+                skos:definition """The Professional Engineer of the Year award recognises outstanding individual engineering achievements and innovation and resourcefulness of a Professional Engineer."""@en ;
+                skos:prefLabel "Professional Engineer of the Year"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:eoy .
 
-        award:young-engineering-technologist-of-the-year a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-            dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
-            skos:related ieaoc:tech-engineer ;
-            skos:definition """The Young Engineering Technologist of the Year award recognises outstanding individual engineering achievements and innovation and resourcefulness of an Engineering Technologist under the age of 35."""@en ;
-            skos:prefLabel "Young Engineering Technologist of the Year"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
-            skos:broader award:eoy-people .
+            award:engineering-technologist-of-the-year a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
+                skos:related ieaoc:tech-engineer ;
+                skos:definition """The Engineering Technologist of the Year award recognises outstanding individual engineering achievements and innovation and resourcefulness of an Engineering Technologist."""@en ;
+                skos:prefLabel "Engineering Technologist of the Year"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:eoy .
+                
+            award:engineering-associate-of-the-year a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
+                skos:related ieaoc:assoc-engineer ;
+                skos:definition """The Engineering Associate of the Year award recognises outstanding individual engineering achievements and innovation and resourcefulness of an Engineering Associate"""@en ;
+                skos:prefLabel "Engineering Associate of the Year"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:eoy .
 
-        award:young-engineering-associate-of-the-year a skos:Concept ;
+            award:emerging-professional-engineer-of-the-year a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
+                skos:related ieaoc:pro-engineer ;
+                skos:definition """The Emerging Professional Engineer of the Year award recognises outstanding individual engineering achievements and innovation and resourcefulness of a Professional Engineer under the age of 35."""@en ;
+                skos:prefLabel "Emerging Professional Engineer of the Year"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:eoy .
+
+            award:emerging-engineering-technologist-of-the-year a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
+                skos:related ieaoc:tech-engineer ;
+                skos:definition """The Emerging Engineering Technologist of the Year award recognises outstanding individual engineering achievements and innovation and resourcefulness of an Engineering Technologist under the age of 35."""@en ;
+                skos:prefLabel "Emerging Engineering Technologist of the Year"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:eoy .
+
+            award:emerging-engineering-associate-of-the-year a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
+                skos:related ieaoc:assoc-engineer ;
+                skos:definition """The Emerging Engineering Associate of the Year award recognises outstanding individual engineering achievements and innovation and resourcefulness of an Engineering Associate under the age of 35."""@en ;
+                skos:prefLabel "Emerging Engineering Associate of the Year"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:eoy .
+
+        award:achievement a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-            dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
-            skos:related ieaoc:assoc-engineer ;
-            skos:definition """The Young Engineering Associate of the Year award recognises outstanding individual engineering achievements and innovation and resourcefulness of an Engineering Associate under the age of 35."""@en ;
-            skos:prefLabel "Young Engineering Associate of the Year"@en ;
+            dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/achievement-awards"^^xsd:anyURI ;
+            skos:definition """Engineers Australias achievement awards recognise the important engineering achievements of individuals at all career stages and across Engineers Australia's colleges and engineering communities."""@en ;
+            skos:prefLabel "Achievement Awards"@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
-            skos:broader award:eoy-people .
+            skos:broader award:ea-people .
+
+            #Biomedical College: David Dewhurst Award
+            award:david-dewhurst-award a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/achievement-awards"^^xsd:anyURI ;
+                skos:definition """The David Dewhurst Award honours one of Australia's first biomedical engineers, Dr David Dewhurst, whose work and legacy contributed to present-day biomedical engineering.
+                
+                The David Dewhurst Award is presented to a biomedical engineer who has made a significant contribution to the discipline.
+                
+                Recipients are presented with a framed bronze medal and certificate at an Engineers Australia award event."""@en ;
+                skos:related eaclg:biomedical ;
+                skos:altLabel "David Dewhurst Medal"@en,
+                    "Biomedical College: David Dewhurst Award"@en ;
+                skos:prefLabel "David Dewhurst Award"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:achievement .
+
+            #Chemical College: Chemical Engineer Achievement Award
+            award:chemical-engineer-achievement-award a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/achievement-awards"^^xsd:anyURI ;
+                skos:definition """The Chemical Engineer Achievement Award is presented to a prominent Australian or New Zealand chemical engineer who has made an outstanding contribution to chemical engineering by their achievements or service.
+
+                Recipients are presented with a framed certificate at an Engineers Australia award event."""@en ;
+                skos:related eaclg:chemical ;
+                skos:prefLabel "Chemical Engineer Achievement Award"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:achievement .
+
+            #Civil College: Sir John Holland Civil Engineer of the Year
+            award:sir-john-holland-civil-engineer-of-the-year-award a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/achievement-awards"^^xsd:anyURI ;
+                skos:definition """This award honours Sir John Holland a notable civil engineer and construction magnate who founded the John Holland Construction group. The award is presented to an eminent civil engineer who has made a major contribution to the profession.
+
+                Recipients are presented with a framed certificate and sculpture at an Engineers Australia award event."""@en ;
+                skos:related eaclg:civil ;
+                skos:prefLabel "Sir John Holland Civil Engineer of the Year"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:achievement .
+
+            #Electrical College: MA Sargent Medal
+            award:m-a-sargent-medal a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/achievement-awards"^^xsd:anyURI ;
+                skos:definition """This award honours Dr Michael Anthony Sargent. Dr Sargent was an outstanding electrical engineer and honorary Fellow of Engineers Australia who served in several prominent Engineers Australia office bearer roles throughout his career.
+                
+                The MA Sargent Medal is awarded to an electrical engineer who has made a highly significant contribution to electrical engineering.
+                
+                Recipients are presented with a framed certificate and engraved medal at an Engineers Australia award event."""@en ;
+                skos:related eaclg:electrical ;
+                skos:prefLabel "M A Sargent Medal"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:achievement .
+
+
+            #Engineering Heritage Australia: John Monash Medal
+            award:john-monash-medal a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/achievement-awards"^^xsd:anyURI ;
+                skos:definition """This award honours Sir John Monash who was a civil engineer and an important Australian military commander of the first world war. The John Monash Medal is awarded for outstanding contributions to engineering heritage over a considerable period.
+
+                Recipients are awarded an inscribed medal and certificate at an Engineers Australia award event."""@en ;
+                skos:prefLabel "John Monash Medal"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:achievement .
+
+
+            #Environment College: Environmental Engineer Achievement Award
+            award:environmental-engineer-achievement-award a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/achievement-awards"^^xsd:anyURI ;
+                skos:definition """This award acknowledges a prominent environmental engineer who has made an outstanding contribution to engineering by promoting:
+                - environmental and sustainability excellence
+                - the profession within the community.
+
+                Recipients are presented with a certificate at an Engineers Australia award event."""@en ;
+                skos:related eaclg:environmental ;
+                skos:prefLabel "Environmental Engineer Achievement Award"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:achievement .
+
+            #ITEE College: IREE Neville Thiele Eminence Award
+            award:iree-neville-thiele-eminence-award a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/achievement-awards"^^xsd:anyURI ;
+                skos:definition """This award honours the Institution of Radio and Electronics Engineers (IREE) an organisation that represented early Australian radio and electronics engineering. It also honours Neville Thiele, a world renown electronic engineer.
+
+                The IREE Neville Thiele Eminence Award is presented annually at an Engineers Australia event. Recipients receive a framed certificate, engraved medal and a cash prize of $10,000."""@en ;
+                skos:related eaclg:itee ;
+                skos:altLabel "Neville Thiele Eminence Award"@en ;
+                skos:prefLabel "IREE Neville Thiele Eminence Award"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:achievement .
+
+            #Mechanical College: AGM Michell Medal
+            award:agm-michell-medal a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/achievement-awards"^^xsd:anyURI ;
+                skos:definition """This award honours Anthony George Maldon Michell, an outstanding Australian mechanical engineer who lived in the late 19th and early 20th centuries.
+                
+                The AGM Michell Medal was first presented in 1978 and is awarded annually by the Mechanical College Board to someone who has given outstanding service to mechanical engineering.
+                
+                Successful recipients of the AGM Michell Medal are awarded a bronze medal and accompanying certificate at an Engineers Australia presentation dinner. Winners are also invited to give a presentation on a topic of their choice which will be published in the Australian Journal of Mechanical Engineering."""@en ;
+                skos:related eaclg:mechanical ;
+                skos:altLabel "A G M Michell Prize"@en ;
+                skos:prefLabel "AGM Michell Medal"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:achievement .
+
+            #RISK Society: Risk Engineer Achievement Award
+            award:risk-engineer-achievement-award a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/achievement-awards"^^xsd:anyURI ;
+                skos:definition """This award acknowledges a prominent risk engineer who has made an outstanding contribution to engineering by promoting:
+                - excellence in the practice of risk engineering and risk management
+                - the profession within the community.
+
+                Leading risk engineers require a comprehensive knowledge of their organisation so they can create solutions that improve business performance. Successful recipients of this award will have demonstrated a business outcome focus and business achievement in their nomination.
+
+                Recipients are presented with a framed certificate at an Engineers Australia award event."""@en ;
+                skos:prefLabel "Risk Engineer Achievement Award"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:achievement .
+
+            #Structural College: John Connell Gold Medal
+            award:john-connell-gold-medal a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/achievement-awards"^^xsd:anyURI ;
+                skos:definition """This award honours John Connell who made an outstanding contribution to structural engineering and founded John Connell and Associates in 1958. His company merged with others and eventually became part of Aurecon.
+
+                The John Connell Gold Medal is presented to an individual who has made a significant national and international contribution to the structural engineering profession.
+                
+                Recipients are presented with a mounted and framed gold medal at an Engineers Australia award event."""@en ;
+                skos:related eaclg:structural ;
+                skos:prefLabel "John Connell Gold Medal"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:achievement .
+
+            #Transport Australia society: Transport Medal
+            award:transport-medal a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/achievement-awards"^^xsd:anyURI ;
+                skos:definition """The Transport Medal recognises outstanding individual contributions to transport in Australia. The award is open to applicants across public and private sectors including transport operators, consultants, government, academia and researchers.
+                
+                Applicants don't need to be a member of Engineers Australia and can nominate themselves or be nominated by someone else.
+
+                Recipients are presented with a framed certificate and engraved medal at an Engineers Australia's event."""@en ;
+                skos:prefLabel "Transport Medal"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:achievement .
+        
+        award:distinguished-career a skos:Concept ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+            dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/distinguished-career-awards"^^xsd:anyURI ;
+            skos:definition """Engineers Australia's three distinguished career awards recognise and reward the achievements of engineers who have achieved a lifetime of outstanding success."""@en ;
+            skos:prefLabel "Distinguished Career Awards"@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+            skos:broader award:ea-people .
+
+            award:pnr-medal a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/distinguished-career-awards"^^xsd:anyURI ;
+                skos:definition """This award honours Sir Peter Nicol Russell, a Sydney industrialist of the 19th century who made major donations toward engineering in Australia.
+                
+                It is the most prestigious award conferred by Engineers Australia. It's presented annually to an Honorary Fellow of Engineers Australia and who has made a notable contribution to the science or practice of engineering in Australia.
+                
+                Recipients epitomise:
+                - The highest technical, professional and community service standards of the engineering profession.
+                - An outstanding example of leadership and management within the engineering industry.
+                - The broad nature and impacts of the engineering profession through their significant contributions.
+                
+                Winners are presented with a framed certificate and PNR memorial medal at an Engineers Australia award event."""@en ;
+                skos:altLabel "Peter Nicol Russel Career Achievement Memorial Medal"@en ;
+                skos:prefLabel "PNR Medal"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:distinguished-career .
+
+            award:honorary-fellows a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/distinguished-career-awards"^^xsd:anyURI ;
+                skos:definition """This award elevates the recipient to the level of Fellow of Engineers Australia, the highest credential available to members.
+
+                The Honorary Fellows Award is conferred by the Board of Engineers Australia on a recipient who has demonstrated:
+                - Notable contributions or achievements in the engineering profession or to an allied science.
+                - The highest technical, professional and community service standards of engineering
+                - Service to the Australian people or in recognition of outstanding achievement.
+                
+                Recipients are presented with a framed certificate at an Engineers Australia award event."""@en ;
+                skos:altLabel "Honorary Fellows"@en,
+                    "Honorary Fellow (HonFIEAust)"@en,
+                    "Honorary Fellows (HonFIEAust)"@en,
+                    "Honorary Fellow Awards"@en,
+                skos:prefLabel "Honorary Fellows Award"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:distinguished-career .
+
+            award:president-prize a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+                dcterms:source "https://www.engineersaustralia.org.au/about-us/excellence-awards-program/distinguished-career-awards"^^xsd:anyURI ;
+                skos:definition """The President Prize award is awarded on an annual basis to an individual or group who has provided distinct service to the profession or the community. The recipient's service must also have contributed towards the strategic goals of Engineers Australia.
+                
+                Award recipients are chosen by Engineers Australia's National President and presented with a framed certificate at an Engineers Australia award event."""@en ;
+                skos:altLabel "President's Prize"@en,
+                    "President Prize"@en ;
+                skos:prefLabel "The President Prize"@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+                skos:broader award:distinguished-career .
 
     award:project a skos:Concept ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
         dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
-        skos:definition """The Australian Engineering Excellence Project Awards recognise Australia's top engineering projects and the teams behind them. They inspire and encourage engineering distinction through teamwork, innovation, and technical excellence. The national award program first began in 1988 after a decade of celebrating local projects. 
-        
-        Today, there is a local submission and assessment project awards process. Up to six finalists are selected per location, of which the winner will go on to be a finalist for the Sir William Hudson Award.
-
-        The Sir William Hudson Award is the highest honour that an engineering project can receive from Engineers Australia."""@en ;
-        skos:prefLabel "Australian Engineering Excellence Project Awards"@en ;
+        skos:definition """The project awards recognise Australia's top engineering projects and the teams behind them. It inspires and encourages engineering distinction through teamwork, innovation and technical excellence."""@en ;
+        skos:prefLabel "Engineers Australia Project Awards"@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
         skos:broader award:aeea .
 
         award:division-project-award a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
             dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
-            skos:definition """A Divisonal Project Award recognises outstanding achievement of a project within the geographical region administered by a division. The winners of these awards may be eligible for nomination to the national Sir William Hudson Award for an engineering project."""@en ;
-            skos:altLabel "Divisonal Project Award"@en,
-                "Project Award - Division"@en ;
-            skos:prefLabel "Project of the Year - Division"@en ;
+            skos:definition """A Divisonal Project Award recognises outstanding achievement of a project within the geographical region administered by a division. Each division finalist project team who goes on to compete with other divisional finalists. A national winner is then chosen from the division finalists and is awarded Project of the Year."""@en ;
+            skos:altLabel "Project of the Year - Division"@en,
+                "Project Award - Division"@en,
+                "Division Finalist"@en ;
+            skos:prefLabel "Division Project Award"@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
+            skos:broader award:project .
+
+        award:project-of-the-year a skos:Concept ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+            dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
+            skos:definition """Engineers Australia's project awards recognises Australia's top engineering projects and the teams behind them. Engineering project teams submit their entries locally through an Engineers Australia division. Each division chooses a finalist project team who goes on to compete with other divisional finalists. A national winner is then chosen from the division finalists and is awarded Project of the Year."""@en ;
+            skos:hiddenLabel "Sir William Hudson Award"@en ;
+            skos:prefLabel "Project of the Year"@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
             skos:broader award:project .
 
@@ -132,40 +367,9 @@ award:aeea a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
             dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
             skos:definition """The Sir William Hudson Award is the highest honour that an engineering project can receive from Engineers Australia."""@en ;
-            skos:prefLabel "Sir William Hudson Award"@en ;
+            skos:prefLabel "Sir William Hudson Award (Superseded)"@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
             skos:broader award:project .
-
-    award:president-prize a skos:Concept ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-        dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
-        skos:definition """The President Prize is awarded at the discretion of Engineers Australia's National President each year and recognises conspicuous service to the engineering profession or the community that contributes significantly to Engineers Australia."""@en ;
-        skos:altLabel "President's Prize"@en ;
-        skos:prefLabel "President Prize"@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
-        skos:broader award:aeea .
-
-    award:peter-nicol-russell-career-achievement-memorial-medal a skos:Concept ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-        dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
-        skos:definition """The Peter Nicol Russell Career Achievement Memorial Medal is the most prestigious award conferred by Engineers Australia upon an individual engineer. It is presented annually to an Honorary Fellow of Engineers Australia who has made a notable contribution to the science and/or practice of engineering in Australia."""@en ;
-        skos:altLabel "PNR Medal"@en ;
-        skos:prefLabel "Peter Nicol Russel Career Achievement Memorial Medal"@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
-        skos:broader award:aeea .
-
-    award:honorary-fellows a skos:Concept ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-        dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
-        skos:definition """This award elevates the nominee to the highest Engineers Australia membership grade. Eligible recipients are Fellows of The Institution of Engineers Australia or distinguished non-members. They have rendered conspicuous service to the profession of engineering, are eminent in engineering or an allied science, or a distinguished person whom the Board desires to honour, either for having rendered conspicuous service to the Australian people or in recognition of outstanding achievement."""@en ;
-        skos:altLabel "Honorary Fellows"@en,
-            "Honorary Fellow (HonFIEAust)"@en,
-            "Honorary Fellows (HonFIEAust)"@en,
-            "Honorary Fellow Awards"@en,
-            "Honorary Fellows Award"@en ;
-        skos:prefLabel "Honorary Fellow"@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
-        skos:broader award:aeea .
 
 award:division a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
@@ -296,16 +500,6 @@ award:recognition a skos:Concept ;
         skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
         skos:broader award:recognition .
 
-        award:agm-michell-medal a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-            dcterms:source "https://scholarships.unimelb.edu.au/awards/a-g-m-michell-prize-in-mechanical-engineering/"^^xsd:anyURI ;
-            skos:definition """This scholarship is an undergraduate award for best essay, thesis, report or design on a subject relating to mechanical engineering. Awarded by the Engineers Australia Mechanical College."""@en ;
-            skos:related eaclg:mechanical ;
-            skos:altLabel "A G M Michell Prize"@en ;
-            skos:prefLabel "AGM Michell Medal"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
-            skos:broader award:college .
-
         award:chemeca-medal a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
             dcterms:source "https://www.anzfche.org/awards-of-excellence.php"^^xsd:anyURI ;
@@ -315,34 +509,12 @@ award:recognition a skos:Concept ;
             skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
             skos:broader award:college .
 
-        award:david-dewhurst-award a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-            dcterms:source "https://en.wikipedia.org/wiki/David_Dewhurst_Medal"^^xsd:anyURI ;
-            skos:definition """The David Dewhurst award is a bronze medal bestowed by Engineers Australia and is the most distinguished accolade within their biomedical engineering discipline. It is named in honour of David John Dewhurst (1919 - 1996), an outstanding Australian biophysicist and biomedical engineer who performed pioneering work in the area of the cochlear implant. The award was inaugurated in 1994 as the Eminent Biomedical Engineers Award and its first winner was David Dewhurst. Following his death in 1996 the award's name was changed to the David Dewhurst Award as a permanent memorial."""@en ;
-            skos:related eaclg:biomedical ;
-            skos:altLabel "David Dewhurst Medal"@en ;
-            skos:prefLabel "David Dewhurst Award"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
-            skos:broader award:college .
-
         award:david-robinson-award a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
             dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/awards/ITEE%20College%20Awards%20Flyers-%20David%20Robinson%20flyer.pdf"^^xsd:anyURI ;
             skos:definition """The David Robinson Award is presented in memory of The Institution of Radio and Electronics Engineers (IREE) and is named in honour of the late Dr David Errol Robinson AM, an outstanding Australian electronics engineer, former President of the IREE, and a world renowned expert on ultrasound technology."""@en ;
             skos:related eaclg:itee ;
             skos:prefLabel "David Robinson Award"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
-            skos:broader award:college .
- 
-        award:iree-neville-thiele-eminence-award a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/content-files/2016-12/nt_regulations_19-aug-13.pdf"^^xsd:anyURI ;
-            skos:definition """The Neville Thiele Eminence Award is to recognise eminence in information, telecommunications and electronics engineering.
-
-            The Award honours a member of the engineering team who has made significant contributions to the art and practice of engineering in the disciplines covered by the College of Information, Telecommunications and Electronics Engineering of Engineers Australia (ITEE College). The Award also recognises the individual's significant contributions to the community. These contributions and achievements will have been made typically during the preceding five to ten years rather than during a full career. In this way, the Award is open to younger members of the engineering team."""@en ;
-            skos:related eaclg:itee ;
-            skos:altLabel "The IREE Neville Thiele Eminence Award"@en ;
-            skos:prefLabel "The Neville Thiele Eminence Award"@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
             skos:broader award:college .
  
@@ -357,18 +529,6 @@ award:recognition a skos:Concept ;
             skos:related eaclg:itee ;
             skos:related eaclg:electrical ;
             skos:prefLabel "John Madsen Medal"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
-            skos:broader award:college .
- 
-        award:m-a-sargent-medal a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-            dcterms:source "https://aeea.engineersaustralia.org.au/m-a-sargent-medal/"^^xsd:anyURI ;
-            skos:definition """This is a prestigious award made jointly by the College of Electrical Engineers and the College of ITEE Engineers. It is named in honour of Dr Michael Anthony (Mike) Sargent, an outstanding Australian electrical engineer. Dr Sargent graduated from the University of Queensland in 1964 and gained a PhD in electrical engineering at the same university in 1967. After holding various engineering appointments in Queensland and North America he joined the South East Queensland Electricity Board in 1978 becoming its Chief Engineer in 1984 and became Manager, Business Systems in 1989.
-
-            Dr Sargent is an Honorary Fellow of Engineers Australia and has served in many positions in Engineers Australia including Chairman of the Electrical and Computing Branch of Queensland Division 1976, Chairman of Queensland Division 1984, member of the then Council 1984 - 1986, Vice President of Engineers Australia 1985 - 1986 and also 1988, Deputy Chairman of the Electrical College Board 1988, Deputy President of Engineers Australia 1989 and President in 1990.."""@en ;
-            skos:related eaclg:itee ;
-            skos:related eaclg:electrical ;
-            skos:prefLabel "M A Sargent Medal"@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
             skos:broader award:college .
 
@@ -411,36 +571,12 @@ award:recognition a skos:Concept ;
             skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
             skos:broader award:college .
 
-        award:john-connell-gold-medal a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-            dcterms:source "https://www.engineersaustralia.org.au/news-and-media/2022/07/victorian-engineer-receives-prestigious-john-connell-gold-medal"^^xsd:anyURI ;
-            skos:definition """The John Connell gold medal is given in recognition of significant contribution to the structural engineering profession.
-
-            One of the most influential engineers of his generation, John Connell made an outstanding contribution to the practice of structural engineering in Australia and to exporting Australian engineering skills to Asia in the 1970s and 1980s."""@en ;
-            skos:related eaclg:structural ;
-            skos:prefLabel "John Connell Gold Medal"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
-            skos:broader award:college .
-
         award:sir-george-julius-medal a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
             dcterms:source "https://aeea.engineersaustralia.org.au/sir-george-julius-medal/"^^xsd:anyURI ;
             skos:definition """In 1976 this medal replaced the Mechanical Engineering Prize, which had been established in 1955. The medal perpetuates the memory of Sir George Julius who practised in Sydney as a consulting engineer in the mechanical/electrical field. One of his best-known achievements was the automatic totalisator before the days of electronics. From 1925-1940 he was Chairman of the Standards Association of Australia, and from 1926 - 1945 he was Chairman of CSIRO."""@en ;
             skos:related eaclg:mechanical ;
             skos:prefLabel "Sir George Julius Medal"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
-            skos:broader award:college .
-
-        award:sir-john-holland-civil-engineer-of-the-year-award a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-            dcterms:source "https://www.engineersaustralia.org.au/news-and-media/2022/09/sir-john-holland-civil-engineer-year-2022-awarded"^^xsd:anyURI ;
-            skos:definition """The Sir John Holland Civil Engineer of the Year, sponsored by John Holland, is the pre-eminent civil engineering award presented annually by Engineers Australia's Civil College.
-            
-            The award provides a high-profile focus on engineering achievement and serves as both a showcase for civil engineering and a focus for young people interested in pursuing a career in engineering.
-            
-            This award is presented annually by Engineers Australia to an eminent civil engineer who has made a major contribution to the sector, including the development of new technology, contribution to the use of ecologically sustainable development and service to the engineering profession."""@en ;
-            skos:related eaclg:civil ;
-            skos:prefLabel "Sir John Holland Civil Engineer of the Year"@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
             skos:broader award:college .
 
@@ -544,14 +680,6 @@ award:recognition a skos:Concept ;
             dcterms:source "https://aaee.net.au/aaee-awards/"^^xsd:anyURI ;
             skos:definition """The Engineering Education Engagement Award is awarded for fostering an excellent standard of successful engagement with stakeholders in Australasian Engineering Education. The award is judged by the Australasian Association for Engineering Education."""@en ;
             skos:prefLabel "Engineering Education Engagement Award"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
-            skos:broader award:tech-society .
-
-        award:transport-medal a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
-            dcterms:source "https://www.rtsa.com.au/event/transport-australia-society-event-webinar-the-future-of-public-transport-ridership/"^^xsd:anyURI ;
-            skos:definition """The Engineers Australia Transport Medal rewards and recognises outstanding individual contributions to transport in Australia and is open to individuals from public and private sectors. The Transport Medal is open to individuals from public and private sectors including transport operators, consultants, government departments and authorities as well as academics and researchers."""@en ;
-            skos:prefLabel "Transport Medal"@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-awards> ;
             skos:broader award:tech-society .
 

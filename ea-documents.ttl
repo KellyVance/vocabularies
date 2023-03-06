@@ -278,6 +278,15 @@ docs:journal a skos:Concept ;
     skos:prefLabel "Journal"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
+docs:letter-of-decline a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A formal letter declining an application or offer."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:altLabel "Letter of Decline"@en ;
+    skos:prefLabel "Decline Letter"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
 docs:letter-of-introduction a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
