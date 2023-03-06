@@ -447,7 +447,7 @@ eaj:analytical-model a skos:Concept ;
     - Descriptive Analytics: What happened?
     - Diagnostic Analytics: Why did it happen?
     - Predictive Analytics: What will happen?
-    - Prescriptive Analytics: How can we make it happen? How can we influence the outcome?."""@en ;
+    - Prescriptive Analytics: How can we make it happen? How can we influence the outcome?"""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:prefLabel "Analytical Model"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
@@ -730,6 +730,72 @@ eaj:crm a skos:Concept ;
     skos:prefLabel "Customer Relationship Management"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
+eaj:data-lifecycle a skos:Concept ;
+    dcterms:source "https://www.ibm.com/au-en/topics/data-lifecycle-management"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """A data lifecycle consists of a series of phases over the course its useful life. Each phase is governed by a set of policies that maximizes the data's value during each stage of the lifecycle. DLM becomes increasingly important as the volume of data that is incorporated into business workstreams grows.
+    The stages of the data lifecycle are:
+    1. Data Creation
+    2. Data Storage
+    3. Data Sharing and Usage
+    4. Data Archival
+    5. Data Deletion"""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "Data Lifecycle Management"@en ;
+    skos:prefLabel "Data Lifecycle"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+    eaj:data-creation a skos:Concept ;
+        dcterms:source "https://www.ibm.com/au-en/topics/data-lifecycle-management"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        sdo:isPartOf eaj:data-lifecycle ;
+        skos:definition """A new data lifecycle starts with data collection, but the sources of data are abundant. They can vary from web and mobile applications, internet of things (IoT) devices, forms, surveys, and more. While data can be generated in a variety of ways, the collection of all available data isn't necessary for the success of your business. The incorporation of new data should be always be evaluated based on its quality and relevancy to your business."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:prefLabel "Data Creation"@en ;
+        skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+    eaj:data-storage a skos:Concept ;
+        dcterms:source "https://www.ibm.com/au-en/topics/data-lifecycle-management"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        sdo:isPartOf eaj:data-lifecycle ;
+        skos:definition """During this phase, data becomes available to business users. DLM enables organizations to define who can use the data and the purpose for which it can be used. Once the data is made available it can be leveraged for a range of analyses—from basic exploratory data analysis and data visualizations to more advanced data mining and machine learning techniques. All of these methods play a role in business decision-making and communication to various stakeholders.
+
+        Additionally, data usage isn't necessarily restricted to internal use only. For example, external service providers could use the data for purposes such as marketing analytics and advertising. Internal uses include day-to-day business processes and workflows, such as dashboards and presentations."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:prefLabel "Data Storage"@en ;
+        skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+    eaj:data-sharing a skos:Concept ;
+        dcterms:source "https://www.ibm.com/au-en/topics/data-lifecycle-management"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        sdo:isPartOf eaj:data-lifecycle ;
+        skos:definition """During this phase, data becomes available to business users. DLM enables organizations to define who can use the data and the purpose for which it can be used. Once the data is made available it can be leveraged for a range of analyses—from basic exploratory data analysis and data visualizations to more advanced data mining and machine learning techniques. All of these methods play a role in business decision-making and communication to various stakeholders.
+
+        Additionally, data usage isn't necessarily restricted to internal use only. For example, external service providers could use the data for purposes such as marketing analytics and advertising. Internal uses include day-to-day business processes and workflows, such as dashboards and presentations."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:prefLabel "Data Sharing and Usage"@en ;
+        skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+    eaj:data-archival a skos:Concept ;
+        dcterms:source "https://www.ibm.com/au-en/topics/data-lifecycle-management"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        sdo:isPartOf eaj:data-lifecycle ;
+        skos:definition """After a certain amount of time, data is no longer useful for everyday operations. However, it is important to maintain copies of the organization's data that is not frequently accessed for potential litigation and investigation needs. Then, if required, archived data can be restored to an active production environment.
+
+        An organization's DLM strategy should clearly define when, where, and for how long data should be archived. In this stage, data undergoes an archival process that ensures redundancy."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:prefLabel "Data Archival"@en ;
+        skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+    eaj:data-deletion a skos:Concept ;
+        dcterms:source "https://www.ibm.com/au-en/topics/data-lifecycle-management"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        sdo:isPartOf eaj:data-lifecycle ;
+        skos:definition """In this final stage of the lifecycle, data is purged from the records and destroyed securely. Businesses will delete data that they no longer need to create more storage space for active data. During this phase, data is removed from archives when it exceeds the required retention period or no longer serves a meaningful purpose to the organization."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:prefLabel "Data Deletion"@en ;
+        skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 eaj:data-model a skos:Concept ;
     dcterms:source "https://sciencelogic.com/glossary/data-modeling"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -751,7 +817,7 @@ eaj:data-model a skos:Concept ;
         
         A Semantic Layer is an abstraction layer between the physical data sources and the end-users. It is a virtual layer that translates technical data into business terms, making it easier for non-technical users to access and analyze data. The Semantic Layer serves as a bridge between the technical and business worlds, and it can provide a single, unified view of data across multiple sources. It also allows users to create custom reports and queries without requiring technical expertise. Data Models are typically implemented at the database or data warehouse level, while Semantic Layers are implemented in the business intelligence or analytics layer.
         
-        Semantic layers and non-materlised views are typically where derived information is calculated or generated. This ensures more efficient storage, reduces inconsistencies, and ensures derived information is current and synchronised with raw data in the underlying data model."""@en ;
+        Semantic layers and non-materialised views are typically where derived information is calculated or generated. This ensures more efficient storage, reduces inconsistencies, and ensures derived information is current and synchronised with raw data in the underlying data model."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
         skos:prefLabel "Semantic Layer"@en ;
         skos:broader eaj:data-model .
