@@ -449,6 +449,7 @@ eaj:analytical-model a skos:Concept ;
     - Predictive Analytics: What will happen?
     - Prescriptive Analytics: How can we make it happen? How can we influence the outcome?"""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "Analytical Data Model"@en ;
     skos:prefLabel "Analytical Model"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
     
@@ -822,6 +823,16 @@ eaj:data-model a skos:Concept ;
         skos:prefLabel "Semantic Layer"@en ;
         skos:broader eaj:data-model .
 
+eaj:data-profiling a skos:Concept ;
+    dcterms:source "https://www.talend.com/resources/what-is-data-profiling/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """Data profiling is the process of examining, analyzing, and creating useful summaries of data. The process yields a high-level overview which aids in the discovery of data quality issues, risks, and overall trends. Data profiling produces critical insights into data that companies can then leverage to their advantage.
+    
+    More specifically, data profiling sifts through data to determine its legitimacy and quality. Analytical algorithms detect dataset characteristics such as mean, minimum, maximum, percentile, and frequency to examine data in minute detail. It then performs analyses to uncover metadata, including frequency distributions, key relationships, foreign key candidates, and functional dependencies. Finally, it uses all of this information to expose how those factors align with your business's standards and goals. Data profiling, involves the statistical analysis and assessment of data values within a data set for consistency, uniqueness and logic. The data profiling process cannot identify inaccurate data; it can only identify business rules violations and anomalies. The insight gained by data profiling can be used to determine how difficult it will be to use existing data for other purposes."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Data Profiling"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 eaj:engineering-accords a skos:Concept ;
     dcterms:source "https://www.ieagreements.org/"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -1124,11 +1135,11 @@ eaj:system-architecture a skos:Concept ;
     By contrast, a data model describes how real-world entities are described including entity or object classes, their attributes and relationships."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:altLabel "Systems Architecture"@en,
+        "Data Architecture"@en,
         "Solution Architecture"@en,
         "System Model"@en ;
     skos:prefLabel "System Architecture"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
-
 
 #Collections
 
