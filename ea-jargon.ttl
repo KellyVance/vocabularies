@@ -136,6 +136,15 @@ eaj:membership a skos:Concept ;
     skos:prefLabel "Engineers Australia Membership Grade"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
+eaj:membership-change a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
+    skos:definition """The changes possible to membership status between non-members, active members, and past members intersecting with paid vs unpaid memberships withspecial considerations for students and honorary fellows. Membership churn risk also augmented with specific classes based on payment status in the context of member retention and erasure."""@en ;
+    skos:related <https://linked.data.gov.au/def/ea-member-changes> ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Engineers Australia Membership Changes"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 eaj:post-nominals a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;

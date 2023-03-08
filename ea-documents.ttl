@@ -274,12 +274,23 @@ docs:foa-segment a skos:Concept ;
 docs:interviewer-attachment a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
-    skos:definition """An Interviewer Attachment is a formal record of interview observations and assessment by a specific interviewer at a professional ionterview."""@en ;
+    skos:definition """An Interviewer Attachment is a formal record of interview observations and assessment by a specific interviewer at a professional interview."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
     skos:altLabel "Interview Summary"@en,
         "Interview Observations"@en,
         "Interview Report"@en ;
     skos:prefLabel "Interviewer Attachment"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:invoice a skos:Concept ;
+    dcterms:source "https://en.wikipedia.org/wiki/Invoice"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """An invoice, bill or tab is a commercial document issued by a seller to a buyer relating to a sale transaction and indicating the products, quantities, and agreed-upon prices for products or services the seller had provided the buyer."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:altLabel "Tab"@en,
+        "Bill"@en,
+        "Receipt"@en ;
+    skos:prefLabel "Invoice"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
 docs:journal a skos:Concept ;
@@ -297,7 +308,9 @@ docs:letter-of-decline a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
     skos:definition """A formal letter declining an application or offer."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
-    skos:altLabel "Letter of Decline"@en ;
+    skos:altLabel "Letter of Decline"@en,
+        "Rejection Letter"@en,
+        "Letter of Rejection"@en ;
     skos:prefLabel "Decline Letter"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
