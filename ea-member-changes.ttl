@@ -58,15 +58,7 @@ eamc:current-member a skos:Concept ;
         skos:prefLabel "Revenue Potential"@en ;
         skos:broader eamc:current-member .
 
-    eamc:revenue-retention a skos:Concept ;
-        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from a likewise active paid membership in the previous financial year."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:prefLabel "Revenue Retention"@en ;
-        skos:broader eamc:current-member .
-
-    eamc:revenue-exemption a skos:Concept ;
+   eamc:revenue-exemption a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
         skos:definition """An individual who has a current and active free and complimentary membership with Engineers Australia that is exempt from fees regardless of prevous membership or lack thereof. Complimentary membership and fee exemption is conferred upon Honorary Fellows."""@en ;
@@ -255,7 +247,8 @@ eamc:at-risk-member a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
     skos:definition """An individual who had an active membership with Engineers Australia during the past financial year, but has not made sufficient payment by the due date to continue membership. A member at risk of erasure."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-    skos:altLabel "Revenue At-Risk"@en ;
+    skos:altLabel "Revenue At-Risk"@en,
+        "Revenue Risk"@en ;
     skos:prefLabel "At-Risk Member"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-member-changes> .
 
