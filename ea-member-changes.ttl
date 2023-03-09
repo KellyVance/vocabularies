@@ -316,7 +316,7 @@ eamc:lost-member a skos:Concept ;
 eamc:single-change-process a skos:Collection ;
     skos:prefLabel "Selectable Processes"@en ;
     skos:altLabel "Single-Change Processes"@en ;
-	skos:definition """The current concepts without narrower concepts that are used to describe specific membership state changes."""@en ;
+	skos:definition """The concepts without narrower concepts that are used to describe specific membership state changes."""@en ;
     skos:member
         eamc:new-member,
         eamc:new-student,
