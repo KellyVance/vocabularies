@@ -265,7 +265,7 @@ eamc:at-risk-member a skos:Concept ;
         skos:definition """An individual who had an active membership with Engineers Australia during the past financial year, but has not made any renewal payment by the due date to continue membership. A member at risk of erasure."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
         skos:prefLabel "Lapse"@en ;
-        skos:broader at-risk-member .    
+        skos:broader eamc:at-risk-member .
 
     eamc:part-payment a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -273,7 +273,7 @@ eamc:at-risk-member a skos:Concept ;
         skos:definition """An individual who had an active membership with Engineers Australia during the past financial year, and who has made incomplete payment of  renewal fees by the due date to continue membership. A member at risk of erasure."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
         skos:prefLabel "Part Payment"@en ;
-        skos:broader at-risk-member .    
+        skos:broader eamc:at-risk-member .    
 
 eamc:lost-member a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;

@@ -102,14 +102,23 @@ eaj:div-rules a skos:Concept ;
     skos:prefLabel "Disciplinary and Appeals Procedures"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
-eaj:ea-awards a skos:Concept ;
+eaj:ea-award a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
     skos:definition """An EA Award is an Engineers Australia managed award for service or achievement to the organisation of Engineers Australia or to the engineering profession."""@en ;
     skos:related <https://linked.data.gov.au/def/ea-awards> ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:altLabel "EA Awards"@en ;
+    skos:altLabel "EA Award"@en ;
     skos:prefLabel "Engineers Australia Award"@en .
+
+eaj:ea-event a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-awards> ;
+    skos:definition """An EA Event is an organised event that provides information and networking opportunities to the EA membership base. Events typically focus on a theme or single topic such as an Engineering discipline such as civil engineering, a current topic of engineering focus such as renewable energy, a specific skillset such as root cause analysis, a socially focused initative such as gender diversity and equality, professional networking, or membership and career development."""@en ;
+    skos:related <https://linked.data.gov.au/def/ea-awards> ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "EA Event"@en ;
+    skos:prefLabel "Engineers Australia Event"@en .
 
 eaj:ea-roles a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -308,7 +317,7 @@ eaj:post-nominals a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
             skos:definition """A member of the Institute of Engineers Australia who has surpassed graduate membership but has not reached the level of experience of a Fellow, and who holds a 4 Years accredited Bachelor of Engineering (BEng)."""@en ;
             skos:related <https://linked.data.gov.au/def/ea-membership-grade/member> ;
-            #kos:related <https://linked.data.gov.au/def/iea-occupational-categories/pro-engineer> ;
+            skos:related <https://linked.data.gov.au/def/iea-occupational-categories/pro-engineer> ;
             skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
             skos:notation "MIEAust" ;
             skos:prefLabel "Professional Engineer Member of the Institute of Engineers Australia"@en ;
@@ -415,6 +424,14 @@ eaj:post-nominals a skos:Concept ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
         skos:prefLabel "Personal Post Nominals"@en ;
         skos:broader eaj:post-nominals .
+
+    eaj:post-nominals-official-appointment a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """An Official Appointment post nominal is a general post-nominal describing decorations, honours and official awards. Official Appointments are listed after any personal postnominals."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:prefLabel "Official Appointments"@en ;
+        skos:broader eaj:post-nominals . 
 
 eaj:documents a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;

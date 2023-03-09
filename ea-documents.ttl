@@ -61,6 +61,14 @@ docs:competency-demo-report a skos:Concept ;
     skos:prefLabel "Competency Demonstration Report"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
+docs:contract a skos:Concept ;
+    dcterms:source "https://www.accc.gov.au/business/selling-products-and-services/contracts"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A contract is an agreement made between two or more parties that is legally enforceable. Legally enforceable means if one of the parties breaks the contract, the other party can take legal action against them."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Contract"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
 docs:cpd-activity a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
@@ -353,6 +361,40 @@ docs:membership-document a skos:Concept ;
         skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
         skos:prefLabel "MRA Membership Evidence"@en ;
         skos:broader docs:membership-document .
+
+docs:mou a skos:Concept ;
+    dcterms:source "https://www.investopedia.com/terms/m/mou.asp"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A memorandum of understanding is an agreement between two or more parties outlined in a formal document. It is not legally binding but signals the willingness of the parties to move forward with a contract.
+    
+    The MOU can be seen as the starting point for negotiations as it defines the scope and purpose of the talks. Such memoranda are most often seen in international treaty negotiations but also may be used in high-stakes business dealings such as merger talks."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:notation "MoU" ;
+    skos:prefLabel "Memorandum of Understanding"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:minutes a skos:Concept ;
+    dcterms:source "https://en.wikipedia.org/wiki/Minutes"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """The written record of a meeting or hearing. They typically describe the events of the meeting and may include a list of attendees, a statement of the activities considered by the participants, and related responses or decisions for the activities.The format of the minutes can vary depending on the standards established by an organization, although there are general guidelines. Minutes may be the formal record of dsicussions within an organisation or between two organisations."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:notation "MoM" ;
+    skos:altLabel "Minutes of Meeting"@en,
+        "Meeting Minutes"@en,
+        "Notes"@en,
+        "Protocols"@en,
+        "Meeting Record"@en ;
+    skos:prefLabel "Minutes"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+    docs:opportunity a skos:Concept ;
+    dcterms:source "https://en.wikipedia.org/wiki/Minutes"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """An opportunity is a formal record of discussions between an Organisation and another organisation or individual that may lead to favourable business opportunities through a sale, provision of service, or mutually beneficial business arrangement. Commonly referring to a contact who is a likely future sale."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:altLabel "Record of Opportunity"@en ;
+    skos:prefLabel "Opportunity"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
 docs:personal-identification a skos:Concept ;
     dcterms:source "https://www.mygovid.gov.au/verifying-your-identity"^^xsd:anyURI ;
