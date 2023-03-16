@@ -18,7 +18,7 @@
     skos:definition """The business language and terminology used throughout Engineers Australia in common communication.
     
     This vocabulary contains general language with minimal heirarchy applied and an unconfined concept scheme. It is presented in this format for consitent and consolidated representation with controlled reference data."""@en ;
-    skos:scopeNote """This vocabulary formalises the definitions of shared terminology for the sake of clarity and reference. It may use related and seeAlso declarations to refer users to related vocabularies.However, this vocabulary should not be used as a reference data resource. As this vocabulary is to present a human-readable format rather than be used as an actual reference data source, some of the usual rdf rules may be broken such as ensuring unique notations."""@en;
+    skos:scopeNote """This vocabulary formalises the definitions of shared terminology for the sake of clarity and reference. It may use related and seeAlso declarations to refer users to related vocabularies. However, this vocabulary should not be used as a reference data resource. This vocabulary is to present a human-readable format rather than be used as an actual reference data source, therefore some of the usual rdf rules may not be enforces such as ensuring unique notations and having locally relevant hierachy that does not apply to the complete vocabulary."""@en;
     skos:prefLabel "Engineers Australia Business Language"@en .
 
 <https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
@@ -575,10 +575,11 @@ eaj:area-of-practice a skos:Concept ;
 eaj:audit a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:definition """A formal process of review to ensure compliance with standards and regulations. A means to provide assurance to the sponsor or board of a project that governance is effective and that the project is being managed as intended.
+    skos:definition """A formal process of review to ensure compliance with standards and regulations. A means to provide assurance to the sponsor or board of a project that governance is effective and that the project is being managed as intended. 
     
-    At Engineers Australia this may be applied to Chartered Status, Registration (National Engineering Register), Continuous Professional Development (CPD) or Complaints scenarios."""@en ;
+    At Engineers Australia this may be applied to Chartered Status, Registration (National Engineering Register), Continuous Professional Development (CPD) or Complaints scenarios. Registered engineers and members with Chartered status may be audited for their compliance with the specific requirements that they practise in their area at least one full time year in every three, and that they maintain records of their continuing professional development activities. Compliance with these criteria is audited periodically. An audit notice requires respondents to submit a statement of experience and a CPD record sheet, which are reviewed by auditors. The audit program ensures members continue to have an adequate knowledge of both the theory and practice of engineering throughout their careers and so increases the confidence of the community in the employment of engineers."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "Auditing Compliance"@en ;
     skos:prefLabel "Audit"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .    
 
@@ -875,6 +876,16 @@ eaj:ea-assessment a skos:Concept ;
     skos:prefLabel "Engineers Australia Assessment"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .    
 
+    eaj:competency-based-assessment a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """Competency is the ability to perform tasks within an occupation to the standard expected in employment. All membership applications for Engineers Australia are now  competency based. However, this Competency-Based Assessment is used specifically to refer to assessments of eligibility where the applicant is required to submit a report to be evaluated by a National Assessor or College Membership Reviewer followed by an interview by an expert panel. In some cases the interview is at the discretion of the Assessor or College Membership Reviewer."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:notation "CBA" ;
+        skos:altLabel "Competency Based Assessment"@en ;
+        skos:prefLabel "Competency-Based Assessment"@en ;
+        skos:broader eaj:ea-assessment .
+
     eaj:continuous-collaborative-assessment a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -1090,10 +1101,19 @@ eaj:occupational-categories a skos:Concept ;
         skos:prefLabel "MRA Occupational Categories"@en ;
         skos:broader eaj:occupational-categories .
 
+eaj:pcas a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """A scheme managed by the Engineers Australia for professional engineers (you must be on the NPER Register to be an Accredited Certifier) who want to be accredited as Private Certifiers under the Environmental Planning and Assessment ACT (NSW) 1979 (the EPA Act). Please contact the Registration & Practice Team for more information about the scheme. This scheme was transferred to the NSW State Government Building Professionals Board on 1 March 2007."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:notation "PCAS" ;
+    skos:prefLabel "Private Certifier Accreditation Scheme"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 eaj:professional-development-program a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:definition """"The Professional Development Program (PDP) is a planned period of professional formation based in the workplace and structured around an identified job and career progression. It comprises the incremental acquisition and development of the competencies required to practise at the level of Chartered practitioner. This includes work-based training and assuming responsibility in appropriate roles.
+    skos:definition """The Professional Development Program (PDP) is a planned period of professional formation based in the workplace and structured around an identified job and career progression. It comprises the incremental acquisition and development of the competencies required to practise at the level of Chartered practitioner. This includes work-based training and assuming responsibility in appropriate roles.
     
     Participation in a PDP is open to engineering practitioners employed in all types and sizes of enterprise. Participating organisations include mining companies, utilities, consulting companies, aerospace, information technology, telecommunications, construction companies and public authorities."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
@@ -1107,7 +1127,7 @@ eaj:professional-development-program a skos:Concept ;
 eaj:prosci a skos:Concept ;
     dcterms:source "https://www.prosci.com/methodology-overview"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:definition """"A structured, adaptable, repeatable approach to enable individuals to successfully move through changes in your organization
+    skos:definition """A structured, adaptable, repeatable approach to enable individuals to successfully move through changes in your organization
     
     Although the Prosci Methodology encompasses a variety of models, tools, assessments, processes and more, today it is comprised of three main components:
     - PCT Model: a simple but powerful framework for establishing and connecting the most important aspects of any successful change effort
@@ -1123,7 +1143,7 @@ eaj:prosci a skos:Concept ;
         dcterms:source "https://www.prosci.com/methodology-overview"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
         sdo:isPartOf eaj:prosci ;
-        skos:definition """"A framework that shows the four critical aspects of any successful change effort and how they are interrelated: namely, a shared definition of success, leadership/sponsorship, project management and change management."""@en ;
+        skos:definition """A framework that shows the four critical aspects of any successful change effort and how they are interrelated: namely, a shared definition of success, leadership/sponsorship, project management and change management."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
         skos:notation "PCT" ;
         skos:prefLabel "PCT Model"@en ;
@@ -1133,7 +1153,7 @@ eaj:prosci a skos:Concept ;
         dcterms:source "https://www.prosci.com/methodology-overview"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
         sdo:isPartOf eaj:prosci ;
-        skos:definition """"Describes the five building blocks or 'elements' an individual needs to achieve for a change to be successful. Impacted individual is at the center of the Prosci Methodology. Individual success leads to organizational success.
+        skos:definition """Describes the five building blocks or 'elements' an individual needs to achieve for a change to be successful. Impacted individual is at the center of the Prosci Methodology. Individual success leads to organizational success.
         
         The Prosci ADKAR Model is one of the two foundational models of the Prosci Methodology. The word ADKAR is an acronym for the five outcomes an individual needs to achieve for a change to be successful: Awareness, Desire, Knowledge, Ability and Reinforcement. It is based on the understanding that organizational change can only happen when individuals change."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
@@ -1145,7 +1165,7 @@ eaj:prosci a skos:Concept ;
         dcterms:source "https://www.prosci.com/methodology-overview"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
         sdo:isPartOf eaj:prosci ;
-        skos:definition """"A 3-phase approach to project management and change management consisting of:
+        skos:definition """A 3-phase approach to project management and change management consisting of:
         Phase 1 - Prepare Approach: Position the change for success by developing a customized and scaled change management strategy with the necessary sponsorship and commitment.
         Phase 2 - Manage Change: Achieve adoption and usage of the change by creating, implementing and adapting plan(s) that will move individuals and the organization through ADKAR transitions.
         Phase 3 - Sustain Outcomes: To realize the value of the change by ensuring the change is adopted and the organization is committed and prepared to sustain the change."""@en ;
@@ -1215,6 +1235,14 @@ eaj:skilled-visa a skos:Concept ;
     skos:prefLabel "Skilled Work Visa"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
+eaj:trades-recognition-australia a skos:Concept ;
+    dcterms:source "https://www.tradesrecognitionaustralia.gov.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """Trades Recognition Australia (TRA) is a skills assessment service for people with trade skills gained overseas or in Australia that require a skills assessment for the purpose of migration."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:notation "TRA" ;
+    skos:prefLabel "Trades Recognition Australia"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
 #Collections
 
