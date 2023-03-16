@@ -492,3 +492,570 @@ docs:testimonial a skos:Concept ;
     skos:altLabel "Written Reference"@en ;
     skos:prefLabel "Testimonial"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+
+docs:skilled-visas a skos:Concept ;
+    dcterms:source "https://immi.homeaffairs.gov.au/visas/working-in-australia/skills-assessment"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """Migration Visas that are available to individuals who are qualified to work or train in an eligible skilled occupation in Australia and can meet all other requirements. The visas are subject to a periodically revised list of skilled occupations in shortage within the Australian labour force. Skilled work visas are the typical way engineers migrate to Australia through their professional ability."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Skilled Work Visas"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+    docs:visas-gsm a skos:Concept ;
+        dcterms:source "https://immi.homeaffairs.gov.au/visas/working-in-australia/skills-assessment"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:definition """Migration Visas that are available to individuals who are qualified to work or train in an eligible skilled occupation in Australia and can meet all other requirements. The visas are subject to a periodically revised list of skilled occupations in shortage within the Australian labour force. Skilled work visas are the typical way engineers migrate to Australia."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:notation "GSM" ;
+        skos:altLabel "General Skilled Migration (GSM)"@en ;
+        skos:prefLabel "General Skilled Migration"@en ;
+        skos:broader docs:skilled-visas .
+
+        docs:visa-189 a skos:Concept ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            skos:definition """This visa is for invited workers, eligible New Zealand citizens and eligible Hong Kong or British National (Overseas) passport holders with skills we need, to live and work permanently anywhere in Australia."""@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:altLabel "Skilled Independent visa (subclass 189)"@en ;
+            skos:prefLabel "Skilled Independent visa"@en ;
+            skos:broader docs:visas-gsm .
+
+            docs:visa 189-pts a skos:Concept ;
+                dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/points-tested"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                skos:definition """This visa lets invited workers with skills we need, to live and work permanently anywhere in Australia.
+                
+                With this visa, you can:
+                - stay in Australia permanently
+                - work and study in Australia
+                - enrol in Australia's public health care scheme, Medicare
+                - sponsor your relatives to come to Australia
+                - travel to and from Australia for 5 years
+                - if eligible, become an Australian citizen"""@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:altLabel "Skilled Independent visa (subclass 189) - Points-tested stream"@en ;
+                skos:prefLabel "Skilled Independent visa - Points-tested stream"@en ;
+                skos:broader docs:visa-189 .
+
+            docs:visa 189-nzs a skos:Concept ;
+                dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/new-zealand"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                skos:definition """This visa lets eligible New Zealand citizens who have demonstrated commitment and contribution to Australia, live and work in Australia permanently.
+                
+                With this visa, you can:
+                - stay in Australia permanently
+                - work and study in Australia
+                - enrol in Australia's public health care scheme, Medicare
+                - sponsor your relatives to come to Australia
+                - travel to and from Australia for 5 years
+                - if eligible, become an Australian citizen"""@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:altLabel "Skilled Independent visa (subclass 189) - New Zealand stream"@en ;
+                skos:prefLabel "Skilled Independent visa - New Zealand stream"@en ;
+                skos:broader docs:visa-189 .
+
+            docs:visa 189-hks a skos:Concept ;
+                dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/hong-kong"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                skos:definition """This visa lets eligible Hong Kong or British National (Overseas) passport holders who have demonstrated commitment to Australia, live and work in Australia permanently.
+                
+                With this visa, you can:
+                - stay in Australia permanently
+                - work and study in Australia
+                - enrol in Australia's public health care scheme, Medicare
+                - sponsor your relatives to come to Australia
+                - travel to and from Australia for 5 years
+                - if eligible, become an Australian citizen"""@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:altLabel "Skilled Independent visa (subclass 189) - Hong Kong stream"@en ;
+                skos:prefLabel "Skilled Independent visa - Hong Kong stream"@en ;
+                skos:broader docs:visa-189 .
+
+        docs:visa-190 a skos:Concept ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            skos:definition """This visa lets nominated skilled workers live and work in Australia as permanent residents.
+            
+            With this visa, you can:
+            - stay in Australia permanently
+            - work and study in Australia
+            - enrol in Australia's public health care scheme, Medicare
+            - sponsor your relatives to come to Australia
+            - travel to and from Australia for 5 years
+            - if eligible, become an Australian citizen"""@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:altLabel "Skilled Nominated visa (subclass 190)"@en ;
+            skos:prefLabel "Skilled Nominated visa"@en ;
+            skos:broader docs:visas-gsm .
+
+        docs:visa-489 a skos:Concept ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-regional-provisional-489/invited-pathway"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            skos:definition """This is a temporary visa. It is for skilled workers who want to live and work in regional Australia.
+            
+            With this visa, you can:
+            - stay in Australia for 4 years from the date we grant you the visa
+            - live, work and study in a specified region of Australia
+            - travel to and from Australia as many times as you want, while the visa is valid
+            - apply for permanent residence, if eligible, through the Skilled—Regional (Residence) visa (subclass 887)"""@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:altLabel "Skilled Regional (provisional) visa (subclass 489)"@en ;
+            skos:prefLabel "Skilled Regional (provisional) visa"@en ;
+            skos:broader docs:visas-gsm .
+
+            docs:visa-489-ip a skos:Concept ;
+                dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-regional-provisional-489/invited-pathway"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                skos:definition """This is a temporary visa. It is for skilled workers who want to live and work in regional Australia.
+            
+                With this visa, you can:
+                - stay in Australia for 4 years from the date we grant you the visa
+                - live, work and study in a specified region of Australia
+                - travel to and from Australia as many times as you want, while the visa is valid
+                - apply for permanent residence, if eligible, through the Skilled—Regional (Residence) visa (subclass 887)"""@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:altLabel "Skilled Regional (provisional) visa (subclass 489) - Invited pathway"@en ;
+                skos:prefLabel "Skilled Regional (provisional) visa - Invited pathway"@en ;
+                skos:broader docs:visa-489 .
+
+            docs:visa-489-esp a skos:Concept ;
+                dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-regional-provisional-489/extended-stay-pathway"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                skos:definition """This is a temporary visa. It is for skilled workers who want to live and work in regional Australia.
+            
+                With this visa, you can:
+                - stay in Australia for 4 years in total from the date we granted your subclass 475, 487, 495 or 496 visa
+                - live, work and study in a specified region of Australia
+                - travel to and from Australia as many times as you want, while the visa is valid
+                - apply for permanent residency, if eligible, through the Skilled—Regional (Residence) visa (subclass 887)"""@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:altLabel "Skilled Regional (provisional) visa (subclass 489) - Extended Stay pathway"@en ;
+                skos:prefLabel "Skilled Regional (provisional) visa - Extended Stay pathway"@en ;
+                skos:broader docs:visa-489 .
+
+            docs:visa-489-se a skos:Concept ;
+                dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-regional-provisional-489/subsequent-entry-pathway"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                skos:definition """This visa is for a member of the family unit of someone who holds a Skilled Regional (Provisional) visa (subclass 489) or a subclass 475, 487, 495 or 496 visa.
+            
+                With this visa, you can:
+                - stay in Australia while the visa is valid 
+                - live, work and study in a specified region of Australia
+                - travel to and from Australia as many times as you want, while the visa is valid
+                - apply for permanent residency, if eligible, through the Skilled—Regional (Residence) visa (subclass 887)"""@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:altLabel "Skilled Regional (provisional) visa (subclass 489) - Subsequent entry pathway"@en ;
+                skos:prefLabel "Skilled Regional (provisional) visa - Subsequent entry pathway"@en ;
+                skos:broader docs:visa-489 .
+
+        docs:visa-491 a skos:Concept ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            skos:definition """A visa for skilled people nominated by a state or territory government to live and work in regional Australia.
+            
+            Applicants must:
+            - be nominated to apply by a state or territory government agency, or an eligible relative must sponsor the applicant
+            - have an occupation on a relevant skilled occupation list
+            - have a suitable skills assessment for the occupation
+            - be invited to apply
+            - satisfy the points test"""@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:altLabel "Skilled Work Regional (provisional) visa (subclass 491)"@en ;
+            skos:prefLabel "Skilled Work Regional (provisional) visa"@en ;
+            skos:broader docs:visas-gsm .
+
+            docs:visa-491-ma a skos:Concept ;
+                dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491/application"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                skos:definition """This is a provisional visa. It is for skilled workers who want to live and work in regional Australia.
+            
+                With this visa, you can:
+                - stay in Australia for 4 years from the date we grant you the visa
+                - live, work and study in a designated region of Australia
+                - travel to and from Australia as many times as you want, while the visa is valid
+                - apply for permanent residence, if eligible, through the Permanent Residence (Skilled Regional) visa (subclass 191) - which starts on 16 November 2022. You can't apply for other permanent visas until you have held your subclass 491 visa for 3 years
+                
+                The applicant and all members of the family unit who are also holders of the visa, will need to live work and study in a designated regional area of Australia."""@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:altLabel "Skilled Work Regional (provisional) visa (subclass 491) - Main applicant"@en ;
+                skos:prefLabel "Skilled Work Regional (provisional) visa - Main applicant"@en ;
+                skos:broader docs:visa-491 .
+            
+            docs:visa-491-se a skos:Concept ;
+                dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491/subsequent-entrant"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                skos:definition """This visa is for a member of the family unit of someone who holds a Skilled Work Regional (Provisional) visa (subclass 491).
+            
+                With this visa, you can:
+                - stay in Australia while the visa is valid 
+                - live, work and study in a designated region of Australia
+                - travel to and from Australia as many times as you want, while the visa is valid
+                - apply for permanent residency, if eligible, through the Permanent Residence (Skilled Regional) visa (subclass 191)
+                
+                The applicant will need to live, work and study only in a designated area."""@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:altLabel "Skilled Work Regional (provisional) visa (subclass 491) - Subsequent entrant"@en ;
+                skos:prefLabel "Skilled Work Regional (provisional) visa - Subsequent entrant"@en ;
+                skos:broader docs:visa-491 .
+
+    docs:visas-esv a skos:Concept ;
+        dcterms:source "https://immi.homeaffairs.gov.au/visas/working-in-australia/skills-assessment"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:definition """These visas lets skilled workers, who are nominated by their employer, live and work in Australia permanently under a range of conditions."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:notation "ESV" ;
+        skos:altLabel "Employer Sponsored Visas (ESV)"@en ;
+        skos:prefLabel "Employer Sponsored Visas"@en ;
+        skos:broader docs:skilled-visas .
+
+        docs:visa-186 a skos:Concept ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            skos:definition """This visa lets skilled workers, who are nominated by their employer, live and work in Australia permanently.
+            
+            Applicants must:
+            - have the necessary skills for the job
+            - be nominated by an Australian employer
+            - meet our health and character requirements"""@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:notation "ENS" ;
+            skos:altLabel "Employer Nomination Scheme (ENS) (subclass 186)"@en ;
+            skos:prefLabel "Employer Nomination Scheme (ENS)"@en ;
+            skos:broader docs:visas-esv .
+
+            docs:visa-186-des a skos:Concept ;
+                dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186/direct-entry-stream"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                skos:definition """This visa lets skilled workers, who are nominated by an employer, live and work in Australia permanently.
+                
+                With this visa, you can
+                - stay in Australia indefinitely
+                - work and study in Australia
+                - enrol in Australia's public health care scheme, Medicare
+                - sponsor eligible relatives to come to Australia
+                - travel to and from Australia for 5 years
+                - apply for Australian citizenship, if eligible"""@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:altLabel "Employer Nomination Scheme visa (subclass 186) - Direct Entry stream"@en ;
+                skos:prefLabel "Employer Nomination Scheme visa - Direct Entry stream"@en ;
+                skos:broader docs:visa-186 .
+
+            docs:visa-186-las a skos:Concept ;
+                dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186/labour-agreement-stream"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                skos:definition """This visa lets skilled workers who are nominated by their employer live and work in Australia permanently. The Labour Agreement stream might be for you if you currently work, or will work, for an employer who is party to a labour agreement.
+                
+                With this visa, you can
+                - stay in Australia indefinitely
+                - work and study in Australia
+                - enrol in Australia's public health care scheme, Medicare
+                - sponsor eligible relatives to come to Australia
+                - travel to and from Australia for 5 years
+                - apply for Australian citizenship, if eligible"""@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:altLabel "Employer Nomination Scheme visa (subclass 186) - Labour Agreement stream"@en ;
+                skos:prefLabel "Employer Nomination Scheme visa - Labour Agreement stream"@en ;
+                skos:broader docs:visa-186 .
+
+            docs:visa-186-trts a skos:Concept ;
+                dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186/temporary-residence-transition-stream"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                skos:definition """This visa lets skilled workers, who are nominated by their employer, live and work in Australia permanently.
+                
+                With this visa, you can
+                - stay in Australia indefinitely
+                - work and study in Australia
+                - enrol in Australia's public health care scheme, Medicare
+                - sponsor eligible relatives to come to Australia
+                - travel to and from Australia for 5 years
+                - apply for Australian citizenship, if eligible"""@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:altLabel "Employer Nomination Scheme visa (subclass 186) - Temporary Residence Transition stream"@en ;
+                skos:prefLabel "Employer Nomination Scheme visa - Temporary Residence Transition stream"@en ;
+                skos:broader docs:visa-186 .
+
+        docs:visa-187 a skos:Concept ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/regional-sponsor-migration-scheme-187"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            skos:definition """This visa allows skilled workers, who are nominated by their employer in regional Australia, live and work in Australia permanently.
+            
+            Applicants must:
+            - be nominated by an approved Australian employer for a job in regional Australia
+            - be under 45 years of age
+            - meet the skills, qualifications and English language requirements"""@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:altLabel "Regional Sponsored Migration Scheme visa (subclass 187)"@en,
+                "Regional Sponsored Migration Scheme (subclass 187)"@En ;
+            skos:prefLabel "Regional Sponsored Migration Scheme visa"@en ;
+            skos:broader docs:visas-esv .
+
+            docs:visa-187-des a skos:Concept ;
+                dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/regional-sponsor-migration-scheme-187/direct-entry-stream"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                skos:definition """This visa allows skilled workers, who are nominated by their employer in regional Australia, live and work in Australia permanently.
+                
+                With this visa, you can
+                - stay in Australia indefinitely
+                - work and study in Australia
+                - enrol in Australia's public health care scheme, Medicare
+                - sponsor eligible relatives to come to Australia
+                - travel to and from Australia for 5 years
+                - apply for Australian citizenship, if eligible"""@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:altLabel "Regional Sponsored Migration Scheme visa (subclass 187) - Direct Entry stream"@en ;
+                skos:prefLabel "Regional Sponsored Migration Scheme visa - Direct Entry stream"@en ;
+                skos:broader docs:visa-187 .
+
+            docs:visa-187-trts a skos:Concept ;
+                dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/regional-sponsor-migration-scheme-187/temporary-residence-transistion-stream"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                skos:definition """This visa allows skilled workers, who are nominated by their employer in regional Australia, live and work in Australia permanently.
+                
+                Applicants must:
+                - be a transitional subclass 457 or subclass 482 worker
+                - usually, must have worked for your employer full-time for at least 3 years
+                - must be nominated by your employer
+
+                With this visa, you can
+                - stay in Australia indefinitely
+                - work and study in Australia
+                - enrol in Australia's public health care scheme, Medicare
+                - sponsor eligible relatives to come to Australia
+                - travel to and from Australia for 5 years
+                - apply for Australian citizenship, if eligible"""@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:altLabel "Regional Sponsored Migration Scheme visa (subclass 187) - Temporary Residence Transition stream"@en ;
+                skos:prefLabel "Regional Sponsored Migration Scheme visa - Temporary Residence Transition stream"@en ;
+                skos:broader docs:visa-187 .
+
+    docs:visa-482 a skos:Concept ;
+        dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482/"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:definition """This temporary visa lets an employer sponsor a suitably skilled worker to fill a position they can't find a suitably skilled Australian to fill.
+        
+        Applicants must:
+        - be nominated for a skilled position by an approved sponsor
+        - have the right skills to do the job
+        - meet the relevant English language requirements"""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:notation "TSS" ;
+        skos:altLabel "Temporary Skill Shortage visa (subclass 482)"@en,
+            "Temporary Skill Shortage visa (TSS) subclass 482"@en ;
+        skos:prefLabel "Temporary Skill Shortage visa"@en ;
+        skos:broader docs:skilled-visas .
+
+        docs:visa-482-sts a skos:Concept ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482/short-term-stream/"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            skos:definition """This visa enables employers to address labour shortages by bringing in skilled workers where employers can't source an appropriately skilled Australian worker.
+            
+            With this visa, you can
+            - work in Australia for up to 2 years for your sponsor or work in Australia for up to 4 years if an International Trade Obligation (ITO) applies, or up to 5 years if you are a Hong Kong passport holder
+            - study (you won't receive government assistance)
+            - travel to and from Australia as many times as you want while the visa is valid
+            - if eligible, apply for permanent residence.
+
+            For this stream of the visa, you must be sponsored to work in an occupation listed on the  Short term Skilled Occupation List (STSOL). 
+            Your visa will come with conditions attached to it. To see your conditions refer to your visa grant letter or use VEVO.
+            Eligible former TSS visa holders on Short-term stream, who have worked in Australia during the COVID-19 pandemic, will be also able to apply for a third short-term stream TSS visa while in Australia.
+
+            To be eligible applicants must:
+            - have held not more than two short-term stream TSS visas 
+            - have been in Australia between 1 February 2020 and 14 December 2021 for at least one year while holding a TSS (Short-term stream) visa
+            - meet all other nomination and visa requirements for the TSS (Short-term stream) visa
+            - lodge application before 1 July 2023.
+            
+            To apply for a TSS visa applicants must hold a substantive or bridging (A, B or C) visa at the time of application."""@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:altLabel "Temporary Skill Shortage visa (subclass 482) - Short-term stream"@en,
+                "Temporary Skill Shortage visa (TSS) subclass 482 - Short-term stream"@en ;
+            skos:prefLabel "Temporary Skill Shortage visa - Short-term stream"@en ;
+            skos:broader docs:visa-482 .
+
+        docs:visa-482-mts a skos:Concept ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482/medium-term-stream/"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            skos:definition """This visa enables employers to address labour shortages by bringing in skilled workers where employers can't source an appropriately skilled Australian worker.
+            
+            With this visa, you can
+            - work in Australia for your sponsor for up to 4 years, or up to 5 years if you are a Hong Kong passport holder
+            - study (you won't receive government assistance)
+            - travel to and from Australia as many times as you want while the visa is valid
+            - Eligible TSS visa holders whose occupation appears on the Regional Occupation List will be able to apply through the Employer Nomination Scheme (ENS), Temporary Residence Transition (TRT) stream. This pathway will only be accessible for two years from its commencement on 1 July 2022
+            - if eligible, apply for permanent residence
+
+            For this stream of the visa, you must be sponsored to work in an occupation listed on the Medium and Long-term Strategic Skills List (MLTSSL).
+            Your visa will come with conditions attached to it. To see your conditions conditions refer to your visa grant letter or use VEVO.
+            Current temporary skilled visa holders from Hong Kong will be eligible for an extension of 5 years (from 9 July 2020) in addition to the time they've already been in Australia.
+            Current and future temporary skilled visa holders from Hong Kong will also have a pathway to permanent residency after 5 years.
+
+            To be eligible applicants must:
+            - be nominated to work in an occupation on the list of eligible medium and long-term skilled occupations
+            - have at least 2 years relevant work experience in your nominated occupation or a related field
+            - have a relevant skills assessment if this is required for your occupation
+            - work only for your sponsor or associated entity, unless you are exempt
+            - meet minimum standards of English language proficiency unless you are exempt from needing to show this."""@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:altLabel "Temporary Skill Shortage visa (subclass 482) - Medium-term stream"@en,
+                "Temporary Skill Shortage visa (TSS) subclass 482 - Medium-term stream"@en ;
+            skos:prefLabel "Temporary Skill Shortage visa - Medium-term stream"@en ;
+            skos:broader docs:visa-482 .
+
+        docs:visa-482-las a skos:Concept ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482/labour-agreement-stream/"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            skos:definition """This visa is for skilled workers nominated by employers who have a Labour Agreement. It lets you live and work in Australia temporarily. Labour agreements are developed between the Australian Government (represented by the Department) and employers.
+            
+            With this visa, you can
+            - work in Australian for up to 4 years for your sponsor or up to 5 years if you are a Hong Kong passport holder
+            - study (you won't receive government assistance)
+            - travel to and from Australia as many times as you want, while the visa is valid
+
+            Current temporary skilled visa holders from Hong Kong will be eligible for an extension of 5 years (from 9 July 2020) in addition to the time they've already been in Australia.
+            Current and future temporary skilled visa holders from Hong Kong will also have a pathway to permanent residency after 5 years.
+
+            To be eligible applicants must:
+            - be nominated to work in a specified occupation under the terms of a Labour Agreement
+            - have at least 2 years relevant work experience in your nominated occupation or a related field
+            - have a relevant skills assessment if this is required for your occupation
+            - work only for your sponsor
+            - meet minimum standards of English language proficiency unless you are exempt from needing to show this"""@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:altLabel "Temporary Skill Shortage visa (subclass 482) - Labour agreement stream"@en,
+                "Temporary Skill Shortage visa (TSS) subclass 482 - Labour agreement stream"@en ;
+            skos:prefLabel "Temporary Skill Shortage visa - Labour agreement stream"@en ;
+            skos:broader docs:visa-482 .
+
+        docs:visa-482-se a skos:Concept ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482/subsequent-entrant"^^xsd:/anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            skos:definition """This visa is for family members of subclass 457 and TSS visa holders who are applying separately for their TSS visa and wish to join the primary subclass 457 or TSS visa holder in Australia.
+            
+            With this visa, you can
+            - live, work and study in Australia
+            - travel to and from Australia as many times as you want, while the visa is valid
+
+            Usually you apply for your visa at the same time and combined with the visa application of the main applicant. In some instances, this may not be possible. This may occur where the composition of the family changes after:
+            - the main applicant has already submitted their application for a TSS visa and it is still pending a decision
+            - a subclass 457 or TSS visa has already been granted to the primary TSS visa applicant
+            When this occurs and you want to join the primary applicant on their visa, you must apply separately by submitting a visa application in you own right. This is known as subsequent entrant.
+            When you submit your visa application for a subsequent entrant, you are required to attach a written letter from the sponsor extending their sponsorship obligation to include you as a family member in the nomination.
+            This requirement is intended to ensure the primary applicant's employer is aware of all the family members to whom their sponsorship obligations will extend.
+
+            To be eligible applicants must:
+            - Be a partner or dependent of a subclass 482 or 457 visa holder"""@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:altLabel "Temporary Skill Shortage visa (subclass 482) - Subsequent entrant"@en,
+                "Temporary Skill Shortage visa (TSS) subclass 482 - Subsequent entrant"@en ;
+            skos:prefLabel "Temporary Skill Shortage visa - Subsequent entrant"@en ;
+            skos:broader docs:visa-482 .
+
+    docs:visa-485 a skos:Concept ;
+        dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        skos:definition """A temporary visa that allows international students to live, study and work after you have finished your studies.
+        
+        Applicants must:
+        - be under 50 years of age
+        - hold an eligible visa
+        - have held a student visa in the last 6 months
+        - have a recent qualification in a CRICOS-registered course
+        - nominate one stream only - it is not possible to change visa streams after you apply
+        - attach specified evidence when you apply"""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:altLabel "Temporary Graduate visa (subclass 485)"@en ;
+        skos:prefLabel "Temporary Graduate visa"@en ;
+        skos:broader docs:skilled-visas .
+           
+        docs:visa-485-gws a skos:Concept ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/graduate-work"^^xsd:/anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            skos:definition """This visa is for international students who have recently graduated with skills and qualifications that are relevant to specific occupations Australia needs. It lets you live, study and work in Australia temporarily.
+            
+            With this visa, you can
+            - stay in Australia, usually for 18 months. Temporarily increased to 24 months for visas granted from 1 December 2021
+            - travel, work or study in Australia during your stay
+            
+            You must find your own employment if we grant this visa.
+            
+            This is a temporary visa. You can usually stay in Australia for 18 months.
+            The stay period will temporarily be increased from 18 to 24 months for visas granted from 1 December 2021.
+            Hong Kong and British National Overseas passport holders may stay up to 5 years.
+            The visa is granted with multiple entry. You can leave and re-enter Australia as many times as you want while the visa is valid.
+            The visa starts on the date we grant the visa.
+            For further information on changes regarding Hong Kong passport holders read Visa options for Hong Kong."""@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:altLabel "Temporary Graduate visa (subclass 485) - Graduate Work stream"@en ;
+            skos:prefLabel "Temporary Graduate visa - Graduate Work stream"@en ;
+            skos:broader docs:visa-485 .
+
+        docs:visa-485-psws a skos:Concept ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/post-study-work"^^xsd:/anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            skos:definition """This visa is for international students who have recently graduated with a degree from an Australian institution. It lets you live, work and study in Australia, temporarily.
+            
+            With this visa, you can
+            - stay in Australia for between 2 to 4 years after you have finished your studies
+            - travel, work or study in Australia during your stay
+
+            You must find your own employment while on this visa. 
+            
+            This is a temporary visa. The length of your stay in Australia will depend on the level of your Australian study qualification.
+            - bachelor degree (including honours): 2 years
+            - masters by research and masters by coursework: 3 years
+            - masters (extended): 3 years
+            - doctoral degree: 4 years
+            - Hong Kong and BNO passport holders who successfully complete a bachelor, masters or doctoral degree: 5 years
+
+            The visa starts on the date we grant the visa.
+            For further information on changes regarding Hong Kong passport holders read Visa options for Hong Kong."""@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:altLabel "Temporary Graduate visa (subclass 485) - Post-Study Work stream"@en ;
+            skos:prefLabel "Temporary Graduate visa - Post-Study Work stream"@en ;
+            skos:broader docs:visa-485 .
+
+        docs:visa-485-spsws a skos:Concept ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/second-post-study-work"^^xsd:/anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            skos:definition """This visa is for holders of a Temporary Graduate visa (first Post-Study Work stream or Replacement stream) who graduated with a degree from an Australian institution located in a regional area. It lets you live, work and study in Australia, temporarily.
+            
+            With this visa, you can
+            - stay in Australia for between 1 to 2 years
+            - travel, work or study in Australia during your stay
+
+            You must find your own employment while on this visa. 
+            
+            This is a temporary visa. The length of your stay in Australia will depend on where you studied and graduated from as the holder of a student visa and where you live as the holder of your first Temporary Graduate visa in the post-study work stream, or your Temporary Graduate visa in the replacement stream.
+            If you:
+            - studied and live in Category 2 Designated regional area (1 year)
+            - studied and live in Category 3 Designated regional area (2 years)"""@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:altLabel "Temporary Graduate visa (subclass 485) - Second Post-Study Work stream"@en ;
+            skos:prefLabel "Temporary Graduate visa - Second Post-Study Work stream"@en ;
+            skos:broader docs:visa-485 .
+
+        docs:visa-485-rs a skos:Concept ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/replacement-stream"^^xsd:/anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            skos:definition """TThis visa is for current and former Temporary Graduate visa holders who lost time on their original visa due to COVID-19 travel restrictions. It lets you live, work and study in Australia temporarily.
+            
+            With this visa, you can
+            - stay in Australia for between 18 months to 5 years
+            - travel, work or study in Australia during your stay
+            - bring your family with you.
+
+            You must find your own employment while on this visa. 
+            
+            This is a temporary visa. The length of your stay in Australia will depend on the level of your Australian study qualification, or the Temporary Graduate visa you held previously.
+            Graduate Work - Any Qualification 18 Months
+            Post Study Work - Bachelor Degree - 2 Years
+            Post Study Work - Honours Degree - 2 Years
+            Post Study Work - Masters Degree - 3 Years
+            Post Study Work - Doctoral Degree - 4 Years
+            Hong Kong or British National - 5 Years"""@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:altLabel "Temporary Graduate visa (subclass 485) - Replacement stream"@en ;
+            skos:prefLabel "Temporary Graduate visa - Replacement stream"@en ;
+            skos:broader docs:visa-485 .
+
