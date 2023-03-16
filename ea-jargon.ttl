@@ -593,17 +593,6 @@ eaj:aecs a skos:Concept ;
     skos:prefLabel "Australian Engineering Competency Standards"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
-eaj:aqf a skos:Concept ;
-    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
-    skos:definition """Australian Qualifications Framework Issued by the National Staff Development Committee Standards and Curriculum Council of ANTA, the AQF provides a comprehensive, nationally consistent yet flexible Framework for all qualifications in post-compulsory education in Australia. The Framework was introduced Australia wide on 1 January 1995."""@en ;
-    skos:related <https://linked.data.gov.au/def/australian-qualifications-framework> ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:notation "AQF" ;
-    skos:hiddenLabel "AQF Level"@en ;
-    skos:prefLabel "Australian Qualifications Framework"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
-
 eaj:board a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -949,6 +938,8 @@ eaj:ea-assessment a skos:Concept ;
         skos:definition """Engineers Australia has established agreements with institutions and organisations around the world, which accord their members an equivalent level of membership when applying to join Engineers Australia. Proof of membership of the mutually recognised organisation is required on application."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
         skos:notation "MRA" ;
+        skos:altLabel "Recognition Agreement"@en,
+            "International Recognition"@en ;
         skos:prefLabel "Mutual Recognition Agreement"@en ;
         skos:broader eaj:ea-assessment .
 
@@ -1040,13 +1031,43 @@ eaj:ea-assessment a skos:Concept ;
         skos:prefLabel "Stage 3 Competency Assessment"@en ;
         skos:broader eaj:ea-assessment .
 
-eaj:membership-regulations a skos:Concept ;
+eaj:ea-by-laws a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/membership"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """The By-Laws of Engineers Australia are a set of provisions that form the legal 'constitution' and regulation for Engineers Australia operations in conjunction with the Royal Charter"""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "EA By-Laws"
+    skos:prefLabel "Engineers Australia By-Laws"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+eaj:ea-royal charter a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/membership"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """Engineers Australia has operated under a Royal Charter since 1938. It also operates under a set of by-laws to ensure appropriate regulation and fair processes for governing boards and members alike."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "EA Royal Charter"
+    skos:prefLabel "Engineers Australia Royal Charter"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+eaj:ea-membership-regulations a skos:Concept ;
     dcterms:source "https://www.engineersaustralia.org.au/membership"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
     rdfs:seeAlso <https://www.engineersaustralia.org.au/membership> ;
     skos:definition """The formal regulations approved by the Engineers Australia Council that determine the rules and regulations of membership."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:prefLabel "Membership Regulations"@en ;
+    skos:altLabel "EA Membership Regulations"@en ;
+    skos:prefLabel "Engineers Australia Membership Regulations"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+eaj:minimum-access a skos:Concept ;
+    dcterms:source "https://www.okta.com/identity-101/minimum-access-policy/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """A minimum access policy restricts a user to only the least amount of access to privileged resources and permissions that are needed to perform an authorized activity or activities, such as those necessary for employees to do their jobs. This is a cybersecurity practice that can help to protect critical assets and sensitive data.
+    
+    The minimum access policy allows a process or a user account to have only the privileges that are necessary to perform their intended function. Typically, this will mean setting the least amount of access as the default and only opening up permissions and privileges to essential resources and actions. User accounts should run and launch applications with the minimum number of privileges possible. """@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "Minimium Access Policy"@en ;
+    skos:prefLabel "Minimum Access"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
 eaj:occupational-categories a skos:Concept ;
@@ -1063,11 +1084,11 @@ eaj:occupational-categories a skos:Concept ;
     eaj:mra-occupational-categories a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-        skos:definition """An MRA Occupational category is a translation between a specific MRA Occupational Category and teh equivalent Engineers Australia Occupational Category"""@en ;
+        skos:definition """An MRA Occupational category is a translation between a specific MRA Occupational Category and the equivalent Engineers Australia Occupational Category."""@en ;
         skos:related <https://linked.data.gov.au/def/iea-occupational-categories> ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
         skos:prefLabel "MRA Occupational Categories"@en ;
-        skos:braoder eaj:occupational-categories .
+        skos:broader eaj:occupational-categories .
 
 eaj:professional-development-program a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -1153,6 +1174,25 @@ eaj:sponsorship a skos:Concept ;
     skos:prefLabel "Sponsorship"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
+eaj:study-aqf a skos:Concept ;
+    dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """Australian Qualifications Framework Issued by the National Staff Development Committee Standards and Curriculum Council of ANTA, the AQF provides a comprehensive, nationally consistent yet flexible Framework for all qualifications in post-compulsory education in Australia. The Framework was introduced Australia wide on 1 January 1995."""@en ;
+    skos:related <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:notation "AQF" ;
+    skos:hiddenLabel "AQF Level"@en ;
+    skos:prefLabel "Australian Qualifications Framework"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+eaj:study-bridging a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """A course designed to enable Articulation. Bridging courses do not usually, of themselves, provide a formal academic qualification. Some formal academic courses are recognised for articulation purposes but these are not normally referred to as Bridging Courses. The National Office for Overseas Skills Recognition (NOOSR) has arranged with some Australian Universities to provide special Bridging Courses for those with overseas qualifications, which cannot be fully recognised in Australia. These courses do not result in a formal testamur but Engineers Australia accepts a certificate of successful completion as evidence of Stage 1 eligibility."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Bridging Course"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 eaj:system-architecture a skos:Concept ;
     dcterms:source "https://en.wikipedia.org/wiki/Systems_architecture"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -1166,6 +1206,15 @@ eaj:system-architecture a skos:Concept ;
         "System Model"@en ;
     skos:prefLabel "System Architecture"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+eaj:skilled-visa a skos:Concept ;
+    dcterms:source "https://immi.homeaffairs.gov.au/visas/working-in-australia/skills-assessment"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """Migration Visas that are available to individuals who are qualified to work or train in an eligible skilled occupation in Australia and can meet all other requirements. The visas are subject to a periodically revised list of skilled occupations in shortage within the Australian labour force. Skilled work visas are the typical way engineers migrate to Australia."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Skilled Work Visa"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 
 #Collections
 
