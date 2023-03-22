@@ -747,6 +747,41 @@ eaj:crm a skos:Concept ;
     skos:prefLabel "Customer Relationship Management"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
+eaj:database a skos:Concept ;
+    dcterms:source "https://www.oracle.com/au/database/what-is-database/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """A database is an organized collection of structured information, or data, typically stored electronically in a computer system. A database is usually controlled by a database management system (DBMS)."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:notation "DBMS" ;
+    skos:prefLabel "Database"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+    eaj:relational-database a skos:Concept ;
+        dcterms:source "https://www.mongodb.com/compare/relational-vs-non-relational-databases"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """A relational database, or relational database management system (RDMS), stores information in tables. Often, these tables have shared information between them, causing a relationship to form between tables. This is where a relational database gets its name from.
+
+        A table uses columns to define the information being stored and rows for the actual data. Each table will have a column that must have unique values—known as the primary key. This column can then be used in other tables, if relationships are to be defined between them. When one table's primary key is used in another table, this column in the second table is known as the foreign key."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:notation "RDMS" ;
+        skos:prefLabel "Relational Database"@en ;
+        skos:broader eaj:database .
+
+    eaj:non-relational-database a skos:Concept ;
+        dcterms:source "https://www.mongodb.com/compare/relational-vs-non-relational-databases"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """A non-relational database, sometimes called NoSQL (Not Only SQL), is any kind of database that doesn't use the tables, fields, and columns structured data concept from relational databases. Non-relational databases have been designed with the cloud in mind, making them great at horizontal scaling.
+
+        There are a few different groups of database types that store the data in different ways:
+        Document Databases - store data in documents, which are usually JSON-like structures that support a variety of data types. 
+        Key-Value Databases - This is the most basic type of database, where information is stored in two parts: key and value.
+        Graph Databases - Graph databases are the most specialized of the non-relational database types. They use a structure of elements called nodes that store data, and edges between them contain attributes about the relationship.Relationships are defined in the edges, which makes searches related to these relationships naturally fast. Plus, they are flexible because new nodes and edges can be added easily. They also don't have to have a defined schema like a traditional relational database.
+        Wide-column databases - Wide-column databases, similar to relational databases, store data in tables, columns, and rows. However, the names and formatting of the columns don't have to match in each row. The columns can even be stored across multiple servers. They are considered two-dimensional key-value stores because they use multi-dimensional mapping to reference data by row and column."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:notation "NoSQL" ;
+        skos:prefLabel "Non-Relational Database"@en ;
+        skos:broader eaj:database .
+
 eaj:data-lifecycle a skos:Concept ;
     dcterms:source "https://www.ibm.com/au-en/topics/data-lifecycle-management"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -847,6 +882,16 @@ eaj:data-profiling a skos:Concept ;
     More specifically, data profiling sifts through data to determine its legitimacy and quality. Analytical algorithms detect dataset characteristics such as mean, minimum, maximum, percentile, and frequency to examine data in minute detail. It then performs analyses to uncover metadata, including frequency distributions, key relationships, foreign key candidates, and functional dependencies. Finally, it uses all of this information to expose how those factors align with your business's standards and goals. Data profiling, involves the statistical analysis and assessment of data values within a data set for consistency, uniqueness and logic. The data profiling process cannot typically identify inaccurate data; it can only identify business rules violations and anomalies. The insight gained by data profiling can be used to determine how difficult it will be to use existing data for other purposes."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:prefLabel "Data Profiling"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+eaj:data-warehouse a skos:Concept ;
+    dcterms:source "https://cloud.google.com/learn/what-is-a-data-warehouse"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """A data warehouse is an enterprise system used for the analysis and reporting of structured and semi-structured data from multiple sources, such as point-of-sale transactions, marketing automation, customer relationship management, and more. A data warehouse is suited for ad hoc analysis as well custom reporting. A data warehouse can store both current and historical data in one place and is designed to give a long-range view of data over time, making it a primary component of business intelligence.
+    
+    Data Warehouses can create snapshots of historical databases and other datastores, synchornise with live databases and integrate other semi-structured data for anaylsis in a single platform, whilst creating a separation with the underlying raw data and therefore eliminating risk of accidental alteration."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Data Warehouse"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
 eaj:engineering-accords a skos:Concept ;
