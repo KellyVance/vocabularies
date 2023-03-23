@@ -13,7 +13,7 @@
     dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
     dcterms:created "2023-01-31"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
-    dcterms:modified "2022-01-31"^^xsd:date ;
+    dcterms:modified "2023-03-23"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     skos:definition """The business language and terminology used throughout Engineers Australia in common communication.
