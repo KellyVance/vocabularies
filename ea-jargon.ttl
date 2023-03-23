@@ -99,6 +99,56 @@ eaj:bi-tool a skos:Concept ;
     skos:prefLabel "Business Intelligence Tool"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
+eaj:data a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """Data refers to any collection of raw facts, figures, or statistics that are processed and analyzed to derive meaning and insights."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Data"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+    eaj:ref-data a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """Reference Data is a type of data that is used to categorize or classify other data elements. It is data that describes other data, i.e. metadata. It consists of a set of values or codes that are used to identify, describe, or define data elements in a particular domain or context. For example, a list of country codes that are used to identify the country of origin for a product, and grades of membership in an organisation are examples of reference data."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:prefLabel "Reference Data"@en ;
+        skos:broader eaj:data .
+
+    eaj:transactional-data a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """Transactional Data is a type of data that records specific events or transactions that occur within an organization. It refers to the data that is generated as part of day-to-day business operations, such as sales, purchases, invoices, and payments."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:prefLabel "Transactional Data"@en ;
+        skos:broader eaj:data .
+
+    eaj:master-data a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """Master Data refers to a set of core data elements that are shared across multiple applications or business processes within an organization. It provides a consistent and unified view of key business entities such as Agents including organisations and individuals, products, services, locations, and associated attributes."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:prefLabel "Master Data"@en ;
+        skos:broader eaj:data .
+
+    eaj:data-dictionary a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:definition """A Data Dictionary is a central repository that defines and describes the data elements used in an organization. It provides a comprehensive catalog of data elements, their definitions, relationships, and rules for usage. It serves as a reference guide for developers, analysts, and business users to ensure consistent interpretation and usage of data across different applications and systems. In practice data definitions commonly describe and define the tables in a database, the columns in each table, their relationships, and the rules pertaining to the data such as valid data types and accepted values."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+        skos:prefLabel "Data Dictionary"@en ;
+        skos:broader eaj:data .
+
+eaj:information a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """Information refers to the output generated from analyzing and processing data. It is the result of adding context, meaning, and value to data through interpretation, analysis, and visualization. Information is what decision-makers use to derive insights and make informed decisions.
+    
+    In practice data management typically deals with the structured data in an organisation, whereas information management deals primarily with unstructured and semi-structured data and includes information, records, and document management."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Information"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 eaj:div-rules a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -1393,6 +1443,12 @@ eaj:data-theory a skos:Collection ;
 	skos:prefLabel "Data Concepts and Theory"@en ;
 	skos:definition """The terminology used to describe and distinguish data and its associated processes."""@en ;
     skos:member
+        eaj:data,
+            eaj:ref-data,
+            eaj:transactional-data,
+            eaj:master-data,
+            eaj:data-dictionary,
+        eaj:information,
         eaj:data-model,
         eaj:data-profiling,
         eaj:data-lifecycle,
@@ -1410,14 +1466,13 @@ eaj:platforms a skos:Collection ;
             eaj:relational-database,
             eaj:non-relational-database,
         eaj:data-catalogue,
+        eaj:data-dictionary,
         eaj:data-warehouse,
         eaj:data-store,
         eaj:identity-management-app,
         eaj:ref-data-management-app,
         eaj:cms,
         eaj:crm .
-
-    #ALSO INCLUDE DEFINTIONS FOR DATA, TRANSACTIONAL DATA, MASTER DATA, REFERENCE DATA
 
 eaj:policy a skos:Collection ;
 	skos:prefLabel "Policy and Procedure"@en ;
