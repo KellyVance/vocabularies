@@ -1,5 +1,5 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix eaj: <https://linked.data.gov.au/def/ea-jargon>
+@prefix eaj: <https://linked.data.gov.au/def/ea-jargon/>
 @prefix eagrd: <https://linked.data.gov.au/def/ea-membership-grade/> .
 @prefix earl: <https://linked.data.gov.au/def/ea-roles/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
