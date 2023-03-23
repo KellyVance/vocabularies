@@ -1166,16 +1166,16 @@ eaj:ea-by-laws a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
     skos:definition """The By-Laws of Engineers Australia are a set of provisions that form the legal 'constitution' and regulation for Engineers Australia operations in conjunction with the Royal Charter"""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:altLabel "EA By-Laws"
+    skos:altLabel "EA By-Laws"@en ;
     skos:prefLabel "Engineers Australia By-Laws"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
-eaj:ea-royal charter a skos:Concept ;
+eaj:ea-royal-charter a skos:Concept ;
     dcterms:source "https://www.engineersaustralia.org.au/membership"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
     skos:definition """Engineers Australia has operated under a Royal Charter since 1938. It also operates under a set of by-laws to ensure appropriate regulation and fair processes for governing boards and members alike."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:altLabel "EA Royal Charter"
+    skos:altLabel "EA Royal Charter"@en ;
     skos:prefLabel "Engineers Australia Royal Charter"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
