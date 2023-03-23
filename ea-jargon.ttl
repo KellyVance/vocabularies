@@ -86,6 +86,19 @@ eaj:aus-privacy-principles a skos:Concept ;
     skos:prefLabel "Australian Privacy Principles"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
+eaj:bi-tool a skos:Concept ;
+    dcterms:source "https://azure.microsoft.com/en-us/overview/what-are-business-intelligence-tools/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """Business intelligence (BI) tools are types of application software that collect and process large amounts of unstructured data from internal and external systems, including books, journals, documents, health records, images, files, email, video, and other business sources.
+    
+    Business inteliigence tools commonly derive data via a data warehouse that consolidate data through a set of data views or semantic layers to transform raw data into prepared consumable information without the need to materialise duplicated tables and data.
+    
+    Popular BI Tools include Microsoft Power BI, Tableau, Oracle Business Intelligence, IBM Cognos Analytics."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "BI Tool"@en ;
+    skos:prefLabel "Business Intelligence Tool"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 eaj:div-rules a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -782,6 +795,17 @@ eaj:database a skos:Concept ;
         skos:prefLabel "Non-Relational Database"@en ;
         skos:broader eaj:database .
 
+eaj:data-catalogue a skos:Concept ;
+    dcterms:source "https://www.oracle.com/sg/big-data/data-catalog/what-is-a-data-catalog"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """A data catalogue is an organized inventory of data assets in an organization. It uses metadata to help organizations manage their data. It also helps data professionals collect, organize, access, and enrich metadata to support data discovery and governance.
+    
+    Data catalouges describe the content of datasets, the location of datasets as uri locations or direction to file storage assets, the types of data contained, associated files, associated security classification, usage rights, associated agents, and dates of creation, modification, and applicable dates for reuse or distribution. The purpose of a data catalogue is to make data and information assets findable and accessible."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "Data Catalog"@en ;
+    skos:prefLabel "Data Catalogue"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 eaj:data-lifecycle a skos:Concept ;
     dcterms:source "https://www.ibm.com/au-en/topics/data-lifecycle-management"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -1115,12 +1139,37 @@ eaj:ea-membership-regulations a skos:Concept ;
     skos:prefLabel "Engineers Australia Membership Regulations"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
+eaj:data-store a skos:Concept ;
+    dcterms:source "https://aws.amazon.com/what-is/data-store/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """A data store is a digital repository that stores and safeguards the information in computer systems. A data store can be network-connected storage, distributed cloud storage, a physical hard drive, or virtual storage. It can store both structured data like information tables and unstructured data like emails, images, and videos. Organizations use data stores to retain, share, and manage information across business units. Data Stores are where databases, data warehouses, data catalogues, and file storage are physically stored and managed.
+    
+    Examples of storage include Direct-attached storage (DAS) consisting of storage devices that connect physically to a computer, Network-attached storage (NAS) that make data continuously available for applications and users to collaborate on effectively over a network, and Cloud storage that is distributed storage infrastructure hosted and managed by cloud providers. It is more scalable, flexible, and remotely accessible compared to on-premises storage.
+    
+    Cloud data stores include products from major providers such as Azure Cloud Storage, AWS Cloud Storage and Google Cloud."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Data Store"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+eaj:identity-management-app a skos:Concept ;
+    dcterms:source "https://www.vmware.com/topics/glossary/content/identity-management.html"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """Identity Management ensures that authorized people, and only authorized people, have access to the technology resources they need to perform their job functions. This includes management of enterprise sign-on and permissions management to components with a system.
+    
+    An identity management system prevents unauthorized access to systems and resources, helps prevent exfiltration of enterprise or protected data, and raises alerts and alarms when access attempts are made by unauthorized personnel or programs, whether from inside or outside the enterprise perimeter."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:altLabel "Identity and Access Management Application"@en, 
+        "Identity Management System"@en,
+        "Identity Management Tool"@en;
+    skos:prefLabel "Identity Management Application"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 eaj:minimum-access a skos:Concept ;
     dcterms:source "https://www.okta.com/identity-101/minimum-access-policy/"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
     skos:definition """A minimum access policy restricts a user to only the least amount of access to privileged resources and permissions that are needed to perform an authorized activity or activities, such as those necessary for employees to do their jobs. This is a cybersecurity practice that can help to protect critical assets and sensitive data.
     
-    The minimum access policy allows a process or a user account to have only the privileges that are necessary to perform their intended function. Typically, this will mean setting the least amount of access as the default and only opening up permissions and privileges to essential resources and actions. User accounts should run and launch applications with the minimum number of privileges possible. """@en ;
+    The minimum access policy allows a process or a user account to have only the privileges that are necessary to perform their intended function. Typically, this will mean setting the least amount of access as the default and only opening up permissions and privileges to essential resources and actions. User accounts should run and launch applications with the minimum number of privileges possible."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:altLabel "Minimium Access Policy"@en ;
     skos:prefLabel "Minimum Access"@en ;
@@ -1153,6 +1202,16 @@ eaj:pcas a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:notation "PCAS" ;
     skos:prefLabel "Private Certifier Accreditation Scheme"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+eaj:persistent-identifier a skos:Concept ;
+    dcterms:source "https://github.com/geological-survey-of-queensland/persistent-identifiers/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """An identifier (ID) is any label used to uniquely name some thing (person, place, event), whether online or offline. URLs are an example of an identifier, as are serial numbers or personal names. A persistent identifier (PID) differs, however, in that it is guaranteed to be managed and kept up to date over a defined time period to reliably point to a digital or physical entity."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:notation "PID" ;
+    skos:altLabel "Global Unique Identifier"@en ;
+    skos:prefLabel "Persistent Identifier"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
 eaj:professional-development-program a skos:Concept ;
@@ -1228,6 +1287,17 @@ eaj:recognition-of-prior-learning a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:notation "RPL" ;
     skos:prefLabel "Recognition of Prior Learning"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
+eaj:ref-data-management-system a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """A reference data management systems are the applications, governance processes, and tools that manage the terminology and categorisation metadata used to classify data and entities and establish taxonomic hierarchies across systems and business lines.
+    
+    Reference data management can be performed in multiple ways such as reference tables in a relational database, business glossaries, knowledge graph vocabularies for storage of terminology, and a range of business and version control processes to trace and maintain continuity and consistency."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:related earl:sponsor ;
+    skos:prefLabel "Reference Data Management System"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
 eaj:sponsorship a skos:Concept ;
@@ -1319,13 +1389,35 @@ eaj:derived-data a skos:Collection ;
         eaj:OMIEAust,
         eaj:SMIEAust .
 
+eaj:data-theory a skos:Collection ;
+	skos:prefLabel "Data Concepts and Theory"@en ;
+	skos:definition """The terminology used to describe and distinguish data and its associated processes."""@en ;
+    skos:member
+        eaj:data-model,
+        eaj:data-profiling,
+        eaj:data-lifecycle,
+        eaj:system-architecture,
+        eaj:persistent-identifier,
+        eaj:semantic-layer .
+
 eaj:platforms a skos:Collection ;
 	skos:prefLabel "Systems and Platforms"@en ;
-	skos:definition """Systems, Software, Tools, Portals, and Products used by Engineers Australia to interact with data. This may refer to legacy, active, or future platforms."""@en ;
+	skos:definition """Types of Systems, Software, Tools, Portals, and Products used by Engineers Australia to interact with data and users."""@en ;
     skos:member
         eaj:active-directory,
+        eaj:bi-tool,
+        eaj:database,
+            eaj:relational-database,
+            eaj:non-relational-database,
+        eaj:data-catalogue,
+        eaj:data-warehouse,
+        eaj:data-store,
+        eaj:identity-management-app,
+        eaj:ref-data-management-app,
         eaj:cms,
         eaj:crm .
+
+    #ALSO INCLUDE DEFINTIONS FOR DATA, TRANSACTIONAL DATA, MASTER DATA, REFERENCE DATA
 
 eaj:policy a skos:Collection ;
 	skos:prefLabel "Policy and Procedure"@en ;
