@@ -241,7 +241,7 @@ eamc:current-member a skos:Concept ;
                 skos:definition """An individual who has a current and active free and complimentary Honorary Fellow grade membership with Engineers Australia carried over from a paid membership in the previous financial year. An individual who had paid EA membership and was been awarded Honorary Fellowship in the last financial year."""@en ;
                 skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
                 skos:prefLabel "Honorary Fellowship"@en ;
-                skos:broader eamc:continuation, eamc:revenue-exemption .
+                skos:broader eamc:retention, eamc:revenue-exemption .
 
 eamc:at-risk-member a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
