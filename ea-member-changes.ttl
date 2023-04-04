@@ -69,7 +69,7 @@ eamc:current-member a skos:Concept ;
    eamc:revenue-exemption a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:definition """An individual who has a current and active free and complimentary membership with Engineers Australia that is exempt from fees regardless of prevous membership or lack thereof. Complimentary membership and fee exemption is conferred upon Honorary Fellows."""@en ;
+        skos:definition """An individual who has a current and active free and complimentary membership with Engineers Australia as an that is exempt from fees and did not hold complimentary membership in the previous year. Complimentary membership and fee exemption is conferred upon Honorary Fellows."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
         skos:prefLabel "Revenue Exemption"@en ;
         skos:broader eamc:current-member .    
@@ -130,7 +130,7 @@ eamc:current-member a skos:Concept ;
             skos:definition """An individual who has a current and active membership with Engineers Australia but did not have active membership during the previous financial year. However, has held membership with Engineers Australia prior to the previous financial year. An individual who has re-joined EA membership after not having active membership in the last financial year."""@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
             skos:altLabel "Member Return"@en,
-                "Return"@em ;
+                "Return"@en ;
             skos:prefLabel "Readmission"@en ;
             skos:broader eamc:member-gain .
 
