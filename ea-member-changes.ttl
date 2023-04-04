@@ -220,7 +220,7 @@ eamc:current-member a skos:Concept ;
             eamc:hon-fellow-continuation a skos:Concept ;
                 dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
                 rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
-                skos:definition """An individual who has a current and active free Student grade membership with Engineers Australia carried over from the previous financial year. A student membership that has not been cancelled or passed the maximum student membership duration."""@en ;
+                skos:definition """An individual who has a current and active complimentary Honorary Fellow grade membership with Engineers Australia carried over from the previous financial year."""@en ;
                 skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
                 skos:prefLabel "Honorary Fellowship Continuation"@en ;
                 skos:broader eamc:unpaid-retention, eamc:revenue-neutral .
