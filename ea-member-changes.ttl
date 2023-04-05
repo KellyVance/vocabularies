@@ -246,7 +246,9 @@ eamc:current-member a skos:Concept ;
             eamc:reactivation a skos:Concept ;
                 dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
                 rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
-                skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the previous financial year but who failed to make payment prior to the renewal fee due date, and therefore transitioned to Lapsed membership status during the processing and erasure period."""@en ;
+                skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the previous financial year but who failed to make payment prior to the renewal fee due date, and therefore transitioned to Lapsed membership status during the processing and erasure period.
+                
+                Members may be reactivated manually after the erasure period (i.e. instead of as a readmission) at the  discretion of Engineers Australia where exceptional circumstances are evident."""@en ;
                 skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
                 skos:prefLabel "Reactivation"@en ;
                 skos:broader eamc:retention, eamc:revenue-retention .
@@ -319,13 +321,14 @@ eamc:lost-member a skos:Concept ;
             skos:prefLabel "Cancellation"@en ;
             skos:broader eamc:termination .
 
-    eamc:student-cancellation a skos:Concept ;
+    eamc:student-erasure a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
         skos:definition """An individual who held a free Student grade membership with Engineers Australia in the past financial year but whose membership is now inactive due to active cancellation or exceeding the maximum student membership duration. Note: Maximum student membership duration may be extended at the discretion of Engineers Australia for extenuating or unusual circumstances."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:altLabel "Revenue Lost Potential"@en ;
-        skos:prefLabel "Student Cancellation"@en ;
+        skos:altLabel "Revenue Lost Potential"@en,
+            "Student Cancellation"@en ;
+        skos:prefLabel "Student Erasure"@en ;
         skos:broader eamc:lost-member .
 
 #COLLECTIONS
