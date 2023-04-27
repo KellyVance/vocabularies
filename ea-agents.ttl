@@ -89,6 +89,15 @@ agnt:organisation a skos:Concept ;
             skos:prefLabel "Engineers Australia College"@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
 
+        agnt:technical-society a skos:Concept ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:broader agnt:internal-group ;
+            skos:definition """An Engineers Australia Technical Society is a group Joining a that facilitates networking between professionals in the same area of expertise, hosts discussion forums, and provides access to technical papers and presentations. Technical societies provide professional technical development opportunities that its members may participate in. Membership in a technical society is not contingent on membership to Engineers Australia. """@en ;
+            skos:altLabel "Engineers Australia Technical Society"@en ;
+            skos:prefLabel "Technical Society"@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
+
     agnt:commercial-entity a skos:Concept ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
