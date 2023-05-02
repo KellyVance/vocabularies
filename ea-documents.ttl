@@ -26,6 +26,14 @@
     sdo:name "Engineers Australia" ;
     sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
 
+docs:agenda a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A document that outlines the topics and order of business to be discussed at a meeting or event."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Agenda"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
 docs:career-episode-report a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
@@ -279,6 +287,22 @@ docs:foa-segment a skos:Concept ;
     skos:prefLabel "Follow-on Activity Segment"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
+docs:guideline skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A document that provides recommendations or suggestions for best practices or standards of care for a particular industry or field."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Guideline"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:form skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A document that contains fields or spaces for users to fill out with specific information, often used to collect data or initiate a process."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Form"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
 docs:interviewer-attachment a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
@@ -376,18 +400,25 @@ docs:mou a skos:Concept ;
 docs:minutes a skos:Concept ;
     dcterms:source "https://en.wikipedia.org/wiki/Minutes"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
-    skos:definition """The written record of a meeting or hearing. They typically describe the events of the meeting and may include a list of attendees, a statement of the activities considered by the participants, and related responses or decisions for the activities.The format of the minutes can vary depending on the standards established by an organization, although there are general guidelines. Minutes may be the formal record of dsicussions within an organisation or between two organisations."""@en ;
+    skos:definition """A formal written record of a meeting that includes a summary of discussion, decisions, and action items. They typically describe the events of the meeting and may include a list of attendees, a statement of the activities considered by the participants, and related responses or decisions for the activities.The format of the minutes can vary depending on the standards established by an organization, although there are general guidelines. Minutes may be the formal record of discussions within an organisation or between two organisations."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
     skos:notation "MoM" ;
     skos:altLabel "Minutes of Meeting"@en,
-        "Meeting Minutes"@en,
-        "Notes"@en,
+        "Meeting Minutes"@en
         "Protocols"@en,
         "Meeting Record"@en ;
     skos:prefLabel "Minutes"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
-    docs:opportunity a skos:Concept ;
+docs:notes a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A written record of observations, ideas, or key points from a meeting, conversation, or event."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Notes"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:opportunity a skos:Concept ;
     dcterms:source "https://en.wikipedia.org/wiki/Minutes"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
     skos:definition """An opportunity is a formal record of discussions between an Organisation and another organisation or individual that may lead to favourable business opportunities through a sale, provision of service, or mutually beneficial business arrangement. Commonly referring to a contact who is a likely future sale."""@en ;
@@ -476,12 +507,68 @@ docs:personal-identification a skos:Concept ;
         skos:prefLabel "Foreign passport"@en ;
         skos:broader docs:personal-identification .
 
+docs:policy a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A document that outlines principles, rules, and guidelines that govern decision-making and actions within an organization or group."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Policy"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:presentation a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A document or multimedia display that uses visuals and/or spoken words to communicate information or ideas to an audience."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Presentation"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:procedure a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A document that provides instructions for carrying out a particular task or process. Instructions on the application of principles detailed in a policy."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Procedure"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:qrg a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A brief document that provides condensed information or instructions for a specific task or topic, usually in a format that is informal and easy to access and use."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Quick Reference Guide"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
 docs:registration a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
     skos:definition """Registration is a formal record of an individual joining an organisation or activity. For example registration may describe procuring one or more allocated seats or tickets for attendence at an Event."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
     skos:prefLabel "Registration"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:speech a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A document or spoken presentation that communicates information, ideas, or opinions to an audience, often delivered in a formal setting or event."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Speech"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:standard a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A document that sets forth specific requirements or guidelines for processes, products, or services to ensure consistency, quality, and safety."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Standard"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+
+docs:template a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    skos:definition """A pre-designed document that includes a structure or layout that can be customized for specific purposes or needs."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:prefLabel "Template"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
 docs:testimonial a skos:Concept ;
@@ -493,6 +580,7 @@ docs:testimonial a skos:Concept ;
     skos:prefLabel "Testimonial"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
+#VISAS
 
 docs:skilled-visas a skos:Concept ;
     dcterms:source "https://immi.homeaffairs.gov.au/visas/working-in-australia/skills-assessment"^^xsd:anyURI ;

@@ -27,7 +27,7 @@
 		<https://linked.data.gov.au/def/qg-security-classifications> ;
 	dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
 	skos:definition "A categorisation of information and data assets that reflects the potential level of damage done to an organisation from unauthorised disclosure, or compromise of confidentiality. Sensitivity levels are based primarily on the legal framework of the Australian Government Office of the Australian Information Commissioner for personal and sensitive information. However, non-personal data and information, such as financial records, are also subject to this classification within the context of the potential level of damage from unauthorised disclosure."@en ;
-	skos:scopeNote "The specific application of this classification is dependent on the nature of the information described and the person, organisation, or agency who has ownership and custodianship of that information."@en ;
+	skos:scopeNote "The specific application of this classification is dependent on the nature of the information described and the person, organisation, or agency who has ownership and custodianship of that information. The same dataset may be classified differently by different organisations based on their requirements, interactions, and reasonable expectations on their treatment of specific data types."@en ;
 	skos:hasTopConcept
 		isc:public,
 		isc:private,
