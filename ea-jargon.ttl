@@ -145,7 +145,7 @@ eaj:information a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
     skos:definition """Information refers to the output generated from analyzing and processing data. It is the result of adding context, meaning, and value to data through interpretation, analysis, and visualization. Information is what decision-makers use to derive insights and make informed decisions.
     
-    In practice data management typically deals with the structured data in an organisation, whereas information management deals primarily with unstructured and semi-structured data and includes information, records, and document management."""@en ;
+    In practice, data management typically deals with the structured data in an organisation, whereas information management deals primarily with unstructured and semi-structured data and includes information, records, and document management."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:prefLabel "Information"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
@@ -851,7 +851,7 @@ eaj:data-catalogue a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
     skos:definition """A data catalogue is an organized inventory of data assets in an organization. It uses metadata to help organizations manage their data. It also helps data professionals collect, organize, access, and enrich metadata to support data discovery and governance.
     
-    Data catalouges describe the content of datasets, the location of datasets as uri locations or direction to file storage assets, the types of data contained, associated files, associated security classification, usage rights, associated agents, and dates of creation, modification, and applicable dates for reuse or distribution. The purpose of a data catalogue is to make data and information assets findable and accessible."""@en ;
+    Data catalouges describe the content of datasets, the location of datasets as uri locations or direction to file storage assets, the types of data contained, associated files, associated security classification, usage rights, associated responsible agents, and dates of creation, modification, and applicable conditions for reuse or distribution. The purpose of a data catalogue is to make data and information assets findable and accessible."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:altLabel "Data Catalog"@en ;
     skos:prefLabel "Data Catalogue"@en ;
