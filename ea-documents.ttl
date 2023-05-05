@@ -20,7 +20,7 @@
         "Records"@en,
         "Document Type"@en,
         "Documents"@en ;
-	skos:prefLabel "Documents and Records"@en ;
+	skos:prefLabel "Documents and Records"@en .
 
 <https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
     sdo:name "Engineers Australia" ;
