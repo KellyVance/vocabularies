@@ -12,7 +12,7 @@
     dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
     dcterms:created "2023-01-31"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
-    dcterms:modified "2022-01-31"^^xsd:date ;
+    dcterms:modified "2023-05-05"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     skos:definition """Documents, records, and other files that record information about a person, organisation, or process. Commonly used as for assessments, analyses, or for retention of evidence for processes and decisions. Documents and records may be physical or digital."""@en ;
