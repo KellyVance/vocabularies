@@ -851,7 +851,7 @@ eaj:data-catalogue a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
     skos:definition """A data catalogue is an organized inventory of data assets in an organization. It uses metadata to help organizations manage their data. It also helps data professionals find, access, collect, organize, and enrich metadata to support data discovery and governance.
     
-    Data catalogues describe the content of datasets, the location of datasets as uri locations or as direction to file storage assets, the types of data contained, associated files, security classification, usage rights, responsible agents, and dates of creation, modification, and applicable conditions for reuse or distribution. The purpose of a data catalogue is to make data and information assets findable and accessible."""@en ;
+    Data catalogues describe the content of datasets, the location of datasets as uri locations or as direction to file storage assets, the types of data contained, associated files, security classification, usage rights, responsible agents, and dates of creation, modification, and applicable conditions for reuse or distribution. The purpose of a data catalogue is to make data and information assets findable and accessible. Data catalouges may also record relationships between datasets such as shared resouces, provenance and derivations, and source-of-truth hierarchy."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:altLabel "Data Catalog"@en ;
     skos:prefLabel "Data Catalogue"@en ;
