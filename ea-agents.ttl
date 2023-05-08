@@ -115,6 +115,7 @@ agnt:organisation a skos:Concept ;
             skos:definition """Government units (as defined in Chapter 2) which are created as bodies corporate through the Corporations Act in Australia or through other legislation (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8)."""@en ;
             skos:altLabel "Government Company"@en ;
             skos:prefLabel "Government-Run Company"@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
 
         agnt:private-company a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
