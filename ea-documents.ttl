@@ -12,7 +12,7 @@
     dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
     dcterms:created "2023-01-31"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
-    dcterms:modified "2023-05-05"^^xsd:date ;
+    dcterms:modified "2023-05-09"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     skos:definition """Documents, records, and other files that record information about a person, organisation, or process. Commonly used as for assessments, analyses, or for retention of evidence for processes and decisions. Documents and records may be physical or digital."""@en ;
@@ -111,7 +111,7 @@ docs:cv a skos:Concept;
     docs:vcv a skos:Concept;
         dcterms:source "https://en.wikipedia.org/wiki/Curriculum_vitae"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
-        skos:definition """"An applicant for Engineers Australia Membership or Registration to the National Engineering Register (NER) need to have their CV verified by a Member, Senior Member or Fellow of Engineers Australia, or a senior experienced engineer or the equivalent in their Occupational Category. The person providing the verification is required to personally confirm the accuracy of the statements made.
+        skos:definition """An applicant for Engineers Australia Membership or Registration to the National Engineering Register (NER) need to have their CV verified by a Member, Senior Member or Fellow of Engineers Australia, or a senior experienced engineer or the equivalent in their Occupational Category. The person providing the verification is required to personally confirm the accuracy of the statements made.
             
         Verified Curriculum Vitae must be signed with the name and Engineers Australia membership number of the Verifier. They must also include a statement as follows:
 
@@ -295,7 +295,7 @@ docs:guideline a skos:Concept ;
     skos:prefLabel "Guideline"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
 
-docs:form skos:Concept ;
+docs:form a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
     skos:definition """A document that contains fields or spaces for users to fill out with specific information, often used to collect data or initiate a process."""@en ;
