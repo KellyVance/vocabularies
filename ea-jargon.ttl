@@ -566,7 +566,7 @@ eaj:analytical-model a skos:Concept ;
             "Diagnostic Model"@en ;
         skos:prefLabel "Diagnostic Analytical Model"@en ;
         skos:broader eaj:analytical-model .
-l
+
     eaj:predictive-model a skos:Concept ;
         dcterms:source "https://www.gartner.com/en/information-technology/glossary/predictive-analytics"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
