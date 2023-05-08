@@ -135,7 +135,7 @@ eaj:data a skos:Concept ;
 eaj:data-dictionary a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-    skos:definition """A Data Dictionary is a central repository that defines and describes the data elements (tables and columns) used in an organization. It provides a comprehensive index of data elements, their definitions, relationships, and rules for usage. It serves as a reference guide for developers, analysts, and business users to ensure consistent interpretation and usage of data across different applications and systems. In practice data definitions commonly describe and define the tables in a database, the columns in each table, their relationships and linkages, and the rules pertaining to the data such as valid data types and accepted values. Data dictionaries may also include describe data flows and exchange between systems."""@en ;
+    skos:definition """A Data Dictionary is a central repository that defines and describes the data elements (tables and columns) used in an organization. It provides a comprehensive index of data elements, their definitions, relationships, and rules for usage. It serves as a reference guide for developers, analysts, and business users to ensure consistent interpretation and usage of data across different applications and systems. In practice data definitions commonly describe and define the tables in a database, the columns in each table, their relationships and linkages, and the rules pertaining to the data such as valid data types and accepted values. Data dictionaries may also include describe data flows and exchange between systems and separate databases."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:prefLabel "Data Dictionary"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
@@ -566,7 +566,7 @@ eaj:analytical-model a skos:Concept ;
             "Diagnostic Model"@en ;
         skos:prefLabel "Diagnostic Analytical Model"@en ;
         skos:broader eaj:analytical-model .
-
+l
     eaj:predictive-model a skos:Concept ;
         dcterms:source "https://www.gartner.com/en/information-technology/glossary/predictive-analytics"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -1444,6 +1444,11 @@ eaj:data-theory a skos:Collection ;
 	skos:prefLabel "Data Concepts and Theory"@en ;
 	skos:definition """The terminology used to describe and distinguish data and its associated processes."""@en ;
     skos:member
+        eaj:analytical-model,
+        eaj:descriptive-model,
+            eaj:diagnostic-model,
+            eaj:predictive-model,
+            eaj:prescriptive-model,
         eaj:data,
             eaj:ref-data,
             eaj:transactional-data,
