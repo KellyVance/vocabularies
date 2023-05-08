@@ -404,7 +404,7 @@ docs:minutes a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
     skos:notation "MoM" ;
     skos:altLabel "Minutes of Meeting"@en,
-        "Meeting Minutes"@en
+        "Meeting Minutes"@en,
         "Protocols"@en,
         "Meeting Record"@en ;
     skos:prefLabel "Minutes"@en ;
@@ -609,7 +609,7 @@ docs:skilled-visas a skos:Concept ;
             skos:prefLabel "Skilled Independent visa"@en ;
             skos:broader docs:visas-gsm .
 
-            docs:visa 189-pts a skos:Concept ;
+            docs:visa-189-pts a skos:Concept ;
                 dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/points-tested"^^xsd:anyURI ;
                 rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
                 skos:definition """This visa lets invited workers with skills we need, to live and work permanently anywhere in Australia.
@@ -626,7 +626,7 @@ docs:skilled-visas a skos:Concept ;
                 skos:prefLabel "Skilled Independent visa - Points-tested stream"@en ;
                 skos:broader docs:visa-189 .
 
-            docs:visa 189-nzs a skos:Concept ;
+            docs:visa-189-nzs a skos:Concept ;
                 dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/new-zealand"^^xsd:anyURI ;
                 rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
                 skos:definition """This visa lets eligible New Zealand citizens who have demonstrated commitment and contribution to Australia, live and work in Australia permanently.
@@ -643,7 +643,7 @@ docs:skilled-visas a skos:Concept ;
                 skos:prefLabel "Skilled Independent visa - New Zealand stream"@en ;
                 skos:broader docs:visa-189 .
 
-            docs:visa 189-hks a skos:Concept ;
+            docs:visa-189-hks a skos:Concept ;
                 dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/hong-kong"^^xsd:anyURI ;
                 rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
                 skos:definition """This visa lets eligible Hong Kong or British National (Overseas) passport holders who have demonstrated commitment to Australia, live and work in Australia permanently.
@@ -1016,7 +1016,7 @@ docs:skilled-visas a skos:Concept ;
             skos:broader docs:visa-482 .
 
         docs:visa-482-se a skos:Concept ;
-            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482/subsequent-entrant"^^xsd:/anyURI ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482/subsequent-entrant"^^xsd:anyURI ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
             skos:definition """This visa is for family members of subclass 457 and TSS visa holders who are applying separately for their TSS visa and wish to join the primary subclass 457 or TSS visa holder in Australia.
             
@@ -1057,7 +1057,7 @@ docs:skilled-visas a skos:Concept ;
         skos:broader docs:skilled-visas .
            
         docs:visa-485-gws a skos:Concept ;
-            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/graduate-work"^^xsd:/anyURI ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/graduate-work"^^xsd:anyURI ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
             skos:definition """This visa is for international students who have recently graduated with skills and qualifications that are relevant to specific occupations Australia needs. It lets you live, study and work in Australia temporarily.
             
@@ -1079,7 +1079,7 @@ docs:skilled-visas a skos:Concept ;
             skos:broader docs:visa-485 .
 
         docs:visa-485-psws a skos:Concept ;
-            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/post-study-work"^^xsd:/anyURI ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/post-study-work"^^xsd:anyURI ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
             skos:definition """This visa is for international students who have recently graduated with a degree from an Australian institution. It lets you live, work and study in Australia, temporarily.
             
@@ -1104,7 +1104,7 @@ docs:skilled-visas a skos:Concept ;
             skos:broader docs:visa-485 .
 
         docs:visa-485-spsws a skos:Concept ;
-            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/second-post-study-work"^^xsd:/anyURI ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/second-post-study-work"^^xsd:anyURI ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
             skos:definition """This visa is for holders of a Temporary Graduate visa (first Post-Study Work stream or Replacement stream) who graduated with a degree from an Australian institution located in a regional area. It lets you live, work and study in Australia, temporarily.
             
@@ -1124,7 +1124,7 @@ docs:skilled-visas a skos:Concept ;
             skos:broader docs:visa-485 .
 
         docs:visa-485-rs a skos:Concept ;
-            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/replacement-stream"^^xsd:/anyURI ;
+            dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/replacement-stream"^^xsd:anyURI ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
             skos:definition """TThis visa is for current and former Temporary Graduate visa holders who lost time on their original visa due to COVID-19 travel restrictions. It lets you live, work and study in Australia temporarily.
             
@@ -1146,4 +1146,3 @@ docs:skilled-visas a skos:Concept ;
             skos:altLabel "Temporary Graduate visa (subclass 485) - Replacement stream"@en ;
             skos:prefLabel "Temporary Graduate visa - Replacement stream"@en ;
             skos:broader docs:visa-485 .
-
