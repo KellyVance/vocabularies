@@ -13,7 +13,7 @@
     dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
     dcterms:created "2023-03-01"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
-    dcterms:modified "2022-03-01"^^xsd:date ;
+    dcterms:modified "2023-05-09"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     skos:definition """The types of agents who can interact with Engineers Australia to perform services as customers, staff, advisors, representatives etc. People and Organisations whose actions contribute to the operation of Engineers Australia."""@en ;
