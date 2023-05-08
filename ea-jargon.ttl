@@ -825,7 +825,7 @@ eaj:database a skos:Concept ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
         skos:definition """A relational database, or relational database management system (RDMS), stores information in tables. Often, these tables have shared information between them, causing a relationship to form between tables. This is where a relational database gets its name from.
 
-        A table uses columns to define the information being stored and rows for the actual data. Each table will have a column that must have unique values—known as the primary key. This column can then be used in other tables, if relationships are to be defined between them. When one table's primary key is used in another table, this column in the second table is known as the foreign key."""@en ;
+        A table uses columns to define the information being stored and rows for the actual data. Each table will have a column that must have unique values-known as the primary key. This column can then be used in other tables, if relationships are to be defined between them. When one table's primary key is used in another table, this column in the second table is known as the foreign key."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
         skos:notation "RDMS" ;
         skos:prefLabel "Relational Database"@en ;
@@ -839,7 +839,7 @@ eaj:database a skos:Concept ;
         There are a few different groups of database types that store the data in different ways:
         Document Databases - store data in documents, which are usually JSON-like structures that support a variety of data types. 
         Key-Value Databases - This is the most basic type of database, where information is stored in two parts: key and value.
-        Graph Databases - Graph databases are the most specialized of the non-relational database types. They use a structure of elements called nodes that store data, and edges between them contain attributes about the relationship.Relationships are defined in the edges, which makes searches related to these relationships naturally fast. Plus, they are flexible because new nodes and edges can be added easily. They also don't have to have a defined schema like a traditional relational database.
+        Graph Databases - Graph databases are the most specialized of the non-relational database types. They use a structure of elements called nodes that store data, and edges between them contain attributes about the relationship. Relationships are defined in the edges, which makes searches related to these relationships naturally fast. Plus, they are flexible because new nodes and edges can be added easily. They also don't have to have a defined schema like a traditional relational database.
         Wide-column databases - Wide-column databases, similar to relational databases, store data in tables, columns, and rows. However, the names and formatting of the columns don't have to match in each row. The columns can even be stored across multiple servers. They are considered two-dimensional key-value stores because they use multi-dimensional mapping to reference data by row and column."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
         skos:notation "NoSQL" ;
@@ -885,7 +885,7 @@ eaj:data-lifecycle a skos:Concept ;
         dcterms:source "https://www.ibm.com/au-en/topics/data-lifecycle-management"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
         sdo:isPartOf eaj:data-lifecycle ;
-        skos:definition """During this phase, data becomes available to business users. DLM enables organizations to define who can use the data and the purpose for which it can be used. Once the data is made available it can be leveraged for a range of analyses—from basic exploratory data analysis and data visualizations to more advanced data mining and machine learning techniques. All of these methods play a role in business decision-making and communication to various stakeholders.
+        skos:definition """During this phase, data becomes available to business users. DLM enables organizations to define who can use the data and the purpose for which it can be used. Once the data is made available it can be leveraged for a range of analyses-from basic exploratory data analysis and data visualizations to more advanced data mining and machine learning techniques. All of these methods play a role in business decision-making and communication to various stakeholders.
 
         Additionally, data usage isn't necessarily restricted to internal use only. For example, external service providers could use the data for purposes such as marketing analytics and advertising. Internal uses include day-to-day business processes and workflows, such as dashboards and presentations."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
@@ -896,7 +896,7 @@ eaj:data-lifecycle a skos:Concept ;
         dcterms:source "https://www.ibm.com/au-en/topics/data-lifecycle-management"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
         sdo:isPartOf eaj:data-lifecycle ;
-        skos:definition """During this phase, data becomes available to business users. DLM enables organizations to define who can use the data and the purpose for which it can be used. Once the data is made available it can be leveraged for a range of analyses—from basic exploratory data analysis and data visualizations to more advanced data mining and machine learning techniques. All of these methods play a role in business decision-making and communication to various stakeholders.
+        skos:definition """During this phase, data becomes available to business users. DLM enables organizations to define who can use the data and the purpose for which it can be used. Once the data is made available it can be leveraged for a range of analyses-from basic exploratory data analysis and data visualizations to more advanced data mining and machine learning techniques. All of these methods play a role in business decision-making and communication to various stakeholders.
 
         Additionally, data usage isn't necessarily restricted to internal use only. For example, external service providers could use the data for purposes such as marketing analytics and advertising. Internal uses include day-to-day business processes and workflows, such as dashboards and presentations."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
@@ -940,7 +940,7 @@ eaj:data-model a skos:Concept ;
     eaj:semantic-layer a skos:Concept ;
         dcterms:source "https://www.datameer.com/blog/what-is-a-semantic-layer/"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-        skos:definition """A semantic layer is a business representation of data and a type of post-hoc data model. It enables end-users to quickly discover and access data using standard search terms — like a customer, recent purchase, and prospect. It also provides human-readable terms to data sources that otherwise would be impossible to discover (e.g., table slsqtq121 becomes Sales West 1st Quarter 2021).
+        skos:definition """A semantic layer is a business representation of data and a type of post-hoc data model. It enables end-users to quickly discover and access data using standard search terms - like a customer, recent purchase, and prospect. It also provides human-readable terms to data sources that otherwise would be impossible to discover (e.g., table slsqtq121 becomes Sales West 1st Quarter 2021).
         
         A Semantic Layer is an abstraction layer between the physical data sources and the end-users. It is a virtual layer that translates technical data into business terms, making it easier for non-technical users to access and analyze data. The Semantic Layer serves as a bridge between the technical and business worlds, and it can provide a single, unified view of data across multiple sources. It also allows users to create custom reports and queries without requiring technical expertise. Data Models are typically implemented at the database or data warehouse level, while Semantic Layers are implemented in the business intelligence or analytics layer.
         
@@ -1286,7 +1286,7 @@ eaj:prosci a skos:Concept ;
     
     Although the Prosci Methodology encompasses a variety of models, tools, assessments, processes and more, today it is comprised of three main components:
     - PCT Model: a simple but powerful framework for establishing and connecting the most important aspects of any successful change effort
-    - ADKAR Model: a highly effective model for guiding individuals through the experiences—or elements—needed to make the change
+    - ADKAR Model: a highly effective model for guiding individuals through the experiences-or elements-needed to make the change
     - Prosci 3-Phase Process: a structured, flexible framework for driving change at the organizational level."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
     skos:notation "PROSCI" ;
