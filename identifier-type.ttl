@@ -112,7 +112,7 @@ id:firearms-licence a skos:Concept ;
  skos:prefLabel "Firearms licence"@en ;
  skos:topConceptOf <http://linked.data.gov.au/def/party-identifier-type> .
 
-id:foregin-passport a skos:Concept ;
+id:foreign-passport a skos:Concept ;
  skos:definition "A foreign passport is a basic identity document accepted as valid for crossing international borders, issued by a government, other than Australia's, to its citizens. Source: The New Oxford Companion to Law"@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/party-identifier-type> ;
  skos:inScheme <http://linked.data.gov.au/def/party-identifier-type> ;

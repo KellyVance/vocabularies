@@ -1146,4 +1146,3 @@ docs:skilled-visas a skos:Concept ;
             skos:altLabel "Temporary Graduate visa (subclass 485) - Replacement stream"@en ;
             skos:prefLabel "Temporary Graduate visa - Replacement stream"@en ;
             skos:broader docs:visa-485 .
-

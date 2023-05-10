@@ -17,14 +17,21 @@
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
     dcterms:modified "2022-03-01"^^xsd:date ;
     dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
-    dcterms:source "https://www.abs.gov.au/statistics/classifications/australian-and-new-zealand-standard-research-classification-anzsrc/2020"^^xsd:anyURI ;
-    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;                                      
+    dcterms:source "http://eulersharp.sourceforge.net/2003/03swap/event"^^xsd:anyURI ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    skos:hasTopConcept
+        event:MostUnlikely,
+        event:Unlikely,
+        event:Possible,
+        event:Likely,
+        event:MostLikely ;                                    
     skos:definition "A selected and augmented profile of the risk likelihood of Events from Agfa Healthcare/Belgium in the eulersharp event namespace."@en ;
     skos:altLabel "Risk Likelihood"@en ;
     skos:prefLabel "Risk Probability"@en .
 
 event:MostUnlikely a skos:Concept ;
 	rdfs:isDefinedBy <http://eulersharp.sourceforge.net/2003/03swap/event#>;
+    dcterms:source "http://eulersharp.sourceforge.net/2003/03swap/event"^^xsd:anyURI ;
 	rdfs:label """most unlikely"""@en;
     skos:prefLabel "Rare"@en ;
     skos:inScheme <https://linked.data.gov.au/def/risk-probability> ;
@@ -32,6 +39,7 @@ event:MostUnlikely a skos:Concept ;
 
 event:Unlikely a skos:Concept ;
 	rdfs:isDefinedBy <http://eulersharp.sourceforge.net/2003/03swap/event#>;
+    dcterms:source "http://eulersharp.sourceforge.net/2003/03swap/event"^^xsd:anyURI ;
 	rdfs:label """unlikely"""@en;
     skos:prefLabel "Unlikely"@en ;
     skos:inScheme <https://linked.data.gov.au/def/risk-probability> ;
@@ -39,21 +47,24 @@ event:Unlikely a skos:Concept ;
 
 risk:Possible
     rdfs:isDefinedBy <https://linked.data.gov.au/def/risk-probability>;
-	rdfs:label """possible"""@en;
+    dcterms:source "http://eulersharp.sourceforge.net/2003/03swap/event"^^xsd:anyURI ;
+    rdfs:label """possible"""@en;
     skos:prefLabel "Possible"@en ;
     skos:inScheme <https://linked.data.gov.au/def/risk-probability> ;
 	skos:definition """Probability of an output of a process being moderate. A 1 in 100 - 1,000 probability of occurrence. Might occur at some time in the future."""@en.
 
 event:Likely a skos:Concept ;
 	rdfs:isDefinedBy <http://eulersharp.sourceforge.net/2003/03swap/event#>;
-	rdfs:label """likely"""@en;
+    dcterms:source "http://eulersharp.sourceforge.net/2003/03swap/event"^^xsd:anyURI ;
+    rdfs:label """likely"""@en;
     skos:prefLabel "Likely"@en ;
     skos:inScheme <https://linked.data.gov.au/def/risk-probability> ;
 	skos:definition """Probability of an output of a process being high. A 1 in 10 - 100 probability of occurrence. Will probably occur."""@en.
 
 event:MostLikely a skos:Concept ;
 	rdfs:isDefinedBy <http://eulersharp.sourceforge.net/2003/03swap/event#>;
-	rdfs:label """most likely"""@en;
+    dcterms:source "http://eulersharp.sourceforge.net/2003/03swap/event"^^xsd:anyURI ;
+    rdfs:label """most likely"""@en;
     skos:prefLabel "Almost Certain"@en ;
     skos:inScheme <https://linked.data.gov.au/def/risk-probability> ;
 	skos:definition """Probability of an output of a process being very high. A 1 in 1 - 10 probability of occurrence. Is expected to occur in most circumstances."""@en;
