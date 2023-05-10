@@ -13,7 +13,7 @@
     dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
     dcterms:created "2023-03-01"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
-    dcterms:modified "2022-03-01"^^xsd:date ;
+    dcterms:modified "2023-05-09"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     skos:hasTopConcept
@@ -31,6 +31,7 @@ agnt:person a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     skos:definition """A person is an individual human, acting in a personal or professional capacity."""@en ;
+    skos:scopeNote "An individual acting as a business is considered an organisation that consists of one person. Commonly the correct classification for an individual acting in this capacity will be a Sole Trader"@en ;
     skos:prefLabel "Person"@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-agents> ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-agents> .

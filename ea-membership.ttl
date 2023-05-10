@@ -11,7 +11,7 @@
     dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
     dcterms:created "2022-11-08"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
-    dcterms:modified "2022-11-09"^^xsd:date ;
+    dcterms:modified "2023-05-09"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     skos:definition "The grade of membership of Engineers Australia. Grade reflects the experience and skill level of a member and corresponds to a specific level of EA Membership."@en ;
@@ -25,7 +25,7 @@
 eagrd:affiliate a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-    skos:definition "A member of Engineers Australia who is not part of the engineering profession and is therefore ineligible to be a Fellow, Member, Graduate or Student, but who has an interest in the engineering profession. Similar to Member grade for a non-engineer."@en ;
+    skos:definition """A member of Engineers Australia who is not part of the engineering profession and is therefore ineligible to be a Fellow, Member, Graduate or Student, but who has an interest in the engineering profession. Similar to Member grade for a non-engineer."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-grade> ;
     skos:notation "Affil" ;
     skos:prefLabel "Affiliate"@en ;
@@ -34,7 +34,7 @@ eagrd:affiliate a skos:Concept ;
 eagrd:companion a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-    skos:definition "A member of Engineers Australia who is not part of the engineering profession and is therefore ineligible to be a Fellow, Member, Graduate or Student, but who has an interest in the engineering profession and has made a significant contribution. Similar to Fellow grade for a non-engineer)."@en ;
+    skos:definition """A member of Engineers Australia who is not part of the engineering profession and is therefore ineligible to be a Fellow, Member, Graduate or Student, but who has an interest in the engineering profession and has made a significant contribution. Similar to Fellow grade for a non-engineer)."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-grade> ;
     skos:notation "Comp" ;
     skos:prefLabel "Companion"@en ;
@@ -43,11 +43,11 @@ eagrd:companion a skos:Concept ;
 eagrd:fellow a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-    skos:definition "A member of Engineers Australia and very experienced engineer who has made a significant contribution to the profession. To apply for membership at the grade of Fellow, an applicant must:
+    skos:definition """A member of Engineers Australia and very experienced engineer who has made a significant contribution to the profession. To apply for membership at the grade of Fellow, an applicant must:
     - Have held a sustained major responsibility in the design or execution of important engineering work; or
     - Have high education qualifications, held a prominent position in the profession and made a major contribution to the science or practice of engineering; or
     - Have had suitable engineering education/training, extensive responsibility in the design/execution of important engineering work and achieved exceptional eminence in the profession.
-    - In all but exceptional circumstances, an applicant for Fellow will be a Chartered Member or have been Chartered with Engineers Australia Previously known as an Officer Fellow."@en ;
+    - In all but exceptional circumstances, an applicant for Fellow will be a Chartered Member or have been Chartered with Engineers Australia Previously known as an Officer Fellow."""@en ;
     skos:hiddenLabel "Officer Fellow"@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-grade> ;
     skos:notation "F" ;
@@ -57,7 +57,7 @@ eagrd:fellow a skos:Concept ;
 eagrd:graduate a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-    skos:definition "Graduate membership is available to graduated engineers who an accredited or recognised course in Engineering and are no more than four years out of university.  Previously known as a Graduate Officer."@en ;
+    skos:definition """Graduate membership is available to graduated engineers who an accredited or recognised course in Engineering and are no more than four years out of university.  Previously known as a Graduate Officer."""@en ;
     skos:hiddenLabel "Graduate Officer"@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-grade> ;
     skos:notation "Grad" ;
@@ -67,7 +67,7 @@ eagrd:graduate a skos:Concept ;
 eagrd:hon-fellow a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-    skos:definition "An honorary title for a member of Engineers Australia for outstanding achievement and contribution to the profession."@en ;
+    skos:definition """An honorary title for a member of Engineers Australia for outstanding achievement and contribution to the profession."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-grade> ;
     skos:notation "HonF" ;
     skos:prefLabel "Honorary Fellow"@en ;
@@ -76,7 +76,7 @@ eagrd:hon-fellow a skos:Concept ;
 eagrd:member a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-    skos:definition "The grade of Member is open to those who hold an Engineers Australia accredited or recognised Australian tertiary qualification in engineering, and have gained at least 3 years of postgraduate experience in the engineering industry. Previously known as an Officer Member."@en ;
+    skos:definition """The grade of Member is open to those who hold an Engineers Australia accredited or recognised Australian tertiary qualification in engineering, and have gained at least 3 years of postgraduate experience in the engineering industry. Previously known as an Officer Member."""@en ;
     skos:hiddenLabel "Officer Member"@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-grade> ;
     skos:notation "M" ;
@@ -86,7 +86,7 @@ eagrd:member a skos:Concept ;
 eagrd:student a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-grade> ;
-    skos:definition "Student membership is available to undergraduate students studying an accredited or recognised Australian course in Engineering.  "@en ;
+    skos:definition """Student membership is available to undergraduate students studying an accredited or recognised Australian course in Engineering."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-grade> ;
     skos:notation "Stud" ;
     skos:prefLabel "Student"@en ;
