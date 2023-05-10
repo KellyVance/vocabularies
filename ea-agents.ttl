@@ -16,6 +16,9 @@
     dcterms:modified "2022-03-01"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    skos:hasTopConcept
+        agnt:person,
+        agnt:organisation ;
     skos:definition """The types of agents who can interact with Engineers Australia to perform services as customers, staff, advisors, representatives etc. People and Organisations whose actions contribute to the operation of Engineers Australia."""@en ;
     skos:scopeNote """Agents describes the type of agent, whereas roles describes the actions performed by an agent. For example a University or Tertiary institution is a type of organisation but it may play a variety of roles in its interactions with Engineers Australia such as a customer, event host, advisor, vendor, etc."""@en;
     skos:prefLabel "Engineers Australia Agents"@en .
@@ -114,6 +117,7 @@ agnt:organisation a skos:Concept ;
             skos:definition """Government units (as defined in Chapter 2) which are created as bodies corporate through the Corporations Act in Australia or through other legislation (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8)."""@en ;
             skos:altLabel "Government Company"@en ;
             skos:prefLabel "Government-Run Company"@en ;
+            skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
 
         agnt:private-company a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
@@ -194,7 +198,7 @@ agnt:organisation a skos:Concept ;
 
         agnt:vet-institute a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
-            dcterms:source <https://www.training.com.au/vet-courses/> ;
+            dcterms:source "https://www.training.com.au/vet-courses/"^^xsd:anyURI ;
             skos:prefLabel "VET institute"@en ;
             skos:broader agnt:tertiary-institution ;
             skos:definition """A VET institute is an educational institution that provides vocational education and training (VET) courses.
