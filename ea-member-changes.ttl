@@ -66,6 +66,15 @@ eamc:current-member a skos:Concept ;
         skos:prefLabel "Revenue Potential"@en ;
         skos:broader eamc:current-member .
 
+    eamc:lost-potential a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:definition """An individual who has a current and active free membership with Engineers Australia and in the previous year also provided no payment due to never having been a member, inactive membership, or free membership. A member change that may become a future source of revenue."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:altLabel "Revenue Lost Potential"@en ;
+        skos:prefLabel "Lost Potential"@en ;
+        skos:broader eamc:current-member .
+
    eamc:revenue-exemption a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
@@ -169,12 +178,12 @@ eamc:current-member a skos:Concept ;
                 skos:prefLabel "Student Readmission"@en ;
                 skos:broader eamc:readmission, eamc:revenue-potential .
 
-    eamc:continuation a skos:Concept ;
+    eamc:retention a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
         skos:definition """An individual who has a current and active membership with Engineers Australia carried over from the previous financial year."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:prefLabel "Continuation"@en ;
+        skos:prefLabel "Retention"@en ;
         skos:broader eamc:current-member .
 
         eamc:unpaid-retention a skos:Concept ;
@@ -182,8 +191,9 @@ eamc:current-member a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
             skos:definition """An individual who has a current and active membership with Engineers Australia carried over from a free membership in the previous financial year."""@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-            skos:prefLabel "Unpaid Retention"@en ;
-            skos:broader eamc:continuation .
+            skos:altLabel "Unpaid Retention"@en ;
+            skos:prefLabel "Retention from Unpaid"@en ;
+            skos:broader eamc:retention .
 
             eamc:student-upgrade a skos:Concept ;
                 dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -209,31 +219,39 @@ eamc:current-member a skos:Concept ;
                     skos:prefLabel "Graduation"@en ;
                     skos:broader eamc:student-upgrade, eamc:revenue-acquisition .
 
-            eamc:student-continuation a skos:Concept ;
+            eamc:unpaid-continuation a skos:Concept ;
                 dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
                 rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
-                skos:definition """An individual who has a current and active free Student grade membership with Engineers Australia carried over from the previous financial year. A student membership that has not been cancelled or passed the maximum student membership duration."""@en ;
+                skos:definition """An individual who has a current and active free-or-complimentary membership with Engineers Australia carried over from a likewise free-or-complimentary membership in the previous financial year."""@en ;
                 skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-                skos:prefLabel "Student Continuation"@en ;
-                skos:broader eamc:unpaid-retention, eamc:revenue-neutral .
+                skos:prefLabel "Unpaid Continuation"@en ;
+                skos:broader eamc:unpaid-retention .
 
-            eamc:hon-fellow-continuation a skos:Concept ;
-                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
-                skos:definition """An individual who has a current and active complimentary Honorary Fellow grade membership with Engineers Australia carried over from the previous financial year."""@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-                skos:prefLabel "Honorary Fellowship Continuation"@en ;
-                skos:broader eamc:unpaid-retention, eamc:revenue-neutral .
+                eamc:student-continuation a skos:Concept ;
+                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
+                    skos:definition """An individual who has a current and active free Student grade membership with Engineers Australia carried over from the previous financial year. A student membership that has not been cancelled or passed the maximum student membership duration."""@en ;
+                    skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
+                    skos:prefLabel "Student Continuation"@en ;
+                    skos:broader eamc:unpaid-continuation, eamc:revenue-neutral .
 
-        eamc:retention a skos:Concept ;
+                eamc:hon-fellow-continuation a skos:Concept ;
+                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
+                    skos:definition """An individual who has a current and active complimentary Honorary Fellow grade membership with Engineers Australia carried over from the previous financial year."""@en ;
+                    skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
+                    skos:prefLabel "Honorary Fellowship Continuation"@en ;
+                    skos:broader eamc:unpaid-continuation, eamc:revenue-neutral .
+
+        eamc:paid-retention a skos:Concept ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;xsd:anyURI
             skos:definition """An individual who has a current and active membership with Engineers Australia carried over from an active paid membership in the previous financial year."""@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
             skos:altLabel "Revenue Retention"@en,
                 "Member Retention"@en ;
-            skos:prefLabel "Retention"@en ;
-            skos:broader eamc:continuation .
+            skos:prefLabel "Retention from Paid"@en ;
+            skos:broader eamc:retention .
 
             eamc:renewal a skos:Concept ;
                 dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -241,25 +259,31 @@ eamc:current-member a skos:Concept ;
                 skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the previous financial year who made payment prior to the renewal fee due date."""@en ;
                 skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
                 skos:prefLabel "Renewal"@en ;
-                skos:broader eamc:retention, eamc:revenue-retention .
+                skos:broader eamc:paid-retention, eamc:revenue-retention .
 
             eamc:reactivation a skos:Concept ;
                 dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
                 rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
-                skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the previous financial year but who failed to make payment prior to the renewal fee due date, and therefore transitioned to Lapsed membership status during the processing and erasure period.
-                
-                Members may be reactivated manually after the erasure period (i.e. instead of as a readmission) at the  discretion of Engineers Australia where exceptional circumstances are evident."""@en ;
+                skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the previous financial year but who made payment during the erasure period, i.e. after the renewal fee due date but before the erasure date. These members transition to Lapsed membership status during the processing and erasure period until payment is received."""@en ;
                 skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
                 skos:prefLabel "Reactivation"@en ;
-                skos:broader eamc:retention, eamc:revenue-retention .
+                skos:broader eamc:paid-retention, eamc:revenue-retention .
+
+            eamc:restoration a skos:Concept ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
+                skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the previous financial year but who made payment after the erasure period, i.e. after both the renewal fee due date and the erasure date. These members transition to Lapsed membership status during the processing and erasure period and then become Inactive (past) members after erasure and until payment is received and their membership restored."""@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
+                skos:prefLabel "Restoration"@en ;
+                skos:broader eamc:paid-retention, eamc:revenue-retention .
 
             eamc:hon-fellowship a skos:Concept ;
                 dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
                 rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
-                skos:definition """An individual who has a current and active free and complimentary Honorary Fellow grade membership with Engineers Australia carried over from a paid membership in the previous financial year. An individual who had paid EA membership and was been awarded Honorary Fellowship in the last financial year."""@en ;
+                skos:definition """An individual who has a current and active free and complimentary Honorary Fellow grade membership with Engineers Australia carried over from a paid membership in the previous financial year. An individual who had paid EA membership and has been awarded Honorary Fellowship in the last financial year."""@en ;
                 skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
                 skos:prefLabel "Honorary Fellowship"@en ;
-                skos:broader eamc:retention, eamc:revenue-exemption .
+                skos:broader eamc:paid-retention, eamc:revenue-exemption .
 
 eamc:at-risk-member a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -326,10 +350,9 @@ eamc:lost-member a skos:Concept ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
         skos:definition """An individual who held a free Student grade membership with Engineers Australia in the past financial year but whose membership is now inactive due to active cancellation or exceeding the maximum student membership duration. Note: Maximum student membership duration may be extended at the discretion of Engineers Australia for extenuating or unusual circumstances."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:altLabel "Revenue Lost Potential"@en,
-            "Student Cancellation"@en ;
+        skos:altLabel "Student Cancellation"@en ;
         skos:prefLabel "Student Erasure"@en ;
-        skos:broader eamc:lost-member .
+        skos:broader eamc:lost-potential .
 
 #COLLECTIONS
 
