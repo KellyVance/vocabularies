@@ -14,10 +14,14 @@
     dcterms:created "2023-03-07"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
-    dcterms:modified "2023-03-07"^^xsd:date ;
+    dcterms:modified "2023-05-11"^^xsd:date ;
     dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
     dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
-    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
+    skos:hasTopConcept
+        eamc:current-member,
+        eamc:at-risk-member,
+        eamc:lost-member ;
     skos:definition """The changes to membership that a may occur within the framework of Engineers Australia membership. Changes are defined by status and grade and payment status. The terminating assignable concepts are nested in a dual hierarchy of status and payment groupings of membership grades. The status classification qualifies membership flux, i.e. the gains, losses, retention, and at-risk members. The payment classification qualifies impacts to revenue that result from changes to membership."""@en ;
     skos:prefLabel "Engineers Australia Membership Changes"@en .
 
@@ -34,6 +38,8 @@
     sdo:name "Vance Kelly" ;
     sdo:identifier <https://orcid.org/0000-0003-2309-7004> .
 
+#MEMBERSHIP FLUX
+
 eamc:current-member a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
@@ -41,47 +47,6 @@ eamc:current-member a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
     skos:prefLabel "Current Member"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-member-changes> .
-
-    eamc:revenue-acquisition a skos:Concept ;
-        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:definition """An individual who has a current and active paid membership with Engineers Australia and in the previous year provided no payment due to never having been a member, inactive membership, or free membership. A member change that increases member revenue relative to the prevous financial year."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:prefLabel "Revenue Acquisition"@en ;
-        skos:broader eamc:current-member .
-    
-    eamc:revenue-neutral a skos:Concept ;
-        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:definition """An individual who has a current and active unpaid membership with Engineers Australia and in the previous year possessed free membership. A member change that has no impact on revenue or potential revenue relative to the prevous financial year."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:prefLabel "Revenue Neutral"@en ;
-        skos:broader eamc:current-member .
-
-    eamc:revenue-potential a skos:Concept ;
-        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:definition """An individual who has a current and active free membership with Engineers Australia and in the previous year also provided no payment due to never having been a member, inactive membership, or free membership. A member change that may become a future source of revenue."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:prefLabel "Revenue Potential"@en ;
-        skos:broader eamc:current-member .
-
-    eamc:lost-potential a skos:Concept ;
-        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:definition """An individual who has a current and active free membership with Engineers Australia and in the previous year also provided no payment due to never having been a member, inactive membership, or free membership. A member change that may become a future source of revenue."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:altLabel "Revenue Lost Potential"@en ;
-        skos:prefLabel "Lost Potential"@en ;
-        skos:broader eamc:current-member .
-
-   eamc:revenue-exemption a skos:Concept ;
-        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:definition """An individual who has a current and active free and complimentary membership with Engineers Australia as an that is exempt from fees and did not hold complimentary membership in the previous year. Complimentary membership and fee exemption is conferred upon Honorary Fellows."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:prefLabel "Revenue Exemption"@en ;
-        skos:broader eamc:current-member .    
 
     eamc:member-gain a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -245,18 +210,17 @@ eamc:current-member a skos:Concept ;
 
         eamc:paid-retention a skos:Concept ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;xsd:anyURI
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
             skos:definition """An individual who has a current and active membership with Engineers Australia carried over from an active paid membership in the previous financial year."""@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-            skos:altLabel "Revenue Retention"@en,
-                "Member Retention"@en ;
+            skos:altLabel "Member Retention"@en ;
             skos:prefLabel "Retention from Paid"@en ;
             skos:broader eamc:retention .
 
             eamc:renewal a skos:Concept ;
                 dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
                 rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
-                skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the previous financial year who made payment prior to the renewal fee due date."""@en ;
+                skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the previous financial year who made on-time payment prior to the renewal fee due date."""@en ;
                 skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
                 skos:prefLabel "Renewal"@en ;
                 skos:broader eamc:paid-retention, eamc:revenue-retention .
@@ -290,8 +254,6 @@ eamc:at-risk-member a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
     skos:definition """An individual who had an active membership with Engineers Australia during the past financial year, but has not made sufficient payment by the due date to continue membership. A member at risk of erasure."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-    skos:altLabel "Revenue At-Risk"@en,
-        "Revenue Risk"@en ;
     skos:prefLabel "At-Risk Member"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-member-changes> .
 
@@ -301,7 +263,7 @@ eamc:at-risk-member a skos:Concept ;
         skos:definition """An individual who had an active membership with Engineers Australia during the past financial year, but has not made any renewal payment by the due date to continue membership. A member at risk of erasure."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
         skos:prefLabel "Lapse"@en ;
-        skos:broader eamc:at-risk-member .
+        skos:broader eamc:at-risk-member, eamc:revenue-at-risk .
 
     eamc:part-payment a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -309,7 +271,7 @@ eamc:at-risk-member a skos:Concept ;
         skos:definition """An individual who had an active membership with Engineers Australia during the past financial year, and who has made incomplete payment of  renewal fees by the due date to continue membership. A member at risk of erasure."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
         skos:prefLabel "Part Payment"@en ;
-        skos:broader eamc:at-risk-member .    
+        skos:broader eamc:at-risk-member, eamc:revenue-at-risk .    
 
 eamc:lost-member a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -324,26 +286,25 @@ eamc:lost-member a skos:Concept ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
         skos:definition """An individual who held a paid membership with Engineers Australia in the past financial year but whose membership is now inactive."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
-        skos:altLabel "Revenue Loss"@en,
-            "Member Loss"@en ;
+        skos:hiddenLabel "Member Loss"@en ;
         skos:prefLabel "Termination"@en ;
         skos:broader eamc:lost-member .
 
         eamc:erasure a skos:Concept ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
-            skos:definition """An individual who held a paid membership with Engineers Australia in the past financial year but whose membership is now inactive after failure to make payment by the end of the processing and erasure period. A passive non-payment of fees and subsequent termination of membership."""@en ;
+            skos:definition """An individual who held a paid membership with Engineers Australia in the past financial year but whose membership is now inactive after failure to make payment by the end of the processing and erasure period. A passive non-payment of fees and subsequent termination of membership. Erasure occurs subsequent to a Lapsed status."""@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
             skos:prefLabel "Erasure"@en ;
-            skos:broader eamc:termination .
+            skos:broader eamc:termination, eamc:revenue-loss .
 
         eamc:cancellation a skos:Concept ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
-            skos:definition """An individual who held a paid membership with Engineers Australia in the past financial year but whose membership is now inactive after informing Engineers Australia of intent to not renew membership. An active cancellation or deliberate non-payment of fees and subsequent termination of membership."""@en ;
+            skos:definition """An individual who held a paid membership with Engineers Australia in the past financial year but whose membership is now inactive after resigning from the organisation or informing Engineers Australia of intent to not renew membership for the next membership period. An active cancellation or deliberate non-payment of fees and subsequent termination of membership."""@en ;
             skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
             skos:prefLabel "Cancellation"@en ;
-            skos:broader eamc:termination .
+            skos:broader eamc:termination, eamc:revenue-loss .
 
     eamc:student-erasure a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -352,11 +313,105 @@ eamc:lost-member a skos:Concept ;
         skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
         skos:altLabel "Student Cancellation"@en ;
         skos:prefLabel "Student Erasure"@en ;
-        skos:broader eamc:lost-potential .
+        skos:broader eamc:revenue-lost-potential, eamc:lost-member .
 
+
+#REVENUE FLUX
+
+#eamc:current-member
+
+    eamc:revenue-acquisition a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:definition """An individual who has a current and active paid membership with Engineers Australia and in the previous year provided no payment due to never having been a member, inactive membership, or free membership. A member change that increases member revenue relative to the prevous financial year."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:prefLabel "Revenue Acquisition"@en ;
+        skos:broader eamc:current-member .
+        #eamc:graduation
+        #eamc:promotion
+        #eamc:new-member
+        #ex-student-to-member
+        #member-readmission
+
+    eamc:revenue-neutral a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:definition """An individual who has a current and active unpaid membership with Engineers Australia and in the previous year possessed free membership. A member change that has no impact on revenue or potential revenue relative to the prevous financial year."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:prefLabel "Revenue Neutral"@en ;
+        skos:broader eamc:current-member .
+        #eamc:student-continuation
+        #eamc:hon-fellow-continuation
+
+    eamc:revenue-potential a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:definition """An individual who has a current and active free membership with Engineers Australia and in the previous year also provided no payment due to never having been a member, inactive membership, or free membership. A member change that may become a future source of revenue."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:prefLabel "Revenue Potential"@en ;
+        skos:broader eamc:current-member .
+        #eamc:new-student
+        #eamc:student-readmission
+
+    eamc:revenue-retention a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the previous financial year. A member change that only updates the date membership is paid until and therefore maintains revenue."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:prefLabel "Revenue Potential"@en ;
+        skos:broader eamc:current-member .
+        #eamc:renewal
+        #eamc:reactivation
+        #eamc:restoration
+
+   eamc:revenue-exemption a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:definition """An individual who has a current and active free and complimentary membership with Engineers Australia as an that is exempt from fees and did not hold complimentary membership in the previous year. Complimentary membership and fee exemption is conferred upon Honorary Fellows. A member change that decreases member revenue relative to the prevous financial year due to members being awarded complimentary membership"""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:prefLabel "Revenue Exemption"@en ;
+        skos:broader eamc:current-member .    
+        #eamc:new-hon-fellowship
+        #eamc:hon-fellowship
+
+#eamc:at-risk-member
+
+    eamc:revenue-at-risk a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:definition """An individual who had an active paid membership with Engineers Australia during the past financial year, but has not made sufficient payment by the due date to continue membership. A member change that indicates a risk of revenue loss to the organisation if membership is not reactivated."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:altLabel "Revenue At-Risk"@en ;
+        skos:prefLabel "Revenue Risk"@en ;
+        skos:broader eamc:at-risk-member .
+        #eamc:lapse
+        #eamc:part-payment
+
+#eamc:lost-member
+
+    eamc:revenue-lost-potential a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:definition """An individual who held a free membership with Engineers Australia in the past financial year but whose membership is now inactive. A member change that reduces leads and potential future revenue."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:prefLabel "Revenue Lost Potential"@en ;
+        skos:broader eamc:lost-member .
+        #eamc:student-erasure
+
+    eamc:revenue-loss a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:definition """An individual who held a paid membership with Engineers Australia in the past financial year but whose membership is now inactive. A member change that decreases member revenue relative to the prevous financial year due to membership reduction."""@en ;
+        skos:inScheme <https://linked.data.gov.au/def/ea-member-changes> ;
+        skos:prefLabel "Revenue Loss"@en ;
+        skos:broader eamc:lost-member .
+        #eamc:erasure
+        #eamc:cancellation
+            
 #COLLECTIONS
 
 eamc:single-change-process a skos:Collection ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     skos:altLabel "Selectable Processes"@en ;
     skos:prefLabel "Specific Member Changes"@en ;
 	skos:definition """The concepts without narrower concepts that are used to describe specific membership state changes."""@en ;
@@ -371,7 +426,9 @@ eamc:single-change-process a skos:Collection ;
         eamc:graduation,
         eamc:renewal,
         eamc:reactivation,
+        eamc:restoration,
         eamc:hon-fellowship,
+        eamc:hon-fellow-continuation,
         eamc:student-continuation,
         eamc:lapse,
         eamc:part-payment,
