@@ -34,7 +34,7 @@
 eams:non-member a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-status> ;
-    skos:definition """An individual who does not have current or former membership with Engineers Australia."""@en ;
+    skos:definition """An individual who is not a current or former member of Engineers Australia."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
     skos:prefLabel "Non-Member"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-status> .
@@ -59,7 +59,7 @@ eams:lapsed a skos:Concept ;
 eams:inactive a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-status> ;
-    skos:definition """A previous member of Engineers Australia without current membership. These individuals do not have access to member benefits or the ability to participate in Engineers Australia events, forums, and other services."""@en ;
+    skos:definition """An individual who is not a current member of Engineers Australia but has held membership previously. These individuals do not have access to member benefits or the ability to participate in Engineers Australia events, forums, and other services."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
     skos:altLabel "Past"
     skos:prefLabel "Inactive"@en ;
