@@ -362,7 +362,7 @@ eamc:revenue-flux a skos:Concept ;
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
         skos:definition """An individual who has a current and active free membership with Engineers Australia and in the previous reference period also did not hold an active membership. A member change that adds potential for a future source of revenue."""@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-        skos:prefLabel "Revenue Potential"@en ;
+        skos:prefLabel "Revenue Potential Gain"@en ;
         skos:broader eamc:revenue-flux .
         #eamc:new-student
         #eamc:student-readmission
@@ -408,7 +408,7 @@ eamc:revenue-flux a skos:Concept ;
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
         skos:definition """An individual who held a free membership with Engineers Australia in the reference period but whose membership is now inactive. A member change that reduces leads and potential future revenue."""@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-        skos:prefLabel "Revenue Lost Potential"@en ;
+        skos:prefLabel "Revenue Potential Loss"@en ;
         skos:broader eamc:revenue-flux .
         #eamc:student-erasure
 
