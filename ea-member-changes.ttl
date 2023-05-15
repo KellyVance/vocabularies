@@ -14,7 +14,7 @@
     dcterms:created "2023-03-07"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
-    dcterms:modified "2023-05-11"^^xsd:date ;
+    dcterms:modified "2023-05-15"^^xsd:date ;
     dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
     dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
     dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
@@ -337,7 +337,7 @@ eamc:revenue-flux a skos:Concept ;
     eamc:revenue-acquisition a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-        skos:definition """An individual who has a current and active paid membership with Engineers Australia and in the previous year provided no payment due to never having been a member, inactive membership, or free membership. A member change that increases member revenue relative to the reference period."""@en ;
+        skos:definition """An individual who has a current and active paid membership with Engineers Australia and in the reference period provided no payment due to never having been a member, an inactive membership, or a free membership. A member change that increases member revenue relative to the reference period."""@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
         skos:prefLabel "Revenue Acquisition"@en ;
         skos:broader eamc:revenue-flux .
@@ -350,7 +350,7 @@ eamc:revenue-flux a skos:Concept ;
     eamc:revenue-neutral a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-        skos:definition """An individual who has a current and active unpaid membership with Engineers Australia and in the previous year possessed free membership. A member change that has no impact on revenue or potential revenue relative to the reference period."""@en ;
+        skos:definition """An individual who has a current and active unpaid membership with Engineers Australia and in the reference period possessed a likewise free membership. A member change that has no impact on revenue or potential revenue relative to the reference period."""@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
         skos:prefLabel "Revenue Neutral"@en ;
         skos:broader eamc:revenue-flux .
@@ -360,7 +360,7 @@ eamc:revenue-flux a skos:Concept ;
     eamc:revenue-potential a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-        skos:definition """An individual who has a current and active free membership with Engineers Australia and in the previous year also provided no payment due to never having been a member, inactive membership, or free membership. A member change that may become a future source of revenue."""@en ;
+        skos:definition """An individual who has a current and active free membership with Engineers Australia and in the previous reference period also did not hold an active membership. A member change that adds potential for a future source of revenue."""@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
         skos:prefLabel "Revenue Potential"@en ;
         skos:broader eamc:revenue-flux .
@@ -370,7 +370,7 @@ eamc:revenue-flux a skos:Concept ;
     eamc:revenue-retention a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-        skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the reference period. A member change that only updates the date membership is paid until and therefore maintains revenue."""@en ;
+        skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the reference period. An unchanged paid membership and maintained revenue."""@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
         skos:prefLabel "Revenue Retention"@en ;
         skos:broader eamc:revenue-flux .
@@ -381,7 +381,7 @@ eamc:revenue-flux a skos:Concept ;
    eamc:revenue-exemption a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-        skos:definition """An individual who has a current and active free and complimentary membership with Engineers Australia as an that is exempt from fees and did not hold complimentary membership in the previous year. Complimentary membership and fee exemption is conferred upon Honorary Fellows. A member change that decreases member revenue relative to the reference period due to members being awarded complimentary membership"""@en ;
+        skos:definition """An individual who has a current and active free and complimentary membership with Engineers Australia as an that is exempt from fees and did not hold complimentary membership in the reference period. Complimentary membership and fee exemption is conferred upon Honorary Fellows. A member change that decreases member revenue relative to the reference period due to members being awarded complimentary membership"""@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
         skos:prefLabel "Revenue Exemption"@en ;
         skos:broader eamc:revenue-flux .    
