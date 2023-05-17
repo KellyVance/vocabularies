@@ -34,7 +34,9 @@
 eams:non-member a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-status> ;
-    skos:definition """An individual who is not a current or former member of Engineers Australia."""@en ;
+    skos:definition """An individual who is not a current or former member of Engineers Australia.
+    
+    In application these individuals will have no membership events or member history."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
     skos:prefLabel "Non-Member"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-status> .
@@ -42,7 +44,9 @@ eams:non-member a skos:Concept ;
 eams:active a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-status> ;
-    skos:definition """A member of Engineers Australia with a current membership with all fees and charges fully paid. These members have access to member benefits and are able to participate in Engineers Australia events, forums, and other services."""@en ;
+    skos:definition """A member of Engineers Australia with a current membership with all fees and charges fully paid. These members have access to member benefits and are able to participate in Engineers Australia events, forums, and other services.
+
+    In application the current date will be earlier than the membership renewal due date for these individuals."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
     skos:altLabel "Current"@en ;
     skos:prefLabel "Active"@en ;
@@ -51,7 +55,9 @@ eams:active a skos:Concept ;
 eams:lapsed a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-status> ;
-    skos:definition """A member of Engineers Australia whose membership has expired due to non-payment before the due date, but whose membership has not yet been terminated as part of the subsequent erasure process. Lapsed membership is only a valid status between the due date for renewal (30 June) and the conclusion of the processing and erasure period (typically 31 October)."""@en ;
+    skos:definition """A member of Engineers Australia whose membership has expired due to non-payment before the due date, but whose membership has not yet been terminated as part of the subsequent erasure process. Lapsed membership is only a valid status between the due date for renewal (30 June) and the conclusion of the processing and erasure period (typically 31 October).
+    
+    In application the current date will be later than the membership renewal due date for these individuals but before the erasure date."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
     skos:prefLabel "Lapsed"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-status> .
@@ -59,7 +65,9 @@ eams:lapsed a skos:Concept ;
 eams:inactive a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-status> ;
-    skos:definition """An individual who is not a current member of Engineers Australia but has held membership previously. These individuals do not have access to member benefits or the ability to participate in Engineers Australia events, forums, and other services."""@en ;
+    skos:definition """An individual who is not a current member of Engineers Australia but has held membership previously. These individuals do not have access to member benefits or the ability to participate in Engineers Australia events, forums, and other services.
+    
+    In application the current date will be later than both the membership renewal due date for these individuals and the erasure date."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-status> ;
     skos:altLabel "Past"
     skos:prefLabel "Inactive"@en ;
