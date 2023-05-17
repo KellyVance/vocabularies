@@ -127,7 +127,7 @@ eaj:data a skos:Concept ;
     eaj:master-data a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
-        skos:definition """Master Data refers to a set of core data elements that are shared across multiple applications or business processes within an organization. It provides a consistent and unified view of key business entities such as Agents including organisations and individuals, products, services, locations, and associated attributes."""@en ;
+        skos:definition """Master Data refers to a set of core data elements that are shared across multiple applications or business processes within an organization. It provides a consistent and unified view of key business entities such as Agents including organisations and individuals, products, services, locations, and associated attributes such as contact details and addresses."""@en ;
         skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
         skos:prefLabel "Master Data"@en ;
         skos:broader eaj:data .
