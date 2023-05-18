@@ -17,7 +17,7 @@
     sdo:identifier <https://orcid.org/0000-0003-2309-7004> ;
     sdo:name "Vance Kelly" .
 
-<https://linked.data.gov.au/def/anzco> a owl:Ontology,
+<https://linked.data.gov.au/def/anzsco> a owl:Ontology,
         skos:ConceptScheme ;
     dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
     dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
@@ -40,7 +40,7 @@
 
 anzsco:1 a skos:Concept ;
     dcterms:source "https://www.abs.gov.au/statistics/classifications/anzsco-australian-and-new-zealand-standard-classification-occupations/latest-release#data-downloads"^^xsd:anyURI ;
-    skos:topConceptOf <https://linked.data.gov.au/def/anzco> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/anzsco> ;
     skos:definition "Managers as classified, defined, and managed by the Australian and New Zealand Standard Classification of Occupations, 2021 Australian Update."@en ;
     skos:inScheme <https://linked.data.gov.au/def/anzsco> ;
     skos:notation "1" ;
@@ -2805,7 +2805,7 @@ anzsco:149999-nec5 a skos:Concept ;
 
 anzsco:2 a skos:Concept ;
     dcterms:source "https://www.abs.gov.au/statistics/classifications/anzsco-australian-and-new-zealand-standard-classification-occupations/latest-release#data-downloads"^^xsd:anyURI ;
-    skos:topConceptOf <https://linked.data.gov.au/def/anzco> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/anzsco> ;
     skos:definition "Professionals as classified, defined, and managed by the Australian and New Zealand Standard Classification of Occupations, 2021 Australian Update."@en ;
     skos:inScheme <https://linked.data.gov.au/def/anzsco> ;
     skos:notation "2" ;
@@ -10925,7 +10925,7 @@ anzsco:272613 a skos:Concept ;
 
 anzsco:3 a skos:Concept ;
     dcterms:source "https://www.abs.gov.au/statistics/classifications/anzsco-australian-and-new-zealand-standard-classification-occupations/latest-release#data-downloads"^^xsd:anyURI ;
-    skos:topConceptOf <https://linked.data.gov.au/def/anzco> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/anzsco> ;
     skos:definition "Technicians and Trades Workers as classified, defined, and managed by the Australian and New Zealand Standard Classification of Occupations, 2021 Australian Update."@en ;
     skos:inScheme <https://linked.data.gov.au/def/anzsco> ;
     skos:notation "3" ;
@@ -16295,7 +16295,7 @@ anzsco:399999-nec9 a skos:Concept ;
 
 anzsco:4 a skos:Concept ;
     dcterms:source "https://www.abs.gov.au/statistics/classifications/anzsco-australian-and-new-zealand-standard-classification-occupations/latest-release#data-downloads"^^xsd:anyURI ;
-    skos:topConceptOf <https://linked.data.gov.au/def/anzco> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/anzsco> ;
     skos:definition "Community and Personal Service Workers as classified, defined, and managed by the Australian and New Zealand Standard Classification of Occupations, 2021 Australian Update."@en ;
     skos:inScheme <https://linked.data.gov.au/def/anzsco> ;
     skos:notation "4" ;
@@ -18970,7 +18970,7 @@ anzsco:452499-nec7 a skos:Concept ;
 
 anzsco:5 a skos:Concept ;
     dcterms:source "https://www.abs.gov.au/statistics/classifications/anzsco-australian-and-new-zealand-standard-classification-occupations/latest-release#data-downloads"^^xsd:anyURI ;
-    skos:topConceptOf <https://linked.data.gov.au/def/anzco> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/anzsco> ;
     skos:definition "Clerical and Administrative Workers as classified, defined, and managed by the Australian and New Zealand Standard Classification of Occupations, 2021 Australian Update."@en ;
     skos:inScheme <https://linked.data.gov.au/def/anzsco> ;
     skos:notation "5" ;
@@ -20580,7 +20580,7 @@ anzsco:599999-nec3 a skos:Concept ;
 
 anzsco:6 a skos:Concept ;
     dcterms:source "https://www.abs.gov.au/statistics/classifications/anzsco-australian-and-new-zealand-standard-classification-occupations/latest-release#data-downloads"^^xsd:anyURI ;
-    skos:topConceptOf <https://linked.data.gov.au/def/anzco> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/anzsco> ;
     skos:definition "Sales Workers as classified, defined, and managed by the Australian and New Zealand Standard Classification of Occupations, 2021 Australian Update."@en ;
     skos:inScheme <https://linked.data.gov.au/def/anzsco> ;
     skos:notation "6" ;
@@ -21400,7 +21400,7 @@ anzsco:639911-s2 a skos:Concept ;
 
 anzsco:7 a skos:Concept ;
     dcterms:source "https://www.abs.gov.au/statistics/classifications/anzsco-australian-and-new-zealand-standard-classification-occupations/latest-release#data-downloads"^^xsd:anyURI ;
-    skos:topConceptOf <https://linked.data.gov.au/def/anzco> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/anzsco> ;
     skos:definition "Machinery Operators and Drivers as classified, defined, and managed by the Australian and New Zealand Standard Classification of Occupations, 2021 Australian Update."@en ;
     skos:inScheme <https://linked.data.gov.au/def/anzsco> ;
     skos:notation "7" ;
@@ -24046,7 +24046,7 @@ anzsco:741111-s6 a skos:Concept ;
 
 anzsco:8 a skos:Concept ;
     dcterms:source "https://www.abs.gov.au/statistics/classifications/anzsco-australian-and-new-zealand-standard-classification-occupations/latest-release#data-downloads"^^xsd:anyURI ;
-    skos:topConceptOf <https://linked.data.gov.au/def/anzco> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/anzsco> ;
     skos:definition "Labourers as classified, defined, and managed by the Australian and New Zealand Standard Classification of Occupations, 2021 Australian Update."@en ;
     skos:inScheme <https://linked.data.gov.au/def/anzsco> ;
     skos:notation "8" ;
@@ -26923,7 +26923,7 @@ anzsco:899999-nec7 a skos:Concept ;
 
 anzsco:9 a skos:Concept ;
     dcterms:source "https://www.abs.gov.au/statistics/classifications/anzsco-australian-and-new-zealand-standard-classification-occupations/latest-release#data-downloads"^^xsd:anyURI ;
-    skos:topConceptOf <https://linked.data.gov.au/def/anzco> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/anzsco> ;
     skos:definition "Categories outside the labour force as classified, defined, and managed by the Australian and New Zealand Standard Classification of Occupations, 2021 Australian Update."@en ;
     skos:inScheme <https://linked.data.gov.au/def/anzsco> ;
     skos:notation "9" ;
