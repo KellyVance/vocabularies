@@ -293,10 +293,18 @@ eamc:membership-flux a skos:Concept ;
     eamc:lost-member a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-        skos:definition """An individual who held membership with Engineers Australia in the reference period but whose membership is now inactive."""@en ;
+        skos:definition """An individual whose membership is now inactive."""@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
         skos:prefLabel "Lost Member"@en ;
         skos:broader eamc:membership-flux .
+
+        eamc:past-member a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
+            skos:definition """An individual who did not hold membership with Engineers Australia in the reference period and whose membership continues to be inactive."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
+            skos:prefLabel "Past Member"@en ;
+            skos:broader eamc:lost-member, eamc:revenue-neutral .
 
         eamc:termination a skos:Concept ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -352,8 +360,8 @@ eamc:revenue-flux a skos:Concept ;
         #eamc:graduation
         #eamc:promotion
         #eamc:new-member
-        #ex-student-to-member
-        #member-readmission
+        #eamc:ex-student-to-member
+        #eamc:member-readmission
 
     eamc:revenue-neutral a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -364,6 +372,7 @@ eamc:revenue-flux a skos:Concept ;
         skos:broader eamc:revenue-flux .
         #eamc:student-continuation
         #eamc:hon-fellow-continuation
+        #eamc:past-member
 
     eamc:revenue-potential a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -456,4 +465,5 @@ eamc:single-change-process a skos:Collection ;
         eamc:part-payment,
         eamc:erasure,
         eamc:cancellation,
-        eamc:student-erasure .
+        eamc:student-erasure,
+        eamc:past-member .
