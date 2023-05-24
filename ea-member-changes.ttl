@@ -290,12 +290,12 @@ eamc:membership-flux a skos:Concept ;
             skos:prefLabel "Part Payment"@en ;
             skos:broader eamc:at-risk-member, eamc:revenue-at-risk .    
 
-    eamc:lost-member a skos:Concept ;
+    eamc:non-current-member a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
         skos:definition """An individual whose membership is now inactive."""@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-        skos:prefLabel "Lost Member"@en ;
+        skos:prefLabel "Non-Current Member"@en ;
         skos:broader eamc:membership-flux .
 
         eamc:past-member a skos:Concept ;
@@ -304,7 +304,15 @@ eamc:membership-flux a skos:Concept ;
             skos:definition """An individual who did not hold membership with Engineers Australia in the reference period and whose membership continues to be inactive."""@en ;
             skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
             skos:prefLabel "Past Member"@en ;
-            skos:broader eamc:lost-member, eamc:revenue-neutral .
+            skos:broader eamc:non-current-member, eamc:revenue-neutral .
+
+        eamc:lost-member a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
+            skos:definition """An individual who held membership with Engineers Australia in the reference period but whose membership is now inactive."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
+            skos:prefLabel "Lost Member"@en ;
+            skos:broader eamc:non-current-member .
 
         eamc:termination a skos:Concept ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -330,6 +338,7 @@ eamc:membership-flux a skos:Concept ;
                 skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
                 skos:prefLabel "Cancellation"@en ;
                 skos:broader eamc:termination, eamc:revenue-loss .
+                #could be further refined into resignations and cessations
 
         eamc:student-erasure a skos:Concept ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
