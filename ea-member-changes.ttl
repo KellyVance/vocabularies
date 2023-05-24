@@ -226,29 +226,37 @@ eamc:membership-flux a skos:Concept ;
                 skos:prefLabel "Retention from Paid"@en ;
                 skos:broader eamc:retention .
 
-                eamc:renewal a skos:Concept ;
+                eamc:paid-continuation a skos:Concept ;
                     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
                     rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-                    skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the reference period who made on-time payment prior to the renewal fee due date."""@en ;
+                    skos:definition """An individual who has a paid current and active membership with Engineers Australia carried over from an active paid membership in the reference period."""@en ;
                     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-                    skos:prefLabel "Renewal"@en ;
-                    skos:broader eamc:paid-retention, eamc:revenue-retention .
+                    skos:prefLabel "Paid Continuation"@en ;
+                    skos:broader eamc:paid-retention .
 
-                eamc:reactivation a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-                    skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the reference period but who made payment during the erasure period, i.e. after the renewal fee due date but before the erasure date. These members transition to Lapsed membership status during the processing and erasure period until payment is received."""@en ;
-                    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-                    skos:prefLabel "Reactivation"@en ;
-                    skos:broader eamc:paid-retention, eamc:revenue-retention .
+                    eamc:renewal a skos:Concept ;
+                        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
+                        skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the reference period who made on-time payment prior to the renewal fee due date."""@en ;
+                        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
+                        skos:prefLabel "Renewal"@en ;
+                        skos:broader eamc:paid-continuation, eamc:revenue-retention .
 
-                eamc:restoration a skos:Concept ;
-                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-                    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-                    skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the reference period but who made payment after the erasure period, i.e. after both the renewal fee due date and the erasure date. These members transition to Lapsed membership status during the processing and erasure period and then become Inactive (past) members after erasure and until payment is received and their membership restored."""@en ;
-                    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-                    skos:prefLabel "Restoration"@en ;
-                    skos:broader eamc:paid-retention, eamc:revenue-retention .
+                    eamc:reactivation a skos:Concept ;
+                        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
+                        skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the reference period but who made payment during the erasure period, i.e. after the renewal fee due date but before the erasure date. These members transition to Lapsed membership status during the processing and erasure period until payment is received."""@en ;
+                        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
+                        skos:prefLabel "Reactivation"@en ;
+                        skos:broader eamc:paid-continuation, eamc:revenue-retention .
+
+                    eamc:restoration a skos:Concept ;
+                        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
+                        skos:definition """An individual who has a current and active paid membership with Engineers Australia carried over from likewise paid membership in the reference period but who made payment after the erasure period, i.e. after both the renewal fee due date and the erasure date. These members transition to Lapsed membership status during the processing and erasure period and then become Inactive (past) members after erasure and until payment is received and their membership restored."""@en ;
+                        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
+                        skos:prefLabel "Restoration"@en ;
+                        skos:broader eamc:paid-continuation, eamc:revenue-retention .
 
                 eamc:hon-fellowship a skos:Concept ;
                     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
