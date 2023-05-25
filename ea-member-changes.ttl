@@ -293,7 +293,7 @@ eamc:membership-flux a skos:Concept ;
     eamc:non-current-member a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-        skos:definition """An individual whose membership is now inactive."""@en ;
+        skos:definition """An individual whose membership is currently inactive."""@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
         skos:prefLabel "Non-Current Member"@en ;
         skos:broader eamc:membership-flux .
