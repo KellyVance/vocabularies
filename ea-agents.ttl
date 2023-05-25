@@ -173,6 +173,14 @@ agnt:organisation a skos:Concept ;
             skos:inScheme <https://linked.data.gov.au/def/ea-agents> ;
             skos:broader agnt:government-agency .
 
+            agnt:defence-force a skos:Concept ;
+                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:prefLabel "Defence Force Agency"@en ;
+                skos:definition """A government funded agency within the Defence Force or Armed Services."""@en ;
+                skos:inScheme <https://linked.data.gov.au/def/ea-agents> ;
+                skos:broader agnt:federal-gov-agency .
+
         agnt:state-gov-agency a skos:Concept ;
             rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;

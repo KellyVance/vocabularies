@@ -23,7 +23,7 @@
         eamc:revenue-flux;
     skos:definition """The changes to membership that a may occur within the framework of Engineers Australia membership. Changes are defined by status and grade and payment status. The terminating assignable concepts are nested in a dual hierarchy of status and payment groupings of membership grades. The status classification qualifies membership flux, i.e. the gains, losses, retention, and at-risk members. The payment classification qualifies impacts to revenue that result from changes to membership.
     
-    Processes are defined as the difference in membership attributes between two points in time. A reference period date that is typically the end of the last financial year or the past month and an effective date of the analysis."""@en ;
+    Processes are defined as the difference in membership attributes between two points in time. A reference period date that is typically the end of the last financial year, past quarter, or past month compared with an effective date of the analysis."""@en ;
     skos:prefLabel "Engineers Australia Membership Changes"@en .
 
 <https://linked.data.gov.au/org/engineersaustralia>
