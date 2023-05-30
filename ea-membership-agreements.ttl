@@ -45,9 +45,27 @@ eama:destra a skos:Concept ;
     dcterms:source "https://www.engineersaustralia.org.au/news-and-media/2022/07/why-new-defence-partnership-signals-growing-need-professional-standards"^^xsd:anyURI ;
     skos:definition """Under the Defence Engineer and Senior Technician Agreement (DESTRA) all technical Flight Sergeants and Warrant Officers, and all engineers above Squadron Leader rank, will have their leadership, management and technical skills accredited against a global benchmark.
     
-    Defence meets - and in some cases exceeds - the level required for certification and registration."@en ;
-    skos:prefLabel "Defence Engineer and Senior Technician Agreement"""@en ;
+    Defence meets - and in some cases exceeds - the level required for certification and registration."""@en ;
+    skos:prefLabel """Defence Engineer and Senior Technician Agreement"""@en ;
     skos:notation "DESTRA" ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-membership-agreements> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-agreements> .
+
+eama:ewc a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-agreements> ;
+    dcterms:source "https://www.engineersaustralia.org.au/employers"^^xsd:anyURI ;
+    skos:definition """EWC is an agreemenent between Engineers Autralia and an organisation for engineering staff to become Chartered or to apply for NER or state registration. Engineers Australia assists with:
+    - understand the capabilities in the engineering workforce
+    - scope requirements and propose a partnership model
+    - create and activate EA memberships
+    - guide employees through assessment requirements
+    - conduct pre-assessments
+    - conduct interview assessments
+    - advise applicants of assessment outcomes
+    - formalise credentials.
+    The Engineers Australia workforce credentialing program also enables a workforce-wide view of the skills and competencies in an organisation's talent pool. This invaluable information helps to fill knowledge gaps and maintain a fully skilled workforce."""@en ;
+    skos:prefLabel """Engineering Workforce Credentialing"""@en ;
+    skos:notation "EWC" ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-agreements> ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-agreements> .
 
@@ -71,7 +89,7 @@ eama:ieta a skos:Concept ;
 
 eama:organisation a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-agreements> ;
-    dcterms:source "https://www.engineersaustralia.org.au/news-and-media/2022/07/why-new-defence-partnership-signals-growing-need-professional-standards"^^xsd:anyURI ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
     skos:definition """Organisation specific agreements whereby a company sponsors membership for their engineerign workforce."""@en ;
     skos:prefLabel "Organisation Sponsorship Agreement"""@en ;
     skos:notation "ORG" ;

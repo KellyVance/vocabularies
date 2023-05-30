@@ -1202,6 +1202,24 @@ eaj:data-store a skos:Concept ;
     skos:prefLabel "Data Store"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
+eaj:ewc a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-agreements> ;
+    dcterms:source "https://www.engineersaustralia.org.au/employers"^^xsd:anyURI ;
+    skos:definition """EWC is an agreemenent between Engineers Autralia and an organisation for engineering staff to become Chartered or to apply for NER or state registration. Engineers Australia assists with:
+    - understand the capabilities in the engineering workforce
+    - scope requirements and propose a partnership model
+    - create and activate EA memberships
+    - guide employees through assessment requirements
+    - conduct pre-assessments
+    - conduct interview assessments
+    - advise applicants of assessment outcomes
+    - formalise credentials.
+    The Engineers Australia workforce credentialing program also enables a workforce-wide view of the skills and competencies in an organisation's talent pool. This invaluable information helps to fill knowledge gaps and maintain a fully skilled workforce."""@en ;
+    skos:prefLabel """Engineering Workforce Credentialing"""@en ;
+    skos:notation "EWC" ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+    
 eaj:identity-management-app a skos:Concept ;
     dcterms:source "https://www.vmware.com/topics/glossary/content/identity-management.html"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
