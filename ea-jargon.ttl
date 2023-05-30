@@ -20,7 +20,7 @@
     
     This vocabulary contains general language with minimal heirarchy applied and an unconfined concept scheme. It is presented in this format for consitent and consolidated representation with controlled reference data."""@en ;
     skos:scopeNote """This vocabulary formalises the definitions of shared terminology for the sake of clarity and reference. It may use related and seeAlso declarations to refer users to related vocabularies. However, this vocabulary should not be used as a reference data resource. This vocabulary is to present a human-readable format rather than be used as an actual reference data source, therefore some of the usual rdf rules may not be enforces such as ensuring unique notations and having locally relevant hierachy that does not apply to the complete vocabulary."""@en;
-    skos:prefLabel "Engineers Australia Business Language"@en .
+    skos:prefLabel "Engineers Australia General Business Terms"@en .
 
 <https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
     sdo:name "Engineers Australia" ;
