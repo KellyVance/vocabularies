@@ -1,5 +1,5 @@
 
-@prefix eaec: <https://linked.data.gov.au/def/ea-membership-agreements/> .
+@prefix eama: <https://linked.data.gov.au/def/ea-membership-agreements/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -12,18 +12,17 @@
 
 <https://linked.data.gov.au/def/ea-membership-agreements> a owl:Ontology ,
         skos:ConceptScheme ;
-    dcterms:created "2022-11-09"^^xsd:date ;
+    dcterms:created "2023-05-30"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
-    dcterms:modified "2023-05-26"^^xsd:date ;
+    dcterms:modified "2023-05-30"^^xsd:date ;
     dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
     dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
     dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
     skos:definition """The formal agreements betweeen Engineers Australia and other organisations for member sponsorship and the recognition of equivalent credientials, competency, or standards."""@en ;
-    skos:altLabel "Credentials"@en ;
     skos:prefLabel "Engineers Australia Membership Agreements"@en .
 
-eaec:aiet a skos:Concept ;
+eama:aiet a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-agreements> ;
     dcterms:source "https://www.ieagreements.org/agreements/apec/registered-apec-engineers/"^^xsd:anyURI ;
     skos:definition "Engineers Australia is a participant in the International Engineering Technicians (AIET) agreement. This reciprocal arrangement enables overseas engineering professionals who have a substantially equivalent role to the Australian engineering associate to register and vice versa."@en ;
@@ -32,7 +31,7 @@ eaec:aiet a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-agreements> ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-agreements> .
 
-eaec:apec a skos:Concept ;
+eama:apec a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-agreements> ;
     dcterms:source "https://www.ieagreements.org/agreements/apec/registered-apec-engineers/"^^xsd:anyURI ;
     skos:definition "The IEA provides lists to APEC Registered Engineers in their jurisdictions. These lists hold information on APEC Engineers who have achieved the required common standards of professional competence in their home economies."@en ;
@@ -41,7 +40,7 @@ eaec:apec a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-agreements> ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-agreements> .
 
-eaec:destra a skos:Concept ;
+eama:destra a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-agreements> ;
     dcterms:source "https://www.engineersaustralia.org.au/news-and-media/2022/07/why-new-defence-partnership-signals-growing-need-professional-standards"^^xsd:anyURI ;
     skos:definition """Under the Defence Engineer and Senior Technician Agreement (DESTRA) all technical Flight Sergeants and Warrant Officers, and all engineers above Squadron Leader rank, will have their leadership, management and technical skills accredited against a global benchmark.
@@ -52,7 +51,7 @@ eaec:destra a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-agreements> ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-agreements> .
 
-eaec:ipea a skos:Concept ;
+eama:ipea a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-agreements> ;
     dcterms:source "https://www.ieagreements.org/agreements/ipea/"^^xsd:anyURI ;
     skos:definition "The international professional engineers agreement recognises the substantial equivalency of standards establishing the competency of professional engineers for independent practice."@en ;
@@ -61,7 +60,7 @@ eaec:ipea a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-agreements> ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-agreements> .
 
-eaec:ieta a skos:Concept ;
+eama:ieta a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-agreements> ;
     dcterms:source "https://www.engineersaustralia.org.au/credentials/registration/international-registers#accordion-1626"^^xsd:anyURI ;
     skos:definition "The Register of International Engineering Technologists (IETA) is a reciprocal arrangement. It enables overseas engineering professionals who have a substantially equivalent role to the Australian engineering technologist to register and vice versa."@en ;
@@ -70,7 +69,7 @@ eaec:ieta a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/ea-membership-agreements> ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-membership-agreements> .
 
-eaec:organisation a skos:Concept ;
+eama:organisation a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-membership-agreements> ;
     dcterms:source "https://www.engineersaustralia.org.au/news-and-media/2022/07/why-new-defence-partnership-signals-growing-need-professional-standards"^^xsd:anyURI ;
     skos:definition """Organisation specific agreements whereby a company sponsors membership for their engineerign workforce."""@en ;
