@@ -140,6 +140,24 @@ eaj:data-dictionary a skos:Concept ;
     skos:prefLabel "Data Dictionary"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
+eaj:defensibly-destroyed a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:definition """Defensibly Destroyed referes to the ability for an organisation to demonstrate that destruction of a record was planned, authorised and compliant.
+    
+    Destruction is the irreversible removal of records from information systems and stores.  Destruction may only be carried out where: 
+    - the destruction method is secure and effective, and 
+    - the destruction method is appropriate to the format of the records being destroyed, and 
+    - details of the records destroyed are captured for future reference. 
+    Records are considered to be approved for destruction when they: 
+    - have fulfilled any relevant retention time criteria set in the Record and Disposal Schedule, and  
+    - are not subject to a Legal Hold, and  
+    - have been reviewed by the relevant business stakeholders (such as SMEs, technology service owners or key consumers of the records), and 
+    - have been approved for destruction by the Record Owners or their delegate. """@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:prefLabel "Defensibly Destroyed"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 eaj:information a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-jargon> ;
@@ -1378,6 +1396,15 @@ eaj:sponsorship a skos:Concept ;
     skos:prefLabel "Sponsorship"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
 
+eaj:sso skos:Concept ;
+    dcterms:source "https://www.okta.com/au/blog/2021/02/single-sign-on-sso/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
+    skos:definition """Single sign-on (SSO) is a user authentication tool that enables users to securely access multiple applications and services using just one set of credentials. There are various SSO protocols including Security Access Markup Language (SAML), Open Authorisation (OAuth), OpenID Connect (OIDC), Kerberos."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/ea-jargon> ;
+    skos:notation "SSO" ;
+    skos:prefLabel "Single Sign-On"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/ea-jargon> .
+
 eaj:study-aqf a skos:Concept ;
     dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-qualifications-framework> ;
@@ -1497,6 +1524,7 @@ eaj:platforms a skos:Collection ;
         eaj:identity-management-app,
         eaj:ref-data-management-app,
         eaj:cms,
+        eaj:sso,
         eaj:crm .
 
 eaj:policy a skos:Collection ;

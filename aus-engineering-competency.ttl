@@ -1,4 +1,4 @@
-@prefix aecs: <https://linked.data.gov.au/def/aus-eng-comp-std/> .
+@prefix aecs: <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -9,15 +9,19 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://linked.data.gov.au/def/aus-eng-comp-std> a owl:Ontology ,
+<https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> a owl:Ontology ,
         skos:ConceptScheme ;
     dcterms:created "2023-03-01"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
-    dcterms:modified "2023-03-01"^^xsd:date ;
+    dcterms:modified "2023-06-13"^^xsd:date ;
     dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
     dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
-    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;                                
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    skos:hasTopConcept
+        aecs:stage-3,
+        aecs:stage-2,
+        aecs:stage-1 ;                              
     skos:definition "Commencing in 1992, Engineers Australia has progressively developed and used the Australian Engineering Competency Standards. These standards are regularly reviewed to ensure that they reflect government, employer and community expectations of members when they engage their services. There were revisions in 1998 and 2003. The Australian Engineering Competency Standards are in three distinct Stages, which correlate with the progression of a person's engineering career."@en ;
     skos:prefLabel "Australian Engineering Competency Standards"@en .
 
@@ -35,38 +39,1172 @@
     sdo:identifier <https://orcid.org/0000-0003-2309-7004> .
 
 aecs:stage-1 a skos:Concept ;
-    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/aus-eng-comp-std> ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
     skos:definition """A person assessed as having Stage 1 competency is eligible to become a graduate member of Engineers Australia in the assessed occupational category.
     
     Stage 1 Competency Standards guide Engineers Australia's Accreditation Board in accrediting engineering degree programs; enable assessment of qualifications not accredited or recognised by Engineers Australia and enable identification of occupational category (Engineering Associate (Officer), Engineering Technologist, Professional Engineer).A person with a Stage 1 level of competency usually has less than 5 years experience. Stage 1 competency does not neccessitate membership with Engineers Australia."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/aus-eng-comp-std> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
     skos:altLabel "Stage 1"@en ;
     skos:prefLabel "Stage 1 Competency"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/aus-eng-comp-std> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> .
+
+    aecs:stage-1-1 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """Knowledge and Skills Base refers to the group of competencies that represent an engineering professional's knowledge of engineering principles and practices."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel "1. Knowledge and Skills Base"@en ;
+        skos:prefLabel "Knowledge and Skills Base"@en ;
+        skos:broader aecs:stage-1 .
+
+        aecs:stage-1-1-1 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Comprehensive, theory based understanding of the underpinning natural and physical sciences and the engineering fundamentals applicable to the engineering discipline."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "1.1 Comprehensive, theory based understanding"@en ;
+            skos:prefLabel "Comprehensive, theory based understanding"@en ;
+            skos:broader aecs:stage-1-1 .
+
+        aecs:stage-1-1-2 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Conceptual understanding of the mathematics, numerical analysis,statistics, and computer and information sciences which underpin the engineering discipline."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "1.2 Conceptual understanding"@en ;
+            skos:prefLabel "Conceptual understanding"@en ;
+            skos:broader aecs:stage-1-1 .
+
+        aecs:stage-1-1-3 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """In-depth understanding of specialist bodies of knowledge within the engineering discipline."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "1.3 In-depth understanding"@en ;
+            skos:prefLabel "In-depth understanding"@en ;
+            skos:broader aecs:stage-1-1 .
+
+        aecs:stage-1-1-4 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Discernment of knowledge development and research directions within the engineering discipline."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "1.4 Discernment"@en ;
+            skos:prefLabel "Discernment"@en ;
+            skos:broader aecs:stage-1-1 .
+
+        aecs:stage-1-1-5 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Knowledge of engineering design practice and contextual factors impacting the engineering discipline.."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "1.5 Knowledge"@en ;
+            skos:prefLabel "Knowledge"@en ;
+            skos:broader aecs:stage-1-1 .
+
+        aecs:stage-1-1-6 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Understanding of the scope, principles, norms, accountabilities and bounds of sustainable engineering practice in the specific discipline.."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "1.6 Understanding Principles"@en,
+                "Understanding"@en,
+                "1.6 Understanding"@en ;
+            skos:prefLabel "Understanding Principles"@en ;
+            skos:broader aecs:stage-1-1 .
+
+    aecs:stage-1-2 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """Engineering Application Ability refers to the group of competencies that represent an engineering professional's application of engineering methods, designs, and approaches to complex engineering challenges and management of engineering projects."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel "2. Engineering Application Ability"@en ;
+        skos:prefLabel "Engineering Application Ability"@en ;
+        skos:broader aecs:stage-1 .
+
+        aecs:stage-1-2-1 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Application of established engineering methods to complex engineering problem solving."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "2.1 Application of Established Engineering Methods"@en ;
+            skos:prefLabel "Application of Established Engineering Methods"@en ;
+            skos:broader aecs:stage-1-2 .
+
+        aecs:stage-1-2-2 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Fluent application of engineering techniques, tools and resources."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "2.2 Fluent Application of Engineering Techniques"@en ;
+            skos:prefLabel "Fluent Application of Engineering Techniques"@en ;
+            skos:broader aecs:stage-1-2 .
+
+        aecs:stage-1-2-3 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Application of systematic engineering synthesis and design processes."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "2.3 Application of Engineering Synthesis and Design"@en ;
+            skos:prefLabel "Application of Engineering Synthesis and Design"@en ;
+            skos:broader aecs:stage-1-2 .
+
+        aecs:stage-1-2-4 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Application of systematic approaches to the conduct and management of engineering projects."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "2.4 Application of Approaches to Conduct and Management"@en ;
+            skos:prefLabel "Application of Approaches to Conduct and Management"@en ;
+            skos:broader aecs:stage-1-2 .
+
+    aecs:stage-1-3 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """Professional and Personal Attributes refers to the group of competencies that represent an engineering professional's ability to conduct their engineering practice ethically, effecitvely, creatively and professionally along with the ability to communicate to a range of audiences."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel "3. Professional and Personal Attributes"@en ;
+        skos:prefLabel "Professional and Personal Attributes"@en ;
+        skos:broader aecs:stage-1 .
+
+        aecs:stage-1-3-1 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Ethical conduct and professional accountability."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "3.1 Ethical Conduct"@en ;
+            skos:prefLabel "Ethical Conduct"@en ;
+            skos:broader aecs:stage-1-3 .
+
+        aecs:stage-1-3-2 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Effective oral and written communication in professional and lay domains."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "3.2 Effective Communication"@en ;
+            skos:prefLabel "Effective Communication"@en ;
+            skos:broader aecs:stage-1-3 .
+
+        aecs:stage-1-3-3 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Creative, innovative and pro-active demeanour."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "3.3 Creative"@en ;
+            skos:prefLabel "Creative"@en ;
+            skos:broader aecs:stage-1-3 .
+
+        aecs:stage-1-3-4 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Professional use and management of information."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "3.4 Professional"@en ;
+            skos:prefLabel "Professional"@en ;
+            skos:broader aecs:stage-1-3 .
+
+        aecs:stage-1-3-5 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Orderly management of self, and professional conduct."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "3.5 Orderly"@en ;
+            skos:prefLabel "Orderly"@en ;
+            skos:broader aecs:stage-1-3 .
+
+        aecs:stage-1-3-6 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2019-11/Stage1_Competency_Standards.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Effective team membership and team leadership"""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "3.6 Effective Membership and Leadership"@en ;
+            skos:prefLabel "Effective Membership and Leadership"@en ;
+            skos:broader aecs:stage-1-3 .
 
 aecs:stage-2 a skos:Concept ;
-    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/aus-eng-comp-std> ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
     skos:definition """A person who demonstrates Stage 2 competency is eligible to receive Chartered status in an occupational category.
 
     Stage 2 Competency Standards guide the application, assessment and professional interview process of a member seeking Chartered status and provide the framework of Engineers Australia's Professional Development Program."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/aus-eng-comp-std> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
     skos:altLabel "Stage 2"@en ,
         "Chartered"@en ;
     skos:prefLabel "Stage 2 Competency"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/aus-eng-comp-std> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> .
 
+    aecs:stage-2-1 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """Personal Commitment refers to the group of competencies that demonstrate
+        - how you deal with ethical issues when they arise
+        - how you develop and define your areas of competence
+        - how you display a personal sense of responsibility for your work"""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel "1. Personal Commitment"@en ;
+        skos:prefLabel "Personal Commitment"@en ;
+        skos:broader aecs:stage-2 .
+
+        aecs:stage-2-1-1 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Deal with ethical issues means you anticipate the consequences of your intended action or inaction and understand how the consequences are managed collectively by your organisation, project or team; and means you demonstrate an ability to identify ethical issues when they arise and to act appropriately."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "1.1 Deal with ethical issues"@en ;
+            skos:prefLabel "Deal with ethical issues"@en ;
+            skos:broader aecs:stage-2-1 .
+
+        aecs:stage-2-1-2 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Practise competently means you assess, acquire and apply the competencies and resources appropriate to engineering activities."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "1.2 Practise competently"@en ;
+            skos:prefLabel "Practise competently"@en ;
+            skos:broader aecs:stage-2-1 .
+
+        aecs:stage-2-1-3 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Responsibility for engineering activities means you display a personal sense of responsibility for your work; and means you clearly acknowledge your own contributions and the contributions from others and distinguish contributions you may have made as a result of discussions or collaboration with other people."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "1.3 Responsibility for engineering activities"@en ;
+            skos:prefLabel "Responsibility for engineering activities"@en ;
+            skos:broader aecs:stage-2-1 .
+
+    aecs:stage-2-2 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """The Community will change depending on the nature of the work you are doing. Sometimes it will be the client; sometimes the general public; sometimes your students; sometimes the regulatory authorities and sometimes it will be your employer. This unit of competence requires you to demonstrate:
+        - how you delivered a safe and sustainable solutions
+        - how you defined the community and considered the community benefit at various stages of engineering activities (within the context of your work)
+        - how you identified and managed the risks associated with the engineering activities
+        - how you incorporated legal and regulatory requirements into your solutions"""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel "2 Obligation to Community"@en ;
+        skos:prefLabel "Obligation to Community"@en ;
+        skos:broader aecs:stage-2 .
+
+        aecs:stage-2-2-4 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Develop safe and sustainable solutions means that you apply and implement current workplace health and safety requirements; and means that you identify the economic, social and environmental impacts of engineering activities; and means that you anticipate and manage the short and long-term effects of  engineering activities."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "2.4 Develop safe and sustainable solutions"@en ;
+            skos:prefLabel "Develop safe and sustainable solutions"@en ;
+            skos:broader aecs:stage-2-2 .
+
+        aecs:stage-2-2-5 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Develop safe and sustainable solutions means that you apply and implement current workplace health and safety requirements; and means that you identify the economic, social and environmental impacts of engineering activities; and means that you anticipate and manage the short and long-term effects of  engineering activities."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "2.5 Engage with the relevant community and stakeholders"@en ;
+            skos:prefLabel "Engage with the relevant community and stakeholders"@en ;
+            skos:broader aecs:stage-2-2 .
+
+        aecs:stage-2-2-6 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Identify, assess and manage risks means that you develop and operate within a hazard and risk framework appropriate to engineering activities."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "2.6 Identify, assess and manage risks"@en ;
+            skos:prefLabel "Identify, assess and manage risks"@en ;
+            skos:broader aecs:stage-2-2 .
+
+        aecs:stage-2-2-7 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Meet legal and regulatory requirements means that you should be able to demonstrate an understanding of the laws, regulations, codes and other instruments which you are legally bound to apply, and apply these in your work."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "2.7 Meet legal and regulatory requirements"@en ;
+            skos:prefLabel "Meet legal and regulatory requirements"@en ;
+            skos:broader aecs:stage-2-2 .
+
+    aecs:stage-2-3 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """This unit of competency requires you to demonstrate:
+        - how you collaborate and work with others
+        - how you work within an organisation to provide value for stakeholders
+        - how you initiate, plan, lead or manage and secure financial and other material resources to support engineering activities
+        - how you apply your professional judgement"""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel "3. Value in the Workplace"@en ;
+        skos:prefLabel "Value in the Workplace"@en ;
+        skos:broader aecs:stage-2 .
+
+        aecs:stage-2-3-8 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Communication means you can communicate in a variety of different ways to collaborate with other people, including accurate listening, reading and comprehension, based on dialogue when appropriate; and means you can speak and write, taking into account the knowledge, expectations, requirements, interests, terminology and language of the intended audience."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "3.8 Communication"@en ;
+            skos:prefLabel "Communication"@en ;
+            skos:broader aecs:stage-2-3 .
+
+        aecs:stage-2-3-9 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Performance means that you demonstrate an ability to apply appropriate tools or processes to achieve corporate objectives while accounting for personal obligations to the profession."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "3.9 Performance"@en ;
+            skos:prefLabel "Performance"@en ;
+            skos:broader aecs:stage-2-3 .
+
+        aecs:stage-2-3-10 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Taking Action means that you initiate, plan, lead or manage engineering activities."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "3.10 Taking Action"@en ;
+            skos:prefLabel "Taking Action"@en ;
+            skos:broader aecs:stage-2-3 .
+
+        aecs:stage-2-3-11 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Judgement means that you exercise sound judgement in engineering activities."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "3.11 Judgement"@en ;
+            skos:prefLabel "Judgement"@en ;
+            skos:broader aecs:stage-2-3 .
+
+    aecs:stage-2-4 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """This unit of competency requires you to demonstrate:
+        - how you collaborate and work with others
+        - how you work within an organisation to provide value for stakeholders
+        - how you initiate, plan, lead or manage and secure financial and other material resources to support engineering activities
+        - how you apply your professional judgement"""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel "3. Value in the Workplace"@en ;
+        skos:prefLabel "Value in the Workplace"@en ;
+        skos:broader aecs:stage-2 .
+
+        aecs:stage-2-4-12 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Advanced engineering knowledge means that you comprehend and apply advanced theorybased understanding of engineering fundamentals to predict the effect of engineering activities."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "4.12 Advanced engineering knowledge"@en ;
+            skos:prefLabel "Advanced engineering knowledge"@en ;
+            skos:broader aecs:stage-2-4 .
+
+        aecs:stage-2-4-13 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Local engineering knowledge means that you acquire and apply local engineering knowledge; and means that, where appropriate, you apply engineering knowledge contributed by other people including suppliers, consultants, contractors and independent experts."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "4.13 Local engineering knowledge"@en ;
+            skos:prefLabel "Local engineering knowledge"@en ;
+            skos:broader aecs:stage-2-4 .
+
+        aecs:stage-2-4-14 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Problem analysis means that you define, investigate and analyse engineering problems and opportunities."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "4.14 Problem analysis"@en ;
+            skos:prefLabel "Problem analysis"@en .
+
+        aecs:stage-2-4-15 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Creativity and innovation means that you develop creative and innovative solutions to engineering problems."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "4.15 Creativity and innovation"@en ;
+            skos:prefLabel "Creativity and innovation"@en .
+
+        aecs:stage-2-4-16 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/professional-engineer-stage-2-2012_0.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Evaluation means that you evaluate the outcomes and impacts of engineering activities."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "4.16 Evaluation"@en ;
+            skos:prefLabel "Evaluation"@en .
+  
 aecs:stage-3 a skos:Concept ;
-    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/aus-eng-comp-std> ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
     skos:definition """A person who demonstrates Stage 2 competency is eligible to receive Engineering Executive (Eng Exec) as a member of Engineers Australia.
 
     Stage 3 Competency Standards guide the application, assessment and professional interview process of a member seeking Engineering Executive status."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/aus-eng-comp-std> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
     skos:notation "EngExec" ;
     skos:altLabel "Stage 3"@en ,
         "Eng Exec"@en,
         "Engineering Executive"@en ;
     skos:prefLabel "Stage 3 Competency"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/aus-eng-comp-std> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> .
+
+    aecs:stage-3-1 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """Leadership refers to the group of competencies that demonstrate how you lead in engineering activities."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel "1. Leadership"@en ;
+        skos:prefLabel "Leadership"@en ;
+        skos:broader aecs:stage-3 .
+
+        aecs:stage-3-1-1 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Exercise personal attributes of leadership means:
+            a) Purpose and values are established
+            b) Creativity and innovation employed
+            c) Integrity, sincerity of purpose and values are communicated
+            d) Strengths of others are capitalised on
+            e) Teams are successfully developed and lead
+            f) Natural personal leadership style/type is recognised
+            g) Leadership style is adjusted to suit context
+            h) Written and oral skills are effectively used
+            i) Negotiation and mediation skills are employed."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "1.1 Exercise personal attributes of leadership"@en ;
+            skos:prefLabel "Exercise personal attributes of leadership"@en ;
+            skos:broader aecs:stage-3-1 .
+
+        aecs:stage-3-1-2 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Exercise leadership in organisations means:
+            a) Vision for organisation identified and communicated
+            b) Strategy and actions are planned and implemented using recognised principles
+            c) Creativity/innovation processes are used (eg Simplex Model)
+            d) A process approach is used in realising and monitoring progress of organisational objectives
+            e) Appropriate organisational structures are adopted for achieving desired outcomes
+            f) Desired organisational values are identified and deployed
+            g) Leadership and management concepts , tools and techniques are appropriately selected and employed to enhance leadership, eg:
+            - Strategic plans
+            - Business plans
+            - Risk management plans
+            - Performance management
+            - Performance appraisals
+            - Management reviews
+            - Reporting regimes
+            - Corrective and preventive action
+            - Reward systems
+            - Training/educational needs assessments and delivery programs."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "1.2 Exercise leadership in organisations"@en ;
+            skos:prefLabel "Exercise leadership in organisations"@en ;
+            skos:broader aecs:stage-3-1 .
+
+        aecs:stage-3-1-3 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Appreciate stakeholders means:
+            a) Needs and expectations of stakeholders relating to the business are identified and addressed, including in regard to:
+            - Owners
+            - Customers
+            - Employees
+            - Community
+            b) External factors are appreciated and appropriately addressed, including in regard to:
+            - Community
+            - Legislative/regulatory
+            - Political
+            - Safety
+            - Environmental."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "1.3 Appreciate stakeholders"@en ;
+            skos:prefLabel "Appreciate stakeholders"@en ;
+            skos:broader aecs:stage-3-1 .
+
+        aecs:stage-3-1-4 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Promote the Engineering profession means:
+            a) Engineering profession promoted
+            b) Professional leadership demonstrated
+            c) Development of the profession advocated on behalf of Engineers Australia."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "1.4 Promote the Engineering profession"@en ;
+            skos:prefLabel "Promote the Engineering profession"@en ;
+            skos:broader aecs:stage-3-1 .
+
+        aecs:stage-3-1-5 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Display creativity means:
+            a) Creativity is encouraged
+            b) Management styles that foster creativity are selected and employed
+            ) Different methods for being creative are employed
+            d) Creativity sessions are contributed to
+            e) Innovation teams are facilitated
+            f) The inter-relationship between organisational structures and creativity is managed
+            g) Staff are selected and deployed so as to enable/encourage creativity and innovation"""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "1.5 Display creativity"@en ;
+            skos:prefLabel "Display creativity"@en ;
+            skos:broader aecs:stage-3-1 .
+
+        aecs:stage-3-1-6 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Manage workplace change means:
+            a) Understanding of change is encouraged
+            b) Changes/Improvements are planned and implemented"""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "1.6 Manage workplace change"@en ;
+            skos:prefLabel "Manage workplace change"@en ;
+            skos:broader aecs:stage-3-1 .
+
+    aecs:stage-3-2 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """Strategic direction and entrepreneurship refers to the group of competencies that demonstrate how you strategically assess risk and opportunity in engineering activities."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel "2. Strategic direction and entrepreneurship"@en ;
+        skos:prefLabel "Strategic direction and entrepreneurship"@en ;
+        skos:broader aecs:stage-3 .
+
+        aecs:stage-3-2-1 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Provide strategic direction and display entrepreneurship means:
+            a) New business opportunities and ideas are identified
+            b) New business initiatives are championed
+            c) Strategic direction and objectives are identified and communicated, e.g. in regard to customers an suppliers
+            d) Supporters for enterprises are identified and recruited, eg joint venture participants
+            e) Contacts for the success of the business venture are identified and realised."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "2.1 Provide strategic direction and display entrepreneurship"@en ;
+            skos:prefLabel "Provide strategic direction and display entrepreneurship"@en ;
+            skos:broader aecs:stage-3-2 .
+
+        aecs:stage-3-2-2 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Embrace new technology means:
+            a) Measures to identify new technology are employed
+            b) Adoption of new technology is evaluated
+            c) New technology is introduced."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "2.2 Embrace new technology"@en ;
+            skos:prefLabel "Embrace new technology"@en ;
+            skos:broader aecs:stage-3-2 .
+
+        aecs:stage-3-2-3 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Assess feasibility means:
+            a) Possible ventures are compared, including in financial terms
+            b) Present value techniques are used
+            c) Financial judgements are made."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "2.3 Assess feasibility"@en ;
+            skos:prefLabel "Assess feasibility"@en ;
+            skos:broader aecs:stage-3-2 .
+
+        aecs:stage-3-2-4 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Appreciate risk means:
+            a) Business risks are identified and appreciated."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "2.4 Appreciate risk"@en ;
+            skos:prefLabel "Appreciate risk"@en ;
+            skos:broader aecs:stage-3-2 .
+
+        aecs:stage-3-2-5 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Establish business financing means:
+            a) Finance sources for new ventures are identified
+            b) Financing arrangements are evaluated
+            c) Finance is secured."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "2.5 Establish business financing"@en ;
+            skos:prefLabel "Establish business financing"@en ;
+            skos:broader aecs:stage-3-2 .
+
+        aecs:stage-3-2-6 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Recognise importance of
+            personnel aspects means:
+            a) A future outlook in staff encouraged
+            b) Corporate core competencies are identified and nurtured (corporate core competencies are a limited number of corporate capabilities that customers value, are mutually reinforcing and difficult to imitate)."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "2.6 Recognise importance of personnel aspects"@en ;
+            skos:prefLabel "Recognise importance of personnel aspects"@en ;
+            skos:broader aecs:stage-3-2 .
+
+        aecs:stage-3-2-7 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Establish business structures means:
+            a) New business structures are identified
+            c) New business organisational processes are identified."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "2.7 Establish business structures"@en ;
+            skos:prefLabel "Establish business structures"@en ;
+            skos:broader aecs:stage-3-2 .
+
+    aecs:stage-3-3 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """Planning refers to the group of competencies that demonstrate how you plan engineering activities."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel "3. Planning"@en ;
+        skos:prefLabel "Planning"@en ;
+        skos:broader aecs:stage-3 .
+
+        aecs:stage-3-3-1 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Undertake business planning means:
+            a) Vision and objectives are appreciated
+            b) Current context and external environment are assessed and documented (business, economic and/ or political)
+            c) SWOT analyses are undertaken
+            d) Critical success factors are identified and addressed
+            e) Customers needs and expectations are identified and addressed
+            f) Strategic and business plans are documented, tested and acceptance of them gained
+            g) Implementation of plans is set up and monitored in a structured way
+            h) Performance is measured, monitored and reported against agreed criteria
+            i) Plans are reviewed and updated."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "3.1 Undertake business planning"@en ;
+            skos:prefLabel "Undertake business planning"@en ;
+            skos:broader aecs:stage-3-3 .
+
+        aecs:stage-3-3-2 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Manage risk means:
+            a) Risk management plans developed, implemented and improved."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "3.2 Manage risk"@en ;
+            skos:prefLabel "Manage risk"@en ;
+            skos:broader aecs:stage-3-3 .
+
+        aecs:stage-3-3-3 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Undertake market planning means:
+            a) Customers' current and future needs are identified
+            b) Market segments are identified and value assessed
+            c) Marketing plans are developed, including plans/ strategies for:
+                - Identifying and assessing competition
+                - Retaining existing customers and engaging additional customers
+                - Branding promotion
+                - Product or service range
+                - Distributing products or services."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "3.3 Undertake market planning"@en ;
+            skos:prefLabel "Undertake market planning"@en ;
+            skos:broader aecs:stage-3-3 .
+
+        aecs:stage-3-3-4 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Undertake operational planning means:
+            a) Operational (eg annual, product, service and project) plans* are established in alignment with strategic and business planning
+            b) Performance indicators to monitor the progressive and final implementation of plans are established
+            c) Performance indicators are assessed for effectiveness
+            d) Plans are set up and co-ordinated
+            e) Implementation of plans is monitored in a structured way
+            f) Performance is measured, monitored and reported against agreed criteria
+            g) Plans are updated when needed.
+            
+            *Operational Plans typically include supporting plans for managing matters such as scope, program, cost, risk and technical and other compliance."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "3.4 Undertake operational planning"@en ;
+            skos:prefLabel "Undertake operational planning"@en ;
+            skos:broader aecs:stage-3-3 .
+
+        aecs:stage-3-3-5 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Undertake resource planning means:
+            a) Resource plans for human resources, supporting infrastructure (eg workspace, process equipment, hardware, software and communication services) and the work environment are prepared in line with strategic and business plans
+            b) Technology plans are prepared in support of strategic, business and operational plans etc
+            c) Implementation of resource and technology plans is set up and monitored in a structured way
+            d) Performance is measured, monitored and reported against agreed criteria
+            e) Resource plans and technology plans are updated."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "3.5 Undertake resource planning"@en ;
+            skos:prefLabel "Undertake resource planning"@en ;
+            skos:broader aecs:stage-3-3 .
+
+    aecs:stage-3-4 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """Change and improvement refers to the group of competencies that demonstrate how you continually improve performance and intervention in engineering activities."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel "4. Change and improvement"@en ;
+        skos:prefLabel "Change and improvement"@en ;
+        skos:broader aecs:stage-3 .
+
+        aecs:stage-3-4-1 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Review organizational performance and identify improvement opportunities means:
+            a) Processes for review of organisational performance are identified, planned and set up
+            b) Pertinent information on organisational performance is identified and collected
+            c) Performance is assessed against pre-established performance criteria and targets
+            d) Inferior performance and other improvement opportunities are identified and recorded
+            e) Superior performance is acknowledged and success rewarded."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "4.1 Review organizational performance and identify improvement opportunities"@en ;
+            skos:prefLabel "Review organizational performance and identify improvement opportunities"@en ;
+            skos:broader aecs:stage-3-4 .
+
+        aecs:stage-3-4-2 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Plan improvements means:
+            a) Causes of inferior performance are determined and risks are assessed to support decision-making process
+            b) Improvement opportunities are agreed and are prioritised by a suitable method
+            c) Measurable objectives are established for each improvement project
+            d) Implementation actions, responsibilities and timescales for completion are determined
+            e) Resources for improvement projects are identified and provided."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "4.2 Plan improvements"@en ;
+            skos:prefLabel "Plan improvements"@en ;
+            skos:broader aecs:stage-3-4 .
+
+        aecs:stage-3-4-3 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Implement improvements means:
+            a) Improvement projects are implemented
+            b) Progress (towards measurable objectives) are regularly reviewed and monitored and interventions taken as appropriate."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "4.3 Implement improvements"@en ;
+            skos:prefLabel "Implement improvements"@en ;
+            skos:broader aecs:stage-3-4 .
+
+        aecs:stage-3-4-4 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Verify effectiveness of improvements means:
+            a) Improvement projects are verified as complete
+            b) Measurable objectives for the project are achieved
+            c) Planned improvements in operational performance are realised."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "4.4 Verify effectiveness of improvements"@en ;
+            skos:prefLabel "Verify effectiveness of improvements"@en ;
+            skos:broader aecs:stage-3-4 .
+
+    aecs:stage-3-5 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """Customer focus refers to the group of competencies that demonstrate how you focus on customers (external and internal) during engineering activities."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel "5. Customer focus"@en ;
+        skos:prefLabel "Customer focus"@en ;
+        skos:broader aecs:stage-3 .
+
+        aecs:stage-3-5-1 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Research customers means:
+            a) Customers are identified
+            b) Customers'pertinent attributes are identified."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "5.1 Research customers"@en ;
+            skos:prefLabel "Research customers"@en ;
+            skos:broader aecs:stage-3-5 .
+
+        aecs:stage-3-5-2 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Manage communication with customers means:
+            a) Customers' requirements are identified
+            b) Unclear requirements are clarified
+            c) Feedback and complaints are effectively addressed."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "5.2 Manage communication with customers"@en ;
+            skos:prefLabel "Manage communication with customers"@en ;
+            skos:broader aecs:stage-3-5 .
+
+        aecs:stage-3-5-3 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Assess customer satisfaction means:
+            a) Customer satisfaction is measured
+            b) Results of customer satisfaction measurement used in design of products and processes.."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "5.3 Assess customer satisfaction"@en ;
+            skos:prefLabel "Assess customer satisfaction"@en ;
+            skos:broader aecs:stage-3-5 .
+
+    aecs:stage-3-6 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """Processes, products and services refers to the group of competencies that demonstrate how you innovate, improve, and measure quality during engineering activities."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel "6. Processes, products and services"@en ;
+        skos:prefLabel "Processes, products and services"@en ;
+        skos:broader aecs:stage-3 .
+
+        aecs:stage-3-6-1 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Employ innovation means how the individual acquires, evaluates and implements creative ideas to accelerate business:
+            a) Innovative ideas are harvested for processes
+            b) Innovative ideas are recognised and supported, eg allocated resources
+            c) Ideas are selected and converted to assist in the satisfaction of customer expectations
+            d) Research and new technology and techniques are utilised in developing ideas
+            e) Processes are identified, developed and designed (including improvements to existing processes) so the best process is used for the task at hand
+            f) Needs and expectations of customers (existing and potential) are met when developing new ideas."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "6.1 Employ innovation"@en ;
+            skos:prefLabel "Employ innovation"@en ;
+            skos:broader aecs:stage-3-6 .
+
+        aecs:stage-3-6-2 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Manage improvement means how the individual manages and improves processes using a structured approach:
+            a) Processes and their inter-relationships are identified;
+            b) Processes (including verification processes) are planned;
+            c) Briefing/induction and training needs for personnel undertaking processes are identified
+            d) Personnel are briefed/inducted and trained in use of processes;
+            e) Inputs for processes are identified reviewed for adequacy;
+            f) Criteria for acceptability of outputs defined;
+            g) Outputs are reviewed for compliance;
+            h) Performance measures are established and achievement monitored;
+            i) Contributions and participation in improvements encouraged;
+            j) Improvement processes used
+            k) Internal customers satisfied;
+            l) Internal customer relationships are identified and managed to achieve external customer satisfaction;
+            m) There are standardised processes;
+            n) Regulations and Standards are reviewed and complied with and processes are suitably modified;
+            o) Benchmarking is used for comparison and learning."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "6.2 Manage improvement"@en ;
+            skos:prefLabel "Manage improvement"@en ;
+            skos:broader aecs:stage-3-6 .
+
+        aecs:stage-3-6-3 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Apply quality measures to service and products means which quality indicators are used to compare performance against standards, customer expectations and competitors:
+            a) Quality indicators for in-process and attribute measures relating to customer requirements are established and reviewed;
+            b) Performance levels of processes are established and used to ensure agreed specifications can be met;
+            c) Comparison of products and services with competitors is used (particularly the best performers) to improve the quality, including identification, definition and setting up and monitoring of assessment/measuring techniques."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "6.3 Apply quality measures to service and products"@en ;
+            skos:prefLabel "Apply quality measures to service and products"@en ;
+            skos:broader aecs:stage-3-6 .
+
+    aecs:stage-3-7 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """People/human resources refers to the group of competencies that demonstrate how you manage yourself and your employees during engineering activities."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel """7. People/human resources"""@en ;
+        skos:prefLabel """People/human resources"""@en ;
+        skos:broader aecs:stage-3 .
+
+        aecs:stage-3-7-1 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Manage self means:
+            a) Personal career goals and objectives are identified and their attainment planned and monitored;
+            b) Personal strengths are identified and capitalised on
+            c) Personal weaknesses are identified and managed
+            d) Strategies to sustain personal motivation and effectiveness are established and implemented
+            e) Use of time is managed
+            f) Self understanding is appreciated and demonstrated in communication with others
+            g) Listening and assertive skills are used."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "7.1 Manage self"@en ;
+            skos:prefLabel "Manage self"@en ;
+            skos:broader aecs:stage-3-7 .
+
+        aecs:stage-3-7-2 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Behave ethically means:
+            a) Understanding of ethical behaviours is appreciated and demonstrated (including in regard to its importance to organisational image and reputation, team moral, trust and customer satisfaction)."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "7.2 Behave ethically"@en ;
+            skos:prefLabel "Behave ethically"@en ;
+            skos:broader aecs:stage-3-7 .
+
+        aecs:stage-3-7-3 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Recruit employees means:
+            a) The organisation's personnel recruitment needs are identified.
+            b) Strategies for recruiting required personnel are determined and implemented.
+            c) Criteria and processes for recruitment of personnel are established
+            d) Personnel are assessed against criteria and recruited."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "7.3 Recruit employees"@en ;
+            skos:prefLabel "Recruit employees"@en ;
+            skos:broader aecs:stage-3-7 .
+
+        aecs:stage-3-7-4 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Manage employees means:
+            a) Performance targets, commensurate with organisational targets are agreed with personnel
+            b) Personnel performance regularly assessed against targets
+            c) Counselling on poor performance undertaken
+            d) Training and development plans agreed with personnel and their implementation monitored (Plans should include building on strengths and addressing weaknesses.)
+            e) Measures are taken to develop the strengths of staff and address their weaknesses eg job rotation, mentoring."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "7.4 Manage employees"@en ;
+            skos:prefLabel "Manage employees"@en ;
+            skos:broader aecs:stage-3-7 .
+
+        aecs:stage-3-7-5 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Dismiss employees means:
+            a) Equitable processes used for the dismissal of person."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "7.5 Dismiss employees"@en ;
+            skos:prefLabel "Dismiss employees"@en ;
+            skos:broader aecs:stage-3-7 .
+
+        aecs:stage-3-7-6 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Promote well being and morale means:
+            a) Workplace health and safety provided for employees
+            b) Effective personnel feedback mechanisms established, used and reinforced through responsiveness
+            c) Equity and diversity strategies developed and implemented
+            d) Processes for handling of harassment complaints by personnel established."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "7.6 Promote well being and morale"@en ;
+            skos:prefLabel "Promote well being and morale"@en ;
+            skos:broader aecs:stage-3-7 .
+
+    aecs:stage-3-8 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """Supplier Relationships refers to the group of competencies that demonstrate how you interact with suppliers during engineering activities.
+        Note: The term Supplier in this context refers to suppliers in general, including providers of consultancy services, plant, equipment, materials and constructed works. Suppliers may be internal or external to the organisation."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel "8. Supplier Relationships "@en ;
+        skos:prefLabel "Supplier Relationships "@en ;
+        skos:broader aecs:stage-3 .
+
+        aecs:stage-3-8-1 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Develop supplier strategy means:
+            a) Strategy for purchasing and relationship with suppliers are established and implemented."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "8.1 Develop supplier strategy"@en ;
+            skos:prefLabel "Develop supplier strategy"@en ;
+            skos:broader aecs:stage-3-8 .
+
+        aecs:stage-3-8-2 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Select suppliers means:
+            a) Process and criteria for selection of suppliers are defined and established
+            b) Suppliers selected to criteria and engaged
+            c) Feedback and complaints are effectively addressed and matters assessed for identifying potential improvements."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "8.2 Select suppliers"@en ;
+            skos:prefLabel "Select suppliers"@en ;
+            skos:broader aecs:stage-3-8 .
+
+        aecs:stage-3-8-3 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Specify requirements means:
+            a) Adequate documents for engagement of suppliers (purchasing documents) are developed, reviewed and approved
+            b) Changes to purchasing documents/requirements are managed."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "8.3 Specify requirements"@en ;
+            skos:prefLabel "Specify requirements"@en ;
+            skos:broader aecs:stage-3-8 .
+
+        aecs:stage-3-8-4 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Undertake surveillance/ monitoring means:
+            a) Surveillance/monitoring of suppliers is planned and performed to provide appropriate level of confidence that requirements are met
+            b) Planned surveillance/monitoring utilises appropriate approaches (eg quality control and/or quality assurance)
+            c) Assessed performance of supplier (including results of surveillance) is made known to supplier recorded and used in selections and planning of surveillance"""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel """8.4 Undertake surveillance/ monitoring"""@en ;
+            skos:prefLabel """Undertake surveillance/ monitoring"""@en ;
+            skos:broader aecs:stage-3-8 .
+
+    aecs:stage-3-9 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """Information refers to the group of competencies that demonstrate how you identify, use, and communicate information during engineering activities."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel "9. Information"@en ;
+        skos:prefLabel "Information"@en ;
+        skos:broader aecs:stage-3 .
+
+        aecs:stage-3-9-1 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Identify & source information needs means:
+            a) The information needs of individuals/teams is determined and the resources are identified
+            b) Information held by the organisation is reviewed to determine suitability and accessibility
+            c) Plans are prepared to obtain information which is not available/accessible within the organisation."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel """9.1 Identify & source information needs"""@en ;
+            skos:prefLabel """Identify & source information needs"""@en ;
+            skos:broader aecs:stage-3-9 .
+
+        aecs:stage-3-9-2 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Collect, analyse and report information means:
+            a) Collection of information is timely and relevant to the needs of individuals/teams
+            b) Information is in a format suitable for analysis, interpretation and dissemination
+            c) Information is analysed to identify and report relevant trends and developments in terms of the needs for which it was acquired."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "9.2 Collect, analyse and report information"@en ;
+            skos:prefLabel "Collect, analyse and report information"@en ;
+            skos:broader aecs:stage-3-9 .
+
+        aecs:stage-3-9-3 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Use management information systems and document control systems means:
+            a) Management information systems and document control systems are used effectively to store and retrieve data for decision making
+            b) Technology available in the work area/organisation. is used to manage information effectively and efficiently
+            c) Recommendations for improving the information system are submitted to designated persons/groups."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "9.3 Use management information systems and document control systems"@en ;
+            skos:prefLabel "Use management information systems and document control systems"@en ;
+            skos:broader aecs:stage-3-9 .
+
+        aecs:stage-3-9-4 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Prepare submissions means:
+            a) Individuals/teams are involved in business plan/budget and other submission preparation in a way which uses their contribution effectively and gains their support for the outcomes
+            b) Business plans/budgets and other submissions are presented in accordance with the organisation's guidelines and requirements."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "9.4 Prepare submissions"@en ;
+            skos:prefLabel "Prepare submissions"@en ;
+            skos:broader aecs:stage-3-9 .
+
+        aecs:stage-3-9-5 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Manage intellectual property means:
+            a) Intellectual property of others is identified and used in a lawful manner
+            b) Intellectual property of the organisation is protected and managed in an appropriate manner."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "9.5 Manage intellectual property"@en ;
+            skos:prefLabel "Manage intellectual property"@en ;
+            skos:broader aecs:stage-3-9 .
+
+        aecs:stage-3-9-6 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Work with legal documents and systems means:
+            a) Working with legal material is undertaken
+            b) Understanding of the legal structures of a business (ie the law of association) is exercised
+            c) Understanding of the significant features of the law relating to employment and dispute resolution procedures is exercised
+            d) Understanding of basic contract law relevant to the business (including management of variations, dispute resolution and arbitration) is exercised
+            e) Knowledge of the law relating to independent contractors is exercised
+            f) Knowledge of the law relating to occupational health and safety, workers compensation and rehabilitation is exercised
+            g) Knowledge of the law relating to conservation of the environment is exercised
+            h) Understanding of relevant aspects of Taxation law is exercised
+            i) Freedom of information law is complied with."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "9.6 Work with legal documents and systems"@en ;
+            skos:prefLabel "Work with legal documents and systems"@en ;
+            skos:broader aecs:stage-3-9 .
+
+        aecs:stage-3-9-7 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Use Standards means:
+            a) Australian, International and other Standards are used as appropriate."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "9.7 Use Standards"@en ;
+            skos:prefLabel "Use Standards"@en ;
+            skos:broader aecs:stage-3-9 .
+
+    aecs:stage-3-10 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:definition """Finance, accounting and administration refers to the group of competencies that demonstrate how you handle financial, accounting and auditing considerations related to engineering activities."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+        skos:altLabel "10. Finance, accounting and administration"@en ;
+        skos:prefLabel "Finance, accounting and administration"@en ;
+        skos:broader aecs:stage-3 .
+
+        aecs:stage-3-10-1 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Handle financing means:
+            a) Financial viability of proposals are assessed, including rate of return
+            b) Funding sources are identified and assessed
+            c) Financial strategies are developed and implemented
+            d) Financial position, financial performance and cash flow statements are used
+            e) Financial viability of organisations are assessed
+            f) Financial performance is monitored."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "10.1 Handle financing"@en ;
+            skos:prefLabel "Handle financing"@en ;
+            skos:broader aecs:stage-3-10 .
+
+        aecs:stage-3-10-2 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Manage accounts means:
+            a) Income and expenditure are planned and monitored
+            b) Cash flow budgets are prepared
+            c) Budget Controls are understood and used
+            d) Costing information identified and used
+            e) Familiarity with elements of accounts payable system demonstrated
+            f) Familiarity with elements of accounts receivable system demonstrated
+            g) Familiarity with elements of the payroll system demonstrated
+            h) Familiarity with elements of asset management system demonstrated."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "10.2 Manage accounts"@en ;
+            skos:prefLabel "Manage accounts"@en ;
+            skos:broader aecs:stage-3-10 .
+
+        aecs:stage-3-10-3 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Manage auditing means:
+            a) Purpose and methodology of audits understood and involvement in audits managed. Audits may relate to following
+                - Financial
+                - Quality
+                - Environment
+                - Occupational Health and Safety
+                - Risk management
+                - Corporate governance."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "10.3 Manage auditing"@en ;
+            skos:prefLabel "Manage auditing"@en ;
+            skos:broader aecs:stage-3-10 .
+
+        aecs:stage-3-10-4 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Exercise fraud control means:
+            a) Strategies for the prevention of fraud are established and implemented
+            b) Accountable financial and business processes are employed
+            c) Incidents investigated and corrective action implemented."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "10.4 Exercise fraud control"@en ;
+            skos:prefLabel "Exercise fraud control"@en ;
+            skos:broader aecs:stage-3-10 .
+
+        aecs:stage-3-10-5 a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/engexec-leadership-and-management-competencies-brfinal.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:definition """Manage health and safety means:
+            a) Occupational Health and Safety principles understood and implemented
+            b) Injury and dangerous occurrences reported
+            c) Incidents investigated and corrective action implemented."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/aus-eng-comp-std> ;
+            skos:altLabel "10.5 Manage health and safety"@en ;
+            skos:prefLabel "Manage health and safety"@en ;
+            skos:broader aecs:stage-3-10 .
