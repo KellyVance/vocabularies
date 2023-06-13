@@ -1,6 +1,5 @@
-@prefix eaclg: <https://linked.data.gov.au/def/ea-colleges/> .
+@prefix eaclg: <https://ref.engineersaustralia.org.au/def/ea-colleges/> .
 @prefix anzsrc-2020-for: <https://linked.data.gov.au/def/anzsrc-for/2020/> .
-@prefix engcat: <https://linked.data.gov.au/def/engineering-categories/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -11,7 +10,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://linked.data.gov.au/def/ea-colleges> a owl:Ontology ,
+<https://ref.engineersaustralia.org.au/def/ea-colleges> a owl:Ontology ,
         skos:ConceptScheme ;
     dcterms:created "2022-11-23"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
@@ -49,7 +48,7 @@
     sdo:identifier <https://orcid.org/0000-0003-2309-7004> .
     
 eaclg:biomedical a skos:Concept ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-colleges> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/biomedical-college"^^xsd:anyURI ;
     skos:definition """The Biomedical College aims to be a peak representative body for biomedical engineering professionals in Australia. Objectives of the Biomedical College are to:
     - Set standards of practice within biomedical engineering and provide mechanisms to help attain these standards.
@@ -62,11 +61,11 @@ eaclg:biomedical a skos:Concept ;
     - Provide advice and recommendations on biomedical engineering professional practice, who can provide it, where it is necessary and how to engage these services in Australia."""@en ;
     skos:prefLabel "Biomedical College"@en ;
     skos:related anzsrc-2020-for:4003 ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-colleges> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-colleges> .
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
 
 eaclg:chemical a skos:Concept ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-colleges> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/chemical-college"^^xsd:anyURI ;
     skos:definition """The Chemical College represents EA members working in chemical engineering roles around Australia. 
     The Chemical College role is to:
@@ -76,11 +75,11 @@ eaclg:chemical a skos:Concept ;
     - Contribute to national and international standards and policies relevant to the field."""@en ;
     skos:prefLabel "Chemical College"@en ;
     skos:related anzsrc-2020-for:4004 ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-colleges> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-colleges> .
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
 
 eaclg:civil a skos:Concept ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-colleges> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/civil-college"^^xsd:anyURI ;
     skos:definition """The Civil College represents EA members working in civil engineering roles around Australia. Some of The Civil College key functions are to:
     - Set discipline standards for professional engineers, technologists and associates.
@@ -92,21 +91,21 @@ eaclg:civil a skos:Concept ;
     - Publish learned papers and other resources."""@en ;
     skos:prefLabel "Civil College"@en ;
     skos:related anzsrc-2020-for:4005 ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-colleges> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-colleges> .
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
 
 eaclg:electrical a skos:Concept ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-colleges> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/electrical-college"^^xsd:anyURI ;
     skos:definition """The Electrical College represents EA members working in electrical engineering roles around Australia. The Electrical College has a presence at the EA Standards Australia special interest group, working to ensure electrical engineering standards meet strict guidelines that ensure the safety and consistency of Australian goods and services.
     The Electrical College work also includes developing policy positions and submitting proposals to government and industry."""@en ;
     skos:prefLabel "Electrical College"@en ;
     skos:related anzsrc-2020-for:4008 ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-colleges> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-colleges> .
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
 
 eaclg:environmental a skos:Concept ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-colleges> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/environmental-college"^^xsd:anyURI ;
     skos:definition """The Environmental College represents EA members working in environmental engineering roles around Australia. The Environmental College provides leadership and focus on environmental policy and sustainability and:
     - Provides strategic advice to EA on how professional standards should apply to practice.
@@ -115,11 +114,11 @@ eaclg:environmental a skos:Concept ;
     The Environmental College work also includes developing policy positions and submitting proposals to government and industry."""@en ;
     skos:prefLabel "Environmental College"@en ;
     skos:related anzsrc-2020-for:4011 ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-colleges> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-colleges> .
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
 
 eaclg:itee a skos:Concept ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-colleges> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/information-telecommunications-and"^^xsd:anyURI ;
     skos:definition """The ITEE College promotes the discipline and represents EA members working in information, telecommunications and electronics engineering roles around Australia.
     The ITEE College control a set of documents to help engineers to understand which of the disciplines that make up ITEE, their works aligns to:
@@ -133,11 +132,11 @@ eaclg:itee a skos:Concept ;
     skos:altLabel "ITEE College"@en ;
     skos:prefLabel "Information, Telecommunications and Electronics Engineering College"@en ;
     skos:related engcat:ITEE ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-colleges> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-colleges> .
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
 
 eaclg:leadership-management a skos:Concept ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-colleges> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/college-leadership-and-management"^^xsd:anyURI ;
     skos:definition """The College of Leadership and Management exists to represent engineering professionals across all disciplines who are seeking to become managers, or who are already managers.
     Our objectives are to:
@@ -149,22 +148,22 @@ eaclg:leadership-management a skos:Concept ;
     - Share the success stories of engineering professionals as leaders and managers."""@en ;
     skos:prefLabel "College of Leadership and Management"@en ;
     skos:related engcat:engLeadership ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-colleges> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-colleges> .
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
 
 eaclg:mechanical a skos:Concept ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-colleges> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/mechanical-college"^^xsd:anyURI ;
     skos:definition """The Mechanical College represents EA members working in mechanical engineering roles in a vast range of industries around Australia.
     A large part of our role is to promote the mechanical engineering profession and to deliver continuing professional development (CPD) for mechanical engineers. CPD helps engineers fulfill their leadership potential and ensures they keep up with important industry and technical updates and innovations.
     We have branches in every state and territory in Australia that deliver CPD to Engineers Australia members and guests with online and in-person training and events."""@en ;
     skos:prefLabel "Mechanical College"@en ;
     skos:related anzsrc-2020-for:4017 ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-colleges> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-colleges> .
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
 
 eaclg:structural a skos:Concept ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-colleges> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/structural-college"^^xsd:anyURI ;
     skos:definition """The Structural College was originally formed in 1995 and now has over 7000 members including members in rural and remote Australia. Our members work in diverse industries including design, planning, construction, inspection and rehabilitation. Structural College members are held in high esteem and are often asked for expert commentary or opinions on structural engineering issues.
     Some of our key activities are to:
@@ -177,5 +176,5 @@ eaclg:structural a skos:Concept ;
     - Publish learned papers and other resources."""@en ;
     skos:prefLabel "Structural College"@en ;
     skos:related anzsrc-2020-for:400510 ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-colleges> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-colleges> .
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
