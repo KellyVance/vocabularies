@@ -1,5 +1,5 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix docs: <https://linked.data.gov.au/def/ea-documents/> .
+@prefix docs: <https://ref.engineersaustralia.org.au/def/ea-documents/> .
 @prefix id: <http://linked.data.gov.au/def/party-identifier-type/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -7,7 +7,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://linked.data.gov.au/def/ea-documents> a owl:Ontology,
+<https://ref.engineersaustralia.org.au/def/ea-documents> a owl:Ontology,
     skos:ConceptScheme ;
     dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
     dcterms:created "2023-01-31"^^xsd:date ;
@@ -28,189 +28,189 @@
 
 docs:agenda a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A document that outlines the topics and order of business to be discussed at a meeting or event."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Agenda"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:career-episode-report a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     rdfs:seeAlso docs:engineering-practice-report ;
     sdo:isPartOf docs:engineering-practice-report ;
     skos:definition """The Career Episode Reports are the individual reports that describe experience gained during professional formation as an engineer. The combined Career Episode Reports describing individual development make up an Engineering Practice Report."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:notation "CER"@en ;
     skos:prefLabel "Career Episode Report"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:communications a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A communication is a specific piece or collection of information that is prepared, approved and distributed to specific group(s) of persons and/or organisations."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:altLabel "Comms"@en,
         "Communication"@en,
         "Distribution"@en,
         "Official Communications"@en,
         "Notice"@en ;
     skos:prefLabel "Communications"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:competency-demo-report a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """The CDR is a submission in support of an applicant claim for recognition as an Engineer, where an accredited Australian or Washington Accord qualification is not held. The CDR is a report on career episodes in which the applicant relates their experiences to the competency units, elements and performance criteria in a manner similar to preparing a job application. 
         
     The CDR replaced Test by Examination as a means of determining the standing of an applicant. Normally overseas qualified, applicant's formal academic qualifications have permitted them to practice in the occupational category of professional engineer, engineering technologist or engineering associate in the country where the qualifications were obtained. However, Engineers Australia is unable to verify as equivalent standing in Australia. If the CDR is accepted, the Engineers Australia Qualifications Assessors may issue either a letter of eligibility, which is then accepted as evidence of Stage 1 eligibility for membership purposes, or a letter which may be used by the applicant to support his / her Migration application. The CDR is similar to the Engineering Practice Report required for Stage 2 applications, but is less comprehensive and focuses primarily on enabling competencies."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:notation "CDR"@en ;
     skos:prefLabel "Competency Demonstration Report"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:contract a skos:Concept ;
     dcterms:source "https://www.accc.gov.au/business/selling-products-and-services/contracts"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A contract is an agreement made between two or more parties that is legally enforceable. Legally enforceable means if one of the parties breaks the contract, the other party can take legal action against them."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Contract"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:cpd-activity a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A Continuing Professional Development (CPD) Activity is a formal record of a single specific engineering activity performed by a Chartered Engineer in order to maintain their standing as a Chartered Engineer."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:altLabel "CDP Activity"@en,
         "Continuous Professional Development Activity"@en ;
     skos:prefLabel "Continuing Professional Development Activity"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:cpd-statement a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A Continuing Professional Development (CPD) Statement is a document that details a Career Engineer's on-going series of activities to maintain the currency of their engineering knowledge."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:altLabel "CDP Statement"@en,
         "Continuous Professional Development Statement"@en ;
     skos:prefLabel "Continuing Professional Development Statement"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:cv a skos:Concept;
     dcterms:source "https://en.wikipedia.org/wiki/Curriculum_vitae"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A Curriculum Vitae is a short written summary of a person's career, qualifications, and education. Curriculum Vitae translates to 'course of life' in Latin."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:notation "CV"@en ;
     skos:altLabel "Resume"@en,
             "Résumé"@en ;
     skos:prefLabel "Curriculum Vitae"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
     docs:vcv a skos:Concept;
         dcterms:source "https://en.wikipedia.org/wiki/Curriculum_vitae"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:definition """An applicant for Engineers Australia Membership or Registration to the National Engineering Register (NER) need to have their CV verified by a Member, Senior Member or Fellow of Engineers Australia, or a senior experienced engineer or the equivalent in their Occupational Category. The person providing the verification is required to personally confirm the accuracy of the statements made.
             
         Verified Curriculum Vitae must be signed with the name and Engineers Australia membership number of the Verifier. They must also include a statement as follows:
 
         I verify that this is a true statement of the career history of (candidate's name) during the period (date) to (date). Signed by: Date Membership No."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:notation "vCV"@en ;
         skos:prefLabel "Verified Curriculum Vitae"@en ;
-        skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:engineering-experience-record a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     rdfs:seeAlso docs:engineering-experience-record-segment ;
     sdo:hasPart docs:engineering-experience-record-segment ;
     skos:definition """An Engineering Experience Record is a Submission Item that details a Person's work responsibilities at a specific employer, in support of his/her Stage 2 Application. Commonly derived from a Curriculum Vitae. Each Engineering Experience Record may be further divided into Segments that detail the specific contribution to the engineering experience of an individual."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:notation "EER" ;
     skos:prefLabel "Engineering Experience Record"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:engineering-experience-record-segment a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     rdfs:seeAlso docs:engineering-experience-record ;
     sdo:isPartOf docs:engineering-experience-record ;
     skos:definition """An Engineering Experience Record Segment details a specific part of a Person's CV or work history that contributes towards their Engineering Experience Record."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:notation "EERs" ;
     skos:altLabel "EER Segment"@en,
         "Engineering Experience Record (EER) Segment"@en ;
     skos:prefLabel "Engineering Experience Record Segment"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:engineering-practice-report a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     rdfs:seeAlso docs:career-episode-report ;
     sdo:hasPart docs:career-episode-report ;
     skos:definition """An Engineering Practice Report (EPR) consists of a series of written Career Episode Reports (CER) each describing experience gained during Professional Formation."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:notation "EPR" ;
     skos:prefLabel "Engineering Practice Report"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:english-language-evidence a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """An English Language Evidence is a document that recognises a Person has achieved a spoken & written level of competency with the English Language."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:notation "ELE" ;
     skos:prefLabel "English Language Evidence"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:enrolment a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """An enrolment form is the official documentation and record of a request to join an official list, organisation, or submission to a process.
     
     The type of enrolment is specified by the associated activity. For example, a Stage 2 Enrolment Form is a formal record of a request to secure a place on the Stage 2 Competency Assessment or Stage 2 Competency Demonstration Program of Engineers Australia."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:altLabel "Enrolment"@en ;
     skos:prefLabel "Enrolment Form"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:eoi a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """An Expression of Interest is document or other media that that demonstrates interest in a position, membership, participation in an activity, or permission and access to a resource, area, group, or administrative region (e.g. immigration to a country). It is a method to provide information to demonstrate suitability, interest, and availability in relation to the subject of the Expression of Interest."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:notation "EOI" ;
     skos:altLabel "E.O.I."@en ;
     skos:prefLabel "Expression of Interest"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:evidentiary-record a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A physical or digital document or correspondence from a recognised authoritative agency or organisation that validates or confirms the experience, history, claims, or conclusions of a person or organisation."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Evidentiary Record"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
     docs:academic-letter-of-completion a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:definition """An Letter of Completion is a document that records the completion of requirements in a course for individual from an academic institution.
         
         The Letter of Completion is used for graduates who have not yet received the award and title assoicated with their course."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:prefLabel "Letter of Completion"@en ;
         skos:broader docs:evidentiary-record .
 
     docs:academic-transcript a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:definition """An Academic Transcript is a document that shows the academic results of an individual from a specified academic institution.
         
         The Academic Transcript is a formal listing issued by the course provider showing the subjects studied, the period of the course, any Recognition of Prior Learning (RPL) exemptions, levels of achievement in each subject, and whether the achievements listed complete the course and entitle the student to graduate."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:altLabel "Academic Record"@en,
             "Course Record"@en ;
         skos:prefLabel "Academic Transcript"@en ;
@@ -218,9 +218,9 @@ docs:evidentiary-record a skos:Concept ;
 
     docs:education-certificate a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:definition """An Education Certificate is a document that formally recognises a Person has achieved a formal qualification with a specific Tertiary Institution. When referred to as a graduation certificate this should not be confused with the Graduate Certificate type of Australian Qualification Level."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:altLabel "Degree Certificate"@en,
             "Graduation Certificate"@en,
             "Testamur"@en ;
@@ -229,220 +229,220 @@ docs:evidentiary-record a skos:Concept ;
 
     docs:competency-certificate a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:definition """A Competency Certificate is a document that formally recognises a Person has achieved competency in a skillset as determined by an authoritative assessor."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:prefLabel "Competency Certificate"@en ;
         skos:broader docs:evidentiary-record .
 
         docs:mra-apec-competency-certificate a skos:Concept ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:definition """An MRA APEC Certificate is an Asia Pacific Economic Cooperation Certificate which provides recognition of Engineering Competency for an individual."""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:altLabel "MRA APEC Competency Certificate"@en ;
             skos:prefLabel "MRA APEC Certificate"@en ;
             skos:broader docs:competency-certificate .
 
     docs:mra-org-validation-evidence a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:definition """An MRA Organisation Validation Evidence is a document (commonly an email), from a Mutual Recognition Agreement (MRA) Organisation to the EA MRA Administrator, confirming or denying claims made by a Person enrolled onto the Stage 2 Demonstration Pathway."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:prefLabel "MRA Organisation Validation Evidence"@en ;
         skos:broader docs:evidentiary-record .
 
     docs:micro-credential-badge a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:definition """A micro-credential is a small program that allows you to gain relevant skills that are needed in today's workforce. Digital badges are achievements that you can show to the world.
         
         A micro-credential badge is a digital badge that represents a specific set of skills, knowledge, or competencies that have been demonstrated by an individual. It is a form of certification that recognizes an individual's achievements in a specific area and is designed to be easily shared and verified online.
         
         Micro-credential badges are typically earned through short, focused learning experiences that are often offered online. These experiences can include courses, workshops, or other forms of training, and are designed to help individuals develop new skills or enhance their existing ones. Once an individual completes the learning experience and demonstrates their mastery of the relevant material, they are awarded a digital badge that represents their achievement."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:altLabel "Digital Credential"@en ;
         skos:prefLabel "Micro-Credential Badge"@en ;
         skos:broader docs:evidentiary-record .
 
 docs:foa-report a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     rdfs:seeAlso docs:foa-segment ;
     sdo:hasPart docs:foa-segment ;
     skos:definition """A Follow-on Activity Report is a Submission Item that groups the one-or-many Follow-on Activity Segments to demonstrate how the requirements of an applicants Follow-on Activity Requirement has been met. An FoA Report details the accumualted activities described by one-or-many FoA Segments."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:altLabel "FoA Report" ;
     skos:prefLabel "Follow-on Activity Report"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:foa-segment a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     rdfs:seeAlso docs:foa-report ;
     sdo:isPartOf docs:foa-report ;
     skos:definition """A Follow-on Activity Segment details a specific part of a Follow-on Activity Report. Segments detail individual activities and are compiled into a report that demonstrates how requirements have been met by the accumulated activities."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:altLabel "FoA Segment" ;
     skos:prefLabel "Follow-on Activity Segment"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:guideline a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A document that provides recommendations or suggestions for best practices or standards of care for a particular industry or field."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Guideline"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:form a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A document that contains fields or spaces for users to fill out with specific information, often used to collect data or initiate a process."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Form"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:interviewer-attachment a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """An Interviewer Attachment is a formal record of interview observations and assessment by a specific interviewer at a professional interview."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:altLabel "Interview Summary"@en,
         "Interview Observations"@en,
         "Interview Report"@en ;
     skos:prefLabel "Interviewer Attachment"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:invoice a skos:Concept ;
     dcterms:source "https://en.wikipedia.org/wiki/Invoice"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """An invoice, bill or tab is a commercial document issued by a seller to a buyer relating to a sale transaction and indicating the products, quantities, and agreed-upon prices for products or services the seller had provided the buyer."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:altLabel "Tab"@en,
         "Bill"@en,
         "Receipt"@en ;
     skos:prefLabel "Invoice"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:journal a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A formal record of activities undertaken. Journal types are use case specific, such as an accounting journal where associated with a financial activity or group, a driving log for trips made by a person recoring business travel, or a career journal as a personal record of professional activities performed."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:altLabel "Diary"@en,
         "Log"@en ;
     skos:prefLabel "Journal"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:letter-of-decline a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A formal letter declining an application or offer."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:altLabel "Letter of Decline"@en,
         "Rejection Letter"@en,
         "Letter of Rejection"@en ;
     skos:prefLabel "Decline Letter"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:letter-of-introduction a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A formal letter from a recognised authority introducing an individual to an organisation."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Letter of Introduction"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:membership-document a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """An artefact either digital or physical that verifies membership to a club, society, or other type of organisation."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Membership Document"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
     docs:membership-card a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:definition """A small card or digital representation thereof that is issued to and held by a member of a club, society or other organisation, verifying membership for a given period."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:prefLabel "Membership Card"@en ;
         skos:broader docs:membership-document .
 
     docs:mra-chartered-evidence a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:definition """An MRA Chartered Evidence is a document that shows a Person's Chartered Status with an MRA Organisation."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:prefLabel "MRA Chartered Evidence"@en ;
         skos:broader docs:membership-document .
 
     docs:mra-membership-evidence a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:definition """An MRA Membership Evidence is a document that shows a Person's membership with an MRA Organisation."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:prefLabel "MRA Membership Evidence"@en ;
         skos:broader docs:membership-document .
 
 docs:mou a skos:Concept ;
     dcterms:source "https://www.investopedia.com/terms/m/mou.asp"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A memorandum of understanding is an agreement between two or more parties outlined in a formal document. It is not legally binding but signals the willingness of the parties to move forward with a contract.
     
     The MOU can be seen as the starting point for negotiations as it defines the scope and purpose of the talks. Such memoranda are most often seen in international treaty negotiations but also may be used in high-stakes business dealings such as merger talks."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:notation "MoU" ;
     skos:prefLabel "Memorandum of Understanding"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:minutes a skos:Concept ;
     dcterms:source "https://en.wikipedia.org/wiki/Minutes"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A formal written record of a meeting that includes a summary of discussion, decisions, and action items. They typically describe the events of the meeting and may include a list of attendees, a statement of the activities considered by the participants, and related responses or decisions for the activities.The format of the minutes can vary depending on the standards established by an organization, although there are general guidelines. Minutes may be the formal record of discussions within an organisation or between two organisations."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:notation "MoM" ;
     skos:altLabel "Minutes of Meeting"@en,
         "Meeting Minutes"@en,
         "Protocols"@en,
         "Meeting Record"@en ;
     skos:prefLabel "Minutes"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:notes a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A written record of observations, ideas, or key points from a meeting, conversation, or event."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Notes"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:opportunity a skos:Concept ;
     dcterms:source "https://en.wikipedia.org/wiki/Minutes"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """An opportunity is a formal record of discussions between an Organisation and another organisation or individual that may lead to favourable business opportunities through a sale, provision of service, or mutually beneficial business arrangement. Commonly referring to a contact who is a likely future sale."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:altLabel "Record of Opportunity"@en ;
     skos:prefLabel "Opportunity"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:personal-identification a skos:Concept ;
     dcterms:source "https://www.mygovid.gov.au/verifying-your-identity"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """Documents and records used when verifying the identity of an individual. Identification details are checked against existing records to prove identity."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:altLabel "Personal ID"@en,
         "Personal ID Documents"@en,
         "Personal Identification Documents"@en ;
     skos:prefLabel "Personal Identification"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
     docs:australian-visa a skos:Concept ;
         dcterms:source "http://linked.data.gov.au/def/party-identifier-type/australian-visa"^^xsd:anyURI ;
         skos:definition "A conditional permit granted to a foreign national by the Australian Government conveying rights of entry, residence, or work within the country."@en ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:exactMatch id:australian-visa ;
         skos:prefLabel "Australian visa"@en ;
         skos:broader docs:personal-identification .
@@ -453,8 +453,8 @@ docs:personal-identification a skos:Concept ;
             "Credit Card"@en,
             "Credit card, bank card or bank passbook"@en ;
         skos:definition "A card issued by a financial institution for the purpose of identity and account access."@en ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:exactMatch id:bank-card ;
         skos:prefLabel "Bank Card"@en ;
         skos:broader docs:personal-identification .
@@ -462,8 +462,8 @@ docs:personal-identification a skos:Concept ;
     docs:bank-statement a skos:Concept ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         skos:definition "A statement issued by a financial institution detailing transactions and account information associated with a customer account."@en ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:prefLabel "Bank Statement"@en ;
         skos:broader docs:personal-identification .
 
@@ -473,8 +473,8 @@ docs:personal-identification a skos:Concept ;
             "Australian Drivers License"@en,
             "Drivers License"@en ;
         skos:definition "The official permit required for a person to legally drive a motor vehicle in Australia. Issued by the States and Territories of Australia."@en ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:exactMatch id:drivers-licence ;
         skos:prefLabel "Drivers licence"@en ;
         skos:broader docs:personal-identification .
@@ -482,8 +482,8 @@ docs:personal-identification a skos:Concept ;
     docs:medicare-card a skos:Concept ;
         dcterms:source "http://linked.data.gov.au/def/party-identifier-type/medicare-card"^^xsd:anyURI ;
         skos:definition "A card, issued to Australian citizens and permanent residents and their families. The card or the Medicare number enables the cardholder to receive a rebate of medical expenses under Australia's Medicare system, as well as subsidised medications under the Pharmaceutical Benefits Scheme (PBS). Source:Wikipedia"@en ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:exactMatch id:medicare-card ;
         skos:prefLabel "Medicare card"@en ;
         skos:broader docs:personal-identification .
@@ -491,8 +491,8 @@ docs:personal-identification a skos:Concept ;
     docs:australian-passport a skos:Concept ;
         dcterms:source "http://linked.data.gov.au/def/party-identifier-type/australian-passport"^^xsd:anyURI ;
         skos:definition "An Australian passport is a basic identity document accepted as valid for crossing international borders, issued by the Government of Australia to Australian citizens. Source: The New Oxford Companion to Law"@en ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:exactMatch id:australian-passport ;
         skos:prefLabel "Australian passport"@en ;
         skos:broader docs:personal-identification .
@@ -500,101 +500,109 @@ docs:personal-identification a skos:Concept ;
     docs:foregin-passport a skos:Concept ;
         dcterms:source "http://linked.data.gov.au/def/party-identifier-type/foreign-passport"^^xsd:anyURI ;
         skos:definition "A foreign passport is a basic identity document accepted as valid for crossing international borders, issued by a government, other than Australia's, to its citizens. Source: The New Oxford Companion to Law"@en ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:exactMatch id:foregin-passport ;
         skos:altLabel "International Passport"@en ;
         skos:prefLabel "Foreign passport"@en ;
         skos:broader docs:personal-identification .
 
+docs:oap a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
+    skos:definition """A document that summarises a subject on a single page docmument. Commonly augmented with graphics and images to convey meaning in an information dense form."""@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
+    skos:prefLabel "On a Page"@en ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
+
 docs:policy a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A document that outlines principles, rules, and guidelines that govern decision-making and actions within an organization or group."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Policy"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:presentation a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A document or multimedia display that uses visuals and/or spoken words to communicate information or ideas to an audience."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Presentation"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:procedure a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A document that provides instructions for carrying out a particular task or process. Instructions on the application of principles detailed in a policy."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Procedure"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:qrg a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A brief document that provides condensed information or instructions for a specific task or topic, usually in a format that is informal and easy to access and use."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Quick Reference Guide"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:registration a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """Registration is a formal record of an individual joining an organisation or activity. For example registration may describe procuring one or more allocated seats or tickets for attendence at an Event."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Registration"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:speech a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A document or spoken presentation that communicates information, ideas, or opinions to an audience, often delivered in a formal setting or event."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Speech"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:standard a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A document that sets forth specific requirements or guidelines for processes, products, or services to ensure consistency, quality, and safety."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Standard"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:template a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A pre-designed document that includes a structure or layout that can be customized for specific purposes or needs."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Template"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 docs:testimonial a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """A Testimonial is a favourable overview of an individual's qualifications, work experience, personal qualities, and interests supplied by an individual who has insight into the person's experience and behaviour."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:altLabel "Written Reference"@en ;
     skos:prefLabel "Testimonial"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
 #VISAS
 
 docs:skilled-visas a skos:Concept ;
     dcterms:source "https://immi.homeaffairs.gov.au/visas/working-in-australia/skills-assessment"^^xsd:anyURI ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:definition """Migration Visas that are available to individuals who are qualified to work or train in an eligible skilled occupation in Australia and can meet all other requirements. The visas are subject to a periodically revised list of skilled occupations in shortage within the Australian labour force. Skilled work visas are the typical way engineers migrate to Australia through their professional ability."""@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
     skos:prefLabel "Skilled Work Visas"@en ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-documents> .
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-documents> .
 
     docs:visas-gsm a skos:Concept ;
         dcterms:source "https://immi.homeaffairs.gov.au/visas/working-in-australia/skills-assessment"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:definition """Migration Visas that are available to individuals who are qualified to work or train in an eligible skilled occupation in Australia and can meet all other requirements. The visas are subject to a periodically revised list of skilled occupations in shortage within the Australian labour force. Skilled work visas are the typical way engineers migrate to Australia."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:notation "GSM" ;
         skos:altLabel "General Skilled Migration (GSM)"@en ;
         skos:prefLabel "General Skilled Migration"@en ;
@@ -602,16 +610,16 @@ docs:skilled-visas a skos:Concept ;
 
         docs:visa-189 a skos:Concept ;
             dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:definition """This visa is for invited workers, eligible New Zealand citizens and eligible Hong Kong or British National (Overseas) passport holders with skills we need, to live and work permanently anywhere in Australia."""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:altLabel "Skilled Independent visa (subclass 189)"@en ;
             skos:prefLabel "Skilled Independent visa"@en ;
             skos:broader docs:visas-gsm .
 
             docs:visa-189-pts a skos:Concept ;
                 dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/points-tested"^^xsd:anyURI ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:definition """This visa lets invited workers with skills we need, to live and work permanently anywhere in Australia.
                 
                 With this visa, you can:
@@ -621,14 +629,14 @@ docs:skilled-visas a skos:Concept ;
                 - sponsor your relatives to come to Australia
                 - travel to and from Australia for 5 years
                 - if eligible, become an Australian citizen"""@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:altLabel "Skilled Independent visa (subclass 189) - Points-tested stream"@en ;
                 skos:prefLabel "Skilled Independent visa - Points-tested stream"@en ;
                 skos:broader docs:visa-189 .
 
             docs:visa-189-nzs a skos:Concept ;
                 dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/new-zealand"^^xsd:anyURI ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:definition """This visa lets eligible New Zealand citizens who have demonstrated commitment and contribution to Australia, live and work in Australia permanently.
                 
                 With this visa, you can:
@@ -638,14 +646,14 @@ docs:skilled-visas a skos:Concept ;
                 - sponsor your relatives to come to Australia
                 - travel to and from Australia for 5 years
                 - if eligible, become an Australian citizen"""@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:altLabel "Skilled Independent visa (subclass 189) - New Zealand stream"@en ;
                 skos:prefLabel "Skilled Independent visa - New Zealand stream"@en ;
                 skos:broader docs:visa-189 .
 
             docs:visa-189-hks a skos:Concept ;
                 dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/hong-kong"^^xsd:anyURI ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:definition """This visa lets eligible Hong Kong or British National (Overseas) passport holders who have demonstrated commitment to Australia, live and work in Australia permanently.
                 
                 With this visa, you can:
@@ -655,14 +663,14 @@ docs:skilled-visas a skos:Concept ;
                 - sponsor your relatives to come to Australia
                 - travel to and from Australia for 5 years
                 - if eligible, become an Australian citizen"""@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:altLabel "Skilled Independent visa (subclass 189) - Hong Kong stream"@en ;
                 skos:prefLabel "Skilled Independent visa - Hong Kong stream"@en ;
                 skos:broader docs:visa-189 .
 
         docs:visa-190 a skos:Concept ;
             dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:definition """This visa lets nominated skilled workers live and work in Australia as permanent residents.
             
             With this visa, you can:
@@ -672,14 +680,14 @@ docs:skilled-visas a skos:Concept ;
             - sponsor your relatives to come to Australia
             - travel to and from Australia for 5 years
             - if eligible, become an Australian citizen"""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:altLabel "Skilled Nominated visa (subclass 190)"@en ;
             skos:prefLabel "Skilled Nominated visa"@en ;
             skos:broader docs:visas-gsm .
 
         docs:visa-489 a skos:Concept ;
             dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-regional-provisional-489/invited-pathway"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:definition """This is a temporary visa. It is for skilled workers who want to live and work in regional Australia.
             
             With this visa, you can:
@@ -687,14 +695,14 @@ docs:skilled-visas a skos:Concept ;
             - live, work and study in a specified region of Australia
             - travel to and from Australia as many times as you want, while the visa is valid
             - apply for permanent residence, if eligible, through the Skilled—Regional (Residence) visa (subclass 887)"""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:altLabel "Skilled Regional (provisional) visa (subclass 489)"@en ;
             skos:prefLabel "Skilled Regional (provisional) visa"@en ;
             skos:broader docs:visas-gsm .
 
             docs:visa-489-ip a skos:Concept ;
                 dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-regional-provisional-489/invited-pathway"^^xsd:anyURI ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:definition """This is a temporary visa. It is for skilled workers who want to live and work in regional Australia.
             
                 With this visa, you can:
@@ -702,14 +710,14 @@ docs:skilled-visas a skos:Concept ;
                 - live, work and study in a specified region of Australia
                 - travel to and from Australia as many times as you want, while the visa is valid
                 - apply for permanent residence, if eligible, through the Skilled—Regional (Residence) visa (subclass 887)"""@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:altLabel "Skilled Regional (provisional) visa (subclass 489) - Invited pathway"@en ;
                 skos:prefLabel "Skilled Regional (provisional) visa - Invited pathway"@en ;
                 skos:broader docs:visa-489 .
 
             docs:visa-489-esp a skos:Concept ;
                 dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-regional-provisional-489/extended-stay-pathway"^^xsd:anyURI ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:definition """This is a temporary visa. It is for skilled workers who want to live and work in regional Australia.
             
                 With this visa, you can:
@@ -717,14 +725,14 @@ docs:skilled-visas a skos:Concept ;
                 - live, work and study in a specified region of Australia
                 - travel to and from Australia as many times as you want, while the visa is valid
                 - apply for permanent residency, if eligible, through the Skilled—Regional (Residence) visa (subclass 887)"""@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:altLabel "Skilled Regional (provisional) visa (subclass 489) - Extended Stay pathway"@en ;
                 skos:prefLabel "Skilled Regional (provisional) visa - Extended Stay pathway"@en ;
                 skos:broader docs:visa-489 .
 
             docs:visa-489-se a skos:Concept ;
                 dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-regional-provisional-489/subsequent-entry-pathway"^^xsd:anyURI ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:definition """This visa is for a member of the family unit of someone who holds a Skilled Regional (Provisional) visa (subclass 489) or a subclass 475, 487, 495 or 496 visa.
             
                 With this visa, you can:
@@ -732,14 +740,14 @@ docs:skilled-visas a skos:Concept ;
                 - live, work and study in a specified region of Australia
                 - travel to and from Australia as many times as you want, while the visa is valid
                 - apply for permanent residency, if eligible, through the Skilled—Regional (Residence) visa (subclass 887)"""@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:altLabel "Skilled Regional (provisional) visa (subclass 489) - Subsequent entry pathway"@en ;
                 skos:prefLabel "Skilled Regional (provisional) visa - Subsequent entry pathway"@en ;
                 skos:broader docs:visa-489 .
 
         docs:visa-491 a skos:Concept ;
             dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:definition """A visa for skilled people nominated by a state or territory government to live and work in regional Australia.
             
             Applicants must:
@@ -748,14 +756,14 @@ docs:skilled-visas a skos:Concept ;
             - have a suitable skills assessment for the occupation
             - be invited to apply
             - satisfy the points test"""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:altLabel "Skilled Work Regional (provisional) visa (subclass 491)"@en ;
             skos:prefLabel "Skilled Work Regional (provisional) visa"@en ;
             skos:broader docs:visas-gsm .
 
             docs:visa-491-ma a skos:Concept ;
                 dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491/application"^^xsd:anyURI ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:definition """This is a provisional visa. It is for skilled workers who want to live and work in regional Australia.
             
                 With this visa, you can:
@@ -765,14 +773,14 @@ docs:skilled-visas a skos:Concept ;
                 - apply for permanent residence, if eligible, through the Permanent Residence (Skilled Regional) visa (subclass 191) - which starts on 16 November 2022. You can't apply for other permanent visas until you have held your subclass 491 visa for 3 years
                 
                 The applicant and all members of the family unit who are also holders of the visa, will need to live work and study in a designated regional area of Australia."""@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:altLabel "Skilled Work Regional (provisional) visa (subclass 491) - Main applicant"@en ;
                 skos:prefLabel "Skilled Work Regional (provisional) visa - Main applicant"@en ;
                 skos:broader docs:visa-491 .
             
             docs:visa-491-se a skos:Concept ;
                 dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491/subsequent-entrant"^^xsd:anyURI ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:definition """This visa is for a member of the family unit of someone who holds a Skilled Work Regional (Provisional) visa (subclass 491).
             
                 With this visa, you can:
@@ -782,16 +790,16 @@ docs:skilled-visas a skos:Concept ;
                 - apply for permanent residency, if eligible, through the Permanent Residence (Skilled Regional) visa (subclass 191)
                 
                 The applicant will need to live, work and study only in a designated area."""@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:altLabel "Skilled Work Regional (provisional) visa (subclass 491) - Subsequent entrant"@en ;
                 skos:prefLabel "Skilled Work Regional (provisional) visa - Subsequent entrant"@en ;
                 skos:broader docs:visa-491 .
 
     docs:visas-esv a skos:Concept ;
         dcterms:source "https://immi.homeaffairs.gov.au/visas/working-in-australia/skills-assessment"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:definition """These visas lets skilled workers, who are nominated by their employer, live and work in Australia permanently under a range of conditions."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:notation "ESV" ;
         skos:altLabel "Employer Sponsored Visas (ESV)"@en ;
         skos:prefLabel "Employer Sponsored Visas"@en ;
@@ -799,14 +807,14 @@ docs:skilled-visas a skos:Concept ;
 
         docs:visa-186 a skos:Concept ;
             dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:definition """This visa lets skilled workers, who are nominated by their employer, live and work in Australia permanently.
             
             Applicants must:
             - have the necessary skills for the job
             - be nominated by an Australian employer
             - meet our health and character requirements"""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:notation "ENS" ;
             skos:altLabel "Employer Nomination Scheme (ENS) (subclass 186)"@en ;
             skos:prefLabel "Employer Nomination Scheme (ENS)"@en ;
@@ -814,7 +822,7 @@ docs:skilled-visas a skos:Concept ;
 
             docs:visa-186-des a skos:Concept ;
                 dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186/direct-entry-stream"^^xsd:anyURI ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:definition """This visa lets skilled workers, who are nominated by an employer, live and work in Australia permanently.
                 
                 With this visa, you can
@@ -824,14 +832,14 @@ docs:skilled-visas a skos:Concept ;
                 - sponsor eligible relatives to come to Australia
                 - travel to and from Australia for 5 years
                 - apply for Australian citizenship, if eligible"""@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:altLabel "Employer Nomination Scheme visa (subclass 186) - Direct Entry stream"@en ;
                 skos:prefLabel "Employer Nomination Scheme visa - Direct Entry stream"@en ;
                 skos:broader docs:visa-186 .
 
             docs:visa-186-las a skos:Concept ;
                 dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186/labour-agreement-stream"^^xsd:anyURI ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:definition """This visa lets skilled workers who are nominated by their employer live and work in Australia permanently. The Labour Agreement stream might be for you if you currently work, or will work, for an employer who is party to a labour agreement.
                 
                 With this visa, you can
@@ -841,14 +849,14 @@ docs:skilled-visas a skos:Concept ;
                 - sponsor eligible relatives to come to Australia
                 - travel to and from Australia for 5 years
                 - apply for Australian citizenship, if eligible"""@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:altLabel "Employer Nomination Scheme visa (subclass 186) - Labour Agreement stream"@en ;
                 skos:prefLabel "Employer Nomination Scheme visa - Labour Agreement stream"@en ;
                 skos:broader docs:visa-186 .
 
             docs:visa-186-trts a skos:Concept ;
                 dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186/temporary-residence-transition-stream"^^xsd:anyURI ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:definition """This visa lets skilled workers, who are nominated by their employer, live and work in Australia permanently.
                 
                 With this visa, you can
@@ -858,21 +866,21 @@ docs:skilled-visas a skos:Concept ;
                 - sponsor eligible relatives to come to Australia
                 - travel to and from Australia for 5 years
                 - apply for Australian citizenship, if eligible"""@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:altLabel "Employer Nomination Scheme visa (subclass 186) - Temporary Residence Transition stream"@en ;
                 skos:prefLabel "Employer Nomination Scheme visa - Temporary Residence Transition stream"@en ;
                 skos:broader docs:visa-186 .
 
         docs:visa-187 a skos:Concept ;
             dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/regional-sponsor-migration-scheme-187"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:definition """This visa allows skilled workers, who are nominated by their employer in regional Australia, live and work in Australia permanently.
             
             Applicants must:
             - be nominated by an approved Australian employer for a job in regional Australia
             - be under 45 years of age
             - meet the skills, qualifications and English language requirements"""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:altLabel "Regional Sponsored Migration Scheme visa (subclass 187)"@en,
                 "Regional Sponsored Migration Scheme (subclass 187)"@En ;
             skos:prefLabel "Regional Sponsored Migration Scheme visa"@en ;
@@ -880,7 +888,7 @@ docs:skilled-visas a skos:Concept ;
 
             docs:visa-187-des a skos:Concept ;
                 dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/regional-sponsor-migration-scheme-187/direct-entry-stream"^^xsd:anyURI ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:definition """This visa allows skilled workers, who are nominated by their employer in regional Australia, live and work in Australia permanently.
                 
                 With this visa, you can
@@ -890,14 +898,14 @@ docs:skilled-visas a skos:Concept ;
                 - sponsor eligible relatives to come to Australia
                 - travel to and from Australia for 5 years
                 - apply for Australian citizenship, if eligible"""@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:altLabel "Regional Sponsored Migration Scheme visa (subclass 187) - Direct Entry stream"@en ;
                 skos:prefLabel "Regional Sponsored Migration Scheme visa - Direct Entry stream"@en ;
                 skos:broader docs:visa-187 .
 
             docs:visa-187-trts a skos:Concept ;
                 dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/regional-sponsor-migration-scheme-187/temporary-residence-transistion-stream"^^xsd:anyURI ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:definition """This visa allows skilled workers, who are nominated by their employer in regional Australia, live and work in Australia permanently.
                 
                 Applicants must:
@@ -912,21 +920,21 @@ docs:skilled-visas a skos:Concept ;
                 - sponsor eligible relatives to come to Australia
                 - travel to and from Australia for 5 years
                 - apply for Australian citizenship, if eligible"""@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
                 skos:altLabel "Regional Sponsored Migration Scheme visa (subclass 187) - Temporary Residence Transition stream"@en ;
                 skos:prefLabel "Regional Sponsored Migration Scheme visa - Temporary Residence Transition stream"@en ;
                 skos:broader docs:visa-187 .
 
     docs:visa-482 a skos:Concept ;
         dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482/"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:definition """This temporary visa lets an employer sponsor a suitably skilled worker to fill a position they can't find a suitably skilled Australian to fill.
         
         Applicants must:
         - be nominated for a skilled position by an approved sponsor
         - have the right skills to do the job
         - meet the relevant English language requirements"""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:notation "TSS" ;
         skos:altLabel "Temporary Skill Shortage visa (subclass 482)"@en,
             "Temporary Skill Shortage visa (TSS) subclass 482"@en ;
@@ -935,7 +943,7 @@ docs:skilled-visas a skos:Concept ;
 
         docs:visa-482-sts a skos:Concept ;
             dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482/short-term-stream/"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:definition """This visa enables employers to address labour shortages by bringing in skilled workers where employers can't source an appropriately skilled Australian worker.
             
             With this visa, you can
@@ -955,7 +963,7 @@ docs:skilled-visas a skos:Concept ;
             - lodge application before 1 July 2023.
             
             To apply for a TSS visa applicants must hold a substantive or bridging (A, B or C) visa at the time of application."""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:altLabel "Temporary Skill Shortage visa (subclass 482) - Short-term stream"@en,
                 "Temporary Skill Shortage visa (TSS) subclass 482 - Short-term stream"@en ;
             skos:prefLabel "Temporary Skill Shortage visa - Short-term stream"@en ;
@@ -963,7 +971,7 @@ docs:skilled-visas a skos:Concept ;
 
         docs:visa-482-mts a skos:Concept ;
             dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482/medium-term-stream/"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:definition """This visa enables employers to address labour shortages by bringing in skilled workers where employers can't source an appropriately skilled Australian worker.
             
             With this visa, you can
@@ -984,7 +992,7 @@ docs:skilled-visas a skos:Concept ;
             - have a relevant skills assessment if this is required for your occupation
             - work only for your sponsor or associated entity, unless you are exempt
             - meet minimum standards of English language proficiency unless you are exempt from needing to show this."""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:altLabel "Temporary Skill Shortage visa (subclass 482) - Medium-term stream"@en,
                 "Temporary Skill Shortage visa (TSS) subclass 482 - Medium-term stream"@en ;
             skos:prefLabel "Temporary Skill Shortage visa - Medium-term stream"@en ;
@@ -992,7 +1000,7 @@ docs:skilled-visas a skos:Concept ;
 
         docs:visa-482-las a skos:Concept ;
             dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482/labour-agreement-stream/"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:definition """This visa is for skilled workers nominated by employers who have a Labour Agreement. It lets you live and work in Australia temporarily. Labour agreements are developed between the Australian Government (represented by the Department) and employers.
             
             With this visa, you can
@@ -1009,7 +1017,7 @@ docs:skilled-visas a skos:Concept ;
             - have a relevant skills assessment if this is required for your occupation
             - work only for your sponsor
             - meet minimum standards of English language proficiency unless you are exempt from needing to show this"""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:altLabel "Temporary Skill Shortage visa (subclass 482) - Labour agreement stream"@en,
                 "Temporary Skill Shortage visa (TSS) subclass 482 - Labour agreement stream"@en ;
             skos:prefLabel "Temporary Skill Shortage visa - Labour agreement stream"@en ;
@@ -1017,7 +1025,7 @@ docs:skilled-visas a skos:Concept ;
 
         docs:visa-482-se a skos:Concept ;
             dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482/subsequent-entrant"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:definition """This visa is for family members of subclass 457 and TSS visa holders who are applying separately for their TSS visa and wish to join the primary subclass 457 or TSS visa holder in Australia.
             
             With this visa, you can
@@ -1033,7 +1041,7 @@ docs:skilled-visas a skos:Concept ;
 
             To be eligible applicants must:
             - Be a partner or dependent of a subclass 482 or 457 visa holder"""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:altLabel "Temporary Skill Shortage visa (subclass 482) - Subsequent entrant"@en,
                 "Temporary Skill Shortage visa (TSS) subclass 482 - Subsequent entrant"@en ;
             skos:prefLabel "Temporary Skill Shortage visa - Subsequent entrant"@en ;
@@ -1041,7 +1049,7 @@ docs:skilled-visas a skos:Concept ;
 
     docs:visa-485 a skos:Concept ;
         dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/"^^xsd:anyURI ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:definition """A temporary visa that allows international students to live, study and work after you have finished your studies.
         
         Applicants must:
@@ -1051,14 +1059,14 @@ docs:skilled-visas a skos:Concept ;
         - have a recent qualification in a CRICOS-registered course
         - nominate one stream only - it is not possible to change visa streams after you apply
         - attach specified evidence when you apply"""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:altLabel "Temporary Graduate visa (subclass 485)"@en ;
         skos:prefLabel "Temporary Graduate visa"@en ;
         skos:broader docs:skilled-visas .
            
         docs:visa-485-gws a skos:Concept ;
             dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/graduate-work"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:definition """This visa is for international students who have recently graduated with skills and qualifications that are relevant to specific occupations Australia needs. It lets you live, study and work in Australia temporarily.
             
             With this visa, you can
@@ -1073,14 +1081,14 @@ docs:skilled-visas a skos:Concept ;
             The visa is granted with multiple entry. You can leave and re-enter Australia as many times as you want while the visa is valid.
             The visa starts on the date we grant the visa.
             For further information on changes regarding Hong Kong passport holders read Visa options for Hong Kong."""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:altLabel "Temporary Graduate visa (subclass 485) - Graduate Work stream"@en ;
             skos:prefLabel "Temporary Graduate visa - Graduate Work stream"@en ;
             skos:broader docs:visa-485 .
 
         docs:visa-485-psws a skos:Concept ;
             dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/post-study-work"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:definition """This visa is for international students who have recently graduated with a degree from an Australian institution. It lets you live, work and study in Australia, temporarily.
             
             With this visa, you can
@@ -1098,14 +1106,14 @@ docs:skilled-visas a skos:Concept ;
 
             The visa starts on the date we grant the visa.
             For further information on changes regarding Hong Kong passport holders read Visa options for Hong Kong."""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:altLabel "Temporary Graduate visa (subclass 485) - Post-Study Work stream"@en ;
             skos:prefLabel "Temporary Graduate visa - Post-Study Work stream"@en ;
             skos:broader docs:visa-485 .
 
         docs:visa-485-spsws a skos:Concept ;
             dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/second-post-study-work"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:definition """This visa is for holders of a Temporary Graduate visa (first Post-Study Work stream or Replacement stream) who graduated with a degree from an Australian institution located in a regional area. It lets you live, work and study in Australia, temporarily.
             
             With this visa, you can
@@ -1118,14 +1126,14 @@ docs:skilled-visas a skos:Concept ;
             If you:
             - studied and live in Category 2 Designated regional area (1 year)
             - studied and live in Category 3 Designated regional area (2 years)"""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:altLabel "Temporary Graduate visa (subclass 485) - Second Post-Study Work stream"@en ;
             skos:prefLabel "Temporary Graduate visa - Second Post-Study Work stream"@en ;
             skos:broader docs:visa-485 .
 
         docs:visa-485-rs a skos:Concept ;
             dcterms:source "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/replacement-stream"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-documents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:definition """TThis visa is for current and former Temporary Graduate visa holders who lost time on their original visa due to COVID-19 travel restrictions. It lets you live, work and study in Australia temporarily.
             
             With this visa, you can
@@ -1142,7 +1150,7 @@ docs:skilled-visas a skos:Concept ;
             Post Study Work - Masters Degree - 3 Years
             Post Study Work - Doctoral Degree - 4 Years
             Hong Kong or British National - 5 Years"""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-documents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
             skos:altLabel "Temporary Graduate visa (subclass 485) - Replacement stream"@en ;
             skos:prefLabel "Temporary Graduate visa - Replacement stream"@en ;
             skos:broader docs:visa-485 .
