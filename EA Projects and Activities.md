@@ -30,6 +30,7 @@ Learning and Events (This refers to hosting/conducting learning and events, stud
 Marketing
 Membership Management
 Renewals
+Survey (As a project i.e. a survey sent to a cohort/audience)
 Staff Recruitment
 Study
     AQF Course
@@ -67,7 +68,7 @@ Meeting
     Innovation (Brainstorming. Brainstorming content for an ad campaign and generating ideas about potential new products.)
     Team Building (Popular team-building exercises include games, talent showcases, group creative classes and even team happy hours.)
 Nomination
-Surveys
+Survey Response (as a single activity. One set f survey results from a customer as part of a Project\Survey)
 Presentation
     Class
     Session
