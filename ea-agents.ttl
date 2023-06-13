@@ -8,7 +8,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
-<https://linked.data.gov.au/def/ea-agents> a owl:Ontology,
+<https://ref.engineersaustralia.org.au/def/ea-agents> a owl:Ontology,
         skos:ConceptScheme ;
     dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
     dcterms:created "2023-03-01"^^xsd:date ;
@@ -28,43 +28,43 @@
     sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
 
 agnt:person a skos:Concept ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     skos:definition """A person is an individual human, acting in a personal or professional capacity."""@en ;
     skos:scopeNote "An individual acting as a business is considered an organisation that consists of one person. Commonly the correct classification for an individual acting in this capacity will be a Sole Trader"@en ;
     skos:prefLabel "Person"@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-agents> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-agents> .
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
 agnt:organisation a skos:Concept ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     skos:definition """An organization is a group of people or other entities that interact to achieve a common goal."""@en ;
     skos:notation "Org" ;
     skos:prefLabel "Organization"@en ;
-    skos:inScheme <https://linked.data.gov.au/def/ea-agents> ;
-    skos:topConceptOf <https://linked.data.gov.au/def/ea-agents> .
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
     agnt:internal-group a skos:Concept ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         skos:broader agnt:organisation ;
         skos:definition """An internal group is a group of people or other entities within an organization that work together to achieve a specific goal or set of goals."""@en ;
         skos:prefLabel "Internal Group"@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
         agnt:business-unit a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:broader agnt:internal-group ;
             skos:definition """A business unit is a department, division, or other functional entity within an organization that is responsible for a specific business function or set of functions."""@en ;
             skos:prefLabel "Business Unit"@en ;
             skos:notation "BU" ;
             skos:altLabel "Functional Unit"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
             agnt:division a skos:Concept ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
                 dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
                 skos:skos:broader agnt:business-unit ;
                 skos:definition """A Division is an Engineers Australia Office which serves the EA Members & engineering community in a specific geographical region."""@en ;
@@ -73,153 +73,153 @@ agnt:organisation a skos:Concept ;
                     "EA Office"@en,
                     "Engineers Australia Office"@en ;
                 skos:prefLabel "Division"@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
             agnt:functional-business-unit a skos:Concept ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
                 dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
                 skos:broader agnt:business-unit ;
                 skos:definition """A functional business unit is a business unit that performs a specific function or set of functions within an organization."""@en ;
                 skos:prefLabel "Functional Business Unit"@en ;
                 skos:notation "FBU" ;
                 skos:altLabel "Functional Unit"@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
         agnt:engineers-aus-college a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:broader agnt:internal-group ;
             skos:definition """An Engineers Australia College is a group within Engineers Australia that focuses on a specific area of engineering or a specific engineering discipline."""@en ;
             skos:prefLabel "Engineers Australia College"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
         agnt:technical-society a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:broader agnt:internal-group ;
             skos:definition """An Engineers Australia Technical Society is a group Joining a that facilitates networking between professionals in the same area of expertise, hosts discussion forums, and provides access to technical papers and presentations. Technical societies provide professional technical development opportunities that its members may participate in. Membership in a technical society is not contingent on membership to Engineers Australia. """@en ;
             skos:altLabel "Engineers Australia Technical Society"@en ;
             skos:prefLabel "Technical Society"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
     agnt:commercial-entity a skos:Concept ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         skos:broader agnt:organisation ;
         skos:definition """A commercial entity is an organisation that engages in business activities with the primary goal of making a profit."""@en ;
         skos:prefLabel "Commercial Entity"@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
         agnt:gov-run-company a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             dcterms:source "https://www.abs.gov.au/ausstats/abs@.nsf/2f762f95845417aeca25706c00834efa/0c54fc71b70654d2ca257bdd00116288!OpenDocument"^^xsd:anyURI ;
             skos:broader agnt:commercial-entity ;
             skos:exactMatch orgtyp:government-companies ;
             skos:definition """Government units (as defined in Chapter 2) which are created as bodies corporate through the Corporations Act in Australia or through other legislation (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8)."""@en ;
             skos:altLabel "Government Company"@en ;
             skos:prefLabel "Government-Run Company"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
         agnt:private-company a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:broader agnt:commercial-entity ;
             skos:exactMatch orgtyp:proprietary-companies ;
             skos:definition """A private company is a commercial entity that is privately owned and not publicly traded."""@en ;
             skos:prefLabel "Private Company"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
         agnt:public-company a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:broader agnt:commercial-entity ;
             skos:exactMatch orgtyp:public-companies ;
             skos:definition """A public company is a commercial entity whose shares can be bought and sold by the general public on a stock exchange."""@en ;
             skos:prefLabel "Public Company"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
         agnt:sole-trader a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:broader agnt:commercial-entity ;
             skos:exactMatch orgtyp:sole-proprietorship ;
             skos:definition """A sole trader is an individual who owns and operates a business, and is personally liable for business debts."""@en ;
             skos:prefLabel "Sole Trader"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
         agnt:trust a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:broader agnt:organisation ;
             skos:definition """A trust is a legal arrangement where property is held by one party for the benefit of another party."""@en ;
             skos:prefLabel "Trust"@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
     agnt:government-agency a skos:Concept ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         skos:prefLabel "Government Agency"@en ;
         skos:notation "Gov" ;
         skos:exactMatch orgtyp:other-government-entities ;
         skos:definition """A government agency is a permanent or semi-permanent organization in the machinery of government that is responsible for the oversight and administration of specific functions, such as an intelligence agency, regulatory agency, or tax collection agency."""@en ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-agents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> ;
         skos:broader agnt:organisation .
 
         agnt:federal-gov-agency a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:prefLabel "Federal Government Agency"@en ;
             skos:definition """A federal government agency is a government agency that is responsible for the oversight and administration of specific functions at the federal level."""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-agents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             skos:broader agnt:government-agency .
 
             agnt:defence-force a skos:Concept ;
-                rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
                 dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
                 skos:prefLabel "Defence Force Agency"@en ;
                 skos:definition """A government funded agency within the Defence Force or Armed Services."""@en ;
-                skos:inScheme <https://linked.data.gov.au/def/ea-agents> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> ;
                 skos:broader agnt:federal-gov-agency .
 
         agnt:state-gov-agency a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:prefLabel "State Government Agency"@en ;
             skos:definition """A state government agency is a government agency that is responsible for the oversight and administration of specific functions at the state or territory level."""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-agents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             skos:broader agnt:government-agency .
 
         agnt:local-gov-agency a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:prefLabel "Local Government Agency"@en ;
             skos:definition """A local government agency is a government agency that is responsible for the oversight and administration of specific functions at the local level. In Australia this is associated with a Local Government Area (LGA)."""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-agents> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             skos:broader agnt:government-agency .
 
     agnt:tertiary-institution a skos:Concept ;
-        rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         skos:definition """Tertiary education refers to post-secondary education received at universities and vocational educational institutes."""@en ;
         skos:prefLabel "Tertiary institution"@en ;
         skos:broader agnt:organisation ;
-        skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
         agnt:vet-institute a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             dcterms:source "https://www.training.com.au/vet-courses/"^^xsd:anyURI ;
             skos:prefLabel "VET institute"@en ;
             skos:broader agnt:tertiary-institution ;
             skos:definition """A VET institute is an educational institution that provides vocational education and training (VET) courses.
             
             VET courses are offered through both public and private RTOs, generally via TAFE and private training providers. Some VET courses are delivered through Australian Apprenticeships and Traineeships, which enable students to gain structured on-the-job training as a major part of their study. Along with these institutions, VET training and is also accessible through participating schools, as well as external community educational centres."""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
         agnt:university a skos:Concept ;
-            rdfs:isDefinedBy <https://linked.data.gov.au/def/ea-agents> ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:prefLabel "University"@en ;
             skos:notation "Uni" ;
             skos:broader agnt:tertiary-institution ;
             skos:definition """A university is an educational institution that provides undergraduate and postgraduate education and research."""@en ;
-            skos:inScheme <https://linked.data.gov.au/def/ea-agents> .
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
