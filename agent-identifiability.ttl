@@ -1,0 +1,69 @@
+@prefix pii: <https://linked.data.gov.au/def/personally-identifiable-information/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://linked.data.gov.au/def/personally-identifiable-information>
+		a owl:Ontology ,
+		skos:ConceptScheme ;
+	dcterms:created "2023-06-14"^^xsd:date ;
+	dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+	dcterms:modified "2023-06-14"^^xsd:date ;
+	dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+	dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
+	dcterms:provenance "Created by Engineers Australia";
+	skos:definition "A categorisation of Personally Identifiable Information and its ability to identify an individual."@en ;
+	skos:hasTopConcept
+		pii:direct,
+		pii:indirect,
+		pii:anonymous ;
+	skos:prefLabel "Agent Identifiability"@en .
+
+<https://linked.data.gov.au/org/engineersaustralia>
+	a sdo:Organization ;
+	sdo:name "Engineers Australia" ;
+	sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+<https://orcid.org/0000-0003-2309-7004> a owl:NamedIndividual,
+		sdo:Person ;
+	sdo:affiliation [ a sdo:Organization ;
+			sdo:name "Engineers Australia" ;
+			sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI ] ;
+	sdo:name "Vance Kelly" ;
+	sdo:identifier <https://orcid.org/0000-0003-2309-7004> .
+	
+pii:direct a skos:Concept ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/personally-identifiable-information> ;
+	dcterms:source "https://www.cloudflare.com/en-gb/learning/privacy/what-is-pii/"^^xsd:anyURI ;
+	skos:definition """Data or information that directly identifies a person. Data that is unique to an individual or may be within a given population. This includes full name, tax file number, a physical address, student or employee identification number, or a passport or drivers licence number. It may also include specific biometric data such as thumbprints and facial recognition data."""@en ;
+	skos:prefLabel "Direct"@en ;
+	skos:inScheme <https://linked.data.gov.au/def/personally-identifiable-information> ;
+	skos:topConceptOf <https://linked.data.gov.au/def/personally-identifiable-information> .
+	
+pii:indirect a skos:Concept ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/personally-identifiable-information> ;
+	dcterms:source "https://www.cloudflare.com/en-gb/learning/privacy/what-is-pii/"^^xsd:anyURI ;
+	skos:definition """Data or information that can indirectly identify a person, particularly where combined with other instances of Personally Identifying Information. This includes information that can be used to profile an individual or narrow a set of candidates. Examples include age, gender and sexuality, occupation and workplace, IP address, date of birth, and uncommon ethnicity or religion."""@en ;
+    skos:altLabel "Quasi-Identifier"@en,
+        "Linked Information"@en,
+        "Linkable Information"@en ;
+	skos:prefLabel "Indirect"@en ;
+	skos:inScheme <https://linked.data.gov.au/def/personally-identifiable-information> ;
+	skos:topConceptOf <https://linked.data.gov.au/def/personally-identifiable-information> .
+	
+pii:anonymous a skos:Concept ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/personally-identifiable-information> ;
+	dcterms:source "https://www.cloudflare.com/en-gb/learning/privacy/what-is-pii/"^^xsd:anyURI ;
+	skos:definition """Data or information that can not reasonably identify a person within a given population. This includes information such as standard medical records, common ethnicity or religion, political associations, or common skills and interests."""@en ;
+    skos:altLabel "Non-PII"@en,
+        "Deidentified"@en ;
+	skos:prefLabel "Anonymous"@en ;
+	skos:inScheme <https://linked.data.gov.au/def/personally-identifiable-information> ;
+	skos:topConceptOf <https://linked.data.gov.au/def/personally-identifiable-information> .
