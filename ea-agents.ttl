@@ -49,7 +49,7 @@ agnt:organisation a skos:Concept ;
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
         dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
         skos:broader agnt:organisation ;
-        skos:definition """An internal group is a group of people or other entities within an organization that work together to achieve a specific goal or set of goals."""@en ;
+        skos:definition """An internal group is a group of people or other entities within, and intrinsically part of, an organization that work together to achieve a specific goal or set of goals."""@en ;
         skos:prefLabel "Internal Group"@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
@@ -85,21 +85,92 @@ agnt:organisation a skos:Concept ;
                 skos:altLabel "Functional Unit"@en ;
                 skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
-        agnt:engineers-aus-college a skos:Concept ;
+        agnt:board a skos:Concept ;
             rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:broader agnt:internal-group ;
-            skos:definition """An Engineers Australia College is a group within Engineers Australia that focuses on a specific area of engineering or a specific engineering discipline."""@en ;
-            skos:prefLabel "Engineers Australia College"@en ;
+            skos:definition """A group of people that are elected to represent the stakeholders in an organisation."""@en ;
+            skos:altLabel "The Board"@en ;
+            skos:prefLabel "Board"@en ;
             skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
-        agnt:technical-society a skos:Concept ;
+            agnt:board-committee a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:broader agnt:learned-society ;
+                skos:definition """An advisory body to The Board dedicated to a specific function of the organisation."""@en ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .            
+
+        agnt:learned-society a skos:Concept ;
             rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
             dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
             skos:broader agnt:internal-group ;
-            skos:definition """An Engineers Australia Technical Society is a group Joining a that facilitates networking between professionals in the same area of expertise, hosts discussion forums, and provides access to technical papers and presentations. Technical societies provide professional technical development opportunities that its members may participate in. Membership in a technical society is not contingent on membership to Engineers Australia. """@en ;
-            skos:altLabel "Engineers Australia Technical Society"@en ;
-            skos:prefLabel "Technical Society"@en ;
+            skos:definition """A Learned Society is an association of like minded people who develop the knowledge and set the standards of its members. Learned Societies predominantly relate to a profession such as engineering, law, medicine, commerce etc. The EA Learned Society comprises four major groups: College Boards, National Committees, Technical Societies, and Special Interest Groups."""@en ;
+            skos:altLabel "EA Learned Society"@en ;
+            skos:prefLabel "Learned Society"@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
+
+            agnt:engineers-aus-college a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:broader agnt:learned-society ;
+                skos:definition """A College provides a discipline based home for members and provides a vehicle through which Engineers Australia advances the science and practice of engineering for the benefit of the Community through building the body of engineering knowledge and supporting the career development of engineering professionals."""@en ;
+                skos:prefLabel "Engineers Australia College"@en ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
+
+            agnt:national-committee a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:broader agnt:learned-society ;
+                skos:definition """National Committees are consituted by the Engineers Australia Board for issues with a natonal focus. National Committees must include a national focus, a maxium of 6 members, and an appropriate mix of age, gender, location and other aspects of diversity, representation and relevant skills including skills in management; and governance."""@en ;
+                skos:prefLabel "National Committee"@en ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
+
+            agnt:special-interest-group a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:broader agnt:learned-society ;
+                skos:definition """A group or centre established by the Board for a specific function.The role of a Special Interest Group is to: 
+                (a)  identify strategies and recommend to the Board actions to address the needs of their identified cohort;
+                (b)  work with the Colleges, Technical Societies and the Chief Executive Officer to implement Board approved strategies and policies in relation to their identified cohort into the normal operations of each College, Technical  Society and Division, including undertaking joint activities; 
+                (d)  liaise with and provide support to College Boards, Divisions and Technical  Societies regarding the undertaking of activities by these groups to support  their cohort; 
+                (e)  communicate with their cohort to identify ongoing needs and to direct  them to areas within Engineers Australia that can assist them; and 
+                (f)  arrange for an appropriate range of events or other activities in accordance with their approved plan to address needs that cannot normally be met  through other Engineers Australia channels."""@en ;
+                skos:altLabel "Special Interest Centre"@en ;
+                skos:prefLabel "Special Interest Group"@en ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
+
+            agnt:technical-society a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:broader agnt:learned-society ;
+                skos:definition """An Engineers Australia Technical Society is a group Joining a that facilitates networking between professionals in the same area of expertise, hosts discussion forums, and provides access to technical papers and presentations. Technical societies provide professional technical development opportunities that its members may participate in. Membership in a technical society is not contingent on membership to Engineers Australia."""@en ;
+                skos:altLabel "Engineers Australia Technical Society"@en ;
+                skos:prefLabel "Technical Society"@en ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
+
+                agnt:inc-tech-society a skos:Concept ;
+                    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
+                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                    skos:broader agnt:technical-society ;
+                    skos:definition """Incorporated technical societies are governed by their own constitutions but choose to be aligned with Engineers Australia."""@en ;
+                    skos:prefLabel "Incorporated Technical Society"@en ;
+                    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
+
+                agnt:uninc-tech-society a skos:Concept ;
+                    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
+                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                    skos:broader agnt:technical-society ;
+                    skos:definition """Incorporated technical societies are governed by their own constitutions but choose to be aligned with Engineers Australia."""@en ;
+                    skos:prefLabel "Unincorporated Technical Society"@en ;
+                    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
+
+        agnt:overseas-chapter a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:broader agnt:internal-group ;
+            skos:definition """Overseas Chapters are representative bodies of a parent organisation consisting of members of the organisation whose principal place of residence is outside the organisation's primary country of operation."""@en ;
+            skos:prefLabel "Overseas Chapter"@en ;
             skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
 
     agnt:commercial-entity a skos:Concept ;
@@ -210,7 +281,7 @@ agnt:organisation a skos:Concept ;
             dcterms:source "https://www.training.com.au/vet-courses/"^^xsd:anyURI ;
             skos:prefLabel "VET institute"@en ;
             skos:broader agnt:tertiary-institution ;
-            skos:definition """A VET institute is an educational institution that provides vocational education and training (VET) courses.
+            skos:definition """A VET institute is an educational institution that provides Vocational Education and Training (VET) courses.
             
             VET courses are offered through both public and private RTOs, generally via TAFE and private training providers. Some VET courses are delivered through Australian Apprenticeships and Traineeships, which enable students to gain structured on-the-job training as a major part of their study. Along with these institutions, VET training and is also accessible through participating schools, as well as external community educational centres."""@en ;
             skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .
