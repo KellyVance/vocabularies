@@ -130,7 +130,7 @@ agnt:organisation a skos:Concept ;
                 rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
                 dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
                 skos:broader agnt:learned-society ;
-                skos:definition """A group or centre established by the Board for a specific function.The role of a Special Interest Group is to: 
+                skos:definition """A group or centre established by the Board where a national focus is required to ensure that the needs of a specific membership cohort can be addressed. The role of a Special Interest Group is to: 
                 (a)  identify strategies and recommend to the Board actions to address the needs of their identified cohort;
                 (b)  work with the Colleges, Technical Societies and the Chief Executive Officer to implement Board approved strategies and policies in relation to their identified cohort into the normal operations of each College, Technical  Society and Division, including undertaking joint activities; 
                 (d)  liaise with and provide support to College Boards, Divisions and Technical  Societies regarding the undertaking of activities by these groups to support  their cohort; 
@@ -144,7 +144,7 @@ agnt:organisation a skos:Concept ;
                 rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-agents> ;
                 dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
                 skos:broader agnt:learned-society ;
-                skos:definition """An Engineers Australia Technical Society is a group Joining a that facilitates networking between professionals in the same area of expertise, hosts discussion forums, and provides access to technical papers and presentations. Technical societies provide professional technical development opportunities that its members may participate in. Membership in a technical society is not contingent on membership to Engineers Australia."""@en ;
+                skos:definition """An Engineers Australia Technical Society is a group that facilitates networking between professionals in the same area of expertise, hosts discussion forums, and provides access to technical papers and presentations. Technical societies provide professional technical development opportunities that its members may participate in. Membership in a technical society is not contingent on membership to Engineers Australia."""@en ;
                 skos:altLabel "Engineers Australia Technical Society"@en ;
                 skos:prefLabel "Technical Society"@en ;
                 skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-agents> .

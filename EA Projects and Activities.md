@@ -1,6 +1,6 @@
 EA Programs/Pathways/Projects
 These are projects and multi-activity processes that include EA specific functions such as assessments and accreditation
-Projects may nest and be related to other projects. e.g a process of Study may from part of CPD
+Projects may nest and be related to other projects. e.g a process of Study may form part of CPD
 
 Awards
 Assessments
@@ -68,7 +68,7 @@ Meeting
     Innovation (Brainstorming. Brainstorming content for an ad campaign and generating ideas about potential new products.)
     Team Building (Popular team-building exercises include games, talent showcases, group creative classes and even team happy hours.)
 Nomination
-Survey Response (as a single activity. One set f survey results from a customer as part of a Project\Survey)
+Survey Response (as a single activity. One set of survey results from a customer as part of a Project\Survey)
 Presentation
     Class
     Session
