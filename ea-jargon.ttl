@@ -1238,12 +1238,46 @@ eaj:ewc a skos:Concept ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
     skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-jargon> .
     
+eaj:identity-management a skos:Concept ;
+    dcterms:source "https://www.vmware.com/topics/glossary/content/identity-management.html"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+    skos:definition """Identity Management ensures that authorized people, and only authorized people, have access to the technology resources they need to perform their job functions. This includes management of enterprise sign-on and permissions management to components with a system."""@en ;
+    rdfs:seeAlso eaj:identity-management-app ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+    skos:altLabel "Identity and Access Management"@en ;
+    skos:prefLabel "Identity Management"@en ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-jargon> .
+
+    eaj:identity-validation a skos:Concept ;
+        dcterms:source "https://www.experian.co.uk/blogs/latest-thinking/fraud-prevention/what-is-the-difference-between-validation-verification-and-authentication/"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+        skos:definition """Identity validation is the first level of identity confirmation in which an individual's personal information, such as their name, address, phone number and email address, are checked to validate that they exist in the real world."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+        skos:prefLabel "Identity Validation"@en ;
+        skos:broader eaj:identity-management .
+
+    eaj:identity-verification a skos:Concept ;
+        dcterms:source "https://www.experian.co.uk/blogs/latest-thinking/fraud-prevention/what-is-the-difference-between-validation-verification-and-authentication/"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+        skos:definition """Identity validation is the second level of identity confirmation after validation in which an individual is linked directly to identity data, and verified as genuine through additional checks."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+        skos:prefLabel "Identity Verification"@en ;
+        skos:broader eaj:identity-management .
+
+    eaj:identity-authentication a skos:Concept ;
+        dcterms:source "https://www.experian.co.uk/blogs/latest-thinking/fraud-prevention/what-is-the-difference-between-validation-verification-and-authentication/"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+        skos:definition """Authentication is the process of checking a customer's identity against information that only the user should have, or know. To check they are who they say they are."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+        skos:altLabel "Identity Authentication"@en ;
+        skos:prefLabel "Authentication"@en ;
+        skos:broader eaj:identity-management .
+
 eaj:identity-management-app a skos:Concept ;
     dcterms:source "https://www.vmware.com/topics/glossary/content/identity-management.html"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
-    skos:definition """Identity Management ensures that authorized people, and only authorized people, have access to the technology resources they need to perform their job functions. This includes management of enterprise sign-on and permissions management to components with a system.
-    
-    An identity management system prevents unauthorized access to systems and resources, helps prevent exfiltration of enterprise or protected data, and raises alerts and alarms when access attempts are made by unauthorized personnel or programs, whether from inside or outside the enterprise perimeter."""@en ;
+    skos:definition """An identity management system prevents unauthorized access to systems and resources, helps prevent exfiltration of enterprise or protected data, and raises alerts and alarms when access attempts are made by unauthorized personnel or programs, whether from inside or outside the enterprise perimeter."""@en ;
+    rdfs:seeAlso eaj:identity-management ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
     skos:altLabel "Identity and Access Management Application"@en, 
         "Identity Management System"@en,

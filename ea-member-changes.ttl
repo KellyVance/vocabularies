@@ -311,43 +311,44 @@ eamc:membership-flux a skos:Concept ;
             rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
             skos:definition """An individual who held membership with Engineers Australia in the reference period but whose membership is now inactive."""@en ;
             skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
+            skos:altLabel "Cessation"@en ;
             skos:prefLabel "Lost Member"@en ;
             skos:broader eamc:non-current-member .
 
-        eamc:termination a skos:Concept ;
-            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-            skos:definition """An individual who held a paid membership with Engineers Australia in the reference period but whose membership is now inactive."""@en ;
-            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-            skos:hiddenLabel "Member Loss"@en ;
-            skos:prefLabel "Termination"@en ;
-            skos:broader eamc:lost-member .
-
-            eamc:erasure a skos:Concept ;
+            eamc:termination a skos:Concept ;
                 dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
                 rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-                skos:definition """An individual who held a paid membership with Engineers Australia in the reference period but whose membership is now inactive after failure to make payment by the end of the processing and erasure period. A passive non-payment of fees and subsequent termination of membership. Erasure occurs subsequent to a Lapsed status."""@en ;
+                skos:definition """An individual who held a paid membership with Engineers Australia in the reference period but whose membership is now inactive."""@en ;
                 skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-                skos:prefLabel "Erasure"@en ;
-                skos:broader eamc:termination, eamc:revenue-loss .
+                skos:hiddenLabel "Member Loss"@en ;
+                skos:prefLabel "Termination"@en ;
+                skos:broader eamc:lost-member .
 
-            eamc:cancellation a skos:Concept ;
+                eamc:erasure a skos:Concept ;
+                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
+                    skos:definition """An individual who held a paid membership with Engineers Australia in the reference period but whose membership is now inactive after failure to make payment by the end of the processing and erasure period. A passive non-payment of fees and subsequent termination of membership. Erasure occurs subsequent to a Lapsed status."""@en ;
+                    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
+                    skos:prefLabel "Erasure"@en ;
+                    skos:broader eamc:termination, eamc:revenue-loss .
+
+                eamc:cancellation a skos:Concept ;
+                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
+                    skos:definition """An individual who held a paid membership with Engineers Australia in the reference period but whose membership is now inactive after resigning from the organisation or informing Engineers Australia of intent to not renew membership for the next membership period. An active cancellation or deliberate non-payment of fees and subsequent termination of membership."""@en ;
+                    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
+                    skos:prefLabel "Cancellation"@en ;
+                    skos:broader eamc:termination, eamc:revenue-loss .
+                    #could be further refined into resignations and cessations
+
+            eamc:student-erasure a skos:Concept ;
                 dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
                 rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-                skos:definition """An individual who held a paid membership with Engineers Australia in the reference period but whose membership is now inactive after resigning from the organisation or informing Engineers Australia of intent to not renew membership for the next membership period. An active cancellation or deliberate non-payment of fees and subsequent termination of membership."""@en ;
+                skos:definition """An individual who held a free Student grade membership with Engineers Australia in the reference period but whose membership is now inactive due to active cancellation or exceeding the maximum student membership duration. Note: Maximum student membership duration may be extended at the discretion of Engineers Australia for extenuating or unusual circumstances."""@en ;
                 skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-                skos:prefLabel "Cancellation"@en ;
-                skos:broader eamc:termination, eamc:revenue-loss .
-                #could be further refined into resignations and cessations
-
-        eamc:student-erasure a skos:Concept ;
-            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-            skos:definition """An individual who held a free Student grade membership with Engineers Australia in the reference period but whose membership is now inactive due to active cancellation or exceeding the maximum student membership duration. Note: Maximum student membership duration may be extended at the discretion of Engineers Australia for extenuating or unusual circumstances."""@en ;
-            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-member-changes> ;
-            skos:altLabel "Student Cancellation"@en ;
-            skos:prefLabel "Student Erasure"@en ;
-            skos:broader eamc:revenue-lost-potential, eamc:lost-member .
+                skos:altLabel "Student Cancellation"@en ;
+                skos:prefLabel "Student Erasure"@en ;
+                skos:broader eamc:revenue-lost-potential, eamc:lost-member .
 
 eamc:revenue-flux a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;

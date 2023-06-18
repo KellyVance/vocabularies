@@ -490,7 +490,7 @@ docs:personal-identification a skos:Concept ;
 
     docs:australian-passport a skos:Concept ;
         dcterms:source "http://linked.data.gov.au/def/party-identifier-type/australian-passport"^^xsd:anyURI ;
-        skos:definition "An Australian passport is a basic identity document accepted as valid for crossing international borders, issued by the Government of Australia to Australian citizens. Source: The New Oxford Companion to Law"@en ;
+        skos:definition "An Australian passport is a basic identity document accepted as valid for crossing international borders, issued by the Government of Australia to Australian citizens. Source: The New Oxford Companion to Law."@en ;
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:exactMatch id:australian-passport ;
@@ -499,12 +499,20 @@ docs:personal-identification a skos:Concept ;
 
     docs:foregin-passport a skos:Concept ;
         dcterms:source "http://linked.data.gov.au/def/party-identifier-type/foreign-passport"^^xsd:anyURI ;
-        skos:definition "A foreign passport is a basic identity document accepted as valid for crossing international borders, issued by a government, other than Australia's, to its citizens. Source: The New Oxford Companion to Law"@en ;
+        skos:definition "A foreign passport is a basic identity document accepted as valid for crossing international borders, issued by a government, other than Australia's, to its citizens. Source: The New Oxford Companion to Law."@en ;
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
         skos:exactMatch id:foregin-passport ;
         skos:altLabel "International Passport"@en ;
         skos:prefLabel "Foreign passport"@en ;
+        skos:broader docs:personal-identification .
+
+    docs:recent-photograph a skos:Concept ;
+        dcterms:source "http://linked.data.gov.au/def/party-identifier-type/foreign-passport"^^xsd:anyURI ;
+        skos:definition "A photograph of an individual taken within the 3 months prior to providing to an organisation for identity assessment."@en ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-documents> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-documents> ;
+        skos:prefLabel "Recent Photograph"@en ;
         skos:broader docs:personal-identification .
 
 docs:oap a skos:Concept ;

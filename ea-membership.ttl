@@ -14,7 +14,16 @@
     dcterms:modified "2023-05-09"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    skos:definition "The grade of membership of Engineers Australia. Grade reflects the experience and skill level of a member and corresponds to a specific level of EA Membership."@en ;
+    skos:definition "The grade of membership of Engineers Australia. Grade reflects the experience and skill level of a member and corresponds to a specific level of EA Membership. The members of Engineers Australia are those persons whose names are entered in the register of members."@en ;
+    skos:hasTopConcept
+        eagrd:fellow,
+        eagrd:member,
+        eagrd:graduate,
+        eagrd:student,
+        eagrd:hon-fellow,
+        eagrd:companion,
+        eagrd:affiliate,
+        eagrd:40-year ;
     skos:altLabel "Full Member"@en ;
     skos:prefLabel "Engineers Australia Membership Grade"@en .
 

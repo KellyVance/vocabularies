@@ -42,7 +42,8 @@
 pii:direct a skos:Concept ;
 	rdfs:isDefinedBy <https://linked.data.gov.au/def/personally-identifiable-information> ;
 	dcterms:source "https://www.cloudflare.com/en-gb/learning/privacy/what-is-pii/"^^xsd:anyURI ;
-	skos:definition """Data or information that directly identifies a person. Data that is unique to an individual or may be within a given population. This includes full name, tax file number, a physical address, student or employee identification number, or a passport or drivers licence number. It may also include specific biometric data such as thumbprints and facial recognition data."""@en ;
+	skos:definition """Data or information that directly identifies a person. Data that is unique to an individual or may be unique within a given population. This includes full name, tax file number, a physical address, student or employee identification number, or a passport or drivers licence number. It may also include specific biometric data such as thumbprints and facial recognition data."""@en ;
+	skos:altLabel "Direct Identifier"@en ;
 	skos:prefLabel "Direct"@en ;
 	skos:inScheme <https://linked.data.gov.au/def/personally-identifiable-information> ;
 	skos:topConceptOf <https://linked.data.gov.au/def/personally-identifiable-information> .
@@ -53,7 +54,8 @@ pii:indirect a skos:Concept ;
 	skos:definition """Data or information that can indirectly identify a person, particularly where combined with other instances of Personally Identifying Information. This includes information that can be used to profile an individual or narrow a set of candidates. Examples include age, gender and sexuality, occupation and workplace, IP address, date of birth, and uncommon ethnicity or religion."""@en ;
     skos:altLabel "Quasi-Identifier"@en,
         "Linked Information"@en,
-        "Linkable Information"@en ;
+        "Linkable Information"@en,
+		"Direct Identifier"@en ;
 	skos:prefLabel "Indirect"@en ;
 	skos:inScheme <https://linked.data.gov.au/def/personally-identifiable-information> ;
 	skos:topConceptOf <https://linked.data.gov.au/def/personally-identifiable-information> .
