@@ -1,4 +1,5 @@
 @prefix isc: <https://linked.data.gov.au/def/information-security-classification/> .
+@prefix cs: <https://linked.data.gov.au/def/information-security-classification>
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -27,7 +28,7 @@
 		<https://linked.data.gov.au/def/qg-security-classifications> ;
 	dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
 	skos:definition "A categorisation of information and data assets that reflects the potential level of damage done to an organisation from unauthorised disclosure, or compromise of confidentiality. Sensitivity levels are based primarily on the legal framework of the Australian Government Office of the Australian Information Commissioner for personal and sensitive information. However, non-personal data and information, such as financial records, are also subject to this classification within the context of the potential level of damage from unauthorised disclosure."@en ;
-	skos:scopeNote "The specific application of this classification is dependent on the nature of the information described and the person, organisation, or agency who has ownership and custodianship of that information. The same dataset may be classified differently by different organisations based on their requirements, interactions, and reasonable expectations on their treatment of specific data types."@en ;
+	skos:scopeNote "The specific application of this classification is dependent on the nature of the information described and the person, organisation, or agency who has ownership and custodianship of that information. The same dataset may be classified differently by different organisations based on their requirements, interactions, and reasonable expectations on their treatment of specific data types. The sensitivity of some data may be reduced when deifentified or anonymised."@en ;
 	skos:hasTopConcept
 		isc:public,
 		isc:private,
@@ -52,19 +53,21 @@
 	sdo:identifier <https://orcid.org/0000-0003-2309-7004> .
 	
 isc:public a skos:Concept ;
-	rdfs:isDefinedBy <https://linked.data.gov.au/def/information-security-classification> ;
+	rdfs:isDefinedBy cs: ;
+	skos:inScheme cs: ;
+	skos:topConceptOf cs:;
 	skos:closeMatch <https://linked.data.gov.au/def/qg-security-classifications/official-public> ;
 	dcterms:references "University of NSW Data Classification Standard (2021)"@en ;
 	dcterms:source "https://www.unsw.edu.au/content/dam/pdfs/governance/policy/2022-01-policies/datastandard.pdf"^^xsd:anyURI ;
 	skos:altLabel "Official - Public"@en ;
 	skos:definition """Data that if breached through accidental or malicious activity would have an insignificant impact on the activities and objectives of the organisation.
 	The intended audience for data with this classification is any interested stakeholder, including the general public."""@en ;
-	skos:prefLabel "Public"@en ;
-	skos:inScheme <https://linked.data.gov.au/def/information-security-classification> ;
-	skos:topConceptOf <https://linked.data.gov.au/def/information-security-classification> .
+	skos:prefLabel "Public"@en .
 
 isc:private a skos:Concept ;
-	rdfs:isDefinedBy <https://linked.data.gov.au/def/information-security-classification> ;
+	rdfs:isDefinedBy cs: ;
+	skos:inScheme cs: ;
+	skos:topConceptOf cs: ;
 	skos:closeMatch <https://linked.data.gov.au/def/qg-security-classifications/official> ;
 	dcterms:references "University of NSW Data Classification Standard (2021), Australian Government Protective Security Policy Framework (2018), Australian Government Privacy Principles Guidelines (2019)"@en;
 	dcterms:source "https://www.unsw.edu.au/content/dam/pdfs/governance/policy/2022-01-policies/datastandard.pdf"^^xsd:anyURI ;
@@ -76,12 +79,12 @@ isc:private a skos:Concept ;
 	When describing an individual, private information may include name, address, date of birth, employee records etc.
 
 	The intended audience for data with this classification is within an organisation and with direct external contacts and stakeholders with a demonstrated need."""@en ;
-	skos:prefLabel "Internal"@en ;
-	skos:inScheme <https://linked.data.gov.au/def/information-security-classification> ;
-	skos:topConceptOf <https://linked.data.gov.au/def/information-security-classification> .
+	skos:prefLabel "Internal"@en .
 
 isc:sensitive a skos:Concept ;
-	rdfs:isDefinedBy <https://linked.data.gov.au/def/information-security-classification> ;
+	rdfs:isDefinedBy cs: ;
+	skos:inScheme cs: ;
+	skos:topConceptOf cs: ;
 	skos:closeMatch <https://linked.data.gov.au/def/qg-security-classifications/sensitive> ;
 	dcterms:references "University of NSW Data Classification Standard (2021), Australian Government Protective Security Policy Framework (2018), Australian Government Privacy Principles Guidelines (2019)"@en ;
 	dcterms:source "https://www.unsw.edu.au/content/dam/pdfs/governance/policy/2022-01-policies/datastandard.pdf"^^xsd:anyURI ;
@@ -91,12 +94,12 @@ isc:sensitive a skos:Concept ;
 	When describing an individual, sensitive information may include racial or ethnic origin, political and religious associations or beliefs, sexual orientation, health information etc .
 
 	The intended audience for data with this classification is typically within a specific business or functional unit within the organisation, and on a strict needs-based protocol to external stakeholders."""@en ;
-	skos:prefLabel "Sensitive"@en ;
-	skos:inScheme <https://linked.data.gov.au/def/information-security-classification> ;
-	skos:topConceptOf <https://linked.data.gov.au/def/information-security-classification> .
+	skos:prefLabel "Sensitive"@en .
 
 isc:highly-sensitive a skos:Concept ;
-	rdfs:isDefinedBy <https://linked.data.gov.au/def/information-security-classification> ;
+	rdfs:isDefinedBy cs: ;
+	skos:inScheme cs: ;
+	skos:topConceptOf cs: ;
 	skos:closeMatch <https://linked.data.gov.au/def/qg-security-classifications/protected> ;
 	dcterms:references "University of NSW Data Classification Standard (2021), Australian Government Protective Security Policy Framework (2018)"@en ;
 	dcterms:source "https://www.unsw.edu.au/content/dam/pdfs/governance/policy/2022-01-policies/datastandard.pdf"^^xsd:anyURI ;
@@ -106,29 +109,27 @@ isc:highly-sensitive a skos:Concept ;
 	When describing an individual, highly sensitive information may include highly sensitve health information etc. However, this level of sensitivity classification is typically not applied to information pertaining to an individual.	
 
 	The intended audience for data with this classification is typically a highly limited group within a specific business or functional unit within the organisation, and on a strict needs-based protocol to external stakeholders."""@en ;
-	skos:prefLabel "Highly Sensitive"@en ;
-	skos:inScheme <https://linked.data.gov.au/def/information-security-classification> ;
-	skos:topConceptOf <https://linked.data.gov.au/def/information-security-classification> .
+	skos:prefLabel "Highly Sensitive"@en .
 
 isc:secret a skos:Concept ;
-	rdfs:isDefinedBy <https://linked.data.gov.au/def/information-security-classification> ;
+	rdfs:isDefinedBy cs:  ;
+	skos:inScheme cs: ;
+	skos:topConceptOf cs:;
 	dcterms:references "Australian Government Protective Security Policy Framework (2018)"@en ;
 	dcterms:source "https://www.protectivesecurity.gov.au/system/files/2022-03/pspf-policy-08-sensitive-and-classified-information.pdf"^^xsd:anyURI ;
 	skos:definition """Data that if breached through accidental or malicious activity would have an extreme impact on the activities and objectives of the organisation. Secret classification indicates very valuable, important and sensitive information that, if compromised would be expected to cause serious damage to the national interest, organisations or individuals.
 	The intended audience for data with this classification is highly restricted and is determined on an as-needed basis by the relevant government agency."""@en ;
-	skos:prefLabel "Secret"@en ;
-	skos:inScheme <https://linked.data.gov.au/def/information-security-classification> ;
-	skos:topConceptOf <https://linked.data.gov.au/def/information-security-classification> .
+	skos:prefLabel "Secret"@en .
 
 isc:top-secret a skos:Concept ;
-	rdfs:isDefinedBy <https://linked.data.gov.au/def/information-security-classification> ;
+	rdfs:isDefinedBy cs: ;
+	skos:inScheme cs: ;
+	skos:topConceptOf cs:;
 	dcterms:references "Australian Government Protective Security Policy Framework (2018)"@en ;
 	dcterms:source "https://www.protectivesecurity.gov.au/system/files/2022-03/pspf-policy-08-sensitive-and-classified-information.pdf"^^xsd:anyURI ;
-	skos:definition """Data that if breached through accidental or malicious activity would have a catastrophic impact on the activities and objectives of the organisation. Top Secret classification indicates the most valuable, important and sensitive information that, if compromised would be expected to cause exceptionally grave damage to the national interest, organisations or individuals.
+	skos:definition """Data that if breached through accidental or malicious activity would have a catastrophic impact on the activities and objectives of the organisation. Top Secret classification indicates the most valuable, important and sensitive information that, if compromised would be expected to cause exceptionally grave damage to the national int erest, organisations or individuals.
 	The intended audience for data with this classification is extremely restricted and is determined on an as-needed basis by the relevant government agency."""@en ;
-	skos:prefLabel "Top Secret"@en ;
-	skos:inScheme <https://linked.data.gov.au/def/information-security-classification> ;
-	skos:topConceptOf <https://linked.data.gov.au/def/information-security-classification> .
+	skos:prefLabel "Top Secret"@en .
 
 #Collection
 
