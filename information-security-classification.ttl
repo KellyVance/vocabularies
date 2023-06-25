@@ -88,7 +88,8 @@ isc:sensitive a skos:Concept ;
 	skos:closeMatch <https://linked.data.gov.au/def/qg-security-classifications/sensitive> ;
 	dcterms:references "University of NSW Data Classification Standard (2021), Australian Government Protective Security Policy Framework (2018), Australian Government Privacy Principles Guidelines (2019)"@en ;
 	dcterms:source "https://www.unsw.edu.au/content/dam/pdfs/governance/policy/2022-01-policies/datastandard.pdf"^^xsd:anyURI ;
-	skos:altLabel "Official - Sensitive"@en ;
+	skos:altLabel "Official - Sensitive"@en,
+		"Restricted"@en ;
 	skos:definition """Data that if breached through accidental or malicious activity would have a medium impact on the activities and objectives of the organisation. Sensitive classification indicates information that, due to its sensitive nature, requires limited dissemination and that, if compromised, would result in limited damage to an individual, organisation or government. 
 	
 	When describing an individual, sensitive information may include racial or ethnic origin, political and religious associations or beliefs, sexual orientation, health information etc .
@@ -103,7 +104,8 @@ isc:highly-sensitive a skos:Concept ;
 	skos:closeMatch <https://linked.data.gov.au/def/qg-security-classifications/protected> ;
 	dcterms:references "University of NSW Data Classification Standard (2021), Australian Government Protective Security Policy Framework (2018)"@en ;
 	dcterms:source "https://www.unsw.edu.au/content/dam/pdfs/governance/policy/2022-01-policies/datastandard.pdf"^^xsd:anyURI ;
-	skos:altLabel "Protected"@en ;
+	skos:altLabel "Protected"@en,
+		"Confidential"@en ;
 	skos:definition """Data that if breached through accidental or malicious activity would have a high impact on the activities and objectives of the organisation. Highly Sensitive classification indicates valuable, important and sensitive information that, if compromised, would be expected to cause significant damage to the national interest, organisations, or individuals.
 
 	When describing an individual, highly sensitive information may include highly sensitve health information etc. However, this level of sensitivity classification is typically not applied to information pertaining to an individual.	
