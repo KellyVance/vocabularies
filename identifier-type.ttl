@@ -103,7 +103,7 @@ id:electrol-roll-extract a skos:Concept ;
  skos:definition "An extract from the electoral roll administered by the Australian Electoral Commission. "@en ;
     rdfs:isDefinedBy cs: ;
  skos:inScheme cs: ;
- skos:prefLabel "Electrol roll extract"@en ;
+ skos:prefLabel "Electoral roll extract"@en ;
  skos:topConceptOf cs: .
 
 id:firearms-licence a skos:Concept ;
@@ -196,30 +196,6 @@ id:company-id a skos:Collection ;
  id:acn,
  id:c-code ;
  skos:prefLabel "Company ID"@en .
- 
-id:mmol-list-a a skos:Collection ;
- skos:definition "Personal identification documents that act as primary proof-of-identity in the State of Queensland within MyMinesOnline. Identity checks must include at least one document from List A and one document from List B."@en ;
- skos:member id:australian-passport,
- id:drivers-licence,
- id:firearms-licence,
- id:foregin-passport,
- id:public-service-photo-id ;
- skos:prefLabel "MMOL list A"@en .
-
-id:mmol-list-b a skos:Collection ;
- skos:definition "Personal identification documents that act as secondary proof-of-identity in the State of Queensland within MyMinesOnline. Identity checks must include at least one document from List A and one document from List B."@en ;
- skos:member id:australian-university-id-card,
- id:bank-card,
- id:centrelink-card,
- id:change-of-name-certificate,
- id:council-rates-notice,
- id:electrol-roll-extract,
- id:letter-from-employer,
- id:marriage-certificate,
- id:medicare-card,
- id:security-guard-licence,
- id:veterans-affairs-card ;
- skos:prefLabel "MMOL list B"@en .
 
 id:personal-id a skos:Collection ;
  skos:definition "Australian or state-issued documents accepted as proof-of-identity for individuals by the Queensland Government."@en ;
