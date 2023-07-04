@@ -102,7 +102,7 @@ id:electrol-roll-extract a skos:Concept ;
  skos:definition "An extract from the electoral roll administered by the Australian Electoral Commission. "@en ;
     rdfs:isDefinedBy <http://linked.data.gov.au/def/party-identifier-type> ;
  skos:inScheme <http://linked.data.gov.au/def/party-identifier-type> ;
- skos:prefLabel "Electrol roll extract"@en ;
+ skos:prefLabel "Electoral roll extract"@en ;
  skos:topConceptOf <http://linked.data.gov.au/def/party-identifier-type> .
 
 id:firearms-licence a skos:Concept ;
