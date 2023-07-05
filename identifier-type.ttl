@@ -198,7 +198,7 @@ id:company-id a skos:Collection ;
  skos:prefLabel "Company ID"@en .
 
 id:personal-id a skos:Collection ;
- skos:definition "Australian or state-issued documents accepted as proof-of-identity for individuals by the Queensland Government."@en ;
+ skos:definition "Australian or state-issued documents accepted as proof-of-identity for individuals."@en ;
  skos:member id:australian-passport,
  id:australian-university-id-card,
  id:australian-visa,
