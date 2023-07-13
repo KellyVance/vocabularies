@@ -33,8 +33,9 @@ agnt:person a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     skos:inScheme cs: ;
     skos:topConceptOf cs: ;
-    skos:definition """A person is an individual human, acting in a personal or professional capacity."""@en ;
+    skos:definition """A person is an individual human, acting in a personal or professional capacity. A natural human person."""@en ;
     skos:scopeNote "An individual acting as a business is considered an organisation that consists of one person. Commonly the correct classification for an individual acting in this capacity will be a Sole Trader"@en ;
+    skos:altLabel "Individual"@en ;
     skos:prefLabel "Person"@en .
 
 agnt:organisation a skos:Concept ;
