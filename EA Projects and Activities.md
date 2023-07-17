@@ -41,7 +41,9 @@ EA Activities
 The individual activities that comprise a larger project or process. These are typically discrete events that could occur in any organisation
 
 Documentation
-    Admin - Project Management 
+    Administrative
+        Project Management
+        record keeping (e.g. minutes) 
     Functional - Technical docs
 Document Request
     Document incoming
@@ -69,6 +71,10 @@ Meeting
     Team Building (Popular team-building exercises include games, talent showcases, group creative classes and even team happy hours.)
 Nomination
 Survey Response (as a single activity. One set of survey results from a customer as part of a Project\Survey)
+Identity Managment (when applied to a person ensures accurate identification of an individual, when applied to a document ensures the document is true, accurate, and correctly associated with the claimed author/subject)
+    Validation
+    Verification
+    Authentication
 Presentation
     Class
     Session

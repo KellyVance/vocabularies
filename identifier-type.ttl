@@ -198,24 +198,25 @@ id:company-id a skos:Collection ;
  skos:prefLabel "Company ID"@en .
 
 id:personal-id a skos:Collection ;
- skos:definition "Australian or state-issued documents accepted as proof-of-identity for individuals."@en ;
- skos:member id:australian-passport,
- id:australian-university-id-card,
- id:australian-visa,
- id:bank-card,
- id:birth-certificate,
- id:centrelink-card,
- id:certificate-of-australian-citizenship,
- id:change-of-name-certificate,
- id:council-rates-notice,
- id:drivers-licence,
- id:electrol-roll-extract,
- id:firearms-licence,
- id:foregin-passport,
- id:letter-from-employer,
- id:marriage-certificate,
- id:medicare-card,
- id:public-service-photo-id,
- id:security-guard-licence,
- id:veterans-affairs-card ;
- skos:prefLabel "Personal ID"@en .
+   skos:definition "Australian or state-issued documents accepted as proof-of-identity for individuals."@en ;
+   skos:prefLabel "Personal ID"@en ;
+   skos:member 
+      id:australian-passport,
+      id:australian-university-id-card,
+      id:australian-visa,
+      id:bank-card,
+      id:birth-certificate,
+      id:centrelink-card,
+      id:certificate-of-australian-citizenship,
+      id:change-of-name-certificate,
+      id:council-rates-notice,
+      id:drivers-licence,
+      id:electrol-roll-extract,
+      id:firearms-licence,
+      id:foregin-passport,
+      id:letter-from-employer,
+      id:marriage-certificate,
+      id:medicare-card,
+      id:public-service-photo-id,
+      id:security-guard-licence,
+      id:veterans-affairs-card .

@@ -70,12 +70,12 @@ agnt:organisation a skos:Concept ;
                 dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
                 skos:inScheme cs: ;
                 skos:skos:broader agnt:business-unit ;
-                skos:definition """A Division is an Engineers Australia Office which serves the EA Members & engineering community in a specific geographical region."""@en ;
+                skos:definition """A Division is an Engineers Australia Office that serves the EA Members & engineering community in a specific geographical region."""@en ;
                 skos:notation "Div" ;
                 skos:altLabel "State Division"@en,
                     "EA Office"@en,
                     "Engineers Australia Office"@en ;
-                skos:prefLabel "Division"@en ;: .
+                skos:prefLabel "Division"@en .
 
             agnt:functional-business-unit a skos:Concept ;
                 rdfs:isDefinedBy cs: ;
@@ -261,6 +261,7 @@ agnt:organisation a skos:Concept ;
             skos:inScheme cs: ;
             skos:broader agnt:government-agency ;
             skos:definition """A state government agency is a government agency that is responsible for the oversight and administration of specific functions at the state or territory level."""@en ;
+            skos:altLabel "Territory Government Agency"@en ;
             skos:prefLabel "State Government Agency"@en .
 
         agnt:local-gov-agency a skos:Concept ;
