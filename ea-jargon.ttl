@@ -35,11 +35,7 @@ eaj:agent a skos:Concept ;
     skos:related <https://ref.engineersaustralia.org.au/def/ea-agents> ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
     skos:altLabel "Agents"@en,
-        "Parties"@en,
-        "Entities"@en,
-        "Agent Types"@en,
-        "Party Types"@en,
-        "Entity Types"@en ;
+        "Parties"@en ;
     skos:prefLabel "Engineers Australia Agents"@en .
 
 eaj:areas-of-practice a skos:Concept ;
