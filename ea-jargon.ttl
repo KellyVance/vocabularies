@@ -19,7 +19,9 @@
     skos:definition """The business language and terminology used throughout Engineers Australia in common communication.
     
     This vocabulary contains general language with minimal heirarchy applied and an unconfined concept scheme. It is presented in this format for consitent and consolidated representation with controlled reference data."""@en ;
-    skos:scopeNote """This vocabulary formalises the definitions of shared terminology for the sake of clarity and reference. It may use related and seeAlso declarations to refer users to related vocabularies. However, this vocabulary should not be used as a reference data resource. This vocabulary is to present a human-readable format rather than be used as an actual reference data source, therefore some of the usual rdf rules may not be enforces such as ensuring unique notations and having locally relevant hierachy that does not apply to the complete vocabulary."""@en;
+    skos:editorialNote """This vocabulary formalises the definitions of shared terminology for the sake of clarity and reference. It may use related and seeAlso declarations to refer users to related vocabularies. However, this vocabulary should not be used as a reference data resource. This vocabulary is to present a human-readable format rather than be used as an actual reference data source, therefore some of the usual rdf rules may not be enforces such as ensuring unique notations and having locally relevant hierachy that does not apply to the complete vocabulary.
+    
+    In some cases, skos:broader may be used to represent related concepts in display platforms, where relationships such as sdo:partOf is a more accurate descriptor."""@en;
     skos:prefLabel "Engineers Australia General Business Terms"@en .
 
 <https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
@@ -897,7 +899,7 @@ eaj:data-lifecycle a skos:Concept ;
         skos:definition """A new data lifecycle starts with data collection, but the sources of data are abundant. They can vary from web and mobile applications, internet of things (IoT) devices, forms, surveys, and more. While data can be generated in a variety of ways, the collection of all available data isn't necessary for the success of your business. The incorporation of new data should be always be evaluated based on its quality and relevancy to your business."""@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
         skos:prefLabel "Data Creation"@en ;
-        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-jargon> .
+        skos:broader eaj:data-lifecycle .
 
     eaj:data-storage a skos:Concept ;
         dcterms:source "https://www.ibm.com/au-en/topics/data-lifecycle-management"^^xsd:anyURI ;
@@ -908,7 +910,7 @@ eaj:data-lifecycle a skos:Concept ;
         Additionally, data usage isn't necessarily restricted to internal use only. For example, external service providers could use the data for purposes such as marketing analytics and advertising. Internal uses include day-to-day business processes and workflows, such as dashboards and presentations."""@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
         skos:prefLabel "Data Storage"@en ;
-        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-jargon> .
+        skos:broader eaj:data-lifecycle  .
 
     eaj:data-sharing a skos:Concept ;
         dcterms:source "https://www.ibm.com/au-en/topics/data-lifecycle-management"^^xsd:anyURI ;
@@ -919,7 +921,7 @@ eaj:data-lifecycle a skos:Concept ;
         Additionally, data usage isn't necessarily restricted to internal use only. For example, external service providers could use the data for purposes such as marketing analytics and advertising. Internal uses include day-to-day business processes and workflows, such as dashboards and presentations."""@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
         skos:prefLabel "Data Sharing and Usage"@en ;
-        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-jargon> .
+        skos:broader eaj:data-lifecycle  .
 
     eaj:data-archival a skos:Concept ;
         dcterms:source "https://www.ibm.com/au-en/topics/data-lifecycle-management"^^xsd:anyURI ;
@@ -930,7 +932,7 @@ eaj:data-lifecycle a skos:Concept ;
         An organization's DLM strategy should clearly define when, where, and for how long data should be archived. In this stage, data undergoes an archival process that ensures redundancy."""@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
         skos:prefLabel "Data Archival"@en ;
-        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-jargon> .
+        skos:broader eaj:data-lifecycle  .
 
     eaj:data-deletion a skos:Concept ;
         dcterms:source "https://www.ibm.com/au-en/topics/data-lifecycle-management"^^xsd:anyURI ;
@@ -939,7 +941,7 @@ eaj:data-lifecycle a skos:Concept ;
         skos:definition """In this final stage of the lifecycle, data is purged from the records and destroyed securely. Businesses will delete data that they no longer need to create more storage space for active data. During this phase, data is removed from archives when it exceeds the required retention period or no longer serves a meaningful purpose to the organization."""@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
         skos:prefLabel "Data Deletion"@en ;
-        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-jargon> .
+        skos:broader eaj:data-lifecycle  .
 
 eaj:data-model a skos:Concept ;
     dcterms:source "https://sciencelogic.com/glossary/data-modeling"^^xsd:anyURI ;
@@ -976,6 +978,38 @@ eaj:data-profiling a skos:Concept ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
     skos:prefLabel "Data Profiling"@en ;
     skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-jargon> .
+
+eaj:data-multiple-storage a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+    skos:definition """Data that is multiplies across tables, systems, or platforms. This may be deliberate, accidental, or incidental."""@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+    skos:prefLabel "Data Storage Multiplication"@en ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-jargon> .
+
+    eaj:data-duplication a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+        skos:definition """The creation of multiple distinct and unconnected data records pertaining to the same instance of an entity (e.g. the same individual, organisation, opportunity, invoice, etc.), either within a single system or across multiple systems. In this context, duplication is almost always an unintended consequence of a combination of business and technical processes, and is something to be avoided. Data duplication is a data integrity problem which can have significant negative consequences for business operations."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+        skos:prefLabel "Data Duplication"@en ;
+        skos:broader eaj:data-multiple-storage .
+
+    eaj:data-replication a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+        skos:definition """The act of creating an identical copy of an existing piece of data in a different location. Data replication is a deliberate and necessary feature of most non-trivial systems architectures. It is necessary for backups and disaster recovery, and can be used to facilitate more efficient access to data by multiple systems without requiring real-time cross-systems access (which can come with technical, bandwidth, and security issues)."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+        skos:prefLabel "Data Replication"@en ;
+        skos:broader eaj:data-multiple-storage .
+
+    eaj:data-synchronisation a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+        skos:definition """The process of comparing and matching data for the purpose of selecting records for replication, or to identify and resolve instances of duplication or other data quality issues. It can be done as part of a replication process or independently. Data management best practice suggests synchronising enterprise data across relevant enterprise systems. This ensures a degree of consistency for internal stakeholders (staff) and external (customers), which can both increase operational efficiency and improve the customer experience. Data synchronization can be achieved using data replication, but data replication does not necessarily involve data synchronization."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+        skos:prefLabel "Data Synchronisation"@en ;
+        skos:broader eaj:data-multiple-storage .
 
 eaj:data-warehouse a skos:Concept ;
     dcterms:source "https://cloud.google.com/learn/what-is-a-data-warehouse"^^xsd:anyURI ;
