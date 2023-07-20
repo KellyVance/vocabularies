@@ -3,25 +3,36 @@ These are projects and multi-activity processes that include EA specific functio
 Projects may nest and be related to other projects. e.g a process of Study may form part of CPD
 
 Awards
+
 Assessments
-    Pre-Assessments
-    Stage 1 Assessment 
-    Membership Assessment
-    Memership Upgrades
-        Fellow Upgrade
-        Member Upgrade
-    Stage 2
-        Stage 2: Chartered Admission
-        Stage 2: Chartered MRA
-        Stage 2: Chartered Readmission
-        Area of Practice Credentialing
-    National Engineering Register
-    Engineering Executive
-    Migration Skills Assessment (MSA)
-    International Registration
-    CPD Audits
+    System Assessment
+    Process Assessment
+    Product Assessment
+    Resource Assessment
+    Agent Assessment
+        Engineer Assessments
+            Pre-Assessments
+            Stage 1 Assessment 
+            Membership Assessment
+            Memership Upgrades
+                Fellow Upgrade
+                Member Upgrade
+            Stage 2
+                Stage 2: Chartered Admission
+                Stage 2: Chartered MRA
+                Stage 2: Chartered Readmission
+                Area of Practice Credentialing
+            National Engineering Register
+            Engineering Executive
+            Migration Skills Assessment (MSA)
+            International Registration
+            CPD Audits
+    Employee Assessment
 Accreditations
+Design
+    
 CPD (Continuing Professional Development)
+PDP (Professional Development Program)
 Learning and Events (This refers to hosting/conducting learning and events, study refers to an individual undertaking learning activities)
     Conferences
     Courses
