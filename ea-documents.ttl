@@ -166,7 +166,7 @@ docs:english-language-evidence a skos:Concept ;
     skos:notation "ELE" ;
     skos:prefLabel "English Language Evidence"@en .
 
-docs:enrolment a skos:Concept ;
+docs:enrolment-form a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
