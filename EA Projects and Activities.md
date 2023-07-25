@@ -1,10 +1,13 @@
-EA Programs/Pathways/Projects
-These are projects and multi-activity processes that include EA specific functions such as assessments and accreditation
+Processes - things that happen (verbs)
+
+EA Programs/Pathways/Projects/Products/Services/Functions
+These are projects and multi-activity processes that include EA functions such as assessments and accreditation
 Projects may nest and be related to other projects. e.g a process of Study may form part of CPD
 
 Awards
-
-Assessments
+    National Awards
+    Division Awards
+Assessments - assessing whether something meets a set of defined criteria
     System Assessment
     Process Assessment
     Product Assessment
@@ -29,10 +32,15 @@ Assessments
             CPD Audits
     Employee Assessment
 Accreditations
-Design
-    
-CPD (Continuing Professional Development)
-PDP (Professional Development Program)
+Audits and Analysis - Determining the current state or history of a subject (system, process, person, group)
+Human Resources
+    People Managment
+    Talent Aquisition
+Internal Governance
+Planning and Design
+Professional Development
+    CPD (Continuing Professional Development)
+    PDP (Professional Development Program)
 Learning and Events (This refers to hosting/conducting learning and events, study refers to an individual undertaking learning activities)
     Conferences
     Courses
@@ -40,6 +48,7 @@ Learning and Events (This refers to hosting/conducting learning and events, stud
     Networking
 Marketing
 Membership Management
+Policy and Advocacy
 Renewals
 Survey (As a project i.e. a survey sent to a cohort/audience)
 Staff Recruitment
@@ -49,13 +58,13 @@ Study
     International Studies
 _____________________________
 EA Activities
-The individual activities that comprise a larger project or process. These are typically discrete events that could occur in any organisation
+The individual activities that comprise a larger project. These are typically discrete events that could occur in any organisation
 
 Documentation
     Administrative
         Project Management
         record keeping (e.g. minutes) 
-    Functional - Technical docs
+    Functional - Operational docs
 Document Request
     Document incoming
     Document outgoing
