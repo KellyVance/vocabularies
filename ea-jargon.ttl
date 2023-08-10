@@ -166,6 +166,18 @@ eaj:information a skos:Concept ;
     skos:prefLabel "Information"@en ;
     skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-jargon> .
 
+    eaj:record a skos:Concept ;
+        dcterms:source "https://legislation.nsw.gov.au/view/whole/html/inforce/current/act-1998-017"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+        skos:definition """Record means any document or other source of information compiled, recorded or stored in written form or on film, or by electronic process, or in any other manner or by any other means.
+        (a)anything on which there is writing; or
+        (b)anything on which there are marks, figures, symbols or perforations having a meaning for persons, including persons qualified to interpret them; or
+        (c)anything from which sounds, images or writings can be reproduced with or without the aid of anything else; or
+        (d)a map, plan, drawing or photograph."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+        skos:prefLabel "Record"@en ;
+        skos:broader eaj:information .
+
 eaj:div-rules a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
@@ -962,6 +974,7 @@ eaj:data-model a skos:Concept ;
         
         Semantic layers and non-materialised views are typically where derived information is calculated or generated. This ensures more efficient storage, reduces inconsistencies, and ensures derived information is current and synchronised with raw data in the underlying data model."""@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-jargon> ;
+        skos:altLabel "Semantic Data Model"@en ;
         skos:prefLabel "Semantic Layer"@en ;
         skos:broader eaj:data-model .
 
