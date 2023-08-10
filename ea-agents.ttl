@@ -21,7 +21,7 @@
         agnt:person,
         agnt:organisation ;
     skos:definition """The types of agents who can interact with Engineers Australia to perform services as customers, staff, advisors, representatives etc. People and Organisations whose actions contribute to the operation of Engineers Australia."""@en ;
-    skos:scopeNote """Agents describes the type of agent, whereas agent relationships describe the nature of interaction between two agents and roles describe the actions performed by an agent. For example a University or Tertiary institution is a type of organisation but it may be related to Engineers Australia as a customer, and play a variety of roles in activities such as an event host, advisor, publisher, contributor, etc."""@en;
+    skos:scopeNote """Agents describes the type of agent, whereas agent relationships describe the nature of interaction between two agents and roles describe the actions performed by an agent. For example a University or Tertiary institution is a type of organisation but it may be related to Engineers Australia as a customer, and play a variety of roles in activities such as an event host, advisor, publisher, contributor etc."""@en;
     skos:altLabel "Parties"@en,
         "Agents"@en ;
     skos:prefLabel "Engineers Australia Agents"@en .
@@ -36,7 +36,7 @@ agnt:person a skos:Concept ;
     skos:inScheme cs: ;
     skos:topConceptOf cs: ;
     skos:definition """A person is an individual human, acting in a personal or professional capacity. A natural human person."""@en ;
-    skos:scopeNote "An individual acting as a business is considered an organisation that consists of one person. Commonly the correct classification for an individual acting in this capacity will be a Sole Trader"@en ;
+    skos:scopeNote "An individual acting as a business is considered an organisation that consists of one person. Commonly the correct classification for an individual acting in this capacity will be a Sole Trader. A person in a strict data sense pertains to an individual and their attributes, which are independent of relationships and roles. Whereas a data-view of the person may contain information regarding the individual and their roles and relationships."@en ;
     skos:altLabel "Individual"@en ;
     skos:prefLabel "Person"@en .
 
