@@ -69,10 +69,20 @@ eagrd:graduate a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:topConceptOf cs: ;
-    skos:definition """Graduate membership is available to graduated engineers who an accredited or recognised course in Engineering and are no more than four years out of university.  Previously known as a Graduate Officer."""@en ;
+    skos:definition """Graduate membership is available to graduated engineers who studied an accredited or recognised course in Engineering and are no more than four years out of university. Previously known as a Graduate Officer."""@en ;
     skos:hiddenLabel "Graduate Officer"@en ;
     skos:notation "Grad" ;
     skos:prefLabel "Graduate"@en .
+
+eagrd:year-0-graduate a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:broader eagrd:graduate ;
+    skos:definition """Year-0 Graduate membership is available to graduated engineers who studied an accredited or recognised course in Engineering and are no more than four years out of university, and who have been granted a free year of membership through the Engineering Education Australia (EEA) Graduate Program upgrade. """@en ;
+    skos:altLabel "Year 0 Graduate"@en ;
+    skos:notation "Grad" ;
+    skos:prefLabel "Graduate - Year 0"@en .
 
 eagrd:hon-fellow a skos:Concept ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
@@ -128,5 +138,6 @@ eagrd:unpaid a skos:Collection ;
 	skos:definition """Membership grades that are provided free of charge for members to access Engineers Australia services and products.."""@en ;
     skos:member
         eagrd:student,
+        eagrd:year-0-graduate,
         eagrd:hon-fellow,
         eagrd:40-year .
