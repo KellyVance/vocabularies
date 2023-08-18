@@ -1,0 +1,432 @@
+@prefix aop: <https://ref.engineersaustralia.org.au/def/areasofpractice/> .
+@prefix cs: <https://ref.engineersaustralia.org.au/def/areasofpractice>  .
+@prefix anzsrc-2020-for: <https://linked.data.gov.au/def/anzsrc-for/2020/> .
+@prefix anzsrc-cs: <https://linked.data.gov.au/def/anzsrc-for/2020> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ref.engineersaustralia.org.au/def/areasofpractice>  a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2023-08-21"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:rightsHolder "Engineers Australia: Chartered Assessment" ;
+    dcterms:modified "2023-08-21"^^xsd:date ;
+    dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
+    dcterms:source "https://www.engineersaustralia.org.au/resources/professional-standards-library"^^xsd:anyURI ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+      skos:hasTopConcept 
+        aop:aerospaceEngineering,                   #Aerospace engineering
+        aop:amusementRidesAndDevicesEngineering,    #Amusement rides and devices engineering
+        aop:assetManagement,                        #Asset management
+        aop:biomedicalEngineering,                  #Biomedical engineering
+        aop:buildingServicesEngineering,            #Building Services Engineering
+        aop:chemicalEngineering,                    #Chemical engineering    
+        aop:civilEngineering,                       #Civil engineering
+        aop:constructionEngineering,                #Construction engineering
+        aop:costEngineering,                        #Cost engineering
+        aop:electricalEngineering,                  #Electrical engineering
+        aop:environmentalEngineering,               #Environmental engineering
+        aop:fireSafetyEngineering,                  #Fire safety engineering
+        aop:geotechnicalEngineering,                #Geotechnical engineering
+        aop:heritageAndConservationEngineering,     #Heritage and conservation engineering
+        aop:ITEE,                                   #Information, Telecommunications and Electronics Engineering
+        aop:leadershipAndManagement,                #Leadership and management
+        aop:mechanicalEngineering,                  #Mechanical engineering
+        aop:mechatronicsEngineering,                #Mechatronics engineering
+        aop:navalArchitecture,                      #Naval architecture
+        aop:oilAndGasPipelineEngineering,           #Oil and gas pipeline engineering
+        aop:petroleumAndReservoirEngineering,       #Petroleum engineering
+        aop:pressureEquipmentDesignVerification,    #Pressure equipment design verification
+        aop:projectManagement,                      #Project management
+        aop:riskEngineering,                        #Risk engineering
+        aop:structuralEngineering,                  #Structural engineering
+        aop:subseaEngineering,                      #Subsea engineering
+        aop:systemsEngineering ;                    #Systems engineering                
+      skos:definition "An Area of Practice is a subgroup of the engineering profession that practitioners align their skills and work activities with. Formal education, informal education and work experience will influence how an engineering practitioner identifies with an Area of Practice.
+
+      Areas of Practice can be, but are not necessarily, sub-disciplines of engineering. They are typically multidisciplinary areas in which an engineer applies their skills. They are related to, and commonly composites of, Fields of Research and engineering sub-disciplines such as those found in the Australian and New Zealand Standard Research Classification (ANZSRC) Fields of Research."@en ;
+      skos:prefLabel "Engineers Australia Areas of Practice"@en .
+
+<https://linked.data.gov.au/org/engineersaustralia>
+    a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+<https://orcid.org/0000-0003-2309-7004> a owl:NamedIndividual,
+    sdo:Person ;
+    sdo:affiliation [ a sdo:Organization ;
+        sdo:name "Engineers Australia" ;
+        sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI ] ;
+    sdo:name "Vance Kelly" ;
+    sdo:identifier <https://orcid.org/0000-0003-2309-7004> .
+
+aop:areas-of-practice-chartered a skos:Collection ;
+	skos:prefLabel "Areas of Practice"@en ;
+	skos:altLabel "Chartered Engineering Areas of Practice"@en ;
+	skos:definition """Areas of Practice for the assessment of chartered engineers by Engineers Australia."""@en ;
+    skos:member
+        aop:aerospaceEngineering,                   #Aerospace engineering
+        aop:amusementRidesAndDevicesEngineering,    #Amusement rides and devices engineering
+        aop:assetManagement,                        #Asset management
+        aop:biomedicalEngineering,                  #Biomedical engineering
+        aop:buildingServicesEngineering,            #Building Services Engineering
+        aop:chemicalEngineering,                    #Chemical engineering    
+        aop:civilEngineering,                       #Civil engineering
+        aop:constructionEngineering,                #Construction engineering
+        aop:costEngineering,                        #Cost engineering
+        aop:electricalEngineering,                  #Electrical engineering
+        aop:environmentalEngineering,               #Environmental engineering
+        aop:fireSafetyEngineering,                  #Fire safety engineering
+        aop:geotechnicalEngineering,                #Geotechnical engineering
+        aop:heritageAndConservationEngineering,     #Heritage and conservation engineering
+        aop:ITEE,                                   #Information, Telecommunications and Electronics Engineering
+        aop:leadershipAndManagement,                #Leadership and management
+        aop:mechanicalEngineering,                  #Mechanical engineering
+        aop:mechatronicsEngineering,                #Mechatronics engineering
+        aop:navalArchitecture,                      #Naval architecture
+        aop:oilAndGasPipelineEngineering,           #Oil and gas pipeline engineering
+        aop:petroleumAndReservoirEngineering,       #Petroleum engineering
+        aop:pressureEquipmentDesignVerification,    #Pressure equipment design verification
+        aop:projectManagement,                      #Project management
+        aop:riskEngineering,                        #Risk engineering
+        aop:structuralEngineering,                  #Structural engineering
+        aop:subseaEngineering,                      #Subsea engineering
+        aop:systemsEngineering                      #Systems engineering  
+    .
+
+aop:areas-of-practice-ner a skos:Collection ;
+	skos:prefLabel "Areas of Engineering"@en ;
+	skos:altLabel "National Engineering Register Areas of Practice"@en ;
+	skos:definition """Areas of Practice for the assessment of engineers for the National Engineering Register."""@en ;
+    skos:member
+        aop:aerospaceEngineering,	                #Aerospace engineering
+        aop:amusementRidesAndDevicesEngineering,	#Amusement rides and devices engineering
+        aop:biomedicalEngineering,	                #Biomedical engineering
+        aop:buildingServicesEngineering,	        #Building Services Engineering
+        aop:chemicalEngineering,	                #Chemical engineering    
+        aop:civilEngineering,	                    #Civil engineering
+        aop:electricalEngineering,	                #Electrical engineering
+        aop:environmentalEngineering,	            #Environmental engineering
+        aop:fireSafetyEngineering,	                #Fire safety engineering
+        aop:geotechnicalEngineering,	            #Geotechnical engineering
+        aop:itee,	                                #ITEE
+        aop:mechanicalEngineering,	                #Mechanical engineering
+        aop:mechatronicsEngineering,	            #Mechatronics engineering
+        aop:navalArchitecture,	                    #Naval architecture
+        aop:petroleumEngineering,	                #Petroleum engineering
+        aop:structuralEngineering,	                #Structural engineering
+
+    .
+
+aop:aerospaceEngineering a skos:Concept ;
+    rdfs:isDefinedBy anzsrc-cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/aerospace_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:exactMatch anzsrc-2020-for:4001 ;
+    skos:definition "Aerospace engineering deals with the development of aircraft and spacecraft. The purpose of aerospace engineering is to achieve optimal integrated aerospace systems."@en ;
+    skos:prefLabel "Aerospace engineering"@en .
+
+aop:amusementRideEngineering a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/amusement_rides_and_devices_aop_aoe_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:broadMatch anzsrc-2020-for:4099 ;
+    dcterms:hasPart
+        anzsrc-2020-for:401704,
+        anzsrc-2020-for:400504,
+        anzsrc-2020-for:400599,
+        anzsrc-2020-for:400801,
+        anzsrc-2020-for:400802,
+        anzsrc-2020-for:400805,
+        anzsrc-2020-for:401702 ;
+    skos:definition "Amusement rides and devices engineering deals with certification in line with the relevant Australian Standard of design, construction, operation, inspection, testing, service and maintenance associated with fixed and mobile amusement rides."@en ;
+    skos:prefLabel "Amusement rides and devices engineering"@en .
+
+aop:assetManagement a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/asset_management_aop_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:narrowMatch 
+        anzsrc-2020-for:400508,
+        anzsrc-2020-for:401704;
+    skos:definition "Asset management is the coordinated activity of an organisation to realise value from assets."@en ;
+    skos:prefLabel "Asset management"@en .
+
+aop:biomedicalEngineering a skos:Concept ;
+    rdfs:isDefinedBy anzsrc-cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/biomedical_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:exactMatch anzsrc-2020-for:4003 ;
+    skos:definition "Biomedical engineering deals with combining design and problem-solving skills in applying engineering principles and design concepts to medicine and biology for healthcare purposes."@en ;
+    skos:prefLabel "Biomedical engineering"@en .
+
+aop:buildingServicesEngineering a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/building_services_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:definition "Building services engineering deals with the internal environmental and environmental impact of a building. Its purpose is to achieve optimal integrated building systems incorporating environmental control and safety provisions for the comfort and well-being of the occupants of the built environment."@en ;
+    skos:broadMatch anzsrc-2020-for:4099 ;
+    dcterms:hasPart 
+        anzsrc-2020-for:401701,
+        anzsrc-2020-for:400602,
+        anzsrc-2020-for:400802,
+        anzsrc-2020-for:400805,
+        anzsrc-2020-for:400507,
+        anzsrc-2020-for:330308,
+        anzsrc-2020-for:401106 ;
+    skos:prefLabel "Building services engineering"@en .
+
+aop:chemicalEngineering a skos:Concept ;
+    rdfs:isDefinedBy anzsrc-cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/chemical_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:exactMatch anzsrc-2020-for:4004 ;
+    skos:definition "Chemical engineering deals with the application of physical sciences (physics and chemistry) and life sciences (microbiology and biochemistry), together with applied mathematics and economics to produce, transform, transport, and properly use chemicals, materials and energy."@en ;
+    skos:prefLabel "Chemical engineering"@en .
+
+aop:civilEngineering a skos:Concept ;
+    rdfs:isDefinedBy anzsrc-cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/civil_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:exactMatch anzsrc-2020-for:4005 ;
+    skos:definition "Civil engineering deals with the design, construction and maintenance of the physical and naturally built environment. Civil engineers generally specialise in one of a number of sub-disciplines."@en ;
+    skos:prefLabel "Civil engineering"@en .
+
+aop:constructionEngineering a skos:Concept ;
+    rdfs:isDefinedBy anzsrc-cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/construction_aop_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:exactMatch anzsrc-2020-for:400504 ;
+    skos:definition "Construction engineering deals with all areas of construction of public, commercial and industrial infrastructure, structures and plant including brownfield and greenfield sites."@en ;
+    skos:altLabel "Construction"@en ;
+    skos:prefLabel "Construction engineering"@en .
+
+aop:costEngineering a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/cost_engineering_aop_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:broadMatch anzsrc-2020-for:4099 ;
+    dcterms:hasPart 
+        anzsrc-2020-for:400508,
+        anzsrc-2020-for:401704,
+        anzsrc-2020-for:350713 ;
+    skos:definition "Cost engineering deals with the analysis of cost and timing outcomes on engineered assets, programs, projects, products and services."@en ;
+    skos:prefLabel "Cost engineering"@en .
+
+aop:electricalEngineering a skos:Concept ;
+    rdfs:isDefinedBy anzsrc-cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/electrical_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:exactMatch anzsrc-2020-for:4008 ;
+    skos:definition "Electrical engineering deals with electricity generation, transmission, distribution, electrical equipment manufacture, instrumentation and control systems."@en ;
+    skos:prefLabel "Electrical engineering"@en .
+
+aop:environmentalEngineering a skos:Concept ;
+    rdfs:isDefinedBy anzsrc-cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-08/environmental_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:exactMatch anzsrc-2020-for:4011 ;
+    skos:definition "Environmental engineering uses the core knowledge of the environment to create innovative solutions for a sustainable future."@en ;
+    skos:prefLabel "Environmental engineering"@en .
+
+aop:fireSafetyEngineering a skos:Concept ;
+    rdfs:isDefinedBy anzsrc-cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/fire_safety_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:exactMatch anzsrc-2020-for:400507 ;
+    skos:definition "Fire safety engineering deals with the protection of life, property, and environment through the application of engineering principles, rules and judgement to the phenomenon of fire, its physical effects and the reaction and behaviour of people to fire."@en ;
+    skos:prefLabel "Fire safety engineering"@en .   
+
+aop:geotechnicalEngineering a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/geotechnical_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:broadMatch anzsrc-2020-for:40 ;
+    skos:narrowMatch 
+        anzsrc-2020-for:400502,
+        anzsrc-2020-for:401902 ;
+    skos:definition "Geotechnical engineering deals with the mechanics of soil and rock and its applications to engineering elements."@en ;
+    skos:prefLabel "Geotechnical engineering"@en .
+
+aop:heritageConservationEngineering a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/heritage_and_conservation_engineering_-_aop_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:broadMatch anzsrc-2020-for:4099 ;
+    dcterms:hasPart
+        anzsrc-2020-for:330103,
+        anzsrc-2020-for:43,
+        anzsrc-2020-for:400504,
+    skos:definition "Heritage and conservation engineering deals with the application and adaptation of all the traditional disciplines of engineering, together with an understanding of the elementary scientific principles involved which might not be directly referenced in current practice procedures."@en ;
+    skos:prefLabel "Heritage and conservation engineering"@en .
+
+aop:ITEE a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/information_technology_and_electronics_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:broadMatch anzsrc-2020-for:40 ;
+    dcterms:hasPart
+        anzsrc-2020-for:4006,
+        anzsrc-2020-for:46,
+        anzsrc-2020-for:4009,
+        anzsrc-2020-for:4612,
+        anzsrc-2020-for:4609,
+    skos:definition "Information, Telecommunications and Electronics Engineering (ITEE) deals with scientific and engineering design to develop computer modelling tools, broadband capability, improve telecommunications systems, hardware and software, systems for media broadcasting and sound, and sophisticated electronics."@en ;
+    skos:notation "ITEE" ;
+    skos:prefLabel "Information, telecommunications and electronics engineering"@en .
+
+aop:engLeadership a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/leadership_and_management_aop_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:broadMatch anzsrc-2020-for:4099 ;
+    dcterms:hasPart
+        anzsrc-2020-for:3507,
+        anzsrc-2020-for:400508,
+        anzsrc-2020-for:401106,
+        anzsrc-2020-for:401407,
+        anzsrc-2020-for:401704,
+        anzsrc-2020-for:350713 ;
+    skos:definition "Leadership and management deals with business management or administrative functions in an engineering environment."@en ;
+    skos:altLabel "Engineering leadership and management"@en ;
+    skos:prefLabel "Leadership and management in engineering"@en .
+
+aop:mechanicalEngineering a skos:Concept ;
+    rdfs:isDefinedBy anzsrc-cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/mechanical_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:exactMatch anzsrc-2020-for:4017 ;
+    skos:definition "Mechanical engineering deals with the application of the principles of engineering and physics with the study of advanced materials for the design, analysis, manufacturing, and maintenance of mechanical systems."@en ;
+    skos:prefLabel "Mechanical engineering"@en .
+
+aop:mechatronicsEngineering a skos:Concept ;
+    rdfs:isDefinedBy anzsrc-cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/mechatronics_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:broadMatch anzsrc-2020-for:40 ;
+    dcterms:hasPart
+        anzsrc-2020-for:4007,
+        anzsrc-2020-for:4009,
+        anzsrc-2020-for:4014,
+        anzsrc-2020-for:400203,
+        anzsrc-2020-for:4601 ;
+    skos:definition "Mechatronics engineering is multidisciplinary and deals with integrating electrical and mechanical systems. It can include a combination of robotics, electronics, computing, telecommunications, systems, control, product engineering, and electronics to create functional, smart products."@en ;
+    skos:prefLabel "Mechatronics engineering"@en .
+
+aop:navalArchitecture a skos:Concept ;
+    rdfs:isDefinedBy anzsrc-cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/naval_architecture_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:exactMatch anzsrc-2020-for:401502 ;
+    skos:definition "Naval architecture deals with the safe design and specification of marine vessels and structures. The naval architect can also be involved in the construction, repair, refit or operation of such marine vessels and structures."@en ;
+    skos:prefLabel "Naval architecture"@en .
+
+aop:pipelineEngineering a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/oil_and_gas_pipeline_engeering_aop_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:broadMatch anzsrc-2020-for:401999 ;
+    dcterms:hasPart
+        anzsrc-2020-for:4012,
+        anzsrc-2020-for:400504,
+        anzsrc-2020-for:4004,
+    skos:definition "Oil and gas pipeline engineering deals with the efficient transport of fluids. This area of practice relates only to the transmission of petroleum and gas and related fluid pipelines."@en ;
+    skos:prefLabel "Oil and gas pipeline engineering"@en .
+
+aop:petroleumEngineering a skos:Concept ;
+    rdfs:isDefinedBy anzsrc-cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/petroleum_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:exactMatch anzsrc-2020-for:401907 ;
+    skos:definition "Petroleum engineering deals with four main sub-disciplines which are reservoir, drilling, production, and formation evaluation engineering."@en ;
+    skos:altLabel "Petroleum and reservoir engineering"@en ;
+    skos:prefLabel "Petroleum Engineering"@en .
+
+
+aop:pressureEquipDesign a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/pressure_equipment_design_aop_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:broadMatch anzsrc-2020-for:4099 ;
+    skos:definition "Pressure Equipment Design Verification deals with the process which assures the integrity of pressure vessels, boilers, pressure piping, and gas cylinders for the stated design and operating conditions."@en ;
+    skos:prefLabel "Pressure equipment design verification"@en .
+
+aop:projectManagement a skos:Concept ;
+    rdfs:isDefinedBy anzsrc-cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/project_management_aop_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:exactMatch anzsrc-2020-for:350713 ;
+    skos:definition "Project management deals with the discipline of initiating, planning, executing, controlling, and closing the work of a team to achieve specific goals and meet specific success criteria."@en ;
+    skos:prefLabel "Project management"@en .
+
+aop:riskEngineering a skos:Concept ;
+    rdfs:isDefinedBy anzsrc-cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/risk_engineering_aop_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:exactMatch anzsrc-2020-for:401005 ;
+    skos:definition "Risk engineering deals with the effective and efficient application of engineering methodologies and approaches at every step of the risk management cycle, across strategic, operational, financial or portfolio/program/project objectives."@en ;
+    skos:prefLabel "Risk engineering"@en .
+
+aop:structuralEngineering a skos:Concept ;
+    rdfs:isDefinedBy anzsrc-cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-08/structural_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:exactMatch anzsrc-2020-for:400510 ;
+    skos:definition "Structural engineering deals with the understanding, prediction, and calculation of the stability, strength and rigidity of built structures."@en ;
+    skos:prefLabel "Structural engineering"@en .
+
+aop:subseaEngineering a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/subsea_engineering_aop_-_final.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:broadMatch anzsrc-2020-for:4015 ;
+    dcterms:hasPart
+        anzsrc-2020-for:4011,
+        anzsrc-2020-for:4017,
+        anzsrc-2020-for:4016,
+        anzsrc-2020-for:400502,
+        anzsrc-2020-for:400504,
+        anzsrc-2020-for:400508,
+        anzsrc-2020-for:400510,
+        anzsrc-2020-for:400803,
+        anzsrc-2020-for:401005,
+        anzsrc-2020-for:401907,
+        anzsrc-2020-for:350713 ;
+    skos:definition "Subsea engineering deals with the design, construction, installation, operation, maintenance and decommissioning of equipment in the ocean or on the seabed."@en ;
+    skos:prefLabel "Subsea engineering"@en .
+
+aop:systemsEngineering a skos:Concept ;
+    rdfs:isDefinedBy anzsrc-cs: ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-06/systems-engineering-area-practice-v2-may-2023.pdf"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:exactMatch anzsrc-2020-for:401006 ;
+    skos:definition "Systems engineering deals with the interdisciplinary approach and means to enable the realisation of successful systems."@en ;
+    skos:prefLabel "Systems engineering"@en .

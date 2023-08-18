@@ -79,7 +79,7 @@ eagrd:year-0-graduate a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:inScheme cs: ;
     skos:broader eagrd:graduate ;
-    skos:definition """Year-0 Graduate membership is available to graduated engineers who studied an accredited or recognised course in Engineering and are no more than four years out of university, and who have been granted a free year of membership through the Engineering Education Australia (EEA) Graduate Program upgrade. """@en ;
+    skos:definition """Year-0 Graduate membership is available to graduated engineers who studied an accredited or recognised course in Engineering and are no more than four years out of university, and who have been granted a graduate membership through the Engineering Education Australia (EEA) Graduate Program upgrade. """@en ;
     skos:altLabel "Year 0 Graduate"@en ;
     skos:notation "Grad" ;
     skos:prefLabel "Graduate - Year 0"@en .
