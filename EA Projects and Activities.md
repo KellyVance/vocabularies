@@ -42,6 +42,10 @@ Audits and Analysis - Determining the current state or history of a subject (sys
 Human Resources
     People Managment
     Talent Aquisition
+ICT Service Event
+    Incident
+    Request
+    Enhancement
 Internal Governance
 Planning and Design
 Professional Development
@@ -66,6 +70,11 @@ _____________________________
 EA Tasks
 The individual activities that comprise a larger project. These are typically discrete events that could occur in any organisation
 
+Contact Event
+    email
+    phone call
+    letter
+    direct message
 Documentation
     Administrative
         Project Management
