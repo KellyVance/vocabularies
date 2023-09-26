@@ -124,6 +124,7 @@ Proposed
     Scheduled
     Proposal Review
     Requested
+Not Started
 In-Progress
     Partial Completion (Part Payment)
     Pending
