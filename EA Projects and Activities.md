@@ -19,11 +19,9 @@ Assessments - assessing whether something meets a set of defined criteria
     Product Assessment
     Resource Assessment
     Agent/Person Assessment
-        Customer (Engineer) Assessments
+        EA Membership Assessments
             Pre-Assessments
             Stage 1 Assessment 
-            Membership Assessment
-            Memership Upgrades
                 Fellow Upgrade
                 Member Upgrade
             Stage 2
@@ -31,14 +29,17 @@ Assessments - assessing whether something meets a set of defined criteria
                 Stage 2: Chartered MRA
                 Stage 2: Chartered Readmission
                 Area of Practice Credentialing
+            Stage 3: Engineering Executive
             National Engineering Register
-            Engineering Executive
             Migration Skills Assessment (MSA)
+                Migration Skills Assessment (MSA) Fast Track
             International Registration
-            CPD Audits
+            State Registration
+        CPD Audits
         Employee Assessment
 Accreditations
 Audits and Analysis - Determining the current state or history of a subject (system, process, person, group)
+Complaints Management
 Human Resources
     People Managment
     Talent Aquisition
@@ -46,6 +47,7 @@ ICT Service Event
     Incident
     Request
     Enhancement
+    Maintenance
 Internal Governance
 Planning and Design
 Professional Development
@@ -60,6 +62,8 @@ Marketing
 Membership Management
 Policy and Advocacy
 Renewals
+    EA Membership Renewal
+    Technical Rociety Renewal
 Survey (As a project i.e. a survey sent to a cohort/audience)
 Staff Recruitment
 Study
@@ -70,6 +74,7 @@ _____________________________
 EA Tasks
 The individual activities that comprise a larger project. These are typically discrete events that could occur in any organisation
 
+Application
 Contact Event
     email
     phone call
@@ -87,6 +92,7 @@ Project Delivery
     Close-Out
     Grant
     Confirmation
+    Outcome
 Candidate Evaluation
 Interview
 Invoicing
