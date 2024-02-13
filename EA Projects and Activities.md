@@ -140,9 +140,3 @@ Completed
 Archived
 Deleted/Erased/Deconstructed
 Abandoned
-
-Document Status
-draft
-in review
-approved
-deprecated
