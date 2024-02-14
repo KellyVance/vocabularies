@@ -6,7 +6,7 @@ Products and Offerings
 
 Activities - things that happen (verbs)
 
-EA Programs/Pathways/Projects/Services/Functions
+EA Process/Programs/Pathways/Projects/Services/Functions
 These are projects and multi-activity processes that include EA functions such as assessments and accreditation
 Projects may nest and be related to other projects. e.g a process of Study may form part of CPD
 
@@ -38,7 +38,8 @@ Assessments - assessing whether something meets a set of defined criteria
         CPD Audits
         Employee Assessment
 Accreditations
-Audits and Analysis - Determining the current state or history of a subject (system, process, person, group)
+Audits 
+Data Analysis - Determining the current state or history of a subject (system, process, person, group)
 Complaints Management
 Human Resources
     People Managment
@@ -80,6 +81,7 @@ Contact Event
     phone call
     letter
     direct message
+    social media post
 Documentation
     Administrative
         Project Management
