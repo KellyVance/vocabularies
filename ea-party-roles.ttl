@@ -1,0 +1,603 @@
+PREFIX earp: <https://ref.engineersaustralia.org.au/def/ea-party-roles/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://ref.engineersaustralia.org.au/def/ea-party-roles> a owl:Ontology,
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    dcterms:created "2022-07-06"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:modified "2024-08-20"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+    rdfs:seeAlso <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:definition "The relationship between an organisation, group, or individual and another agent. Party roles typically describe how two parties interact, rather than describing participation pretaining to a specific activity. How agents are involved in an activity is described by an activity role classification. In customer-centric organisations relationships are commonly the description of an Account held by the organisation."@en ;
+    skos:scopeNote """EA Party Role describe the links from one party to another, whereas EA Activity Roles describes the way that a party is associated with an activity or process. In implementation some platforms such as Dynamics 365 may refer to EA Party Relationships as Party Roles."""@en ;
+    skos:hiddenLabel "Accounts"@en ;
+    skos:hasTopConcept
+        earp:appointed-member,
+        earp:educator,
+        earp:elected-member,
+        earp:contact,
+        earp:joint-venture,
+        earp:media,
+        earp:owner,
+        earp:affiliate,
+        earp:partOf,
+        earp:regulator,
+        earp:represents,
+        earp:sponsor,
+        earp:user ;
+    skos:altLabel "Engineers Australia Agent Relationships"@en,
+        "Engineers Australia Party Relationships"@en ;
+    skos:prefLabel "Engineers Australia Party Roles"@en .
+
+<https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+earp:contact a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:definition """A contact is any party who has a recorded communication and contact details with the organisation. Contacts may be anonymous or linked to an indentified individual, group, or organisation. A contact represents a person, usually an individual, with whom a business unit has a relationship, such as a customer, a supplier, or a colleague."""@en ;
+    skos:scopeNote """A contact relationship denotes a relationship between two parties with a record of communication. This is distinct from the term Contact as a synonym for Person as a Party Type."""@en ;
+    skos:prefLabel "Contact"@en .
+
+    earp:collaborator a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:contact ;
+        skos:definition """A collaborator is a person or an organisation who works toward mutually beneficial goals or provides reciprocal benefits."""@en ;
+        skos:altLabel "Partner"@en;
+        skos:prefLabel "Collaborator"@en .
+
+        earp:mra-organisation a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:broader earp:collaborator ;
+            skos:altLabel "MRA Organisation"@en ;
+            skos:definition """An MRA Organisation is a relationship with an Organisation through a mutual recognition agreement with Engineers Australia and may also offer Chartered Status to Engineers."""@en ;
+            skos:prefLabel "Mutual Recognition Agreement Organisation"@en .
+
+    earp:competitor a skos:Concept ;
+        dcterms:source "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/organization-administration/overview-global-address-book"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:contact ;
+        skos:definition """A person or organization that provides goods or services that are similar to the goods or services that your business provides."""@en ;
+        skos:prefLabel "Competitor"@en .
+
+    earp:industry-member a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:contact ;
+        skos:definition """An organisation who operates in the target industry. An entity related to the data holding organisation due to acitivty in the industry or function of interest to the data holder."""@en ;
+        skos:scopeNote """Industry Member describes the relationship where an organisation is a member of a specified target industry of the data holder. In the case of Engineers Australia this means companies that have an engineering function and employ engineers, regardless of their industry classification. This relationship is independent of other relationships such as leads or corporate customers but commonly occurs in conjunction with them."""@en ;
+        skos:altLabel "Industry Organisation"@en,
+            "Engineering Company"@en ;
+        skos:prefLabel "Industry Member"@en .
+
+        earp:dsgl-supplier a skos:Concept ;
+            dcterms:source "https://www.defence.gov.au/business-industry/exporting/export-controls-framework/defence-strategic-goods-list"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            earp:industry-member ;
+            skos:definition """An organisation in the engineering industry who is a supplier to a Defence Force agency of goods and services that are listed on the Defence and Strategic Goods List.
+            
+            The Defence and Strategic Goods List 2024 (DSGL) is a legislative instrument specifying goods, technology, and software regulated under Australian export control laws. The DSGL is amended to reflect changes in the various multilateral non-proliferation and export control regimes of which Australia is a member.
+            Any person or entity wishing to export, supply, publish or broker 'controlled' DSGL items will need to lodge a permit application with Defence (unless an exemption applies), while meeting obligations around reporting and compliance.
+            There are currently over 2,500 unique item codes across the DSGL, separated into 2 categories:
+            Part 1 - Munitions List: items specially designed or modified for military use.
+            Part 2 - Dual-use List: items generally used for commercial purposes, but with potential military and weapons of mass destruction (WMD) application.
+            The DSGL also contains controls for items such as firearms and explosives that are specific to Australia."""@en ;
+            skos:scopeNote """The Defence Supply relationship for Engineers Australia refers to organisations who are members of the engineering industry whose engineering products or services fall under the scope of The Defence and Strategic Goods List 2024 (DSGL)."""@en ;
+            skos:altLabel "Defence and Strategic Goods List Supplier"@en,
+                "Military Supplier"@en,
+                "Defence Supplier"@en,
+                "Military Supply"@en,
+                "Supplier of Defence and Strategic Goods"@en ;
+            skos:prefLabel "Defence Supply"@en .
+
+    earp:customer a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:contact ;
+        skos:definition """A customer is a person or an organisation that is the recipent and/or buyer of products and services exchanged in a transaction. Customers may interact either actively or passively, in the development or delivery products and services. Customers may be member or non-member individuals, and may be companies, tertiary institutions, event venues, government departments or other organisations."""@en ;
+        skos:scopeNote """External customers typically receive products or services as part of an exchange or monetary transaction. Internal customers that are part of the same organisation receive products or services as part of an exchange or for mutual benefit towards a shared objective."""@en ;
+        skos:altLabel "Client"@en ;
+        skos:prefLabel "Customer"@en .
+
+        earp:member a skos:Concept ;
+            dcterms:source "https://dictionary.cambridge.org/dictionary/english/member"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:broader earp:customer ;
+            skos:definition """An individual, organisation, or thing that is part of a group."""@en ;
+            skos:prefLabel "Member"@en .
+
+            earp:ea-college-member a skos:Concept ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+                skos:broader earp:member ;
+                skos:altLabel "EA College Member"@en,
+                    "Engineers Australia College Member"@en ;
+                skos:definition """A College Member is a Person who has been formally accepted into an Engineers Australia College."""@en ;
+                skos:prefLabel "College Member"@en .
+
+            earp:ea-tech-society-member a skos:Concept ;
+                dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/technical-societies"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+                skos:broader earp:member ;
+                skos:altLabel "EA Technical Society Member"@en,
+                    "Engineers Australia Technical Society  Member"@en ;
+                skos:definition """A Technical Society Member is a Person who has been formally accepted into an Engineers Australia Technical Society."""@en ;
+                skos:prefLabel "Technical Society Member"@en .
+
+            earp:ea-member a skos:Concept ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                rdfs:seeAlso <https://linked.data.gov.au/def/ea-membership-grade> ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+                skos:broader earp:member ;
+                skos:altLabel "Engineers Australia Member"@en ;
+                skos:definition """An EA Member is a Person who has (or has had) a membership with Engineers Australia. This is distinct from the term Member when referring to the grade of membership with Engineers Australia."""@en ;
+                skos:prefLabel "EA Member"@en .
+
+                earp:ea-corp-member a skos:Concept ;
+                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+                    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+                    skos:broader earp:ea-member ;
+                    skos:altLabel "Corporate Member"@en ;
+                    skos:definition """An EA Member that has the right to vote at General Meetings or in postal ballots to change the Royal Charter or Bye-laws that form the Body Corporate of Engineers Australia"""@en ;
+                    skos:prefLabel "EA Corporate Member"@en .
+
+        earp:corporate-customer a skos:Concept ;
+            dcterms:source "https://dictionary.cambridge.org/dictionary/english/member"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:broader earp:customer ;
+            skos:definition """An organisation that has a commercial arrangement as a customer."""@en ;
+            skos:altLabel "B2B Organisation"@en ;
+            skos:prefLabel "Corporate Customer"@en .
+
+            earp:pdp-organisation a skos:Concept ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+                skos:broader earp:corporate-customer ;
+                skos:altLabel "PDP Organisation"@en ;
+                skos:definition """A PDP Organisation is an organisation that has contractually agreed (with Engineers Australia) to formally develop their Engineering employees through EA's PDP Program."""@en ;
+                skos:prefLabel "Professional Development Program Organisation"@en .
+
+        earp:student a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:broader earp:customer ;
+            skos:definition """A Student relationship describes a customer utilising educational services provided by the subject. In the capacity of a student relationship an individual may participate (participant role) in courses, classes, or conferences."""@en ;
+            skos:note """Student relationship describes the educational relationship and should not be conflated with the concept of Student as a grade of membership."""@en ;
+            skos:prefLabel "Student"@en .
+
+    earp:investor a skos:Concept ;
+        dcterms:source "https://www.investopedia.com/terms/i/investor.asp"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:contact ;
+        skos:definition """An investor is any person or other entity (such as a firm or mutual fund) who commits capital with the expectation of receiving financial returns."""@en ;
+        skos:prefLabel "Investor"@en .
+
+    earp:prospect a skos:Concept ;
+        dcterms:source "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/organization-administration/overview-global-address-book"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:contact ;
+        skos:altLabel "Lead"@en ;
+        skos:definition """A contact who is a potential customer of the organisation that has not purchased or applied for a product or service."""@en ;
+        skos:prefLabel "Prospect"@en .
+
+    earp:employee a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:contact ;
+        skos:altLabel "Staff"@en,
+            "Staff Member"@en,
+            "Worker"@en ;
+        skos:definition """Individual who has signed a contract of employment with an organisation. This may be permanent, fixed term, or casual. An employee is not an individual working for an organisation as part of a third party service or consulting contract. Employees provide their skills and services in exchange for remuneration from their employer.
+        
+        The inverse of an Employer."""@en ;
+        skos:prefLabel "Employee"@en .
+        
+        earp:exec-leader a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:broader earp:employee ;
+            skos:altLabel "Executive"@en,
+                "Chief"@en,
+                "Chief Officer"@en,
+                "Director"@en,
+                "Chief Executive Officer"@en ;
+            skos:definition """An individual who is employed in a paid position under an employment contract as an executive-level leader providing strategic direction to the organisation."""@en ;
+            skos:prefLabel "Executive Leader"@en .
+
+        earp:leader a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:broader earp:employee ;
+            skos:related earp:leader ;
+            skos:editorialNote """Leader describes the narrower employee relationship between an individual and their employer, i.e. X is has a leadership position in Company ABC. Whereas, Supervisor describes the relationship between two individuals, i.e. X is the supervisor of Y. These two relationships commonly occur together. """@en ;
+            skos:altLabel "Head"@en,
+                "General Manager"@en,
+                "Manager"@en ;
+            skos:definition """An individual who is employed in a paid position under an employment contract as a functional or divisional team leader providing tactical direction to the organisation in alignment with executive strategy."""@en ;
+            skos:prefLabel "Leader"@en .
+    
+    earp:enquirer a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:contact ;
+        skos:definition """A person that is making an enquiry or request for information."""@en ;
+        skos:prefLabel "Enquirer"@en .
+
+    earp:vendor a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:contact ;
+        skos:definition """A vendor, also known as a supplier, is a person or an organisation that provides products and services exchanged in a transaction. Vendors interact in the development or delivery of products and services. Vendors may organisations acting as contractors and consultants, companies, tertiary institutions, event venues, government departments or other organisations."""@en ;
+        skos:altLabel "Supplier"@en ;
+        skos:prefLabel "Vendor"@en .
+        
+        earp:consultant a skos:Concept ;
+            dcterms:source "https://lawpath.com.au/blog/consultant-and-contractor-whats-the-difference"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:broader earp:supplier ;
+            skos:definition """A consultant provides the advice and preliminary guidance in accordance with your needs. This can be advice for areas such as strategy, human resources, software adoption or public relations, usually in regards to a specific project. A consultant could give advice for a business owner to work with a contractor, as part of a broader business plan."""@en ;
+            skos:prefLabel "Consultant"@en .
+    
+        earp:contractor a skos:Concept ;
+            dcterms:source "https://lawpath.com.au/blog/consultant-and-contractor-whats-the-difference"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:broader earp:supplier ;
+            skos:definition """An individual or organisation who is engaged on a fixed contract to provide a service. Contractors are a separate organisation or an individual employed by such an external organisation."""@en ;
+            skos:prefLabel "Contractor"@en .
+
+    earp:volunteer a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-06/introduction-volunteering-engineers-australia-jun-24.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        rdfs:seeAlso <https://ref.engineersaustralia.org.au/def/ea-party-roles/volunteer> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:contact ;
+        skos:altLabel "EA Volunteer"@en,
+            "Engineers Australia Volunteer"@en ;
+        skos:definition """Volunteer encompasses all Office Bearers as well as those volunteers who are not members of a College Board or Committee but volunteer their time across other EA business units and activities. Thye are generally short term, task-based, or for a specific project. 
+        
+        These roles include:
+        - Standards Australia Nominees,
+        - Technical Journal Editors and Panels,
+        - Communities of Practice,
+        - Accreditation Panels,
+        - IPA Panelists,
+        - Awards inc. Judging Panels,
+        - Conference Organising Committees,
+        - Continuing Professional Development (CPD) Taskforces & Onsite event delivery,
+        - Student Ambassadors,
+        - Policy and Advocacy Working Groups,
+        - Task-Based Teams/Working Groups,
+        - Science, Technology, Engineering and Mathematics (STEM) Outreach Volunteers."""@en  
+        skos:prefLabel "Volunteer"@en .
+
+        earp:volunteer-sme a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:broader earp:volunteer ;
+            skos:definition """Members who bring their expertise and depth of knowledge to assist Engineers Australia in its purpose.
+
+            These include:
+            - Speakers at events,
+            - Media Spokespeople,
+            - Policy and Advocacy Contirbutors."""@en ;
+            skos:prefLabel "Volunteer Subject Matter Expert"@en .
+
+        earp:office-bearer a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/2023-royal-charter-by-laws.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:broader earp:volunteer ;
+            skos:definition """Any person holding honorary office in Engineers Australia, and includes delegates, directors and members of committees of Engineers Australia (whether members of Engineers Australia or not).
+            
+            Senior Office Bearer refers to office bearers acting as:
+            - Congress Delegates,
+            - College Chairs,
+            - Division Presidents,
+            - Chairs of Standing Committees of the Board,
+            - Chairs of College National Committees,
+            - Chairs of Joint Boards,
+            - Engineer Practice Advisory Committee (EPAC) Members (Chairs/Presidents of Technical Societies, National Committee Chairs, and Chairs of Special Interest Groups/Centres."""@en ;
+            skos:prefLabel "Office Bearer"@en .
+
+            earp:appointed-member a skos:Concept ;
+                dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2019-05/EA%20General%20Regulations%2002.05.19.pdf"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+                skos:broader earp:office-bearer ;
+                skos:definition """An office bearer who is appointed to a position of membership in an organsiation, to a board, or to a position by decision of an authorised person."""@en ;
+                skos:prefLabel "Appointed Member"@en .
+
+            earp:elected-member a skos:Concept ;
+                dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2019-05/EA%20General%20Regulations%2002.05.19.pdf"^^xsd:anyURI ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+                skos:broader earp:office-bearer ;
+                skos:definition """An office bearer who is elected to a position of membership in an organsiation, to a board, or to a position by a vote of electors."""@en ;
+                skos:prefLabel "Elected Member"@en .
+
+earp:educator a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:definition """An organisation who supplies educational services to the subject organisation, on behalf of the subject organisation, or in partnership with the organisation."""@en ;
+    skos:altLabel "Educational Institution"@en,
+        "Educational Provider"@en,
+        "Training Provider"@en ,
+        "Training Organisation"@en ,
+        "Tertiary Education Provider"@en ;
+    skos:prefLabel "Educator"@en .
+
+earp:employer a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:definition """An organisation who has signed a contract of employment with an individual. This may be permanent, fixed term, or casual. Employers provide remuneration in exchange for skills and services from their employee.
+    
+    The inverse of an Employee."""@en ;
+    skos:prefLabel "Employer"@en .
+ 
+earp:joint-venture a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:altLabel "Joint Venture Partner"@en ;
+    skos:definition """A joint-venture entity in cooperative partnership with other parties. Joint ventures typically share roles and responsibilities, financing, profits, and ownership relating to shared projects."""@en ;
+    skos:prefLabel "Partner Organisation"@en .
+
+earp:affiliate a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:altLabel "Affiliate"@en,
+        "Other Affiliated Bodies"@en,
+        "Affiliated Bodies"@en ;
+    skos:definition """An affiliate is an entitiy in a cooperative but independent relationship with other parties. Affiliates typically have separate roles and responsibilities, assets, and activities but share collaborative advertising, sell affiliated products for a commission or other benefit, or share marketing lists and information."""@en ;
+    skos:prefLabel "Affiliate Organisation"@en .
+
+    earp:industry-affiliate a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:affiliate ;
+        skos:definition """An affiliate organisation within the same industry or function."""@en ;
+        skos:prefLabel "Industry Affiliate"@en .
+
+    earp:non-industry-affiliate a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:affiliate ;
+        skos:definition """An affiliate organisation in a different industry."""@en ;
+        skos:prefLabel "Non-Industry Affiliate"@en .
+
+    earp:reseller a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:affiliate ;
+        skos:definition """An affiliate organisation whose primary relationsip is third-party on-selling of a product or service."""@en ;
+        skos:prefLabel "Reseller"@en .
+
+earp:media a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:definition """An entity who provides media or press coverage, advertising, or public communication about the subject organisation, either promotional on their behalf as advertising, or as news coverage."""@en ;
+    skos:altLabel "Media Organisation"@en,
+        "Communications Agency"@en,
+        "Communication Consultant"@en ,
+        "Advertiser"@en ,
+        "Press"@en ;
+    skos:prefLabel "Media"@en .
+
+earp:owner a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:definition """The agent who has legal ownership of an organisation or other resource.
+    
+    Where an organisation has multiple owners, the parent company is typically the owner with the majority stake and control over the smaller company's business operations."""@en ;
+    skos:prefLabel "Owner"@en .
+
+    earp:parent-company a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:owner ;
+        skos:altLabel "Parent"@en,
+            "Holding Company"@en ;
+        skos:definition """The parent company of the related organisation.
+        
+        The inverse of a subsidiary."""@en ;
+        skos:prefLabel "Parent Company"@en .
+
+earp:partOf a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:definition """An agent or party who operates as part of a broader party. For example, a Division or Department is part of a parent organisation. A Branch may be part of a Division."""@en ;
+    skos:prefLabel "Part Of"@en .
+ 
+    earp:subsidiary a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:partOf ;
+        skos:definition """A subsidiary of the related organisation. A subsidiary is a separate legal entity owned by another organisation (the parent company). This is distinct from a child company that is part of the same legal entity but acts as a trading name or brand of the parent company.
+        
+        The inverse of a parent company."""@en ;
+        skos:prefLabel "Subsidiary"@en .
+ 
+    earp:child-organisation a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:partOf ;
+        skos:definition """A child company of the related organisation. A child company is part of the same legal entity but acts as a trading name or brand of the parent company. This is distinct from a subsidiary that is a separate legal entity owned by another organisation (the parent company). 
+        
+        The inverse of a parent company."""@en ;
+        skos:altLabel "Child Organisation"@en .
+        skos:prefLabel "Child Company"@en .
+
+earp:regulator a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:definition """A person or organisation with regulatory authority over the activities, operation, or structure of the subject. A party that sets standards of practice and/or enacts disciplinary action."""@en ;
+    skos:altLabel "Governor"@en,
+        "Regulating body"@en,
+        "Regulatory Partner"@en ;
+    skos:prefLabel "Regulator"@en .
+
+earp:represents a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:definition """An individual or group who represent the interests, or sub-set of interests, of another agent. 
+    
+    For example, the relationship between an internal group and its parent organisation. Such as, the CEO or President representing the interests of an organisation in a public forum, the executive leadership team representing the strategic interests of the organisation, or a functional group representing a specific sub-set of business requirements. Boards and committees who represent a specified set of functions of an organisation."""@en ;
+    skos:altLabel "Internal Agent"@en,
+        "Agent"@en ,
+        "Represents"@en,
+        "For"@en,
+        "On Behalf Of"@en ;
+    skos:prefLabel "Representative"@en .
+
+    earp:company-contact a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:represents ;
+        skos:definition """An individual who acts as a point of contact and representative for an organisation or group. Commonly a company contact represents a specific location, branch, or function of an organisation."""@en ;
+        skos:prefLabel "Company Contact"@en .
+
+        earp:executive-contact a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:broader earp:company-contact ;
+            skos:definition """An individual who acts as a point of contact and representative for the chief executive officer or executive leadership team of an organisation."""@en ;
+            skos:prefLabel "Executive Contact"@en .
+
+        earp:migration-agent a skos:Concept ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+            skos:broader earp:company-contact ;
+            skos:definition """An individual who acts as a point of contact and representative for a Migration Agency and its clients. Note that the Agency represents its client (the prospective migrant), whereas the Migration Agent represents the agency as its point of contact. In practice, this means the agent is the individual to whom the migrant and associated assessors and approvers both interact with. Where this role exists between two parties, specific communications may require delivery to the agent rather than the subject  individual."""@en ;
+            skos:prefLabel "Migration Agent"@en .
+
+    earp:industry-representative a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:represents ;
+        skos:definition """An organisation that acts as a representative for an industry group as part of a formal association or as a member of a cohort of contacts."""@en ;
+        skos:prefLabel "Industry Representative"@en .
+
+    earp:migration-agency a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:definition """An organisation (Agency) who acts as a point of contact on behalf of an individual and coordinator of services relating to migration. Migration agents are commonly dual representatives, in that they represent the client to the assessing organisation(s), and represent the assessing organisation(s) back to the client."""@en ;
+        skos:broader earp:represents ;
+        skos:prefLabel "Migration Agency"@en .
+
+    earp:legal-agency a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+        skos:broader earp:represents ;
+        skos:definition """An organisation (Agency) who acts as a legal representative, legal counsel, or legal advisor."""@en ;
+        skos:prefLabel "Legal Agency"@en .
+
+earp:sponsor a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:definition """A Sponsor is an individual or organisation that provides financial support to a specific person, organisation, or cohort."""@en ;
+    skos:note """A sponsor relationship describes financial support of one agent to another, such as an organisation sponsoring an employee. An event sponsor role describes an agent providing financial constribution to a specific event."""@en ;
+    skos:prefLabel "Sponsor"@en .
+
+earp:supervisor a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:related earp:leader ;
+    skos:editorialNote """Supervisor describes the relationship between two individuals, i.e. X is the supervisor of Y. Whereas, Leader describes the relationship between an individual and their employer, i.e. X is a leader within Company ABC. These two relationships commonly occur together."""@en ;
+    skos:definition """An individual who responsible for overseeing the day-to-day performance of another employee or group of employees."""@en ;
+    skos:prefLabel "Supervisor"@en .
+
+earp:user a skos:Concept ;
+    dcterms:source "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/organization-administration/overview-global-address-book"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:definition """A person who is a user of a system."""@en ;
+    skos:note """A user is a Dynamics 365 party role. Here it forms a relationship between the organisation and a person who uses its systems and processes. Users will typically necessitate associated agent roles to describe the relationship-role pairing."""@en ;
+    skos:prefLabel "User"@en .
+ 
+#COLLECTIONS
+earp:d635-party-roles a skos:Collection ;
+    dcterms:source "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/organization-administration/overview-global-address-book"^^xsd:anyURI ;
+    skos:definition """Relationships that are associated with party records are referred to as party roles in Dynamics 635. There are several party roles, and they can be assigned to both party types, person and organization. Here are the definitions for each party role:."""@en ;
+    skos:prefLabel "Agent Relationships - Dynamics 365 Party Roles"@en ;
+    skos:member
+        earp:applicant,
+        earp:competitor,
+        earp:contact,
+        earp:customer,
+        earp:employee,
+        earp:prospect,
+        earp:user,
+        earp:vendor .
+
+#individual roles
+#organisation roles

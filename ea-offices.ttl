@@ -1,0 +1,277 @@
+PREFIX eaof: <https://ref.engineersaustralia.org.au/def/ea-offices/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://ref.engineersaustralia.org.au/def/ea-offices> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2023-11-30"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:modified "2023-11-30"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: Facilities"
+                ]
+        ] ;
+    rdfs:comment "RDF graph of Engineers Australia office locations."@en ;
+    owl:imports
+        <http://www.w3.org/2006/vcard/ns> ,
+        org: ,
+        <http://www.w3.org/ns/prov-o#> ;
+    skos:historyNote "Compiled by the Engineers Australia Data and Analytics Team" ;
+    skos:definition "A list of Engineers Australia physical office locations."@en ;
+    skos:hasTopConcept
+        eaof:adelaide ,
+        eaof:brisbane ,
+        eaof:canberra ,
+        eaof:chatswood ,
+        eaof:darwin ,
+        eaof:hobart ,
+        eaof:melbourne ,
+        eaof:newcastle,
+        eaof:perth,
+        eaof:sydney ;
+    skos:prefLabel "Engineers Australia Offices"@en ;
+.
+
+<https://linked.data.gov.au/org/engineersaustralia>
+    a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+eaof:adelaide a skos:Concept
+        owl:NamedIndividual ,
+        org:Site ;
+    dcterms:source "https://theengineersaustralia.sharepoint.com/sites/intr-locations/SitePages/Adelaide%20Office.aspx"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:definition "Located in the heart of Adelaide's CBD, the Engineers Australia Adelaide office is situated within a prominent 12-storey commercial building featuring a high-quality existing fitout.
+
+    Recent refurbishments have enhanced the space, including a modernised foyer, upgraded bathrooms, improved building services, and newly installed lifts—offering a professional and welcoming environment for members, staff, and visitors alike."@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:prefLabel "Adelaide"@en ;
+    skos:altLabel "South Australia"@en ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    org:siteAddress
+        [
+            a vcard:Address ;
+            vcard:country-name "Australia" ;
+            vcard:locality "Adelaide" ;
+            vcard:postal-code "5000" ;
+            vcard:region "SA" ;
+            vcard:street-address "Level 11, 108 King William Street"
+        ] ;
+.
+
+eaof:brisbane a skos:Concept
+        owl:NamedIndividual ,
+        org:Site ;
+    dcterms:source "https://theengineersaustralia.sharepoint.com/sites/intr-locations/SitePages/Brisbane%20Office.aspx"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:definition "Positioned in Brisbane's vibrant CBD, 340 Adelaide Street offers a modern and professional setting for the Engineers Australia Brisbane office. This contemporary commercial building features quality fitouts and upgraded amenities, including stylish end-of-trip facilities, refurbished common areas, and efficient building services.
+
+    Its central location provides excellent access to public transport, cafés, and other business conveniences—making it an ideal space for members, staff, and visitors."@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:prefLabel "Brisbane"@en ;
+    skos:altLabel "Queensland"@en ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    org:siteAddress
+        [
+            a vcard:Address ;
+            vcard:country-name "Australia" ;
+            vcard:locality "Brisbane" ;
+            vcard:postal-code "4000" ;
+            vcard:region "QLD" ;
+            vcard:street-address "Level 9, 340 Adelaide Street"
+        ] ;
+.
+
+eaof:canberra a skos:Concept
+        owl:NamedIndividual ,
+        org:Site ;
+    dcterms:source "https://theengineersaustralia.sharepoint.com/sites/intr-locations/SitePages/Cnaberra%20Office.aspx"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:definition "Located in the heart of Canberra's parliamentary precinct, 11 National Circuit offers a central, accessible base for EA.  The building is easily accessible by public transport, with nearby parking options and local amenities, including cafés and hotels, all within walking distance."@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:prefLabel "Canberra"@en ;
+    skos:altLabel "Engineering House"@en,
+        "National Office"@en ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    org:siteAddress
+        [
+            a vcard:Address ;
+            vcard:country-name "Australia" ;
+            vcard:locality "Barton" ;
+            vcard:postal-code "2600" ;
+            vcard:region "ACT" ;
+            vcard:street-address "Engineering House, 11 National Circuit"
+        ] ;
+.
+
+eaof:chatswood a skos:Concept
+        owl:NamedIndividual ,
+        org:Site ;
+    dcterms:source "https://theengineersaustralia.sharepoint.com/sites/intr-locations/SitePages/Chatswood%20Office.aspx"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:definition "Positioned on the ground floor, the office provides easy walk-in access for clients and staff, and is just minutes from Chatswood Station, major bus routes, and Westfield Shopping Centre.
+
+    The office space features modern amenities including meeting rooms, open-plan work areas, and kitchen facilities, all designed to support a productive and welcoming work environment."@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:prefLabel "Chatswood"@en ;
+    skos:altLabel "Sydney Staff Office"@en ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    org:siteAddress
+        [
+            a vcard:Address ;
+            vcard:country-name "Australia" ;
+            vcard:locality "Chatswood" ;
+            vcard:postal-code "2057" ;
+            vcard:region "NSW" ;
+            vcard:street-address "8 Thomas Street"
+        ] ;
+.
+
+eaof:darwin a skos:Concept
+        owl:NamedIndividual ,
+        org:Site ;
+    dcterms:source "https://theengineersaustralia.sharepoint.com/sites/intr-locations/SitePages/Darwin%20Office.aspx"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:definition "The office enjoys a ground-floor position, offering easy street-level access for clients and staff. Inside, the space is designed with functionality and comfort in mind, featuring meeting rooms, open work areas, and quiet spaces to suit a range of work styles.
+
+    Amenities include high-speed internet, air conditioning, kitchen facilities, and secure entry. The building is within walking distance of public transport, government offices, cafes, and local services, making it ideal for both business and community engagement in Darwin's professional landscape."@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:prefLabel "Darwin"@en ;
+    skos:altLabel "NT"@en ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    org:siteAddress
+        [
+            a vcard:Address ;
+            vcard:country-name "Australia" ;
+            vcard:locality "Darwin" ;
+            vcard:postal-code "0800" ;
+            vcard:region "NT" ;
+            vcard:street-address "9 Cavenagh Street"
+        ] ;
+.
+
+eaof:hobart a skos:Concept
+        owl:NamedIndividual ,
+        org:Site ;
+    dcterms:source "https://theengineersaustralia.sharepoint.com/sites/intr-locations/SitePages/Hobart%20Office.aspx"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:definition "Located in central Hobart, the Engineers Australia Hobart office at 5/188 Collins Street provides a convenient and professional setting for members and stakeholders.
+
+    This modern office space is part of a well-presented commercial building, offering a functional layout with quality amenities. Its prime location ensures easy access to nearby cafés, services, and public transport, supporting strong connections within Tasmania's engineering community."@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:prefLabel "Hobart"@en ;
+    skos:altLabel "Tasmania"@en ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    org:siteAddress
+        [
+            a vcard:Address ;
+            vcard:country-name "Australia" ;
+            vcard:locality "Hobart" ;
+            vcard:postal-code "7000" ;
+            vcard:region "TAS" ;
+            vcard:street-address "Level 5, 188 Collins Street"
+        ] ;
+.
+
+eaof:melbourne a skos:Concept
+        owl:NamedIndividual ,
+        org:Site ;
+    dcterms:source "https://theengineersaustralia.sharepoint.com/sites/intr-locations/SitePages/Melbourne%20Office.aspx"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:definition "Positioned in the heart of the Melbourne CBD, this premium office features modern fit-outs, including spacious meeting rooms, collaborative workspaces, private offices, and breakout areas.
+
+    Amenities available include high-speed internet, end-of-trip facilities such as showers and bike storage, secure access, and access to onsite parking."@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:prefLabel "Melbourne"@en ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    org:siteAddress
+        [
+            a vcard:Address ;
+            vcard:country-name "Australia" ;
+            vcard:locality "Melbourne" ;
+            vcard:postal-code "3000" ;
+            vcard:region "VIC" ;
+            vcard:street-address "Level 31, 600 Bourke Street"
+        ] ;
+.
+
+eaof:newcastle a skos:Concept
+        owl:NamedIndividual ,
+        org:Site ;
+    dcterms:source "https://theengineersaustralia.sharepoint.com/sites/intr-locations/SitePages/Newcastle%20Office.aspx"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:definition "Situated in the heart of Newcastle, the Engineers Australia Newcastle office at Suite 3, 125 Bull Street offers a professional and accessible location for members and visitors.
+
+    This modern office space is part of a well-maintained commercial complex, providing a comfortable and functional environment with quality amenities. Conveniently located near public transport and local services, the office supports effective engagement and connection with the engineering community across the region."@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:prefLabel "Newcastle"@en ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    org:siteAddress
+        [
+            a vcard:Address ;
+            vcard:country-name "Australia" ;
+            vcard:locality "Newcastle West" ;
+            vcard:postal-code "2302" ;
+            vcard:region "NSW" ;
+            vcard:street-address "Suite 3, Tonella Commercial Centre, 125 Bull Street"
+        ] ;
+.
+
+eaof:perth a skos:Concept
+        owl:NamedIndividual ,
+        org:Site ;
+    dcterms:source "https://theengineersaustralia.sharepoint.com/sites/intr-locations/SitePages/Perth%20Office.aspx"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:definition "Situated in the heart of Perth's central business district, this location places the organisation in a strategic and accessible position. The office offers a professional setting that reflects the organisation's presence within a prominent corporate hub. The office space features contemporary interiors with spacious meeting rooms, private offices, and open-plan workstations designed to support collaboration and productivity.
+
+    There is access to high-speed internet, end-of-trip facilities including secure bike storage and showers, as well as kitchenettes and comfortable breakout areas for informal meetings or downtime. The building also provides 24/7 security, concierge services, and access to onsite parking."@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:prefLabel "Perth"@en ;
+    skos:altLabel "Western Australia"@en ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    org:siteAddress
+        [
+            a vcard:Address ;
+            vcard:country-name "Australia" ;
+            vcard:locality "Perth" ;
+            vcard:postal-code "6000" ;
+            vcard:region "WA" ;
+            vcard:street-address "Level 10, Allendale Square, 77 St Georges Terrace"
+        ] ;
+.
+
+eaof:sydney a skos:Concept
+        owl:NamedIndividual ,
+        org:Site ;
+    dcterms:source "https://theengineersaustralia.sharepoint.com/sites/intr-locations/SitePages/Sydney%20Office.aspx"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:definition "The mezzanine-level office provides a unique blend of accessibility and privacy, with professional workspaces including meeting rooms, collaborative zones, and quiet areas for focused tasks.
+
+    Benefit from high-speed internet, secure entry, and shared amenities such as kitchen facilities and informal breakout spaces. Its prime location and functional layout make it well-suited for both day-to-day operations and hosting clients in a central, well-connected setting."@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    skos:prefLabel "Sydney"@en ;
+    skos:altLabel "Market Street"@en ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-offices> ;
+    org:siteAddress
+        [
+            a vcard:Address ;
+            vcard:country-name "Australia" ;
+            vcard:locality "Sydney" ;
+            vcard:postal-code "2000" ;
+            vcard:region "NSW" ;
+            vcard:street-address "Mezzanine Level, 44 Market Street"
+        ] ;
+.

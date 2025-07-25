@@ -1,0 +1,230 @@
+PREFIX eacoe: <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> 
+    a 
+        owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    dcterms:created "2024-03-13"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:modified "2024-03-13"^^xsd:date ;
+    dcterms:references 
+		<https://www.engineersaustralia.org.au/sites/default/files/2022-08/code-ethics-guidelines-professional-conduct-2022.pdf>;
+    dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: Professional Standards"
+                ]
+        ] ;
+    skos:hasTopConcept
+        eacoe:1,
+        eacoe:2,
+        eacoe:3,
+        eacoe:4 ;
+    skos:definition """As engineering practitioners, we use our knowledge and skills for the benefit of the community to create engineering solutions for a sustainable future. In doing so, we strive to serve the community ahead of other personal or sectional interests. Our Code of Ethics defines the values and principles that shape the decisions we make in engineering practice. The related Guidelines on Professional Conduct provide a framework for members of Engineers Australia to use when exercising their judgment in the practice of engineering and as members of Engineers Australia more broadly. As members of Engineers Australia, we commit to practise in accordance with the Engineers Australia's General Regulations regarding competency, continuing professional development and the Code of Ethics. We accept that we will be held accountable for our conduct under Engineers Australia's disciplinary regulations."""@en ;
+    skos:altLabel "Engineers Australia Professional Conduct"@en ;
+    skos:prefLabel "Engineers Australia Code of Ethics"@en .
+
+<https://linked.data.gov.au/org/engineersaustralia>
+    a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+eacoe:1 a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+    skos:definition """To demonstrate integrity means to:
+    - Act on the basis of a well-informed conscience,
+    - Be honest and trustworthy, and
+    - Respect the dignity of all persons."""@en ;
+    skos:altLabel "1. Demonstrate Integrity"@en ;
+    skos:prefLabel "Demonstrate Integrity"@en .
+
+    eacoe:1-1 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:broader eacoe:1;
+        skos:definition """To act on the basis of a well-informed conscience means to:
+        a. be discerning and do what you think is right,
+        b. act impartially and objectively,
+        c. act appropriately, and in a professional manner, when you perceivesomething to wrong,
+        d. give due weight to all legal, contractual and employment obligations,
+        e. act within your area of expertise."""@en ;
+        skos:altLabel "1.1 Act on the basis of a well-informed conscience"@en ;
+        skos:prefLabel "Act on the basis of a well-informed conscience"@en .
+
+    eacoe:1-2 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:broader eacoe:1;
+        skos:definition """To be honest and trustworthy means to:
+        a. accept, as wel as give, honest and fair criticism,
+        b. be prepared to explain your work and reasoning,
+        c. give proper credit to those whom proper credit is due,
+        d. in managing perceived conflicts of interest, ensure that those conflicts are disclosed to relevant parties,
+        e. respect confidentiality obligations, express or implied, and
+        f. do not engage in fraudulent, corrupt, or criminal conduct."""@en ;
+        skos:altLabel "1.2 Be honest and trustworthy"@en ;
+        skos:prefLabel "Be honest and trustworthy"@en .
+
+    eacoe:1-3 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:broader eacoe:1;
+        skos:definition """To respect the dignity of all persons means to:
+        a. treat others with courtesy and without discrimination or harassment, and
+        b. apply knowledge and skills without bias in respect of race, religion, gender, age, sexual orientation, marital or family status, national origin, or mental or physical abilities."""@en ;
+        skos:altLabel "1.3 Respect the dignity of all persons"@en ;
+        skos:prefLabel "Respect the dignity of all persons"@en .
+
+eacoe:2 a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+    skos:definition """To practise competently means to:
+    - Maintain and develop knowledge and skills,
+    - Represent areas of competence objectively, and
+    - Act on the basis of adequate knowledge."""@en ;
+    skos:altLabel "2. Practise Competently"@en ;
+    skos:prefLabel "Practise Competently"@en .
+
+    eacoe:2-1 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:broader eacoe:2;
+        skos:definition """To maintain and develop knowledge and skills means to:
+        a. continue to develop relevant knowledge and expertise,
+        b. act in a careful and diligent manner,
+        c. seek peer review,
+        d. support the ongoing development of others, and
+        e. maintain continuing professional development."""@en ;
+        skos:altLabel "2.1 Maintain and develop knowledge and skills"@en ;
+        skos:prefLabel "Maintain and develop knowledge and skills"@en .
+
+    eacoe:2-2 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:broader eacoe:2;
+        skos:definition """To represent areas of competence objectively means to:
+        a. practise within areas of competence, and
+        b. neither falsify nor misrepresent qualifications, grades of membership, experience or prior responsibilities."""@en ;
+        skos:altLabel "2.2 Represent areas of competence objectively"@en ;
+        skos:prefLabel "Represent areas of competence objectively"@en .
+
+    eacoe:2-3 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:broader eacoe:2;
+        skos:definition """To act on the basis of adequate knowledge means to:
+        a. practise in accordance with legal and statutory requirements, and with the standards of the day accepted within the Engineers Australia community, and
+        b. inform employers or clients if a task requires qualifications and experience outside your areas of competence."""@en ;
+        skos:altLabel "2.3 Act on the basis of adequate knowledge"@en ;
+        skos:prefLabel "Act on the basis of adequate knowledge"@en .
+
+eacoe:3 a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+    skos:definition """To exercise leadership means to:
+    - Uphold the reputation and trustworthiness of the practice of engineering,
+    - Support and encourage diversity, and
+    - Make reasonable efforts to communicate honestly and effectively to all stakeholders, taking into account the reliance of others on engineering expertise."""@en ;
+    skos:altLabel "3. Exercise Leadership"@en ;
+    skos:prefLabel "Exercise Leadership"@en .
+
+    eacoe:3-1 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:broader eacoe:3;
+        skos:definition """To uphold the reputation and trustworthiness of the practice of engineering means to:
+       a. advocate and support the extension of ethical practice, and
+       b. engage responsibly in public debate and deliberation."""@en ;
+        skos:altLabel "3.1 Uphold the reputation and trustworthiness of the practice of engineering"@en ;
+        skos:prefLabel "Uphold the reputation and trustworthiness of the practice of engineering"@en .
+
+    eacoe:3-2 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:broader eacoe:3;
+        skos:definition """To support and encourage diversity means to:
+        a. select, and provide opportunities for, all engineering practitioners and other team members on the basis of merit, and
+        b. promote diversity in engineering."""@en ;
+        skos:altLabel "3.2 Support and encourage diversity"@en ;
+        skos:prefLabel "Support and encourage diversity"@en .
+
+    eacoe:3-3 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:broader eacoe:3;
+        skos:definition """To make reasonable efforts to communicate honestly and effectively to all stakeholders, taking into account the reliance of others on engineering expertise means to:
+        a. provide clear and timely communications on issues such as engineering services, costs, outcomes and risks."""@en ;
+        skos:altLabel "3.3 Make reasonable efforts to communicate honestly and effectively to all stakeholders"@en ;
+        skos:prefLabel "Make reasonable efforts to communicate honestly and effectively to all stakeholders"@en .
+
+eacoe:4 a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+    skos:definition """To promote sustainability means to:
+    - Engage responsibly with the community and other stakeholders,
+    - Practise engineering to foster the health, safety and welfare of the community and the environment, and
+    - Balance the needs of the present with the needs of future generations."""@en ;
+    skos:altLabel "4. Promote Sustainability"@en ;
+    skos:prefLabel "Promote Sustainability"@en .
+
+    eacoe:4-1 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:broader eacoe:4;
+        skos:definition """To engage responsibly with the community and other stakeholders means to:
+        a. be sensitive to public concerns,
+        b. inform employers or clients of the likely consequences of proposed activities on the community and the environment, and
+        c. promote the involvement of all stakeholders and the community in decisions and processes that may impact upon them and the environment."""@en ;
+        skos:altLabel "4.1 Engage responsibly with the community and other stakeholders"@en ;
+        skos:prefLabel "Engage responsibly with the community and other stakeholders"@en .
+
+    eacoe:4-2 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:broader eacoe:4;
+        skos:definition """To practise engineering to foster the health, safety and welfare of the community and the environment means to:
+        a. incorporate social, cultural, health, safety, environmental and economic considerations into the engineering task."""@en ;
+        skos:altLabel "4.2 Practise engineering to foster the health, safety and welfare of the community and the environment"@en ;
+        skos:prefLabel "Practise engineering to foster the health, safety and welfare of the community and the environment"@en .
+
+    eacoe:4-3 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/publications/code-ethics"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-code-of-ethics> ;
+        skos:broader eacoe:4;
+        skos:definition """To balance the needs of the present with the needs of future generations:
+        a. in identifying sustainable outcomes consider all options in terms of their economic, environmental and social consequences, and
+        b. aim to deliver outcomes that do not compromise the ability of future lifeto e njoy the same or better environment, health, wellbeing and safety as currently enjoyed."""@en ;
+        skos:altLabel "4.3 Balance the needs of the present with the needs of future generations"@en ; 
+        skos:prefLabel "Balance the needs of the present with the needs of future generations"@en .

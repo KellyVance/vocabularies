@@ -1,12 +1,15 @@
-@prefix award: <https://ref.engineersaustralia.org.au/def/ea-awards/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix eaclg: <https://linked.data.gov.au/def/ea-colleges/> .
-@prefix ieaoc: <https://linked.data.gov.au/def/iea-occupational-categories/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sdo: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX award: <https://ref.engineersaustralia.org.au/def/ea-awards/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX earl: <https://ref.engineersaustralia.org.au/def/ea-activity-roles/>
+PREFIX eaclg: <https://linked.data.gov.au/def/ea-colleges/>
+PREFIX ieaoc: <https://linked.data.gov.au/def/iea-occupational-categories/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
     sdo:name "Engineers Australia" ;
@@ -17,13 +20,25 @@
     dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
     dcterms:created "2023-03-01"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
-    dcterms:rightsHolder "Engineers Australia: Awards Team" ;
     dcterms:modified "2023-03-01"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
     dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
-    skos:definition """An EA Award is an Engineers Australia managed award for service or achievement to the organisation of Engineers Australia or to the engineering profession."""@en ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: Awards"
+                ]
+        ] ;
+    skos:definition """An EA Award is an Engineers Australia award for service or achievement to the organisation of Engineers Australia or to the engineering profession."""@en ;
+    skos:hasTopConcept
+        award:aeea,
+        award:division,
+        award:recognition,
+        award:tertiary ;
     skos:altLabel "EA Award"@en ;
-    skos:prefLabel "Engineers Australia Award"@en .
+    skos:prefLabel "Engineers Australia Awards"@en .
 
 award:aeea a skos:Concept ;
     rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
@@ -319,7 +334,7 @@ award:aeea a skos:Concept ;
                 skos:altLabel "Honorary Fellows"@en,
                     "Honorary Fellow (HonFIEAust)"@en,
                     "Honorary Fellows (HonFIEAust)"@en,
-                    "Honorary Fellow Awards"@en,
+                    "Honorary Fellow Awards"@en ;
                 skos:prefLabel "Honorary Fellows Award"@en ;
                 skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
                 skos:broader award:distinguished-career .
@@ -344,14 +359,14 @@ award:aeea a skos:Concept ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
         skos:broader award:aeea .
 
-        award:division-project-award a skos:Concept ;
+        award:division-project-finalist a skos:Concept ;
             rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
             dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
-            skos:definition """A Divisonal Project Award recognises outstanding achievement of a project within the geographical region administered by a division. Each division finalist project team who goes on to compete with other divisional finalists. A national winner is then chosen from the division finalists and is awarded Project of the Year."""@en ;
+            skos:definition """Engineering project teams submit their entries through their local Engineers Australia division. Each division chooses a finalist project team who goes on to compete with other divisional finalists. A national winner is then chosen from the division finalists and is awarded Project of the Year."""@en ;
             skos:altLabel "Project of the Year - Division"@en,
                 "Project Award - Division"@en,
                 "Division Finalist"@en ;
-            skos:prefLabel "Division Project Award"@en ;
+            skos:prefLabel "Division Project Finalist"@en ;
             skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
             skos:broader award:project .
 
@@ -361,14 +376,6 @@ award:aeea a skos:Concept ;
             skos:definition """Engineers Australia's project awards recognises Australia's top engineering projects and the teams behind them. Engineering project teams submit their entries locally through an Engineers Australia division. Each division chooses a finalist project team who goes on to compete with other divisional finalists. A national winner is then chosen from the division finalists and is awarded Project of the Year."""@en ;
             skos:hiddenLabel "Sir William Hudson Award"@en ;
             skos:prefLabel "Project of the Year"@en ;
-            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            skos:broader award:project .
-
-        award:sir-william-hudson-award a skos:Concept ;
-            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            dcterms:source "https://aeea.engineersaustralia.org.au/awards/"^^xsd:anyURI ;
-            skos:definition """The Sir William Hudson Award is the highest honour that an engineering project can receive from Engineers Australia."""@en ;
-            skos:prefLabel "Sir William Hudson Award (Superseded)"@en ;
             skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
             skos:broader award:project .
 
@@ -501,15 +508,6 @@ award:recognition a skos:Concept ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
         skos:broader award:recognition .
 
-        award:chemeca-medal a skos:Concept ;
-            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            dcterms:source "https://www.anzfche.org/awards-of-excellence.php"^^xsd:anyURI ;
-            skos:definition """This is the most prestigious award in the chemical engineering profession in New Zealand and Australia. It is awarded to a prominent New Zealand or Australian Chemical Engineer who has made an outstanding contribution, through achievement or service, to the practice of Chemical Engineering in its widest sense and who continues to serve the profession. The recipient of the Award is invited to present a plenary lecture at the annual Chemeca conference."""@en ;
-            skos:related eaclg:chemical ;
-            skos:prefLabel "Chemeca Medal"@en ;
-            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            skos:broader award:college .
-
         award:david-robinson-award a skos:Concept ;
             rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
             dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/awards/ITEE%20College%20Awards%20Flyers-%20David%20Robinson%20flyer.pdf"^^xsd:anyURI ;
@@ -553,16 +551,6 @@ award:recognition a skos:Concept ;
             skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
             skos:broader award:college .
 
-        award:professional-environmental-engineer-of-the-year a skos:Concept ;
-            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            dcterms:source "https://www.engineersaustralia.org.au/news-and-media/2022/07/meet-winners-australias-top-engineering-awards-2021"^^xsd:anyURI ;
-            skos:definition """The Professional Environmental Engineer of the Year Award seeks to reward outstanding achievement and eminence in the practice of environmental engineering, and standout service to the profession."""@en ;
-            skos:related eaclg:environmental ;
-            skos:altLabel "National Professional Environmental Engineer of the Year"@en ;
-            skos:prefLabel "Professional Environmental Engineer of the Year"@en ;
-            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            skos:broader award:college .
-
         award:rw-chapman-medal a skos:Concept ;
             rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
             dcterms:source "https://aeea.engineersaustralia.org.au/rw-chapman-medal/"^^xsd:anyURI ;
@@ -581,17 +569,6 @@ award:recognition a skos:Concept ;
             skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
             skos:broader award:college .
 
-        award:w-h-warren-medal a skos:Concept ;
-            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            dcterms:source "https://www.eoas.info/biogs/P006450b.htm"^^xsd:anyURI ;
-            skos:definition """The W. H. Warren Medal was established in 1926 by the Institution of Engineers, Australia to perpetuate the memory of the first President of the Institution, the late Professor William Henry Warren, Professor of Engineering at the University of Sydney from 1884 to 1925.
-            
-            It is usually awarded annually for the best paper presented to the Institution on a civil engineering subject. The award was first presented in 1932."""@en ;
-            skos:related eaclg:civil ;
-            skos:prefLabel "W H Warren Medal"@en ;
-            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            skos:broader award:college .
-
         award:women-in-biomedical-engineering-scholarship a skos:Concept ;
             rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
             dcterms:source "https://aeea.engineersaustralia.org.au/women-in-biomedical-engineering-scholarship/"^^xsd:anyURI ;
@@ -602,56 +579,11 @@ award:recognition a skos:Concept ;
             skos:prefLabel "Women in Biomedical Engineering Scholarship"@en ;
             skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
             skos:broader award:college .
-
-        award:young-biomedical-engineering-scholarship a skos:Concept ;
-            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/biomedical-college"^^xsd:anyURI ;
-            skos:definition """Young Biomedical Engineering Scholarship acknowledges and promotes a Biomedical Engineer under the age of 35 who is making an outstanding contribution to the profession and professional community. Nominations are made to the College by the biomedical community.
-            
-            A panel of members from the Board of the Biomedical College of Engineers Australia will judge the scholarship."""@en ;
-            skos:related eaclg:biomedical ;
-            skos:prefLabel "Young Biomedical Engineering Scholarship"@en ;
-            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            skos:broader award:college .
-
-        award:young-electrical-power-engineer-of-the-year-award a skos:Concept ;
-            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            dcterms:source "https://aeea.engineersaustralia.org.au/young-electrical-power-engineer-of-the-year-award/"^^xsd:anyURI ;
-            skos:definition """This national award recognises a professional engineer who has demonstrated significant achievements in electrical power engineering during the preceding six years. Contributions to the community are also valued.
-            
-            This annual award is an example of an effective partnership between Engineers Australia and industry. Engineers Australia's Electrical College Board and the Electric Energy Society of Australia (EESA) jointly developed the initiative, to encourage young Australians to develop a career in electrical power engineering, and also to reward outstanding achievements."""@en ;
-            skos:related eaclg:electrical ;
-            skos:prefLabel "Young Electrical Power Engineer of the Year Award"@en ;
-            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            skos:broader award:college .
-
-        award:young-environmental-engineer-of-the-year-award a skos:Concept ;
-            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            dcterms:source "https://www.seng.org.au/awards-competitions/environmental-college-young-professional-engineer-the-year"^^xsd:anyURI ;
-            skos:definition """The Young Environmental Engineer of the Year award is presented by the Environmental College of Engineers Australia to acknowledge and reward young environmental engineers who have:
-            - Engineering competence
-            - Demonstrated leadership skills including leadership of teams
-            - Positive/notable outcomes from their engineering work
-            - Creativity/innovation
-            - Community service to industry, the profession and/or society"""@en ;
-            skos:related eaclg:environmental ;
-            skos:prefLabel "Young Environmental Engineer of the Year Award"@en ;
-            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            skos:broader award:college .
-
-        award:young-mechanical-engineer-of-the-year-award a skos:Concept ;
-            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            dcterms:source "https://www.seng.org.au/awards-competitions/environmental-college-young-professional-engineer-the-year"^^xsd:anyURI ;
-            skos:definition """This national award recognises a professional engineer who has demonstrated significant achievements in mechanical engineering. Contributions to the community are also valued."""@en ;
-            skos:related eaclg:mechanical ;
-            skos:prefLabel "Young Mechanical Engineer of the Year Award"@en ;
-            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            skos:broader award:college .
-
+ 
     award:tech-society a skos:Concept ;
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
         dcterms:source "https://aeea.engineersaustralia.org.au/technical-society-awards/"^^xsd:anyURI ;
-         skos:definition """A category of Engineers Australia Recognition Awards, Technical Society Awards are engineering awards granted by the Technical Societies of Engineers Australia.
+         skos:definition """A category of Engineers Australia Recognition Awards, Technical Society Awards are engineering awards granted and administered by the Technical Societies of Engineers Australia.
          
          Engineers Australia has incorporated and unincorporated technical societies.
          - Incorporated technical societies are governed by their own constitutions but choose to be aligned with Engineers Australia.
@@ -684,7 +616,7 @@ award:recognition a skos:Concept ;
             skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
             skos:broader award:tech-society .
 
-    award:special-interest a skos:Collection ;
+    award:special-interest a skos:Concept ;
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
         dcterms:source "https://aeea.engineersaustralia.org.au/special-interest-awards/"^^xsd:anyURI ;
         skos:definition """A category of Engineers Australia Recognition Awards, Special Interest Awards are engineering awards granted by special interest groups that promote the interests, objectives, and values of Engineers Australia."""@en ;
@@ -698,15 +630,7 @@ award:recognition a skos:Concept ;
             skos:definition """This award promotes national engineering excellence and the contribution women in engineering make to the community. This award seeks to identify, recognise and reward student groups and not-for-profit organisations that strive towards national engineering excellence in encouraging gender diversity."""@en ;
             skos:prefLabel "Most Encouraging Student Group or Non-Profit Group in Gender Diversity"@en ;
             skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            skos:broader award:tech-society .
-
-        award:gender-diversity-company a skos:Concept ;
-            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            dcterms:source "https://aeea.engineersaustralia.org.au/most-encouraging-student-group-or-non-profit-group-in-gender-diversity/"^^xsd:anyURI ;
-            skos:definition """This award promotes national engineering excellence and the contribution women in engineering make to the community. This award seeks to identify, recognise and reward companies that strive towards national engineering excellence in encouraging gender diversity."""@en ;
-            skos:prefLabel "Most Outstanding Company in Gender Diversity"@en ;
-            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            skos:broader award:tech-society .
+            skos:broader award:special-interest .
 
     award:national-committee a skos:Concept ; 
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
@@ -744,54 +668,12 @@ award:recognition a skos:Concept ;
             skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
             skos:broader award:national-committee .         
 
-        award:john-burton-cumec-trophy a skos:Concept ; 
-            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            dcterms:source "https://aeea.engineersaustralia.org.au/national-committee-on-water-engineering-ncwe/"^^xsd:anyURI ;
-            skos:definition """The National Committee on Water Engineering (NCWE) presents the John Burton Cumec Trophy to the winner of the Hydrological Games at each Hydrology and Water Resources Symposium."""@en ;
-            skos:prefLabel "John Burton Cumec Trophy"@en ;
-            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            skos:broader award:national-committee .   
-
-        award:gn-alexander-medal a skos:Concept ; 
-            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/content-files/2016-12/GN_Alexander_Bio-ed.pdf"^^xsd:anyURI ;
-            skos:definition """The GN Alexander Medal for Hydrology and Water Resources was created in 1987 by the National Committee on Hydrology & Water Resources (subsequently the National Committee on Water Engineering) of the Institution of Engineers, Australia in recognition of Geoff Alexander's contribution to Australian hydrology.
-            
-            The award is presented to the authors of the best paper in hydrology and/or water resources published in an Institution publication at each Hydrology and Water Resources Symposium."""@en ;
-            skos:prefLabel "GN Alexander Medal"@en ;
-            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            skos:broader award:national-committee .
-
-        award:henderson-oration a skos:Concept ; 
-            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            dcterms:source "https://www.globalwaterinstitute.unsw.edu.au/all-events/13th-hydraulics-in-water-engineering-conference"^^xsd:anyURI ;
-            skos:definition """The Henderson Oration is an invitational keynote speech offered by The National Committee on Water Engineering (NCWE) that recognises the contribution of the science of hydraulics to the practice of hydrology and water resources engineering."""@en ;
-            skos:prefLabel "Henderson Oration"@en ;
-            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            skos:broader award:national-committee .
-
         award:jd-lawson-scholarship a skos:Concept ; 
             rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
             dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2018-11/JD%20Lawson%20Scholarship%202019.pdf"^^xsd:anyURI ;
             skos:definition """The JD Lawson Scholarship acknowledges and promotes a Professional Engineer who is making an outstanding contribution in hydro-environmental engineering to his/her profession and professional community. It is named after Emeritus Professor Jack Dempster Lawson in recognition of his outstanding contribution to the fields of hydraulic and water resources engineering. After working briefly with the Commonwealth Department of Works and for two years as a Research Hydraulic Engineer with the Snowy Mountains Hydro-electric Authority he joined the University of Melbourne as a Senior Lecturer then Reader in 1954. In 1970 he was appointed Professor of Civil Engineering, a position he held until his retirement in 1989. At the time of his death in 1991 he was the world President of the International Association for HydroEnvironment Engineering and Research (IAHR)."""@en ;
-            skos:altLabel "Jack Lawson Scholarship"@En ;
+            skos:altLabel "Jack Lawson Scholarship"@en ;
             skos:prefLabel "JD Lawson scholarship"@en ;
-            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            skos:broader award:national-committee .
-
-        award:munro-oration a skos:Concept ; 
-            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            dcterms:source "https://hwrs.com.au/program/speakers"^^xsd:anyURI ;
-            skos:definition """The Munro Oration is an invitational keynote speech offered by The National Committee on Water Engineering (NCWE) at the Hydrology and Water Resources Symposium."""@en ;
-            skos:prefLabel "Munro Oration"@en ;
-            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            skos:broader award:national-committee .
-
-        award:ncwe-hall-of-fame a skos:Concept ; 
-            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
-            dcterms:source "https://aeea.engineersaustralia.org.au/national-committee-on-water-engineering-ncwe/"^^xsd:anyURI ;
-            skos:definition """The National Committee on Water Engineering (NCWE) Hall of Fame honours outstanding lifetime contribution to the science of hydraulics and to the practice of hydrology and water resources engineering."""@en ;
-            skos:prefLabel "NCWE Hall of Fame"@en ;
             skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
             skos:broader award:national-committee .
 
@@ -813,14 +695,10 @@ award:tertiary a skos:Concept ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
     skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-awards> .
         
-    award:ncwe-student-scholarships a skos:Concept ; 
+    award:eai-graduate-award a skos:Concept ; 
         rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-awards> ;
         dcterms:source "https://aeea.engineersaustralia.org.au/tertiary-awards/"^^xsd:anyURI ;
         skos:definition """An Engineers Australia Institution Graduate Award is awarded to a graduating student engineer from any engineering discipline from each Australian tertiary institution. Each institution is invited to select this award recipient. For institutions with engineering programs at more than one level, an award can be presented at each engineering occupation level (e.g. professional engineering level - BE(Hons) or ME where engineering is a second degree, engineering technologist - BTech, associate engineer - AdvDip or Associate Degree). These awards will be decided by each tertiary institution and presented in conjunction with the local Engineers Australia office."""@en ;
         skos:prefLabel "Engineers Australia Institution Graduate Award"@en ;
         skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-awards> ;
         skos:broader award:tertiary .
-
-#COLLECTIONS
-
-#awards:current-awards

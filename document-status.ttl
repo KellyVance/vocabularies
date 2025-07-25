@@ -1,0 +1,155 @@
+PREFIX docsst: <https://linked.data.gov.au/def/document-status/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX earl: <https://ref.engineersaustralia.org.au/def/ea-activity-roles/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+<https://linked.data.gov.au/def/document-status> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2024-01-12"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:modified "2024-01-12"^^xsd:date ;
+    dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    dcterms:references <https://theengineersaustralia.sharepoint.com/:b:/s/DAI-Hub/EXV44Tm6CFFOr8pLnNFuzgEB-DZ1e4IvwOjhlgJVLiMLiw?e=4YSx2K> ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: Information Manager"
+                ]
+        ] ;
+    skos:hasTopConcept
+        docsst:planned,
+        docst:never-started,
+        docsst:draft,
+        docsst:suspended,
+        docsst:abandoned,
+        docsst:submitted,
+        docsst:final,
+        docsst:archived ;                                    
+    skos:definition "The stage in the lifecycle of a document."@en ;
+    skos:prefLabel "Document Status"@en .
+
+docsst:planned a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/document-status>;
+    skos:inScheme <https://linked.data.gov.au/def/document-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/document-status> ;
+	skos:definition """A document that is required and intention to create is agreed, but prior to authorship. A resource in a planning phase before development or implementation."""@en;
+    skos:prefLabel "Planned"@en .
+
+docst:never-started skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/document-status>;
+    skos:inScheme <https://linked.data.gov.au/def/document-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/document-status> ;
+    skos:definition """A document that was planned but was never commenced or assigned prior to being abandoned."""@en ;
+    skos:prefLabel "Never Started"@en .
+
+docsst:draft a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/document-status>;
+    skos:inScheme <https://linked.data.gov.au/def/document-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/document-status> ;
+	skos:definition """A preliminary version of a document during active authoring or editing."""@en ;
+    skos:prefLabel "Draft"@en .
+
+docsst:suspended a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/document-status>;
+    skos:inScheme <https://linked.data.gov.au/def/document-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/document-status> ;
+	skos:definition """A preliminary version of a document that is not currently progressing in creation or editing. A resource that is partially drafted but further work is on hold. Suspended requires an intent to restart document progression."""@en;
+    skos:altLabel "On Hold"@en ;
+    skos:prefLabel "Suspended"@en .
+
+docsst:abandoned a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/document-status>;
+    skos:inScheme <https://linked.data.gov.au/def/document-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/document-status> ;
+	skos:definition """A preliminary version of a document that has been abandoned and will have no further progress made to complete. Abandonment may be due to a change in requirements or resourcing. Abandoned requires that there is no intent to restart document progression."""@en;
+    skos:altLabel "Terminated"@en,
+        "Cancelled"@en ;
+    skos:prefLabel "Abandoned"@en .
+
+docsst:submitted a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/document-status>;
+    skos:inScheme <https://linked.data.gov.au/def/document-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/document-status> ;
+	skos:definition """A document that considered complete by the author and editors and has been sent to reviwers, authorisers, and/or approvers for review and approval of the resource. 
+    
+    A submitted document may return to a draft state if edits are required, progress to an approved/final state if reviewers endorse the document, or be rejected if reviewers deem the document as unnecessary or irreparably flawed."""@en;
+    skos:altLabel "For Review"@en,
+        "Under Review"@en,
+        "In Review"@en ,
+        "Pending Approval"@en ;
+    skos:prefLabel "Submitted"@en .
+
+docsst:approved a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/document-status>;
+    skos:inScheme <https://linked.data.gov.au/def/document-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/document-status> ;
+	skos:definition """A document that has been approved by its reviewers, approvers and/or authorisers. A document considered to be in its final state of content and structure.
+    
+    Documents may be used in a final state for internal purposes without requiring publication."""@en;
+    skos:altLabel "Final"@en,
+        "Endorsed"@en ;
+    skos:prefLabel "Approved"@en .
+
+    docsst:published a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/document-status>;
+        skos:inScheme <https://linked.data.gov.au/def/document-status> ;
+        skos:broader docsst:final ;
+        skos:definition """A document that has been approved by its reviewers, approvers and/or authorisers, is considered to be in its final state of content and structure and has been published to an accessible resource library or catalogue for consumption outside the group, team, or organisation that created it."""@en;
+        skos:altLabel "Distributed"@en ;
+        skos:prefLabel "Published"@en .
+
+docsst:archived a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/document-status>;
+    skos:inScheme <https://linked.data.gov.au/def/document-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/document-status> ;
+	skos:definition """A document that has been completed by the author and editors but is no longer current."""@en;
+    skos:prefLabel "Archived"@en .
+
+    docsst:rejected a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/document-status>;
+        skos:inScheme <https://linked.data.gov.au/def/document-status> ;
+        skos:broader docsst:archived ;
+        skos:definition """A document that has been completed but deemed as unnecessary or irreparably flawed by its reviewers and approvers during the submitted stage. Rejected precludes any further work occuring on the document."""@en ;
+        skos:altLabel "Declined"@en ;
+        skos:prefLabel "Rejected"@en .
+
+    docsst:superseded a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/document-status>;
+        skos:inScheme <https://linked.data.gov.au/def/document-status> ;
+        skos:broader docsst:archived ;
+        skos:definition """A document that was once active and in a final or published state but has subsequently been replaced by a newer version of that document or by a new document encompassing its content or intent."""@en;
+        skos:altLabel "Replaced"@en ;
+        skos:prefLabel "Superseded"@en .
+
+    docsst:obsolete a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/document-status>;
+        skos:inScheme <https://linked.data.gov.au/def/document-status> ;
+        skos:broader docsst:archived ;
+        skos:definition """A document that was once active and in a final or published state but has subsequently been retired or made obsolete because the content or intent is no longer relevant, applicable, or necessary."""@en;
+        skos:altLabel "Retired"@en ;
+        skos:prefLabel "Obsolete"@en .

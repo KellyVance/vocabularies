@@ -1,32 +1,32 @@
-@prefix idi: <https://linked.data.gov.au/def/identifying-information/> .
-@prefix cs: <https://linked.data.gov.au/def/identifying-information> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sdo: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX idi: <https://linked.data.gov.au/def/identifying-information/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://linked.data.gov.au/def/identifying-information>
-		a owl:Ontology ,
+<https://linked.data.gov.au/def/identifying-information> a owl:Ontology ,
 		skos:ConceptScheme ;
 	dcterms:created "2023-06-14"^^xsd:date ;
 	dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
-	dcterms:modified "2023-06-14"^^xsd:date ;
+	dcterms:modified "2024-03-01"^^xsd:date ;
 	dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
 	dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
 	dcterms:provenance "Created by Engineers Australia";
-	skos:definition "A categorisation of Identifiable Information and its ability to identify an individual or organisation. Most commonly applied to Personally Identifiable Information."@en ;
+	skos:definition "A categorisation of Identifiable Information and its ability to identify an individual or organisation. Most commonly applied to Personally Identifiable Information. Most privacy laws begin with the fundamental concept of identifiability; generally, legal obligations pertain only to data that relates to a reasonably identifiable individual. Reasonably identifiable applies where an individual can be directly identified or identified through combination of indirect informaton through profiling or cross-referencing."@en ;
 	skos:hasTopConcept
 		idi:direct,
 		idi:indirect,
 		idi:anonymous ;
-	skos:altLabel "Agent Identifiability"@en ;
-	skos:prefLabel "Identifying Information"@en .
+	skos:altLabel "Personally Identifiable Information"@en
+		"PII"@en,
+		"Identifying Information"@en ;
+	skos:prefLabel "Information Identity Potential"@en .
 
 <https://linked.data.gov.au/org/engineersaustralia>
 	a sdo:Organization ;
@@ -42,32 +42,38 @@
 	sdo:identifier <https://orcid.org/0000-0003-2309-7004> .
 	
 idi:direct a skos:Concept ;
-	rdfs:isDefinedBy cs: ;
 	dcterms:source "https://www.cloudflare.com/en-gb/learning/privacy/what-is-pii/"^^xsd:anyURI ;
-	skos:definition """Data or information that directly identifies an individual or organisation. Data that is unique to an entity or may be unique within a given population. This includes full name, tax file number, a physical address, student or employee identification number, or a passport or drivers licence number. It may also include specific biometric data such as thumbprints and facial recognition data. For an organisation this may include a registered business or company number such as an ABN, ACN, or public trading code."""@en ;
-	skos:altLabel "Direct Identifier"@en ;
-	skos:prefLabel "Direct"@en ;
-	skos:inScheme cs: ;
-	skos:topConceptOf cs: .
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/identifying-information> ;
+	skos:inScheme <https://linked.data.gov.au/def/identifying-information> ;
+	skos:topConceptOf <https://linked.data.gov.au/def/identifying-information> ;
+	skos:definition """A variable that can be used to uniquely identify an individual, either alone or together with other direct identifiers, and often in combination with other readily available information. 
+	
+	Data that is unique to an entity or may be unique within a given population. This includes full name, tax file number, student or employee identification number, or a passport or drivers licence number. It may also include specific biometric data such as thumbprints and facial recognition data. For an organisation this may include a registered business or company number such as an ABN, ACN, or public trading code."""@en ;
+	skos:altLabel "Direct Identifier"@en,
+		"Identified"@en ;
+	skos:prefLabel "Direct"@en .
 	
 idi:indirect a skos:Concept ;
-	rdfs:isDefinedBy cs: ;
 	dcterms:source "https://www.cloudflare.com/en-gb/learning/privacy/what-is-pii/"^^xsd:anyURI ;
-	skos:definition """Data or information that can indirectly identify an individual or organisation, particularly where combined with other instances of Identifying Information. This includes information that can be used to profile an individual or narrow a set of candidates. Examples include age, gender and sexuality, occupation and workplace, IP address, date of birth, and uncommon ethnicity or religion."""@en ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/identifying-information> ;
+	skos:inScheme <https://linked.data.gov.au/def/identifying-information> ;
+	skos:topConceptOf <https://linked.data.gov.au/def/identifying-information> ;
+	skos:definition """A variable that can be used to identify an individual with a high probability, either alone or together with other indirect identifiers, and in combination with other supplementary information. 
+	
+	Data that can indirectly identify an individual or organisation, particularly where combined with other instances of Identifying Information. This includes information that can be used to profile an individual or narrow a set of candidates. Examples include age, gender and sexuality, occupation and workplace, IP address, date of birth, and uncommon ethnicity or religion. Almost any variable can be an indirect identifier, depending on the supplementary information available."""@en ;
     skos:altLabel "Quasi-Identifier"@en,
         "Linked Information"@en,
         "Linkable Information"@en,
-		"Direct Identifier"@en ;
-	skos:prefLabel "Indirect"@en ;
-	skos:inScheme cs: ;
-	skos:topConceptOf cs: .
+		"Inirect Identifier"@en,		
+        "Deidentified"@en ;
+	skos:prefLabel "Indirect"@en .
 	
 idi:anonymous a skos:Concept ;
-	rdfs:isDefinedBy cs: ;
 	dcterms:source "https://www.cloudflare.com/en-gb/learning/privacy/what-is-pii/"^^xsd:anyURI ;
-	skos:definition """Data or information that can not reasonably identify an individual or organisation within a given population. This includes information such as standard medical records, common ethnicity or religion, political associations, or common skills and interests."""@en ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/identifying-information> ;
+	skos:inScheme <https://linked.data.gov.au/def/identifying-information> ;
+	skos:topConceptOf <https://linked.data.gov.au/def/identifying-information> ;
+	skos:definition """Data or information that can not reasonably identify an individual or organisation within a given population. This includes information such as standard medical data, common ethnicity or religion, political associations, or common skills and interests."""@en ;
     skos:altLabel "Non-PII"@en,
-        "Deidentified"@en ;
-	skos:prefLabel "Anonymous"@en ;
-	skos:inScheme cs: ;
-	skos:topConceptOf cs: .
+		"Anonymised"@en ;
+	skos:prefLabel "Anonymous"@en .

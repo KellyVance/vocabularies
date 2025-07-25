@@ -1,41 +1,54 @@
-@prefix aqf: <https://linked.data.gov.au/def/australian-qualifications-framework/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sdo: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX aqf: <https://linked.data.gov.au/def/australian-qualifications-framework/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://linked.data.gov.au/def/australian-qualifications-framework> a owl:Ontology ,
         skos:ConceptScheme ;
     dcterms:created "2023-03-01"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
-    dcterms:modified "2023-03-01"^^xsd:date ;
-    dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
+    dcterms:modified "2024-02-16"^^xsd:date ;
     dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
-    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;                                
-    skos:definition "Australian Qualifications Framework Issued by the National Staff Development Committee Standards and Curriculum Council of ANTA, the AQF provides a comprehensive, nationally consistent yet flexible Framework for all qualifications in post-compulsory education in Australia. The Framework was introduced Australia wide on 1 January 1995."@en ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: Professional Standards"
+                ]
+        ] ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
     skos:hasTopConcept
         aqf:ssce,
-
+        aqf:cert-i,
+        aqf:cert-ii,
+        aqf:cert-iii,
+        aqf:cert-iv,
+        aqf:dip,
+        aqf:ad-dip,
+        aqf:associate,
+        aqf:bachelor,
+        aqf:bachelor-honours,
+        aqf:grad-cert,
+        aqf:grad-dip,
+        aqf:master-research,
+        aqf:master-coursework,
+        aqf:master-extended,
+        aqf:doctoral ;
+    skos:definition "Australian Qualifications Framework Issued by the National Staff Development Committee Standards and Curriculum Council of ANTA, the AQF provides a comprehensive, nationally consistent yet flexible Framework for all qualifications in post-compulsory education in Australia. The Framework was introduced Australia wide on 1 January 1995."@en ;
     skos:prefLabel "Australian Qualifications Framework"@en .
     
 <https://linked.data.gov.au/org/engineersaustralia>
     a sdo:Organization ;
     sdo:name "Engineers Australia" ;
     sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
-
-<https://orcid.org/0000-0003-2309-7004> a owl:NamedIndividual,
-    sdo:Person ;
-    sdo:affiliation [ a sdo:Organization ;
-        sdo:name "Engineers Australia" ;
-        sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI ] ;
-    sdo:name "Vance Kelly" ;
-    sdo:identifier <https://orcid.org/0000-0003-2309-7004> .
 
 aqf:ssce a skos:Concept ;
     dcterms:source "https://www.aqf.edu.au/"^^xsd:anyURI ;
@@ -223,7 +236,7 @@ aqf:bachelor-honours a skos:Concept ;
         - to adapt knowledge and skills in diverse contexts
         - with responsibility and accountability for own learning and practice and in collaboration with others within broad parameters
         - to plan and execute project work and/or a piece of research and scholarship with some independence 
-    The volume of learning of a  Bachelor Honours Degree is typically 1 year following a Bachelor Degree. A Bachelor Honours Degree may also be embedded in a Bachelor Degree, typically as an additional year."""@en ;
+    The volume of learning of a Bachelor Honours Degree is typically 1 year following a Bachelor Degree. A Bachelor Honours Degree may also be embedded in a Bachelor Degree, typically as an additional year."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/australian-qualifications-framework> ;
     skos:prefLabel "Bachelor Honours Degree"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-qualifications-framework> .

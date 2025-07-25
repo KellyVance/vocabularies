@@ -1,0 +1,106 @@
+PREFIX eaof: <https://ref.engineersaustralia.org.au/def/ea-offerings/>
+PREFIX eaec: <https://ref.engineersaustralia.org.au/def/ea-engineering-credentials/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://ref.engineersaustralia.org.au/def/ea-offerings> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2024-10-10"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:modified "2024-10-10"^^xsd:date ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: Finance"
+                ]
+        ] ;
+    skos:hasTopConcept
+        eaof ;
+    skos:definition """Offerings are products and services designed to deliver value to customers. Either to fulfill their needs, satisfy their wants, or both. Offerings are anything that delivers value to known stakeholders, users, or customers. This may be a service, a physical product, or an abstract product such as a qualification or title."""@en ;
+    skos:note """In some cases offerings may overlap or be part of non-exclusive groups. An individual course may be delivered in isolation as a single offering and may also be a component of a collection or curriculum. For example, a professional development session may be consumed as a single product or as part of a graduate program or trailored training."""@en ;
+    skos:prefLabel "Engineers Australia Offering Types"@en .
+
+accreditation
+analysis-statistics
+assessment
+awards
+education-training
+events
+insurance
+membership
+networking
+publications
+registration
+standards
+
+Products
+    Products-intangible
+        awards-excellence-awards
+        awards-honours
+
+        insurance-enginsure
+
+        membership-ea
+        membership-tech-society
+
+        registration-chartered
+        registration-engexec
+        registration-ner
+        registration-vic-rpeng
+        registration-qld-rpeq
+        registration-int-apec 
+        registration-int-ipea 
+        registration-int-aiet 
+        registration-int-ieta
+        registration-sea-freight-container
+        registration-strata-inspector
+        registration-vertical-transport
+
+    Products-tangible
+        publications-create
+        publications-ea-news
+        publications-division-updates
+        publications-docs-resources
+
+Services
+    assessment-msa 
+    assessment-get
+    
+    education-ea-on-demand
+    education-engineering-skills-framework
+    education-microcredential
+    education-registered-training
+    education-tailored-training
+    education-pyp
+    education-grad
+    education-virtual-work-experience
+    
+    networking-eaxchange
+    networking-cop 
+    networking-mentor-match
+
+eaof:products a skos:Collection ;
+	skos:prefLabel "Engineers Australia Products"@en ;
+	dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+	skos:definition """A product refers to an item that you sell to customers, such as a tangible physical product or software, or an intangible title, status, or registration such authorised recognition as a qualified professional."""@en ;
+ 	skos:member 
+	.
+
+eaof:services a skos:Collection ;
+	skos:prefLabel "Engineers Australia Services"@en ;
+	dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+	skos:definition """A service involves providing intangible services or expertise to customers, such as consulting, maintenance, or professional services. Services are processes and activities undertaken on behalf of a customer."""@en ;
+ 	skos:member 
+	.

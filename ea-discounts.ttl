@@ -1,0 +1,280 @@
+PREFIX disc: <https://ref.engineersaustralia.org.au/def/ea-discounts/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX earl: <https://ref.engineersaustralia.org.au/def/ea-activity-roles/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://ref.engineersaustralia.org.au/def/ea-discounts> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
+    dcterms:created "2024-02-07"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:modified "2024-02-07"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/engineers-australia-membership-fees-2023-2024.pdf"^^xsd:anyURI ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: Finance"
+                ]
+        ] ;
+    skos:hasTopConcept
+        disc:advance-purchase,
+        disc:association,
+        disc:bundle,
+        disc:loyalty,
+        disc:corporate,
+        disc:discretionary,
+        disc:graduate-program,
+        disc:promotion,
+        disc:concession,
+        disc:repeat,
+        disc:retired ;
+    skos:definition """The common reasons for granting discounts to a customer.
+
+    Each Engineers Australia member is entitled to receive one discount only (Technical Society or IPWEA membership), calculated as the highest-value discount for which the member is eligible. 
+
+    The Technical Society discount does not apply when the Technical Society membership fee is less than the discount amount.
+
+    Discounts typically apply for a defined time period such as a once-off exemption for an annual fee, or a promotional event. However, some discounts may be applied in perpetuity and without an end date, such as some discretionary and loyalty discounts. Multiple discounts are logically permissible, however the terms and conditions defined by an organisation may prevent some combinations in practice."""@en ;
+    skos:note "An Ad-Hoc Exemption refers to a discount made to reduce the cost of a product or service to $0. This is distinct from permanent awards, arragngements or agreements that permanently exempt a member from fees and charges relating to a specific offering."@en ;
+        "Discounts"@en ;
+    skos:prefLabel "Engineers Australia Discounts"@en .
+
+<https://linked.data.gov.au/org/engineersaustralia>
+    a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+disc:add-on a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:definition """A discount applied to the purchase of a product or service based on the purchase of a previous related offering. For example, discounted membership based on completion of a course or program, or a specific assessment pathway."""@en ;
+    skos:altLabel "Extension"@en,
+        "Follow On"@en ;
+    skos:prefLabel "Add On"@en .
+
+    disc:graduate-program a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/membership/graduate"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:broader disc:add-on ;
+        skos:definition """A Graduate Program discount gives individuals who complete the Engineering Education Australia (EEA) graduate program one year of free membership on transition from a Student to a Graduate membership grade."""@en ;
+        skos:altLabel "Graduate Year 0"@en ;
+        skos:prefLabel "Graduate Program"@en .
+
+disc:advance-purchase a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:definition """A discount applied when an offering is purchased in advance, such as a subscription or a payment for a sequence of services."""@en ;
+    skos:prefLabel "Advance Purchase"@en .
+
+disc:association a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/engineers-australia-membership-fees-2023-2024.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:definition """A discount made available for parties who belong, or are simultaneously applying for, membership to an associated organisation."""@en ;
+    skos:altLabel "Partner Discount"@en ;
+    skos:prefLabel "Associated Organisation"@en .
+
+    disc:tech-society a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/engineers-australia-membership-fees-2023-2024.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:broader disc:association ;
+        skos:definition """Members of Engineers Australia (excluding free students) who join one or more Technical Societies are entitled to a single discount off their Engineers Australia membership fee.
+        
+        The discount is not applicable for Asset Management Council (AMCouncil) and Royal Aeronautical Society Australian Division (RaeS)."""@en ;
+        skos:prefLabel "Technical Society Discount"@en .
+     
+    disc:ipwea a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/engineers-australia-membership-fees-2023-2024.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:broader disc:association ;
+        skos:definition """Members of Engineers Australia (excluding free students) who are also a member of the Institute of Public Works Engineering Australasia (IPWEA) are entitled to a single discount off their Engineers Australia membership fee."""@en ;
+        skos:altLabel "Institute of Public Works Engineering Australasia Discount"@en,
+            "IPWEA Member Discount"@en ;
+        skos:prefLabel "IPWEA Discount"@en .
+
+disc:bundle a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:definition """A discount applied to a collection of related goods or services when purchased together."""@en ;
+    skos:prefLabel "Bundle"@en .
+
+disc:concession a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/engineers-australia-membership-fees-2023-2024.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:definition """A discount offered to a member who has limited capacity to pay full membership fees due to temporary severe financial difficulty or is unable to work by reason of unemployment, disability, ill health, pregnancy, parental obligation, or participation in full-time postgraduate study directly related to their engineering competencies."""@en ;
+    skos:altLabel "Reduced Capacity"@en ;
+    skos:prefLabel "Concession"@en .
+
+    disc:unemployment a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/engineers-australia-membership-fees-2023-2024.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:broader disc:concession ;
+        skos:definition """A discount offered to a member who has limited capacity to pay full membership fees due to unemployment."""@en ;
+        skos:prefLabel "Unemployment"@en .
+
+    disc:disability a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/engineers-australia-membership-fees-2023-2024.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:broader disc:concession ;
+        skos:definition """A discount offered to a member who has limited capacity to pay full membership fees due to inability to work by reason of disability."""@en ;
+        skos:prefLabel "Disability"@en .
+
+    disc:ill-health a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/engineers-australia-membership-fees-2023-2024.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:broader disc:concession ;
+        skos:definition """A discount offered to a member who has limited capacity to pay full membership fees due to inability to work by reason of ill-health."""@en ;
+        skos:altLabel "Illness"@en,
+            "Injury"@en,
+            "Sickness"@en ;
+        skos:prefLabel "Ill Health"@en .
+
+    disc:pregnancy a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/engineers-australia-membership-fees-2023-2024.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:broader disc:concession ;
+        skos:definition """A discount offered to a member who has limited capacity to pay full membership fees due to inability to work by reason of pregnancy."""@en ;
+        skos:prefLabel "Pregnancy"@en .
+
+    disc:parental-obligations a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/engineers-australia-membership-fees-2023-2024.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:broader disc:concession ;
+        skos:definition """A discount offered to a member who has limited capacity to pay full membership fees due to inability to work by reason of parental obligations."""@en ;
+        skos:altLabel "Maternity Leave"@en,
+            "Paternity Leave"@en,
+            "Parental Commitments"@en ;
+        skos:prefLabel "Parental Obligations"@en .
+
+    disc:study a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/engineers-australia-membership-fees-2023-2024.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:broader disc:concession ;
+        skos:definition """A discount offered to a member who has limited capacity to pay full membership fees due to inability to work by reason of participation in full-time postgraduate study directly related to their engineering competencies."""@en ;
+        skos:prefLabel "Study"@en .
+
+    disc:financial-difficulty a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/engineers-australia-membership-fees-2023-2024.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:broader disc:concession ;
+        skos:definition """A discount offered to a member who has limited capacity to pay full membership fees due to inability to work by reason of temporary sever financial difficulty."""@en ;
+        skos:altLabel "Financial Hardship"@en ;
+        skos:prefLabel "Financial Difficulty"@en .
+
+disc:corporate a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:definition """A discount applied as part of a contractual arrangement. Typically through an ongoing contract or sponsorship of mulitple individuals. Corporate discounts will commonly be applied in conjunction with a sponsorship record. These discounts typically apply where multiple instances of the same product are provisioned."""@en ;
+    skos:altLabel "Sponsorship"@en,
+        "Contract"@en,
+        "Bulk Pricing"@en ;
+    skos:prefLabel "Corporate Discount"@en .
+
+disc:discretionary a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:definition """A discount applied at the discretion of an authorised person for exceptional circumstances that are not otherwise listed. For example, once-off discounts to executive public servants and representatives, free services to refugees, or responses to natural disasters or other hardship."""@en ;
+    skos:prefLabel "Discretionary"@en .
+
+    disc:life-member a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:broader disc:discretionary ;
+        skos:definition """An invitational and discretionary discount type for Engineers Australia members who qualify for a complimentary lifetime membership based on length of continual membership or other contributions to the engineering profession."""@en ;
+        skos:prefLabel "Life Member"@en .
+
+    disc:pro-gold a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:broader disc:discretionary ;
+        skos:definition """An invitational and discretionary discount type for Engineers Australia members who qualify for a complimentary membership at the discretion of Engineers Australia."""@en ;
+        skos:prefLabel "Professional Gold"@en .
+
+disc:loyalty a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:definition """A discount applied in recognition of continual service or membership to an organisation."""@en ;
+    skos:altLabel "Continuity"@en ;
+    skos:prefLabel "Loyalty"@en .
+
+    disc:40-year a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        owl:deprecated true ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+        skos:broader disc:loyalty ;
+        skos:definition """A legacy discount type for Engineers Australia members who qualify for a complimentary membership after 40-years continuous membership."""@en ;
+        skos:prefLabel "40-Year Free Member"@en .
+
+disc:promotion a skos:Concept ;
+    dcterms:source "https://www.merriam-webster.com/dictionary/promotion"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:definition """A temporary discount or offer applied to increase sales of a product or service. The furtherance of the acceptance and sale of merchandise through advertising, publicity, or discounting."""@en ;
+    skos:altLabel "Promo"@en,
+        "Sale"@en ;
+    skos:prefLabel "Promotion"@en .
+
+disc:pro-rata a skos:Concept ;
+    dcterms:source "https://www.investopedia.com/terms/p/pro-rata.asp"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:definition """The pro rata discount calculation involves determining the proportionate allocation of a fixed amount. For time-based products and services this is the time period paid for as a proportion of the standard time quantity, such as; months of an annual membership or days of a monthly subscription."""@en ;
+    skos:altLabel "Pro-Rata"@en,
+        "Prorated"@en ;""
+    skos:prefLabel "Pro Rata"@en .
+
+disc:repeat a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/engineers-australia-membership-fees-2023-2024.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:definition """A discount applied to the purchase of an offering that a customer has previously purchased. For example, a replacement for a broken item or a discounted rate for a reassessment after a failed attempt."""@en ;
+    skos:altLabel "Replacement"@en ;
+    skos:prefLabel "Repeat"@en .
+
+disc:retired a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/engineers-australia-membership-fees-2023-2024.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-discounts> ;
+    skos:definition """A discount available to any member of Engineers Australia who is over 55, has been a financial member continuously for five years, and has retired from paid, full-time work."""@en ;
+    skos:prefLabel "Retired"@en .

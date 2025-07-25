@@ -1,0 +1,95 @@
+PREFIX itev: <https://ref.engineersaustralia.org.au/def/ict-event/>
+PREFIX earl: <https://ref.engineersaustralia.org.au/def/ea-activity-roles/>
+PREFIX eaj: <https://ref.engineersaustralia.org.au/def/ea-jargon/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://ref.engineersaustralia.org.au/def/ict-event> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    dcterms:created "2023-02-20"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:modified "2024-02-20"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:rightsHolder "Engineers Australia: ICT" ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: ICT"@en
+                ]
+        ] ;
+        skos:related eaj:ict-change ;
+      skos:hasTopConcept 
+        itev:ict-incident,
+        itev:ict-request,
+        itev:ict-enhancement,
+        itev:ict-maintenance ;                
+      skos:definition "An event that requires the intervention and involvement of the ICT Team."@en ;
+      skos:prefLabel "ICT Events"@en .
+
+<https://linked.data.gov.au/org/engineersaustralia>
+    a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+itev:ict-incident a skos:Concept ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ict-event> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ict-event> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ict-event> ;
+    dcterms:source "https://wiki.en.it-processmaps.com/index.php/ITIL_Glossary/_ITIL_Terms_I#Incident"^^xsd:anyURI ;
+    skos:definition """An ICT Incident refers to an unplanned interruption or reduction in quality of an IT service (a Service Interruption). These events stop or disrupt normal operations and require prompt attention and resolution to minimize the impact on business processes.
+    
+    ICT Incidents can include hardware failures, software glitches, unplanned outages, or any unexpected event that negatively affects the delivery of IT services."""@en ;
+    skos:altLabel "Service Interruption"@en ;
+    skos:prefLabel """ICT Incident"""@en .
+
+itev:ict-request a skos:Concept ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ict-event> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ict-event> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ict-event> ;
+    dcterms:source "https://wiki.en.it-processmaps.com/index.php/ITIL_Glossary/_ITIL_Terms_R#Request_for_Service"^^xsd:anyURI ;
+    rdfs:seeAlso eaj:ict-rfc ;
+    skos:definition """A formal request from a user for something to be provided - for example, a request for information or advice; to reset a password; or to install a workstation for a new user. An ICT Request is a user-initiated process seeking IT support, services, or resources to address immediate operational needs. It involves seeking assistance for troubleshooting, access to specific applications, or a minor update to the existing functionality to ensure the smooth functioning of daily activities.
+
+    ICT Enhancement differs from an ICT Request. An ICT Enhancement is more strategic and focused on service improvement, while an ICT Request is generally more immediate and user centric. ICT Requests typically pertain to a user-initiated request for IT support and are commonly related to day-to-day operational needs."""@en ;
+    skos:altLabel "Request for Service"@en,
+        "Service Request"@en ;
+    skos:prefLabel """ICT Request"""@en .
+
+itev:ict-enhancement a skos:Concept ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ict-event> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ict-event> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ict-event> ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    skos:definition """An ICT enhancment is an event and process, distinct from regular service operations, that focuses on enhacing service quality. It involves refining existing platforms, thier expansion through modular additions, or introducing new platforms and apps to deliver innovative functionality.
+    
+    ICT Enhancements contribute to the ongoing improvement of services by incorporating new functionality and adapting to evolving business needs."""@en ;
+    skos:prefLabel """ICT Enhancement"""@en .
+
+itev:ict-maintenance a skos:Concept ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ict-event> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ict-event> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ict-event> ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    skos:definition """ICT Maintenance is a planned event or process, as part of regular service operations, that focuses on maintenance of existing platforms. It involves planned version updates to existing platforms, periodic testing, or proactive implementation of patches and bug fixes prior to experiencing impacts."""@en ;
+    skos:prefLabel """ICT Maintenance"""@en .
+
+itev:service a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/resources/professional-standards-library"^^xsd:anyURI ;
+	skos:prefLabel "ICT Events - User Initiated Services"@en ;
+	skos:definition """Services initiated by an end user request."""@en ;
+    skos:member
+        itev:ict-request,
+        itev:ict-incident .

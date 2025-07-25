@@ -1,0 +1,86 @@
+PREFIX prnn: <https://linked.data.gov.au/def/pronouns/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/def/pronouns> a owl:Ontology ,
+		skos:ConceptScheme ;
+	dcterms:created "2025-04-08"^^xsd:date ;
+	dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+	dcterms:modified "2025-04-08"^^xsd:date ;
+	dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:provenance """Primarily derived from the pronoun list within the LinkedIn profile functionality, with additional information sourced the Engineers Australia Diversity Inclusion and Belonging (DIB) Council."""^^xsd:string ;
+	dcterms:references 
+		<https://www.stylemanual.gov.au/grammar-punctuation-and-conventions/types-words/pronouns> ;prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label """Engineers Australia: Diversity Inclusion and Belonging (DIB) Council"""@en ;
+                ]
+        ] ;
+	skos:definition """Pronouns stand in for nouns. They stand in for groups of words that function as nouns (noun phrases and noun clauses). They can also act like determiners.
+	
+	There are 6 main types of pronouns:
+	- Personal pronouns replace the names of people or things. They include 'I', 'me', 'we', 'us', 'it', 'they', 'them', 'she', 'her', 'he' and 'him'.
+	- Reflexive pronouns reflect the action of the verb back to the subject. They include 'myself', 'ourselves', 'itself', 'themself', 'themselves', 'herself' and 'himself'.
+	- Relative pronouns refer to nouns that are already known from the context. They include 'who', 'whom', 'whose', 'which' and 'that'.
+	- Interrogative pronouns ask questions. They include 'what', 'which', 'who', 'whom' and 'whose'.
+	- Demonstrative pronouns specify which noun you are referring to. They include 'this', 'that', 'these' and 'those'.
+	- Indefinite pronouns don't specify quantity or number. They include 'any', 'each', 'several' and 'some'."""@en ;
+	skos:scopeNote """This vocabulary describes personal pronouns."""@en ;
+	skos:hasTopConcept
+		prnn:1,
+		prnn:2,
+		prnn:3,
+		prnn:4,
+		prnn:5;
+	skos:altLabel "Preferred Pronouns"@en,
+		"Personal Pronouns"@en,
+		"Preferred Personal Pronouns"@en; 
+	skos:prefLabel "Pronouns"@en .
+
+prnn:1 a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/about-us/diversity-and-inclusion"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/pronouns> ;
+    skos:inScheme <https://linked.data.gov.au/def/pronouns> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/pronouns> ;
+    skos:definition """He/Him are most commonly used to refer to persons who describe their gender as man or male. As pronouns are personally chosen, this is only a generalisation and is not definitive in all circumstances."""@en ;
+	skos:prefLabel "He/Him"@en .
+
+prnn:2 a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/about-us/diversity-and-inclusion"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/pronouns> ;
+    skos:inScheme <https://linked.data.gov.au/def/pronouns> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/pronouns> ;
+    skos:definition """She/Her are most commonly used to refer to persons who describe their gender as woman or female. As pronouns are personally chosen, this is only a generalisation and is not definitive in all circumstances."""@en ;
+	skos:prefLabel "She/Her"@en .
+
+prnn:3 a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/about-us/diversity-and-inclusion"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/pronouns> ;
+    skos:inScheme <https://linked.data.gov.au/def/pronouns> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/pronouns> ;
+    skos:definition """They/Them are a gender neutral way to refer to persons who describe their gender as non-binary or whose gender identity is unknown. As pronouns are personally chosen, this is only a generalisation and is not definitive in all circumstances."""@en ;
+	skos:prefLabel "They/Them"@en .
+
+prnn:4 a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/about-us/diversity-and-inclusion"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/pronouns> ;
+    skos:inScheme <https://linked.data.gov.au/def/pronouns> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/pronouns> ;
+    skos:definition """Custom is a placeholder value that refers to persons who have personal pronouns outside binary gendered pronouns or non-binary and gender neutral pronouns. Where Custom is selected, the individual's pronouns should be captured separately through direct user input."""@en ;
+	skos:prefLabel "Custom"@en .
+
+prnn:5 a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/about-us/diversity-and-inclusion"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/pronouns> ;
+    skos:inScheme <https://linked.data.gov.au/def/pronouns> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/pronouns> ;
+    skos:definition """Persons who preferred not to respond on how they describe their pronouns."""@en ;
+	skos:prefLabel "Prefer not to answer"@en .

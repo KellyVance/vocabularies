@@ -1,0 +1,629 @@
+PREFIX prty: <https://ref.engineersaustralia.org.au/def/ea-party/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX orgtyp: <http://linked.data.gov.au/def/organisation-type/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+<https://ref.engineersaustralia.org.au/def/ea-party> a owl:Ontology,
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    dcterms:created "2023-03-01"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:modified "2024-06-12"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    skos:hasTopConcept
+        prty:person,
+        prty:organisation ;
+    skos:definition """The types of agents who can interact with Engineers Australia under relationships and roles such as customers, staff, advisors, representatives etc. People and Organisations whose actions contribute to the operation of Engineers Australia. An agent or party is an entity that performs actions and has agency. A Thing that does Stuff. Party types are defined by their commerciality, their legal obligations, their operating model, and/or their composition."""@en ;
+    skos:scopeNote """Agents and Parties describe the type of party, whereas party relationships describe the nature of interaction between two parties and activity roles describe the actions performed by an agent. For example a University or Tertiary institution is a type of organisation but it may be related to Engineers Australia as a customer, and play a variety of roles in activities such as an event host, advisor, publisher, contributor, etc. Each party acts as a single entity within a role or relationship, i.e. an organisation acts as a single entity, despite being comprised of many individuals. A collection of agents who act independently but are related by a common attribute or characteristic are a cohort rather than a type of organisation. Some combinations of agent type, relationship, and function may be intrinsically linked or have dependencies. e.g. a member of EA is by definition an individual who has purchased a membership product to establish their member and customer relationships and has been through the eligibility assessment process as an applicant."""@en;
+    skos:altLabel "Parties"@en,
+        "Agents"@en,
+        "Engineers Australia Agents"@en ;
+    skos:prefLabel "Engineers Australia Party Types"@en .
+
+<https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+prty:person a skos:Concept ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-party> ;
+    skos:definition """A person is an individual human, acting in a personal or professional capacity. A natural human person."""@en ;
+    skos:scopeNote "An individual acting in a business capacity as a Sole Trader is considered an organisation that is a separate entity from the individual as a person."@en ;
+    skos:altLabel "Individual"@en,
+        "Contact"@en ;
+    skos:prefLabel "Person"@en .
+
+prty:organisation a skos:Concept ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-party> ;
+    skos:definition """An organisation is a group of people or other entities that interact together to achieve a common goal or perform an action."""@en ;
+    skos:notation "Org" ;
+    skos:altLabel "Organization"@en,
+        "Account"@en ;
+    skos:prefLabel "Organisation"@en .
+
+    prty:internal-group a skos:Concept ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+        skos:broader prty:organisation ;
+        skos:definition """An internal group is a group of people or other entities within, and intrinsically part of, an organisation that work together to achieve a specific goal or set of goals."""@en ;
+        skos:altLabel "Internal Organisation"@en ;
+        skos:prefLabel "Internal Group"@en .
+
+        prty:business-unit a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:internal-group ;
+            skos:definition """A business unit is a department, division, or other functional entity within an organization that is responsible for a specific business function or set of functions."""@en ;
+            skos:notation "BU" ;
+            skos:altLabel "Group"@en ;
+            skos:prefLabel "Business Unit"@en .
+
+            prty:division a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:business-unit ;
+                skos:definition """A Division is an Engineers Australia Office that serves the EA Members & engineering community in a specific geographical region."""@en ;
+                skos:notation "Div" ;
+                skos:altLabel "State Division"@en;
+                skos:prefLabel "Division"@en .
+
+            prty:department a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:business-unit ;
+                skos:definition """A department is a functional business unit that performs a specific function or set of functions within an organization."""@en ;
+                skos:notation "FBU" ;
+                skos:altLabel "Functional Unit"@en,
+                    "Team"@en,
+                    "Functional Business Unit"@en ;
+                skos:prefLabel "Department"@en .
+
+            prty:cost-centre a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:business-unit ;
+                skos:definition """An operating business unit used for the management and operational control of business processes that span legal entites. Cost Centres are used to accumulate and manage costs, budgets, and expenditures. Cost centres are typically related to other business units and functions where one cost centre may be related to functions across many other business units, or a single business unit may be related to multiple cost centres."""@en ;
+                skos:prefLabel "Cost Centre"@en .
+
+        prty:board a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:internal-group ;
+            skos:definition """A group of people that are elected to represent the stakeholders in an organisation."""@en ;
+            skos:altLabel "The Board"@en ;
+            skos:prefLabel "Board"@en .
+
+            prty:joint-board a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:board ;
+                skos:definition """A group of people that are elected to represent the stakeholders across the organisations within a joint venture."""@en ;
+                skos:prefLabel "Joint Board"@en .
+
+            prty:project-control-board a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://www.linkedin.com/advice/0/how-do-you-select-train-project-control-board-members"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:board ;
+                skos:definition """Project control board (PCB) is a key element of project governance that provides oversight, direction, and decision-making for complex and high-risk projects."""@en ;
+                skos:notation "PCB" ;
+                skos:prefLabel "Project Control Board"@en .
+
+        prty:committee a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:internal-group ;
+            skos:scopeNote "Committees are groups whose existence is dependent on being part of a larger group. In application, Committees and its narrower concepts should always be linked directly to the larger organisation or group to which they belong."@en ;
+            skos:definition """An advisory body to an organisation or group dedicated to a specific function or issue."""@en ;
+            skos:prefLabel "Committee"@en .
+
+            prty:board-committee a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:committee ;
+                skos:definition """An advisory body to The Board dedicated to a specific function of the organisation."""@en ;
+                skos:prefLabel "Board Committee"@en .
+
+            prty:executive-committee a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:committee ;
+                skos:definition """An advisory body that is a subset of The Board and supports its functions. Generally consisting of the CEO, senior executives or office bearers, and members elected by The Board. The executive committee may be delegated decision making powerby The Board for urgent decisions and decisions over times when a full board is unavailable or impractical such as during holiday periods."""@en ;
+                skos:prefLabel "Executive Committee"@en .
+
+            prty:subcommittee a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:committee ;
+                skos:definition """A type of committee that acts as an advisory body to a larger comittee within a dedicated subset of the committee functions. Sub-committees are established by resolution from a committee, with functions specified in the resolution and with a prescribed end date. Subcommittees may not be established as local branch of a college, special interest group or centre, national committee or technical society."""@en ;
+                skos:altLabel "Sub Committee"@en,
+                    "Subcommittee"@en ;
+                skos:prefLabel "Sub-Committee"@en .
+
+                prty:regional-group a skos:Concept ;
+                    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                    skos:broader prty:subcommittee ;
+                    skos:definition """A type of sub-committee that acts to support a specified set of functions within a geographical area."""@en ;
+                    skos:prefLabel "Regional Group"@en .
+
+        prty:branch a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:internal-group ;
+            skos:scopeNote "Branches are groups whose existence is dependent on being part of a larger group. In application, Branches should always be linked directly to the larger organisation or group to which they belong."@en ;
+            skos:definition """A branch is a typically geographically focused sub-division of a broader group. At Engineers Australia branches, refer to local subdivisions of groups that sit outside the organisational structure, such as; Centres, Special Interest Groups, Colleges, National Committee, and Technical Societies. Sub-divisions that represent geographic areas that are part of the organisational structure of Engineers Australia are known as Divisions."""@en ;
+            skos:prefLabel "Branch"@en .
+
+        prty:community-of-practice a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:internal-group ;
+            skos:definition """An informal or semi-formal internal group with a shared subject of interest. A forum for exchange of ideas, training, workshops, support, and discussion of related matters."""@en ;
+            skos:prefLabel "Community of Practice"@en .
+
+        prty:exec-leadership-team a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:internal-group ;
+            skos:notation "ELT" ;
+            skos:altLabel "ELT"@en,
+             "ET"@en,
+             "Executive Team"@en ;
+            skos:definition """Comprised of industry and functional leaders and the CEO, the Executive Team (ET) lead groups across the organisation to deliver on organisational strategy and vision. The ET are responsible for providing strategic and operational leadership. They operate as an interdependent and collaborative decision-making body."""@en ;
+            skos:prefLabel "Executive Leadership Team"@en .
+
+        prty:leadership-team a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:internal-group ;
+            skos:notation "LT" ;
+            skos:altLabel "LT"@en,
+             "Leadership Group"@en ;
+            skos:definition """Comprised of functional Heads and General Managers, the Leadership Team (LT) lead teams across the organisation to execute functions and projects in alignment with organisational strategy and vision. The LT are responsible for providing tactical and operational leadership. They operate as an interdependent and collaborative decision-making body."""@en ;
+            skos:prefLabel "Leadership Team"@en .
+
+        prty:learned-society a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:internal-group ;
+            skos:definition """A Learned Society is an association of like minded people who develop the knowledge and set the standards of its members. Learned Societies predominantly relate to a profession such as engineering, law, medicine, commerce etc. The EA Learned Society comprises four major groups: College Boards, National Committees, Technical Societies, and Special Interest Groups."""@en ;
+            skos:altLabel "EA Learned Society"@en ;
+            skos:prefLabel "Learned Society"@en .
+
+            prty:engineers-aus-college a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:learned-society ;
+                skos:definition """A College provides a discipline-based home for members and provides a vehicle through which Engineers Australia advances the science and practice of engineering for the benefit of the Community through building the body of engineering knowledge and supporting the career development of engineering professionals."""@en ;
+                skos:prefLabel "Engineers Australia College"@en .
+
+            prty:national-committee a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:learned-society,
+                    prty:committee ;
+                skos:definition """National Committees are consituted by the Engineers Australia Board for issues with a natonal focus. National Committees must include a national focus, a maximum of 6 members, and an appropriate mix of age, gender, location and other aspects of diversity, representation and relevant skills including skills in management; and governance."""@en ;
+                skos:prefLabel "National Committee"@en .
+
+            prty:special-interest-group a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:learned-society ;
+                skos:definition """A group established by the Board where a national focus is required to ensure that the needs of a specific membership cohort can be addressed. The role of a Special Interest Group is to: 
+                (a) identify strategies and recommend to the Board actions to address the needs of their identified cohort;
+                (b) work with the Colleges, Technical Societies and the Chief Executive Officer to implement Board approved strategies and policies in relation to their identified cohort into the normal operations of each College, Technical Society and Division, including undertaking joint activities; 
+                (d) liaise with and provide support to College Boards, Divisions and Technical Societies regarding the undertaking of activities by these groups to support their cohort; 
+                (e) communicate with their cohort to identify ongoing needs and to direct them to areas within Engineers Australia that can assist them; and 
+                (f) arrange for an appropriate range of events or other activities in accordance with their approved plan to address needs that cannot normally be met through other Engineers Australia channels."""@en ;
+                skos:prefLabel "Special Interest Group"@en .
+
+            prty:special-interest-centre a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:learned-society ;
+                skos:definition """A group established by the Board where a national focus is required for a significant area of engineering practice that is not covered by a College and/or Technical Society. The role of a Centre is to: 
+                (a) identify strategies and recommend to the Board actions to address the specific needs of their identified area of engineering practice;
+                (b) facilitate the provision of high level technical advice, undertake research and/or contribute to public policy and participate in expert panels, committees or forums;
+                (c) identify gaps or emerging needs in skills and knowledge for their identified area of engineering practice to facilitate the CPD provided by Engineers Australia for members; and
+                (d) represent Engineers Australia in the wider community in line with Engineers Australia's policies, and nominate members for appointment to external bodies as required."""@en ;
+                skos:altLabel "Special Interest Centre"@en ;
+                skos:prefLabel "Centre"@en .
+
+            prty:technical-society a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/technical-societies"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:learned-society ;
+                skos:definition """An Engineers Australia Technical Society is a group that facilitates networking between professionals in the same area of expertise, hosts discussion forums, and provides access to technical papers and presentations. Technical societies provide professional technical development opportunities that its members may participate in. Membership in a technical society is not contingent on membership to Engineers Australia."""@en ;
+                skos:altLabel "Engineers Australia Technical Society"@en ;
+                skos:prefLabel "Technical Society"@en .
+
+                prty:inc-tech-society a skos:Concept ;
+                    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/technical-societies"^^xsd:anyURI ;
+                    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                    skos:broader prty:technical-society ;
+                    skos:definition """Incorporated technical societies are governed by their own constitutions but choose to be aligned with Engineers Australia. Under agreement, these organisations perform the functions of anEngineers Australia technical society, however they remain separate legal entities."""@en ;
+                    skos:editorialNote """Incorporated technical societies by strict definition are an external party, however due to the nature of their operation and close interaction with Engineers Australia they are considered part of the EA structure and operation for practical purposes."""@en ;
+                    skos:prefLabel "Incorporated Technical Society"@en .
+
+                prty:uninc-tech-society a skos:Concept ;
+                    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/technical-societies"^^xsd:anyURI ;
+                    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                    skos:broader prty:technical-society ;
+                    skos:definition """Unicorporated technical societies are governed by a technical society committee that's under the direction of the Engineers Australia Board and is responsible to it."""@en ;
+                    skos:prefLabel "Unincorporated Technical Society"@en .
+
+                prty:aff-tech-society a skos:Concept ;
+                    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                    skos:broader prty:technical-society ;
+                    skos:definition """Affiliated technical societies are governed externally and independently from Engineers Australia or via a Joint Board, but have an affiliate relationship. These organisations may be run primarily as an independent Australian Public Company or part thereof and manage their own membership cohort."""@en ;
+                    skos:editorialNote """Affiliated technical societies by strict definition are an external party, however due to the nature of their operation and close interaction with Engineers Australia they are considered part of the EA structure and operation for practical purposes."""@en ;
+                    skos:prefLabel "Affiliated Technical Society"@en .
+
+        prty:national-congress a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:internal-group ;
+            skos:definition """A National Congress is a primarily advisory body, established so that representatives of Congress can engage directly with the Board to advise them in decision making and strategic priorities. It is made up senior office bearers representing a range of stakeholders and experts across an organisation."""@en ;
+            skos:prefLabel "National Congress"@en .
+
+        prty:overseas-chapter a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:internal-group ;
+            skos:definition """Overseas Chapters are representative bodies of a parent organisation consisting of members of the organisation whose principal place of residence is outside the organisation's primary country of operation."""@en ;
+            skos:prefLabel "Overseas Chapter"@en .
+
+        prty:subsidiary a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:internal-group ;
+            skos:definition """A subsidiary of the subject organisation."""@en ;
+            skos:scopeNote "Subsidiary as a party type should only be used for organisations that are subsidiaries to the organisation whose data is being described, i.e. internal subsidiaries. Where an organisation is a subsidiary to another external organisation it should be categorised as a separate Organisation type with a Subsidiary party relationship to its parent."@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:prefLabel "Subsidiary"@en .
+
+        prty:working-group a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://en.wikipedia.org/wiki/Working_group"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:internal-group ;
+            skos:definition """A group of experts or representatives within a broader organisation, group, or collective that work together to achieve specified goals. The groups are domain-specific and focus on discussion or activity around a specific subject area. The term can also refer to an interdisciplinary collaboration of researchers or experts working on new activities that would be difficult to sustain under traditional mechanisms."""@en ;
+            skos:scopeNote "Working groups may also be partially synonymous with Special Interests Groups, the distinction being that Special Interests Groups must be established by the Board." ;
+            skos:altLabel "Working Party"@en ;
+            skos:prefLabel "Working Group"@en .
+
+    prty:commercial-entity a skos:Concept ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+        skos:broader prty:organisation ;
+        skos:definition """A commercial entity is an organisation that engages in business activities with the goal of making a profit."""@en ;
+        skos:altLabel "Business"@en ;
+        skos:prefLabel "Commercial Entity"@en .
+
+        prty:cooperative a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://business.gov.au/planning/business-structures-and-types/business-structures/co-operative"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:commercial-entity ;
+            skos:definition """A co-operative is a member-owned business structure with at least five members."""@en ;
+            skos:altLabel "Co-Op"@en ;
+            skos:prefLabel "Co-Operative"@en .
+
+        prty:gov-run-company a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://www.finance.gov.au/government/government-business-enterprises"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:commercial-entity ;
+            skos:exactMatch orgtyp:government-companies ;
+            skos:definition """Government units which are created as bodies corporate through the Corporations Act in Australia or through other legislation (ABS Catalogue 1218.0 SESCA, 2008, Chapter 8). These act as independent bodies where government owns a share of the organisation. They are considered commercial entities and run as such, even where profit is not their primary objective.
+            
+            The Government's relationship to its Government Run Companies is similar to the relationship between a holding company and its subsidiaries, features of which include:
+            - a strong interest in the performance and financial returns of the organisation
+            - reporting and accountability arrangements that facilitate active oversight by the shareholder
+            - action by the shareholder in relation to the strategic direction of its organisations where it prefers a different direction from the one proposed
+            - management autonomy balanced with regular reporting of performance to shareholders and
+            - boards that are accountable to shareholders for organisational performance, and shareholders that are accountable to Parliament and the public."""@en ;
+            skos:altLabel "State-Owned Enterprise"@en,
+                "Government Business Enterprises"@en,
+                "Government Company"@en,
+                "Government Owned Corporation"@en,
+                "Government Owned Organisation"@en,
+                "Government-Run Company"@en ;
+            skos:prefLabel "Government Company"@en .
+
+        prty:private-company a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://business.gov.au/planning/business-structures-and-types/business-structures/company"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:commercial-entity ;
+            skos:exactMatch orgtyp:proprietary-companies ;
+            skos:definition """A private company is a commercial entity that is privately owned and not publicly traded."""@en ;
+            skos:prefLabel "Private Company"@en .
+
+        prty:public-company a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://business.gov.au/planning/business-structures-and-types/business-structures/company"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:commercial-entity ;
+            skos:exactMatch orgtyp:public-companies ;
+            skos:definition """A public company is a commercial entity whose shares can be bought and sold by the general public on a stock exchange."""@en ;
+            skos:prefLabel "Public Company"@en .
+
+        prty:partnership a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://business.gov.au/planning/business-structures-and-types/business-structures/partnership"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:commercial-entity ;
+            skos:exactMatch orgtyp:sole-proprietorship ;
+            skos:definition """A partnership is a business structure made up of 2 or more people who distribute income or losses between themselves."""@en ;
+            skos:prefLabel "Partnership"@en .
+
+        prty:sole-trader a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://business.gov.au/planning/business-structures-and-types/business-structures/sole-trader"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:commercial-entity ;
+            skos:exactMatch orgtyp:sole-proprietorship ;
+            skos:definition """A sole trader is legally responsible for all aspects of the business including any debts and losses and day-to-day business decisions."""@en ;
+            skos:altLabel "Sole Proprietor"@en,
+                "Entrepreneur"@en ;
+            skos:prefLabel "Sole Trader"@en .
+
+        prty:trust a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://business.gov.au/planning/business-structures-and-types/business-structures/trust"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:organisation ;
+            skos:definition """A trust is a structure where a trustee carries out the business on behalf of the trust's members (or beneficiaries). Find out the elements of a trust and how to register one."""@en ;
+            skos:prefLabel "Trust"@en .
+
+    prty:government-agency a skos:Concept ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+        skos:broader prty:organisation ;
+        skos:notation "Gov" ;
+        skos:exactMatch orgtyp:other-government-entities ;
+        skos:definition """A government agency is a permanent or semi-permanent organization in the machinery of government that is responsible for the oversight and administration of specific functions, such as an intelligence agency, regulatory agency, or tax collection agency."""@en ;
+        skos:prefLabel "Government Agency"@en .
+
+        prty:federal-gov-agency a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:government-agency ;
+            skos:definition """A federal government agency is a government agency that is responsible for the oversight and administration of specific functions at the federal level."""@en ;
+            skos:prefLabel "Federal Government Agency"@en .
+
+            prty:defence-force a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:federal-gov-agency ;
+                skos:definition """A government funded agency within the Defence Force or Armed Services."""@en ;
+                skos:prefLabel "Defence Force Agency"@en .
+
+        prty:state-gov-agency a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:government-agency ;
+            skos:definition """A state government agency is a government agency that is responsible for the oversight and administration of specific functions at the state or territory level."""@en ;
+            skos:altLabel "Territory Government Agency"@en ;
+            skos:prefLabel "State Government Agency"@en .
+
+        prty:local-gov-agency a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:government-agency ;
+            skos:definition """A local government agency is a government agency that is responsible for the oversight and administration of specific functions at the local level. In Australia this is associated with a Local Government Area (LGA)."""@en ;
+            skos:prefLabel "Local Government Agency"@en .
+
+        prty:statutory-authority a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://www.finance.gov.au/about-us/glossary/governance/term-statutory-authority"^^xsd:anyURI ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:broader prty:government-agency ;
+            skos:definition """An Australian Government or State Government body established through legislation for a public purpose. This can include a body headed by, or comprising, an office holder, a commission or a governing board. They are distinct legal entities, but their financial accountability is linked to their parent entity, as defined by financial accountability legislation."""@en ;
+            skos:scopeNote """Statutory authorities are typically established by an Act of Parliament and are accountable to the government and the public. Unlike government corporations, statutory authorities are typically distinguished by their lack of control over their own funds and assets, are typically not run for profit or financial independence, and commonly act with a regulatory function."""@en ;
+            skos:prefLabel "Statutory Authority"@en .
+
+    prty:not-for-profit a skos:Concept ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+        skos:broader prty:organisation ;
+        skos:notation "NGO" ;
+        skos:exactMatch orgtyp:other-government-entities ;
+        skos:definition """An independent, typically nonprofit organization that operates outside government control, though it may get a significant percentage of its funding from government or corporate sources. Not-for-Profits and Non-Government Organisations (NGOs) engage in a wide range of activities, including advocacy, humanitarian aid, development work, and research. Industry Body/Peak Body organisations are commonly run as Not-for-Profit Organisations."""@en ;
+        skos:altLabel """Not For Profit Organisation"""@en,
+            "Non-Government Organization"@en,
+            "Non-Government Organisation"@en ;
+        skos:prefLabel "Not For Profit"@en .
+
+    prty:political-party a skos:Concept ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+        dcterms:source "https://peo.gov.au/understand-our-parliament/parliament-and-its-people/people-in-parliament/political-parties"^^xsd:anyURI ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+        skos:broader prty:organisation ;
+        skos:definition """A political party is an organisation that represents a particular group of people or set of ideas. Australians can form new political parties or choose to join a political party whose ideas and aims they support. Party members can:
+        - suggest ideas for party policies
+        - help pre-select party candidates for local, state and federal elections
+        - assist with election campaigns.
+
+        To be considered a political party in Australia, a group must be registered with the Australian Electoral Commission (AEC)."""@en ;
+        skos:prefLabel "Political Party"@en .
+
+    prty:education-provider a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://www.studyaustralia.gov.au/en/plan-your-studies/schools"^^xsd:anyURI ;
+            skos:broader prty:organisation ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:definition """Education providers are all organisations whose primary function is education and training within accredited qualifications frameworks. In Australia this means schools, universities, and vocational training institutes that deliver training within the Australian Qualification Framework."""@en ;
+            skos:scopeNote "Commercial entities that provide education and training services outside official qualifications or accredited schooling activities are excluded from this category. Those organisations are Commercial Entities with education as their main industry sector. Those organisations may provide non-accredited skills classes, such as non-vocational education in the arts or sporting and physical recreation. Those organisations also include corporate training providers that do not provide accredited tertiary certification."@en ;
+            skos:prefLabel "Education Provider"@en .
+
+        prty:foundation-education a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://www.studyaustralia.gov.au/en/plan-your-studies/schools"^^xsd:anyURI ;
+            skos:broader education-institution ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:definition """Foundation: also called preschool, preparatory school, or kindergarten is for children aged 3-5 years of age."""@en ;
+            skos:altLabel "Preschool"@en,
+                "Preparatory School"@en,
+                "Kindergarten"@en,
+                "Early Childhood Education"@en ;
+            skos:prefLabel "Foundation Education"@en .
+
+        prty:primary-school a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://www.studyaustralia.gov.au/en/plan-your-studies/schools"^^xsd:anyURI ;
+            skos:broader education-institution ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:definition """Primary school: is from grades 1-6 and is compulsory."""@en ;
+            skos:altLabel "Elementary School"@en ;
+            skos:prefLabel "Primary School"@en .
+
+        prty:secondary-school a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://www.studyaustralia.gov.au/en/plan-your-studies/schools"^^xsd:anyURI ;
+            skos:broader education-institution ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:definition """."""@en ;
+            skos:altLabel "High School"@en ;
+            skos:prefLabel "Secondary School"@en .
+
+        prty:tertiary-institution a skos:Concept ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+            skos:broader education-institution ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+            skos:definition """Tertiary education refers to post-secondary education received at universities and vocational educational institutes."""@en ;
+            skos:altLabel "Higher Education"@en,
+                "Tertiary Education"@en ;
+            skos:prefLabel "Tertiary Institution"@en .
+
+            prty:vet-institute a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://www.training.com.au/vet-courses/"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:tertiary-institution ;
+                skos:definition """A VET institute is an educational institution that provides Vocational Education and Training (VET) courses.
+                
+                VET courses are offered through both public and private RTOs, generally via TAFE and private training providers. Some VET courses are delivered through Australian Apprenticeships and Traineeships, which enable students to gain structured on-the-job training as a major part of their study. Along with these institutions, VET training and is also accessible through participating schools, as well as external community educational centres."""@en ;
+                skos:altLabel "Vocational Education and Training Institute"@en,
+                    "TAFE"@en,
+                    "Registered Training Organisation"@en ;
+                skos:prefLabel "VET Institute"@en .
+
+            prty:university a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:notation "Uni" ;
+                skos:broader prty:tertiary-institution ;
+                skos:definition """A university is an educational institution that provides undergraduate and postgraduate education and research."""@en ;
+                skos:prefLabel "University"@en .
+
+            prty:university-faculty a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:tertiary-institution ;
+                skos:definition """A university faculty is a department of an educational institution that provides education within a specific subject area. For example a univeristy may have faculties of economics, earth sciences, engineering, information technology etc. In practice faculties are not independent entities and will have a partOf relationship to a University or other Educational Institution."""@en ;
+                skos:altLabel "University Department"@en,
+                    "University School"@en,
+                    "Faculty"@en ;
+                skos:prefLabel "University Faculty"@en .
+
+            prty:university-research a skos:Concept ;
+                rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+                skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+                skos:broader prty:tertiary-institution ;
+                skos:definition """A university research centre is an institute within an educational institution that focuses on research and advocacy within a specific subject area."""@en ;
+                skos:altLabel "Academic Research Centre"@en,
+                    "Research Centre"@en ;
+                skos:prefLabel "University Research Centre"@en .
+
+    prty:external-interest-group a skos:Concept ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        skos:broader prty:organisation ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+        skos:definition """A collective body that represents the interests of a group with a common goal or subject of interest, and is not run as an independent commercial entity or is not considered to act as a commercial business for practical purposes."""@en ;
+        skos:prefLabel "External Interest Group"@en .
+
+#prty:cohort a skos:Concept ;
+#    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-party> ;
+#    dcterms:source "http://xmlns.com/foaf/spec/#term_Group"^^xsd:anyURI ;
+#    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-party> ;
+#    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-party> ;
+#    skos:definition """A cohort is a group of agents with a shared attribute, characteristic, or association. Cohorts do not have the formal cohesion of an organisation but may define a group of independently acting agents who incidentally share a common property."""@en ;
+#    skos:altLabel "Group"@en ;
+#    skos:prefLabel "Cohort"@en .
+
+#COLLECTIONS
+prty:committee-groups a skos:Collection ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    skos:definition """Organisations who act as boards, committees, and related entities. These organisations are typically dependent on the group to which they are part of and represent and in practice should be directly linked via a relationship to their parent entity."""@en ;
+    skos:prefLabel "Agents - Committee Groups"@en ;
+    skos:member
+        prty:board,
+        prty:board-committee,
+        prty:special-interest-centre,
+        prty:community-of-practice,
+        prty:executive-committee,
+        prty:joint-board,
+        prty:national-committee,
+        prty:national-congress,
+        prty:overseas-chapter,
+        prty:regional-group,
+        prty:special-interest-group,
+        prty:working-group,
+        prty:branch,
+        prty:committee,
+        prty:subcommittee .

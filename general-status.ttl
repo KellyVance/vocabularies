@@ -1,0 +1,54 @@
+PREFIX gstat: <https://ref.engineersaustralia.org.au/def/general-status/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://ref.engineersaustralia.org.au/def/general-status> 
+    a 
+        owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    dcterms:created "2024-03-13"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:modified "2024-03-13"^^xsd:date ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: Data, Analytics and Insights" ;
+                ]
+        ] ;
+    skos:hasTopConcept
+        gstat:active,
+        gstat:inactive ;
+    skos:definition """Generalised statuses with broad applicability."""@en ;
+    skos:altLabel "General Status"@en ;
+    skos:prefLabel "Status"@en .
+
+
+<https://linked.data.gov.au/org/engineersaustralia>
+    a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+gstat:active a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/general-status> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/general-status>  ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/general-status> ;
+    skos:definition """A process, product, relationship or other attribute that is current, valid, and operational."""@en ;
+    skos:prefLabel "Active"@en .
+
+gstat:inactive a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/general-status> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/general-status>  ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/general-status> ;
+    skos:definition """A process, product, relationship or other attribute that is not currently operational, valid, or applicable."""@en ;
+    skos:prefLabel "Inactive"@en .

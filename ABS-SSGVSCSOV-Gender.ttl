@@ -1,0 +1,99 @@
+PREFIX gndr: <https://linked.data.gov.au/def/gender/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/def/gender> a owl:Ontology ,
+		skos:ConceptScheme ;
+	dcterms:created "2025-03-14"^^xsd:date ;
+	dcterms:creator <https://linked.data.gov.au/org/abs>;
+	dcterms:modified "2025-03-14"^^xsd:date ;
+	dcterms:publisher <https://linked.data.gov.au/org/abs>;
+    dcterms:provenance "Australian Bureau of Statistics - Standard for Sex, Gender, Variations of Sex Characteristics and Sexual Orientation Variables (2020)" ;
+	dcterms:references 
+		<https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release> ;
+	skos:definition """Gender is a social and cultural concept. It is about social and cultural differences in identity, expression and experience as a man, woman or non-binary person. Non-binary is an umbrella term describing gender identities that are not exclusively male or female.
+
+	Gender includes the following concepts:
+
+    Gender identity is about who a person feels themself to be
+    Gender expression is the way a person expresses their gender. A person's gender expression may also vary depending on the context, for instance expressing different genders at work and home
+    Gender experience describes a person's alignment with the sex recorded for them at birth i.e. a cis experience or a trans experience. 
+	
+	Responses to a gender question may reflect a combination of gender identity, expression and/or experience. In statistical collections, gender may be reported in terms of a person's felt or lived gender, as well as how that person is perceived by others, depending on whether information on gender is based on self-reported data or done by proxy. """@en ;
+	skos:scopeNote """The ABS recognises 4 separate and distinct attributes in The Standard for Sex, Gender, Variations of Sex Characteristics and Sexual Orientation Variables, 2020. 
+	This product presents statistical standards for four variables:
+    - Sex
+    - Gender
+    - Variations of sex characteristics
+    - Sexual orientation. 
+	
+	This vocabulary exclusively contains gender categories."""@en ;
+	skos:hasTopConcept
+		gndr:1,
+		gndr:2,
+		gndr:3,
+		gndr:4,
+		gndr:5;
+	skos:prefLabel "Gender"@en .
+
+gndr:1 a skos:Concept ;
+    dcterms:source "https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release#gender"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/gender> ;
+    skos:inScheme <https://linked.data.gov.au/def/gender> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gender> ;
+    skos:definition """Persons who described their gender as man or male."""@en ;
+    skos:notation "1" ;
+	skos:altLabel "M"@en,
+		"Man"@en,
+		"Male"@en ;
+	skos:prefLabel "Man or male"@en .
+
+gndr:2 a skos:Concept ;
+    dcterms:source "https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release#gender"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/gender> ;
+    skos:inScheme <https://linked.data.gov.au/def/gender> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/gender> ;
+    skos:definition """Persons who described their gender as man or male."""@en ;
+    skos:notation "2" ;
+	skos:altLabel "F"@en,
+		"Woman"@en,
+		"Female"@en ;
+	skos:prefLabel "Woman or female"@en .
+
+gndr:3 a skos:Concept ;
+	dcterms:source "https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release#gender"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/gender> ;
+	skos:inScheme <https://linked.data.gov.au/def/gender> ;
+	skos:topConceptOf <https://linked.data.gov.au/def/gender> ;
+	skos:definition """Persons who described thier gender as non-binary."""@en ;
+	skos:notation "3" ;
+	skos:altLabel "X"@en,
+		"Non-conforming"@en, ;
+	skos:prefLabel "Non-binary"@en .
+
+gndr:4 a skos:Concept ;
+	dcterms:source "https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release#gender"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/gender> ;
+	skos:inScheme <https://linked.data.gov.au/def/gender> ;
+	skos:topConceptOf <https://linked.data.gov.au/def/gender> ;
+	skos:definition """Persons who described their gender as a term other than man/male, woman/female or non-binary."""@en ;
+	skos:notation "4" ;
+	skos:altLabel "T"@en,
+		"Different term"@en ;
+	skos:prefLabel "Self-Described"@en .
+
+gndr:5 a skos:Concept ;
+	dcterms:source "https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release#gender"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/gender> ;
+	skos:inScheme <https://linked.data.gov.au/def/gender> ;
+	skos:topConceptOf <https://linked.data.gov.au/def/gender> ;
+	skos:definition """Persons who preferred not to respond on how they describe their gender."""@en ;
+	skos:notation "5" ;
+	skos:altLabel "Z"@en ;
+	skos:prefLabel "Prefer not to answer"@en .

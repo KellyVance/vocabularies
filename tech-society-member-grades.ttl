@@ -1,0 +1,633 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX earl: <https://ref.engineersaustralia.org.au/def/ea-activity-roles/>
+PREFIX tsgrd: <https://ref.engineersaustralia.org.au/def/ts-membership-grade/>
+PREFIX earegb: <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://ref.engineersaustralia.org.au/def/ts-membership-grade> a owl:Ontology,
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    dcterms:created "2024-04-12"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:modified "2024-04-12"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: Learned Society"
+                ]
+        ] ;
+    skos:definition "The grades of memberships at available through the Technical Societies of Engineers Australia."@en ;
+    skos:hasTopConcept
+        tsgrd:ausnz-staff-postgrad,
+        tsgrd:member,
+        tsgrd:member-non-ea,
+        tsgrd:other,
+        tsgrd:retired,
+        tsgrd:student ;
+    skos:prefLabel "Technical Society Membership Grade"@en .
+
+<https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+    
+tsgrd:ausnz-staff-postgrad a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:definition """A member of a technical society who is a staff member or post-graduate student at an Australian or New Zealand University."""@en ;
+    skos:prefLabel "Aust/NZ Uni Staff & Post Grad Students"@en .
+
+tsgrd:certified a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:definition """A member of a technical society whose membership includes discipline specific certification and accreditation by the technical society."""@en ;
+    skos:example "CMatP Membership - Materials Australia"@en ; 
+    skos:prefLabel "Certified Member"@en .
+
+tsgrd:corporate a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:definition """A member of a technical society paid through a corporate sponsorship or other corporate payment structure. Commonly paid for as a member cohort."""@en ;
+    skos:prefLabel "Corporate Member"@en,
+        "Corporate Supporter"@en ;
+    skos:prefLabel "Corporate"@en .
+
+    tsgrd:corporate-bronze a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:corporate ;
+        skos:definition """A member of a technical society paid through a corporate sponsorship or other corporate payment structure. Commonly paid for as a member cohort. Corporate Bronze membership is a sub-class of corporate membership within a technical society with a tierd corporate membership structure. Commonly Silver tier grants basic access to membership without additional benefits beyond a corporate discount."""@en ;
+        skos:altLabel "Supporters"@en,
+            "Corporate Supporters"@en,
+            "Bronze Corporate"@en ;
+        skos:prefLabel "Corporate Bronze"@en .
+     
+    tsgrd:corporate-silver a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:corporate ;
+        skos:definition """A member of a technical society paid through a corporate sponsorship or other corporate payment structure. Commonly paid for as a member cohort. Corporate Silver membership is a sub-class of corporate membership within a technical society with a tierd corporate membership structure. Commonly Silver tier grants basic company advertising rights as a sponsor and a limited number of individual nominees for membership."""@en ;
+        skos:altLabel "Industry Sponsor"@en,
+            "Standard Company"@en,
+            "Corporate A"@en,
+            "Silver Corporate"@en ;
+        skos:prefLabel "Corporate Silver"@en .
+
+    tsgrd:corporate-gold a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:corporate ;
+        skos:definition """A member of a technical society paid through a corporate sponsorship or other corporate payment structure. Commonly paid for as a member cohort. Corporate Gold membership is a sub-class of corporate membership within a technical society with a tierd corporate membership structure. Commonly Gold tier grants company advertising rights as a sponsor greater than silver tier and a limited-but-increased number of individual nominees for membership relative to silver."""@en ;
+        skos:altLabel "Premium Company"@en,
+            "Principal Sponsor"@en,
+            "Corporate B"@en,
+            "Gold Corporate"@en ;
+        skos:prefLabel "Corporate Gold"@en .
+
+    tsgrd:platinum-sponsorship a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:corporate ;
+        skos:definition """A member of a technical society paid through a corporate sponsorship or other corporate payment structure. Commonly paid for as a member cohort. Platinum sponsorship is a sub-class of corporate membership within a technical society with a tierd corporate membership structure. Commonly Platinum tier grants company advertising rights as a sponsor greater than gold tier and a higher or unlimited number of individual nominees for membership. Platinum Sponsorship may have limited annual availability."""@en ;
+        skos:altLabel "Premium Plus Company"@en,
+            "Premium Plus"@en,
+            "Platinum Corporate"@en ;
+        skos:prefLabel "Platinum Sponsorship"@en .
+
+tsgrd:graduate a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:definition """A member of a technical society who is a graduate engineer working in the engineering profession."""@en ;
+    skos:note """Each technical society may set individual eligibility requirements for Graduate membership based on age or time-since-gradutation."""@en ;
+    skos:prefLabel "Graduate"@en .
+
+    tsgrd:graduate-y1 a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:graduate ;
+        skos:definition """A member of a technical society who is a graduate engineer working in the engineering profession and is a member of Engineers Australia in their first year of membership."""@en ;
+        skos:note """First Year Graduate membership is a graduate membership where the technical society specifies eligibility in the first year of membership after graduation, but does not distinguish between EA and non-EA members."""@en ;
+        skos:altLabel "Early Career 1st Year"@en ;
+        skos:prefLabel "First Year Graduate"@en .
+
+    tsgrd:graduate-ea a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:graduate ;
+        skos:definition """A member of a technical society who is a graduate engineer working in the engineering profession and is a member of Engineers Australia."""@en ;
+        skos:note """Each technical society may set individual eligibility requirements for Graduate membership based on age or time-since-gradutation."""@en ;
+        skos:prefLabel "Graduate (EA Member)"@en .
+
+    tsgrd:graduate-non-ea a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:graduate ;
+        skos:definition """A member of a technical society who is a graduate engineer working in the engineering profession but is not a member of Engineers Australia."""@en ;
+        skos:note """Each technical society may set individual eligibility requirements for Graduate membership based on age or time-since-gradutation."""@en ;
+        skos:altLabel "Non EA Graduate"@en ;
+        skos:prefLabel "Graduate (Non-EA Member)"@en .
+        
+tsgrd:life-member a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:definition """A member of a technical society who has been awarded lifetime membership. Commonly only available by invitation."""@en ;
+    skos:prefLabel "Life Member"@en .
+  
+tsgrd:member a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:definition """A standard member of a technical society."""@en ;
+    skos:altLabel "Individual"@en,
+        "Individual Member"@en ;
+    skos:prefLabel "Member"@en .
+
+    tsgrd:member-ea a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:member ;
+        skos:definition """A member of a technical society who is also a member of Engineers Australia."""@en ;
+        skos:altLabel "EA Member"@en ;
+        skos:prefLabel "Member (EA Member)"@en .
+
+    tsgrd:member-non-ea a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:member ;
+        skos:definition """A member of a technical society who is not a member of Engineers Australia."""@en ;
+        skos:altLabel "Non EA Member"@en,
+            "Member Non-Engineers Australia"@en;
+        skos:prefLabel "Member (Non-EA Member)" .
+
+    tsgrd:member-overseas a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:member-non-ea ;
+        skos:definition """A member of a technical society who is located outside of Australia."""@en ;
+        skos:altLabel "Individual (Overseas)"@en,
+            "International Member"@en, ;
+        skos:prefLabel "Overseas Member"@en .
+
+tsgrd:other a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:definition """A member of a technical society who does not fit into another defined category of membership within the specific technical society."""@en ;
+    skos:prefLabel "Other"@en .
+
+tsgrd:postgrad a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:definition """A member of a technical society who is a post-graduate engineering student at an Australian or New Zealand University."""@en ;
+    skos:altLabel "Post Graduate Student"@en,
+        "Post Graduate Full-Time Student"@en ;
+    skos:prefLabel "Post Graduate"@en .
+
+    tsgrd:postgrad-ea a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:postgrad ;
+        skos:definition """A member of a technical society who is a full-time post-graduate engineering student at an Australian or New Zealand University and is a member of Engineers Australia."""@en ;
+        skos:prefLabel "Post Graduate Student (EA Member)"@en .
+            
+    tsgrd:postgrad-non-ea a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:postgrad ; ;
+        skos:definition """A member of a technical society who is a full-time post-graduate engineering student at an Australian or New Zealand University but is not a member of Engineers Australia."""@en ;
+        skos:prefLabel "Post Graduate Student (Non-EA Member)"@en .
+
+tsgrd:professional a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:definition """A member of a technical society who is a professional engineer working in the engineering profession."""@en ;
+    skos:prefLabel "Professional"@en .
+
+    tsgrd:professional-ea a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:professional ;
+        skos:definition """A member of a technical society who is a professional engineer working in the engineering profession and is a member of Engineers Australia."""@en ;
+        skos:altLabel "EA Professional"@en ;
+        skos:prefLabel "Professional (EA Member)"@en .
+
+    tsgrd:professional-non-ea a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:professional ;
+        skos:definition """A member of a technical society who is a professional engineer working in the engineering profession but is not a member of Engineers Australia."""@en ;
+        skos:altLabel "Non EA Professional"@en ;
+        skos:prefLabel "Professional (Non-EA Member)"@en .
+
+tsgrd:pro-gold a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:definition """A member of a technical society who is a professional engineer working in the engineering profession and is a member of Engineers Australia with awarded a Professional Gold membership by teh technical society. Commonly only available by invitation."""@en ;
+    skos:altLabel "Professional Gold Member"@en ;
+    skos:prefLabel "Professional Gold"@en .
+
+tsgrd:retired a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:definition """A member of a technical society who has retired from the engineering profession."""@en ;
+    skos:altLabel "Retired Member"@en ;
+    skos:prefLabel "Retired"@en .
+
+    tsgrd:retired-ea a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:retired ;
+        skos:definition """A member of a technical society who has retired from the engineering profession but is a member of Engineers Australia."""@en ;
+        skos:prefLabel "Retired (EA Member)"@en .
+
+    tsgrd:retired-non-ea a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:retired ;
+        skos:definition """A member of a technical society who has retired from the engineering profession and is not a member of Engineers Australia."""@en ;
+        skos:prefLabel "Retired (Non-EA Member)"@en .    
+
+tsgrd:senior-member a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:definition """A senior member of a technical society. Senior membership eligibility is subject to age conditions and may require a period of continuous membership."""@en ;
+    skos:prefLabel "Senior Member"@en .
+
+    tsgrd:senior-member-ea a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:senior-member ;
+        skos:definition """A senior member of a technical society who is also a member of Engineers Australia."""@en ;
+        skos:prefLabel "Senior Member (EA Member)"@en .
+    
+    tsgrd:senior-member-non-ea a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:senior-member ;
+        skos:definition """A senior member of a technical society who is not a member of Engineers Australia."""@en ;
+        skos:prefLabel "Senior Member (Non-EA Member)"@en .
+
+tsgrd:student a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:definition """Technical Society student membership is available to undergraduate students studying an accredited or recognised Australian course in Engineering."""@en ;
+    skos:related eagrd:student ;
+    skos:altLabel "Under Graduate Full-Time Student"@en ;
+    skos:prefLabel "Student"@en .
+
+    tsgrd:student-ea a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:student ;
+        skos:definition """A member of a technical society who is a full-time undergraduate student studying an accredited or recognised Australian course in Engineering and is a member of Engineers Australia."""@en ;
+        skos:altLabel "Under Graduate Full-Time Student (EA Member)"@en ;
+        skos:prefLabel "Student (EA Member)"@en .
+
+    tsgrd:student-non-ea a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+        skos:broader tsgrd:student ;
+        skos:definition """A member of a technical society who is a full-time undergraduate student studying an accredited or recognised Australian course in Engineering but is not a member of Engineers Australia."""@en ;
+        skos:altLabel "Under Graduate Full-Time Student (Non-EA Member)"@en ;
+        skos:prefLabel "Student (Non-EA Member)"@en .
+
+tsgrd:unemployed a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ts-membership-grade> ;
+    skos:definition """A member of a technical society who is unemployed. Eligibility may be subject to addtional assessment and membership may be offered at a lower cost or eligible for discount."""@en ;
+    skos:prefLabel "Unemployed"@en .
+
+#COLLECTIONS
+
+tsgrd:aaee a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Australasian Association for Engineering in Education (AAEE)"@en ;
+	skos:definition """Membership grades for the Australasian Association for Engineering in Education."""@en ;
+    skos:related earegb:aaee ;
+    skos:member
+        tsgrd:ausnz-staff-postgrad,
+        tsgrd:other .
+
+tsgrd:aces a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Australian Cost Engineering Society of Australia (ACES)"@en ;
+    skos:definition """Membership grades for the Australian Cost Engineering Society of Australia."""@en ;
+    skos:related earegb:aces ;
+    skos:member
+        tsgrd:member-ea,
+        tsgrd:member-non-ea,
+        tsgrd:student .
+
+tsgrd:acss a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Australian Composite Structures Society (ACSS)"@en ;
+    skos:definition """Membership grades for the Australian Composite Structures Society."""@en ;
+    skos:related earegb:acss ;
+    skos:member
+        tsgrd:member,
+        tsgrd:student .
+
+tsgrd:asde a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Australian Society of Defence Engineering (ASDE)"@en ;
+    skos:definition """Membership grades for the Australian Society of Defence Engineering."""@en ;
+    skos:related earegb:asde ;
+    skos:member
+        tsgrd:corporate,
+        tsgrd:member-ea,
+        tsgrd:member-non-ea,
+        tsgrd:student .
+
+tsgrd:aees a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Australian Earthquake Engineering Society (AEES)"@en ;
+    skos:definition """Membership grades for the Australian Earthquake Engineering Society."""@en ;
+    skos:related earegb:aees ;
+    skos:member
+        tsgrd:member,
+        tsgrd:student,
+        tsgrd:retired .
+
+tsgrd:aftes a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Australasian Fluid & Thermal Engineering Society (AFTES)"@en ;
+    skos:definition """Membership grades for the Australasian Fluid & Thermal Engineering Society."""@en ;
+    skos:related earegb:aftes ;
+    skos:member
+        tsgrd:member .
+
+tsgrd:ags a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Australian Geomechanics Society (AGS)"@en ;
+    skos:definition """Membership grades for the Australian Geomechanics Society."""@en ;
+    skos:related earegb:ags ;
+    skos:member
+        tsgrd:corporate,
+        tsgrd:professional-ea,
+        tsgrd:professional-non-ea,
+        tsgrd:graduate-ea,
+        tsgrd:graduate-non-ea,
+        tsgrd:postgrad-ea,
+        tsgrd:postgrad-non-ea,
+        tsgrd:retired,
+        tsgrd:student,
+        tsgrd:pro-gold,
+        tsgrd:life-member .
+
+tsgrd:asbsh a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Australian Society for Bulk Solids Handling (ASBSH)"@en ;
+    skos:definition """Membership grades for the Australian Society for Bulk Solids Handling."""@en ;
+    skos:related earegb:asbsh ;
+    skos:member
+        tsgrd:corporate,
+        tsgrd:member,
+        tsgrd:retired,
+        tsgrd:student .
+
+tsgrd:auss a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Australian Shotcrete Society (AuSS)"@en ;
+    skos:definition """Membership grades for the Australian Shotcrete Society."""@en ;
+    skos:related earegb:auss ;
+    skos:member
+        tsgrd:member,
+        tsgrd:student .
+
+tsgrd:ats a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Australian Tunnelling Society (ATS)"@en ;
+    skos:definition """Membership grades for the Australian Tunnelling Society."""@en ;
+    skos:related earegb:ats ;
+    skos:member
+        tsgrd:member,
+        tsgrd:graduate-y1,
+        tsgrd:student,
+        tsgrd:retired,
+        tsgrd:corporate-silver,
+        tsgrd:corporate-gold,
+        tsgrd:platinum-sponsorship .
+
+tsgrd:apts a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Australian Particle Technology Society (APTS)"@en ;
+    skos:definition """Membership grades for the Australian Particle Technology Society."""@en ;
+    skos:related earegb:apts ;
+    skos:member
+        tsgrd:member-ea,
+        tsgrd:member-non-ea,
+        tsgrd:student-ea,
+        tsgrd:student-non-ea,
+        tsgrd:retired .
+
+tsgrd:emc a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Electromagnetic Compatibility Society (EMC)"@en ;
+    skos:definition """Membership grades for the Electromagnetic Compatibility Society."""@en ;
+    skos:related earegb:emc ;
+    skos:member
+        tsgrd:member-ea,
+        tsgrd:member-non-ea,
+        tsgrd:student,
+        tsgrd:retired,
+        tsgrd:corporate.
+
+tsgrd:ma a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Materials Australia (MA)"@en ;
+    skos:definition """Membership grades for Materials Australia."""@en ;
+    skos:related earegb:ma ;
+    skos:member
+        tsgrd:member,
+        tsgrd:member-overseas,
+        tsgrd:retired,
+        tsgrd:student,
+        tsgrd:graduate,
+        tsgrd:certified,
+        tsgrd:unemployed,
+        tsgrd:corporate-silver,
+        tsgrd:corporate-gold,
+        tsgrd:platinum-sponsorship .
+
+tsgrd:memmes a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Mining Electrical & Mining Mechanical Engineering Society (MEMMES)"@en ;
+    skos:definition """Membership grades for the Mining Electrical & Mining Mechanical Engineering Society."""@en ;
+    skos:related earegb:memmes ;
+    skos:member
+        tsgrd:member-ea,
+        tsgrd:member-non-ea,
+        tsgrd:student,
+        tsgrd:retired,
+        tsgrd:life-member,
+        tsgrd:corporate .
+
+tsgrd:msts a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Mine Subsidence Technology Society (MSTS)"@en ;
+    skos:definition """Membership grades for the Mine Subsidence Technology Society."""@en ;
+    skos:related earegb:msts ;
+    skos:member
+        tsgrd:member-ea,
+        tsgrd:member-non-ea,
+        tsgrd:student,
+        tsgrd:retired,
+        tsgrd:unemployed .
+
+tsgrd:rtsa a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Railway Technical Society of Australia (RTSA)"@en ;
+    skos:definition """Membership grades for the Railway Technical Society of Australia."""@en ;
+    skos:related earegb:rtsa ;
+    skos:member
+        tsgrd:member,
+        tsgrd:member-overseas,
+        tsgrd:graduate,
+        tsgrd:student,
+        tsgrd:retired,
+        tsgrd:life-member,
+        tsgrd:corporate, .
+
+tsgrd:red-r a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Red R Australia (RedR)"@en ;
+    skos:definition """Membership grades for Red R Australia."""@en ;
+    skos:related earegb:red-r ;
+    skos:member
+        tsgrd:member .
+
+tsgrd:res a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Risk Engineering Society (RES)"@en ;
+    skos:definition """Membership grades for the Risk Engineering Society."""@en ;
+    skos:related earegb:res ;
+    skos:member
+        tsgrd:member,
+        tsgrd:student-ea,
+        tsgrd:student-non-ea,
+        tsgrd:retired,
+        tsgrd:corporate-silver,
+        tsgrd:corporate-gold .
+
+tsgrd:sfs a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Society of Fire Safety (SFS)"@en ;
+    skos:definition """Membership grades for the Society of Fire Safety."""@en ;
+    skos:related earegb:sfs ;
+    skos:member
+        tsgrd:member,
+        tsgrd:student-ea,
+        tsgrd:student-non-ea.
+
+tsgrd:seag a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Society for Engineering in Agriculture (SEAg)"@en ;
+    skos:definition """Membership grades for the Society for Engineering in Agriculture."""@en ;
+    skos:related earegb:seag ;
+    skos:member
+        tsgrd:member,
+        tsgrd:student,
+        tsgrd:retired .
+
+tsgrd:sbse a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Society for Building Services Engineers (SBSE)"@en ;
+    skos:definition """Membership grades for the Society for Building Services Engineers."""@en ;
+    skos:related earegb:sbse ;
+    skos:member
+        tsgrd:member.
+
+tsgrd:seng a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Sustainable Engineering Society (SENG)"@en ;
+    skos:definition """Membership grades for the Sustainable Engineering Society."""@en ;
+    skos:related earegb:seng ;
+    skos:member
+        tsgrd:member-ea,
+        tsgrd:member-non-ea,
+        tsgrd:student,
+        tsgrd:retired-ea,
+        tsgrd:retired-non-ea,
+        tsgrd:corporate-silver,
+        tsgrd:corporate-gold .
+
+tsgrd:sesa a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Systems Engineering Society of Australia (SESA)"@en ;
+    skos:definition """Membership grades for the Systems Engineering Society of Australia."""@en ;
+    skos:related earegb:sesa ;
+    skos:member
+        tsgrd:member-ea,
+        tsgrd:member-non-ea,
+        tsgrd:senior-member-ea,
+        tsgrd:senior-member-non-ea,
+        tsgrd:student,
+        tsgrd:graduate-y1,
+        tsgrd:life-member,
+        tsgrd:corporate-silver,
+        tsgrd:corporate-gold .
+
+tsgrd:tas a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-04/engineers-australia-membership-fees-technical-societies-2024-2025.pdf"^^xsd:anyURI ;
+    skos:prefLabel "Tech Society Membership Grades - Transport Australia Society (TAS)"@en ;
+    skos:definition """Membership grades for the Transport Australia Society."""@en ;
+    skos:related earegb:tas ;
+    skos:member
+        tsgrd:member,
+        tsgrd:student,
+        tsgrd:corporate .

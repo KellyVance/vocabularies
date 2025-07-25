@@ -1,0 +1,255 @@
+PREFIX actst: <https://linked.data.gov.au/def/activity-status/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX earl: <https://ref.engineersaustralia.org.au/def/ea-activity-roles/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/def/activity-status> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2024-09-12"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:modified "2024-09-12"^^xsd:date ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: ICT"@en
+                ]
+        ] ;
+    skos:hasTopConcept
+        actst:to-do,
+        actst:doing,
+        actst:done,
+        actst:not-done ;
+    skos:definition """The stage in the lifecycle of an activity, process, or event."""@en ;
+    skos:scopeNote """Activity status applies to any action or set of actions. It may apply independently to an overarching process and its component parts."""@en ;
+    skos:altLabel "Event Status"@en,
+        "Process Status"@en,
+        "Project Status"@en ;
+    skos:prefLabel "Activity Status"@en .
+
+actst:to-do a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+    skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/activity-status> ;
+	skos:definition """An activity that has been conceptually defined but not started."""@en ;
+    skos:prefLabel "To Do"@en .
+
+    actst:initiated a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+        skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+        skos:broader actst:to-do ;
+        skos:definition """An activity that has been conceptually defined but not started, or proposed for action."""@en ;
+        skos:altLabel "Conceived"@en,
+            "Conceptualised"@en ;
+        skos:prefLabel "Initiated"@en .
+
+    actst:pending a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+        skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+        skos:broader actst:to-do ;
+        skos:definition """An activity that has been conceptually defined and raised as an action but has not started."""@en ;
+        skos:altLabel "Proposed"@en,
+            "Planned"@en,
+            "Requested"@en,
+            "New"@en ;
+        skos:prefLabel "Pending"@en .
+
+        actst:feasibility a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+            skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+            skos:broader actst:pending ;
+            skos:definition """An activity that has been conceptually defined, raised as an action, and is being assessed whether it is achieveable prior to being assigned or started."""@en ;
+            skos:altLabel "Pre-Assessment"@en ;
+            skos:prefLabel "Feasibility"@en .
+
+    actst:assigned a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+        skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+        skos:broader actst:to-do ;
+        skos:definition """An activity that has been conceptually defined, raised as an action, and assigned to an accountable person but has not started."""@en ;
+        skos:prefLabel "Assigned"@en .
+
+actst:doing a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+    skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/activity-status> ;
+	skos:definition """An activity that has been started and is anticipated to be completed."""@en ;
+    skos:prefLabel "Doing"@en .
+
+    actst:in-progress a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+        skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+        skos:broader actst:doing ;
+        skos:definition """An activity that has been been started but not completed and is actively progressing."""@en ;
+        skos:altLabel "Drafting"@en,
+            "Under Construction"@en ;
+        skos:prefLabel "In Progress"@en .
+
+        actst:escalated a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+            skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+            skos:broader actst:in-progress ;
+            skos:definition """An activity that has been been started but not completed and is actively progressing under the guidance or action of an individual with higher levels of experience and/or authority."""@en ;
+            skos:prefLabel "Escalated"@en .
+
+    actst:on-hold a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+        skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+        skos:broader actst:doing ;
+        skos:definition """An activity that has been been started but not completed and is temporarily paused due to internally-controlled factors (e.g. higher work priority), but is still intended for completion."""@en ;
+        skos:altLabel "Suspended"@en ;
+        skos:prefLabel "On Hold"@en .
+
+    actst:awaiting-input a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+        skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+        skos:broader actst:doing ;
+        skos:definition """An activity that has been been started but not completed and is temporarily paused due to external factors (e.g. awaiting for documents, additional customer information, or external contribution), but is still intended for completion."""@en ;
+        skos:altLabel "Paused"@en,
+            "Awaiting Information"@en,
+            "Awaiting Customer Information"@en ;
+        skos:prefLabel "Awaiting Input"@en .
+
+    actst:for-review a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+        skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+        skos:broader actst:doing ;
+        skos:definition """An activity that has been been started and provisionally finished but awaiting review and approval before being considered complete."""@en ;
+        skos:altLabel "For Approval"@en,
+            "Awaiting Review"@en,
+            "Submitted"@en,
+            "Assessment"@en ;
+        skos:prefLabel "For Review"@en .
+
+    actst:provided a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+        skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+        skos:broader actst:doing ;
+        skos:definition """An activity that has been been started and provisionally finished but awaiting confirmation of receipt by the recipients, such as a customer or executive, before being considered complete."""@en ;
+        skos:altLabel "Provided"@en ;
+        skos:prefLabel "Resolution Provided"@en .
+
+actst:done a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+    skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/activity-status> ;
+	skos:definition """An activity that has been started and deliverables or outputs have been accepted."""@en ;
+    skos:prefLabel "Done"@en .
+
+    actst:completed a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+        skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+        skos:broader actst:done ;
+        skos:definition """An activity that has been been completed and the results are still current and valid."""@en ;
+        skos:altLabel "Approved"@en,
+            "Accepted"@en,
+            "Final"@en,
+            "Signed Off"@en,
+            "Closed"@en ;
+        skos:prefLabel "Completed"@en .
+
+        actst:published a skos:Concept ;
+            dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+            skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+            skos:broader actst:completed ;
+            skos:definition """An activity that has been been completed, the results are still current and valid, and any artefacts or outcomes have been formally distributed or published."""@en ;
+            skos:altLabel "Distributed"@en ;
+            skos:prefLabel "Published"@en .
+
+    actst:obsolete a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+        skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+        skos:broader actst:done ;
+        skos:definition """An activity that has been been completed but the results are still no longer valid or relevant."""@en ;
+        skos:altLabel "Defunct"@en,
+            "Outdated"@en ;
+        skos:prefLabel "Obsolete"@en .
+
+    actst:superseded a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+        skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+        skos:broader actst:done ;
+        skos:definition """An activity that has been been completed but the results are no longer current as they have been replaced by a newer version."""@en ;
+        skos:prefLabel "Superseded"@en .
+
+actst:not-done a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+    skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/activity-status> ;
+	skos:definition """An activity that has been not been completed and completion is not anticipated."""@en ;
+    skos:prefLabel "Not Done"@en .
+
+    actst:never-started skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+        skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+        skos:broader actst:not-done ;
+        skos:definition """An activity that has been not been completed and completion is not anticipated, where the idea for the activity was not proposed for action."""@en ;
+        skos:altLabel "Not Submitted"@en ;
+        skos:prefLabel "Never Started"@en .
+
+    actst:declined a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+        skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+        skos:broader actst:not-done ;
+        skos:definition """An activity that has been not been completed and completion is not anticipated, where the idea for the activity was proposed but further action was declined."""@en ;
+        skos:prefLabel "Declined"@en .
+
+    actst:abandoned a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+        skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+        skos:broader actst:not-done ;
+        skos:definition """An activity that has been not been completed and completion is not anticipated, where the the activity commenced but was was stopped prior to submission, provisional completion, or review."""@en ;
+        skos:altLabel "Cancelled"@en ;
+        skos:prefLabel "Abandoned"@en .
+
+    actst:rejected a skos:Concept ;
+        dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://linked.data.gov.au/def/activity-status>;
+        skos:inScheme <https://linked.data.gov.au/def/activity-status> ;
+        skos:broader actst:not-done ;
+        skos:definition """An activity that has been not been completed and completion is not anticipated, where the the activity commenced and outputs submitted for review that was unsucessful and further action stopped."""@en ;
+        skos:prefLabel "Rejected"@en .
+
+actst:case-mgmt-status a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au/resources/professional-standards-library"^^xsd:anyURI ;
+	skos:prefLabel "Case Management Status"@en ;
+	skos:definition """Statuses applicable to a customer case or complaint activity."""@en ;
+    skos:member
+        actst:pending,
+        actst:in-progress,
+        actst:awaiting-input,
+        actst:escalated,
+        actst:provided,
+        actst:completed .

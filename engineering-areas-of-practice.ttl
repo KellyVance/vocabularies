@@ -1,59 +1,74 @@
-@prefix aop: <https://ref.engineersaustralia.org.au/def/areasofpractice/> .
-@prefix cs: <https://ref.engineersaustralia.org.au/def/areasofpractice>  .
-@prefix anzsrc-2020-for: <https://linked.data.gov.au/def/anzsrc-for/2020/> .
-@prefix anzsrc-cs: <https://linked.data.gov.au/def/anzsrc-for/2020> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sdo: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX aop: <https://ref.engineersaustralia.org.au/def/areasofpractice/>
+PREFIX anzsrc-2020-for: <https://linked.data.gov.au/def/anzsrc-for/2020/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX earl: <https://ref.engineersaustralia.org.au/def/ea-activity-roles/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://ref.engineersaustralia.org.au/def/areasofpractice>  a owl:Ontology ,
+<https://ref.engineersaustralia.org.au/def/areasofpractice> a owl:Ontology ,
         skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
     dcterms:created "2023-08-21"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
     dcterms:rightsHolder "Engineers Australia: Chartered Assessment" ;
-    dcterms:modified "2023-08-21"^^xsd:date ;
+    dcterms:modified "2024-03-01"^^xsd:date ;
     dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
+    dcterms:provenance "Initial derivation from the internal Engineers Australia database and cross referenced to latest representation of Areas of Practice and Areas of Engineering on the Engineers Australia website. Augmented with the DESTRA collection from information harvested from an Australian Defence Force webpage." ;
     dcterms:source "https://www.engineersaustralia.org.au/resources/professional-standards-library"^^xsd:anyURI ;
-    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
-      skos:hasTopConcept 
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: Chartered Assessment"
+                ]
+        ] ;
+    skos:hasTopConcept
+        aop:aeronauticalEngineering,                #Aeronautical engineering
         aop:aerospaceEngineering,                   #Aerospace engineering
-        aop:amusementRidesAndDevicesEngineering,    #Amusement rides and devices engineering
+        aop:amusementRideEngineering,               #Amusement rides and devices engineering
         aop:assetManagement,                        #Asset management
         aop:biomedicalEngineering,                  #Biomedical engineering
         aop:buildingServicesEngineering,            #Building Services Engineering
-        aop:chemicalEngineering,                    #Chemical engineering    
+        aop:chemicalEngineering,                    #Chemical engineering
         aop:civilEngineering,                       #Civil engineering
         aop:constructionEngineering,                #Construction engineering
         aop:costEngineering,                        #Cost engineering
+        aop:cyberEngineering,                       #Cyber engineering
         aop:electricalEngineering,                  #Electrical engineering
         aop:environmentalEngineering,               #Environmental engineering
         aop:fireSafetyEngineering,                  #Fire safety engineering
+        aop:fireSystemsEngineering,                 #Fire systems engineering
         aop:geotechnicalEngineering,                #Geotechnical engineering
-        aop:heritageAndConservationEngineering,     #Heritage and conservation engineering
-        aop:ITEE,                                   #Information, Telecommunications and Electronics Engineering
-        aop:leadershipAndManagement,                #Leadership and management
+        aop:geotechnicalMiningEngineering,          #Geotechnical (Mining) engineering
+        aop:itee,                                   #Information, Telecommunications and Electronics Engineering
+        aop:manufacturingEngineering,               #Manufacturing engineering
         aop:mechanicalEngineering,                  #Mechanical engineering
         aop:mechatronicsEngineering,                #Mechatronics engineering
+        aop:metallurgicalEngineering,               #Metallurgical engineering
+        aop:miningEngineering,                      #Mining engineering
         aop:navalArchitecture,                      #Naval architecture
         aop:oilAndGasPipelineEngineering,           #Oil and gas pipeline engineering
-        aop:petroleumAndReservoirEngineering,       #Petroleum engineering
+        aop:petroleumEngineering,                   #Petroleum engineering
         aop:pressureEquipmentDesignVerification,    #Pressure equipment design verification
         aop:projectManagement,                      #Project management
         aop:riskEngineering,                        #Risk engineering
         aop:structuralEngineering,                  #Structural engineering
         aop:subseaEngineering,                      #Subsea engineering
-        aop:systemsEngineering ;                    #Systems engineering                
-      skos:definition "An Area of Practice is a subgroup of the engineering profession that practitioners align their skills and work activities with. Formal education, informal education and work experience will influence how an engineering practitioner identifies with an Area of Practice.
-
-      Areas of Practice can be, but are not necessarily, sub-disciplines of engineering. They are typically multidisciplinary areas in which an engineer applies their skills. They are related to, and commonly composites of, Fields of Research and engineering sub-disciplines such as those found in the Australian and New Zealand Standard Research Classification (ANZSRC) Fields of Research."@en ;
-      skos:prefLabel "Engineers Australia Areas of Practice"@en .
+        aop:systemsEngineering ;                    #Systems engineering
+    skos:definition """An Area of Practice is a subgroup of the engineering profession that practitioners align their skills and work activities with. Formal education, informal education and work experience will influence how an engineering practitioner identifies with an Area of Practice.
+    
+    Areas of Practice can be, but are not necessarily, sub-disciplines of engineering. They are typically multidisciplinary areas in which an engineer applies their skills. They are related to, and commonly composites of, Fields of Research and engineering sub-disciplines such as those found in the Australian and New Zealand Standard Research Classification (ANZSRC) Fields of Research."""@en ;
+    skos:scopeNote "This concept scheme covers Areas of Practice recognised by Engineers Australia, Australian State and Territory Registers, and International Engineering Registers and Alliances. As such Areas of Practice are not universally recognised. See the collections for valid concepts for each jurisdiction or registration scheme."@en ;
+    skos:altLabel "Engineering Practice Area"@en,
+        "Areas of Engineering"@en ;
+    skos:prefLabel "Engineering Areas of Practice"@en .
 
 <https://linked.data.gov.au/org/engineersaustralia>
     a sdo:Organization ;
@@ -68,78 +83,255 @@
     sdo:name "Vance Kelly" ;
     sdo:identifier <https://orcid.org/0000-0003-2309-7004> .
 
+#COLLECTIONS
+
 aop:areas-of-practice-chartered a skos:Collection ;
-	skos:prefLabel "Areas of Practice"@en ;
+    dcterms:source "https://www.engineersaustralia.org.au/resources/professional-standards-library"^^xsd:anyURI ;
+	skos:prefLabel "Areas of Practice - Chartered Engineering"@en ;
 	skos:altLabel "Chartered Engineering Areas of Practice"@en ;
 	skos:definition """Areas of Practice for the assessment of chartered engineers by Engineers Australia."""@en ;
     skos:member
         aop:aerospaceEngineering,                   #Aerospace engineering
-        aop:amusementRidesAndDevicesEngineering,    #Amusement rides and devices engineering
+        aop:amusementRideEngineering,               #Amusement rides and devices engineering
         aop:assetManagement,                        #Asset management
         aop:biomedicalEngineering,                  #Biomedical engineering
         aop:buildingServicesEngineering,            #Building Services Engineering
-        aop:chemicalEngineering,                    #Chemical engineering    
+        aop:chemicalEngineering,                    #Chemical engineering
         aop:civilEngineering,                       #Civil engineering
         aop:constructionEngineering,                #Construction engineering
         aop:costEngineering,                        #Cost engineering
+        aop:cyberEngineering,                       #Cyber engineering
         aop:electricalEngineering,                  #Electrical engineering
         aop:environmentalEngineering,               #Environmental engineering
         aop:fireSafetyEngineering,                  #Fire safety engineering
         aop:geotechnicalEngineering,                #Geotechnical engineering
-        aop:heritageAndConservationEngineering,     #Heritage and conservation engineering
-        aop:ITEE,                                   #Information, Telecommunications and Electronics Engineering
-        aop:leadershipAndManagement,                #Leadership and management
+        aop:heritageConservationEngineering,        #Heritage and conservation engineering
+        aop:itee,                                   #Information, Telecommunications and Electronics Engineering
+        aop:engLeadership,                          #Leadership and management
         aop:mechanicalEngineering,                  #Mechanical engineering
         aop:mechatronicsEngineering,                #Mechatronics engineering
         aop:navalArchitecture,                      #Naval architecture
         aop:oilAndGasPipelineEngineering,           #Oil and gas pipeline engineering
-        aop:petroleumAndReservoirEngineering,       #Petroleum engineering
+        aop:petroleumEngineering,                   #Petroleum engineering
         aop:pressureEquipmentDesignVerification,    #Pressure equipment design verification
         aop:projectManagement,                      #Project management
         aop:riskEngineering,                        #Risk engineering
         aop:structuralEngineering,                  #Structural engineering
         aop:subseaEngineering,                      #Subsea engineering
-        aop:systemsEngineering                      #Systems engineering  
+        aop:systemsEngineering                      #Systems engineering
     .
 
 aop:areas-of-practice-ner a skos:Collection ;
-	skos:prefLabel "Areas of Engineering"@en ;
-	skos:altLabel "National Engineering Register Areas of Practice"@en ;
+    dcterms:source "https://www.engineersaustralia.org.au/resources/professional-standards-library"^^xsd:anyURI ;
+	skos:prefLabel "Areas of Engineering - National Engineering Register"@en ;
+	skos:altLabel "National Engineering Register Areas of Practice"@en,
+        "Areas of Engineering - NER"@en,
+        "Areas of Practice - National Engineering Register"@en ;
 	skos:definition """Areas of Practice for the assessment of engineers for the National Engineering Register."""@en ;
     skos:member
         aop:aerospaceEngineering,	                #Aerospace engineering
-        aop:amusementRidesAndDevicesEngineering,	#Amusement rides and devices engineering
+        aop:amusementRideEngineering,	            #Amusement rides and devices engineering
+        aop:assetManagement,                        #Asset management
         aop:biomedicalEngineering,	                #Biomedical engineering
         aop:buildingServicesEngineering,	        #Building Services Engineering
-        aop:chemicalEngineering,	                #Chemical engineering    
+        aop:chemicalEngineering,	                #Chemical engineering
         aop:civilEngineering,	                    #Civil engineering
+        aop:costEngineering,                        #Cost engineering
         aop:electricalEngineering,	                #Electrical engineering
         aop:environmentalEngineering,	            #Environmental engineering
         aop:fireSafetyEngineering,	                #Fire safety engineering
         aop:geotechnicalEngineering,	            #Geotechnical engineering
-        aop:itee,	                                #ITEE
+        aop:heritageConservationEngineering,        #Heritage and conservation engineering
+        aop:itee,	                                #Information, Telecommunications and Electronics Engineering
+        aop:engLeadership,                          #Leadership and management
         aop:mechanicalEngineering,	                #Mechanical engineering
         aop:mechatronicsEngineering,	            #Mechatronics engineering
         aop:navalArchitecture,	                    #Naval architecture
+        aop:oilAndGasPipelineEngineering,           #Oil and gas pipeline engineering
         aop:petroleumEngineering,	                #Petroleum engineering
-        aop:structuralEngineering,	                #Structural engineering
-
+        aop:pressureEquipmentDesignVerification,    #Pressure equipment design verification
+        aop:projectManagement,                      #Project management
+        aop:riskEngineering,                        #Risk engineering
+        aop:structuralEngineering	                #Structural engineering
+        aop:subseaEngineering,                      #Subsea engineering
+        aop:systemsEngineering                      #Systems engineering
     .
 
+aop:areas-of-practice-destra a skos:Collection ;
+    dcterms:source "https://cove.army.gov.au/article/rebuilding-intellectualedge-of-armys-technical-workforce#_edn6"^^xsd:anyURI ;
+	skos:prefLabel "Areas of Practice - DESTRA"@en ;
+	skos:altLabel "DESTRA Supported Areas of Practice"@e,
+        "DESTRA Areas of Practice"@en ;
+	skos:definition """Areas of Practice for Chartered engineers that are supported within the Defence Engineering and Senior Technician Recognition Agreement (DESTRA). DESTRA Areas of Practice only refers to the sub-set of eligible Chartered disciplines that apply to sponsorship and eligibility through the Australian Defence Force. It does not require attainment of these Areas of Practice through the DESTRA arrangement or preclude a person from being granted additional Areas of Practice or Areas of Engineering through other assessment pathways and registrations."""@en ;
+    skos:member
+        aop:engLeadership,                          #Leadership and management
+        aop:aerospaceEngineering,                   #Aerospace engineering
+        aop:assetManagement,                        #Asset management
+        aop:buildingServicesEngineering,            #Building Services Engineering
+        aop:chemicalEngineering,                    #Chemical engineering
+        aop:civilEngineering,                       #Civil engineering
+        aop:electricalEngineering,                  #Electrical engineering
+        aop:environmentalEngineering,               #Environmental engineering
+        aop:itee,                                   #Information, Telecommunications and Electronics Engineering
+        aop:mechanicalEngineering,                  #Mechanical engineering
+        aop:mechatronicsEngineering,                #Mechatronics engineering
+        aop:navalArchitecture,                      #Naval architecture
+        aop:projectManagement,                      #Project management
+        aop:riskEngineering,                        #Risk engineering
+        aop:structuralEngineering,                  #Structural engineering
+        aop:systemsEngineering                      #Systems engineering
+    .
+
+aop:areas-of-practice-act a skos:Collection ;
+    dcterms:source "https://www.planning.act.gov.au/professionals/regulation-and-responsibilities/professional-engineers-registration-scheme"^^xsd:anyURI ;
+	skos:prefLabel "Areas of Engineering - Australian Capital Territory Registration"@en ;
+	skos:definition """Areas of Engineering that may be associated with the Australian Capital Territory Registration of an Engineer."""@en ;
+    skos:member
+        aop:civilEngineering,                       #Civil engineering
+        aop:electricalEngineering,                  #Electrical engineering
+        aop:fireSafetyEngineering,                  #Fire safety engineering
+        aop:mechanicalEngineering,                  #Mechanical engineering
+        aop:structuralEngineering                   #Structural engineering
+    .
+
+aop:areas-of-practice-nsw a skos:Collection ;
+    dcterms:source "https://www.nsw.gov.au/business-and-economy/licences-and-credentials/building-and-trade-licences-and-registrations/register/professional-engineers"^^xsd:anyURI ;
+	skos:prefLabel "Areas of Engineering - New South Wales Registration"@en ;
+	skos:definition """Areas of Engineering that may be associated with the NSW Design and Building Practitioners."""@en ;
+    skos:member
+        aop:civilEngineering,                       #Civil engineering
+        aop:electricalEngineering,                  #Electrical engineering
+        aop:fireSafetyEngineering,                  #Fire safety engineering
+        aop:geotechnicalEngineering,                #Geotechnical engineering
+        aop:mechanicalEngineering,                  #Mechanical engineering
+        aop:structuralEngineering                   #Structural engineering
+    .
+
+aop:areas-of-practice-nt a skos:Collection ;
+    dcterms:source "https://bpb.nt.gov.au/practitioners"^^xsd:anyURI ;
+	skos:prefLabel "Areas of Engineering - Northern Territory Registration"@en ;
+	skos:definition """Areas of Engineering that may be associated with the NT Building Practitioners Board."""@en ;
+    skos:member
+        aop:hydraulicEngineering,                   #Hydraulic engineering
+        aop:mechanicalEngineering,                  #Mechanical engineering
+        aop:structuralEngineering                   #Structural engineering
+    .
+
+aop:areas-of-practice-qld a skos:Collection ;
+    dcterms:source "https://bpeq.qld.gov.au/for-engineers/areas-of-engineering"^^xsd:anyURI ;
+	skos:prefLabel "Areas of Engineering - Queensland Registration"@en ;
+	skos:definition """Areas of Engineering that may be associated with the Queensland State Registration of an Engineer."""@en ;
+    skos:member
+        aop:aeronauticalEngineering,                #Aeronautical engineering
+        aop:aerospaceEngineering,                   #Aerospace engineering
+        aop:biomedicalEngineering,                  #Biomedical engineering
+        aop:chemicalEngineering,                    #Chemical engineering
+        aop:civilEngineering,                       #Civil engineering
+        aop:electricalEngineering,                  #Electrical engineering
+        aop:environmentalEngineering,               #Environmental engineering
+        aop:fireSafetyEngineering,                  #Fire safety engineering
+        aop:geotechnicalEngineering,                #Geotechnical engineering
+        aop:geotechnicalMiningEngineering,          #Geotechnical (Mining) engineering
+        aop:itee,                                   #Information, Telecommunications and Electronics Engineering
+        aop:amusementRideEngineering,               #Amusement rides and devices engineering
+        aop:mechanicalEngineering,                  #Mechanical engineering
+        aop:mechatronicsEngineering,                #Mechatronics engineering
+        aop:metallurgicalEngineering,               #Metallurgical engineering
+        aop:miningEngineering,                      #Mining engineering
+        aop:navalArchitecture,                      #Naval architecture
+        aop:petroleumEngineering,                   #Petroleum engineering
+        aop:structuralEngineering                   #Structural engineering
+    .
+
+aop:areas-of-practice-tas a skos:Collection ;
+    dcterms:source "https://www.cbos.tas.gov.au/topics/licensing-and-registration/licensed-occupations/building-provider-licences/engineer"^^xsd:anyURI ;
+	skos:prefLabel "Areas of Engineering - Tasmania Registration"@en ;
+	skos:definition """Areas of Engineering that may be associated with the Tasmania Engineer Licence."""@en ;
+    skos:member
+        aop:civilEngineering,                       #Civil engineering
+        aop:fireSafetyEngineering,                  #Fire safety engineering
+        aop:buildingServicesEngineering             #Building services engineering
+    .
+
+aop:areas-of-practice-vic a skos:Collection ;
+    dcterms:source "https://www.consumer.vic.gov.au/licensing-and-registration/professional-engineers/who-needs-to-be-registered"^^xsd:anyURI ;
+	skos:prefLabel "Areas of Engineering - Victoria Registration"@en ;
+	skos:definition """Areas of Engineering that may be associated with the Victoria State Registration of an Engineer."""@en ;
+    skos:member
+        aop:civilEngineering,                       #Civil engineering
+        aop:electricalEngineering,                  #Electrical engineering
+        aop:fireSafetyEngineering,                  #Fire safety engineering
+        aop:mechanicalEngineering,                  #Mechanical engineering
+        aop:structuralEngineering                   #Structural engineering
+    .
+
+aop:areas-of-practice-wa a skos:Collection ;
+    dcterms:source "https://www.wa.gov.au/government/multi-step-guides/building-engineering-registration/building-engineering-practitioner-registration-new"^^xsd:anyURI ;
+	skos:prefLabel "Areas of Engineering - Western Australia Registration"@en ;
+	skos:definition """Areas of Engineering that may be associated with the Western Australia State Registration of an Engineer."""@en ;
+    skos:member
+        aop:civilEngineering,                       #Civil engineering
+        aop:fireSafetyEngineering,                  #Fire safety engineering
+        aop:fireSystemsEngineering,                 #Fire systems engineering
+        aop:mechanicalEngineering,                  #Mechanical engineering
+        aop:structuralEngineering                   #Structural engineering
+    .
+
+
+aop:areas-of-practice-international a skos:Collection ;
+    dcterms:source "https://www.apec-emf.org/about-apec.html"^^xsd:anyURI ;
+	skos:prefLabel "Areas of Practice - International"@en ;
+	skos:definition """The aggregated disciplines recognised by international registers such as the APEC Engineer Co-ordinating Committee for registration (APEC), International Professional Engineers Agreement (IPEA), The Register of International Engineering Technologists (IETA), and International Engineering Technicians (AIET) ."""@en ;
+    skos:member
+        aop:aeronauticalEngineering,                #Aeronautical engineering
+        aop:aerospaceEngineering,                   #Aerospace engineering
+        aop:biomedicalEngineering                   #Biomedical engineering
+        aop:buildingServicesEngineering             #Building services engineering
+        aop:chemicalEngineering,                    #Chemical engineering
+        aop:civilEngineering,                       #Civil engineering
+        aop:electricalEngineering,                  #Electrical engineering
+        aop:environmentalEngineering,               #Environmental engineering
+        aop:fireSafetyEngineering                   #Fire safety engineering
+        aop:geotechnicalEngineering,                #Geotechnical engineering
+        aop:heritageConservationEngineering,        #Heritage and conservation engineering
+        aop:itee,                                   #Information, Telecommunications and Electronics Engineering
+        aop:engLeadership,                          #Leadership and management
+        aop:manufacturingEngineering,               #Mnaufacturing engineering
+        aop:mechanicalEngineering,                  #Mechanical engineering
+        aop:navalArchitecture,                      #Naval architecture
+        aop:oilAndGasPipelineEngineering,           #Oil and Gas Pipeline Engineering
+        aop:petroleumEngineering,                   #Petroleum Engineering
+        aop:pressureEquipmentDesignVerification,    #Pressure equipment design verification
+        aop:structuralEngineering                   #Structural engineering
+        .
+
+#CONCEPTS
+
+aop:aeronauticalEngineering a skos:Concept ;
+    dcterms:source "https://bpeq.qld.gov.au/registration/areas-of-engineering-definitions/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:closeMatch anzsrc-2020-for:4001 ;
+    skos:definition """Aeronautical engineering concerns the theory, technology, and practice of flight within the Earth's atmosphere, the design of aircraft and propulsion systems and study of the aerodynamic performance of aircraft and construction materials.
+    
+    Obtained by having a Civil Aviation Safety Authority Instrument of Authority"""@en ;
+    skos:prefLabel "Aeronautical engineering"@en .
+
 aop:aerospaceEngineering a skos:Concept ;
-    rdfs:isDefinedBy anzsrc-cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/aerospace_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:exactMatch anzsrc-2020-for:4001 ;
-    skos:definition "Aerospace engineering deals with the development of aircraft and spacecraft. The purpose of aerospace engineering is to achieve optimal integrated aerospace systems."@en ;
+    skos:definition """Aerospace engineering deals with the development of aircraft and spacecraft. The purpose of aerospace engineering is to achieve optimal integrated aerospace systems."""@en ;
     skos:prefLabel "Aerospace engineering"@en .
 
 aop:amusementRideEngineering a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/amusement_rides_and_devices_aop_aoe_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:broadMatch anzsrc-2020-for:4099 ;
     dcterms:hasPart
         anzsrc-2020-for:401704,
@@ -149,34 +341,36 @@ aop:amusementRideEngineering a skos:Concept ;
         anzsrc-2020-for:400802,
         anzsrc-2020-for:400805,
         anzsrc-2020-for:401702 ;
-    skos:definition "Amusement rides and devices engineering deals with certification in line with the relevant Australian Standard of design, construction, operation, inspection, testing, service and maintenance associated with fixed and mobile amusement rides."@en ;
+    skos:definition """Amusement ride and devices engineering deals with certification in line with the relevant Australian Standard of design, construction, operation, inspection, testing, service and maintenance associated with fixed and mobile amusement rides."""@en ;
+    skos:altLabel "In-Service Inspection of Amusement Rides and Devices Engineering"@en ;
     skos:prefLabel "Amusement rides and devices engineering"@en .
 
 aop:assetManagement a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/asset_management_aop_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:narrowMatch 
         anzsrc-2020-for:400508,
         anzsrc-2020-for:401704;
-    skos:definition "Asset management is the coordinated activity of an organisation to realise value from assets."@en ;
+    skos:definition """Asset management is the coordinated activity of an organisation to realise value from assets."""@en ;
     skos:prefLabel "Asset management"@en .
 
 aop:biomedicalEngineering a skos:Concept ;
-    rdfs:isDefinedBy anzsrc-cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/biomedical_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:exactMatch anzsrc-2020-for:4003 ;
-    skos:definition "Biomedical engineering deals with combining design and problem-solving skills in applying engineering principles and design concepts to medicine and biology for healthcare purposes."@en ;
+    skos:definition """Biomedical engineering deals with combining design and problem-solving skills in applying engineering principles and design concepts to medicine and biology for healthcare purposes."""@en ;
     skos:prefLabel "Biomedical engineering"@en .
 
 aop:buildingServicesEngineering a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/building_services_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:definition "Building services engineering deals with the internal environmental and environmental impact of a building. Its purpose is to achieve optimal integrated building systems incorporating environmental control and safety provisions for the comfort and well-being of the occupants of the built environment."@en ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:definition """Building services engineering deals with the internal environmental and environmental impact of a building. Its purpose is to achieve optimal integrated building systems incorporating environmental control and safety provisions for the comfort and well-being of the occupants of the built environment."""@en ;
     skos:broadMatch anzsrc-2020-for:4099 ;
     dcterms:hasPart 
         anzsrc-2020-for:401701,
@@ -189,116 +383,168 @@ aop:buildingServicesEngineering a skos:Concept ;
     skos:prefLabel "Building services engineering"@en .
 
 aop:chemicalEngineering a skos:Concept ;
-    rdfs:isDefinedBy anzsrc-cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/chemical_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:exactMatch anzsrc-2020-for:4004 ;
-    skos:definition "Chemical engineering deals with the application of physical sciences (physics and chemistry) and life sciences (microbiology and biochemistry), together with applied mathematics and economics to produce, transform, transport, and properly use chemicals, materials and energy."@en ;
+    skos:definition """Chemical engineering deals with the application of physical sciences (physics and chemistry) and life sciences (microbiology and biochemistry), together with applied mathematics and economics to produce, transform, transport, and properly use chemicals, materials and energy."""@en ;
     skos:prefLabel "Chemical engineering"@en .
 
 aop:civilEngineering a skos:Concept ;
-    rdfs:isDefinedBy anzsrc-cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/civil_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:exactMatch anzsrc-2020-for:4005 ;
-    skos:definition "Civil engineering deals with the design, construction and maintenance of the physical and naturally built environment. Civil engineers generally specialise in one of a number of sub-disciplines."@en ;
+    skos:related aop:geotechnicalEngineering ;
+    skos:note "Under state registration in Victoria, Western Australia, and the ACT, this area of practice encompasses Geotechnical Engineering."@en ;
+    skos:definition """Civil engineering deals with the design, construction and maintenance of the physical and naturally built environment. Civil engineers generally specialise in one of a number of sub-disciplines."""@en ;
     skos:prefLabel "Civil engineering"@en .
 
 aop:constructionEngineering a skos:Concept ;
-    rdfs:isDefinedBy anzsrc-cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/construction_aop_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:exactMatch anzsrc-2020-for:400504 ;
-    skos:definition "Construction engineering deals with all areas of construction of public, commercial and industrial infrastructure, structures and plant including brownfield and greenfield sites."@en ;
+    skos:definition """Construction engineering deals with all areas of construction of public, commercial and industrial infrastructure, structures and plant including brownfield and greenfield sites."""@en ;
     skos:altLabel "Construction"@en ;
     skos:prefLabel "Construction engineering"@en .
 
 aop:costEngineering a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/cost_engineering_aop_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:broadMatch anzsrc-2020-for:4099 ;
     dcterms:hasPart 
         anzsrc-2020-for:400508,
         anzsrc-2020-for:401704,
         anzsrc-2020-for:350713 ;
-    skos:definition "Cost engineering deals with the analysis of cost and timing outcomes on engineered assets, programs, projects, products and services."@en ;
+    skos:definition """Cost engineering deals with the analysis of cost and timing outcomes on engineered assets, programs, projects, products and services."""@en ;
     skos:prefLabel "Cost engineering"@en .
 
+aop:cyberEngineering a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2025-02/cyber-engineering-aop-v1-feb-2025.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:broadMatch anzsrc-2020-for:46 ;
+    skos:definition """Cyber engineering involves the design, implementation, operation, maintenance, response and improvement of information security measures to protect the confidentiality, integrity, availability and safety of systems and system security measures to assure the security of hardware, software, firmware and network components used to store, process, transmit, actuate and sense systems."""@en ;
+    skos:prefLabel "Cyber engineering"@en .
+
 aop:electricalEngineering a skos:Concept ;
-    rdfs:isDefinedBy anzsrc-cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/electrical_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:exactMatch anzsrc-2020-for:4008 ;
-    skos:definition "Electrical engineering deals with electricity generation, transmission, distribution, electrical equipment manufacture, instrumentation and control systems."@en ;
+    skos:related aop:itee ;
+    skos:note "Under state registration in Victoria and the ACT, this area of practice encompasses Information, telecommunications and electronics engineering."@en ;
+    skos:definition """Electrical engineering deals with electricity generation, transmission, distribution, electrical equipment manufacture, instrumentation and control systems."""@en ;
     skos:prefLabel "Electrical engineering"@en .
 
 aop:environmentalEngineering a skos:Concept ;
-    rdfs:isDefinedBy anzsrc-cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-08/environmental_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:exactMatch anzsrc-2020-for:4011 ;
-    skos:definition "Environmental engineering uses the core knowledge of the environment to create innovative solutions for a sustainable future."@en ;
+    skos:definition """Environmental engineering uses the core knowledge of the environment to create innovative solutions for a sustainable future."""@en ;
     skos:prefLabel "Environmental engineering"@en .
 
 aop:fireSafetyEngineering a skos:Concept ;
-    rdfs:isDefinedBy anzsrc-cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/fire_safety_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:exactMatch anzsrc-2020-for:400507 ;
-    skos:definition "Fire safety engineering deals with the protection of life, property, and environment through the application of engineering principles, rules and judgement to the phenomenon of fire, its physical effects and the reaction and behaviour of people to fire."@en ;
-    skos:prefLabel "Fire safety engineering"@en .   
+    skos:definition """Fire safety engineering deals with the protection of life, property, and environment through the application of engineering principles, rules and judgement to the phenomenon of fire, its physical effects and the reaction and behaviour of people to fire."""@en ;
+    skos:prefLabel "Fire safety engineering"@en .
+
+aop:fireSystemsEngineering a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2024-07/fire-systems-engineering-area-engineering-july-2024.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:closeMatch anzsrc-2020-for:400507 ;
+    skos:definition """Fire systems engineering deals with defining the scope and hazard level of fire systems of buildings, interpreting detailed fire service requirements, evaluating and applying current technologies and components to ensure building code compliance."""@en ;
+    skos:scopeNote """Only applicable for state registration Western Australia. Not available for Chartered or the National Engineering Register."""@en ;
+    skos:prefLabel "Fire systems engineering"@en .
 
 aop:geotechnicalEngineering a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/geotechnical_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:broadMatch anzsrc-2020-for:40 ;
     skos:narrowMatch 
         anzsrc-2020-for:400502,
         anzsrc-2020-for:401902 ;
-    skos:definition "Geotechnical engineering deals with the mechanics of soil and rock and its applications to engineering elements."@en ;
+    skos:related aop:civilEngineering ;
+    skos:note "Under state registration in Victoria, Western Australia, and the ACT, this area of practice is considered part of Civil Engineering."@en ;
+    skos:definition """Geotechnical engineering deals with the mechanics of soil and rock and its applications to engineering elements."""@en ;
     skos:prefLabel "Geotechnical engineering"@en .
 
+aop:geotechnicalMiningEngineering a skos:Concept ;
+    dcterms:source "https://bpeq.qld.gov.au/registration/areas-of-engineering-definitions/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:broadMatch anzsrc-2020-for:40 ;
+    skos:narrowMatch 
+        anzsrc-2020-for:401902 ;
+    skos:definition """Geotechnical (Mining) engineering investigates plans, designs and monitors the process of creating fit-for-purpose mining excavations associated with the surface or underground excavation of an in-situ rock mass, or matters directly associated therewith, including the construction or excavation of in-pit or underground infrastructure, the construction of waste dumps and stockpiles, or tailings dams, and the placement of backfill.
+    
+    Assessed by Australasian Institute of Mining and Metallurgy."""@en ;
+    skos:prefLabel "Geotechnical (Mining) engineering"@en .
+
 aop:heritageConservationEngineering a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/heritage_and_conservation_engineering_-_aop_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:broadMatch anzsrc-2020-for:4099 ;
     dcterms:hasPart
         anzsrc-2020-for:330103,
         anzsrc-2020-for:43,
-        anzsrc-2020-for:400504,
-    skos:definition "Heritage and conservation engineering deals with the application and adaptation of all the traditional disciplines of engineering, together with an understanding of the elementary scientific principles involved which might not be directly referenced in current practice procedures."@en ;
+        anzsrc-2020-for:400504 ;
+    skos:definition """Heritage and conservation engineering deals with the application and adaptation of all the traditional disciplines of engineering, together with an understanding of the elementary scientific principles involved which might not be directly referenced in current practice procedures."""@en ;
     skos:prefLabel "Heritage and conservation engineering"@en .
 
-aop:ITEE a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
+aop:hydraulicEngineering a skos:Concept ;
+    dcterms:source "https://bpb.nt.gov.au/practitioners"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:closeMatch anzsrc-2020-for:401209 ;
+    skos:definition """A Hydraulic Engineer may certify the design and/or construction of plumbing and draining works and hydraulic fire services servicing buildings or structures of all classes, including plumbing and drainage works (including on-site sewerage treatment systems), fire hydrants, fire hose reels and fire sprinklers/suppression systems, in accordance with the provisions of the Building Code of Australia and Building Regulations."""@en ;
+    skos:prefLabel "Hydraulic engineering"@en .
+
+aop:itee a skos:Concept ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/information_technology_and_electronics_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:broadMatch anzsrc-2020-for:40 ;
     dcterms:hasPart
         anzsrc-2020-for:4006,
         anzsrc-2020-for:46,
         anzsrc-2020-for:4009,
         anzsrc-2020-for:4612,
-        anzsrc-2020-for:4609,
-    skos:definition "Information, Telecommunications and Electronics Engineering (ITEE) deals with scientific and engineering design to develop computer modelling tools, broadband capability, improve telecommunications systems, hardware and software, systems for media broadcasting and sound, and sophisticated electronics."@en ;
-    skos:notation "ITEE" ;
+        anzsrc-2020-for:4609 ;
+    skos:related aop:electricalEngineering ;
+    skos:note "Under state registration in Victoria and the ACT, this area of practice is considered part of Electrical Engineering."@en ;
+    skos:definition """Information, Telecommunications and Electronics Engineering (itee) deals with scientific and engineering design to develop computer modelling tools, broadband capability, improve telecommunications systems, hardware and software, systems for media broadcasting and sound, and sophisticated electronics."""@en ;
+    skos:notation "itee" ;
     skos:prefLabel "Information, telecommunications and electronics engineering"@en .
 
 aop:engLeadership a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/leadership_and_management_aop_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:broadMatch anzsrc-2020-for:4099 ;
     dcterms:hasPart
         anzsrc-2020-for:3507,
@@ -307,24 +553,35 @@ aop:engLeadership a skos:Concept ;
         anzsrc-2020-for:401407,
         anzsrc-2020-for:401704,
         anzsrc-2020-for:350713 ;
-    skos:definition "Leadership and management deals with business management or administrative functions in an engineering environment."@en ;
+    skos:definition """Leadership and management deals with business management or administrative functions in an engineering environment."""@en ;
     skos:altLabel "Engineering leadership and management"@en ;
     skos:prefLabel "Leadership and management in engineering"@en .
 
+aop:manufacturingEngineering a skos:Concept ;
+    dcterms:source "https://unesdoc.unesco.org/ark:/48223/pf0000212856/PDF/189753eng.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:exactMatch anzsrc-2020-for:4014 ;
+    skos:definition """Research, design and planning of manufacturing systems and processes. Component engineering - assuring availability of parts in manufacturing processes.
+    
+    Manufacturing engineering is that branch of professional engineering requiring such education and experience as is necessary to understand and apply engineering procedures in manufacturing processes and methods of production of industrial products. It requires the ability to plan the practices of manufacturing; to research and develop tools, processes, machines, and equipment; and to integrate the facilities and systems for producing quality products with the optimal expenditure of capital."""@en ;
+    skos:prefLabel "Manufacturing engineering"@en .
+
 aop:mechanicalEngineering a skos:Concept ;
-    rdfs:isDefinedBy anzsrc-cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/mechanical_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:exactMatch anzsrc-2020-for:4017 ;
-    skos:definition "Mechanical engineering deals with the application of the principles of engineering and physics with the study of advanced materials for the design, analysis, manufacturing, and maintenance of mechanical systems."@en ;
+    skos:definition """Mechanical engineering deals with the application of the principles of engineering and physics with the study of advanced materials for the design, analysis, manufacturing, and maintenance of mechanical systems."""@en ;
     skos:prefLabel "Mechanical engineering"@en .
 
 aop:mechatronicsEngineering a skos:Concept ;
-    rdfs:isDefinedBy anzsrc-cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/mechatronics_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:broadMatch anzsrc-2020-for:40 ;
     dcterms:hasPart
         anzsrc-2020-for:4007,
@@ -332,80 +589,105 @@ aop:mechatronicsEngineering a skos:Concept ;
         anzsrc-2020-for:4014,
         anzsrc-2020-for:400203,
         anzsrc-2020-for:4601 ;
-    skos:definition "Mechatronics engineering is multidisciplinary and deals with integrating electrical and mechanical systems. It can include a combination of robotics, electronics, computing, telecommunications, systems, control, product engineering, and electronics to create functional, smart products."@en ;
+    skos:definition """Mechatronics engineering is multidisciplinary and deals with integrating electrical and mechanical systems. It can include a combination of robotics, electronics, computing, telecommunications, systems, control, product engineering, and electronics to create functional, smart products."""@en ;
     skos:prefLabel "Mechatronics engineering"@en .
 
+aop:metallurgicalEngineering a skos:Concept ;
+    dcterms:source "https://bpeq.qld.gov.au/registration/areas-of-engineering-definitions/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:closeMatch anzsrc-2020-for:4019 ;
+    skos:definition """Metallurgical engineering involves the investigation, planning, design and the process of converting minerals produced by mining into primary commodities of economic value in sufficient quantity to be used in the manufacture of economic goods.
+    
+    Assessed by Australasian Institute of Mining and Metallurgy."""@en ;
+    skos:prefLabel "Metallurgical engineering"@en .
+
+aop:miningEngineering a skos:Concept ;
+    dcterms:source "https://bpeq.qld.gov.au/registration/areas-of-engineering-definitions/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:closeMatch anzsrc-2020-for:4019 ;
+    skos:definition """Mining engineering deals with the investigation, planning, design and the process of extracting naturally occurring minerals containing useful commodities from the earth's crust.
+    
+    Assessed by Australasian Institute of Mining and Metallurgy."""@en ;
+    skos:prefLabel "Mining engineering"@en .
+
 aop:navalArchitecture a skos:Concept ;
-    rdfs:isDefinedBy anzsrc-cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/naval_architecture_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:exactMatch anzsrc-2020-for:401502 ;
-    skos:definition "Naval architecture deals with the safe design and specification of marine vessels and structures. The naval architect can also be involved in the construction, repair, refit or operation of such marine vessels and structures."@en ;
+    skos:definition """Naval architecture deals with the safe design and specification of marine vessels and structures. The naval architect can also be involved in the construction, repair, refit or operation of such marine vessels and structures."""@en ;
     skos:prefLabel "Naval architecture"@en .
 
-aop:pipelineEngineering a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
+aop:oilAndGasPipelineEngineering a skos:Concept ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/oil_and_gas_pipeline_engeering_aop_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:broadMatch anzsrc-2020-for:401999 ;
     dcterms:hasPart
         anzsrc-2020-for:4012,
         anzsrc-2020-for:400504,
-        anzsrc-2020-for:4004,
-    skos:definition "Oil and gas pipeline engineering deals with the efficient transport of fluids. This area of practice relates only to the transmission of petroleum and gas and related fluid pipelines."@en ;
+        anzsrc-2020-for:4004 ;
+    skos:definition """Oil and gas pipeline engineering deals with the efficient transport of fluids. This area of practice relates only to the transmission of petroleum and gas and related fluid pipelines."""@en ;
     skos:prefLabel "Oil and gas pipeline engineering"@en .
 
 aop:petroleumEngineering a skos:Concept ;
-    rdfs:isDefinedBy anzsrc-cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/petroleum_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:exactMatch anzsrc-2020-for:401907 ;
-    skos:definition "Petroleum engineering deals with four main sub-disciplines which are reservoir, drilling, production, and formation evaluation engineering."@en ;
+    skos:definition """Petroleum engineering deals with four main sub-disciplines which are reservoir, drilling, production, and formation evaluation engineering."""@en ;
     skos:altLabel "Petroleum and reservoir engineering"@en ;
     skos:prefLabel "Petroleum Engineering"@en .
 
 
-aop:pressureEquipDesign a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
+aop:pressureEquipmentDesignVerification a skos:Concept ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/pressure_equipment_design_aop_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:broadMatch anzsrc-2020-for:4099 ;
-    skos:definition "Pressure Equipment Design Verification deals with the process which assures the integrity of pressure vessels, boilers, pressure piping, and gas cylinders for the stated design and operating conditions."@en ;
+    skos:definition """Pressure Equipment Design Verification deals with the process which assures the integrity of pressure vessels, boilers, pressure piping, and gas cylinders for the stated design and operating conditions."""@en ;
     skos:prefLabel "Pressure equipment design verification"@en .
 
 aop:projectManagement a skos:Concept ;
-    rdfs:isDefinedBy anzsrc-cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/project_management_aop_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:exactMatch anzsrc-2020-for:350713 ;
-    skos:definition "Project management deals with the discipline of initiating, planning, executing, controlling, and closing the work of a team to achieve specific goals and meet specific success criteria."@en ;
+    skos:definition """Project management deals with the discipline of initiating, planning, executing, controlling, and closing the work of a team to achieve specific goals and meet specific success criteria."""@en ;
     skos:prefLabel "Project management"@en .
 
 aop:riskEngineering a skos:Concept ;
-    rdfs:isDefinedBy anzsrc-cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/risk_engineering_aop_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:exactMatch anzsrc-2020-for:401005 ;
-    skos:definition "Risk engineering deals with the effective and efficient application of engineering methodologies and approaches at every step of the risk management cycle, across strategic, operational, financial or portfolio/program/project objectives."@en ;
+    skos:definition """Risk engineering deals with the effective and efficient application of engineering methodologies and approaches at every step of the risk management cycle, across strategic, operational, financial or portfolio/program/project objectives."""@en ;
     skos:prefLabel "Risk engineering"@en .
 
 aop:structuralEngineering a skos:Concept ;
-    rdfs:isDefinedBy anzsrc-cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-08/structural_engineering_aop_aoe_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:exactMatch anzsrc-2020-for:400510 ;
-    skos:definition "Structural engineering deals with the understanding, prediction, and calculation of the stability, strength and rigidity of built structures."@en ;
+    skos:definition """Structural engineering deals with the understanding, prediction, and calculation of the stability, strength and rigidity of built structures."""@en ;
     skos:prefLabel "Structural engineering"@en .
 
 aop:subseaEngineering a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-07/subsea_engineering_aop_-_final.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:broadMatch anzsrc-2020-for:4015 ;
     dcterms:hasPart
         anzsrc-2020-for:4011,
@@ -419,14 +701,14 @@ aop:subseaEngineering a skos:Concept ;
         anzsrc-2020-for:401005,
         anzsrc-2020-for:401907,
         anzsrc-2020-for:350713 ;
-    skos:definition "Subsea engineering deals with the design, construction, installation, operation, maintenance and decommissioning of equipment in the ocean or on the seabed."@en ;
+    skos:definition """Subsea engineering deals with the design, construction, installation, operation, maintenance and decommissioning of equipment in the ocean or on the seabed."""@en ;
     skos:prefLabel "Subsea engineering"@en .
 
 aop:systemsEngineering a skos:Concept ;
-    rdfs:isDefinedBy anzsrc-cs: ;
     dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-06/systems-engineering-area-practice-v2-may-2023.pdf"^^xsd:anyURI ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/areasofpractice> ;
     skos:exactMatch anzsrc-2020-for:401006 ;
-    skos:definition "Systems engineering deals with the interdisciplinary approach and means to enable the realisation of successful systems."@en ;
+    skos:definition """Systems engineering deals with the interdisciplinary approach and means to enable the realisation of successful systems."""@en ;
     skos:prefLabel "Systems engineering"@en .

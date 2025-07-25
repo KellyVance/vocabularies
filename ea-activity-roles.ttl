@@ -1,0 +1,675 @@
+PREFIX earl: <https://ref.engineersaustralia.org.au/def/ea-activity-roles/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://ref.engineersaustralia.org.au/def/ea-activity-roles> a owl:Ontology,
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
+    dcterms:created "2023-09-06"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:modified "2024-03-01"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+    rdfs:seeAlso <https://ref.engineersaustralia.org.au/def/ea-party-roles> ;
+    skos:hasTopConcept
+        earl:actor,
+        earl:advisor,
+        earl:applicant,
+        earl:assistant,
+        earl:chairperson,
+        earl:chairperson-immediate-past,
+        earl:change-partner,
+        earl:contributor,
+        earl:coordinator,
+        earl:creator,
+        earl:creditor,
+        earl:data-governance-lead,
+        earl:data-owner,
+        earl:data-steward,
+        earl:debtor,
+        earl:deputy-chairperson,
+        earl:deputy-president,
+        earl:doc-verifier,
+        earl:ea-administrator,
+        earl:ea-assessor,
+        earl:editor,
+        earl:educator,
+        earl:event-host,
+        earl:event-sponsor,
+        earl:exec-sponsor,
+        earl:originator,
+        earl:participant,
+        earl:president,
+        earl:president-immediate-past,
+        earl:privacy-officer,
+        earl:project-leader,
+        earl:project-manager,
+        earl:project-member,
+        earl:publisher,
+        earl:secretary,
+        earl:technical-data-steward,
+        earl:technical-service-owner,
+        earl:user ;
+    skos:definition """The roles an organisation, group, or individual can perform when undertaking an activity or action. Activity roles typically describe how a party is involved in an activity, rather than describing how two parties interact. How parties are related is described by a party role classification."""@en ;
+    skos:scopeNote """In its strictest sense, roles relate to participation in an activity. As such most defined positions within an organisation will undertake multiple roles. Despite this, some roles are commonly synonymous with their associated positions."""@en ;
+    skos:altLabel "Engineers Australia Roles"@en ;
+    skos:prefLabel "Engineers Australia Activity Roles"@en .
+
+<https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+<https://orcid.org/0000-0003-2309-7004> a sdo:Person,
+        owl:NamedIndividual ;
+    sdo:affiliation [ a sdo:Organization ;
+            sdo:name "Engineers Australia" ;
+            sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI ] ;
+    sdo:identifier <https://orcid.org/0000-0003-2309-7004> ;
+    sdo:name "Vance Kelly" .
+
+earl:actor a skos:Concept ;
+    dcterms:source "https://www.iiba.org/business-analysis-blogs/user-story--useful-technique-but-not-always-optimal/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """An individual who initiates an action that may trigger a system behavior or define a system feature. In the context of a user story, the actor is the person or role that will benefit from the system feature or action. The actor is typically a user, customer, or stakeholder who interacts with the system. User stories are comminly written in the format: As a (actor) I need to (action) so that (result). For example: As a Customer Service manager, I need to see a list of active enquiries so that I can triage to members of the Customer Service Team."""@en ;
+    skos:prefLabel "Actor"@en .
+
+earl:advisor a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """An individual acting in an advisory capacity to an activity or project."""@en ;
+    skos:altLabel "Project Advisor"@en,
+        "Subject Matter Expert"@en,
+        "SME"@en ;
+    skos:prefLabel "Advisor"@en .
+
+earl:applicant a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """An applicant is an individual or organisation who has applied for membership, access to a service, or a position. An applicant will trigger and assessment of eligibility process."""@en ;
+    skos:prefLabel "Applicant"@en .
+
+earl:assistant a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """An individual who assists in the execution of an activity or project in a general capacity and who assists the primary creators and contributors to a projects content or design."""@en ;
+    skos:altLabel "General Labour"@en,
+        "Worker"@en,
+        "Common Labour"@en,
+        "Helper"@en ;
+    skos:prefLabel "Assistant"@en .
+
+earl:chairperson a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """An individual who chairs, or heads a board or committee."""@en ;
+    skos:scopeNote """The chairperson may refer to the leadership role for an organisation's board of directors. A Chair is the leader of the Board and not necessarily an employee or group member, whereas Presidents are typically the most senior employee or senior member of an independent group or organisation. Chairpersons may work outside the daily operations of an organisation. The President and Chair relationships with the Chief Executive Officer (CEO) may vary depending on the structure of the organisation"""@en ;
+    skos:altLabel "Chairman"@en,
+        "Chairwoman"@en,
+        "Chairperson"@en ;
+    skos:prefLabel "Chair"@en .
+
+earl:chairperson-immediate-past a skos:Concept ;
+    dcterms:source "https://www.qls.com.au/About-us/Governance/Council-and-committees/Role-of-the-Immediate-Past-President"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """The individual who held the chairperson position prior to the current chairperson. The primary purpose of the Immediate Past Chair is to support and facilitate a smooth transition for the incoming Chair in relation to the work of the Society and the role of the Chair during this transitional period. """@en ;
+    skos:altLabel "Immediate Past Chairman"@en,
+        "Immediate Past Chairwoman"@en,
+        "Immediate Past Chairperson"@en ;
+    skos:prefLabel "Immediate Past Chair"@en .
+
+earl:change-partner a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """A Change Partner develops and delivers change management plans to support impacted people through successful change and works closely with Project/Program Leads and teams."""@en ;
+    skos:prefLabel "Change Partner"@en .
+
+earl:contributor a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:exactMatch dcterms:contributor ;
+    skos:definition """A party who contributes to a resource, document, product, or service without being a primary creator or author."""@en ;
+    skos:prefLabel "Contributor"@en .
+
+earl:creditor a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:related <https://ref.engineersaustralia.org.au/def/ea-party-roles/supplier> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """The party who sells, recieves payment for, or provides an offering.
+    
+    The seller role in a transaction activity is dependent on, and intrinsically related to the Supplier relationship."""@en ;
+    skos:altLabel "Seller"@en ;
+    skos:prefLabel "Creditor"@en .
+
+earl:debtor a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:related <https://ref.engineersaustralia.org.au/def/ea-party-roles/customer> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """The party to a transaction who is the recipient of a product or service is provided. The party who buys, pays for, or reveives an offering.
+    
+    The buyer role in a transaction activity is dependent on, and intrinsically related to the Customer relationship."""@en ;
+    skos:altLabel "Buyer"@en ;
+    skos:prefLabel "Debtor"@en .
+
+earl:user a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """A party who uses a resource as part of an activity."""@en ;
+    skos:altLabel "Consumer"@en ;
+    skos:prefLabel "User"@en .
+
+earl:data-governance-lead a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """A Data Governance and Management SME who advises and coordinates consistent organisation-wide Data Governance best practice, policy & framework adoption
+    - Serve as a subject matter expert (SME) for Data Governance.
+    - Define what data quality means for the organisation and how it is measured.
+    - Curate and maintain Business Glossaries, Vocabularies, and other repositories of shared terminology to build enterprise-wide consistency.
+    - Manage and coordinate the operational roll out of consistent data governance across the organisation.
+    - Responsible for maintaining and delivering the data governance roadmap.
+    - Provide guidance and support to Data Owners, Data Stewards and the Data Community on the effective implementation of data governance and data management.
+    - Monitor the implementation and adoption of Data Governance Policy and Procedures.
+    
+    Decides what rules and principles that data must adhere to."""@en ;
+    skos:prefLabel "Data Governance Lead"@en .
+
+earl:data-owner a skos:Concept ;
+    dcterms:source "https://datamanagement.wiki/role/data_owner"^^xsd:anyURI ;
+    dcterms:references <https://www.edpb.europa.eu/sme-data-protection-guide/data-controller-data-processor_en> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:scopeNote """Data Owners take a holistic view of a dataset focused on coherent and consistent application of rules and principles to that subject. Typically they will own datasets primarily associated with their business function. However, those datasets may include some aspects that are primarily used by other functions within an organisation. In these cases the owner is accountable for managing the dataset as a coherent entity, but the day-to-day application may be spread across data stewards from multiple business functions."""@en ;
+    skos:definition """The owner of a data resource and effective holder of rights over that resource. Accountable for managing data within their data domain: reviewing data issues, setting priorities, and approving data definition changes.
+    - Accountable for the accuracy of data as used across the organisation.
+    - Prioritise data quality activities.
+    - Approve changes to Business Glossaries, Vocabularies, and other repositories of shared terminology.
+    - Approve the use of external Standards and Glossaries within their domain.
+    - Review and approve Master Data Management approach, outcomes, and activities within their domain.
+    - Work with other Data Owners to resolve data issues and inconsistencies across business units.
+    - Second level review for issues identified by Data Stewards.
+    - Provide input to the steering committees on policies or regulatory requirements that impact their data domain.
+    
+    Decides and approves how data within their data domain is managed in accordance with the data rules and principles of the organisations.
+    Data owner responsibilities include those of a data controller under GDPR; to determinine the purposes and means of processing personal data. The data controller decides the how and why of a data processing operation. A data controller can be a legal person, for example a business, an SME, a public authority, an agency or other body."""@en ;
+    skos:altLabel "Data Manager"@en,
+        "Data Controller"@en ;
+    skos:prefLabel "Data Owner"@en .
+
+earl:data-steward a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """Responsible for a subset of a data domain and day-to-day interactions with data and implementation of decisions from the Data Owners. First point of contact for data domain support and advice. In practice, data stewards will interact with multiple data domains within standard activities.
+    - Serve as a subject matter expert (SME) for a data domain.
+    - Guarantee the quality of the data collected, stored and used within a domain/sub domain.
+    - Quality check user requests to update data within their domain to ensure data quality standards are maintained.
+    - Establish working groups to focus on domain/subdomain related activity.
+    - Log data quality issues and investigate root cause.
+    - Help create and implement standards, policies, processes and procedures for data collection, storage, use and security, and ensure they are communicated and adhered to within their domain/sub domain.
+    - Represent Data Owners and Data Community on the coordinating data groups, ensuring that activities and decisions are communicated effectively to all stakeholders within their domain/sub domain.
+    - Gather and propose changes to Business Glossaries, Vocabularies, and other repositories of shared terminology to ensure all terms and definitions are represented and up to date.
+    - Collaborate with other Data Steward and Data Owners to ensure data is within a domain is managed appropriately and issues are managed.
+    - Help identify ways to use data to drive strategic objectives of the organisation.
+    
+    Implements and coordinates actions and operations in accordance with the management objectives and methods for the data domain."""@en ;
+    skos:prefLabel "Data Steward"@en .
+
+earl:deputy-president a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """An individual who supports the president within an organisation or group as their second-in-charge and default delegate in absentia."""@en ;
+    skos:altLabel "Vice President"@en ;
+    skos:prefLabel "Deputy President"@en .
+
+earl:deputy-chairperson a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """An individual who supports the chairperson within a board or committee as their second-in-charge and default delegate in absentia."""@en ;
+    skos:altLabel "Deputy Chairman"@en,
+        "Deputy Chairwoman"@en,
+        "Deputy Chairperson"@en,
+        "Vice Chairperson"@en,
+        "Vice Chairman"@en,
+        "Vice Chairwoman"@en,
+        "Vice Chair"@en ;
+    skos:prefLabel "Deputy Chair"@en .
+
+earl:doc-verifier a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:altLabel "Verifier"@en ;
+    skos:definition """A person authorised to verify a document as true and accurate.
+
+    Depending on the document and cirumstance this may be a Justice of the Peace, Judge, Police Officer, Doctor, Member of the Executive Leadership Team or other person acting in an official capacity.
+
+    For the verification of assessment documents such as a curriculum vitae the verifier may be an EA specific designation such as a Member, Senior Member or Fellow of Engineers Australia, or a senior experienced engineer or the equivalent in their Occupational Category."""@en ;
+    skos:prefLabel "Document Verifier"@en .
+
+earl:ea-administrator a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:altLabel "EA Administrator"@en ;
+    skos:definition """An EA Administrator is an EA Role for a Person who performs Administration Activities on behalf of EA in one or more business areas."""@en ;
+    skos:prefLabel "Engineers Australia Administrator"@en .
+
+earl:educator a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:altLabel "Educational Institution"@en ;
+    skos:definition """An organisation acting to provide education and training. Typically an institution of higher education."""@en ;
+    skos:prefLabel "Educator"@en .
+
+earl:event-host a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:altLabel "Host"@en ;
+    skos:definition """An organisation acting to provide an event space and associated event support."""@en ;
+    skos:prefLabel "Event Host"@en .
+
+earl:exec-sponsor a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """An executive level employee who provides organisational and in-principle support to an activity or project."""@en ;
+    skos:prefLabel "Executive Sponsor"@en .
+
+earl:participant a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """A party who partipates in an activity."""@en ;
+    skos:prefLabel "Participant"@en .
+
+    earl:attendee a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:broader earl:participant ;
+        skos:definition """A party who attends an event hosted by an organisation as a consumer or guest of the event."""@en ;
+        skos:prefLabel "Attendee"@en .
+
+    earl:respondent a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:broader earl:participant ;
+        skos:definition """A party who particpates in a survey, responds to a question, or provides input to a data gathering exercise."""@en ;
+        skos:prefLabel "Respondent"@en .
+
+earl:subject a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """A party who is a passive participant in an activity, such as a person being assessed by another agent."""@en ;
+    skos:scopeNote "This categorisation applies where A party is effectively equivalent to a feature, resource, or offering in a specific instance."@en ;
+    skos:prefLabel "Subject"@en .
+
+earl:president a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """An individual who presides over a project or function within an organisation or group."""@en ;
+    skos:scopeNote """The president is a leadership role for the operational organisation. Presidents are typically the most senior employee or senior member of an independent group or organisation, whereas a Chair is the leaders of the Board and not necessarily an employee or group member. Chairpersons may work outside the daily operations of an organisation. ThePresident and Chair relationships with the Chief Executive Officer (CEO) may vary depending on the structure of the organisation."""@en ;
+    skos:prefLabel "President"@en .
+
+    earl:president-division a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:broader earl:president ;
+        skos:scopeNote "National and Division Presidents are used in situations where a distinction is needed due to multiple presidents in the same committee, such as the Presidents Forum. Within the scope of groups with a single president the parent term President should be used."@en ;
+        skos:definition """An individual who leads the functions and activity of a division committee within the Division's geographical area and is acting in the capacity of representing that body."""@en ;
+        skos:prefLabel "Division President"@en .
+
+    earl:president-national a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:broader earl:president ;
+        skos:scopeNote "National and Division Presidents are used in situations where a distinction is needed due to multiple presidents in the same committee, such as the Presidents Forum. Within the scope of groups with a single president the parent term President should be used."@en ;
+        skos:definition """An individual who leads the functions and activity of the National Congress and is acting in the capacity of representing that body."""@en ;
+        skos:prefLabel "National President"@en .
+
+earl:president-immediate-past a skos:Concept ;
+    dcterms:source "https://www.qls.com.au/About-us/Governance/Council-and-committees/Role-of-the-Immediate-Past-President"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """The individual who held the president position prior to the current president. The primary purpose of the Immediate Past President is to support and facilitate a smooth transition for the incoming President in relation to the work of the Society and the role of the President during this transitional period. """@en ;
+    skos:prefLabel "Immediate Past President"@en .
+
+earl:privacy-officer a skos:Concept ;
+    dcterms:source "https://education.oaic.gov.au/privacy-officer-toolkit/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """Privacy Officer functions include:
+    - providing privacy advice internally. For example, you may give advice to your colleagues on:
+        the development of new initiatives that have a potential privacy impact,
+        the general application of privacy law to activities in the organisation,
+        what to consider when deciding whether or not to carry out a Privacy Impact Assessment,
+        what safeguards to apply to mitigate any risks to the privacy of individuals
+    - co-ordinating the handling of internal and external privacy enquiries, privacy complaints, and requests for access to, and correction of, personal information
+    - maintaining a record of the personal information holdings of the organisation
+    - assisting with the preparation of Privacy Impact Assessments
+    - measuring and documenting your performance against the privacy policy."""@en ;
+    skos:prefLabel "Privacy Officer"@en .
+
+earl:process-owner a skos:Concept ;
+    dcterms:source "https://www.sixsigmadaily.com/who-is-a-process-owner/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """A process owner is responsible for the overall process of a business improvement project. They ensure the process is properly managed and operated and that it interacts well with touchpoints in other processes. In addition, process owners craft key performance indicators (KPIs) that help them measure the success of the project as it evolves."""@en ;
+    skos:prefLabel "Process Owner"@en .
+
+earl:project-leader a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """An individual officially designated as head of project team or sub-project team instrumental in the work necessary to execute the project."""@en ;
+    skos:prefLabel "Project Leader"@en .
+
+earl:project-manager a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """An individual officially designated as manager of a project who coordinates project activities. The manager of a project performs administrative duties in contrast with a project leader who leads project tasks. Project may consist of one or many project teams and sub-teams."""@en ;
+    skos:prefLabel "Project Manager"@en .
+
+earl:project-member a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """An individual designated as a member of a project team or set of activities. Commonly in association with other specific roles. Includes the set of activites encompassed by the acitivities of specific groups such as boards and committees."""@en ;
+    skos:prefLabel "Project Member"@en .
+
+earl:committee-member a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """An individual elected or appointed to membership on a board or committee who, as part of a quorum of memberscan: change signatories, approve board decisions, fill vacancies etc. """@en ;
+    skos:prefLabel "Committee Member"@en .
+
+    earl:corresponding-member a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:broader earl:committee-member ;
+        skos:definition """A committee member who receives agenda papers and minutes and is able to provide written reports to the committee to consider but does not generally attend meetings."""@en ;
+        skos:prefLabel "Corresponding Member"@en .
+
+earl:publisher a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:exactMatch dcterms:publisher ;
+    skos:definition """The agent who published the resource."""@en ;
+    skos:prefLabel "Publisher"@en .
+
+earl:record-owner a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:closeMatch dcterms:rightsHolder ;
+    skos:definition """The individual, organisation, or group who own the resource or record. Commonly responsible for maintaining official records for the retention period, and deletion of records in accordance with any record disposal triggers."""@en ;
+    skos:altLabel "Resource Owner"@en ;
+    skos:prefLabel "Record Owner"@en .
+
+earl:secretary a skos:Concept ;
+    dcterms:source "https://www.aicd.com.au/board-of-directors/roles/company-secretary.html"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """The company secretary of a listed entity plays an important role in supporting the effectiveness of the board and its committees. Each director should be able to communicate directly with the company secretary and vice versa. The decision to appoint or remove a companysecretary should be made or approved by the board. 
+    
+    The role of the companysecretary should include:
+    - advising the board and its committees on governance matters;
+    - monitoring that board and committee policy and procedures are followed;
+    - coordinating the timely completion and despatch of board and committee papers;
+    - ensuring that the business at board and committee meetings is accurately captured in the minutes; and
+    - helping to organise and facilitate the induction and professional development of directors."""@en ;
+    skos:altLabel "Company Secretary"@en,
+        "Board Secretary"@en ;
+    skos:prefLabel "Secretary"@en .
+
+earl:event-sponsor a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """An individual or organisation providing financial support for an event, activity, award, or other organisational function."""@en ;
+    skos:note "A sponsor relationship describes financial support of one agent to another, such as an organisation sponsoring an employee. An event sponsor role describes A party providing financial constribution to a specific event."@en ;
+    skos:altLabel "Corporate Sponsor"@en ;
+    skos:prefLabel "Event Sponsor"@en .
+
+earl:technical-data-steward a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:example "Application Specialists, Data Custodians, Data Integration Specialists, Database Administrators, Business Intelligence Specialists, Data Quality Analysts, Data Modellers and Taxonomists, or Metadata Administrators."@en
+    skos:definition """Have specific, technical knowledge of a specific data source, system, platform or data-dependent artefact.
+    - Serve as a subject matter expert (SME) for a technical data source or system.
+    - Quality check user requests to update data within their systen to ensure data compliance within system constraints are maintained.
+    - Report activities and decisions of the coordinating data groups to the Data Owner and other Stakeholders within a data domain.
+    - Help create and implement standards, policies, processes and procedures for data collection, storage, use and security.
+    - Document and enforce rules around data collection and storage.
+    - Identify and work with other data stewards to resolve system-based data issues.
+    - Maintain technical aspects of data architecture.
+    - Maintain definitions applicable to any relevant data dictionary.
+    - Support activities of Data Stewards."""@en ;
+    skos:altLabel "Data Custodian"@en ;
+    skos:prefLabel "Technical Data Steward"@en .
+
+earl:technical-service-owner a skos:Concept ;
+    dcterms:source "https://uit.stanford.edu/service-management/toolkit/fundamentals/tech-ops-owner"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """The Technical Operations Owner's focus is the support and maintenance of the underlying service technology. This role differs from that of the Business Operations Owner, whose focus is to provide end-user service support.
+
+    For services built and maintained on-premise, Technical Operations Owners are accountable for the operational support of the underlying technology. They frequently are either the manager or senior member of the technology team. For cloud-based services, the TechOps Owner is the person on the service team with the most functional knowledge of the cloud service. For cloud services in particular, it is important to identify a TechOps Owners who is prepared to serve as the escalation point with the vendor, in the event of a Major Incident. The TechOps Owner can also delegate this responsibility to a Subject Matter Expert."""@en ;
+    skos:altLabel "Technical Service Owner"@en,
+        "Technical Services Owner"@en,
+        "Technical Operations Owner"@en ;
+    skos:prefLabel "Platform Manager"@en .
+
+earl:coordinator a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """A party who coordinates the activities of a group or project."""@en ;
+    skos:prefLabel "Coordinator"@en .
+
+    earl:pdp-coordinator a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:broader earl:coordinator ;
+        skos:definition """A PDP Coordinator is an EA Role for a Person who represents a PDP Organisation and manages the involvement of Engineers employed by that organisation with EA's Stage 2 Competency Program."""@en ;
+        skos:altLabel "PDP Coordinator"@en,
+            "PDP Org Coordinator"@en,
+            "PDP Organisation Coordinator"@en ;
+        skos:prefLabel "Professional Development Program Coordinator"@en .
+
+    earl:b2b-coordinator a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:broader earl:coordinator ;
+        skos:definition """A B2B Coordinator is an EA Role for a Person who represents a B2B Organisation and manages sponsorship, credentialing or other membership arrangements of the organisation with Engineers Australia."""@en ;
+        skos:altLabel "Business-to-Business Coordinator"@en ;
+        skos:prefLabel "B2B Coordinator"@en .
+
+earl:creator a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:exactMatch dcterms:creator ;
+    skos:definition """A party who creates a resource, document, product, data, or service."""@en ;
+    skos:prefLabel "Creator"@en .
+
+    earl:author a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:broader earl:creator ;
+        skos:definition """A party who authors a document or report."""@en ;
+        skos:prefLabel "Author"@en .
+
+earl:originator a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:closeMatch <http://linked.data.gov.au/def/iso19115-1/RoleCode/originator> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """A party who initiates creation of a resource. Commonly, but not necessarily, coincident with the creator."""@en ;
+    skos:example """A customer may contact an organisation for support and be the originator of a support request, whereas the employee who recieves the request may be the creator of the support resources or tasks."""@en ;
+    skos:prefLabel "Originator"@en .
+
+earl:ea-assessor a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """An Engineers Australia (EA) Assessor is an EA Role, for a Person who formally assesses (on behalf of EA) submissions of documents or information related to an EA process. Where used in its generalised form without sub-categorisation EA Asseor typically refers to a person assessing the competency of a Person seeking Stage 1 or Stage 2 Competency through Engineers Australia."""@en ;
+    skos:altLabel "EA Assessor"@en,
+        "EA Reviewer"@en,
+        "Engineers Australia Reviewer"@en ;
+    skos:prefLabel "Engineers Australia Assessor"@en .
+
+    earl:college-membership-reviewer a skos:Concept ;
+        dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:broader earl:ea-assessor ;
+        skos:definition """A College Member specifically approved by the relevant College Board to act as a PI Panel Member, to be asked to review College Membership applications (by current CPEng) and assess CPD Audit returns. An Active EA Member can be in multiple Colleges, based on their skill, competence and experience."""@en ;
+        skos:notation "CMR" ;
+        skos:prefLabel "College Membership Reviewer"@en .
+
+earl:provider a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """A party who provides a service, resource, document, qualification, title, or award."""@en ;
+    skos:prefLabel "Provider"@en .
+
+earl:sender a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """A party who sends a resource, document, qualification, title, or award."""@en ;
+    skos:prefLabel "Sender"@en .
+
+earl:reciever a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """A party who receives a service, resource, document, qualification, title, or award."""@en ;
+    skos:altLabel "Receiver"@en ;
+    skos:prefLabel "Recipient"@en .
+
+earl:editor a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+    skos:definition """A party who reviewed or modified the content of a resource."""@en ;
+    skos:prefLabel "Editor"@en .
+    
+    earl:processor a skos:Concept ;
+        dcterms:source "https://www.edpb.europa.eu/sme-data-protection-guide/data-controller-data-processor_en"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:broader earl:editor ;
+        skos:definition """Party who has processed the data in a manner such that the resource has been modified. Where personal data is involved, a processor acts under the instructions of the controller only, by processing personal data on behalf of the controller."""@en ;
+        skos:altLabel "Data Processor"@en ;
+        skos:prefLabel "Processor"@en .
+            
+    earl:sub-processor a skos:Concept ;
+        dcterms:source "https://www.edpb.europa.eu/sme-data-protection-guide/data-controller-data-processor_en"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
+        skos:broader earl:editor ;
+        skos:definition """A sub-processor acts under the instructions of the processor, meaning that they may process individuals' personal data on behalf of the processor. A sub-processor can be a legal person, for example a business, an SME, a public authority, an agency or other body.
+        
+        To note, a sub-processor can only be appointed if the controller, or joint controller, authorises it in a written form. If this is the case, the processor must draw up a binding contract with the sub-processor detailing the responsibilities of the sub-processor. This processor-sub-processor contract must provide for the same protection of individuals' personal data as the initial contractor-processor contract."""@en ;
+        skos:altLabel "Data Sub-Processor"@en ;
+        skos:prefLabel "Sub-Processor"@en .
+
+
+#COLLECTIONS
+earl:committee-positions a skos:Collection ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    skos:definition """Roles that undertake specific activities related to the function of a board or committee. These roles are typically related to the group through elected member or appointed member relationships."""@en ;
+    skos:prefLabel "Agent Roles - Committee Positions"@en ;
+    skos:member
+        earl:chairperson,
+        earl:committee-member,
+        earl:corresponding-member,
+        earl:deputy-chairperson,
+        earl:deputy-president,
+        earl:chairperson-immediate-past,
+        earl:president,
+        earl:president-immediate-past,
+        earl:president-division,
+        earl:president-national .

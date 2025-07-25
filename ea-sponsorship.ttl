@@ -1,0 +1,167 @@
+PREFIX spnsr: <https://ref.engineersaustralia.org.au/def/ea-sponsorship/>
+PREFIX eaec: <https://ref.engineersaustralia.org.au/def/ea-engineering-credentials/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://ref.engineersaustralia.org.au/def/ea-sponsorship> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
+    dcterms:created "2024-02-09"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:modified "2024-06-12"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: Business Growth"
+                ]
+        ] ;
+    skos:hasTopConcept
+        spnsr:destra,
+        spnsr:eea-gp,
+        spnsr:eea-py,
+        spnsr:ewc,
+        spnsr:mra,
+        spnsr:other,
+        spnsr:sla,
+        spnsr:technical-society ;
+    skos:definition """The types of sponsorship arrangements that involve a third party sponsoring membership or credentialing for an individual or group of individuals. Typically applied to employees or group members of the sponsoring organisation."""@en ;
+    skos:altLabel "Sponsorship"@en,
+        "3rd Party Sponsorship"@en,
+        "Business-to-Business"@en,
+        "B2B"@en,
+        "Engineers Australia Contract Types"@en ;
+    skos:prefLabel "Engineers Australia Sponsorship Types"@en .
+
+<https://linked.data.gov.au/org/engineersaustralia>
+    a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+.
+
+spnsr:destra a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/news-and-media/2022/07/why-new-defence-partnership-signals-growing-need-professional-standards"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:definition """Under the Defence Engineer and Senior Technician Agreement (DESTRA) all technical Flight Sergeants and Warrant Officers, and all engineers above Squadron Leader rank, will have their leadership, management and technical skills accredited against a global benchmark.
+    
+    Defence meets - and in some cases exceeds - the level required for certification and registration."""@en ;
+    skos:notation "DESTRA" ;
+    skos:altLabel "DESTRA"@en ;
+    skos:prefLabel """Defence Engineer and Senior Technician Agreement"""@en .
+
+spnsr:eea-gp a skos:Concept ;
+    dcterms:source "https://eea.org.au/programs/engineers-australias-graduate-program"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:definition """Sponsorship by Engineering Education Australia (EEA) available through the EA Graduate Program. 
+    
+    Sponsorship means that EEA pays membership fees for customers who are on the EA Graduate Program. The membership is include in their EEA purchase of these products, and EEA subsequently pay EA for that membership on behalf of the customer."""@en ;
+    skos:notation "GP" ;
+    skos:altLabel "EA - Graduate Program"@en ;
+    skos:prefLabel """Graduate Program"""@en .
+
+spnsr:eea-py a skos:Concept ;
+    dcterms:source "https://eea.org.au/programs/engineers-australias-graduate-program"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:definition """Sponsorship by Engineering Education Australia (EEA) available through the EEA Professional Year Program. 
+    
+    Sponsorship means that EEA pays membership fees for customers who are on the Professional Year Program. The membership is include in their EEA purchase of these products, and EEA subsequently pay EA for that membership on behalf of the customer."""@en ;
+    skos:notation "PY" ;
+    skos:altLabel "Professional Year Program"@en,
+        "EEA - Professional Year Program" ;
+    skos:prefLabel """Professional Year"""@en .
+
+spnsr:ewc a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/business/business-partnerships"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    rdfs:seeAlso 
+        eaec:chartered,
+        eaec:ner,
+        eaec:rpeq,
+        eaec:rpeng,
+        eaec:sea-freight-container,
+        eaec:strata-inspector,
+        eaec:vertical-transport ;
+    skos:definition """EWC is an agreement between Engineers Autralia and an organisation for engineering staff to become Chartered or to apply for NER or state registration. Engineers Australia assists with:
+    - understand the capabilities in the engineering workforce
+    - scope requirements and propose a partnership model
+    - create and activate EA memberships
+    - guide employees through assessment requirements
+    - conduct pre-assessments
+    - conduct interview assessments
+    - advise applicants of assessment outcomes
+    - formalise credentials.
+    The Engineers Australia workforce credentialing program also enables a workforce-wide view of the skills and competencies in an organisation's talent pool. This invaluable information helps to fill knowledge gaps and maintain a fully skilled workforce."""@en ;
+    skos:scopeNote "Service Level Agreements apply to company sponsorship for membership, whereas Engineering Workforce Credentialing (EWC) pertains to the sponsorship of Chartered, NER and State registration."@en ;
+    skos:notation "EWC" ;
+    skos:prefLabel """Engineering Workforce Credentialing"""@en .
+
+spnsr:mra a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au/membership/mutual-recognition-agreements"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-sponsorship>;
+    skos:definition """Engineers Australia has established mutual recognition agreements (MRA) with engineering bodies around the world. If you're a member of a reciprocal organisation, the MRA allows you to join Engineers Australia at an equivalent level of membership. You can also apply for the Chartered credential through this arrangement and in some cases join the National Engineering Register.
+    
+    Under the MRA, formal academic qualifications must be recognised by both bodies under the Washington, Sydney or Dublin Accords. If your academic qualification isn't accepted under one of the accords, you might need to complete a competency assessment."""@en ;
+    skos:notation "MRA" ;
+    skos:prefLabel "Mutual Recognition Agreement"@en .
+
+spnsr:other a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:definition """Other types of sponsorship and contract arrangements that do not fall under the other defined categories."""@en ;
+    skos:altLabel "Other"@en ;
+    skos:prefLabel "Other Sponsorship"@en .
+
+spnsr:sla a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-sponsorship>;
+    skos:definition """Organisation specific agreements whereby a company sponsors membership for their engineering workforce."""@en ;
+    skos:scopeNote "Service Level Agreements apply to company sponsorship for membership, whereas Engineering Workforce Credentialing (EWC) pertains to the sponsorship of Chartered, NER and State registration."@en ;
+    skos:notation "SLA" ;
+    skos:altLabel "Organisation Sponsorship Agreement"@en,
+        "Org Sponsorship"@en ;
+    skos:prefLabel "Service Level Agreement"@en .
+
+spnsr:technical-society a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-sponsorship> ;
+    skos:definition """Corporate Technical Societies may sponsor their members to gain or retain membership with Engineers Australia."""@en ;
+    skos:notation "CTS" ;
+    skos:prefLabel "Corporate Technical Society"@en .
+
+#COLLECTIONS
+
+spnsr:ea-contracts a skos:Collection ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	skos:prefLabel "Engineers Australia Contract Types"@en ;
+	skos:definition """Contract types for corporate sponsored membership with Engineers Australia."""@en ;
+    skos:member
+        spnsr:destra,
+        spnsr:ewc,
+        spnsr:other,
+        spnsr:sla ;

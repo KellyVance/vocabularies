@@ -1,0 +1,104 @@
+PREFIX itchg: <https://ref.engineersaustralia.org.au/def/ict-change/>
+PREFIX earl: <https://ref.engineersaustralia.org.au/def/ea-activity-roles/>
+PREFIX eaj: <https://ref.engineersaustralia.org.au/def/ea-jargon/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://ref.engineersaustralia.org.au/def/ict-change> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    dcterms:created "2024-06-20"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:modified "2024-06-20"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:rightsHolder "Engineers Australia: ICT" ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: ICT"@en
+                ]
+        ] ;
+    skos:related eaj:ict-change ;
+    skos:hasTopConcept 
+        itchg:standard,
+        itchg:emergency,
+        itchg:normal,
+        itchg:retrospective,
+        itchg:unauthorised ;                
+    skos:definition """The addition, modification or removal of anything that could have an effect on IT services. The scope should include changes to all architectures, processes, tools, metrics and documentation, as well as changes to IT services and other configuration items."""@en ;
+    skos:altLabel "ICT Change Type"@en ;
+    skos:prefLabel """ICT Change"""@en .
+
+<https://linked.data.gov.au/org/engineersaustralia>
+    a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+itchg:standard a skos:Concept ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ict-change> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ict-change> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ict-change> ;
+    dcterms:source "https://wiki.en.it-processmaps.com/index.php/Change_Management"^^xsd:anyURI ;
+    skos:definition """Standard change is a change to a service or to infrastructure for which the framework has been pre-authorised through the defined approval process. A standard change within EA has an accepted and established procedure that has previously been successfully implemented.
+    The elements of a standard change are:
+    - A defined trigger to initiate the request for change.
+    - Activities or tasks that are well known, documented and proven.
+    - Is repetitive and low risk."""@en ;
+    skos:altLabel "Standard"@en ;
+    skos:prefLabel """Standard Change"""@en .
+
+itchg:emergency a skos:Concept ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ict-change> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ict-change> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ict-change> ;
+    dcterms:source "https://wiki.en.it-processmaps.com/index.php/Change_Management"^^xsd:anyURI ;
+    skos:definition """Emergency changes are initiated in response to a critical/major IT situation. Commonly because of an incident or problem requiring immediate action to restore service or prevent service disruption.
+
+    Any service interruption that is classed as high impact, as determined by the number of users affected or because systems or services that are critical to the organisation are involved, must be responded to immediately."""@en ;
+    skos:altLabel "Emergency"@en ;
+    skos:prefLabel """Emergency Change"""@en .
+
+itchg:normal a skos:Concept ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ict-change> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ict-change> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ict-change> ;
+    dcterms:source "https://wiki.en.it-processmaps.com/index.php/Change_Management"^^xsd:anyURI ;
+    skos:definition """ All other Changes that are not Standard Changes or Emergency Changes.
+    
+    Normal Changes are often further categorized as Major, Significant or Minor, depending on the level of risk involved. Organizations should define these types of Changes and the required Change Authorities in their Change Policy. For example, Major Changes may require a full review by the CAB (Change Advisory Board), while Significant Changes may be approved by the Change Manager."""@en ;
+    skos:altLabel "Normal"@en ;
+    skos:prefLabel """Normal Change"""@en .
+
+itchg:retrospective a skos:Concept ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ict-change> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ict-change> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ict-change> ;
+    dcterms:source "https://wiki.en.it-processmaps.com/index.php/Change_Management"^^xsd:anyURI ;
+    skos:definition """Retrospective changes are usually in response to a major incident and where the opportunity for an emergency change is not available as immediate action is required.
+    
+    Just like the emergency change process once the change has been implemented and the systems are stable and functioning the change implementer must raise a retrospective Request for Change (RFC).
+    
+    The change implementer must attempt to contact either their manager (after hours) or the Change Coordinator to give them the opportunity to approve the change prior to implementation."""@en ;
+    skos:altLabel "Retrospective"@en ;
+    skos:prefLabel """Retrospective Change"""@en .
+
+itchg:unauthorised a skos:Concept ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ict-change> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ict-change> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ict-change> ;
+    dcterms:source "https://wiki.en.it-processmaps.com/index.php/Change_Management"^^xsd:anyURI ;
+    skos:definition """An unauthorised change is when a change has been implemented without gaining the required approvals. A change request must be raised by the implementer of the unauthorised change. Relevant managers will be notified of any unauthorised changes."""@en ;
+    skos:altLabel "Unauthorised"@en ;
+    skos:prefLabel """Unauthorised Change"""@en .

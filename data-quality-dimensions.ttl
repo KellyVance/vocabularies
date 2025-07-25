@@ -1,0 +1,104 @@
+PREFIX dqd: <https://linked.data.gov.au/def/data-quality-dimensions-dama/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+.
+ 
+<https://linked.data.gov.au/def/data-quality-dimensions-dama> a owl:Ontology ,open
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
+    dcterms:created "2024-01-08"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:modified "2024-01-08"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:source "https://www.dataversity.net/what-are-data-quality-dimensions/"^^xsd:anyURI ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label """Engineers Australia: Head of Data, Insights and Analytics"""@en ;
+                ]
+        ] ;
+    skos:historyNote "This vocabulary is derived from the data quality dimensions as described in the DAMA DMBoK v2 with some augmentations."@en ;
+    skos:definition "Data Quality dimensions are measurable facets of data that indicates its utility and integrity."@en ;
+    skos:hasTopConcept
+        dqd:accuracy ,
+        dqd:completeness ,
+        dqd:consistency ,
+        dqd:relevance ,
+        dqd:timeliness ,
+        dqd:uniqueness ,
+        dqd:validity ;
+	skos:altLabel "Data Quality Dimensions"@en ;
+    skos:prefLabel "Data Quality Dimensions - DAMA"@en ;
+.
+
+dqd:accuracy a skos:Concept ;
+	dcterms:source "https://www.gov.uk/government/news/meet-the-data-quality-dimensions"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:inScheme <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:topConceptOf <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:altLabel "Correctness"@en ;
+	skos:definition """Accurate data correctly represents reality"""@en ;
+    skos:example """A customer phone number is recorded as 0400 000 000, and that is the real-world contact number belonging to the customer."""@en ;
+	skos:prefLabel "Accuracy"@en .
+
+dqd:completeness a skos:Concept ;
+	dcterms:source "https://www.gov.uk/government/news/meet-the-data-quality-dimensions"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:inScheme <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:topConceptOf <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:definition """Complete data has all necessary values stored to describe the subject."""@en ;
+    skos:example """Mr Smith applied for membership. The mandatory fields of application date, type of membership, residency, date of completion etc are all recorded as required to describe the application."""@en ;
+	skos:prefLabel "Completeness"@en .
+
+dqd:consistency a skos:Concept ;
+	dcterms:source "https://www.gov.uk/government/news/meet-the-data-quality-dimensions"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:inScheme <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:topConceptOf <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:definition """Consistent Data is where data represented in multiple locations is the same."""@en ;
+    skos:example """A central database shows that a customer registered for 5 events; an event management application shows the same data for the same 5 events."""@en ;
+	skos:prefLabel "Consistency"@en .
+
+dqd:relevance a skos:Concept ;
+	dcterms:source "https://www.gov.uk/government/news/meet-the-data-quality-dimensions"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:inScheme <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:topConceptOf <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:definition """Relevant data is current and without superfluous information. Complimentary with Timeliness and Completeness."""@en ;
+    skos:example """A contact who hasn't transacted with the organisation beyond the retention period is deleted from the system or archived. The customer record does not include health information because it is not relevant to business operations."""@en ;
+	skos:prefLabel "Relevance"@en .
+
+dqd:timeliness a skos:Concept ;
+	dcterms:source "https://www.gov.uk/government/news/meet-the-data-quality-dimensions"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:inScheme <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:topConceptOf <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+    skos:altLabel "Latency" @en ;
+	skos:definition """Timely data represents current reality and is available when and where required."""@en ;
+    skos:example """A customer changes their email address on a website on Monday, and the data is updated in the customer communication application on the same day."""@en ;
+    skos:editorialNote """Timeliness is use-case specific and linked to how time sensitive updates are for a specific item. Acceptable latency will vary between different data types and use cases."""@en ;
+	skos:prefLabel "Timeliness"@en .
+
+dqd:validity a skos:Concept ;
+	dcterms:source "https://www.gov.uk/government/news/meet-the-data-quality-dimensions"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:inScheme <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:topConceptOf <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:definition """Valid data conforms to system and attribute requirements. This includes data types, data formats, allowable numerical and temporal ranges, conformance with allowable reference data values."""@en ;
+    skos:example """Dates stored in a database conform to the standard defined for the system, such as yyyy-mm-dd."""@en ;
+	skos:prefLabel "Validity"@en .
+
+dqd:uniqueness a skos:Concept ;
+	dcterms:source "https://www.gov.uk/government/news/meet-the-data-quality-dimensions"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:inScheme <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:topConceptOf <https://linked.data.gov.au/def/data-quality-dimensions-dama> ;
+	skos:definition """Unique data contains no duplicate information. An entity or event is not recorded more than once."""@en ;
+    skos:example """A customer is recorded once-and-only-once in a database, regardless of the number of engagement channels. The customer has one-and-only-one record with a single birthday record, primary contact phone record, primary email, etc."""@en ;
+	skos:prefLabel "Uniqueness"@en .

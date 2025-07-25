@@ -1,0 +1,647 @@
+PREFIX cmah: <https://linked.data.gov.au/def/commonwealth-awards-honours/>
+PREFIX eaox: <https://ref.engineersaustralia.org.au/def/properties#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/def/commonwealth-awards-honours> a owl:Ontology ,
+		skos:ConceptScheme ;
+	dcterms:created "2025-04-30"^^xsd:date ;
+	dcterms:creator <https://linked.data.gov.au/org/au>;
+	dcterms:modified "2025-07-09"^^xsd:date ;
+	dcterms:publisher <https://linked.data.gov.au/org/agldwg>;
+    dcterms:provenance "Derived from the Post Nominals list from the Australian Government Department of the Prime Minister and Cabinet (PMC)"^^xsd:string ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/australian-honours-system"^^xsd:anyURI ;
+	dcterms:references 
+        <https://www.defence.gov.au/adf-members-families/honours-awards/australian-awards>,
+		<https://www.pmc.gov.au/honours-and-symbols/australian-honours-system/post-nominals>,
+        <https://www.pmc.gov.au/resources/wearing-awards>,
+        <https://www.pmc.gov.au/sites/default/files/resource/download/wearing-awards-order-of-wearing.pdf> ;
+	skos:definition """Australia's honours system began in 1975 with the creation of the Order of Australia, the Australian Bravery Decorations and the National Medal.
+    Like nearly every other country in the world, Australia has a system of honours and awards so its citizens can be recognised for excellence, achievement or meritorious service and contributions to our society.
+    Australian honours are unique in that they were designed for the community to make nominations. The Australian honours system is free of patronage or political influence. Anyone can nominate an Australian citizen for an honour.
+
+    Honours help define, encourage and reinforce national aspirations, ideals and standards by identifying role models. We give honours to recognise, celebrate and say thank you to those who make a difference, those who achieve their best and those who serve others.
+    The awards in the Australian honours system are administered by various organisations. You can learn more about the history of our awards system in our honours timeline.
+    Many awards carry an entitlement for recipients to use indicative letters after their name - for example, 'OAM' for the Medal of the Order of Australia.  These indicative letters are known as post-nominals.
+    Post-nominals may be used from the date on which the award is gazetted.
+
+    If a recipient is entitled to post-nominals for more than one award, the sequence of the post-nominals is indicated by the Order of Wearing for Australian honours and awards. Please note that within the Order of Australia, the highest award is the only post-nominal used. For example, Mr John Citizen who has received the OAM, the AM and the AC, will be addressed as Mr John Citizen AC.
+
+    Please note this list is in alphabetical order and not in the order of wearing of awards."""@en ;
+    skos:note """The order of wearing of Australian honours and awards is determined by the Department of the Prime Minister and Cabinet (PMC) and is available in the document 'Wearing of Awards'. It is represented here using the property https://ref.engineersaustralia.org.au/def/properties#orderOfDisplay and is current as of the modified date."""@en ;
+	skos:hasTopConcept
+		cmah:;
+	skos:prefLabel "Australian Commonwealth Awards and Post Nominals"@en .
+
+cmah:afghanistan-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/afghanistan-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "44"^^xsd:integer ;
+    skos:definition """The Afghanistan Medal recognises service of Australian Defence Force personnel in designated operations in the Afghanistan region from 11 October 2001."""@en ;
+    skos:prefLabel "Afghanistan Medal"@en .
+
+cmah:ambulance-service-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/ambulance-service-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "26"^^xsd:integer ;
+    skos:definition """The Ambulance Service Medal recognises distinguished service by the men and women of Australia's ambulance organisations."""@en ;
+    skos:notation "ASM"@en ;
+    skos:prefLabel "Ambulance Service Medal"@en .
+
+cmah:anniversary-armistice-remembrance-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/anniversary-armistice-remembrance-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "66"^^xsd:integer ;
+    skos:definition """The 80th Anniversary Armistice Remembrance Medal was presented to all 71 surviving Great War veterans for AnzacDay1999."""@en ;
+    skos:prefLabel "Anniversary Armistice Remembrance Medal"@en .
+
+cmah:anniversary-national-service-1951-1972-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/anniversary-national-service-1951-1972-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "79"^^xsd:integer ;
+    skos:definition """The Anniversary of National Service 1951-1972 Medal is a commemorative medal awarded to Australians for their service in post-war national service schemes."""@en ;
+    skos:prefLabel "Anniversary of National Service 1951-1972 Medal"@en .
+
+cmah:australian-active-service-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/australian-active-service-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "42"^^xsd:integer ;
+    skos:definition """The Australian Active Service Medal recognises service of Australian Defence Force and certain other persons in prescribed warlike operations."""@en ;
+    skos:prefLabel "Australian Active Service Medal"@en .
+
+cmah:australian-active-service-medal-1945-1975 a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/australian-active-service-medal-1945-1975"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "39"^^xsd:integer ;
+    skos:definition """The Australian Active Service Medal 1945-1975 recognises the service of Australian Defence Force and certain other persons in prescribed warlike operations such as the Korean War, the Malayan Emergency, the Indonesian Confrontation and the Vietnam War."""@en ;
+    skos:prefLabel "Australian Active Service Medal 1945-1975"@en .
+
+cmah:australian-antarctic-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/australian-antarctic-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "33"^^xsd:integer ;
+    skos:definition """The Australian Antarctic Medal, previously called the Antarctic Medal, is awarded for outstanding service in scientific research or exploration in connection with an Australian Antarctic expedition or for support of such work."""@en ;
+    skos:notation "AAM"@en ;
+    skos:prefLabel "Australian Antarctic Medal"@en .
+
+cmah:australian-cadet-forces-service-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/australian-cadet-forces-service-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "75"^^xsd:integer ;
+    skos:definition """The Australian Cadet Forces Service Medal recognises long and efficient service by officers and instructors in the Australian Cadet Forces. It is awarded for 15 years service."""@en ;
+    skos:prefLabel "Australian Cadet Forces Service Medal"@en .
+
+cmah:australian-corrections-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/australian-corrections-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "28"^^xsd:integer ;
+    skos:definition """The Australian Corrections Medal is awarded for distinguished service by an operational member of an Australian state or territory civilian correctional service for adults."""@en ;
+    skos:notation "ACM"@en ;
+    skos:prefLabel "Australian Corrections Medal"@en .
+
+cmah:australian-defence-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/australian-defence-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "74"^^xsd:integer ;
+    skos:definition """The Australian Defence Medal recognises current and former Australian Defence Force personnel who completed an initial enlistment period, or four years service, whichever was the lesser."""@en ;
+    skos:prefLabel "Australian Defence Medal"@en .
+
+cmah:australian-fire-service-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/australian-fire-service-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "25"^^xsd:integer ;
+    skos:definition """The Australian Fire Service Medal recognises distinguished service by members of Australian fire services. It is awarded to paid and volunteer members."""@en ;
+    skos:notation "AFSM"@en ;
+    skos:prefLabel "Australian Fire Service Medal"@en .
+
+cmah:australian-general-service-medal-korea a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/australian-general-service-medal-korea"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "47"^^xsd:integer ;
+    skos:definition """The Australian General Service Medal for Korea recognises the service of those former Defence Force personnel who completed 30 days in South Korea during the post-Armistice period from 28 July 1953 to 19 April 1956."""@en ;
+    skos:prefLabel "Australian General Service Medal - Korea"@en .
+
+cmah:australian-intelligence-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/australian-intelligence-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "29"^^xsd:integer ;
+    skos:definition """The Australian Intelligence Medal may be awarded to a person who, as a member of the National Intelligence Community, has given distinguished service that directly contributed to national intelligence priorities, requirements or capabilities."""@en ;
+    skos:notation "AIM"@en ;
+    skos:prefLabel "Australian Intelligence Medal"@en .
+
+cmah:australian-operational-service-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/australian-operational-service-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "49"^^xsd:integer ;
+    skos:definition """The introduction of the Australian Operational Service Medal to replace the Australian Active Service Medal (AASM) and the Australian Service Medal (ASM) provides for recognition of Defence-related service."""@en ;
+    skos:prefLabel "Australian Operational Service Medal"@en .
+
+cmah:australian-police-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/australian-police-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "24"^^xsd:integer ;
+    skos:definition """The Australian Police Medal is awarded for distinguished service by a member of an Australian police force."""@en ;
+    skos:notation "APM"@en ;
+    skos:prefLabel "Australian Police Medal"@en .
+
+cmah:australian-service-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/australian-service-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "48"^^xsd:integer ;
+    skos:definition """The Australian Service Medal recognises military and other service in prescribed peacekeeping and non-warlike operations."""@en ;
+    skos:prefLabel "Australian Service Medal"@en .
+
+cmah:australian-service-medal-1939-1945 a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/australian-service-medal-1939-1945"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "38"^^xsd:integer ;
+    skos:definition """The Australia Service Medal 1939-1945 recognises service by Australia's armed forces and Volunteer Defence Corps during World War II."""@en ;
+    skos:prefLabel "Australian Service Medal 1939-1945"@en .
+
+cmah:australian-service-medal-1945-1975 a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/australian-service-medal-1945-1975"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "46"^^xsd:integer ;
+    skos:definition """The Australian Service Medal 1945-1975 recognises service in prescribed peacekeeping or non-warlike operations."""@en ;
+    skos:prefLabel "Australian Service Medal 1945-1975"@en .
+
+cmah:australian-sports-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/australian-sports-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "67"^^xsd:integer ;
+    skos:definition """The Australian Sports Medal (2020) recognises individuals who have participated as official members of an Australian national team at declared international multi-sport events, commencing with the Invictus Games held in Sydney in 2018."""@en ;
+    skos:prefLabel "Australian Sports Medal"@en .
+
+cmah:bravery-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/bravery-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "21"^^xsd:integer ;
+    skos:definition """The Bravery Medal is awarded for acts of bravery in hazardous circumstances."""@en ;
+    skos:notation "BM"@en ;
+    skos:prefLabel "Bravery Medal"@en .
+
+cmah:centenary-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/centenary-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "68"^^xsd:integer ;
+    skos:definition """The Centenary Medal commemorates 100 years of federation and acknowledges the challenges of the new century by recognising citizens and other people who made a contribution to Australian society or government."""@en ;
+    skos:prefLabel "Centenary Medal"@en .
+
+cmah:champion-shots-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/champion-shots-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "76"^^xsd:integer ;
+    skos:definition """The Champion Shots Medal encourages skill in arms shooting in the Australian Defence Force."""@en ;
+    skos:prefLabel "Champion Shots Medal"@en .
+
+cmah:civilian-service-medal-1939-1945 a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/civilian-service-medal-1939-1945"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "54"^^xsd:integer ;
+    skos:definition """The Civilian Service Medal 1939-1945 recognises the service of eligible civilians in Australia during World War II."""@en ;
+    skos:prefLabel "Civilian Service Medal 1939-1945"@en .
+
+cmah:commendation-brave-conduct a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/commendation-brave-conduct"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "36"^^xsd:integer ;
+    skos:definition """The Commendation for Brave Conduct is conferred for an act of bravery that is worthy of recognition."""@en ;
+    skos:prefLabel "Commendation for Brave Conduct"@en .
+
+cmah:commendation-distinguished-service a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/commendation-distinguished-service"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "37"^^xsd:integer ;
+    skos:definition """The Commendation for Distinguished Service is awarded for the distinguished performance of duties in warlike operations to members of the Australian Defence Force."""@en ;
+    skos:prefLabel "Commendation for Distinguished Service"@en .
+
+cmah:commendation-gallantry a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/commendation-gallantry"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "35"^^xsd:integer ;
+    skos:definition """The Commendation for Gallantry is awarded to military personnel for acts of gallantry in action considered worthy of recognition."""@en ;
+    skos:prefLabel "Commendation for Gallantry"@en .
+
+cmah:companion-order-australia a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/companion-order-australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "8"^^xsd:integer ;
+    skos:definition """The Companion of the Order of Australia is awarded for eminent achievement and merit of the highest degree in service to Australia or humanity at large."""@en ;
+    skos:notation "AC"@en ;
+    skos:prefLabel "Companion of the Order of Australia"@en .
+
+cmah:conspicuous-service-cross a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/conspicuous-service-cross"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "18"^^xsd:integer ;
+    skos:definition """The Australian Conspicuous Service Cross is awarded for outstanding devotion to duty or outstanding achievement in the application of exceptional skills, judgement or dedication, in non-warlike situations."""@en ;
+    skos:notation "CSC"@en ;
+    skos:prefLabel "Conspicuous Service Cross"@en .
+
+cmah:conspicuous-service-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/conspicuous-service-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "32"^^xsd:integer ;
+    skos:definition """The Australian Conspicuous Service Medal is awarded for meritorious achievement or devotion to duty in non-war like situations."""@en ;
+    skos:notation "CSM"@en ;
+    skos:prefLabel "Conspicuous Service Medal"@en .
+
+cmah:cross-valour a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/cross-valour"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "2"^^xsd:integer ;
+    skos:definition """The Cross of Valour is awarded for acts of conspicuous courage in circumstances of extreme peril."""@en ;
+    skos:notation "CV"@en ;
+    skos:prefLabel "Cross of Valour"@en .
+
+cmah:dame-order-australia a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/knight-dame-order-australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "6"^^xsd:integer ;
+    skos:definition """From 1976 to 1986 and 2014 to 2015 there was provision for the appointment of Dames in the Order of Australia."""@en ;
+    skos:notation "AD"@en ;
+    skos:prefLabel "Dame of the Order of Australia"@en .
+
+cmah:defence-force-service-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/defence-force-service-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "69"^^xsd:integer ;
+    skos:definition """The Defence Force Service Medal was awarded to full-time service personnel for 15 years diligent service in the Australian Defence Force."""@en ;
+    skos:prefLabel "Defence Force Service Medal"@en .
+
+cmah:defence-long-service-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/defence-long-service-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "72"^^xsd:integer ;
+    skos:definition """The Defence Long Service Medal recognises 15 years diligent service by members of the Regular and Reserve Forces."""@en ;
+    skos:prefLabel "Defence Long Service Medal"@en .
+
+cmah:distinguished-service-cross a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/distinguished-service-cross"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "14"^^xsd:integer ;
+    skos:definition """Instituted in 1914, originally for naval officers below the rank of Lieutenant Commander for 'valuable services in action that did not meet the requirements for the award of the Distinguished Service Order'. Recipients may use the post-nominal initials DSC after their name. In 1930 the Cross was extended to Lieutenant Commanders and Commanders and in 1931 to officers of the Merchant Navy. During World War II it was made available to officers and warrant officers of the Army who were serving afloat. In 1993 it was extended to all ranks when the Distinguished Service Medal was discontinued. The ribbon has three equal stripes of dark blue, white and dark blue. The last award of the DSC was made to an Australian in 1972. To that point, 182 awards had been made with 13 first Bars and three second Bars. Not to be confused with the Distinguished Service Cross established in the Australian honours system in 1991. Though sharing post-nominals the two awards have quite different criteria."""@en ;
+    skos:notation "DSC"@en ;
+    skos:prefLabel "Distinguished Service Cross"@en .
+
+cmah:distinguished-service-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/distinguished-service-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "22"^^xsd:integer ;
+    skos:definition """Instituted in 1914 by King George V but was discontinued in 1993. Originally intended for Chief Petty Officers and other ranks in the Navy who 'set an example of bravery and resource under fire without performing acts of such pre-eminent bravery as would render them eligible for the Conspicuous Gallantry Medal'. Extended in World War II to non-commissioned officers and men in the Army and Air Force serving afloat. Recipients are entitled to use the post-nominal DSM after their names. The ribbon is dark blue with two medium width white stripes at the centre. The DSM has been awarded to 179 Australians and two first Bars were awarded. All recipients were based in the Navy."""@en ;
+    skos:notation "DSM"@en ;
+    skos:prefLabel "Distinguished Service Medal"@en .
+
+cmah:emergency-services-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/emergency-services-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "27"^^xsd:integer ;
+    skos:definition """The Emergency Services Medal recognises distinguished service by members of emergency services across Australia, and people who are involved in emergency management, training or education."""@en ;
+    skos:notation "ESM"@en ;
+    skos:prefLabel "Emergency Services Medal"@en .
+
+cmah:group-bravery-citation a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/group-bravery-citation"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:definition """The Group Bravery Citation is awarded for a collective act of bravery by a group of people in extraordinary circumstances that is considered worthy of recognition."""@en ;
+    skos:prefLabel "Group Bravery Citation"@en .
+
+cmah:humanitarian-overseas-service-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/humanitarian-overseas-service-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "52"^^xsd:integer ;
+    skos:definition """The Humanitarian Overseas Service Medal honours members of recognised Australian organisations and members of Australian contingents to international organisations, who are exposed to considerable risk or danger in the course of providing significant emergency humanitarian service (aid) to civilians overseas in hazardous circumstances (such as in war zones, during peacekeeping operations or in times of natural disaster or civil strife)."""@en ;
+    skos:prefLabel "Humanitarian Overseas Service Medal"@en .
+
+cmah:international-force-east-timor-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/international-force-east-timor-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "43"^^xsd:integer ;
+    skos:definition """The International Force East Timor (INTERFET) Medal recognises members of the Australian Defence Force who served in East Timor during the INTERFET campaign (16 September 1999 - 10 April 2000)."""@en ;
+    skos:prefLabel "International Force East Timor Medal"@en .
+
+cmah:iraq-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/iraq-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "45"^^xsd:integer ;
+    skos:definition """The Iraq Medal recognises service with the Australian Defence Force in specified operations in the Iraq region from 18 March 2003 onwards."""@en ;
+    skos:prefLabel "Iraq Medal"@en .
+
+cmah:knight-order-australia a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/knight-dame-order-australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "6"^^xsd:integer ;
+    skos:definition """From 1976 to 1986 and 2014 to 2015 there was provision for the appointment of Knights in the Order of Australia."""@en ;
+    skos:notation "AK"@en ;
+    skos:prefLabel "Knight of the Order of Australia"@en .
+
+cmah:medal-gallantry a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/medal-gallantry"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "20"^^xsd:integer ;
+    skos:definition """The Medal for Gallantry is awarded to military personnel for acts of gallantry in action in hazardous circumstances."""@en ;
+    skos:notation "MG"@en ;
+    skos:prefLabel "Medal for Gallantry"@en .
+
+cmah:medal-order-australia a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/medal-order-australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "30"^^xsd:integer ;
+    skos:definition """The Medal of the Order of Australia is awarded for service worthy of particular recognition."""@en ;
+    skos:notation "OAM"@en ;
+    skos:prefLabel "Medal of the Order of Australia"@en .
+
+cmah:member-order-australia a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/member-order-australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "15"^^xsd:integer ;
+    skos:definition """The Member of the Order of Australia is awarded for service in a particular locality or field of activity or to a particular group."""@en ;
+    skos:notation "AM"@en ;
+    skos:prefLabel "Member of the Order of Australia"@en .
+
+cmah:meritorious-unit-citation a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/meritorious-unit-citation"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:definition """The Meritorious Unit Citation recognises sustained outstanding service in warlike operations."""@en ;
+    skos:prefLabel "Meritorious Unit Citation"@en .
+
+cmah:national-emergency-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/national-emergency-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "53"^^xsd:integer ;
+    skos:definition """The National Emergency Medal is an operational service medal which recognises significant or sustained service to others in response to nationally-significant emergencies within Australia."""@en ;
+    skos:prefLabel "National Emergency Medal"@en .
+
+cmah:national-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/national-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "73"^^xsd:integer ;
+    skos:definition """The National Medal recognises long and diligent service, by members of recognised government and voluntary organisations, that risk their lives or safety to protect or assist the community in enforcement of the law or in times of emergency or natural disaster."""@en ;
+    skos:prefLabel "National Medal"@en .
+
+cmah:national-police-service-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/national-police-service-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "55"^^xsd:integer ;
+    skos:definition """The National Police Service Medal recognises the special status that sworn police officers have because of their role protecting the community. It represents a police officer's past and future commitment to give ethical and diligent service."""@en ;
+    skos:prefLabel "National Police Service Medal"@en .
+
+cmah:nursing-service-cross a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/nursing-service-cross"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "19"^^xsd:integer ;
+    skos:definition """The Nursing Service Cross recognises outstanding performance of nursing duties in both operational and non-operational situations."""@en ;
+    skos:notation "NSC"@en ;
+    skos:prefLabel "Nursing Service Cross"@en .
+
+cmah:officer-order-australia a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/officer-order-australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "10"^^xsd:integer ;
+    skos:definition """The Officer of the Order of Australia is awarded for distinguished service of a high degree to Australia or humanity at large."""@en ;
+    skos:notation "AO"@en ;
+    skos:prefLabel "Officer of the Order of Australia"@en .
+
+cmah:police-overseas-service-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/police-overseas-service-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "51"^^xsd:integer ;
+    skos:definition """The Police Overseas Service Medal recognises service by officers of Australian police forces with international peace-keeping organisations."""@en ;
+    skos:prefLabel "Police Overseas Service Medal"@en .
+
+cmah:public-service-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/public-service-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "23"^^xsd:integer ;
+    skos:definition """The Public Service Medal recognises outstanding service by employees of the Australian Government and state, territory and local government employees."""@en ;
+    skos:notation "PSM"@en ;
+    skos:prefLabel "Public Service Medal"@en .
+
+cmah:reserve-force-decoration a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/reserve-force-decoration"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "70"^^xsd:integer ;
+    skos:definition """The Reserve Force Decoration was awarded to Reserve Force officers for 15 years efficient service by members of the Defence Force."""@en ;
+    skos:notation "RFD"@en ;
+    skos:prefLabel "Reserve Force Decoration"@en .
+
+cmah:reserve-force-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/reserve-force-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "71"^^xsd:integer ;
+    skos:definition """The Reserve Force Medal was awarded to Reserve Force other ranks for 15 years efficient service."""@en ;
+    skos:prefLabel "Reserve Force Medal"@en .
+
+cmah:rhodesia-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/rhodesia-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "50"^^xsd:integer ;
+    skos:definition """The Rhodesia Medal was awarded to members of the armed services, police personnel and civilians who served in the multi-national force on Operation Agila."""@en ;
+    skos:prefLabel "Rhodesia Medal"@en .
+
+cmah:star-courage a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/star-courage"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "13"^^xsd:integer ;
+    skos:definition """The Star of Courage is awarded for acts of conspicuous courage in circumstances of great peril."""@en ;
+    skos:notation "SC"@en ;
+    skos:prefLabel "Star of Courage"@en .
+
+cmah:star-gallantry a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/star-gallantry"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "12"^^xsd:integer ;
+    skos:definition """The Star of Gallantry recognises acts of outstanding heroism in action in circumstances of great peril."""@en ;
+    skos:notation "SG"@en ;
+    skos:prefLabel "Star of Gallantry"@en .
+
+cmah:unit-citation-gallantry a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/unit-citation-gallantry"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:definition """The Unit Citation for Gallantry recognises extraordinary gallantry in action."""@en ;
+    skos:prefLabel "Unit Citation for Gallantry"@en .
+
+cmah:victoria-cross-australia a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/victoria-cross-australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "1"^^xsd:integer ;
+    skos:definition """The Victoria Cross for Australia is the pre-eminent award for acts of bravery in wartime and Australia's highest military honour."""@en ;
+    skos:notation "VC"@en ;
+    skos:prefLabel "Victoria Cross for Australia"@en .
+
+cmah:vietnam-logistic-and-support-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/vietnam-logistic-and-support-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "41"^^xsd:integer ;
+    skos:definition """The Vietnam Logistic and Support Medal recognises the service of Australian personnel in support roles during the Vietnam War."""@en ;
+    skos:prefLabel "Vietnam Logistic and Support Medal"@en .
+
+cmah:vietnam-medal a skos:Concept ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/list-australian-honours/vietnam-medal"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:inScheme <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/commonwealth-awards-honours> ;
+    eaox:orderOfDisplay "40"^^xsd:integer ;
+    skos:definition """The Vietnam Medal recognises members of the Australian Defence Forces and members of accredited philanthropic organisations serving in South Vietnam during the Vietnam War."""@en ;
+    skos:prefLabel "Vietnam Medal"@en .
+
+
+cmah:commonwealth-postnominals a skos:Collection ;
+    dcterms:source "https://www.pmc.gov.au/honours-and-symbols/australian-honours-system/post-nominals"^^xsd:anyURI ;
+    skos:definition """List of the established post-nominal entitlements for Australian honours and Imperial honours."""@en ;
+    skos:prefLabel "Austrlian Commonwealth Post-Nominals"@en ;
+    skos:member
+        cmah:ambulance-service-medal,
+        cmah:australian-antarctic-medal,
+        cmah:australian-corrections-medal,
+        cmah:australian-fire-service-medal,
+        cmah:australian-intelligence-medal,
+        cmah:australian-police-medal,
+        cmah:bravery-medal,
+        cmah:companion-order-australia,
+        cmah:conspicuous-service-cross,
+        cmah:conspicuous-service-medal,
+        cmah:cross-valour,
+        cmah:dame-order-australia,
+        cmah:distinguished-service-cross,
+        cmah:distinguished-service-medal,
+        cmah:emergency-services-medal,
+        cmah:knight-order-australia,
+        cmah:medal-gallantry,
+        cmah:medal-order-australia,
+        cmah:member-order-australia,
+        cmah:nursing-service-cross,
+        cmah:officer-order-australia,
+        cmah:public-service-medal,
+        cmah:reserve-force-decoration,
+        cmah:star-courage,
+        cmah:star-gallantry,
+        cmah:victoria-cross-australia .
+
+

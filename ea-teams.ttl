@@ -1,0 +1,628 @@
+PREFIX eatm: <https://ref.engineersaustralia.org.au/def/ea-teams/>
+PREFIX eaof: <https://ref.engineersaustralia.org.au/def/ea-offices/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX earl: <https://ref.engineersaustralia.org.au/def/ea-activity-roles/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prty: <https://ref.engineersaustralia.org.au/def/ea-party/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://ref.engineersaustralia.org.au/def/ea-teams> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
+    dcterms:created "2023-11-30"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:modified "2023-11-30"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:rightsHolder eatm:people-strategy ;
+        prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: People"@en
+                ]
+        ] ;
+    dcterms:source "https://connx.engineersaustralia.org.au/frmCompInfoOrgChart.aspx"^^xsd:anyURI ;
+    rdfs:comment "RDF graph of Engineers Australia Teams and Divisions."@en ;
+    skos:definition """A list of Engineers Australia Teams and Geographical Divisions."""@en ;
+    skos:scopeNote """This list is derived from master data managed in the HR System (currently ConnX) and is intended for broad application. Therefore it should only describe at the Group and Team level and should not extend to individual positions. This vocabulary is not the source-of-truth for this dataset, and ConnX takes precedence in any case where there is a discrepency."""@en ;
+    skos:historyNote "Compiled by the Engineers Australia Data and Analytics Team"@en ;
+    skos:editorialNote """dcterms:isPartOf is used for accurate representation of member relationships. Whereas skos:broader is used for pragmatic display of heirarchy and reporting structure, not sensu-strictu Type Of relationships."""@en ;
+    skos:hasTopConcept
+        eatm:oceo ;
+    skos:altLabel "Engineers Australia Organisational Structure"@en ;
+    skos:prefLabel "Engineers Australia Teams and Divisions"@en ;
+.
+
+<https://linked.data.gov.au/org/engineersaustralia>
+    a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+eatm:oceo a skos:Concept ,
+        prty:business-unit ;
+    dcterms:source "https://theengineersaustralia.sharepoint.com/sites/intr-office-ceo"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:definition """The purpose of the Office of the CEO is to support the Chief Executive Officer in driving the company's strategic vision, ensuring effective decision-making, and coordinating key initiatives across the organisation. It serves as a strategic hub, facilitating communication, advising on critical business matters, and ensuring alignment with organisational goals to enhance overall performance and growth."""@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:prefLabel """Office of the Chief Executive Officer"""@en ;
+    skos:altLabel "Chief Executive Officer"@en,
+        "Office of the CEO"@en ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+.
+
+eatm:ceng a skos:Concept ,
+        prty:business-unit ;
+    dcterms:source "https://staffportal.engineersaustralia.org.au/display/OEA/Meet+your+Executive+Team?preview=/142180377/142180392/Group%20Executive%20Success%20Profile%20-%20CHIEF%20ENGINEER.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:definition """Purpose: Raise the standing and recognition of the engineering profession."""@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:prefLabel """Office of the Chief Engineer"""@en ;
+    skos:altLabel "Chief Engineer"@en ;
+    skos:broader eatm:oceo ;
+.
+
+    eatm:ebg-sys a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The team responsible for management and maintenance of business systems within the Engineering Business Group."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:altLabel "EBG Systems"@en ;
+        skos:prefLabel """Engineering Business Group Systems"""@en ;
+        skos:broader eatm:ceng ;
+        dcterms:isPartOf eatm:ceng ;
+    .
+
+    eatm:prof-stds a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The team that administers the Professional Standards Framework, which is the system of processes, resources and standards that supports engineers to be competent, ethical and high-performing."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Professional Standards"""@en ;
+        skos:broader eatm:ceng ;
+        dcterms:isPartOf eatm:ceng ;
+    .
+
+eatm:counsel-secretary a skos:Concept ,
+        prty:business-unit ;
+    dcterms:source "https://staffportal.engineersaustralia.org.au/display/OEA/Meet+your+Executive+Team?preview=/142180377/142180384/Group%20Executive%20Success%20Profile%20-%20GENERAL%20COUNSEL%20%20COMPANY%20SECRETARY.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:definition """Purpose: To safeguard the integrity of the Engineers Australia group and to protect and further its interests through strategic and independent legal and business advice and robust systems of corporate governance. This position is responsible for providing executive-level leadership in respect of the provision of legal and governance services, advice and expertise to the Engineers Australia group. This is a dual role:
+    1.The Company Secretary is appointed by the Board.
+    2.It is acknowledged that, when acting as a lawyer, the Group General Counsel & Company Secretary is subject to legal and professional ethical obligations that override their duties as an employee."""@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:prefLabel """Counsel & Company Secretary"""@en ;
+    skos:altLabel "General Counsel & Group Company Secretary"@en ;
+    skos:broader eatm:oceo ;
+.
+
+    eatm:legal a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The team that provide legal support services across Engineers Australia and its related companies including EEA and EngInsure."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Legal"""@en ;
+        skos:broader eatm:counsel-secretary ;
+        dcterms:isPartOf eatm:counsel-secretary ;
+    .
+
+eatm:digital-tech a skos:Concept ,
+        prty:business-unit ;
+    dcterms:source "https://staffportal.engineersaustralia.org.au/display/OEA/Meet+your+Executive+Team?preview=/142180377/142180382/Group%20Executive%20Success%20Profile%20-%20DIGITAL%20TECHNOLOGY.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:definition """Purpose: Lead and drive the digital strategy and capability of Engineers Australia. Lead the data, technology, and digital operations of Engineers Australia."""@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:prefLabel """Digital & Technology"""@en ;
+    skos:broader eatm:oceo ;
+.
+
+    eatm:cyber-info-sec a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/DTG/Digital+and+Technology+Home"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """Ensuring the secure operation of systems and platforms at Engineers Australia, and the protection of data and information held therein."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Cyber & Information Security"""@en ;
+        skos:broader eatm:digital-tech ;
+        dcterms:isPartOf eatm:digital-tech ;
+    .
+
+    eatm:data-analytics a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://theengineersaustralia.sharepoint.com/sites/DAI-Hub"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The Data, Analytics, and Insights team deliver a range services relating to data, reporting, analytics.
+        - Reporting and Business Intelligence (BI)
+        - Data Management and Data Governance
+        - Data Science & Insights"""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Data & Analytics"""@en ;
+        skos:broader eatm:digital-tech ;
+        dcterms:isPartOf eatm:digital-tech ;
+    .
+
+    eatm:digital-transformation a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://theengineersaustralia.sharepoint.com/sites/DAI-Hub"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The Digital Transformation Team is responsible for the organisation-wide change of our data and digital platforms. Digital Transformaton is about reimagining ways of working. It is about digital solutions are used to get the best outcome for members and make business operations easier"""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Digital Transformation"""@en ;
+        skos:broader eatm:digital-tech ;
+        dcterms:isPartOf eatm:digital-tech ;
+    .
+
+    eatm:service-mgmt-infra a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/ICT/ICT+Home?searchId=SMK2KOD9X"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The ICT team deliver a wide range of ICT services across the whole of EA:
+        - Provide ICT Service Delivery and Support to EA/EEA colleagues
+        - Streamlining of existing technologies, developing and implementing new technologies, to benefit EA staff and members
+        - Provide a secure and stable infrastructure
+        - Business Intelligence tools and analysis of business data"""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Service Management & Infrastructure"""@en ;
+        skos:broader eatm:digital-tech ;
+        dcterms:isPartOf eatm:digital-tech ;
+    .
+
+    eatm:platforms a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/download/attachments/150110264/Platform%20Management%20-%20information%20pack.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The platform team manage the support, updates, changes and outages for platforms across the organisation. In practice this involves:
+        - setting strategic direction for each platform,
+        - agreeing roadmaps and backlogs
+        - managing and allocating funding for updates, changes and patches
+        - ongoing backlog review and prioritisation
+        - communication of backlog and in-progress work status to business stakeholders."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:altLabel "Platform Management"@en ;
+        skos:prefLabel """Platforms"""@en ;
+        skos:broader eatm:digital-tech ;
+        dcterms:isPartOf eatm:digital-tech ;
+    .
+
+    eatm:tech-strategy a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/download/attachments/150110264/Platform%20Management%20-%20information%20pack.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The Technology & Strategy team manage the strategic change and design of the organisation technology stack. Both how enhancements and changes are implemented coherently within current systems and how future platforms are implemented to enhance operational capability and efficiency. Functions include Enterprise, Solutions, and Data Architecture."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:altLabel "Architecture & IT Strategy"@en ;
+        skos:prefLabel """Technology & Strategy"""@en ;
+        skos:broader eatm:digital-tech ;
+        dcterms:isPartOf eatm:digital-tech ;
+    .
+
+eatm:finance-risk a skos:Concept ,
+        prty:business-unit ;
+    dcterms:source "https://staffportal.engineersaustralia.org.au/display/OEA/Meet+your+Executive+Team?preview=/142180377/142180383/Group%20Executive%20Success%20Profile%20-%20FINANCE%20%20RISK.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:definition """Purpose: Ensure the responsible and sustainable financial performance and growth of Engineers Australia."""@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:prefLabel """Finance & Risk"""@en ;
+    skos:broader eatm:oceo ;
+.
+
+    eatm:finance a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/download/attachments/150110264/Platform%20Management%20-%20information%20pack.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """Ensure the responsible financial performance of Engineers Australia."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Finance"""@en ;
+        skos:broader eatm:finance-risk ;
+        dcterms:isPartOf eatm:finance-risk ;
+    .
+
+    eatm:risk a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/download/attachments/150110264/Platform%20Management%20-%20information%20pack.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """Ensure the sustainable financial growth of Engineers Australia through assessment of financial and operational risks."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Risk"""@en ;
+        skos:broader eatm:finance-risk ;
+        dcterms:isPartOf eatm:finance-risk ;
+    .
+
+eatm:growth-education a skos:Concept ,
+        prty:business-unit ;
+    dcterms:source "https://staffportal.engineersaustralia.org.au/display/OEA/Meet+your+Executive+Team?preview=/142180377/142180385/Group%20Executive%20Success%20Profile%20-%20GROWTH%20%20EDUCATION.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:definition """Purpose: Lead the delivery of services, support, advice,and expertise to the whole of the Engineers Australia organisation in revenue growth, acquisition and retention of members and education."""@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:prefLabel """Growth & Education"""@en ;
+    skos:broader eatm:oceo ;
+.
+
+    eatm:eea a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/GaE/Engineering+Education+Australia+-+EEA"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """As Engineers Australia's training provider, Engineering Education Australia is deeply embedded in the world of engineering. We keep a constant watch on industry trends and emerging technologies, and we respond to these, ensuring all our training courses, workshops and programs are designed around today's engineers.
+        
+        We deliver professional development courses, micro-credentials, and training programs, designed specifically for engineers, all around Australia, including face-to-face, blended, and online training to individuals and organisations, Content can be tailored for corporate clients to meet specific business objectives. EEA's courses contribute to Engineers Australia's Continuing Professional Development (CPD) hours and align with the competency standards for Chartered status.
+
+        With a rich history of engineering education in Australia, stretching back over 30 years, EEA is well-attuned to the needs of today's engineer: training that is relevant, flexible, and trusted."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:altLabel "EEA"@en ;
+        skos:prefLabel """Engineering Education Australia"""@en ;
+        skos:broader eatm:growth-education ;
+        dcterms:isPartOf eatm:growth-education ;
+    .
+
+    eatm:growth a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/GaE/Business+Growth"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The Business Growth team is responsible for how Engineers Australia expands its business opportunities and activities through partnership agreements and initiatives. The growth team manages and grows client relationships within the engineering profession."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:altLabel "Business Growth"@en ;
+        skos:prefLabel """Growth"""@en ;
+        skos:broader eatm:growth-education ;
+        dcterms:isPartOf eatm:growth-education ;
+    .
+
+eatm:member-customer a skos:Concept ,
+        prty:business-unit ;
+    dcterms:source "https://staffportal.engineersaustralia.org.au/display/MaC"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:definition """Purpose: Provide exceptional experiences for members and customers, to engage them in the engineering profession and support them to achieve their goals."""@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:prefLabel """Member & Customer"""@en ;
+    skos:broader eatm:oceo ;
+.
+
+    eatm:customer-exp a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://theengineersaustralia.sharepoint.com/sites/CustomerExperience/SitePages/TopicHome.aspx"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The team responsible for coordinating consistent and exceptional experiences for members and customers. The aim of Customer Experience is to turn Customers into Advocates who will attract others on our behalf!"""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Customer Experience"""@en ;
+        skos:broader eatm:member-customer ;
+        dcterms:isPartOf eatm:member-customer ;
+    .
+
+    eatm:divisions-chapters a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The team that coordinates and manages across all geographic divisions and international chapters."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Divisions & Chapters"""@en ;
+        skos:broader eatm:member-customer ;
+        dcterms:isPartOf eatm:member-customer ;
+    .
+
+        earegb:division-adl a skos:Concept ,
+                prty:division ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+            skos:broader eatm:divisions-chapters ;
+            dcterms:isPartOf eatm:divisions-chapters .
+
+        earegb:division-bne a skos:Concept ,
+                prty:division ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+            skos:broader eatm:divisions-chapters ;
+            dcterms:isPartOf eatm:divisions-chapters .
+
+        earegb:division-cbr a skos:Concept ,
+                prty:division ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+            skos:broader eatm:divisions-chapters ;
+            dcterms:isPartOf eatm:divisions-chapters .
+
+        earegb:division-drw a skos:Concept ,
+                prty:division ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+            skos:broader eatm:divisions-chapters ;
+            dcterms:isPartOf eatm:divisions-chapters .
+
+        earegb:division-hba a skos:Concept ,
+                prty:division ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:broader eatm:divisions-chapters ;
+        dcterms:isPartOf eatm:divisions-chapters .
+
+        earegb:division-mel a skos:Concept ,
+                prty:division ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:broader eatm:divisions-chapters ;
+        dcterms:isPartOf eatm:divisions-chapters .
+
+        earegb:division-ntl a skos:Concept ,
+                prty:division ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:broader eatm:divisions-chapters ;
+        dcterms:isPartOf eatm:divisions-chapters .
+
+        earegb:division-per a skos:Concept ,
+                prty:division ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:broader eatm:divisions-chapters ;
+        dcterms:isPartOf eatm:divisions-chapters .
+
+        earegb:division-syd a skos:Concept ,
+                prty:division ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:broader eatm:divisions-chapters ;
+        dcterms:isPartOf eatm:divisions-chapters .
+
+        eatm:int-chapters a skos:Concept ,
+                prty:division ;
+            dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+            rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+            skos:definition """The Engineers Australia Office that administers and coordinates the operation of international chapters outside Australia."""@en ;
+            skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+            skos:prefLabel """International Chapters"""@en ;
+            skos:broader eatm:divisions-chapters ;
+            dcterms:isPartOf eatm:divisions-chapters ;
+        .
+
+    eatm:future-now a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/OCG/Future+Now+Program/"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The Future Now Program (FuN) formerly known as the Learned Society Review is about optimising the passion and expertise of EA volunteers to deliver on EA's purpose of 'Advancing society through great engineering'.
+        
+        The Program will determine the key activities, capabilities and requisite frameworks needed to enable the contribution of volunteers across multi-disciplinary engineering practice."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:altLabel "Learned Society Review"@en ;
+        skos:prefLabel """Future Now Program"""@en ;
+        skos:broader eatm:member-customer ;
+        dcterms:isPartOf eatm:member-customer ;
+    .
+
+    eatm:learned-society a skos:Concept ,
+            prty:learned-society ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/MaC/Learned+Society"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """Engineers Australia is a learned society, which is an organisation that exists to promote an academic discipline or profession and raise standards.
+
+        In achieving its purpose, Engineers Australia's learned society functions are developed and implemented primarily through the colleges and technical societies. Learned society functions and activities include:
+        - Identification and delivery of professional development.
+        - Development and delivery of specialist conferences.
+        - Provision of advice on technical standards.
+        - Development of the body of knowledge (BOK) relevant to a college or society's discipline or area of practice.
+        - Provision of high-level technical advice and represent EA in the wider community.
+        - Participation in expert panels, committees or forums and nominate members to external bodies as required.
+        - Collaboration and co-operation with other EA bodies.
+        
+        The Learned Society team work directly with the Colleges, Technical Societies, and related groups to assist with the above functions and activities."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Learned Society"""@en ;
+        skos:broader eatm:member-customer ;
+        dcterms:isPartOf eatm:member-customer ;
+    .
+
+    eatm:prof-dev a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/MaC/Professional+Development"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The National Professional Development (NPD) Team is responsible for the development and execution of Continual Professional Development (CPD) via webinars, small events, national and international conferences, major events and awards available to Engineers Australia's (EA) Members and the wider engineering community.
+        
+        We are responsible for the planning and execution of these events and also implementing standard processes and procedures within EA.  Working in collaboration with other parts of Engineers Australia, we assist in delivering;
+        - CPD Webinars/Events
+        - Major Events and Conferences
+        - Awards"""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:altLabel "National Professional Development"@en,
+            "NPD"@en ;
+        skos:prefLabel """Professional Development"""@en ;
+        skos:broader eatm:member-customer ;
+        dcterms:isPartOf eatm:member-customer ;
+    .
+
+eatm:engagement-assessment a skos:Concept ,
+        prty:business-unit ;
+    dcterms:source "https://staffportal.engineersaustralia.org.au/display/OEA/Meet+your+Executive+Team?preview=/142180377/142180387/Group%20Executive%20Success%20Profile%20-%20OPERATIONS%20%20ASSESSMENT.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:definition """Purpose: Lead the integrity of our experiences and processes across Operations, Assessments and Chartered Assessments. The first point for customer contact, delivering a world-class customer experience by supporting membership growth and retention. To assess engineering qualifications and competencies for membership grades, registration and for migration purposes."""@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:altLabel "Customer Engagement and Assessments"@en ;
+    skos:prefLabel """Operations & Assessment"""@en ;
+    skos:broader eatm:oceo ;
+.
+
+    eatm:ind-pratice-assessment a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/OCG/Customer+Engagement+and+Assessments"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """Assessment of the competency of engineers as demonstrated by independent practice of engineering skills and activities. Also known as stage 2 assessment."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Independent Practice Assessments"""@en ;
+        skos:broader eatm:engagement-assessment ;
+        dcterms:isPartOf eatm:engagement-assessment ;
+    .
+
+    eatm:ops-assessment a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/OCG/Customer+Engagement+and+Assessments"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """Assessment of engineering qualifications and competencies for membership grades, registration and for migration purposes."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Operations Assessments"""@en ;
+        skos:broader eatm:engagement-assessment ;
+        dcterms:isPartOf eatm:engagement-assessment ;
+    .
+
+    eatm:ops-support a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/OCG/Customer+Engagement+and+Assessments"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """Delivering a world-class customer experience by supporting membership growth and retention."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Operations Support"""@en ;
+        skos:broader eatm:engagement-assessment ;
+        dcterms:isPartOf eatm:engagement-assessment ;
+    .
+
+eatm:people-strategy a skos:Concept ,
+        prty:business-unit ;
+    dcterms:source "https://staffportal.engineersaustralia.org.au/display/OEA/Meet+your+Executive+Team?preview=/142180377/142180388/Group%20Executive%20Success%20Profile%20-%20PEOPLE%20%20STRATEGY.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:definition """Purpose: Ensures the integrity and alignment of our strategy, culture, and operating model, so our people can deliver on our purpose."""@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:prefLabel """People & Strategy"""@en ;
+    skos:broader eatm:oceo ;
+.
+
+    eatm:enable a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/TRAN/Welcome+to+The+Enable+Team"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """Providing people-focused change management and enterprise project management across EA."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Enable"""@en ;
+        skos:broader eatm:people-strategy ;
+        dcterms:isPartOf eatm:people-strategy ;
+    .
+
+    eatm:facilities a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/PSTG/Facilities"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The facilities team take care of coordinating all aspects of Engineers Australia property management, including liaising with building owners and other tenants in our buildings. 
+        
+        Some other things that we take care of are:
+        - Providing advice and support to business unit managers
+        - Ensuring our properties and premises are fit-for-purpose and providing safe and healthy environments for all employees and visitors to our offices
+        - Ensuring all required repairs and maintenance are completed
+        - Arranging repairs and maintenance to office areas
+        - Managing Engineers Australia's impact on the environment, including waste management and adopting appropriate environmentally-sustainable business practices."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Facilities"""@en ;
+        skos:broader eatm:people-strategy ;
+        dcterms:isPartOf eatm:people-strategy ;
+    .
+
+    eatm:org-dev a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/PSTG/The+People+Team"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """Organisational Development provides support across the organisation to facilitate:
+        - Culture Roadmap and Culture Connection
+        - Leadership Capability
+        - Learning and Development
+        - Diversity and Inclusion
+        - Employee Engagement & People Pulse 
+        - Team dynamics, building trust and high performing teams."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Organisational Development"""@en ;
+        skos:broader eatm:people-strategy ;
+        dcterms:isPartOf eatm:people-strategy ;
+    .
+
+    eatm:people a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/PSTG/The+People+Team"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The people team are responsible for human resources and the effective management of EA employees and staffing. This includes:
+        - General People Enquiries
+        - Talent Attraction and Retention
+        - Onboarding and Offboarding
+        - Performance Management
+        - Appraisals and Objectives
+        - Strategic Planning & Workforce Planning
+        - Employee Wellbeing, Counselling and Support, My Wellbeing
+        - Our Flex
+        - Work Health & Safety
+        - Working from home assessments 
+        - COVID-19 Safety, COVID-Safe Hub 
+        - Remuneration 
+        - Rewards and Recognition
+        - Our Employee Benefits
+        - Policies and Procedures, Our Policy and Procedure Framework."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """People"""@en ;
+        skos:broader eatm:people-strategy ;
+        dcterms:isPartOf eatm:people-strategy ;
+    .
+
+    eatm:strategy a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/PSTG/Our+Strategic+Direction+and+Performance"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The strategy team articulates the organisational strategy and provides an Annual Plan with a comprehensive and clear explanation of the annual planning process, priorities, enabling priorities, and deliverables.
+        
+        The Annual plan will:
+        - Provide strong connection to strategy and purpose
+        - Provide clear annual priorities for our people and members.
+        - Translate our strategic purpose and outcomes into daily practice.
+        - Provide structure, direction, and accountability. 
+        - Help us measure progress, identify areas of improvement, and make adjustments to achieve our outcomes."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Strategy"""@en ;
+        skos:broader eatm:people-strategy ;
+        dcterms:isPartOf eatm:people-strategy ;
+    .
+
+eatm:policy-public a skos:Concept ,
+        prty:business-unit ;
+    dcterms:source "https://staffportal.engineersaustralia.org.au/download/attachments/142180377/Group%20Executive%20Success%20Profile%20-%20POLICY%20%20PUBLIC%20AFFAIRS.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:definition """Purpose: Progress Engineers Australia's strategic outcomes by developing and delivering policy positions, leading advocacy on a range of public policy topics,and influence key decision makers on behalf of Engineers Australia and the engineering profession."""@en ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+    skos:prefLabel """Policy & Public Affairs"""@en ;
+    skos:broader eatm:oceo ;
+.
+
+    eatm:brand-marketing a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/GaE/Brand+and+Marketing"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """Brand and Marketing is responsible for how Engineers Australia presents itself to the public and to our members through the branding of the organisation and by raising the profile of the profession through marketing campaigns. We work with each business unit to ensure that consistent and appropriate branding and campaign messaging are being delivered to all stakeholders."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Brand & Marketing"""@en ;
+        skos:broader policy-public ;
+        dcterms:isPartOf eatm:growth-education ;
+    .
+
+    eatm:policy-advocacy a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/PPA/Policy+and+Public+Affairs"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """The Policy and Advocacy team delivers on the Royal Charter by informing community leaders and decision-makers on public policy issues from the engineers' perspectives. The team are responsible for leading delivery of the organisation's goal to be the trusted voice of the profession on matters of public policy.
+
+        The team's work and core business can be summarised as advocacy. The Policy and Advocacy team support other business units and EA members work on big public issues (like the future of energy, or fighting for action on climate change), and to engage with politicians or government agencies (like the PM or Department of Industry)."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:prefLabel """Policy & Advocacy"""@en ;
+        skos:broader eatm:policy-public ;
+        dcterms:isPartOf eatm:policy-public ;
+    .
+
+    eatm:strat-comms-engagement a skos:Concept ,
+            prty:functional-business-unit ;
+        dcterms:source "https://staffportal.engineersaustralia.org.au/display/PPA/Communications+and+Media"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:definition """Communications is responsible for how Engineers Australia presents itself to the public and to our members through various communications channels and by raising the profile of the profession through campaigns. We work with each business unit to ensure that consistent and appropriate messaging are being delivered to all stakeholders.
+        
+        The Communications team are collectively responsible for crafting all external messaging for the organisation. This includes the website, all online digital publications, member newsletters, social media, hardcopy publications and media. This role also includes communications advice and consultancy to other business units."""@en ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-teams> ;
+        skos:altLabel "Communications and Media"@en ;
+        skos:prefLabel """Strategic Communications & Engagement"""@en ;
+        skos:broader eatm:policy-public ;
+        dcterms:isPartOf eatm:policy-public ;
+    .

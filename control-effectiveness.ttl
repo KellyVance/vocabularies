@@ -1,0 +1,89 @@
+PREFIX ctrl: <https://linked.data.gov.au/def/control-effectiveness/>
+PREFIX earl: <https://ref.engineersaustralia.org.au/def/ea-activity-roles/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/engineersaustralia> a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+<https://linked.data.gov.au/def/control-effectiveness> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2024-01-10"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:modified "2024-03-01"^^xsd:date ;
+    dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
+    dcterms:references <https://www.iso.org/obp/ui/#iso:std:iso:31000:en>,
+        <https://www.finance.gov.au/sites/default/files/2020-12/Information-Sheet-Undertaking-Risk-Management-Process.docx> ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: Test & Quality Assurance Lead"
+                ]
+        ] ;
+    skos:hasTopConcept
+        ctrl:good,
+        ctrl:satisfactory,
+        ctrl:poor,
+        ctrl:uncontrolled ;
+    skos:definition "The effectiveness to which systems and processes are able to mitigate risk and enable desired outcomes. The level of control over risk that exists within a given set of conditions."@en ;
+    skos:altLabel "Control Effectiveness Rating"@en ;
+    skos:prefLabel "Control Effectiveness"@en .
+
+ctrl:good a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/control-effectiveness>;
+    skos:inScheme <https://linked.data.gov.au/def/control-effectiveness> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/control-effectiveness> ;
+	skos:definition """- Controls are well designed, address the risk, and are effective and reliable at all times.
+    - Require ongoing maintenance and monitoring.
+    - Management may, at their discretion, consider further controls to reduce risk."""@en;
+    skos:altLabel "Good"@en ;
+    skos:prefLabel "1. Good"@en .
+
+ctrl:satisfactory a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/control-effectiveness>;
+    skos:inScheme <https://linked.data.gov.au/def/control-effectiveness> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/control-effectiveness> ;
+	skos:definition """- Most controls are designed correctly and are in place and effective. 
+    - Controls address risk at least partially however may require further improvement. 
+    - Some work needs to be done to improve operating effectiveness or management has doubts about operational effectiveness and reliability of some controls.
+    - Consideration be given to implementing further controls for risks outside of appetite."""@en;
+    skos:altLabel "Satisfactory"@en ;
+    skos:prefLabel "2. Satisfactory"@en .
+
+ctrl:poor a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/control-effectiveness>;
+    skos:inScheme <https://linked.data.gov.au/def/control-effectiveness> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/control-effectiveness> ;
+	skos:definition """- There are controls, but they do not effectively address the risk or require significant improvement. 
+    - Most of the controls do not seem correctly designed, in that they do not operate effectively. 
+    - Significant control gaps. 
+    - Additional controls must be developed for all risks outside of appetite."""@en;
+    skos:altLabel "Poor"@en ;
+    skos:prefLabel "3. Poor"@en .
+
+ctrl:uncontrolled a skos:Concept ;
+    dcterms:source "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/control-effectiveness>;
+    skos:inScheme <https://linked.data.gov.au/def/control-effectiveness> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/control-effectiveness> ;
+	skos:definition """- There is virtually no credible control, or controls that exist do not address the risk. 
+    - Management has no confidence that any degree of control is being achieved due to poor control design and/or very limited operational effectiveness.
+    - Controls must be implemented to address risks outside of appetite."""@en;
+    skos:altLabel "Uncontrolled"@en ;
+    skos:prefLabel "4. Uncontrolled"@en .

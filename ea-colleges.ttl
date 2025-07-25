@@ -1,180 +1,72 @@
-@prefix eaclg: <https://ref.engineersaustralia.org.au/def/ea-colleges/> .
-@prefix anzsrc-2020-for: <https://linked.data.gov.au/def/anzsrc-for/2020/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sdo: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX eacol: <https://ref.engineersaustralia.org.au/def/ea-colleges/>
+PREFIX prty: <https://ref.engineersaustralia.org.au/def/ea-party/>
+PREFIX earegb: <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies/>
+PREFIX eatm: <https://ref.engineersaustralia.org.au/def/ea-teams/>
+PREFIX earp: <https://ref.engineersaustralia.org.au/def/ea-party-roles/>
+PREFIX aop: <https://ref.engineersaustralia.org.au/def/areasofpractice/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
 
 <https://ref.engineersaustralia.org.au/def/ea-colleges> a owl:Ontology ,
         skos:ConceptScheme ;
-    dcterms:created "2022-11-23"^^xsd:date ;
+    dcterms:created "2024-03-13"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
-    dcterms:modified "2022-11-23"^^xsd:date ;
-    dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
-    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities"^^xsd:anyURI ;
+    dcterms:modified "2024-03-13"^^xsd:date ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
     dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
-    skos:definition """A College is a formal body of Engineers Australia that supports all aspects of a specific engineering discipline to its Members in the way of technical conferences, symposia, meetings and publications etc.
-    
-    The Colleges fulfil the learned society function of Engineers Australia by the publication of technical information such as papers, videos and other media; the organisation of technical meetings; specialist conference and technical committee work including participation in Professional Interviews (PI)."""@en ;
+    rdfs:seeAlso <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """A profile of EA Engineering Colleges as an extract from EA Regulated bodies."""@en ;
     skos:hasTopConcept
-        eaclg:biomedical,
-        eaclg:chemical,
-        eaclg:civil,
-        eaclg:electrical,
-        eaclg:environmental,
-        eaclg:itee,
-        eaclg:leadership-management,
-        eaclg:mechanical,
-        eaclg:structural ;        
+        earegb:biomedical-college,
+        earegb:chemical-college,
+        earegb:civil-college,
+        earegb:electrical-college,
+        earegb:environmental-college,
+        earegb:itee-college,
+        earegb:leadership-management-college,
+        earegb:mechanical-college,
+        earegb:structural-college ;
     skos:prefLabel """Engineers Australia Colleges"""@en .
 
-<https://linked.data.gov.au/org/engineersaustralia>
-    a sdo:Organization ;
-    sdo:name "Engineers Australia" ;
-    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
-
-<https://orcid.org/0000-0003-2309-7004> a owl:NamedIndividual,
-        sdo:Person ;
-    sdo:affiliation [ a sdo:Organization ;
-            sdo:name "Engineers Australia" ;
-            sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI ] ;
-    sdo:name "Vance Kelly" ;
-    sdo:identifier <https://orcid.org/0000-0003-2309-7004> .
-    
-eaclg:biomedical a skos:Concept ;
-    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
-    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/biomedical-college"^^xsd:anyURI ;
-    skos:definition """The Biomedical College aims to be a peak representative body for biomedical engineering professionals in Australia. Objectives of the Biomedical College are to:
-    - Set standards of practice within biomedical engineering and provide mechanisms to help attain these standards.
-    - Host a broad range of continuing professional development (CPD) opportunities.
-    - Nurture new biomedical engineering talent through mentoring, workshops and awards.
-    - Foster partnerships with our peers including partner professionals from a diverse range of disciplines.
-    - Facilitate an exchange of information on developments and issues regarding biomedical engineering.
-    - Facilitate aid to developing and disaster-torn countries.
-    - Support the accreditation of biomedical engineering tertiary courses that are Washington, Sydney and Dublin Accord-compliant.
-    - Provide advice and recommendations on biomedical engineering professional practice, who can provide it, where it is necessary and how to engage these services in Australia."""@en ;
-    skos:prefLabel "Biomedical College"@en ;
-    skos:related anzsrc-2020-for:4003 ;
+earegb:biomedical-college a skos:Concept ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
 
-eaclg:chemical a skos:Concept ;
-    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
-    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/chemical-college"^^xsd:anyURI ;
-    skos:definition """The Chemical College represents EA members working in chemical engineering roles around Australia. 
-    The Chemical College role is to:
-    - Maintain, develop and promote the chemical engineering body of knowledge.
-    - Develop and audit accreditation standards for tertiary degrees and chartered status.
-    - Provide expert advice for Continuing Professional Development (CPD) in the field of chemical engineering.
-    - Contribute to national and international standards and policies relevant to the field."""@en ;
-    skos:prefLabel "Chemical College"@en ;
-    skos:related anzsrc-2020-for:4004 ;
+earegb:chemical-college a skos:Concept ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
 
-eaclg:civil a skos:Concept ;
-    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
-    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/civil-college"^^xsd:anyURI ;
-    skos:definition """The Civil College represents EA members working in civil engineering roles around Australia. Some of The Civil College key functions are to:
-    - Set discipline standards for professional engineers, technologists and associates.
-    - Guide the content of civil engineering undergraduate courses.
-    - Enter into mutual recognition agreements with kindred bodies.
-    - Conduct research and development.
-    - Explore discipline related initiatives and provide guidance on continuing professional development (CPD) policy.
-    - Facilitate technical conferences, meetings and events.
-    - Publish learned papers and other resources."""@en ;
-    skos:prefLabel "Civil College"@en ;
-    skos:related anzsrc-2020-for:4005 ;
+earegb:civil-college a skos:Concept ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
 
-eaclg:electrical a skos:Concept ;
-    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
-    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/electrical-college"^^xsd:anyURI ;
-    skos:definition """The Electrical College represents EA members working in electrical engineering roles around Australia. The Electrical College has a presence at the EA Standards Australia special interest group, working to ensure electrical engineering standards meet strict guidelines that ensure the safety and consistency of Australian goods and services.
-    The Electrical College work also includes developing policy positions and submitting proposals to government and industry."""@en ;
-    skos:prefLabel "Electrical College"@en ;
-    skos:related anzsrc-2020-for:4008 ;
+earegb:electrical-college a skos:Concept ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
 
-eaclg:environmental a skos:Concept ;
-    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
-    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/environmental-college"^^xsd:anyURI ;
-    skos:definition """The Environmental College represents EA members working in environmental engineering roles around Australia. The Environmental College provides leadership and focus on environmental policy and sustainability and:
-    - Provides strategic advice to EA on how professional standards should apply to practice.
-    - Is a vocal advocate for environmental policy and sustainability within EA.
-    - Co-ordinates the continuing professional development (CPD) for all environmental engineers.
-    The Environmental College work also includes developing policy positions and submitting proposals to government and industry."""@en ;
-    skos:prefLabel "Environmental College"@en ;
-    skos:related anzsrc-2020-for:4011 ;
+earegb:environmental-college a skos:Concept ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
 
-eaclg:itee a skos:Concept ;
-    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
-    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/information-telecommunications-and"^^xsd:anyURI ;
-    skos:definition """The ITEE College promotes the discipline and represents EA members working in information, telecommunications and electronics engineering roles around Australia.
-    The ITEE College control a set of documents to help engineers to understand which of the disciplines that make up ITEE, their works aligns to:
-    - communications
-    - computer systems
-    - electronics
-    - information
-    - software
-    - control Systems
-    - mechatronics."""@en ;
-    skos:altLabel "ITEE College"@en ;
-    skos:prefLabel "Information, Telecommunications and Electronics Engineering College"@en ;
-    skos:related engcat:ITEE ;
+earegb:itee-college a skos:Concept ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
 
-eaclg:leadership-management a skos:Concept ;
-    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
-    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/college-leadership-and-management"^^xsd:anyURI ;
-    skos:definition """The College of Leadership and Management exists to represent engineering professionals across all disciplines who are seeking to become managers, or who are already managers.
-    Our objectives are to:
-    - Promote leadership and management as a career which builds on the knowledge and experience of engineering disciplines.
-    - Work with educators and institutions to improve, broaden and strengthen opportunities for accreditation of engineering leaders and managers.
-    - Promote and extend the reputation of engineering professionals as leaders in the community.
-    - Advocate for engagement of engineering professionals in the broader issues affecting the community, business, industry and government.
-    - Promote opportunities for engineering professionals on boards, government reference groups, advisory panels and the like.
-    - Share the success stories of engineering professionals as leaders and managers."""@en ;
-    skos:prefLabel "College of Leadership and Management"@en ;
-    skos:related engcat:engLeadership ;
+earegb:leadership-management-college a skos:Concept ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
 
-eaclg:mechanical a skos:Concept ;
-    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
-    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/mechanical-college"^^xsd:anyURI ;
-    skos:definition """The Mechanical College represents EA members working in mechanical engineering roles in a vast range of industries around Australia.
-    A large part of our role is to promote the mechanical engineering profession and to deliver continuing professional development (CPD) for mechanical engineers. CPD helps engineers fulfill their leadership potential and ensures they keep up with important industry and technical updates and innovations.
-    We have branches in every state and territory in Australia that deliver CPD to Engineers Australia members and guests with online and in-person training and events."""@en ;
-    skos:prefLabel "Mechanical College"@en ;
-    skos:related anzsrc-2020-for:4017 ;
+earegb:mechanical-college a skos:Concept ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
 
-eaclg:structural a skos:Concept ;
-    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
-    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/structural-college"^^xsd:anyURI ;
-    skos:definition """The Structural College was originally formed in 1995 and now has over 7000 members including members in rural and remote Australia. Our members work in diverse industries including design, planning, construction, inspection and rehabilitation. Structural College members are held in high esteem and are often asked for expert commentary or opinions on structural engineering issues.
-    Some of our key activities are to:
-    - Publish the Australian Journal of Structural Engineering.
-    - Admit new members and audit continuing members.
-    - Nominate members to technical standards committees.
-    - Co-ordinate the annual Australasian Structural Engineering Conference.
-    - Deliver a program of continuing professional development (CPD) for structural engineers.
-    - Facilitate technical conferences, meetings, events and awards.
-    - Publish learned papers and other resources."""@en ;
-    skos:prefLabel "Structural College"@en ;
-    skos:related anzsrc-2020-for:400510 ;
+earegb:structural-college a skos:Concept ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-colleges> ;
     skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-colleges> .
+

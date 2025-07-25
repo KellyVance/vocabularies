@@ -1,0 +1,2199 @@
+PREFIX prty: <https://ref.engineersaustralia.org.au/def/ea-party/>
+PREFIX earegb: <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies/>
+PREFIX eatm: <https://ref.engineersaustralia.org.au/def/ea-teams/>
+PREFIX earp: <https://ref.engineersaustralia.org.au/def/ea-party-roles/>
+PREFIX aop: <https://ref.engineersaustralia.org.au/def/areasofpractice/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2024-01-09"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:modified "2024-01-09"^^xsd:date ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    skos:definition """Engineers Australia Regulated Bodies are those bodies established and continued by resolution of The Board within the Engineers Australia General Regulations. These include Organisational Leadership, Consistuent Bodies, and Learned Societies as defined and established in the General Regulations parts 3, 4, and 5 respectively. Regulated bodies also include constituent bodies established under General Regulations, but not explicitly mentioned therein, by authorised bodies such as committees, subcommittees, boards, and branches."""@en ;
+    skos:hasTopConcept
+        earegb:ea,
+        earegb:ea-national-congress,
+        earegb:ea-board,
+        earegb:audit-risk-committee,
+        earegb:engineering-futures-committee,
+        earegb:honours-awards-committee,
+        earegb:people-culture-committee,
+        earegb:professional-conduct-committee,
+        earegb:professional-standards-committee,
+        earegb:division-cbr,
+        earegb:division-cbr-committee,
+        earegb:division-ntl,
+        earegb:division-ntl-committee,
+        earegb:division-drw,
+        earegb:division-drw-committee,
+        earegb:division-bne,
+        earegb:division-bne-committee,
+        earegb:division-adl,
+        earegb:division-adl-committee,
+        earegb:division-syd,
+        earegb:division-syd-committee,
+        earegb:division-hba,
+        earegb:division-hba-committee,
+        earegb:division-mel,
+        earegb:division-mel-committee,
+        earegb:division-per,
+        earegb:division-per-committee,
+        earegb:presidents-forum,
+        earegb:engineering-heritage-australia,
+        earegb:nceat,
+        earegb:ncee,
+        earegb:ncre,
+        earegb:ncwe,
+        earegb:nccoe,
+        earegb:nccei4,
+        earegb:ncspe,
+        earegb:nced,
+        earegb:ncam,
+        earegb:ncwie,
+        earegb:ncyea,
+        earegb:oc-hong-kong,
+        earegb:oc-malaysia,
+        earegb:oc-singapore,
+        earegb:oc-united-kingdom,
+        earegb:oc-qatar,
+        earegb:oc-united-arab-emirates,
+        earegb:engineers-media,
+        earegb:australian-engineering-foundation,
+        earegb:engineering-education-australia,
+        earegb:enginsure,
+        earegb:moreland-group,
+        earegb:epac,
+        earegb:college-chairs-forum,
+        earegb:biomedical-college,
+        earegb:biomedical-college-board,
+        earegb:chemical-college,
+        earegb:chemical-college-board,
+        earegb:civil-college,
+        earegb:civil-college-board,
+        earegb:electrical-college,
+        earegb:electrical-college-board,
+        earegb:environmental-college,
+        earegb:environmental-college-board,
+        earegb:itee-college,
+        earegb:itee-college-board,
+        earegb:leadership-management-college,
+        earegb:leadership-management-board,
+        earegb:mechanical-college,
+        earegb:mechanical-college-board,
+        earegb:structural-college,
+        earegb:structural-college-board,
+        earegb:acss,
+        earegb:aces,
+        earegb:aees,
+        earegb:aftes,
+        earegb:ags,
+        earegb:asbsh,
+        earegb:asde,
+        earegb:ats,
+        earegb:msts,
+        earegb:memmes,
+        earegb:rtsa,
+        earegb:res,
+        earegb:sfs,
+        earegb:seng,
+        earegb:sesa,
+        earegb:tas,
+        earegb:amc,
+        earegb:aaee,
+        earegb:apts,
+        earegb:iea,
+        earegb:ipwea,
+        earegb:ma,
+        earegb:raes,
+        earegb:sbse,
+        earegb:seag,
+        earegb:eesa,
+        earegb:emc,
+        earegb:red-r,
+        earegb:ewb,
+        earegb:rina,
+        earegb:ascp,
+        earegb:auss,
+        earegb:student-ambassadors,
+        earegb:overseas-qualified-engineers,
+        earegb:rg-nsw-central-coast,
+        earegb:rg-nsw-mid-north-coast,
+        earegb:rg-nsw-northern,
+        earegb:rg-nsw-northern-rivers,
+        earegb:rg-nsw-central-west,
+        earegb:rg-nsw-dubbo,
+        earegb:rg-nsw-illawarra,
+        earegb:rg-nsw-monaro,
+        earegb:rg-nsw-riverina,
+        earegb:rg-nsw-shoalhaven,
+        earegb:rg-nsw-southern-highlands-tablelands,
+        earegb:rg-nsw-sydney-migrant,
+        earegb:rg-nsw-western-sydney,
+        earegb:rg-nt-alice-springs,
+        earegb:rg-qld-bundaberg,
+        earegb:rg-qld-cairns,
+        earegb:rg-qld-gladstone,
+        earegb:rg-qld-gold-coast,
+        earegb:rg-qld-mackay,
+        earegb:rg-qld-maryborough,
+        earegb:rg-qld-rockhampton,
+        earegb:rg-qld-sunshine-coast,
+        earegb:rg-qld-toowoomba,
+        earegb:rg-qld-townsville,
+        earegb:rg-vic-bendigo,
+        earegb:rg-vic-gippsland,
+        earegb:rg-wa-great-southern,
+        earegb:rg-wa-south-west,
+        earegb:rg-wa-peel ;
+    skos:prefLabel """Engineers Australia Regulated Bodies"""@en .
+
+<https://linked.data.gov.au/org/engineersaustralia>
+    a sdo:Organization ;
+    sdo:name "Engineers Australia" ;
+    sdo:url "https://www.engineersaustralia.org.au"^^xsd:anyURI .
+
+
+earegb:ea a skos:Concept,
+        prty:organisation ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/2023-royal-charter-by-laws.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The purpose of Engineers Australia is to advance the science and practice of engineering for the benefit of the community.
+    
+    Engineers Australia will achieve its purpose by:
+    (a) educating its members and the community;
+    (b) facilitating the exchange of ideas and information;
+    (c) encouraging the development of knowledge and competency;
+    (d) setting and maintaining high professional standards for its members; and
+    (e) informing community leaders and decision-makers."""@en ;
+    skos:altLabel "Institution of Engineers Australia"@en,
+        "The Institution of Engineers Australia"@en ;
+    skos:prefLabel "Engineers Australia"@en .
+
+
+# PART 3 - ORGANISATIONAL LEADERSHIP
+
+    # PART 3 - Division 1: The National Congress
+
+earegb:ea-national-congress a skos:Concept,
+        prty:national-congress ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/2023-royal-charter-by-laws.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Engineers Australia's National Congress is made up of senior office bearers representing disciplinary colleges, divisions, technical societies, special interest groups and National Committees. The group has expertise across many engineering fields and sectors.
+                
+    The role of National Congress is primarily advisory, so representatives of Congress can engage directly with the Board to advise them in decision making and strategic priorities. This is an important contribution to decision making at Engineers Australia and its good governance for and on behalf of Engineers Australia's members.
+    
+    The responsibilities and powers of the National Congress are:
+    (a) to elect or appoint members of the Board;
+    (b) to develop and propose to the members of Engineers Australia membership resolutions to petition for the alteration of this charter and to alter the by-laws;
+    (c) to review and approve before coming into effect any changes to the code of ethics, discipline regulations and regulations relating to additional titles or abbreviations of titles of membership;
+    (d) to give advice and counsel to the Board about the manner in which the Board carries out its responsibilities; and
+    (e) any other responsibilities and powers given by the by-laws."""@en ;
+    skos:altLabel "Engineers Australia National Congress"@en ;
+    skos:prefLabel "The National Congress"@en .
+
+    # PART 3 - Division 2: The Board
+
+earegb:ea-board a skos:Concept,
+        prty:board ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2023-05/2023-royal-charter-by-laws.pdf"^^xsd:anyURI ;
+    rdfs:seeAlso <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies/ea-board> ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Board is the governing body of Engineers Australia. 
+    Except as provided by clause 7.1 in the Royal Charter By-Laws, the Board:
+    (a) is responsible for the governance and management of Engineers Australia; and 
+    (b) may exercise all powers of Engineers Australia on its behalf.
+    The by-laws must provide for the constitution of the Board,
+    Employees of Engineers Australia are not eligible to be members of the Board.
+    The Board is comprised of: 6 elected or appointed directors, and up to 2 co-opted directors."""@en ;
+    skos:altLabel "The Board"@en ;
+    skos:prefLabel "Engineers Australia Board"@en .
+
+        # PART 3 - Division 2(3.04): Committees of Board and Constituent Bodies (Schedule 2)
+
+            # Schedule 2 Part 1(a) - Standing Committees of Board (subregulation 3.04(1)) 
+
+earegb:audit-risk-committee a skos:Concept,
+        prty:board-committee ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Audit and Risk Committee is a standing committee of the board that provides oversight of financial performance, governance, risk management, compliance and control practices."""@en ;
+    skos:prefLabel "Audit and Risk Committee"@en .
+
+earegb:engineering-futures-committee a skos:Concept,
+        prty:board-committee ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/2022-06/digital-economy-submission-nov-2017.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Engineering Futures Committee is a standing committee of the board that provides insight to understand the likely effects of the digital transformation for the profession, and the educational pathways and skills development changes needed to build a strong pipeline of engineers ready for the digital transformation."""@en ;
+    skos:prefLabel "Engineering Futures Committee"@en .
+
+earegb:honours-awards-committee a skos:Concept,
+        prty:board-committee ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Honours and Awards Committee is a standing committee of the board that is made up of representatives from each of Engineers Australia's nine divisions and its engineering communities.The Honours and Awards Committee judge and select the national winners for Engineer of the Year, endorse the winners for the Associate and Technologist of the Year and recommend the Honorary Fellow and PNR memorial medal recipient to the Board."""@en ;
+    skos:prefLabel "Honours and Awards Committee"@en .
+
+earegb:people-culture-committee a skos:Concept,
+        prty:board-committee ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The People and Culture Committee is a standing committee of the board that provides oversight of physical safety and employee wellbeing to attract, develop, retain and motivate a high-performing workforce."""@en ;
+    skos:prefLabel "People and Culture Committee"@en .
+
+earegb:professional-conduct-committee a skos:Concept,
+        prty:board-committee ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """As per regulation 2.13 of the EA General Regulations, the Professional Conduct Committee is a standing committee with the function to consider, investigate and make findings in respect of  complaints against members of Engineers Australia and those on the National Engineering Register referred to it by the Chief Executive Officer, or by the Chair under the provisions of subregulation."""@en ;
+    skos:prefLabel "Professional Conduct Committee"@en .
+
+            # Schedule 2 Part 1(b) - Policy Committees of Board (regulation 4.14)
+
+earegb:professional-standards-committee a skos:Concept,
+        prty:board-committee ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-10/Professional%20Standards%20Committee%20Terms%20of%20Reference.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Professional Standards Committee is a standing committee of the board that is required to oversee the development and maintenance of a professional standards framework: and to,
+    a) Oversee the review and redevelopment of existing stage 1, 2 and 3 competency standards, and/or the development of new standards, used for the assessment of membership grades, Chartered assessment, the accreditation of tertiary academic education programs and/or related activities which are based on engineering competency standards; and
+    b) Approve minor changes to existing competency stage 1, 2 or 3 competency standards as required from time to time, or in accordance with an approved review cycle and/or obligations under an international agreement to which Engineers Australia is a signatory
+    c) Monitor developments locally and/or globally, in conjunction with the International Advisory Panel, that may impact the engineering profession, professional mobility and the competency standards used by Engineers Australia, and provide advice to the Chief Executive Officer and/or the Board on actions that may be needed in response to any significant developments.
+    d) Oversight the various engineering practice registers such as the National Engineering Register (NER)
+    e) Undertake the role of the monitoring committee in relation to the International Professional Engineers Agreement (IPEA), the International Engineering Technologists Agreement (IETA) and the International Engineering Technicians Agreement (IntEngTechniA) and the APEC Engineer Register
+    f) Act as the EA Professional Standards Scheme Administrative Committee should such a scheme be in place at any time."""@en ;
+    skos:prefLabel "Professional Standards Committee"@en .
+
+# PART 4 - CONSTITUENT BODIES
+
+    # PART 4 - Division 1: Divisions
+
+earegb:division-adl a skos:Concept ,
+        prty:division ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Engineers Australia Office that serves the EA Members & engineering community in the State of South Australia."""@en ;
+    skos:prefLabel """South Australia Division"""@en  .
+
+
+    earegb:division-adl-committee a skos:Concept ,
+            prty:committee ;
+        earp:represents earegb:division-adl ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies>;
+        skos:definition """The Committee that leads the South Australia Division of Engineers Australia (as per the 2019 EA General Regulations section 4.04)."""@en ;
+        skos:prefLabel "South Australia Division Committee"@en .
+
+earegb:division-bne a skos:Concept ,
+        prty:division ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Engineers Australia Office that serves the EA Members & engineering community in the State of Queensland."""@en ;
+    skos:altLabel "Brisbane Division"@en ;
+    skos:prefLabel """Queensland Division"""@en ;
+
+    earegb:division-bne-committee a skos:Concept ,
+            prty:committee ;
+        earp:represents earegb:division-bne ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies>;
+        skos:definition """The Committee that leads the Queensland Division of Engineers Australia (as per the 2019 EA General Regulations section 4.04)."""@en ;
+        skos:prefLabel "Queensland Division Committee"@en .
+
+earegb:division-cbr a skos:Concept ,
+        prty:division ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies>;
+    skos:definition """The Engineers Australia Office that serves the EA Members & engineering community in the Australian Capital Territory and the greater Queanbeyan area covering the following Australia Post postcode areas: 0200 to 0299, 2600 to 2620 and 2900 to 2920. (as per the 2019 EA General Regulations section 4.04)."""@en ;
+    skos:prefLabel "Canberra Division"@en .
+
+    earegb:division-cbr-committee a skos:Concept ,
+            prty:committee ;
+        earp:represents earegb:division-cbr ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies>;
+        skos:definition """The Committee that leads the Canberra Division of Engineers Australia (as per the 2019 EA General Regulations section 4.04)."""@en ;
+        skos:prefLabel "Canberra Division Committee"@en .
+
+earegb:division-drw a skos:Concept ,
+        prty:division ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies>;
+    skos:definition """The Engineers Australia Office that serves the EA Members & engineering community in the Northern Territory."""@en ;
+    skos:prefLabel """Northern Division"""@en .
+    
+    earegb:division-drw-committee a skos:Concept ,
+            prty:committee ;
+        earp:represents earegb:division-drw ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies>;
+        skos:definition """The Committee that leads the Northern Division of Engineers Australia (as per the 2019 EA General Regulations section 4.04)."""@en ;
+        skos:prefLabel "Northern Division Committee"@en .
+
+earegb:division-hba a skos:Concept ,
+        prty:division ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    dcterms:Location eaof:hobart ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf  <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Engineers Australia Office that serves the EA Members & engineering community in the State of Tasmania."""@en ;
+    skos:prefLabel """Tasmania Division"""@ .
+
+    earegb:division-hba-committee a skos:Concept ,
+            prty:committee ;
+        earp:represents earegb:division-hba ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies>;
+        skos:definition """The Committee that leads the Tasmania Division of Engineers Australia (as per the 2019 EA General Regulations section 4.04)."""@en ;
+        skos:prefLabel "Tasmania Division Committee"@en .
+
+earegb:division-mel a skos:Concept ,
+            prty:division ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    dcterms:Location eaof:melbourne ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf  <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Engineers Australia Office that serves the EA Members & engineering community in the State of Victoria."""@en ;
+    skos:altLabel "Melbourne Division"@en ;
+    skos:prefLabel """Victoria Division"""@en .
+
+    earegb:division-mel-committee a skos:Concept ,
+            prty:committee ;
+        earp:represents earegb:division-mel ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies>;
+        skos:definition """The Committee that leads the Victoria Division of Engineers Australia (as per the 2019 EA General Regulations section 4.04)."""@en ;
+        skos:prefLabel "Victoria Division Committee"@en .
+
+earegb:division-ntl a skos:Concept ,
+        prty:division ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    dcterms:Location eaof:newcastle ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf  <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Engineers Australia Office that serves the EA Members & engineering community in the north-east area of the State of New South Wales covering the following Australia Post postcode areas: 2250 to 2499, 2832 to 2833 and 2843."""@en ;
+    skos:prefLabel """Newcastle Division"""@en .
+
+    earegb:division-ntl-committee a skos:Concept ,
+            prty:committee ;
+        earp:represents earegb:division-ntl ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies>;
+        skos:definition """The Committee that leads the Newcastle Division of Engineers Australia (as per the 2019 EA General Regulations section 4.04)."""@en ;
+        skos:prefLabel "Newcastle Division Committee"@en .
+
+earegb:division-per a skos:Concept ,
+        prty:division ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    dcterms:Location eaof:perth ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf  <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Engineers Australia Office that serves the EA Members & engineering community in the State of Western Australia."""@en ;
+    skos:altLabel "Perth Division"@en,
+        "WA Division"@en ;
+    skos:prefLabel """Western Australia Division"""@en .
+
+
+    earegb:division-per-committee a skos:Concept ,
+            prty:committee ;
+        earp:represents earegb:division-per ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies>;
+        skos:definition """The Committee that leads the Western Australia Division of Engineers Australia (as per the 2019 EA General Regulations section 4.04)."""@en ;
+        skos:prefLabel "Western Australia Division Committee"@en .
+
+earegb:division-syd a skos:Concept ,
+        prty:division ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    dcterms:Location eaof:sydney, eaof:chatswood ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf  <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Engineers Australia Office that serves the EA Members & engineering community in the State of New South Wales, excluding the areas of the Newcastle Division and the Canberra Division."""@en ;
+    skos:prefLabel """Sydney Division"""@en .
+
+    earegb:division-syd-committee a skos:Concept ,
+            prty:committee ;
+        earp:represents earegb:division-syd ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies>;
+        skos:definition """The Committee that leads the Sydney Division of Engineers Australia (as per the 2019 EA General Regulations section 4.04)."""@en ;
+        skos:prefLabel "Sydney Division Committee"@en .
+
+    # PART 4 - Division 2: Presidents Forum 
+
+earegb:presidents-forum a skos:Concept,
+        prty:board-committee ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Presidents Forum) is established as a standing committee of the Board.
+    The Presidents Forum consists of: 
+        (a) the National President; and 
+        (b) the President of each Division Committee. 
+    The Presidents Forum's functions are: 
+        (a) the functions conferred on it by these Regulations
+            i. to consider matters relating to the role of Division Committees and advise the Board on those matters;
+            ii. to provide a forum for the exchange of information and ideas related to strategic matters; and 
+            iii. to advise the Board on any matters referred to it by the Board. ; and 
+        (b) any other function conferred on it by resolution of the Board.
+    The National President is the Chair of the Presidents Forum.
+    The National President may either request that another Director attend and perform the functions of Chair when the Chair is not available, or may appoint another member of the Presidents Forum to perform those functions.
+    The Presidents Forum is to meet as often as is necessary for the proper performance of its functions.
+    The Presidents Forum is to make its decisions by consensus."""@en ;
+    skos:prefLabel "Presidents Forum"@en .
+
+    # PART 4 - Division 3: Special Interest Groups and Centres (Schedule 2 - Part 2)
+
+earegb:engineering-heritage-australia a skos:Concept,
+        prty:special-interest-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/engineering-heritage-australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Engineering Heritage Australia (EHA) groups operate in every state and territory of Australia. These groups are involved at the local level, promoting the conservation of engineering heritage and in representing Engineers Australia on heritage matters. EHA performs an important work by:
+    - Providing advice and specialist knowledge on engineering heritage matters including representing Engineers Australia on government and other heritage committees.
+    - Providing input into the heritage policies and procedures of state and territory governments and their authorities.
+    - Identifying items of engineering heritage, bringing them to public notice and requesting they be recorded on state and national registers.
+    - Providing continuing education to the profession about the importance of engineering heritage via conferences, seminars and workshops.
+    - Managing the Australian engineering heritage recognition program and the heritage conference program.
+    - Facilitating an Australian oral history program.
+    - Conducting heritage walks, talks, lectures and site visits.
+    - Producing and publishing heritage publications including the EHA Magazine.
+    - Serving as an interface between the community and heritage organisations to ensure the role of the engineering profession is adequately represented.
+    - Assisting in archiving engineering documents."""@en ;
+    skos:notation "EHA" ;
+    skos:prefLabel "Engineering Heritage Australia"@en .
+
+earegb:nceat a skos:Concept,
+        prty:special-interest-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/national-committee-engineering-associates-and-technologists"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies>;
+    skos:definition """The National Committee for Engineering Associates and Technologists (NCEAT) represents the interests of the two occupational categories of engineering associate and engineering technologist.
+    
+    The roles of engineering technologists and engineering associates are essential to the wider engineering team, which also comprises professional engineers.
+    
+    NCEAT identifies strategies and makes recommendations to the Engineers Australia Board to address the specific needs of engineering associates and technologists. This includes a three-year rolling plan aligned to Engineers Australia's strategic priorities."""@en ;
+    skos:notation "NCEAT" ;
+    skos:prefLabel "National Committee for Engineering Associates and Technologists"@en .
+
+    # PART 4 - Division 4: National Committees (Schedule 2 - Part 3) (regulation 4.15) 
+
+earegb:ncee a skos:Concept,
+        prty:national-committee ;
+    earp:represents earegb:biomedical-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/biomedical-college/national-0"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Clinical engineering is a specialty within biomedical engineering. It's primarily responsible for applying and implementing medical technology to optimise healthcare delivery.
+
+    Clinical engineers work in a variety of roles training and supervising biomedical equipment technicians, working with government regulators on hospital audits and serving as technological consultants in hospitals. 
+    
+    Their role also includes advising the producers of medical devices about potential design improvements, acting as an intermediary between product originators and end-users.
+    
+    The National Committee for Clinical Engineering (NCCIE) aims to:
+    - promote the role of clinical engineering in the health industry
+    - highlight the scope and financial value of clinical engineers to hospital and health system executives
+    - identify a cooperative role for clinical engineers and research institutions in technology research and for redeveloping the Australian medical manufacturing industry
+    - identify the training role of clinical engineering departments
+    - look at the role clinical engineers play in other disciplines
+    - assess recent and future changes in the discipline
+    - comment on the health industry's ability to cope with clinical engineering and technology-related decisions
+    - promote the role of risk management in clinical engineering.."""@en ;
+    skos:notation "NCEE" ;
+    skos:prefLabel "National Committee on Clinical Engineering"@en .
+
+earegb:ncre a skos:Concept,
+        prty:national-committee ;
+    earp:represents earegb:biomedical-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/biomedical-college/national"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Rehabilitation engineering is the application of engineering sciences to create technological solutions to problems encountered by people with disabilities. Rehabilitation engineers are integral to the development and delivery of assistive technologies. These technologies help people with disabilities in their everyday lives and in education, rehabilitation, employment, transportation, recreation and independent living.
+
+    Rehabilitation Engineers work across a range of functional areas including mobility, communications, hearing, vision, and cognition, and in activities associated with employment, independent living, education, and integration into the community.
+
+    The National Committee on Rehabilitation Engineering (NCRE) is a committee of the College of Biomedical Engineering, governed by a panel of committee members.
+
+    The NCRE aims to:
+    - Foster interaction with peers across Australia.
+    - Support the practice of rehabilitation engineers working across Australia.
+    - Promote the work and role of professional engineering involvement in the provision of assistive technology services to Australians with disabilities.
+    - Define and develop a rehabilitation engineering profile amongst clients, health professionals and funding sources.
+    - Improve Government understanding of and support for rehabilitation engineering.
+    - Establish and increase the level of rehabilitation engineering research and development projects, manufacturing industry and training in Australia."""@en ;
+    skos:notation "NCRE" ;
+    skos:prefLabel "National Committee for Rehabilitation Engineering"@en .
+
+earegb:ncwe a skos:Concept,
+        prty:national-committee ;
+    earp:represents earegb:civil-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/civil-college/national-committee"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Water engineering is focused on surface water hydrology, hydraulics, water quality, water sensitive urban design and water resources. The National Committee of Water Engineering (NCWE) is a committee of the Civil College and serves as a point of reference for EA members, local water panels and affiliated international organisations.
+    
+    The key objectives of the NCWE are to:
+    - coordinate water engineering conferences, workshops and training
+    - publish the Australasian journal of water resources
+    - support the practice of hydrology through local Engineers Australia panels
+    - promote engineering excellence and acknowledge the contribution of individuals to the profession through awards and scholarships.
+    
+    The NCWE also publishes research, discussion papers, maintains industry guidelines and supports local technical activities."""@en ;
+    skos:notation "NCWE" ;
+    skos:prefLabel "National Committee on Water Engineering"@en .
+
+earegb:nccoe a skos:Concept,
+        prty:national-committee ;
+    earp:represents earegb:civil-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/civil-college/national-committee-0"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Coastal and ocean engineering works across land, sea and the open ocean providing specialised knowledge to ensure safe and ecologically sustainable developments. This includes man-made developments such as ports and harbours as well as natural offshore sources and nearshore zones.
+    
+    Coastal and Ocean engineers work as consulting engineers, project managers, construction contractors, or in specialised government organisations and university teaching and research roles.
+    
+    The National Committee on Coastal and Ocean Engineering (NCCOE) is a specialist sub-committee of Engineers Australia's Civil College.
+    
+    The objectives of the NCCOE are to:
+    - facilitate initial and continuing education
+    - assist in relevant tertiary course accreditation
+    - encouraging and setting priorities for research
+    - ensure the availability of technical standards
+    - encourage good coastal and ocean engineering practice
+    - provide a forum and a network for the exchange of views and experience
+    - formulate policy for Engineers Australia in the coastal and ocean area
+    - foster interaction between the profession and the public on technical and social issues."""@en ;
+    skos:notation "NCCOE" ;
+    skos:prefLabel "National Committee on Coastal and Ocean Engineering"@en .
+
+earegb:nccei4 a skos:Concept,
+        prty:national-committee ;
+    earp:represents earegb:electrical-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/electrical-college/national-0"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Control engineering is a specialised form of electrical engineering focused on:
+    - industrial control
+    - mechatronics
+    - Industry 4.0
+    - cyber-physical systems
+    - data analytics and intelligent control
+    - distributed control systems.
+    
+    The National Committee on Control Engineering - Industry 4.0 (NCCEI4) is a specialty group of the Electrical College Board. Its purpose is to develop and deliver continuing professional development (CPD) and develop position and policy statements in the field. NCCEI4 is also the nominated national member organisation for the International Federation on Automatic Control (IFAC).
+
+    NCCEI4's key objectives are:
+    - Develop and deliver CPD for all career stages to benefit members.
+    - Identify emerging trends and make recommendations to the Electrical College Board on standards, policies and practices to address gaps and opportunities. 
+    - Develop a Control Engineering and Industry 4.0 conference and professional network. 
+    - Work in partnership with staff to create opportunities in the fields of control and mechatronic engineering and industry 4.0 to interact with each other and stakeholders. 
+    - Facilitate development and innovation in control engineering and industry 4.0. 
+    - Participate in control engineering and industry 4.0 activities and functions."""@en ;
+    skos:historyNote "The National Committee on Control Engineering - Industry 4.0 (NCCEI4) supersedes and combines the National Committee on Automation Control & Instrumentation (NCACI) and the National Committee on Mechatronics (NMech) established in the EA General Regulations 2019."@en ;
+    skos:notation "NCCEI4" ;
+    skos:altLabel "The National Committee on Control Engineering - Industry 4.0 (NCCEI4)"@en ;
+    skos:prefLabel "National Committee on Control Engineering"@en .
+
+earegb:ncspe a skos:Concept,
+        prty:national-committee ;
+    earp:represents earegb:electrical-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/electrical-college/national"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Space engineering is complex multi-discipline systems engineering for the space domain, including terrestrial support systems. It evolved from aircraft engineering and uses many of the same construction methods and reliability philosophies.
+    
+    Space engineering covers all space-related activities including ground operations, earth orbiting bodies, deep space missions, astronomical systems and instruments. Engineers from all disciplines work in space engineering along with a wide range of other professions.
+    
+    The National Committee of Space Engineering (NCSpE) is a committee of the Electrical College and aims to be the voice of the space engineering profession in Australia. The NSPCE has access to dozens of leading Australian and international space engineers who are available for speaking commitments and events.
+    
+    NCSpE also facilitates professional development events for the industry.
+    
+    Additionally, the NCSpE supports a variety of programs and awards including STEM outreach which aims to inspire the next generation of space engineers."""@en ;
+    skos:notation "NCSpE" ;
+    skos:prefLabel "National Committee on Space Engineering"@en .
+
+earegb:nced a skos:Concept,
+        prty:national-committee ;
+    earp:represents earegb:mechanical-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/mechanical-college/national"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The National Committee on Engineering Design (NCED) is a national committee of the Mechanical College Board.
+    
+    The NCED is mainly focused on the mechanical and mechatronics areas of engineering. The committee exists to promote:
+    - links between industry and secondary and tertiary learning institutions for the strategic development of design learning and experience in all aspects of engineering design.
+    - design excellence and awareness through media, publications, conferences and exhibitions.
+    - product design and design within the broader manufacturing area."""@en ;
+    skos:notation "NCED" ;
+    skos:prefLabel "National Committee on Engineering Design"@en .
+
+earegb:ncam a skos:Concept,
+        prty:national-committee ;
+    earp:represents earegb:mechanical-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/mechanical-college/national-0"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Applied mechanics is a fundamental subject of engineering science which underpins all of the primary engineering disciplines including mechanical, aerospace, automotive, civil and materials. It also addresses a broad range of areas from conventional structural and mechanical design, through to cutting-edge computational mechanics and more.
+    
+    The National Committee of Applied Mechanics (NCAM) is part of the Mechanical College Board. It exists to promote and advance the science and practice of applied mechanics.
+    
+    NCAM's objectives are to:
+    - Develop and deliver high quality continuing professional development for industry and academic members, including technical sessions and seminars.
+    - Contribute to engineering education and curriculum development. This includes providing substantial applied mechanics content and support to Engineers Australia's accreditation process.
+    - Deliver learned society conferences in specific areas of focus.
+    - Encourage and foster development and innovation in emerging technical areas.
+    - Maintain a national focus on education, research and engagement that incorporates applied mechanics or allied disciplines.
+    - Develop cooperation with allied national and international societies.
+    - Actively engage across industry and academia."""@en ;
+    skos:notation "NCAM" ;
+    skos:prefLabel "National Committee of Applied Mechanics"@en .
+
+earegb:ncwie a skos:Concept,
+        prty:national-committee ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/national-committee-women-engineering"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The National Committee for Women in Engineering (NCWIE) is an Engineers Australia community group. Its aims are to make engineering more inclusive by valuing, supporting and celebrating the contributions of female engineers.
+    
+    The NCWIE supports Engineers Australia's diversity and inclusion position and plan and our purpose is to:
+    - Identify strategies and recommend actions to increase the number of female members of Engineers Australia.
+    - Identify strategies and work with Engineers Australia to embed Chartered as the default professional credential.
+    - Work with colleges, technical societies and Engineers Australia to implement approved strategies into the normal operations of each college, technical society, and division, including undertaking joint activities.
+    - Arrange events and other activities to address needs that can't be met through other Engineers Australia channels."""@en ;
+    skos:notation "NCWIE" ;
+    skos:altLabel "Women in Engineering National Committee"@en ;
+    skos:prefLabel "National Committee for Women in Engineering"@en .
+
+earegb:ncyea a skos:Concept,
+        prty:national-committee ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/young-engineers-australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Young Engineers Australia (YEA) is the single largest subgroup within the Engineers Australia engineering community. For more than 25 years YEA has existed to represent, support and provide a voice for young engineers in Australia.
+    
+    YEA has a current membership base of over 40,000 young engineers Australia-wide. With branches in every state and territory, it is highly effective in helping young engineers to grow and establish themselves as highly respected members of the engineering community.
+    
+    YEA's vision is to be an influential voice in our profession and a leader among young professional bodies."""@en ;
+    skos:notation "YEA" ;
+    skos:altLabel "Young Engineers Australia National Committee"@en ;
+    skos:prefLabel "Young Engineers Australia"@en .
+
+    # PART 4 - Division 5: Overseas Chapters (Schedule 2 - Part 4) (regulation 4.16) 
+
+earegb:oc-hong-kong a skos:Concept,
+        prty:overseas-chapter ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/overseas-chapters"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Hong Kong chapter was established in 2002. Its purpose is to provide a platform for Hong Kong-based members of EA to share experiences and knowledge through seminars, technical talks, social functions and technical visits. There are more than 1000 members in Hong Kong as of 2023."""@en ;
+    skos:altLabel "The Institution of Engineers, Australia, Hong Kong Chapter"@en,
+        "The Institution of Engineers, Australia - Hong Kong Chapter"@en ;
+    skos:prefLabel "Overseas Chapter: Hong Kong"@en .
+
+earegb:oc-malaysia a skos:Concept,
+        prty:overseas-chapter ;
+    earp:represents earegb:ea ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/overseas-chapters"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Malaysia chapter was created in 1991 in Kuala Lumpur. Its objective is to facilitate contact between all members who live in Malaysia.
+    
+    The chapter enjoys a close and cooperative relationship with the Institution of Engineers Malaysia (IEM).
+    
+    The chapter is run by a group of dedicated volunteers who meet regularly to organise a wide range of activities."""@en ;
+    skos:altLabel "Society of Institution of Engineers Australia Members, Malaysia"@en ;
+    skos:prefLabel "Overseas Chapter: Malaysia"@en .
+
+earegb:oc-singapore a skos:Concept,
+        prty:overseas-chapter ;
+    earp:represents earegb:ea ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/overseas-chapters"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Singapore chapter was created in 1993 to foster contact between members living in Singapore through regular networking events. 
+    
+    The chapter regularly organises technical talks, seminars, workshops, site visits, social gatherings and functions. View our upcoming events.
+    
+    The chapter is run by an executive committee of dedicated volunteers"""@en ;
+    skos:altLabel "The Institution of Engineers Australia Singapore Group"@en ;
+    skos:prefLabel "Overseas Chapter: Singapore"@en .
+
+earegb:oc-united-kingdom a skos:Concept,
+        prty:overseas-chapter ;
+    earp:represents earegb:ea ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/overseas-chapters"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The UK chapter of Engineers Australia provides support, advice and a social network to members living in the UK. 
+    
+    We hold technical and social events throughout the year. View our upcoming events.
+    
+    The chapter is run by a committee of dedicated volunteers and always welcomes new members."""@en ;
+    skos:altLabel "The Institution of Engineers Australia (UK)"@en,
+        "Overseas Chapter: UK"@en ;
+    skos:prefLabel "Overseas Chapter: United Kingdom"@en .
+
+earegb:oc-qatar a skos:Concept,
+        prty:overseas-chapter ;
+    earp:represents earegb:ea ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/overseas-chapters"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Qatar chapter opened in 2015 and provides professional development, networking, Chartered support and corporate partnership opportunities to the engineering profession in Doha.
+    seas ch
+    The chapter holds technical and social events throughout the year, which are very popular and well-attended. View our upcoming events.
+    
+    The chapter is run by a committee of dedicated volunteers and we welcome new members."""@en ;
+    skos:altLabel "Overseas Chapter: Middle East - Qatar"@en ;
+    skos:prefLabel "Overseas Chapter: Qatar"@en .
+
+earegb:oc-united-arab-emirates a skos:Concept,
+        prty:overseas-chapter ;
+    earp:represents earegb:ea ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/overseas-chapters"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The UAE chapter provides professional development, networking, Chartered support and corporate partnership opportunities to the engineering profession in Abu Dhabi and Dubai.
+    
+    The chapter holds technical and social events throughout the year, which are very popular and well-attended. View our upcoming events.
+    
+    The chapter is run by a committee of dedicated volunteers and we welcome new members."""@en ;
+    skos:altLabel
+        "Overseas Chapter: Middle East - UAE"@en,
+        "Overseas Chapter: Middle East - United Arab Emirates"@en,
+        "Overseas Chapter: UAE"@en ;
+    skos:prefLabel "Overseas Chapter: United Arab Emirates"@en .
+
+    # PART 4 - Division 6: Subsidiaries (Schedule 2 - Part 5) (regulation 4.17) 
+
+earegb:engineers-media a skos:Concept,
+        prty:subsidiary ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """A publishing subsidiary of Engineers Australia which published the organisation's main magazine Create."""@en ;
+    skos:altLabel "Engineers Australia Pty Limited"@en ;
+    skos:prefLabel "Engineers Media"@en .
+
+earegb:australian-engineering-foundation a skos:Concept,
+        prty:subsidiary ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Australian Engineering Foundation Ltd ('AEF") is a company limited by guarantee. The Institution of Engineers Australia exercises control over AEF through the appointment of its Board members."""@en ;
+    skos:notation "AEF" ;
+    skos:altLabel "Australian Engineering Foundation Ltd"@en ;
+    skos:prefLabel "Australian Engineering Foundation"@en . 
+
+earegb:engineering-education-australia a skos:Concept,
+        prty:subsidiary ;
+    dcterms:source "https://eea.org.au/about-us"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Working in collaboration with Engineers Australia, as well as leading experts in education and business, Engineering Education Australia (EEA) helps its clients maintain their professional standards and remain competitive throughout their careers.
+    
+    As Engineers Australia's training provider, EEA are deeply embedded in the world of engineering. EEA keep a constant watch on industry trends and emerging technologies, and respond to these, ensuring all training courses, workshops and programs are designed around today's engineers."""@en ;
+    skos:notation "EEA" ;
+    skos:altLabel "Engineering Education Australia Pty Limited"@en ;
+    skos:prefLabel "Engineering Education Australia"@en . 
+
+earegb:enginsure a skos:Concept,
+        prty:subsidiary ;
+    dcterms:source "https://www.enginsure.com.au/about/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """EngInsure is a joint initiative of Engineers Australia and Whitbread Insurance Brokers.
+    
+    EngInsure is dedicated to creating certainty for the future of engineering through the effective management of insurance and risk.
+    
+    Through a strong connection with Engineers Australia, EngInsure has a steadfast commitment to developing robust business insurance and risk solutions that protect assets and manage exposures for engineers. EngInsure strives to be a trusted advisor for engineers, so they can focus on building their business, and growing into the future.
+    
+    Taking the time to work with each client to truly understand the unique risks they face, EngInsure seeks to be the benchmark provider of insurance and risk solutions to the Australian engineering industry."""@en ;
+    skos:altLabel "EngInsure Pty Limited"@en ;
+    skos:prefLabel "EngInsure"@en . 
+
+earegb:moreland-group a skos:Concept,
+        prty:subsidiary ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Moreland Group is Engineering Education Australia's Registered Training Organisation (RTO number 6332). - reference: https://www.engineersaustralia.org.au/news-and-media/2022/07/upskilling-engineers-procurement"""@en ;
+    skos:notation "TMG" ;
+    skos:altLabel "The Moreland Group Pty Ltd"@en ;
+    skos:prefLabel "The Moreland Group"@en . 
+
+# PART 5 - LEARNED SOCIETIES
+
+    # PART 5 - Division 1: Engineering Practice Advisory Committee
+
+earegb:epac a skos:Concept,
+        prty:board-committee ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The EPAC has the following functions:
+    (a) to consider matters relating to the learned society function of Engineers Australia and advise the Board on those matters;
+    (b) to provide a forum for the exchange of information related to Engineers Australia's learned society functions;
+    (c) to identify potential opportunities for collaboration and cooperation (whether with constituent bodies of Engineers Australia, technical societies or other bodies) in relation to Engineers Australia's learned society functions;
+    (d) to review the activities of the Colleges and technical societies in relation to Engineers Australia's learned society functions, and provide, as it sees appropriate, guidance to them in relation to those activities."""@en ;
+    skos:notation "EPAC" ;
+    skos:prefLabel "Engineering Practice Advisory Committee"@en .
+
+    # PART 5 - Division 2: College Chairs Forum
+ 
+earegb:college-chairs-forum a skos:Concept,
+        prty:board-committee ;
+    dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The College Chairs Forum consists of representatives of the Colleges appointed by the Board.The College Chairs Forum has the following functions:
+    (a) to consider matters relating to the role of Colleges and advise the Board on those matters;
+    (b) to provide a forum for the exchange of information and ideas between College Boards;
+    (c) to assist College Boards to develop strategies for the development of the body of knowledge, education and professional standards relating to their engineering disciplines;
+    (d) to facilitate effective communication between the learned society bodies of Engineers Australia;
+    (e) to provide guidance and direction for the Colleges to effectively discharge their learned society functions; and
+    (f) to advise Board on any matters referred to it by Board. """@en ;
+    skos:prefLabel "College Chairs Forum"@en .
+   
+    # PART 5 - Division 3: The Colleges
+
+earegb:biomedical-college a skos:Concept,
+        prty:engineers-aus-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/biomedical-college"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Biomedical College aims to be a peak representative body for biomedical engineering professionals in Australia. Objectives of the Biomedical College are to:
+    - Set standards of practice within biomedical engineering and provide mechanisms to help attain these standards.
+    - Host a broad range of continuing professional development (CPD) opportunities.
+    - Nurture new biomedical engineering talent through mentoring, workshops and awards.
+    - Foster partnerships with our peers including partner professionals from a diverse range of disciplines.
+    - Facilitate an exchange of information on developments and issues regarding biomedical engineering.
+    - Facilitate aid to developing and disaster-torn countries.
+    - Support the accreditation of biomedical engineering tertiary courses that are Washington, Sydney and Dublin Accord-compliant.
+    - Provide advice and recommendations on biomedical engineering professional practice, who can provide it, where it is necessary and how to engage these services in Australia."""@en ;
+    skos:prefLabel "Biomedical College"@en ;
+    skos:related aop:biomedicalEngineering .
+
+    earegb:biomedical-college-board a skos:Concept,
+            prty:board ;
+        earp:represents earegb:biomedical-college ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:definition """The Biomedical College Board is a board of elected representatives that serves to run the Biomedical College as per the provisions outlined in the relevant section of the Engineers Australia General Regulations."""@en ;
+        skos:prefLabel "Biomedical College Board"@en .
+
+earegb:chemical-college a skos:Concept,
+        prty:engineers-aus-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/chemical-college"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Chemical College represents EA members working in chemical engineering roles around Australia. 
+    The Chemical College role is to:
+    - Maintain, develop and promote the chemical engineering body of knowledge.
+    - Develop and audit accreditation standards for tertiary degrees and chartered status.
+    - Provide expert advice for Continuing Professional Development (CPD) in the field of chemical engineering.
+    - Contribute to national and international standards and policies relevant to the field."""@en ;
+    skos:prefLabel "Chemical College"@en ;
+    skos:related aop:chemicalEngineering .
+
+    earegb:chemical-college-board a skos:Concept,
+            prty:board ;
+        earp:represents earegb:chemical-college ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:definition """The Chemical College Board is a board of elected representatives that serves to run the Chemical College as per the provisions outlined in the relevant section of the Engineers Australia General Regulations."""@en ;
+        skos:prefLabel "Chemical College Board"@en .
+
+earegb:civil-college a skos:Concept,
+        prty:engineers-aus-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/civil-college"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Civil College represents EA members working in civil engineering roles around Australia. Some of The Civil College key functions are to:
+    - Set discipline standards for professional engineers, technologists and associates.
+    - Guide the content of civil engineering undergraduate courses.
+    - Enter into mutual recognition agreements with kindred bodies.
+    - Conduct research and development.
+    - Explore discipline related initiatives and provide guidance on continuing professional development (CPD) policy.
+    - Facilitate technical conferences, meetings and events.
+    - Publish learned papers and other resources."""@en ;
+    skos:prefLabel "Civil College"@en ;
+    skos:related aop:civilEngineering .
+
+    earegb:civil-college-board a skos:Concept,
+            prty:board ;
+        earp:represents earegb:civil-college ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:definition """The Civil College Board is a board of elected representatives that serves to run the Civil College as per the provisions outlined in the relevant section of the Engineers Australia General Regulations."""@en ;
+        skos:prefLabel "Civil College Board"@en .
+
+earegb:electrical-college a skos:Concept,
+        prty:engineers-aus-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/electrical-college"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Electrical College represents EA members working in electrical engineering roles around Australia. The Electrical College has a presence at the EA Standards Australia special interest group, working to ensure electrical engineering standards meet strict guidelines that ensure the safety and consistency of Australian goods and services.
+    The Electrical College work also includes developing policy positions and submitting proposals to government and industry."""@en ;
+    skos:prefLabel "Electrical College"@en ;
+    skos:related aop:electricalEngineering .
+
+    earegb:electrical-college-board a skos:Concept,
+            prty:board ;
+        earp:represents earegb:electrical-college ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:definition """The Electrical College Board is a board of elected representatives that serves to run the Electrical College as per the provisions outlined in the relevant section of the Engineers Australia General Regulations."""@en ;
+        skos:prefLabel "Electrical College Board"@en .
+
+earegb:environmental-college a skos:Concept,
+        prty:engineers-aus-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/environmental-college"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Environmental College represents EA members working in environmental engineering roles around Australia. The Environmental College provides leadership and focus on environmental policy and sustainability and:
+    - Provides strategic advice to EA on how professional standards should apply to practice.
+    - Is a vocal advocate for environmental policy and sustainability within EA.
+    - Co-ordinates the continuing professional development (CPD) for all environmental engineers.
+    The Environmental College work also includes developing policy positions and submitting proposals to government and industry."""@en ;
+    skos:prefLabel "Environmental College"@en ;
+    skos:related aop:environmentalEngineering .
+
+    earegb:environmental-college-board a skos:Concept,
+            prty:board ;
+        earp:represents earegb:environmental-college ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:definition """The Environmental College Board is a board of elected representatives that serves to run the Environmental College as per the provisions outlined in the relevant section of the Engineers Australia General Regulations."""@en ;
+        skos:prefLabel "Environmental College Board"@en .
+
+earegb:itee-college a skos:Concept,
+        prty:engineers-aus-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/information-telecommunications-and"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The ITEE College promotes the discipline and represents EA members working in information, telecommunications and electronics engineering roles around Australia.
+    The ITEE College control a set of documents to help engineers to understand which of the disciplines that make up ITEE, their works aligns to:
+    - communications
+    - computer systems
+    - electronics
+    - information
+    - software
+    - control Systems
+    - mechatronics."""@en ;
+    skos:altLabel "ITEE College"@en,
+        "Information, Telecommunications and Electronics Engineering College"@en ;
+    skos:prefLabel "Information, Telecommunications & Electronics Engineering College"@en ;
+    skos:related aop:itee .
+
+    earegb:itee-college-board a skos:Concept,
+            prty:board ;
+        earp:represents earegb:itee-college ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:definition """The Information, Telecommunications & Electronics Engineering College Board is a board of elected representatives that serves to run the ITEE College as per the provisions outlined in the relevant section of the Engineers Australia General Regulations."""@en ;
+        skos:prefLabel "Information, Telecommunications & Electronics Engineering College Board"@en .
+
+earegb:leadership-management-college a skos:Concept,
+        prty:engineers-aus-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/college-leadership-and-management"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The College of Leadership and Management exists to represent engineering professionals across all disciplines who are seeking to become managers, or who are already managers.
+    Our objectives are to:
+    - Promote leadership and management as a career which builds on the knowledge and experience of engineering disciplines.
+    - Work with educators and institutions to improve, broaden and strengthen opportunities for accreditation of engineering leaders and managers.
+    - Promote and extend the reputation of engineering professionals as leaders in the community.
+    - Advocate for engagement of engineering professionals in the broader issues affecting the community, business, industry and government.
+    - Promote opportunities for engineering professionals on boards, government reference groups, advisory panels and the like.
+    - Share the success stories of engineering professionals as leaders and managers."""@en ;
+    skos:altLabel "College of Leadership and Management"@en ;
+    skos:prefLabel "Leadership and Management College"@en ;
+    skos:related aop:engLeadership .
+
+    earegb:leadership-management-board a skos:Concept,
+            prty:board ;
+        earp:represents earegb:leadership-management-college ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:definition """The Leadership and Management College Board is a board of elected representatives that serves to run the Leadership and Management College as per the provisions outlined in the relevant section of the Engineers Australia General Regulations."""@en ;
+        skos:prefLabel "Leadership and Management College Board"@en .
+
+earegb:mechanical-college a skos:Concept,
+        prty:engineers-aus-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/mechanical-college"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Mechanical College represents EA members working in mechanical engineering roles in a vast range of industries around Australia.
+    A large part of our role is to promote the mechanical engineering profession and to deliver continuing professional development (CPD) for mechanical engineers. CPD helps engineers fulfill their leadership potential and ensures they keep up with important industry and technical updates and innovations.
+    We have branches in every state and territory in Australia that deliver CPD to Engineers Australia members and guests with online and in-person training and events."""@en ;
+    skos:prefLabel "Mechanical College"@en ;
+    skos:related aop:mechanicalEngineering .
+
+    earegb:mechanical-college-board a skos:Concept,
+            prty:board ;
+        earp:represents earegb:mechanical-college ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:definition """The Mechanical College Board is a board of elected representatives that serves to run the Mechanical College as per the provisions outlined in the relevant section of the Engineers Australia General Regulations."""@en ;
+        skos:prefLabel "Mechanical College Board"@en .
+
+earegb:structural-college a skos:Concept,
+        prty:engineers-aus-college ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/colleges-and-college-national-committees/structural-college"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Structural College was originally formed in 1995 and now has over 7000 members including members in rural and remote Australia. Our members work in diverse industries including design, planning, construction, inspection and rehabilitation. Structural College members are held in high esteem and are often asked for expert commentary or opinions on structural engineering issues.
+    Some of our key activities are to:
+    - Publish the Australian Journal of Structural Engineering.
+    - Admit new members and audit continuing members.
+    - Nominate members to technical standards committees.
+    - Co-ordinate the annual Australasian Structural Engineering Conference.
+    - Deliver a program of continuing professional development (CPD) for structural engineers.
+    - Facilitate technical conferences, meetings, events and awards.
+    - Publish learned papers and other resources."""@en ;
+    skos:prefLabel "Structural College"@en ;
+    skos:related aop:structuralEngineering .
+
+    earegb:structural-college-board a skos:Concept,
+            prty:board ;
+        earp:represents earegb:structural-college ;
+        dcterms:source "https://www.engineersaustralia.org.au/sites/default/files/resource-files/2020-02/EA%20General%20Regulations%205%20Dec%202019.pdf"^^xsd:anyURI ;
+        rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+        skos:definition """The Structural College Board is a board of elected representatives that serves to run the Mechanical College as per the provisions outlined in the relevant section of the Engineers Australia General Regulations."""@en ;
+        skos:prefLabel "Structural College Board"@en .
+
+    # PART 5 - Division 4: The Technical Societies
+
+        # PART 5 - Division 4: Unincorporated Technical Societies (Schedule 3 - Part 1)
+
+earegb:ats a skos:Concept,
+        prty:uninc-tech-society ;
+    dcterms:source "https://www.ats.org.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Australian Tunnelling Society is a Technical Society of Engineers Australia (EA) and is a member of the International Tunnelling Association (ITA).
+    The Australian Tunnelling Society (ATS) aims to:
+    - Advance the knowledge of the Australian Tunnelling Industry through areas of design, construction and utilisation of underground space, including technical aspects, health and safety, and ecologically sustainable development;
+    - Stimulating a better understanding of the underground domain by governments, planners and the community;
+    - Promoting and reviewing research and development of subsurface projects;
+    - Maintaining affiliation with the International Tunnelling Association (ITA) through active membership, including participation on ITA Working Groups;
+    - Communicating and linking with other local and international likes associations concerned with the application, planning and practice of subsurface development and utilisation, and;
+    - Reviewing the adequacy of education and training of technologists associated with the science, engineering and practice of subsurface development."""@en ;
+    skos:notation "ATS" ;
+    skos:altLabel "Australasian Tunnelling Society"@en ;
+    skos:prefLabel "Australian Tunnelling Society"@en .
+
+earegb:acss a skos:Concept,
+        prty:uninc-tech-society ;
+    dcterms:source "http://www.acss.org.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The objectives of the Australian Composite Structures Society are to guide and foster the acquisition and exchange of knowledge in all matters pertaining to composite structures, and in particular: 
+    - to act as a learned society embracing all aspects of engineering theory and practice, relevant to the structural application of composite materials in Australia; 
+    - to promote the wider structural application of composite materials in the interests of Australian economic development; 
+    - to inform its members of local and overseas activities of scientific and engineering significance in the field of composite structures; 
+    - to provide opportunities for intellectual and fraternal exchange for Society members with a common interest in the development of composite structures and associated technologies; 
+    - to liaise with other scientific and engineering bodies with similar aims, and in particular to represent Australia on international organisations, such as the International Committee for Composite Materials."""@en ;
+    skos:notation "ACSS" ;
+    skos:prefLabel "Australian Composite Structures Society"@en .
+
+earegb:aces a skos:Concept,
+        prty:uninc-tech-society ;
+    dcterms:source "https://www.costengineer.org.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Australian Cost engineering Society (ACES) was formed in 1996 to provide opportunities for the exchange of information on the development of total cost management technologies in Australia and to encourage increased training and recognition for practitioners. The ACES is a technical society of Engineers Australia. The ACES is also a member of the International Cost Engineering Council (ICEC) and collaborates with the Association for the Advancement of Cost Engineering International (AACEI).
+
+    Mission Statement of the ACES: Provide national leadership and facilitate professional activities to encourage member contribution to the practice of cost engineering in Australia."""@en ;
+    skos:notation "ACES" ;
+    skos:prefLabel "Australian Cost Engineering Society"@en .
+
+earegb:asbsh a skos:Concept,
+        prty:uninc-tech-society ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/technical-societies/australian-society-bulk-solids-handling"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The objectives of the Australian Society for Bulk Solids Handling (ASBSH) are to:
+    - Promote co-operation between universities, researchers, consultants, equipment manufacturers, suppliers and industrial users of bulk solids.
+    - Encourage research and development, technology transfer and training.
+    - Promote undergraduate education and further postgraduate education in bulk solids handling.
+    - Hold regular national and international conferences."""@en ;
+    skos:notation "ASBSH" ;
+    skos:prefLabel "Australian Society for Bulk Solids Handling"@en .
+
+earegb:asde a skos:Concept,
+        prty:uninc-tech-society ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/technical-societies/australian-society-defence-engineering"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Australian Society for Defence Engineering (ASDE) was established in 1991 as the Society of Military Engineers. The name was changed to ASDE in 2002.
+    Our core objectives are to:
+    - Provide a forum for exchange of information.
+    - Be the pre-eminent learned society for defence engineering in the armed forces by embracing all aspects of engineering theory, practice, heritage, training and development.
+    - Keep our members informed about developments in defence material and major engineering works within the Australian and other armed forces."""@en ;
+    skos:notation "ASDE" ;
+    skos:prefLabel "Australian Society for Defence Engineering"@en .
+
+earegb:emc a skos:Concept,
+        prty:uninc-tech-society ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/technical-societies/electromagnetic-compatibility-society-australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Electromagnetic Compatibility Society of Australia (EMC) is a technical society within the Electrical College of Engineers Australia.
+
+    Our activities include:
+    - Providing a forum for exchange of information about electromagnetic compatibility.
+    - Participating in Standards Australia Technical Committee TE-003 for electromagnetic compatibility.
+    - Publishing a newsletter and co-ordinating technical presentations about electromagnetic compatibility.
+    - Liaison with the Institute of Electrical and Electronics Engineers (IEEE) EMC Society."""@en ;
+    skos:notation "EMC" ;
+    skos:altLabel "The Institution of Engineers Australia - EMC Society "@en,
+        "The Institution of Engineers -EMC Society trading as EMC Society"@en,
+        "The Electromagnetic Compatibility Society of Australia "@en,
+        "EMC Society"@en ;
+    skos:prefLabel "Electromagnetic Compatibility Society of Australia"@en .
+
+earegb:msts a skos:Concept,
+        prty:uninc-tech-society ;
+    dcterms:source "https://www.msts.org.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Mine Subsidence Technological Society aims to promote and to support the technical exchange of information and ideas in all levels of the building, construction, mining and other industries affected by mine subsidence.
+    SOCIETY OBJECTIVES:
+    - To promote and advance the science and engineering in mine subsidence and its effects on the natural and constructed environment.
+    - To provide ongoing means of communication amongst persons interested in mine subsidence technology.
+    - To provide an ongoing avenue for all persons to contribute to the knowledge of mine subsidence technology.
+    - To provide a focal point for public forum and discussions on mine subsidence matters affecting the community at large.
+    - To promote the role of the Society in the community and to act, when appropriate, as the voice of the Institution on mine subsidence matters.
+    - To encourage and assist continuing education in mine subsidence technology."""@en ;
+    skos:notation "MSTS" ;
+    skos:prefLabel "Mine Subsidence Technological Society"@en .
+
+earegb:memmes a skos:Concept,
+        prty:uninc-tech-society ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/technical-societies/mining-electrical-and-mining-mechanical-engineering"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Mining, Electrical and Mining Mechanical Engineering Society (MEMMES) is a special interest group that looks at engineering disciplines and their applications to mining and its associated industries and suppliers. 
+    
+    We encourage research development and education programs that benefit these industries. 
+    
+    Our members come from all Australian states, New Zealand and New Guinea."""@en ;
+    skos:notation "MEMMES" ;
+    skos:altLabel "Mining Electrical & Mining Mechanical Engineering Society"@en ;
+    skos:prefLabel "Mining Electrical and Mining Mechanical Engineering Society"@en .
+
+earegb:rtsa a skos:Concept,
+        prty:uninc-tech-society ;
+    dcterms:source "https://www.rtsa.com.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Railway Technical Society of Australasia (RTSA) is a Technical Society of Engineering Australia and a Technical Group of Engineering New Zealand formed to further the interests of the railway industry at large and its individual participants.
+    
+    The RTSA is a non-profit organization and was established in 1997 for the purpose of promoting the co-operation of academic, industrial, commercial and governmental organizations in relation to the practice and advancement of railway technology and management in Australasia.
+    
+    The Activities of the RTSA are directed towards providing leadership for the facilitation and coordination of professionalism in the railway industry and the encouragement of member contributions to the application of railway technology and good management practices.
+    
+    The objectives of the RTSA are:
+    - to stimulate the active contribution and participation of its members in the development and dissemination of railway technology and management knowledge, so to support the business of the railway industry,
+    - to provide for the continuing professional development of its members,
+    - and to promote close working relationships amongst participants in the railway industry."""@en ;
+    skos:notation "RTSA" ;
+    skos:prefLabel "Railway Technical Society of Australasia"@en .
+
+earegb:res a skos:Concept,
+        prty:uninc-tech-society ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/technical-societies/risk-engineering-society"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Engineering approaches to uncertainty and risk management help businesses to better understand uncertainties and their risk exposure. This empowers them to proactively manage and mitigate risks. These actions allow businesses to make informed decisions and optimise their investments for maximum value.
+
+    The Risk Engineering Society (RES) is a special interest group that provides leadership on the science, technology and philosophy of risk engineering and risk management and its practical application.
+
+    Our key objectives are to:
+    - Promote risk engineering and its values for informed decision making in risk management for commercial, industrial, environmental and infrastructure projects as well as strategic, operational and financial risks and opportunities for businesses.
+    - Communicate and share lessons learned, knowledge and practical applications of the risk engineering and risk management methodologies and case studies.
+    - Facilitate more collaboration between members, risk professionals, organisations and other relevant technical associations globally.
+    - Provide expert advice to industry, the community and the government to promote excellence in the practice of risk engineering and risk management.
+    - Promote and support education, training and research in all aspects of risk engineering and risk management."""@en ;
+    skos:notation "RES" ;
+    skos:prefLabel "Risk Engineering Society"@en .
+
+earegb:auss a skos:Concept,
+        prty:uninc-tech-society ;
+    dcterms:source "https://www.shotcretesociety.com.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Australian Shotcrete Society is a technical society within Engineers Australia that is comprises of industry professionals focused on the ongoing development and promotion of Shotcrete as a construction material. A key activity of the society is the provision of guidance to designers and practitioners on current and effective best practice in shotcreting practice.
+
+    The Society engages with other international bodies such as the American Shotcrete Association to maintain international parity in the understanding and identification of both common challenges, and mutually beneficial learnings. The Australian Shotcrete Society steering committee worked collaboratively with the Concrete Institute of Australia in the development and publication of the Guide to Recommended Practice for Shotcreting in Australia (Document Z5). The society has arranged and convened several major International conferences on Engineering Developments in Shotcrete in both Australia and New Zealand, as well as workshops in both Regional and Metropolitan Australia, focused on the dissemination of information regarding current and evolving best practice in material science, engineering design, detail, aesthetic outcomes and guidance in the practical application of Shotcrete."""@en ;
+    skos:notation "AuSS" ;
+    skos:altLabel "Shotcrete Society"@en
+    skos:prefLabel "Australian Shotcrete Society"@en .
+
+earegb:sfs a skos:Concept,
+        prty:uninc-tech-society ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/technical-societies/society-fire-safety"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Society of Fire Safety (SFS) exists to foster excellence in fire safety in Australia. As a learned society we provide leadership in the understanding, development, practice and application of fire safety engineering.
+
+    Our objectives"
+    - develop and extend the science and technology of fire safety engineering
+    - promote excellence in the practice of fire safety engineering
+    - promote the use of fire safety engineering in the built environment
+    - promote education, training, and research in all aspects of fire safety engineering
+    - maintain and improve professional and educational standards for fire safety practitioners
+    - influence community, corporate and regulatory attitudes and practices in relation to fire safety
+    - collaborate with and communicate knowledge about fire safety engineering with members, organisations and other societies
+    - provide expert advice for government, industry and the community.
+
+    We engage with our members, organisations and other societies through technical meetings, courses and special events such as conferences and seminars. We also produce and publish members' learned papers and write and circulate a national newsletter.
+
+    The SFS also acts as a specialist resource for research working groups and in the preparation of codes and standards."""@en ;
+    skos:notation "SFS" ;
+    skos:prefLabel "Society of Fire Safety"@en .
+
+earegb:sbse a skos:Concept,
+        prty:uninc-tech-society ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/technical-societies/society-building-services-engineers"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Society for Building Services Engineers (SBSE) is a special interest group that provides leadership and promotes a knowledge exchange about engineering and services related to buildings.
+    
+    Key objectives:
+    - Act as a learned society embracing all aspects of engineering theory and practice relevant to building engineering services in Australia.
+    - Promote the use of sustainable and energy efficient buildings in Australia.
+    - Inform members about significant scientific and engineering developments in the field of building engineering services.
+    - Provide opportunities for mutual exchange of ideas about building engineering services and associated technologies.
+    - Liaise with other scientific and engineering bodies with similar aims and to represent Australia on international organisations.
+    
+    The work of SBSE includes being involved in the development of building services engineering policy, planning, design, construction, maintenance and sustainability. SBSE also manage the implications of compliance with the Building Code of Australia."""@en ;
+    skos:notation "SBSE" ;
+    skos:altLabel "Society for Building Services Engineers"@en ;
+    skos:prefLabel "Society for Building Services Engineering"@en .
+
+earegb:seng a skos:Concept,
+        prty:uninc-tech-society ;
+    dcterms:source "https://www.seng.org.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Sustainable Engineering Society (SENG) is a technical society of Engineers Australia, open to all engineers and other professionals working towards sustainability.
+
+    SENG's mission is to provide national focus and leadership within the engineering profession for the implementation of sustainability for the benefit of all life on Earth. As engineering and environmental practitioners, we use our knowledge and skills for the benefit of the community to create engineering solutions for a sustainable future.
+
+    SENG gains its corporate entity as a constitutional part of Engineers Australia through the Board of Engineering Practice. The Society is primarily affiliated with the Environmental College; and has secondary affiliations with the Chemical, Mechanical and Electrical Colleges.
+
+    SENG provides a forum to:
+    - Advance sustainability and environmental outcomes for all society;
+    - Enable all engineers to implement sustainability in their work in accordance with the EA Code of Ethics;
+    - Advance the profession of environmental engineering."""@en ;
+    skos:notation "SENG" ;
+    skos:altLabel "Society for Sustainability and Environmental Engineering"@en ;
+    skos:prefLabel "Sustainable Engineering Society"@en .
+
+earegb:sesa a skos:Concept,
+        prty:uninc-tech-society ;
+    dcterms:source "https://www.sesa.org.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """SESA's mission is to foster the definition, understanding, practice and advancement of Systems Engineering in Australian Industry, Academia and Government.
+
+    SESA aims to provide the national vehicle to make Systems Projects successful through the establishment of a viable Systems Engineering culture in Australia."""@en ;
+    skos:notation "SESA" ;
+    skos:prefLabel "Systems Engineering Society of Australia"@en .
+
+earegb:tas a skos:Concept,
+        prty:uninc-tech-society ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/technical-societies/transport-australia-society"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Transport Australia society (TAs) is a technical society that provides leadership, professional development and networking opportunities for transport professionals in Australia. We also provide expert input to government on transport policy, reform and infrastructure investment.
+    
+    TAs has been in operation in some form since 1975 and exists as a focused community of practice for transport professionals. Our members have access to a series of webinars and events throughout the year which are run online or in person in various states.
+
+    In seeking to improve national wellbeing, productivity and sustainability by influencing transport decisions, we've identified six key focus areas:
+    1. Transport in Australia's cities.
+    2. Game-changing technologies.
+    3. Maintaining and improving international competitiveness.
+    4. Identifying and allocating costs and benefits.
+    5. Sustainable transport systems.
+    6. Safety and security."""@en ;
+    skos:notation "TAs" ;
+    skos:prefLabel "Transport Australia Society"@en .
+
+        # PART 5 - Division 4: Incorporated Technical Societies (Schedule 3 - Part 2)
+
+earegb:aaee a skos:Concept,
+        prty:inc-tech-society ;
+    dcterms:source "https://aaee.net.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Australasian Association for Engineering Education, AAEE (often spoken as A squared, E squared), is a professional association of academics, support staff, postgraduate students, librarians, professional engineers and employers who all have vested interest in fostering excellence and innovation in engineering education. A technical society of Engineers Australia, AAEE is governed by an elected executive committee that guides the direction of AAEE and undertake the day-to-day operations of the Association. The executive also includes representatives of the aligned bodies Engineers Australia, Engineering New Zealand and the Australian Council of Engineering Deans (ACED). AAEE has it's own journal, the Australasian Journal of Engineering Education, that presents work that is at the forefront of engineering education internationally."""@en ;
+    skos:notation "AAEE" ;
+    skos:altLabel "Australian Association for Engineering Education"@en,
+        "Australian Association for Engineering in Education"@en ;
+    skos:prefLabel "Australasian Association for Engineering Education"@en .
+
+earegb:aees a skos:Concept,
+        prty:inc-tech-society ;
+    dcterms:source "https://www.costengineer.org.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """AEES is a Technical Society of Engineers Australia. AEES was established after the 1989 Newcastle earthquake to promote the practice of earthquake engineering and engineering seismology. AEES is a not-for-profit organisation."""@en ;
+    skos:notation "AEES" ;
+    skos:prefLabel "Australian Earthquake Engineering Society"@en .
+
+earegb:seag a skos:Concept,
+        prty:inc-tech-society ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/technical-societies/society-engineering-agriculture"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Society for Engineering in Agriculture (SEAg) is a technical society that promotes and supports the practice of engineering in agriculture.
+    
+    SEAg aims are to:
+    - Improve communication among people with an interest in engineering in agriculture.
+    - Extend appropriate technical information to SEAg members and others involved in agriculture.
+    - Raise awareness of the role of engineering in agriculture.
+
+    SEAg was originally known as the Agricultural Engineering Society (Australia) and was formed in the early 1950s. Its purpose is to promote and support engineering in agriculture and to serve as a forum for engineers with an interest in farm mechanisation and agricultural engineering.
+
+    Activities include publication of the bi-monthly journal Leading Edge and a SEAg conference every two years."""@en ;
+    skos:notation "SEAg" ;
+    skos:altLabel "Agricultural Engineering Society (Australia)"@en,
+        "Agricultural Engineering Society"@en,
+        "The Institution of Engineers Aust Society for Engineering in Agriculture"@en
+        "The Institution of Engineers Australia Society for Engineering in Agriculture"@en ;
+    skos:prefLabel "Society for Engineering in Agriculture"@en .
+
+earegb:eesa a skos:Concept,
+        prty:inc-tech-society ;
+    dcterms:source "https://www.eesa.org.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Electric Energy Society of Australia (EESA) is a not-for-profit organisation and a Technical Society of Engineers Australia (EA), established to advance interest in the field of electric energy. Membership is open to individuals and organisations interested in the purpose and objectives of the society, with our key objective being to provide a continuous professional development program to members. The Australian electric energy industry is subject to radical restructure and reform, so we are committed to meeting the changing needs of members.
+    
+    Objectives:
+    - To be a national and regional based learned society, focusing on electric energy.
+    - To be active in career development, information sharing, and provide opportunities for continual learning.
+    - To promote electric energy, with an emphasis on engineering technology, as well as management.
+    - To provide the expert focus of Engineers Australia in electric energy matters.
+    - To be active across all broad categories of electric energy; including generation, transmission, distribution, retail and end-use applications of electric energy.
+    - To stimulate research and innovation in the fields of electric energy generation, transmission, distribution, retail and end-use applications.
+    - To improve communications with, and networking, of members.
+    - To recognise member contributions and increase membership, in particular to increase the number of young Australians developing careers in the electric energy industry.
+    - To run effective conferences, symposiums, seminars, webinars and technical site visits; satisfying event needs by developing close relationships with suppliers.
+    - To promote EESA members to the community, represent community interest in electric energy industry matters, influence government energy industry policy, develop good working relationships with the media and improve relationships & co-ordinate activities with other industry groups, in accordance with Engineers Australia guidelines.
+    - To encourage members to seek formal recognition of their competency and continued professional development.
+    - To exchange and disseminate matters related to the electric energy industry with like organisations both locally and internationally."""@en ;
+    skos:notation "EESA" ;
+    skos:altLabel "Electric Energy Society of Australia Incorporated"@en,
+        "The Electric Energy Society of Australia"@en ;
+    skos:prefLabel "Electric Energy Society of Australia"@en .
+
+earegb:apts a skos:Concept,
+        prty:inc-tech-society ;
+    dcterms:source "https://aaee.net.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Australasian Particle Technology Society (APTS) was formed in 1998 and acts to disseminate information about advances in particle research to members.
+
+    Particle technology is used to manufacture particulate materials which include powders and bulk solids. This material is used by chemists, physicists, pharmacists and material designers across many industries including:
+    - pharmaceutical
+    - food processing
+    - cosmetic
+    - chemical
+    - oil
+    - cleaning
+    - mineral processing
+    - metallurgy.
+
+    The design, handling and processing of particulate materials is a precise science. Companies in any industry that use particle technology should have an in-house expert to manage design and handling."""@en ;
+    skos:notation "APTS" ;
+    skos:altLabel "The Institute of Engineers Australia - Australasian Particle Technology Society"@en,
+        "Australian Particle Technology Society"@en ;
+    skos:prefLabel "Australasian Particle Technology Society"@en .
+
+earegb:aftes a skos:Concept,
+        prty:inc-tech-society ;
+    dcterms:source "https://12ahmtc-eng.sydney.edu.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """ the Australasian Fluid and Thermal Engineering Society aspires to promote professional activities and technical applications in the discipline areas of Heat and Mass Transfer, Thermodynamics and Fluid Mechanics within Australasia for general benefit of the community at large."""@en ;
+    skos:notation "AFTES" ;
+    skos:altLabel "Australian Fluid & Thermal Engineering Society"@en,
+        "Australian Fluid and Thermal Engineering Society"@en,
+        "Australasian Fluid & Thermal Engineering Society"@en ;
+    skos:prefLabel "Australasian Fluid and Thermal Engineering Society"@en .
+
+        # PART 5 - Division 4: Other Affiliated Bodies (Schedule 3 - Part 3a) (subregulation 2.03(3))
+
+earegb:amc a skos:Concept,
+        prty:aff-tech-societyy ;
+    dcterms:source "https://www.amcouncil.com.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Asset Management Council (AM Council) supports professional recognition, collaboration and information sharing that contributes to a common understanding of the value of effective asset management.
+    
+    The AM Council is a non-profit, membership-based association comprising Individuals (engineers, commercial managers, finance professionals) and companies, as well as corporate sponsors involved in Asset Management in Australiasia.
+    
+    The Council has been central to the development of industry frameworks in Australia and Internationally, developing an Asset Management Body of Knowledge (AMBoK) and contributing to the Australian Standards Committee and ISO Committee in the development of current ISO 55OOO Standards for Asset Management.
+    
+    The AM Council delivers professional development programs for Individuals - certification, training and mentorship, and networking opportunities. The Council also supports companies in benchmarking performance against best-practice (and aligned to ISO55000) through delivery of an Asset Management Maturity Assessment model.
+    
+    The AM Council is a Technical Society of Engineers Australia, represented by local chapters in every State and Territory. The Council is also a founding member of both the Global Forum on Maintenance and Asset Management (GFMAM) and the World Partners in Asset Management (WPiAM)."""@en ;
+    skos:notation "AMC" ;
+    skos:altLabel "AM Council"@en,
+        "Asset Management Council Ltd."@en,
+        "Asset Management Council Limited"@en ;
+    skos:prefLabel "Asset Management Council"@en .
+
+earegb:ags a skos:Concept,
+        prty:aff-tech-society ;
+    dcterms:source "https://australiangeomechanics.org/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Geomechanics is the application of engineering and geological principles to the behaviour of the ground and ground water and the use of these principles in civil, mining, offshore and environmental engineering in the widest sense.
+
+    The Australian Geomechanics Society (AGS) was founded in 1970. Its origins lie in the National Committee of Soil Mechanics of the Institution of Engineers, Australia established in 1953 and the call for a corresponding society in rock mechanics. In 1973 the society was expanded to include the third discipline of engineering geology and has remained substantially unchanged since that date.
+
+    The AGS produces Australian Geomechanics the newsletter and journal of the Society and specialty conferences, symposia, seminars and workshops, including the four-yearly ANZ Geomechanics conference. Australian Geomechanics is published four times a year. The AGS is jointly sponsored by the Institution of Engineers Australia and the Australasian Institute of Mining and Metallurgy."""@en ;
+    skos:notation "AGS" ;
+    skos:prefLabel "Australian Geomechanics Society"@en .
+
+earegb:iea a skos:Concept,
+        prty:aff-tech-society ;
+    dcterms:source "https://iea.org.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Industrial Engineers Australia (IEA) is the Australian body dedicated to serving the need of industry for improved productivity by enhancing professional skills of industrial engineers and individuals involved with creating wealth through productivity improvement.
+    
+    In this age of rapid change where business survival depends on the ability to initiate and embrace change to meet the challenges of our time, Industrial Engineers bring professional engineering methodology to organisational and process change. They address issues such as:
+    - Critical analysis of the type and need for change
+    - Specify the most appropriate means of achieving change
+    - Predict the outcome of change
+    - Carry out the implementation of the planned change
+    - Measure the results against predicted outcomes.
+    
+    The IEA provides a forum for people interested in the advancement of Industrial Engineering and in optimising the use of increasingly scarce resources to solve problems of productivity. It provides members with an opportunity to exchange knowledge and experience. It is concerned with furthering the development and education of industrial engineers, and developing, collecting and distributing industrial engineering knowledge."""@en ;
+    skos:notation "IEA" ;
+    skos:altLabel "Institute Of Industrial Engineers"@en,
+        "Institute of Industrial Engineers Australia"@en,
+        "Industrial Engineering Society"@en ;
+    skos:prefLabel "Industrial Engineers Australia"@en .
+
+earegb:ipwea a skos:Concept,
+        prty:aff-tech-society ;
+    dcterms:source "https://www.ipwea.org/home"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Previously known as the Institute of Municipal Engineering Australia (IMEA), the Institute of Public Works Engineering Australasia (IPWEA) is the Peak association for the public works professionals across Australia and New Zealand. IPWEA provides services to its members and advocacy on their behalf.
+
+    In recent times, the organisation has expanded its traditional local government engineering focus to broader public works, covering all tiers of government as well as the private sector, which comprises 40% of IPWEA membership. Almost all of Australia and New Zealand's professional consultancy firms that specialise in public sector infrastructure - including roads, water, power, rail, ports and airports - have managers and staff who are members of IPWEA."""@en ;
+    skos:notation "IPWEA" ;
+    skos:altLabel "Institute of Municipal Engineering Australia"@en,
+        "Institute of Public Works Engineering Australasia Limited"@en,
+        "The Institute of Public Works Engineering Australasia"@en ;
+    skos:prefLabel "Institute of Public Works Engineering Australasia"@en .
+
+earegb:red-r a skos:Concept,
+        prty:aff-tech-society ;
+    earp:affiliate earegb:ea ;
+    dcterms:source "https://www.redr.org.au/about-us/who-we-are/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """RedR Australia is a leading international humanitarian response agency that selects, trains and deploys technical specialists.
+    
+    RedR Australia provides skilled people and training to help communities plan, prepare, rebuild and recover before, during and after crises and conflict. RedR Australia maintains a roster of nearly 1000 technical specialists across a range of skill profiles including disaster risk reduction, emergency preparedness, recovery and stabilisation activities in times of need.
+
+    RedR Australia is a Standby Partner to 16 United Nations agencies or entities, as well as other front line relief agencies and local governments. During a humanitarian crisis, a global network of Standby Partner organisations provides additional support to UN response efforts. RedR Australia is the only Standby Partner to the UN in the southern hemisphere. RedR Australia is the implementing partner of the Australia Assists program, an integrated civilian capability co-designed by RedR Australia and the Australian Government's Department of Foreign Affairs and Trade which further enables RedR Australia to mobilise at every stage of the disaster cycle.
+
+    Our specialists also build resilience in disaster prone countries through our disaster preparedness training activities and strategic collaboration with National Disaster Management Offices throughout the Asia Pacific."""@en ;
+    skos:notation "RedR" ;
+    skos:altLabel "RedR Australia Limited"@en,
+        "Red R"@en ;
+    skos:prefLabel "RedR Australia"@en .
+
+earegb:ma a skos:Concept,
+        prty:inc-tech-society ;
+    dcterms:source "https://www.materialsaustralia.com.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Materials Australia is the peak representative body of Australian materials scientists and engineers, and related professionals.
+    
+    As the trusted voice of the industry, our Vision is to be the peak materials body in Australia and provide our members with the best information and training available. We do this via access to networks into industry, research, education, government and the wider community."""@en ;
+    skos:notation "MA" ;
+    skos:altLabel "Institute of Materials Engineering Australasia Ltd Trading as Materials Australia"@en,
+        "Institute of Materials Engineering Australasia"@en,
+        "Institute of Materials Engineering Australasia Ltd"@en ;
+    skos:prefLabel "Materials Australia"@en .
+
+earegb:raes a skos:Concept,
+        prty:aff-tech-society ;
+    dcterms:source "https://www.raes.org.au/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """As the oldest global Aerospace Society, the Royal Aeronautical Society is a prominent, independent, authoritative body that has influence on issues confronting today's aerospace community. We foster expertise and professionalism through education, consultation, networking and recognition, by participating in government and industry body forums, conducting professional conferences/seminars, through industry promotion and measured advocacy and by briefing the media the Society plays an important role in raising the profile of, and connecting the participants across, the aerospace community."""@en ;
+    skos:notation "RAES" ;
+    skos:altLabel "Royal Aeronautical Society Australian Division Inc"@en,
+        "Royal Aeronautical Society - Australian Division Inc"@en,
+        "The Royal Aeronautical Society Australian Division Inc"@en,
+        "The Royal Aeronautical Society - Australia Division Inc"@en ,
+        "The Royal Aeronautical Society - Australian Division Inc"@en,
+        "Royal Aeronautical Engineering Society"@en ;
+    skos:prefLabel "Royal Aeronautical Society Australian Division"@en .
+
+earegb:rina a skos:Concept,
+        prty:tech-society ;
+    earp:affiliate earegb:ea ;
+    dcterms:source "https://rina.org.uk/about-rina/about/"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The Royal Institution of Naval Architects is the global governing body for naval architecture and maritime engineering.
+    
+   The Royal Institution of Naval Architects is represented in Australia by the Australian Division. All members resident in Australia are registered as members of the Division. The Australian Branch of the Institution of Naval Architects was formally constituted in 1954, and became a Division of the Royal Institution of Naval Architects in 1979, the year of its Silver Jubilee."""@en ;
+    skos:notation "RINA" ;
+    skos:altLabel "Royal Institution of Naval Architects"@en,
+        "Royal Institute of Naval Architects"@en,
+        "The Royal Institute of Naval Architects - Australia Division"@en ;
+    skos:prefLabel "Royal Institute of Naval Architects Australia Division"@en .
+
+   earegb:ewb a skos:Concept,
+           prty:tech-society ;
+       earp:affiliate earegb:ea ;
+       dcterms:source "https://ewb.org.au/aboutewb/"^^xsd:anyURI ;
+       rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+       skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+       skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+       skos:definition """The purpose of Engineers Without Borders Australia is to harness the potential of engineering to create an equitable reality for the planet and its people.
+       
+       The outcomes that result from the introduction of technology will always have direct and indirect impacts, on people and the environment. In addition, the process of design and development of technology will have another set of direct and indirect impacts on people and the environment. Engineers have a responsibility to act as stewards of technology, and consider the upstream and downstream impacts to ensure that the results bring benefit before, during and after the creation of each intervention, for all. All those that came before us, who put this responsibility in our hands - now and for generations to follow. All living things and the world around us, the land, the air, the waterways and ocean. As such, engineers acting as technology stewards have a moral imperative to design, develop and implement technology with care and consideration for all."""@en ;
+       skos:notation "EWB" ;
+       skos:altLabel "Engineers Without Borders"@en ;
+       skos:prefLabel "Engineers Without Borders Australia"@en .
+   
+#   earegb:ascp a skos:Concept,
+#          prty:tech-society ;
+#       dcterms:source "https://concretepavements.com.au/about-us/"^^xsd:anyURI ;
+#       rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+#       skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+#       skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+#      skos:notation "ASCP" ;
+#       skos:prefLabel "Australian Society for Concrete Pavements"@en .
+
+        # Working Groups and Special Interest Groups
+
+earegb:student-ambassadors a skos:Concept,
+        prty:working-group ;
+    earp:represents earegb:ncyea ;
+    dcterms:source "yea.engineersaustralia.org.au"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """A group that represents and coordinates Student Ambassadors who act on behalf of Engineers Australia. The primary responsibility of a Student Ambassador is to be a representative of Engineers Australia at their campus, actively helping student engineers to understand and benefit from the resources offered by Engineers Australia. Student Ambassadors form an essential part of the Engineers Australia Tertiary team across Australia and internationally by providing an on-campus presence and link to events hosted on campus. The Student Ambassador program aims to help student engineers establish their careers and access Engineers Australia resources."""@en ;
+    skos:altLabel "Student Ambassadors"@en,
+        "Engineers Australia Student Ambassadors"@en ;
+    skos:prefLabel "Young Engineers Student Ambassadors"@en .
+
+        # Regional Groups
+
+earegb:overseas-qualified-engineers a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/division-groups/overseas-qualified-engineers"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """Overseas qualified engineers group provides support and networking opportunities to engineering professionals who obtained their qualifications in another country.
+    
+    Objectives:
+    - Motivate and help skilled overseas engineers to improve their communication skills and chances of securing employment in the Australian engineering industry.
+    - Facilitate knowledge and participation in the technical professional development programs provided by the various discipline-specific units of Engineers Australia.
+    - Provide social and networking opportunities for career development and training and assist overseas engineers to integrate into the Australian engineering workforce.
+    - Encourage and support overseas qualified engineers who are non-members to become members of Engineers Australia and advance their professional development."""@en ;
+    skos:prefLabel "Overseas Qualified Engineers"@en .
+
+earegb:rg-nsw-central-coast a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the New South Wales - Central Coast region.
+    
+    The Central Coast Rivers group spans the area from the Hawkesbury River to Wyong, including postcodes in the range of 2250 - 2263."""@en ;
+    skos:prefLabel "Regional Group: Newcastle - Central Coast"@en .
+
+earegb:rg-nsw-mid-north-coast a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the New South Wales - Mid-North Coast region.
+    
+    The Mid North Coast group spans the area from Taree to Nambucca Heads including postcodes in the range of 2427 - 2447."""@en ;
+    skos:prefLabel "Regional Group: Newcastle - Mid-North Coast"@en .
+
+earegb:rg-nsw-northern a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the New South Wales - Northern region.
+    
+    The Northern group spans the area from Werris Creek to Armidale and west to Burren Junction."""@en ;
+    skos:prefLabel "Regional Group: Newcastle - Northern"@en .
+
+earegb:rg-nsw-northern-rivers a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the New South Wales - Northern Rivers region.
+    
+    The Northern Rivers group spans the area from Nambucca Heads to the Queensland border and includes postcodes in the range of 2448 - 2493."""@en ;
+    skos:prefLabel "Regional Group: Newcastle - Northern Rivers"@en .
+
+earegb:rg-nsw-central-west-dubbo a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the New South Wales - Central West/Dubbo region.
+    
+    The Central West/Dubbo group spans the area from Dubbo, to Lithgow in the east, and to as far west as Lake Cargelligo, on the Lachlan River."""@en ;
+    skos:prefLabel "Regional Group: New South Wales - Central West/Dubbo"@en .
+
+earegb:rg-nsw-southern-highlands-tablelands a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the New South Wales - Southern Highlands and Tablelands region.
+    
+    The Southern Highlands and Tablelands regional group covers the local government area of the Wingecarribee Shire and also towns of the Mulwaree Shire."""@en ;
+    skos:prefLabel "Regional Group: New South Wales - Southern Highlands and Tablelands"@en .
+
+earegb:rg-nsw-western-sydney a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the New South Wales - Western Sydney region.
+    
+    The Western Sydney regional group covers the the Greater Western Sydney area, including the north-west, south-west, central-west, far western and the Blue Mountains sub-regions within Sydney's metropolitan area and encompasses 13 local government areas: Blacktown, Blue Mountains, Camden, Campbelltown, Canterbury-Bankstown, Cumberland, Fairfield, Hawkesbury, Hills Shire, Liverpool, Parramatta, Penrith and Wollondilly."""@en ;
+    skos:prefLabel "Regional Group: New South Wales - Western Sydney"@en .
+
+earegb:rg-nsw-illawarra a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the New South Wales - Illawarra region.
+    
+    The Illawarra/Sutherland Regional group covers an area extending from Sutherland in the south of Sydney to the south in Kiama and the Illawarra escarpment to the west."""@en ;
+    skos:altLabel "Regional Group: New South Wales - Illawarra/Sutherland"@en ;
+    skos:prefLabel "Regional Group: New South Wales - Illawarra"@en .
+
+earegb:rg-nsw-monaro a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the New South Wales - Monaro region.
+    
+    The Monaro group spans the area of Monaro and its immediate surrounds."""@en ;
+    skos:prefLabel "Regional Group: New South Wales - Monaro"@en .
+
+earegb:rg-nsw-riverina a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the New South Wales - Riverina region.
+    
+    The Riverina regional group covers the area from the Victorian border in the south to West Wyalong/Young in the north, and east to the Snowy Mountains."""@en ;
+    skos:prefLabel "Regional Group: New South Wales - Riverina"@en .
+
+earegb:rg-nsw-shoalhaven a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the New South Wales - Shoalhaven region.
+    
+    The Shoalhaven group spans the area of Shoalhaven and its immediate surrounds."""@en ;
+    skos:prefLabel "Regional Group: New South Wales - Shoalhaven"@en .
+
+earegb:rg-nsw-sydney-migrant a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of Sydney Migrant Engineers.
+    
+    The Sydney Migrant Engineers Group supports engineers who have overseas qualifications and who would like to continue their engineering careers in Australia."""@en ;
+    skos:prefLabel "Regional Group: New South Wales - Sydney Migrant Engineers"@en .
+
+earegb:rg-nt-alice-springs a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Northern Territory - Alice Springs region.
+    
+    The Alice Springs group spans the area of Alice Springs and its immediate surrounds."""@en ;
+    skos:prefLabel "Regional Group: Northern Territory - Alice Springs"@en .
+
+earegb:rg-qld-bundaberg a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Queensland - Bundaberg region.
+    
+    The Bundaberg group spans the area of Bundaberg and its immediate surrounds."""@en ;
+    skos:prefLabel "Regional Group: Queensland - Bundaberg"@en .
+
+earegb:rg-qld-cairns a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Queensland - Cairns region.
+    
+    The Cairns group spans the area of Cairns and its immediate surrounds."""@en ;
+    skos:prefLabel "Regional Group: Queensland - Cairns"@en .
+
+earegb:rg-qld-gladstone a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Queensland - Gladstone region.
+    
+    The Gladstone group spans the area of Gladstone and its immediate surrounds."""@en ;
+    skos:prefLabel "Regional Group: Queensland - Gladstone"@en .
+
+earegb:rg-qld-gold-coast a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Queensland - Gold Coast region.
+    
+    The Gold Coast group spans the area of Gold Coast and its immediate surrounds."""@en ;
+    skos:prefLabel "Regional Group: Queensland - Gold Coast"@en .
+
+earegb:rg-qld-mackay a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Queensland - Mackay region.
+    
+    The Mackay group spans the area of Mackay and its immediate surrounds."""@en ;
+    skos:prefLabel "Regional Group: Queensland - Mackay"@en .
+
+earegb:rg-qld-maryborough a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Queensland - Maryborough region.
+    
+    The Maryborough group spans the area of Wide Bay Maryborough and its immediate surrounds."""@en ;
+    skos:altLabel "Regional Group: Queensland - Wide Bay Maryborough"@en ;
+    skos:prefLabel "Regional Group: Queensland - Maryborough"@en .
+
+earegb:rg-qld-rockhampton a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Queensland - Rockhampton region.
+    
+    The Rockhampton group spans the area of Rockhampton and its immediate surrounds."""@en ;
+    skos:prefLabel "Regional Group: Queensland - Rockhampton"@en .
+
+earegb:rg-qld-sunshine-coast a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Queensland - Sunshine Coast region.
+    
+    The Sunshine Coast group spans the area of Sunshine Coast and its immediate surrounds."""@en ;
+    skos:prefLabel "Regional Group: Queensland - Sunshine Coast"@en .
+
+earegb:rg-qld-toowoomba a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Queensland - Toowoomba region.
+    
+    The Toowoomba group spans the area of Toowoomba and its immediate surrounds."""@en ;
+    skos:prefLabel "Regional Group: Queensland - Toowoomba"@en .
+
+earegb:rg-qld-townsville a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Queensland - Townsville region.
+    
+    The Townsville group spans the area of Townsville and its immediate surrounds."""@en ;
+    skos:prefLabel "Regional Group: Queensland - Townsville"@en .
+
+earegb:rg-vic-bendigo a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Victoria - Bendigo region.
+    
+    The Bendigo group spans the area of Bendigo and its immediate surrounds in central Victoria."""@en ;
+    skos:prefLabel "Regional Group: Victoria - Bendigo"@en .
+
+earegb:rg-vic-gippsland a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Victoria - Gippsland region.
+    
+    The Bendigo group spans the area of Gippsland and its immediate surrounds in south eastern Victoria."""@en ;
+    skos:prefLabel "Regional Group: Victoria - Gippsland"@en .
+
+earegb:rg-wa-great-southern a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Western Australia - Great Southern region.
+    
+    The Great Southern group spans the local government areas of Albany, Broomehill-Tambellup, Cranbrook, Denmark, Gnowangerup, Jerramungup, Katanning, Kent, Kojonup, Plantagenet and Woodanilling."""@en ;
+    skos:prefLabel "Regional Group: Western Australia - Great Southern"@en .
+
+earegb:rg-wa-south-west a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Western Australia - South West region.
+    
+    The South West group spans the local government areas of Augusta-Margaret River, Boyup Brook, Bridgetown-Greenbushes, Bunbury, Busselton, Capel, Collie, Dardanup, Donnybrook-Balingup, Harvey, Manjimup, and Nannup."""@en ;
+    skos:prefLabel "Regional Group: Western Australia - South West"@en .
+
+earegb:rg-wa-peel a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Western Australia - Peel region.
+    
+    The Peel group spans the local government areas of Mandurah, Boddington, Murray, Serpentine-Jarrahdale and Waroona."""@en ;
+    skos:prefLabel "Regional Group: Western Australia - Peel"@en .
+
+earegb:rg-wa-dampier a skos:Concept,
+        prty:regional-group ;
+    dcterms:source "https://www.engineersaustralia.org.au/engineering-communities/regional-groups"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-regulated-bodies> ;
+    skos:definition """The regional group representing the interests of the Western Australia - Dampier region.
+    
+    The Dampier combined group spans the northern part of Western Australia including the Pilbara and Kimberley regions."""@en ;
+    skos:prefLabel "Regional Group: Western Australia - Dampier"@en .
+
+# COLLECTIONS
+
+earegb:rg-governance-bodies a skos:Collection ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    skos:definition """Regulated bodies that play governance roles in the operations of Engineers Australia."""@en ;
+    skos:prefLabel "Regulated Bodies - Governance Bodies"@en ;
+    skos:member
+        earegb:ea-board,
+        earegb:biomedical-college-board,
+        earegb:chemical-college-board,
+        earegb:civil-college-board,
+        earegb:electrical-college-board,
+        earegb:environmental-college-board,
+        earegb:itee-college-board,
+        earegb:leadership-management-board,
+        earegb:mechanical-college-board,
+        earegb:structural-college-board,
+        earegb:division-cbr-committee,
+        earegb:division-ntl-committee,
+        earegb:division-drw-committee,
+        earegb:division-bne-committee,
+        earegb:division-adl-committee,
+        earegb:division-syd-committee,
+        earegb:division-hba-committee,
+        earegb:division-mel-committee,
+        earegb:division-per-committee,
+        earegb:ncre,
+        earegb:ncwie,
+        earegb:ncam,
+        earegb:ncee,
+        earegb:nccoe,
+        earegb:nccei4,
+        earegb:nced,
+        earegb:ncspe,
+        earegb:ncwe,
+        earegb:ncyea,
+        earegb:ea-national-congress,
+        earegb:oc-hong-kong,
+        earegb:oc-malaysia,
+        earegb:oc-qatar,
+        earegb:oc-singapore,
+        earegb:oc-united-arab-emirates,
+        earegb:oc-united-kingdom,
+        earegb:overseas-qualified-engineers,
+        earegb:rg-nsw-central-coast,
+        earegb:rg-nsw-central-west,
+        earegb:rg-nsw-dubbo,
+        earegb:rg-nsw-illawarra,
+        earegb:rg-nsw-mid-north-coast,
+        earegb:rg-nsw-monaro,
+        earegb:rg-nsw-northern,
+        earegb:rg-nsw-northern-rivers,
+        earegb:rg-nsw-riverina,
+        earegb:rg-nsw-shoalhaven,
+        earegb:rg-nsw-southern-highlands-tablelands,
+        earegb:rg-nsw-sydney-migrant,
+        earegb:rg-nsw-western-sydney,
+        earegb:rg-nt-alice-springs,
+        earegb:rg-qld-bundaberg,
+        earegb:rg-qld-cairns,
+        earegb:rg-qld-gladstone,
+        earegb:rg-qld-gold-coast,
+        earegb:rg-qld-mackay,
+        earegb:rg-qld-maryborough,
+        earegb:rg-qld-rockhampton,
+        earegb:rg-qld-sunshine-coast,
+        earegb:rg-qld-toowoomba,
+        earegb:rg-qld-townsville,
+        earegb:rg-vic-bendigo,
+        earegb:rg-vic-gippsland,
+        earegb:rg-wa-dampier,
+        earegb:rg-wa-great-southern,
+        earegb:rg-wa-peel,
+        earegb:rg-wa-south-west,
+        earegb:engineering-heritage-australia,
+        earegb:nceat,
+        earegb:amc,
+        earegb:aaee,
+        earegb:aftes,
+        earegb:apts,
+        earegb:acss,
+        earegb:aces,
+        earegb:aees,
+        earegb:ags,
+        earegb:auss,
+        earegb:asbsh,
+        earegb:ascp,
+        earegb:asde,
+        earegb:ats,
+        earegb:eesa,
+        earegb:emc,
+        earegb:ewb,
+        earegb:iea,
+        earegb:ipwea,
+        earegb:ma,
+        earegb:msts,
+        earegb:memmes,
+        earegb:rtsa,
+        earegb:red-r,
+        earegb:res,
+        earegb:raes,
+        earegb:rina,
+        earegb:sbse,
+        earegb:seag,
+        earegb:sfs,
+        earegb:seng,
+        earegb:sesa,
+        earegb:tas,
+        earegb:student-ambassadors .
+
+earegb:rg-divisions a skos:Collection ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    skos:definition """The teams as per the EA General Regulations that coordinates and manages across geographic divisions."""@en ;
+    skos:prefLabel "Engineers Australia Divisions"@en ;
+    skos:member
+        earegb:division-cbr,
+        earegb:division-ntl,
+        earegb:division-drw,
+        earegb:division-bne,
+        earegb:division-adl,
+        earegb:division-syd,
+        earegb:division-hba,
+        earegb:division-mel,
+        earegb:division-per,

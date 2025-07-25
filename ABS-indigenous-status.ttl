@@ -1,0 +1,84 @@
+PREFIX indg: <https://linked.data.gov.au/def/indigenous-status/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/def/indigenous-status> a owl:Ontology ,
+		skos:ConceptScheme ;
+	dcterms:created "2025-03-19"^^xsd:date ;
+	dcterms:creator <https://linked.data.gov.au/org/abs>;
+	dcterms:modified "2025-03-19"^^xsd:date ;
+	dcterms:publisher <https://linked.data.gov.au/org/abs>;
+    dcterms:provenance "Australian Bureau of Statistics - Indigenous Status Standard" ;
+	dcterms:references 
+		<https://www.abs.gov.au/statistics/standards/indigenous-status-standard/latest-release> ;
+	skos:definition """Australia's Aboriginal and Torres Strait Islander people occupy a unique place in Australian society and culture. Accurate and time comparable statistics in this area are needed in order to understand and measure wellbeing of Australia's Indigenous peoples to help formulate policies to plan, promote, deliver and evaluate essential services to achieve positive social and economic outcomes for Aboriginal and Torres Strait Islander people.
+    
+    In Australia, the method for collecting information about Aboriginal and Torres Strait Islander people is through self-identification questions. The ABS Standard Indigenous Question (SIQ) is used in all ABS data collections, and is also used across a wide range of government agencies and Australian Aboriginal and Torres Strait Islander organisations.
+    
+    The statistical variable 'Indigenous Status' is endorsed by the Ministerial Council of Immigration and Multicultural Affairs as one of the four Minimum Core Indicators of the standard set of indicators for use in measuring cultural and linguistic diversity [Endnote 3]. The standard is also supported by the Council of Australia Governments in schedule F of the National Indigenous Reform Agreement which states that all jurisdictions will adopt the standard ABS Indigenous question and recording categories on data collection forms and information systems for key data sets.
+    
+    A person's Indigenous status is determined by their response to the ABS Standard Indigenous Question: "Are you of Aboriginal or Torres Strait Islander origin?"""@en ;
+    skos:scopeNote """The ABS Standard Indigenous Question is based upon the Commonwealth working definition (descent, self-identification, community acceptance) but does not include the third element of the Commonwealth definition, namely that an Aboriginal or Torres Strait Islander is a person who is accepted as such by the community in which he or she lives. Collecting information on the basis of community acceptance is often impractical in a survey or administrative data collection setting and can lead to inaccuracies. For these reasons, it is not included in the ABS Standard. The definition of Indigenous Status is therefore operationalised as whether or not a person identifies as being of Aboriginal or Torres Strait Islander origin'.
+
+    The term 'origin', when used in the context of the operational definition, is considered to relate to a persons Australian Aboriginal and/or Torres Strait Islander descent and for some, but not all, their cultural identity."""@en ;
+	skos:hasTopConcept
+		indg:1,
+		indg:2,
+		indg:3,
+		indg:4,
+		indg:5;
+    skos:altLabel "Indigenous Status Standard"@en,
+        "Indigenous Origin"@en ;
+	skos:prefLabel "Indigenous Status"@en .
+
+indg:1 a skos:Concept ;
+    dcterms:source "https://www.abs.gov.au/statistics/standards/indigenous-status-standard/latest-release"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/indigenous-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/indigenous-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/indigenous-status> ;
+    skos:definition """When answering the Indigenous Status question 'Yes, Aboriginal' is ticked but 'Yes, Torres Strait Islander' is not ticked."""@en ;
+    skos:notation "1" ;
+	skos:prefLabel "Aboriginal"@en .
+
+indg:2 a skos:Concept ;
+    dcterms:source "https://www.abs.gov.au/statistics/standards/indigenous-status-standard/latest-release"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/indigenous-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/indigenous-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/indigenous-status> ;
+    skos:definition """When answering the Indigenous Status question 'Yes, Torres Strait Islander' is ticked but 'Yes, Aboriginal' is not ticked."""@en ;
+    skos:notation "2" ;
+    skos:prefLabel "Torres Strait Islander"@en .
+
+indg:3 a skos:Concept ;
+    dcterms:source "https://www.abs.gov.au/statistics/standards/indigenous-status-standard/latest-release"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/indigenous-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/indigenous-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/indigenous-status> ;
+    skos:definition """When answering the Indigenous Status question 'Yes, Aboriginal' is ticked and 'Yes, Torres Strait Islander' is also ticked."""@en ;
+    skos:notation "3" ;
+    skos:prefLabel "Both Aboriginal and Torres Strait Islander origin"@en .
+
+indg:4 a skos:Concept ;
+    dcterms:source "https://www.abs.gov.au/statistics/standards/indigenous-status-standard/latest-release"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/indigenous-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/indigenous-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/indigenous-status> ;
+    skos:definition """When answering the Indigenous Status question 'No' is ticked."""@en ;
+    skos:notation "4" ;
+    skos:prefLabel "Neither Aboriginal nor Torres Strait Islander origin"@en .
+
+indg:5 a skos:Concept ;
+    dcterms:source "https://www.abs.gov.au/statistics/standards/indigenous-status-standard/latest-release"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/indigenous-status> ;
+    skos:inScheme <https://linked.data.gov.au/def/indigenous-status> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/indigenous-status> ;
+    skos:definition """When answering the Indigenous Status question 'No' is ticked and either or both 'Yes, Aboriginal', and 'Yes, Torres Strait Islander' are ticked."""@en ;
+    skos:notation "5" ;
+    skos:altLabel "Not stated"@en ;
+    skos:prefLabel "Prefer not to answer"@en .

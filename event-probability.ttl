@@ -1,0 +1,87 @@
+PREFIX risk: <https://linked.data.gov.au/def/event-probability/>
+PREFIX event: <http://eulersharp.sourceforge.net/2003/03swap/event#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/def/event-probability> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    dcterms:created "2022-03-01"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:modified "2024-03-01"^^xsd:date ;
+    dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
+    dcterms:source "http://eulersharp.sourceforge.net/2003/03swap/event"^^xsd:anyURI ;
+    dcterms:references <https://theengineersaustralia.sharepoint.com/:b:/s/DAI-Hub/EUvPGwcvgypNgU2QXohHBsIBVbWKln1ueIiSjh3c8RNoaA?e=ESoz2y> ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: Test & Quality Assurance Lead"
+                ]
+        ] ;
+    skos:hasTopConcept
+        event:MostUnlikely,
+        event:Unlikely,
+        risk:Possible,
+        event:Likely,
+        event:MostLikely,
+        event:Certain ; 
+    skos:historyNote "A curated and augmented profile of the risk likelihood of Events from Agfa Healthcare/Belgium in the eulersharp event namespace"@en ;
+    skos:definition "The likelihood that an event will occur."@en ;
+    skos:altLabel "Likelihood"@en,
+        "Risk Likelihood"@en,
+        "Risk Probability"@en,
+        "Likelihood Rating"@en ;
+    skos:prefLabel "Event Likelihood"@en .
+
+event:MostUnlikely a skos:Concept ;
+    dcterms:source "http://eulersharp.sourceforge.net/2003/03swap/event"^^xsd:anyURI ;
+	rdfs:isDefinedBy <http://eulersharp.sourceforge.net/2003/03swap/event#>;
+    skos:inScheme <https://linked.data.gov.au/def/event-probability> ;
+	skos:definition """Probability of an output of a process being lowest. A 1 in 10,000 - 100,000 probability of occurrence. May occur, but only in exceptional circumstances."""@en ;
+    skos:prefLabel "Rare"@en .
+
+event:Unlikely a skos:Concept ;
+    dcterms:source "http://eulersharp.sourceforge.net/2003/03swap/event"^^xsd:anyURI ;
+	rdfs:isDefinedBy <http://eulersharp.sourceforge.net/2003/03swap/event#>;
+    skos:inScheme <https://linked.data.gov.au/def/event-probability> ;
+	skos:definition """Probability of an output of a process being low. A 1 in 1,000 - 10,000 probability of occurrence. It is doubtful it will occur."""@en ;
+    skos:prefLabel "Unlikely"@en .
+
+risk:Possible a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/event-probability> ;
+    skos:inScheme <https://linked.data.gov.au/def/event-probability> ;
+	skos:definition """Probability of an output of a process being moderate. A 1 in 100 - 1,000 probability of occurrence. Might occur at some time in the future."""@en ;
+    skos:prefLabel "Possible"@en .
+
+event:Likely a skos:Concept ;
+    dcterms:source "http://eulersharp.sourceforge.net/2003/03swap/event"^^xsd:anyURI ;
+	rdfs:isDefinedBy <http://eulersharp.sourceforge.net/2003/03swap/event#> ;
+    skos:inScheme <https://linked.data.gov.au/def/event-probability> ;
+	skos:definition """Probability of an output of a process being high. A 1 in 10 - 100 probability of occurrence. Will probably occur."""@en ;
+    skos:prefLabel "Likely"@en .
+
+event:MostLikely a skos:Concept ;
+    dcterms:source "http://eulersharp.sourceforge.net/2003/03swap/event"^^xsd:anyURI ;
+	rdfs:isDefinedBy <http://eulersharp.sourceforge.net/2003/03swap/event#> ;
+    skos:inScheme <https://linked.data.gov.au/def/event-probability> ;
+	skos:definition """Probability of an output of a process being very high. A 1 in 1 - 10 probability of occurrence. Is expected to occur in most circumstances."""@en;
+	rdfs:comment """Near sure"""@en ;
+    skos:prefLabel "Almost Certain"@en .
+
+event:Certain a skos:Concept ;
+    dcterms:source "http://eulersharp.sourceforge.net/2003/03swap/event"^^xsd:anyURI ;
+	rdfs:isDefinedBy <http://eulersharp.sourceforge.net/2003/03swap/event#> ;
+    skos:inScheme <https://linked.data.gov.au/def/event-probability> ;
+	skos:definition """Probability of an output of a process being highest. A 1 in 1 probability of occurrence. Is expected to occur in virtually all circumstances."""@en ;
+    skos:prefLabel "Certain"@en .

@@ -1,0 +1,2164 @@
+PREFIX eais: <https://ref.engineersaustralia.org.au/def/industry-sector/>
+PREFIX icatcs: <http://linked.data.gov.au/def/anzsic-2006>
+PREFIX icat: <http://linked.data.gov.au/def/anzsic-2006/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+#CONCEPT SCHEME
+
+<https://ref.engineersaustralia.org.au/def/industry-sector> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:created "2025-05-20"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:modified "2025-05-20"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
+    dcterms:source "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument"^^xsd:anyURI ;
+    skos:definition """This is a profile of the ANZSIC Standard for use cases within the Engineering Industry and Professional Associations.
+    
+    An industrial classification organises data about business units. It provides a standard framework under which business units carrying out similar production activities can be grouped together, with each resultant group referred to as an industry.
+
+    An individual business entity is assigned to an industry based on its predominant economic activity. The term business entity is used in its widest sense to include any organisation undertaking productive activities, including companies, non-profit organisations, government departments and enterprises. ANZSIC has four hierarchic levels: Divisions (the broadest level), Subdivisions, Groups and Classes (the finest level).
+
+    At the Divisional level, the main purpose is to provide a limited number of categories which provide a broad overall picture of the economy and are suitable for the publication of summary tables in official statistics. The Subdivision, Group and Class levels provide increasingly detailed dissections of these categories for the compilation of more specific and detailed statistics.
+    
+    At Engineers Australia ABS Divisions are referred to as Sectors and all categories from subsidiary levels are considerd sub-sectors."""@en ;
+    skos:historyNote """derived from http://linked.data.gov.au/def/anzsic-2006 with groups and classes removed that do not relate to engineering or Engineers Australia's role as a peak body for the engineering industry. Professional associations has been augmented with specialisations aligned with ANZSIC primary activities that reflect EAs specific interests."""@en ;
+    skos:hasTopConcept
+        icat:A ,
+        icat:B ,
+        icat:C ,
+        icat:D ,
+        icat:E ,
+        icat:F ,
+        icat:G ,
+        icat:H ,
+        icat:I ,
+        icat:J ,
+        icat:K ,
+        icat:L ,
+        icat:M ,
+        icat:N ,
+        icat:O ,
+        icat:P ,
+        icat:Q ,
+        icat:R ,
+        icat:S ,
+        icat:X ;
+    skos:altLabel "Industry Sectors and Sub-sectors"@en,
+        "Engineers Australia Industry Sectors"@en,
+        "EA Industry Sectors"@en ;
+    skos:prefLabel "Industry Sectors"@en ;
+.
+
+#CONCEPTS
+
+#Bespoke Concepts
+
+eais:9551e a skos:Concept ;
+    dcterms:source "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/industry-sector>  ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector> ;
+    skos:broader icat:9551 ; 
+    skos:definition """This class consists of units mainly engaged in promoting the business interests of their members in the engineering profession (except of organised labour associations and union members)."""@en ;
+    skos:notation "9551e" ;
+    skos:prefLabel "Engineering Peak Bodies and Associations"@en ;
+    
+eais:9551x a skos:Concept ;
+    dcterms:source "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/industry-sector>  ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector> ;
+    skos:broader icat:9551 ; 
+    skos:definition """This class consists of units mainly engaged in promoting the business interests of their members in professions excluding engineering (except of organised labour associations and union members)."""@en ;
+    skos:notation "9551x" ;
+    skos:altLabel "Non-Engineering Peak Bodies and Associations"@en ;
+    skos:prefLabel "Other Peak Bodies and Associations"@en ;
+
+eais:9539m a skos:Concept ;
+    dcterms:source "https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1292.02006%20(Revision%202.0)?OpenDocument"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/industry-sector>  ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector> ;
+    skos:broader icat:9539 ; 
+    skos:definition """This class consists of units mainly engaged in professional migration services such as those representing a client through a skilled migration assessment and visa application."""@en ;
+    skos:notation "9539m" ;
+    skos:altLabel "Migration Agency"@en ;
+    skos:prefLabel "Migration Services"@en ;
+
+#Inherited Concepts from ANZSIC 2006
+icat:A a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:B a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:06 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:060 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:0600 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:07 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:070 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:0700 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:08 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:080 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:0801 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:0802 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:0803 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:0804 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:0805 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:0806 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:0807 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:0809 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:09 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:091 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:0911 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:0919 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:099 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:0990 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:10 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:C a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:11 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:12 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:13 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:14 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:15 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:16 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:17 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:170 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1701 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1709 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:18 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:181 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1811 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1812 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1813 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:182 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1821 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1829 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:183 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1831 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1832 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:184 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1841 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1842 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:185 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1851 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1852 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:189 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1891 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1892 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1899 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:19 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:191 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1911 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1912 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1913 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1914 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1915 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1916 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1919 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:192 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:1920 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:20 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:201 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2010 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:202 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2021 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2029 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:203 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2031 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2032 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2033 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2034 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:209 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2090 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:21 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:211 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2110 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:212 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2121 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2122 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:213 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2131 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2132 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2133 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2139 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:214 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2141 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2142 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2149 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:22 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:221 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2210 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:222 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2221 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2222 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2223 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2224 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2229 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:223 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2231 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2239 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:224 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2240 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:229 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2291 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2292 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2293 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2299 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:23 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:231 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2311 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2312 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2313 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2319 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:239 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2391 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2392 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2393 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2394 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2399 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:24 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:241 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2411 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2412 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2419 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:242 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2421 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2422 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2429 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:243 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2431 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2432 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2439 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:244 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2441 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2449 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:245 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2451 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2452 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:246 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2461 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2462 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2463 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2469 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:249 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2491 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2499 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:25 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:D a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:26 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:261 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2611 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2612 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2619 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:262 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2620 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:263 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2630 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:264 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2640 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:27 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:270 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2700 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:28 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:281 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2811 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:2812 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:29 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:E a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:30 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:301 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:3011 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:3019 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:302 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:3020 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:31 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:310 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:3101 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:3109 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:32 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:321 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:3211 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:3212 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:322 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:3221 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:3222 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:3223 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:3224 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:323 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:3231 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:3232 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:3233 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:3234 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:3239 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:324 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:329 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:F a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:G a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:H a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:I a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:46 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:461 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:4610 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:462 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:4621 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:4622 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:4623 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:47 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:471 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:4710 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:472 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:4720 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:48 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:481 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:4810 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:482 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:4820 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:49 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:490 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:4900 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:50 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:51 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:52 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:53 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:J a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:54 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:541 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:542 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:5420 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:55 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:5522 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:56 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:561 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:5610 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:562 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:5621 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:5622 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:57 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:570 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:5700 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:58 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:580 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:5801 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:5802 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:5809 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:59 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:591 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:5910 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:592 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:5921 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:5922 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:60 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:K a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:62 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:63 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:631 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:6310 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:632 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:6321 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:6322 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:633 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:6330 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:64 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:L a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:M a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:69 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:691 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:6910 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:692 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:6921 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:6922 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:6923 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:6924 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:6925 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:693 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:6931 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:6932 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:694 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:6940 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:695 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:6950 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:696 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:697 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:699 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:6999 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:70 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:700 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:7000 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:N a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:O a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:75 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:751 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:7510 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:752 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:7520 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:753 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:7530 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:754 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:7540 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:755 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:76 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:760 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:7600 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:77 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:771 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:772 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:7720 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:P a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:80 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:801 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:8010 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:802 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:8021 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:8022 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:8023 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:8024 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:81 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:810 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:8101 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:8102 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:82 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:821 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:822 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:8220 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:Q a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:R a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:S a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:94 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:941 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:942 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:9421 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:9422 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:9429 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:949 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:95 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:955 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:9551 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:9552 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+icat:9559 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector>
+.
+
+
+icat:X a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector> ;
+.
+
+icat:X9800 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector> ;
+.
+
+icat:X9900 a skos:Concept ;
+    rdfs:isDefinedBy icatcs: ;
+    skos:inScheme <https://ref.engineersaustralia.org.au/def/industry-sector> ;
+.
+
+#COLLECTIONS
+
+
+eais:sectors
+    a skos:Collection ;
+    skos:definition "Industry Sectors. Equivalent to the ABS ANZSIC Divisions."@en ;
+    skos:member
+        icat:A, # Agriculture, Forestry and Fishing
+        icat:B, # Mining
+        icat:C, # Manufacturing
+        icat:D, # Electricity, Gas, Water and Waste Services
+        icat:E, # Construction
+        icat:F, # Wholesale Trade
+        icat:G, # Retail Trade
+        icat:H, # Accommodation and Food Services
+        icat:I, # Transport, Postal and Warehousing
+        icat:J, # Information Media and Telecommunications
+        icat:K, # Financial and Insurance Services
+        icat:L, # Rental, Hiring and Real Estate Services
+        icat:M, # Professional, Scientific and Technical Services
+        icat:N, # Administrative and Support Services
+        icat:O, # Public Administration and Safety
+        icat:P, # Education and Training
+        icat:Q, # Health Care and Social Assistance
+        icat:R, # Arts and Recreation Services
+        icat:S ; # Other Services
+    skos:prefLabel "Sectors"@en 
+.
+
+eais:priority-sectors
+    a skos:Collection ;
+    skos:definition "Industry Sectors with a high degree of engineering representation."@en ;
+    skos:member
+        icat:B ; # Mining
+        icat:C, # Manufacturing
+        icat:D, # Utilities
+        icat:E, # Construction
+        icat:I, # Transport
+        icat:J, # Information Technology
+        icat:M, # Professional Services
+        icat:O, # Government
+    skos:prefLabel "Priority Sectors"@en 
+.
+
+eais:engineering-industries
+    a skos:Collection ;
+    skos:definition "Industry classifications lower than the Sector level (ABS Divsions) that are of particular relevance to engineering and assoicated activities. The selectable industry categories"@en ;
+    skos:editorialNote "This collection omits higher level categories from the concept scheme that duplicate names of lower categories. For example, Coal Mining (0600) is included but Coal Mining (06) and Coal Mining (060) are excluded as redundant for selectable information."@en ;
+    skos:member
+        icat:0600, # Coal Mining
+        icat:0700, # Oil and Gas Extraction
+        icat:080, # Metal Ore Mining
+        icat:0801, # Iron Ore Mining
+        icat:0802, # Bauxite Mining
+        icat:0803, # Copper Ore Mining
+        icat:0804, # Gold Ore Mining
+        icat:0805, # Mineral Sand Mining
+        icat:0806, # Nickel Ore Mining
+        icat:0807, # Silver-Lead-Zinc Ore Mining
+        icat:0809, # Other Metal Ore Mining
+        icat:09, # Non-Metallic Mineral Mining and Quarrying
+        icat:091, # Construction Material Mining
+        icat:0911, # Gravel and Sand Quarrying
+        icat:0919, # Other Construction Material Mining
+        icat:0990, # Other Non-Metallic Mineral Mining and Quarrying
+        icat:10, # Exploration and Other Mining Support Services
+        icat:11, # Food Product Manufacturing
+        icat:12, # Beverage and Tobacco Product Manufacturing
+        icat:13, # Textile, Leather, Clothing and Footwear Manufacturing
+        icat:14, # Wood Product Manufacturing
+        icat:15, # Pulp, Paper and Converted Paper Product Manufacturing
+        icat:16, # Printing (including the Reproduction of Recorded Media)
+        icat:170, # Petroleum and Coal Product Manufacturing
+        icat:1701, # Petroleum Refining and Petroleum Fuel Manufacturing
+        icat:1709, # Other Petroleum and Coal Product Manufacturing
+        icat:18, # Basic Chemical and Chemical Product Manufacturing
+        icat:181, # Basic Chemical Manufacturing
+        icat:1811, # Industrial Gas Manufacturing
+        icat:1812, # Basic Organic Chemical Manufacturing
+        icat:1813, # Basic Inorganic Chemical Manufacturing
+        icat:182, # Basic Polymer Manufacturing
+        icat:1821, # Synthetic Resin and Synthetic Rubber Manufacturing
+        icat:1829, # Other Basic Polymer Manufacturing
+        icat:183, # Fertiliser and Pesticide Manufacturing
+        icat:1831, # Fertiliser Manufacturing
+        icat:1832, # Pesticide Manufacturing
+        icat:184, # Pharmaceutical and Medicinal Product Manufacturing
+        icat:1841, # Human Pharmaceutical and Medicinal Product Manufacturing
+        icat:1842, # Veterinary Pharmaceutical and Medicinal Product Manufacturing
+        icat:185, # Cleaning Compound and Toiletry Preparation Manufacturing
+        icat:1851, # Cleaning Compound Manufacturing
+        icat:1852, # Cosmetic and Toiletry Preparation Manufacturing
+        icat:189, # Other Basic Chemical Product Manufacturing
+        icat:1891, # Photographic Chemical Product Manufacturing
+        icat:1892, # Explosive Manufacturing
+        icat:1899, # Other Basic Chemical Product Manufacturing n.e.c.
+        icat:19, # Polymer Product and Rubber Product Manufacturing
+        icat:191, # Polymer Product Manufacturing
+        icat:1911, # Polymer Film and Sheet Packaging Material Manufacturing
+        icat:1912, # Rigid and Semi-Rigid Polymer Product Manufacturing
+        icat:1913, # Polymer Foam Product Manufacturing
+        icat:1914, # Tyre Manufacturing
+        icat:1915, # Adhesive Manufacturing
+        icat:1916, # Paint and Coatings Manufacturing
+        icat:1919, # Other Polymer Product Manufacturing
+        icat:1920, # Natural Rubber Product Manufacturing
+        icat:20, # Non-Metallic Mineral Product Manufacturing
+        icat:2010, # Glass and Glass Product Manufacturing
+        icat:202, # Ceramic Product Manufacturing
+        icat:2021, # Clay Brick Manufacturing
+        icat:2029, # Other Ceramic Product Manufacturing
+        icat:203, # Cement, Lime, Plaster and Concrete Product Manufacturing
+        icat:2031, # Cement and Lime Manufacturing
+        icat:2032, # Plaster Product Manufacturing
+        icat:2033, # Ready-Mixed Concrete Manufacturing
+        icat:2034, # Concrete Product Manufacturing
+        icat:2090, # Other Non-Metallic Mineral Product Manufacturing
+        icat:21, # Primary Metal and Metal Product Manufacturing
+        icat:211, # Basic Ferrous Metal Manufacturing
+        icat:2110, # Iron Smelting and Steel Manufacturing
+        icat:212, # Basic Ferrous Metal Product Manufacturing
+        icat:2121, # Iron and Steel Casting
+        icat:2122, # Steel Pipe and Tube Manufacturing
+        icat:213, # Basic Non-Ferrous Metal Manufacturing
+        icat:2131, # Alumina Production
+        icat:2132, # Aluminium Smelting
+        icat:2133, # Copper, Silver, Lead and Zinc Smelting and Refining
+        icat:2139, # Other Basic Non-Ferrous Metal Manufacturing
+        icat:214, # Basic Non-Ferrous Metal Product Manufacturing
+        icat:2141, # Non-Ferrous Metal Casting
+        icat:2142, # Aluminium Rolling, Drawing, Extruding
+        icat:2149, # Other Basic Non-Ferrous Metal Product Manufacturing
+        icat:22, # Fabricated Metal Product Manufacturing
+        icat:2210, # Iron and Steel Forging
+        icat:222, # Structural Metal Product Manufacturing
+        icat:2221, # Structural Steel Fabricating
+        icat:2222, # Prefabricated Metal Building Manufacturing
+        icat:2223, # Architectural Aluminium Product Manufacturing
+        icat:2224, # Metal Roof and Guttering Manufacturing (except Aluminium)
+        icat:2229, # Other Structural Metal Product Manufacturing
+        icat:223, # Metal Container Manufacturing
+        icat:2231, # Boiler, Tank and Other Heavy Gauge Metal Container Manufacturing
+        icat:2239, # Other Metal Container Manufacturing
+        icat:224, # Sheet Metal Product Manufacturing (except Metal Structural and Container Products)
+        icat:2240, # Sheet Metal Product Manufacturing (except Metal Structural and Container
+        icat:229, # Other Fabricated Metal Product Manufacturing
+        icat:2291, # Spring and Wire Product Manufacturing
+        icat:2292, # Nut, Bolt, Screw and Rivet Manufacturing
+        icat:2293, # Metal Coating and Finishing
+        icat:2299, # Other Fabricated Metal Product Manufacturing n.e.c.
+        icat:23, # Transport Equipment Manufacturing
+        icat:231, # Motor Vehicle and Motor Vehicle Part Manufacturing
+        icat:2311, # Motor Vehicle Manufacturing
+        icat:2312, # Motor Vehicle Body and Trailer Manufacturing
+        icat:2313, # Automotive Electrical Component Manufacturing
+        icat:2319, # Other Motor Vehicle Parts Manufacturing
+        icat:239, # Other Transport Equipment Manufacturing
+        icat:2391, # Shipbuilding and Repair Services
+        icat:2392, # Boatbuilding and Repair Services
+        icat:2393, # Railway Rolling Stock Manufacturing and Repair Services
+        icat:2394, # Aircraft Manufacturing and Repair Services
+        icat:2399, # Other Transport Equipment Manufacturing n.e.c.
+        icat:24, # Machinery and Equipment Manufacturing
+        icat:241, # Professional and Scientific Equipment Manufacturing
+        icat:2411, # Photographic, Optical and Ophthalmic Equipment Manufacturing
+        icat:2412, # Medical and Surgical Equipment Manufacturing
+        icat:2419, # Other Professional and Scientific Equipment Manufacturing
+        icat:242, # Computer and Electronic Equipment Manufacturing
+        icat:2421, # Computer and Electronic Office Equipment Manufacturing
+        icat:2422, # Communication Equipment Manufacturing
+        icat:2429, # Other Electronic Equipment Manufacturing
+        icat:243, # Electrical Equipment Manufacturing
+        icat:2431, # Electric Cable and Wire Manufacturing
+        icat:2432, # Electric Lighting Equipment Manufacturing
+        icat:2439, # Other Electrical Equipment Manufacturing
+        icat:244, # Domestic Appliance Manufacturing
+        icat:2441, # Whiteware Appliance Manufacturing
+        icat:2449, # Other Domestic Appliance Manufacturing
+        icat:245, # Pump, Compressor, Heating and Ventilation Equipment Manufacturing
+        icat:2451, # Pump and Compressor Manufacturing
+        icat:2452, # Fixed Space Heating, Cooling and Ventilation Equipment Manufacturing
+        icat:246, # Specialised Machinery and Equipment Manufacturing
+        icat:2461, # Agricultural Machinery and Equipment Manufacturing
+        icat:2462, # Mining and Construction Machinery Manufacturing
+        icat:2463, # Machine Tool and Parts Manufacturing
+        icat:2469, # Other Specialised Machinery and Equipment Manufacturing
+        icat:249, # Other Machinery and Equipment Manufacturing
+        icat:2491, # Lifting and Material Handling Equipment Manufacturing
+        icat:2499, # Other Machinery and Equipment Manufacturing n.e.c.
+        icat:25, # Furniture and Other Manufacturing
+        icat:26, # Electricity Supply
+        icat:261, # Electricity Generation
+        icat:2611, # Fossil Fuel Electricity Generation
+        icat:2612, # Hydro-Electricity Generation
+        icat:2619, # Other Electricity Generation
+        icat:2620, # Electricity Transmission
+        icat:2630, # Electricity Distribution
+        icat:2640, # On Selling Electricity and Electricity Market Operation
+        icat:2700, # Gas Supply
+        icat:281, # Water Supply, Sewerage and Drainage Services
+        icat:2811, # Water Supply
+        icat:2812, # Sewerage and Drainage Services
+        icat:29, # Waste Collection, Treatment and Disposal Services
+        icat:30, # Building Construction
+        icat:301, # Residential Building Construction
+        icat:3011, # House Construction
+        icat:3019, # Other Residential Building Construction
+        icat:3020, # Non-Residential Building Construction
+        icat:310, # Heavy and Civil Engineering Construction
+        icat:3101, # Road and Bridge Construction
+        icat:3109, # Other Heavy and Civil Engineering Construction
+        icat:32, # Construction Services
+        icat:321, # Land Development and Site Preparation Services
+        icat:3211, # Land Development and Subdivision
+        icat:3212, # Site Preparation Services
+        icat:322, # Building Structure Services
+        icat:3221, # Concreting Services
+        icat:3222, # Bricklaying Services
+        icat:3223, # Roofing Services
+        icat:3224, # Structural Steel Erection Services
+        icat:323, # Building Installation Services
+        icat:3231, # Plumbing Services
+        icat:3232, # Electrical Services
+        icat:3233, # Air Conditioning and Heating Services
+        icat:3234, # Fire and Security Alarm Installation Services
+        icat:3239, # Other Building Installation Services
+        icat:324, # Building Completion Services
+        icat:329, # Other Construction Services
+        icat:46, # Road Transport
+        icat:4610, # Road Freight Transport
+        icat:462, # Road Passenger Transport
+        icat:4621, # Interurban and Rural Bus Transport
+        icat:4622, # Urban Bus Transport (Including Tramway)
+        icat:4623, # Taxi and Other Road Transport
+        icat:47, # Rail Transport
+        icat:4710, # Rail Freight Transport
+        icat:4720, # Rail Passenger Transport
+        icat:48, # Water Transport
+        icat:4810, # Water Freight Transport
+        icat:4820, # Water Passenger Transport
+        icat:4900, # Air and Space Transport
+        icat:50, # Other Transport
+        icat:51, # Postal and Courier Pick-up and Delivery Services
+        icat:52, # Transport Support Services
+        icat:53, # Warehousing and Storage Services
+        icat:54, # Publishing (except Internet and Music Publishing)
+        icat:541, # Newspaper, Periodical, Book and Directory Publishing
+        icat:5420, # Software Publishing
+        icat:55, # Motion Picture and Sound Recording Activities
+        icat:5522, # Music and Other Sound Recording Activities
+        icat:56, # Broadcasting (except Internet)
+        icat:5610, # Radio Broadcasting
+        icat:562, # Television Broadcasting
+        icat:5621, # Free-to-Air Television Broadcasting
+        icat:5622, # Cable and Other Subscription Broadcasting
+        icat:5700, # Internet Publishing and Broadcasting
+        icat:580, # Telecommunications Services
+        icat:5801, # Wired Telecommunications Network Operation
+        icat:5802, # Other Telecommunications Network Operation
+        icat:5809, # Other Telecommunications Services
+        icat:59, # Internet Service Providers, Web Search Portals and Data Processing Services
+        icat:5910, # Internet Service Providers and Web Search Portals
+        icat:592, # Data Processing, Web Hosting and Electronic Information Storage Services
+        icat:5921, # Data Processing and Web Hosting Services
+        icat:5922, # Electronic Information Storage Services
+        icat:60, # Library and Other Information Services
+        icat:62, # Finance
+        icat:63, # Insurance and Superannuation Funds
+        icat:6310, # Life Insurance
+        icat:6321, # Health Insurance
+        icat:6322, # General Insurance
+        icat:6330, # Superannuation Funds
+        icat:64, # Auxiliary Finance and Insurance Services
+        icat:69, # Professional, Scientific and Technical Services (Except Computer System Design and Related Services)
+        icat:6910, # Scientific Research Services
+        icat:692, # Architectural, Engineering and Technical Services
+        icat:6921, # Architectural Services
+        icat:6922, # Surveying and Mapping Services
+        icat:6923, # Engineering Design and Engineering Consulting Services
+        icat:6924, # Other Specialised Design Services
+        icat:6925, # Scientific Testing and Analysis Services
+        icat:693, # Legal and Accounting Services
+        icat:6931, # Legal Services
+        icat:6932, # Accounting Services
+        icat:6940, # Advertising Services
+        icat:6950, # Market Research and Statistical Services
+        icat:696, # Management and Related Consulting Services
+        icat:699, # Other Professional, Scientific and Technical Services
+        icat:6999, # Other Professional, Scientific and Technical Services n.e.c.
+        icat:7000, # Computer System Design and Related Services
+        icat:75, # Public Administration
+        icat:7510, # Central Government Administration
+        icat:7520, # State Government Administration
+        icat:7530, # Local Government Administration
+        icat:7540, # Justice
+        icat:755, # Government Representation
+        icat:7600, # Defence
+        icat:771, # Public Order and Safety Services
+        icat:7720, # Regulatory Services
+        icat:8010, # Preschool Education
+        icat:802, # School Education
+        icat:8021, # Primary Education
+        icat:8022, # Secondary Education
+        icat:8023, # Combined Primary and Secondary Education
+        icat:8024, # Special School Education
+        icat:810, # Tertiary Education
+        icat:8101, # Technical and Vocational Education and Training
+        icat:8102, # Higher Education
+        icat:821, # Adult, Community and Other Education
+        icat:8220, # Educational Support Services
+        icat:94, # Repair and Maintenance
+        icat:941, # Automotive Repair and Maintenance
+        icat:942, # Machinery and Equipment Repair and Maintenance
+        icat:9421, # Domestic Appliance Repair and Maintenance
+        icat:9422, # Electronic (except Domestic Appliance) and Precision Equipment Repair
+        icat:9429, # Other Machinery and Equipment Repair and Maintenance
+        icat:949, # Other Repair and Maintenance
+        icat:95, # Personal and Other Services
+        icat:955, # Civic, Professional and Other Interest Group Services
+        icat:9551, # Business and Professional Association Services
+        icat:9551e, # Engineering Peak Bodies and Associations
+        icat:9551x, # Other Peak Bodies and Associations
+        icat:9552, # Labour Association Services
+        icat:9559 ; # Other Interest Group Services
+    skos:prefLabel "Industry Sub-Sectors"@en 
+.

@@ -1,13 +1,13 @@
-@prefix diet: <https://linked.data.gov.au/def/diet-reqs/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sdo: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX diet: <https://linked.data.gov.au/def/diet-reqs/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://linked.data.gov.au/def/diet-reqs> a owl:Ontology ,
         skos:ConceptScheme ;
@@ -19,10 +19,53 @@
     dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
     dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
     dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: Head of Divisions and International Chapters"
+                ]
+        ] ;
     skos:definition """Dietary requirements describe the restrictions to an individual's allowable food consumption due reasons including allergy or intolerance, other health considerations, personal preference, religious beliefs, or ethical considerations. These restrictions may be distinct, mutually exclusive, related, complementary, or overlapping."""@en ;
     skos:altLabel "Dietary Restrictions"@en, 
         "Special Dietary Requirements"@en,
         "Special Meals"@en ;
+    skos:hasTopConcept
+        diet:avml,
+        diet:bbml,
+        diet:blml,
+        diet:chml,
+        diet:dbml,
+        diet:fpml,
+        diet:gfml,
+        diet:hnml,
+        diet:ksml,
+        diet:lcml,
+        diet:lsml,
+        diet:moml,
+        diet:nlml,
+        diet:rvml,
+        diet:lfml,
+        diet:sfml,
+        diet:vgml,
+        diet:vjml,
+        diet:vlml,
+        diet:voml,
+        diet:alml,
+        diet:clml,
+        diet:hfml,
+        diet:obml,
+        diet:jpml,
+        diet:jnml,
+        diet:nbml,
+        diet:nfml,
+        diet:lpml,
+        diet:prml,
+        diet:orml,
+        diet:pfml,
+        diet:spml,
+        diet:none ;
     skos:prefLabel "Dietary Requirements"@en .
 
 diet:avml a skos:Concept ;
@@ -49,7 +92,7 @@ diet:bbml a skos:Concept ;
 diet:blml a skos:Concept ;
     dcterms:source "IATA Cabin Operations Safety Best Practices Guide - 19.7 Special Meals"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/diet-reqs> ;
-    skos:definition """This meal is low-fat, low-salt and does not contain spices, garlic, onions or strong seasoning. Can contain lean meat, fish, vegetables and fruits and low-fat dairy products"""@en ;
+    skos:definition """This meal is low-fat, low-salt and does not contain spices, garlic, onions or strong seasoning. Can contain lean meat, fish, vegetables and fruits and low-fat dairy products."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
     skos:notation "BLML" ;
     skos:prefLabel "Bland"@en ;
@@ -80,7 +123,7 @@ diet:fpml a skos:Concept ;
     
     This meal only contains seasonal fresh fruit. Does not contain: Vegetables, meat, poultry, fish, seafood, eggs, caffeinated beverages, highly-processed foods, additives & preservatives."""@en ;
     skos:inScheme <https://linked.data.gov.au/def/diet-reqs> ;
-    skos:notation "AVML" ;
+    skos:notation "FPML" ;
     skos:prefLabel "Fruit Platter"@en ;
     skos:topConceptOf <https://linked.data.gov.au/def/diet-reqs> .
 
@@ -389,8 +432,9 @@ diet:none a skos:Concept ;
 #Collections
 
 diet:common a skos:Collection ;
-	skos:prefLabel "Common Dietary Options"@en ;
-	skos:definition """Dietary options that are commonly catered for or widely known."""@en ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+	skos:prefLabel "Dietary Requirements - Common Options"@en ;
+	skos:definition """Dietary options that are commonly catered for."""@en ;
     skos:member
         diet:none,
         diet:dbml,

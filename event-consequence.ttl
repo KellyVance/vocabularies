@@ -1,0 +1,115 @@
+PREFIX cnsq: <https://linked.data.gov.au/def/event-consequence/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/def/event-consequence> a owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    dcterms:created "2024-01-25"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia>;
+    dcterms:modified "2024-03-01"^^xsd:date ;
+    dcterms:contributor <https://orcid.org/0000-0003-2309-7004> ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+    dcterms:references <https://theengineersaustralia.sharepoint.com/:b:/s/DAI-Hub/EUvPGwcvgypNgU2QXohHBsIBVbWKln1ueIiSjh3c8RNoaA?e=ESoz2y> ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole earl:data-steward ;
+            prov:agent [
+                    a prov:Agent ;
+                    rdfs:label "Engineers Australia: Test & Quality Assurance Lead"
+                ]
+        ] ;
+    skos:hasTopConcept
+        cnsq:insignificant,
+        cnsq:minor,
+        cnsq:moderate,
+        cnsq:major,
+        cnsq:catastrophic ;
+    skos:definition "The potential impact in the case that an event occurs."@en ;
+    skos:altLabel "Consequence"@en,
+        "Conseqeunce Rating"@en,
+        "Change Impact"@en,
+        "Risk Severity"@en,
+        "Event Severity"@en ;
+    skos:prefLabel "Event Consequence"@en .
+
+cnsq:insignificant a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/event-consequence>;
+    skos:inScheme <https://linked.data.gov.au/def/event-consequence> ;
+	skos:definition """Minor errors in systems or processes requiring corrective action, or minor delays without impact on overall schedule.
+    
+    Disruption to some services for up to 3 days.
+    
+    Insignificant number of localised information security incidents and/or IT service outages with minimal disruption to business activities."""@en ;
+    skos:prefLabel "Insignificant"@en .
+
+cnsq:minor a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/event-consequence>;
+    skos:inScheme <https://linked.data.gov.au/def/event-consequence> ;
+	skos:definition """Policy procedural rule occasionally not met; Services do not fully meet needs; Minor impact on business operations or objectives.
+    
+    Disruption to some services for up to 1 month.
+    
+    Recurring localised information security incidents and/or interruptions of IT services, with the potential to disrupt critical business activities for < 1 business day."""@en ;
+    skos:altLabel "Localised"@en ;
+    skos:prefLabel "Minor"@en .
+
+cnsq:moderate a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/event-consequence>;
+    skos:inScheme <https://linked.data.gov.au/def/event-consequence> ;
+	skos:definition """One or more key accountability requirements not met; Moderate impact on business outcomes and strategic objectives.
+    
+    Total cessation of service for up to 1 days and subsequent disruption of some services for 1 to 2 months.
+    
+    Significant information security incidents resulting in unauthorised access or loss of key (but not sensitive) business data. Recurring or prolonged interruptions of IT services with widespread disruption of business activities for 1-2 days."""@en ;
+    skos:altLabel "Limited"@en ;
+    skos:prefLabel "Moderate"@en .
+
+cnsq:major a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/event-consequence>;
+    skos:inScheme <https://linked.data.gov.au/def/event-consequence> ;
+	skos:definition """Significant impact on business; Strategies or activities not consistent with corporate agenda; Trends show service is degraded.
+    
+    Total cessation of service for up to 7 days and subsequent disruption to some service for 2 to 3 months.
+    
+    Unauthorised access, loss and/or leakage of sensitive business data or third-party data; fraudulent transactions. Potential regulatory/legal action for data breaches (e.g., confidential customer information). Widespread IT service outages or IT disaster situation, with adverse impact on critical business operations for 2-7 days."""@en ;
+    skos:altLabel "Significant"@en,
+        "Large"@en ;
+    skos:prefLabel "Major"@en .
+
+cnsq:catastrophic a skos:Concept ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+	rdfs:isDefinedBy <https://linked.data.gov.au/def/event-consequence>;
+    skos:inScheme <https://linked.data.gov.au/def/event-consequence> ;
+	skos:definition """Strategic business outcomes and process fail; Critical business objectives not met.
+    
+    Total cessation of core service for more than 2 weeks and disruption to services over subsequent months.
+    
+    Loss of business-critical data and/or third-party data. Regulatory/legal action for data breaches, including large fines or litigation. IT disaster situation with extended recovery times and prolonged impact on critical business operations for > 7 days."""@en ;
+    skos:altLabel "Extensive"@en,
+        "Widespread"@en ;
+    skos:prefLabel "Catastrophic"@en .
+
+cnsq:ict-change-impact a skos:Collection ;
+    dcterms:source "https://linked.data.gov.au/org/engineersaustralia"^^xsd:anyURI ;
+	skos:prefLabel "ICT Change Impact"@en ;
+    rdfs:seeAlso eaj:ict-change ;
+	skos:definition """The consequence and impact level associated with an ICT Change."""@en ;
+    skos:member
+        cnsq:minor,
+        cnsq:moderate,
+        cnsq:major,
+        cnsq:catastrophic .
+ 
