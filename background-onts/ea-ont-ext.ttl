@@ -1,0 +1,16 @@
+@prefix eaox: <https://ref.engineersaustralia.org.au/def/properties#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+eaox:validCollection a rdf:Property ;
+    rdfs:label "valid collection"@en ;
+    rdfs:comment "Associates a concept with a SKOS collection of valid concepts from another concept scheme. Used in instances where the concepts in one concept scheme constrains the valid concepts from another and where those valid concepts are contained within a skos Collections."@en ;
+    rdfs:domain skos:Concept ;
+    rdfs:range skos:Collection .
+
+eaox:orderOfDisplay a rdf:Property ;
+    rdfs:label "display order"@en ;
+    rdfs:comment "Indicates the order of display for concepts where a specific rank, precedence, or hierarchy of display is applicable. A literal integer value is expected."@en ;
+    rdfs:domain skos:Concept ;
+    rdfs:range xsd:integer .
