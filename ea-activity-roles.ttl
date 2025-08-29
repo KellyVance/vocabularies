@@ -222,7 +222,8 @@ earl:data-owner a skos:Concept ;
     Decides and approves how data within their data domain is managed in accordance with the data rules and principles of the organisations.
     Data owner responsibilities include those of a data controller under GDPR; to determinine the purposes and means of processing personal data. The data controller decides the how and why of a data processing operation. A data controller can be a legal person, for example a business, an SME, a public authority, an agency or other body."""@en ;
     skos:altLabel "Data Manager"@en,
-        "Data Controller"@en ;
+        "Data Controller"@en,
+        "Data Director"@en ;
     skos:prefLabel "Data Owner"@en .
 
 earl:data-steward a skos:Concept ;
@@ -672,4 +673,5 @@ earl:committee-positions a skos:Collection ;
         earl:president,
         earl:president-immediate-past,
         earl:president-division,
+
         earl:president-national .
