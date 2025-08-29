@@ -208,7 +208,7 @@ earl:data-owner a skos:Concept ;
     rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
     skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
-    skos:scopeNote """Data Owners take a holistic view of a dataset focused on coherent and consistent application of rules and principles to that subject. Typically they will own datasets primarily associated with their business function. However, those datasets may include some aspects that are primarily used by other functions within an organisation. In these cases the owner is accountable for managing the dataset as a coherent entity, but the day-to-day application may be spread across data stewards from multiple business functions."""@en ;
+    skos:scopeNote """Data Owners take a holistic view of a data domain, focusing on coherent and consistent application of rules and principles to that subject. Typically they will own datasets primarily associated with their business function. However, those datasets may include some aspects that are primarily used by other functions within an organisation. In these cases the owner is accountable for managing the dataset as a coherent entity, but the day-to-day application may be spread across data stewards from multiple business functions."""@en ;
     skos:definition """The owner of a data resource and effective holder of rights over that resource. Accountable for managing data within their data domain: reviewing data issues, setting priorities, and approving data definition changes.
     - Accountable for the accuracy of data as used across the organisation.
     - Prioritise data quality activities.
@@ -676,4 +676,5 @@ earl:committee-positions a skos:Collection ;
         earl:president-division,
 
         earl:president-national .
+
 
