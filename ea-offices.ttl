@@ -14,7 +14,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:creator <https://linked.data.gov.au/org/engineersaustralia> ;
     dcterms:modified "2023-11-30"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/engineersaustralia> ;
-    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/restricted> ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
     prov:qualifiedAttribution
         [
             dcat:hadRole earl:data-steward ;
@@ -275,3 +275,4 @@ eaof:sydney a skos:Concept
             vcard:street-address "Mezzanine Level, 44 Market Street"
         ] ;
 .
+
