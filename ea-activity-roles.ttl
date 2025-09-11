@@ -209,15 +209,15 @@ earl:data-owner a skos:Concept ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
     skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
     skos:scopeNote """Data Owners take a holistic view of a data domain, focusing on coherent and consistent application of rules and principles to that subject. Typically they will own datasets primarily associated with their business function. However, those datasets may include some aspects that are primarily used by other functions within an organisation. In these cases the owner is accountable for managing the dataset as a coherent entity, but the day-to-day application may be spread across data stewards from multiple business functions."""@en ;
-    skos:definition """The owner of a data resource and effective holder of rights over that resource. Accountable for managing data within their data domain: reviewing data issues, setting priorities, and approving data definition changes.
+    skos:definition """The party responsible for a data resource and the effective holder of rights over that resource with decision-making authority. Accountable for managing data within their data domain: reviewing data issues, setting priorities, and approving data definition changes. Data Owners are responsible for ensuring data within their domain meets business needs and aligns with relevant internal and external standards.
     - Accountable for the accuracy of data as used across the organisation.
     - Prioritise data quality activities.
     - Approve changes to Business Glossaries, Vocabularies, and other repositories of shared terminology.
-    - Approve the use of external Standards and Glossaries within their domain.
+    - Approve the application of external Standards and Glossaries within their domain.
     - Review and approve Master Data Management approach, outcomes, and activities within their domain.
     - Work with other Data Owners to resolve data issues and inconsistencies across business units.
-    - Second level review for issues identified by Data Stewards.
-    - Provide input to the steering committees on policies or regulatory requirements that impact their data domain.
+    - Review of data issues identified by Data Stewards.
+    - Provide input to steering committees on policies or regulatory requirements that impact their data domain.
     
     Decides and approves how data within their data domain is managed in accordance with the data rules and principles of the organisations.
     Data owner responsibilities include those of a data controller under GDPR; to determinine the purposes and means of processing personal data. The data controller decides the how and why of a data processing operation. A data controller can be a legal person, for example a business, an SME, a public authority, an agency or other body."""@en ;
@@ -232,17 +232,17 @@ earl:data-steward a skos:Concept ;
     rdfs:isDefinedBy <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
     skos:inScheme <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
     skos:topConceptOf <https://ref.engineersaustralia.org.au/def/ea-activity-roles> ;
-    skos:definition """Responsible for a subset of a data domain and day-to-day interactions with data and implementation of decisions from the Data Owners. First point of contact for data domain support and advice. In practice, data stewards will interact with multiple data domains within standard activities.
+    skos:definition """Responsible for a subset of a data domain and day-to-day interactions with data and implementation of decisions from the Data Owners. First point of contact for data domain support and advice. In practice, data stewards will interact with multiple data domains within standard activities. Data Stewards are responsible for ensuring data handling domain meets the requirements determined by the Data Owner or Executive.
     - Serve as a subject matter expert (SME) for a data domain.
-    - Guarantee the quality of the data collected, stored and used within a domain/sub domain.
+    - Ensure the quality of the data collected, stored and used within a domain/sub domain.
     - Quality check user requests to update data within their domain to ensure data quality standards are maintained.
     - Establish working groups to focus on domain/subdomain related activity.
     - Log data quality issues and investigate root cause.
-    - Help create and implement standards, policies, processes and procedures for data collection, storage, use and security, and ensure they are communicated and adhered to within their domain/sub domain.
-    - Represent Data Owners and Data Community on the coordinating data groups, ensuring that activities and decisions are communicated effectively to all stakeholders within their domain/sub domain.
-    - Gather and propose changes to Business Glossaries, Vocabularies, and other repositories of shared terminology to ensure all terms and definitions are represented and up to date.
-    - Collaborate with other Data Steward and Data Owners to ensure data is within a domain is managed appropriately and issues are managed.
-    - Help identify ways to use data to drive strategic objectives of the organisation.
+    - Consult on and implement standards, policies, and procedures for data lifecycle management and ensure they are adhered to within their domain/sub domain.
+    - Represent Data Owners and Data Community on the coordinating data groups, ensuring that activities and decisions are communicated to all stakeholders within their domain/sub domain.
+    - Manage changes to glossaries, vocabularies, and other shared terminology to ensure all terms and definitions are represented and up to date.
+    - Collaborate with other Data Stewards and Data Owners to ensure data within a domain is managed appropriately and issues are managed.
+    - Identify ways to use data to drive strategic objectives of the organisation.
     
     Implements and coordinates actions and operations in accordance with the management objectives and methods for the data domain."""@en ;
     skos:prefLabel "Data Steward"@en .
@@ -676,5 +676,6 @@ earl:committee-positions a skos:Collection ;
         earl:president-division,
 
         earl:president-national .
+
 
 
