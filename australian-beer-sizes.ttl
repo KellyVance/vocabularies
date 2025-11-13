@@ -17,7 +17,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	dcterms:references 
 		<https://en.wikipedia.org/wiki/Beer_in_Australia> ;
 	skos:definition """The beer glass terminology as a proxy for serving sizes of beer used across Australian States and Territories. Capacities are based on metricated volumes in millilitres with their approximate fluid ounce equivalents."""@en ;
-	skos:note """The preferred standard Australian english label is selected on the basis of most widespread usage across Australia.""" ;
+	skos:note """The preferred standard Australian english label uses the consistent measured capacity that can be used interchangeably between regions with contradictory local terminology.""" ;
 	skos:hasTopConcept
 		au-beer:115ml,
 		au-beer:140ml
@@ -35,30 +35,110 @@ au-beer:115ml a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/australian-beer-servings> ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
     skos:definition """A beer glass for a serving of 115ml (4 fl oz)."""@en ;
-    skos:prefLabel "Foursie"@en,
+    skos:prefLabel "115ml (4 fl oz)"@en-AU,
 		"Small Beer"@en-AU-x-TAS,
 		"Foursie"@en-AU-x-VIC,
 		"Shetland"@en-AU-x-WA .
 
+au-beer:140ml a skos:Concept ;
+    dcterms:source "https://en.wikipedia.org/wiki/Beer_in_Australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:definition """A beer glass for a serving of 140ml (5 fl oz)."""@en ;
+	skos:altLabel "Horse"@en-AU-x-VIC ;
+    skos:prefLabel "140ml (5 fl oz)"@en-AU,
+		"Pony"@en-AU-x-NSW,
+		"Pony"@en-AU-x-QLD,
+		"Pony"@en-AU-x-SA,
+		"Pony"@en-AU-x-VIC,
+		"Pony"@en-AU-x-WA .
 
+au-beer:170ml a skos:Concept ;
+    dcterms:source "https://en.wikipedia.org/wiki/Beer_in_Australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:definition """A beer glass for a serving of 170ml (6 fl oz)."""@en ;
+	skos:altLabel "Six Ounce"@en-AU-x-TAS,
+		"Bobbie"@en-AU-x-WA ;
+    skos:prefLabel "170ml (6 fl oz)"@en-AU
+		"Six"@en-AU-x-TAS,
+		"Six"@en-AU-x-WA .
 
-en-AU-x-NSW
-en-AU-x-QLD
-en-AU-x-SA
-en-AU-x-TAS
-en-AU-x-VIC
-en-AU-x-WA
-en-AU-x-ACT
-en-AU-x-NT
+au-beer:200ml a skos:Concept ;
+    dcterms:source "https://en.wikipedia.org/wiki/Beer_in_Australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:definition """A beer glass for a serving of 200ml (7 fl oz)."""@en ;
+	skos:altLabel "Seven Ounce"@en-AU-x-TAS ;
+    skos:prefLabel "200ml (7 fl oz)"@en-AU,
+		"Seven"@en-AU-x-NSW,
+		"Seven"@en-AU-x-NT,
+		"Beer"@en-AU-x-QLD,
+		"Butcher"@en-AU-x-SA,
+		"Seven"@en-AU-x-TAS,
+		"Glass"@en-AU-x-VIC,
+		"Glass"@en-AU-x-WA .
 
+au-beer:285ml a skos:Concept ;
+    dcterms:source "https://en.wikipedia.org/wiki/Beer_in_Australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:definition """A beer glass for a serving of 285ml (10 fl oz)."""@en ;
+	skos:altLabel "Half Pint"@en-AU-x-ACT,
+		"Half Pint"@en-AU-x-WA,
+		"Ten Ounce"@en-AU-x-TAS ;
+    skos:prefLabel "285ml (10 fl oz)"@en-AU,
+		"Middy"@en-AU-x-NSW,
+		"Middy"@en-AU-x-ACT,
+		"Handle"@en-AU-x-NT,
+		"Pot"@en-AU-x-QLD,
+		"Schooner"@en-AU-x-SA,
+		"Ten"@en-AU-x-TAS,
+		"Pot"@en-AU-x-VIC,
+		"Middy"@en-AU-x-WA .
 
-Names of beer glasses in various Australian cities[n 1][n 2][n 3]
-Capacity[n 4]	Sydney	Canberra	Darwin	Brisbane	Adelaide	Hobart	Melbourne	Perth
-115 ml (4 fl oz)	–	–	–	–	-	small beer	foursie	shetland
-140 ml (5 fl oz)	pony	–	–	pony	pony	–	horse/pony	pony
-170 ml (6 fl oz)	–	–	–	–	butcher[n 5]	six (ounce)	–	bobbie/six
-200 ml (7 fl oz)	seven	–	seven	beer	butcher	seven (ounce)	glass	glass
-285 ml (10 fl oz)	middy	middy / half pint	handle	pot[n 6]	schooner[n 7]	ten (ounce)	pot	middy / half pint
-350 ml (12 fl oz)	schmiddy[n 8]	–	–	–	–	–	–	–
-425 ml (15 fl oz)	schooner	schooner	schooner	schooner	pint[n 7]	fifteen / schooner	schooner	schooner[n 9]
-570 ml (20 fl oz)	pint	pint	pint	pint	imperial pint[n 7]	pint	pint	pint
+au-beer:350ml a skos:Concept ;
+    dcterms:source "https://en.wikipedia.org/wiki/Beer_in_Australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:definition """A beer glass for a serving of 350ml (12 fl oz)."""@en ;
+    skos:prefLabel "350ml (12 fl oz)"@en-AU,
+		"Schmiddy"@en-AU-x-NSW .
+
+au-beer:425ml a skos:Concept ;
+    dcterms:source "https://en.wikipedia.org/wiki/Beer_in_Australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:definition """A beer glass for a serving of 425ml (15 fl oz)."""@en ;
+	skos:altLabel "Fifteen"@en-AU-x-TAS ;
+    skos:prefLabel "425ml (15 fl oz)"@en-AU,
+		"Schooner"@en-AU-x-NSW,
+		"Schooner"@en-AU-x-ACT,
+		"Schooner"@en-AU-x-NT,
+		"Schooner"@en-AU-x-QLD,
+		"Pint"@en-AU-x-SA,
+		"Schooner"@en-AU-x-TAS,
+		"Schooner"@en-AU-x-VIC,
+		"Schooner"@en-AU-x-WA .
+
+au-beer:570ml a skos:Concept ;
+    dcterms:source "https://en.wikipedia.org/wiki/Beer_in_Australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:definition """A beer glass for a serving of 570ml (20 fl oz)."""@en ;
+    skos:prefLabel "570ml (20 fl oz)"@en-AU,
+		"Pint"@en-AU-x-NSW,
+		"Pint"@en-AU-x-ACT,
+		"Pint"@en-AU-x-NT,
+		"Pint"@en-AU-x-QLD,
+		"Imperial Pint"@en-AU-x-SA,
+		"Pint"@en-AU-x-TAS,
+		"Pint"@en-AU-x-VIC,
+		"Pint"@en-AU-x-WA .
