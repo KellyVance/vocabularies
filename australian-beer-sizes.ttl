@@ -16,7 +16,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	dcterms:references 
 		<https://en.wikipedia.org/wiki/Beer_in_Australia> ;
 	skos:definition """The beer glass terminology as a proxy for serving sizes of beer used across Australian States and Territories. Capacities are based on metricated volumes in millilitres with their approximate fluid ounce equivalents."""@en ;
-	skos:note """The preferred standard Australian english label uses the consistent measured capacity that can be used interchangeably between regions with contradictory local terminology.""" ;
+	skos:note """The preferred standard Australian english label uses the consistent measured capacity that can be used interchangeably between regions that may have contradictory local terminology.""" ;
 	skos:hasTopConcept
 		au-beer:115ml,
 		au-beer:140ml
