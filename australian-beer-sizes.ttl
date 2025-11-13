@@ -8,7 +8,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xml: <http://www.w3.org/XML/1998/namespace>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://linked.data.gov.au/def/osca> a owl:Ontology ,
+<https://linked.data.gov.au/def/australian-beer-servings> a owl:Ontology ,
 		skos:ConceptScheme ;
 	dcterms:created "2025-11-14"^^xsd:date ;
 	dcterms:creator <https://linked.data.gov.au/org/des>;
@@ -17,6 +17,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	dcterms:references 
 		<https://en.wikipedia.org/wiki/Beer_in_Australia> ;
 	skos:definition """The beer glass terminology as a proxy for serving sizes of beer used across Australian States and Territories. Capacities are based on metricated volumes in millilitres with their approximate fluid ounce equivalents."""@en ;
+	skos:note """The preferred standard Australian english label is selected on the basis of most widespread usage across Australia.""" ;
 	skos:hasTopConcept
 		au-beer:115ml,
 		au-beer:140ml
@@ -28,6 +29,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		au-beer:570ml ;
 	skos:prefLabel "Australian Beer Serving Sizes"@en .
 
+au-beer:115ml a skos:Concept ;
+    dcterms:source "https://en.wikipedia.org/wiki/Beer_in_Australia"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:inScheme <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
+    skos:definition """A beer glass for a serving of 115ml (4 fl oz)."""@en ;
+    skos:prefLabel "Foursie"@en,
+		"Small Beer"@en-AU-x-TAS,
+		"Foursie"@en-AU-x-VIC,
+		"Shetland"@en-AU-x-WA .
+
+
 
 en-AU-x-NSW
 en-AU-x-QLD
@@ -37,3 +50,15 @@ en-AU-x-VIC
 en-AU-x-WA
 en-AU-x-ACT
 en-AU-x-NT
+
+
+Names of beer glasses in various Australian cities[n 1][n 2][n 3]
+Capacity[n 4]	Sydney	Canberra	Darwin	Brisbane	Adelaide	Hobart	Melbourne	Perth
+115 ml (4 fl oz)	–	–	–	–	-	small beer	foursie	shetland
+140 ml (5 fl oz)	pony	–	–	pony	pony	–	horse/pony	pony
+170 ml (6 fl oz)	–	–	–	–	butcher[n 5]	six (ounce)	–	bobbie/six
+200 ml (7 fl oz)	seven	–	seven	beer	butcher	seven (ounce)	glass	glass
+285 ml (10 fl oz)	middy	middy / half pint	handle	pot[n 6]	schooner[n 7]	ten (ounce)	pot	middy / half pint
+350 ml (12 fl oz)	schmiddy[n 8]	–	–	–	–	–	–	–
+425 ml (15 fl oz)	schooner	schooner	schooner	schooner	pint[n 7]	fifteen / schooner	schooner	schooner[n 9]
+570 ml (20 fl oz)	pint	pint	pint	pint	imperial pint[n 7]	pint	pint	pint
