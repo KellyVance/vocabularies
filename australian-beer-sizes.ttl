@@ -1,0 +1,39 @@
+PREFIX au-beer: <https://linked.data.gov.au/def/australian-beer-servings/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/def/osca> a owl:Ontology ,
+		skos:ConceptScheme ;
+	dcterms:created "2025-11-14"^^xsd:date ;
+	dcterms:creator <https://linked.data.gov.au/org/des>;
+	dcterms:modified "2025-11-14"^^xsd:date ;
+	dcterms:publisher <https://linked.data.gov.au/org/des>;
+	dcterms:references 
+		<https://en.wikipedia.org/wiki/Beer_in_Australia> ;
+	skos:definition """The beer glass terminology as a proxy for serving sizes of beer used across Australian States and Territories. Capacities are based on metricated volumes in millilitres with their approximate fluid ounce equivalents."""@en ;
+	skos:hasTopConcept
+		au-beer:115ml,
+		au-beer:140ml
+		au-beer:170ml,
+		au-beer:200ml,
+		au-beer:285ml,
+		au-beer:350ml,
+		au-beer:425ml,
+		au-beer:570ml ;
+	skos:prefLabel "Australian Beer Serving Sizes"@en .
+
+
+en-AU-x-NSW
+en-AU-x-QLD
+en-AU-x-SA
+en-AU-x-TAS
+en-AU-x-VIC
+en-AU-x-WA
+en-AU-x-ACT
+en-AU-x-NT
