@@ -35,9 +35,9 @@ au-beer:115ml a skos:Concept ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
     skos:definition """A beer glass for a serving of 115ml (4 fl oz)."""@en ;
     skos:prefLabel "115ml (4 fl oz)"@en-AU,
-		"Small Beer"@en-AU-x-TAS,
-		"Foursie"@en-AU-x-VIC,
-		"Shetland"@en-AU-x-WA .
+		"Small Beer"@en-AU-u-sd-autas,
+		"Foursie"@en-AU-u-sd-auvic,
+		"Shetland"@en-AU-u-sd-auwa .
 
 au-beer:140ml a skos:Concept ;
     dcterms:source "https://en.wikipedia.org/wiki/Beer_in_Australia"^^xsd:anyURI ;
@@ -45,13 +45,13 @@ au-beer:140ml a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/australian-beer-servings> ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
     skos:definition """A beer glass for a serving of 140ml (5 fl oz)."""@en ;
-	skos:altLabel "Horse"@en-AU-x-VIC ;
+	skos:altLabel "Horse"@en-AU-u-sd-auvic ;
     skos:prefLabel "140ml (5 fl oz)"@en-AU,
-		"Pony"@en-AU-x-NSW,
-		"Pony"@en-AU-x-QLD,
-		"Pony"@en-AU-x-SA,
-		"Pony"@en-AU-x-VIC,
-		"Pony"@en-AU-x-WA .
+		"Pony"@en-AU-u-sd-aunsw,
+		"Pony"@en-AU-u-sd-auqld,
+		"Pony"@en-AU-u-sd-ausa,
+		"Pony"@en-AU-u-sd-auvic,
+		"Pony"@en-AU-u-sd-auwa .
 
 au-beer:170ml a skos:Concept ;
     dcterms:source "https://en.wikipedia.org/wiki/Beer_in_Australia"^^xsd:anyURI ;
@@ -59,11 +59,11 @@ au-beer:170ml a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/australian-beer-servings> ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
     skos:definition """A beer glass for a serving of 170ml (6 fl oz)."""@en ;
-	skos:altLabel "Six Ounce"@en-AU-x-TAS,
-		"Bobbie"@en-AU-x-WA ;
+	skos:altLabel "Six Ounce"@en-AU-u-sd-autas,
+		"Bobbie"@en-AU-u-sd-auwa ;
     skos:prefLabel "170ml (6 fl oz)"@en-AU
-		"Six"@en-AU-x-TAS,
-		"Six"@en-AU-x-WA .
+		"Six"@en-AU-u-sd-autas,
+		"Six"@en-AU-u-sd-auwa .
 
 au-beer:200ml a skos:Concept ;
     dcterms:source "https://en.wikipedia.org/wiki/Beer_in_Australia"^^xsd:anyURI ;
@@ -71,15 +71,15 @@ au-beer:200ml a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/australian-beer-servings> ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
     skos:definition """A beer glass for a serving of 200ml (7 fl oz)."""@en ;
-	skos:altLabel "Seven Ounce"@en-AU-x-TAS ;
+	skos:altLabel "Seven Ounce"@en-AU-u-sd-autas ;
     skos:prefLabel "200ml (7 fl oz)"@en-AU,
-		"Seven"@en-AU-x-NSW,
-		"Seven"@en-AU-x-NT,
-		"Beer"@en-AU-x-QLD,
-		"Butcher"@en-AU-x-SA,
-		"Seven"@en-AU-x-TAS,
-		"Glass"@en-AU-x-VIC,
-		"Glass"@en-AU-x-WA .
+		"Seven"@en-AU-u-sd-aunsw,
+		"Seven"@en-AU-u-sd-aunt,
+		"Beer"@en-AU-u-sd-auqld,
+		"Butcher"@en-AU-u-sd-ausa,
+		"Seven"@en-AU-u-sd-autas,
+		"Glass"@en-AU-u-sd-auvic,
+		"Glass"@en-AU-u-sd-auwa .
 
 au-beer:285ml a skos:Concept ;
     dcterms:source "https://en.wikipedia.org/wiki/Beer_in_Australia"^^xsd:anyURI ;
@@ -87,18 +87,18 @@ au-beer:285ml a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/australian-beer-servings> ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
     skos:definition """A beer glass for a serving of 285ml (10 fl oz)."""@en ;
-	skos:altLabel "Half Pint"@en-AU-x-ACT,
-		"Half Pint"@en-AU-x-WA,
-		"Ten Ounce"@en-AU-x-TAS ;
+	skos:altLabel "Half Pint"@en-AU-u-sd-auact,
+		"Half Pint"@en-AU-u-sd-auwa,
+		"Ten Ounce"@en-AU-u-sd-autas ;
     skos:prefLabel "285ml (10 fl oz)"@en-AU,
-		"Middy"@en-AU-x-NSW,
-		"Middy"@en-AU-x-ACT,
-		"Handle"@en-AU-x-NT,
-		"Pot"@en-AU-x-QLD,
-		"Schooner"@en-AU-x-SA,
-		"Ten"@en-AU-x-TAS,
-		"Pot"@en-AU-x-VIC,
-		"Middy"@en-AU-x-WA .
+		"Middy"@en-AU-u-sd-aunsw,
+		"Middy"@en-AU-u-sd-auact,
+		"Handle"@en-AU-u-sd-aunt,
+		"Pot"@en-AU-u-sd-auqld,
+		"Schooner"@en-AU-u-sd-ausa,
+		"Ten"@en-AU-u-sd-autas,
+		"Pot"@en-AU-u-sd-auvic,
+		"Middy"@en-AU-u-sd-auwa .
 
 au-beer:350ml a skos:Concept ;
     dcterms:source "https://en.wikipedia.org/wiki/Beer_in_Australia"^^xsd:anyURI ;
@@ -107,7 +107,7 @@ au-beer:350ml a skos:Concept ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
     skos:definition """A beer glass for a serving of 350ml (12 fl oz)."""@en ;
     skos:prefLabel "350ml (12 fl oz)"@en-AU,
-		"Schmiddy"@en-AU-x-NSW .
+		"Schmiddy"@en-AU-u-sd-aunsw .
 
 au-beer:425ml a skos:Concept ;
     dcterms:source "https://en.wikipedia.org/wiki/Beer_in_Australia"^^xsd:anyURI ;
@@ -115,16 +115,16 @@ au-beer:425ml a skos:Concept ;
     skos:inScheme <https://linked.data.gov.au/def/australian-beer-servings> ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
     skos:definition """A beer glass for a serving of 425ml (15 fl oz)."""@en ;
-	skos:altLabel "Fifteen"@en-AU-x-TAS ;
+	skos:altLabel "Fifteen"@en-AU-u-sd-autas ;
     skos:prefLabel "425ml (15 fl oz)"@en-AU,
-		"Schooner"@en-AU-x-NSW,
-		"Schooner"@en-AU-x-ACT,
-		"Schooner"@en-AU-x-NT,
-		"Schooner"@en-AU-x-QLD,
-		"Pint"@en-AU-x-SA,
-		"Schooner"@en-AU-x-TAS,
-		"Schooner"@en-AU-x-VIC,
-		"Schooner"@en-AU-x-WA .
+		"Schooner"@en-AU-u-sd-aunsw,
+		"Schooner"@en-AU-u-sd-auact,
+		"Schooner"@en-AU-u-sd-aunt,
+		"Schooner"@en-AU-u-sd-auqld,
+		"Pint"@en-AU-u-sd-ausa,
+		"Schooner"@en-AU-u-sd-autas,
+		"Schooner"@en-AU-u-sd-auvic,
+		"Schooner"@en-AU-u-sd-auwa .
 
 au-beer:570ml a skos:Concept ;
     dcterms:source "https://en.wikipedia.org/wiki/Beer_in_Australia"^^xsd:anyURI ;
@@ -133,11 +133,11 @@ au-beer:570ml a skos:Concept ;
     skos:topConceptOf <https://linked.data.gov.au/def/australian-beer-servings> ;
     skos:definition """A beer glass for a serving of 570ml (20 fl oz)."""@en ;
     skos:prefLabel "570ml (20 fl oz)"@en-AU,
-		"Pint"@en-AU-x-NSW,
-		"Pint"@en-AU-x-ACT,
-		"Pint"@en-AU-x-NT,
-		"Pint"@en-AU-x-QLD,
-		"Imperial Pint"@en-AU-x-SA,
-		"Pint"@en-AU-x-TAS,
-		"Pint"@en-AU-x-VIC,
-		"Pint"@en-AU-x-WA .
+		"Pint"@en-AU-u-sd-aunsw,
+		"Pint"@en-AU-u-sd-auact,
+		"Pint"@en-AU-u-sd-aunt,
+		"Pint"@en-AU-u-sd-auqld,
+		"Imperial Pint"@en-AU-u-sd-ausa,
+		"Pint"@en-AU-u-sd-autas,
+		"Pint"@en-AU-u-sd-auvic,
+		"Pint"@en-AU-u-sd-auwa .
