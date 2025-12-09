@@ -11,7 +11,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		skos:ConceptScheme ;
 	dcterms:created "2025-11-14"^^xsd:date ;
 	dcterms:creator <https://linked.data.gov.au/org/des>;
-	dcterms:modified "2025-11-14"^^xsd:date ;
+	dcterms:modified "2025-12-10"^^xsd:date ;
 	dcterms:publisher <https://linked.data.gov.au/org/des>;
 	dcterms:references 
 		<https://en.wikipedia.org/wiki/Beer_in_Australia> ;
