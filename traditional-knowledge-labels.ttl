@@ -1,0 +1,143 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX tkl: <https://linked.data.gov.au/def/traditional-knowledge-labels/>
+
+<https://linked.data.gov.au/def/traditional-knowledge-labels>
+    a
+        owl:Ontology ,
+        skos:ConceptScheme ;
+    dcterms:accessRights <https://linked.data.gov.au/def/data-access-rights/open> ;
+    dcterms:created "2026-10-16"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/linked-data-working-group> ;
+    dcterms:modified "2026-10-16"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/linked-data-working-group> ;
+    dcterms:source "https://localcontexts.org/labels/traditional-knowledge-labels/"^^xsd:anyURI ;
+    skos:altLabel "Traditional Knowledge Labels"@en ;
+    skos:definition """Draft vocabulary for Local Contexts Traditional Knowledge Labels, organised into provenance, protocol, and permission collections."""@en ;
+    skos:hasTopConcept
+        tkl:attribution,
+        tkl:attribution-incomplete,
+        tkl:community-consent,
+        tkl:source-required,
+        tkl:open-to-collaboration,
+        tkl:research-use,
+        tkl:educational-use,
+        tkl:no-commercial-use,
+        tkl:no-derivatives,
+        tkl:permission-required ;
+    skos:prefLabel "Traditional Knowledge Labels"@en .
+
+<https://linked.data.gov.au/org/linked-data-working-group>
+    a owl:Class ;
+    rdfs:label "Linked Data Working Group"@en .
+
+<https://linked.data.gov.au/def/traditional-knowledge-labels/provenance-labels>
+    a skos:Collection ;
+    skos:definition """Provenance labels identify the source, lineage, and attribution context associated with knowledge or cultural materials."""@en ;
+    skos:member
+        tkl:attribution,
+        tkl:attribution-incomplete,
+        tkl:community-consent,
+        tkl:source-required ;
+    skos:prefLabel "Provenance Labels"@en .
+
+<https://linked.data.gov.au/def/traditional-knowledge-labels/protocol-labels>
+    a skos:Collection ;
+    skos:definition """Protocol labels describe expected practice, engagement, and intended use conditions for knowledge sharing."""@en ;
+    skos:member
+        tkl:open-to-collaboration,
+        tkl:research-use,
+        tkl:educational-use ;
+    skos:prefLabel "Protocol Labels"@en .
+
+<https://linked.data.gov.au/def/traditional-knowledge-labels/permission-labels>
+    a skos:Collection ;
+    skos:definition """Permission labels identify restrictions or required approvals concerning commercial use, derivative works, and reuse."""@en ;
+    skos:member
+        tkl:no-commercial-use,
+        tkl:no-derivatives,
+        tkl:permission-required ;
+    skos:prefLabel "Permission Labels"@en .
+
+tkl:attribution
+    a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:definition """The source and origin of the knowledge should be acknowledged and attributed appropriately."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:prefLabel "Attribution"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/traditional-knowledge-labels> .
+
+tkl:attribution-incomplete
+    a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:definition """Attribution information is incomplete or not yet fully available for the knowledge being represented."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:prefLabel "Attribution Incomplete"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/traditional-knowledge-labels> .
+
+tkl:community-consent
+    a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:definition """Knowledge should be treated as connected to a community whose consent and governance are relevant to use and stewardship."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:prefLabel "Community Consent"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/traditional-knowledge-labels> .
+
+tkl:source-required
+    a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:definition """Use of the knowledge requires the source, origin, or community connection to be identified and retained."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:prefLabel "Source Required"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/traditional-knowledge-labels> .
+
+tkl:open-to-collaboration
+    a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:definition """The knowledge is open to collaborative engagement and shared development where appropriate protocols are observed."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:prefLabel "Open to Collaboration"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/traditional-knowledge-labels> .
+
+tkl:research-use
+    a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:definition """The knowledge may be used for research purposes subject to appropriate governance, consultation, and attribution."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:prefLabel "Research Use"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/traditional-knowledge-labels> .
+
+tkl:educational-use
+    a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:definition """The knowledge may be used for educational purposes in line with appropriate contextual and cultural protocols."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:prefLabel "Educational Use"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/traditional-knowledge-labels> .
+
+tkl:no-commercial-use
+    a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:definition """Commercial use of the knowledge is not permitted without additional permission or appropriate agreement."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:prefLabel "No Commercial Use"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/traditional-knowledge-labels> .
+
+tkl:no-derivatives
+    a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:definition """Derivative works or transformations based on the knowledge are not permitted without express permission."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:prefLabel "No Derivatives"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/traditional-knowledge-labels> .
+
+tkl:permission-required
+    a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:definition """Additional permission is required before the knowledge may be used, adapted, or shared in any form."""@en ;
+    skos:inScheme <https://linked.data.gov.au/def/traditional-knowledge-labels> ;
+    skos:prefLabel "Permission Required"@en ;
+    skos:topConceptOf <https://linked.data.gov.au/def/traditional-knowledge-labels> .
